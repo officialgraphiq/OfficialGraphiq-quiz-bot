@@ -1,0 +1,502 @@
+[
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Abuja",
+            "Lagos",
+            "Kano",
+            "Port Harcourt"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": [
+            "Earth",
+            "Mars",
+            "Jupiter",
+            "Saturn"
+        ],
+        "answer": "Mars"
+    },
+    {
+        "question": "Who wrote 'Things Fall Apart'?",
+        "options": [
+            "Wole Soyinka",
+            "Chinua Achebe",
+            "Ngugi wa Thiong\u2019o",
+            "Fela Kuti"
+        ],
+        "answer": "Chinua Achebe"
+    },
+    {
+        "question": "What is the largest mammal in the world?",
+        "options": [
+            "African Elephant",
+            "Blue Whale",
+            "Giraffe",
+            "Orca"
+        ],
+        "answer": "Blue Whale"
+    },
+    {
+        "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+        "options": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Hydrogen"
+        ],
+        "answer": "Carbon Dioxide"
+    },
+    {
+        "question": "In which year did Nigeria gain independence?",
+        "options": [
+            "1957",
+            "1960",
+            "1963",
+            "1970"
+        ],
+        "answer": "1960"
+    },
+    {
+        "question": "What is the chemical symbol for Gold?",
+        "options": [
+            "Gd",
+            "Ag",
+            "Au",
+            "Go"
+        ],
+        "answer": "Au"
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "options": [
+            "Leonardo da Vinci",
+            "Pablo Picasso",
+            "Vincent van Gogh",
+            "Michelangelo"
+        ],
+        "answer": "Leonardo da Vinci"
+    },
+    {
+        "question": "What is the capital city of Japan?",
+        "options": [
+            "Kyoto",
+            "Osaka",
+            "Tokyo",
+            "Hiroshima"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "Which continent is the Sahara Desert located in?",
+        "options": [
+            "Asia",
+            "Africa",
+            "Australia",
+            "South America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Who was the first President of the United States?",
+        "options": [
+            "George Washington",
+            "Abraham Lincoln",
+            "Thomas Jefferson",
+            "John Adams"
+        ],
+        "answer": "George Washington"
+    },
+    {
+        "question": "Which element has the chemical symbol 'O'?",
+        "options": [
+            "Gold",
+            "Oxygen",
+            "Osmium",
+            "Oxide"
+        ],
+        "answer": "Oxygen"
+    },
+    {
+        "question": "What is the longest river in the world?",
+        "options": [
+            "Amazon River",
+            "Nile River",
+            "Yangtze River",
+            "Mississippi River"
+        ],
+        "answer": "Nile River"
+    },
+    {
+        "question": "What is the freezing point of water in Celsius?",
+        "options": [
+            "0",
+            "32",
+            "100",
+            "-1"
+        ],
+        "answer": "0"
+    },
+    {
+        "question": "Who developed the theory of relativity?",
+        "options": [
+            "Isaac Newton",
+            "Albert Einstein",
+            "Nikola Tesla",
+            "Galileo Galilei"
+        ],
+        "answer": "Albert Einstein"
+    },
+    {
+        "question": "Which ocean is the largest?",
+        "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Pacific Ocean",
+            "Arctic Ocean"
+        ],
+        "answer": "Pacific Ocean"
+    },
+    {
+        "question": "What is the national currency of Nigeria?",
+        "options": [
+            "Dollar",
+            "Naira",
+            "Cedi",
+            "Pound"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "Who invented the telephone?",
+        "options": [
+            "Alexander Graham Bell",
+            "Thomas Edison",
+            "Nikola Tesla",
+            "James Watt"
+        ],
+        "answer": "Alexander Graham Bell"
+    },
+    {
+        "question": "Which is the smallest planet in our solar system?",
+        "options": [
+            "Mercury",
+            "Venus",
+            "Mars",
+            "Pluto"
+        ],
+        "answer": "Mercury"
+    },
+    {
+        "question": "In what year did World War II end?",
+        "options": [
+            "1940",
+            "1945",
+            "1950",
+            "1939"
+        ],
+        "answer": "1945"
+    },
+    {
+        "question": "What is the process by which plants make their own food?",
+        "options": [
+            "Respiration",
+            "Fermentation",
+            "Photosynthesis",
+            "Transpiration"
+        ],
+        "answer": "Photosynthesis"
+    },
+    {
+        "question": "What is the capital city of France?",
+        "options": [
+            "Berlin",
+            "Paris",
+            "Madrid",
+            "Rome"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which organ in the human body pumps blood?",
+        "options": [
+            "Liver",
+            "Lungs",
+            "Heart",
+            "Kidneys"
+        ],
+        "answer": "Heart"
+    },
+    {
+        "question": "Who was the first man to walk on the moon?",
+        "options": [
+            "Buzz Aldrin",
+            "Yuri Gagarin",
+            "Neil Armstrong",
+            "Michael Collins"
+        ],
+        "answer": "Neil Armstrong"
+    },
+    {
+        "question": "Which planet has the most moons?",
+        "options": [
+            "Jupiter",
+            "Saturn",
+            "Mars",
+            "Neptune"
+        ],
+        "answer": "Saturn"
+    },
+    {
+        "question": "What is the largest organ in the human body?",
+        "options": [
+            "Liver",
+            "Skin",
+            "Lungs",
+            "Brain"
+        ],
+        "answer": "Skin"
+    },
+    {
+        "question": "What is the square root of 64?",
+        "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "answer": "8"
+    },
+    {
+        "question": "In which country were the Olympic Games invented?",
+        "options": [
+            "Italy",
+            "Greece",
+            "France",
+            "China"
+        ],
+        "answer": "Greece"
+    },
+    {
+        "question": "Which blood type is known as the universal donor?",
+        "options": [
+            "A",
+            "B",
+            "O-",
+            "AB+"
+        ],
+        "answer": "O-"
+    },
+    {
+        "question": "What is H2O commonly known as?",
+        "options": [
+            "Oxygen",
+            "Water",
+            "Hydrogen",
+            "Salt"
+        ],
+        "answer": "Water"
+    },
+    {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": [
+            "China",
+            "Japan",
+            "Thailand",
+            "India"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": [
+            "Gold",
+            "Iron",
+            "Diamond",
+            "Granite"
+        ],
+        "answer": "Diamond"
+    },
+    {
+        "question": "Which gas do humans need to breathe in order to survive?",
+        "options": [
+            "Carbon Dioxide",
+            "Oxygen",
+            "Nitrogen",
+            "Hydrogen"
+        ],
+        "answer": "Oxygen"
+    },
+    {
+        "question": "What is the national animal of Nigeria?",
+        "options": [
+            "Eagle",
+            "Lion",
+            "Horse",
+            "Leopard"
+        ],
+        "answer": "Eagle"
+    },
+    {
+        "question": "How many continents are there in the world?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer": "7"
+    },
+    {
+        "question": "What is the largest island in the world?",
+        "options": [
+            "Madagascar",
+            "Australia",
+            "Greenland",
+            "Iceland"
+        ],
+        "answer": "Greenland"
+    },
+    {
+        "question": "Which is the longest bone in the human body?",
+        "options": [
+            "Tibia",
+            "Femur",
+            "Fibula",
+            "Humerus"
+        ],
+        "answer": "Femur"
+    },
+    {
+        "question": "Who is known as the 'Father of Computers'?",
+        "options": [
+            "Alan Turing",
+            "Charles Babbage",
+            "Bill Gates",
+            "Steve Jobs"
+        ],
+        "answer": "Charles Babbage"
+    },
+    {
+        "question": "What is the boiling point of water at sea level in Celsius?",
+        "options": [
+            "50",
+            "100",
+            "150",
+            "200"
+        ],
+        "answer": "100"
+    },
+    {
+        "question": "Which African country was never colonized?",
+        "options": [
+            "Nigeria",
+            "Ethiopia",
+            "Ghana",
+            "Kenya"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "What is the largest planet in our solar system?",
+        "options": [
+            "Earth",
+            "Saturn",
+            "Jupiter",
+            "Neptune"
+        ],
+        "answer": "Jupiter"
+    },
+    {
+        "question": "Who discovered penicillin?",
+        "options": [
+            "Alexander Fleming",
+            "Louis Pasteur",
+            "Marie Curie",
+            "Robert Koch"
+        ],
+        "answer": "Alexander Fleming"
+    },
+    {
+        "question": "Which city is known as the Big Apple?",
+        "options": [
+            "Los Angeles",
+            "New York City",
+            "Chicago",
+            "Miami"
+        ],
+        "answer": "New York City"
+    },
+    {
+        "question": "What is the fastest land animal?",
+        "options": [
+            "Cheetah",
+            "Lion",
+            "Horse",
+            "Leopard"
+        ],
+        "answer": "Cheetah"
+    },
+    {
+        "question": "Which continent is the coldest on Earth?",
+        "options": [
+            "Asia",
+            "North America",
+            "Antarctica",
+            "Europe"
+        ],
+        "answer": "Antarctica"
+    },
+    {
+        "question": "Who is the author of the Harry Potter series?",
+        "options": [
+            "J.R.R. Tolkien",
+            "J.K. Rowling",
+            "George R.R. Martin",
+            "Suzanne Collins"
+        ],
+        "answer": "J.K. Rowling"
+    },
+    {
+        "question": "Which country hosted the 2016 Summer Olympics?",
+        "options": [
+            "China",
+            "Brazil",
+            "Japan",
+            "USA"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "Which language has the most native speakers?",
+        "options": [
+            "English",
+            "Spanish",
+            "Mandarin Chinese",
+            "Hindi"
+        ],
+        "answer": "Mandarin Chinese"
+    },
+    {
+        "question": "What is the main ingredient in bread?",
+        "options": [
+            "Sugar",
+            "Flour",
+            "Salt",
+            "Butter"
+        ],
+        "answer": "Flour"
+    },
+    {
+        "question": "Which is the tallest mountain in the world?",
+        "options": [
+            "K2",
+            "Mount Kilimanjaro",
+            "Mount Everest",
+            "Mount Fuji"
+        ],
+        "answer": "Mount Everest"
+    }
+]
