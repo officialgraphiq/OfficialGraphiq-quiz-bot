@@ -261,7 +261,10 @@ def is_within_hours():
 # ---------------------------
 async def init_db():
     global db_pool
-    db_pool = await asyncpg.create_pool(DB_URL, min_size=1, max_size=5)
+    db_pool = await asyncpg.create_pool(dsn=DB_URL, min_size=1, max_size=5, ssl='require')
+
+    # db_pool = await asyncpg.create_pool(DB_URL, min_size=1, max_size=5)
+
     # You should have created the tables beforehand (schema.sql). This function does not create tables.
     # If you prefer to auto-create tables here, I can add the SQL create statements.
 
