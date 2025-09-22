@@ -1,5 +1,8 @@
 import os
+import re
 import json
+import io
+import csv
 import asyncio
 from decimal import Decimal
 from typing import Final
@@ -12,6 +15,7 @@ from telegram.ext import (
     CommandHandler,
     CallbackQueryHandler,
     MessageHandler,
+     ConversationHandler,
     ContextTypes,
     filters,
 )
@@ -23,6 +27,10 @@ load_dotenv()
 # -----------------------
 TOKEN = os.getenv("TOKEN")
 DATABASE_URL = os.getenv("DATABASE_URL")  # Railway-provided Postgres URL
+ADMIN_IDS = set(
+    int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()
+)
+
 
 if not TOKEN:
     raise RuntimeError("Environment variable TOKEN is required.")
@@ -49,6 +57,8 @@ user_data: dict = {}  # telegram_id -> {"score": int, "current": int, "active": 
 
 db_pool: asyncpg.pool.Pool | None = None  # global pool
 
+
+USERNAME, ACCOUNT, EMAIL, CONFIRM = range(4)
 
 # -----------------------
 # Database
@@ -84,6 +94,11 @@ async def init_db():
             """
         )
 
+          # safely add email column if missing (migration step)
+        await conn.execute("ALTER TABLE users ADD COLUMN IF NOT EXISTS email TEXT;")
+        # index to speed up email lookups if you search by it
+        await conn.execute("CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);")
+
     print("📦 DB tables ensured")
 
 
@@ -93,19 +108,23 @@ async def get_user_record(telegram_id: int):
         return await conn.fetchrow("SELECT * FROM users WHERE telegram_id=$1", telegram_id)
 
 
-async def create_or_update_user(telegram_id, username, account_number, first_name):
+async def create_or_update_user(telegram_id, username, account_number, first_name, email=None):
+    """
+    Create or update a user. email is optional.
+    """
     global db_pool
     async with db_pool.acquire() as conn:
         await conn.execute(
             """
-            INSERT INTO users (telegram_id, username, account_number, first_name)
-            VALUES ($1, $2, $3, $4)
+            INSERT INTO users (telegram_id, username, account_number, first_name, email)
+            VALUES ($1, $2, $3, $4, $5)
             ON CONFLICT (telegram_id) DO UPDATE
             SET username = EXCLUDED.username,
                 account_number = COALESCE(EXCLUDED.account_number, users.account_number),
-                first_name = COALESCE(EXCLUDED.first_name, users.first_name)
+                first_name = COALESCE(EXCLUDED.first_name, users.first_name),
+                email = COALESCE(EXCLUDED.email, users.email)
             """,
-            telegram_id, username, account_number, first_name,
+            telegram_id, username, account_number, first_name, email,
         )
 
 
@@ -302,6 +321,157 @@ async def fallback_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Setup + run
 # ... your imports remain the same ...
 
+
+
+
+def _is_valid_email(email: str) -> bool:
+    return re.match(r"^[^@]+@[^@]+\.[^@]+$", email) is not None
+
+async def register_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Entry point for /register conversation"""
+    user = update.effective_user
+    # if user already registered, ask if they want to update
+    existing = await get_user_record(user.id)
+    if existing:
+        await update.message.reply_text(
+            "You are already registered. Send /cancel to abort or reply 'yes' to update your details.\n"
+            "Reply 'yes' to update or /cancel to stop."
+        )
+        # store a flag to indicate update intent on confirm
+        context.user_data["reg"] = {"updating": True}
+        return USERNAME
+
+    context.user_data["reg"] = {"updating": False}
+    await update.message.reply_text(
+        "Welcome — let's register you!\n"
+        "Send your preferred username, or send /skip to use your Telegram username."
+    )
+    return USERNAME
+
+async def username_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text.strip()
+    if text.lower() == "/skip" or text.lower() == "skip":
+        username = update.effective_user.username or None
+    else:
+        username = text
+    context.user_data["reg"]["username"] = username
+    await update.message.reply_text("Send your account number (or /skip to skip):")
+    return ACCOUNT
+
+async def account_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text.strip()
+    if text.lower() == "/skip" or text.lower() == "skip":
+        account_number = None
+    else:
+        account_number = text
+    context.user_data["reg"]["account_number"] = account_number
+    await update.message.reply_text("Send your email address (this is required):")
+    return EMAIL
+
+async def email_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    email = update.message.text.strip()
+    if not _is_valid_email(email):
+        await update.message.reply_text("That's not a valid email. Please send a valid email address.")
+        return EMAIL
+    context.user_data["reg"]["email"] = email
+
+    summary = context.user_data["reg"]
+    await update.message.reply_text(
+        "Please confirm your details:\n"
+        f"Username: {summary.get('username')}\n"
+        f"Account number: {summary.get('account_number') or '(none)'}\n"
+        f"Email: {summary.get('email')}\n\n"
+        "Send 'yes' to confirm and save, or 'no' to cancel."
+    )
+    return CONFIRM
+
+async def confirm_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    answer = update.message.text.strip().lower()
+    if answer not in ("yes", "y"):
+        await update.message.reply_text("Registration cancelled. No changes were made.")
+        context.user_data.pop("reg", None)
+        return ConversationHandler.END
+
+    reg = context.user_data.get("reg", {})
+    username = reg.get("username")
+    account_number = reg.get("account_number")
+    email = reg.get("email")
+    user = update.effective_user
+
+    # Save to DB
+    await create_or_update_user(user.id, username, account_number, user.first_name, email)
+    context.user_data.pop("reg", None)
+    await update.message.reply_text("✅ Registered successfully! Thank you.")
+    return ConversationHandler.END
+
+async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data.pop("reg", None)
+    await update.message.reply_text("Registration cancelled.")
+    return ConversationHandler.END
+
+# -----------------------
+# Admin commands
+# -----------------------
+async def _is_admin(user_id: int) -> bool:
+    return user_id in ADMIN_IDS
+
+async def export_users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    uid = update.effective_user.id
+    if not await _is_admin(uid):
+        await update.message.reply_text("Unauthorized.")
+        return
+
+    # fetch all users
+    global db_pool
+    async with db_pool.acquire() as conn:
+        rows = await conn.fetch(
+            "SELECT telegram_id, username, email, account_number, first_name, wallet, total_score, created_at FROM users ORDER BY id"
+        )
+
+    if not rows:
+        await update.message.reply_text("No users found.")
+        return
+
+    # build CSV in memory
+    sio = io.StringIO()
+    writer = csv.writer(sio)
+    writer.writerow(['telegram_id', 'username', 'email', 'account_number', 'first_name', 'wallet', 'total_score', 'created_at'])
+    for r in rows:
+        writer.writerow([
+            r['telegram_id'],
+            r['username'] or "",
+            r['email'] or "",
+            r['account_number'] or "",
+            r['first_name'] or "",
+            str(r['wallet']) if r['wallet'] is not None else "0",
+            r['total_score'] or 0,
+            r['created_at'].isoformat() if r['created_at'] else ""
+        ])
+
+    bio = io.BytesIO(sio.getvalue().encode())
+    bio.name = "users_export.csv"
+    bio.seek(0)
+    await update.message.reply_document(document=bio, filename="users_export.csv")
+
+async def users_admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    uid = update.effective_user.id
+    if not await _is_admin(uid):
+        await update.message.reply_text("Unauthorized.")
+        return
+    limit = 20
+    if context.args and context.args[0].isdigit():
+        limit = min(100, int(context.args[0]))  # allow admin to request more up to 100
+    async with db_pool.acquire() as conn:
+        rows = await conn.fetch("SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit)
+    if not rows:
+        await update.message.reply_text("No users yet.")
+        return
+    msg = "🏆 Leaderboard 🏆\n"
+    for i, r in enumerate(rows, start=1):
+        msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
+    await update.message.reply_text(msg)
+
+
 # -----------------------
 # Setup + run
 # -----------------------
@@ -311,6 +481,12 @@ async def fallback_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # -----------------------
 # Setup + run
 # -----------------------
+
+
+
+
+
+
 async def on_startup(app: Application):
     """Runs when the bot starts (inside PTB's loop)."""
     await init_db()   # Now db_pool lives in the correct loop
@@ -321,14 +497,30 @@ def main():
     # Create application
     app = Application.builder().token(TOKEN).post_init(on_startup).build()
 
+     # Conversation for registration
+    reg_conv = ConversationHandler(
+        entry_points=[CommandHandler("register", register_start)],
+        states={
+            USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, username_handler)],
+            ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, account_handler)],
+            EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, email_handler)],
+            CONFIRM: [MessageHandler(filters.TEXT & ~filters.COMMAND, confirm_handler)],
+        },
+        fallbacks=[CommandHandler("cancel", cancel_registration)],
+        allow_reentry=True,
+    )
+
+
     # Handlers
-    app.add_handler(CommandHandler("register", register_command))
+    app.add_handler(reg_conv)
     app.add_handler(CommandHandler("fund", fund_command))
     app.add_handler(CommandHandler("balance", balance_command))
     app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CommandHandler("end", end_command))
     app.add_handler(CommandHandler("table", table_command))
     app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(CommandHandler("export_users", export_users_command))
+    app.add_handler(CommandHandler("users", users_admin_command))
     app.add_handler(CallbackQueryHandler(handle_answer))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, fallback_text))
 
