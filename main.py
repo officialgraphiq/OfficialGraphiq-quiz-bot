@@ -1,594 +1,5 @@
-# #5ESyrJcJ4UCweJEN     SUPABASE DB PASSWORD
-# # from supabase import create_client, Client
-# import os
-# import re
-# import json
-# import io
-# import csv
-# import asyncio
-# from decimal import Decimal
-# from typing import Final
-# from dotenv import load_dotenv
-
-# import asyncpg
-# from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-# from telegram.ext import (
-#     Application,
-#     CommandHandler,
-#     CallbackQueryHandler,
-#     MessageHandler,
-#     ConversationHandler,
-#     ContextTypes,
-#     filters,
-# )
-
-# load_dotenv()
-
-# # -----------------------
-# # Config
-# # -----------------------
-# # SUPABASE_URL = os.getenv("SUPABASE_URL")
-# # SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-
-# # supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
-
-# TOKEN = os.getenv("TOKEN")
-# DATABASE_URL = os.getenv("DATABASE_URL")  # Railway-provided Postgres URL
-# ADMIN_IDS = set(
-#     int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()
-# )
-
-
-# if not TOKEN:
-#     raise RuntimeError("Environment variable TOKEN is required.")
-# if not DATABASE_URL:
-#     raise RuntimeError("Environment variable DATABASE_URL is required.")
-
-# QUIZ_FEE: Final = Decimal("100")  # quiz entry fee
-
-# # -----------------------
-# # Load questions.json
-# # -----------------------
-# QUESTIONS_FILE = "questions.json"
-# try:
-#     with open(QUESTIONS_FILE, "r", encoding="utf-8") as f:
-#         QUIZ = json.load(f)
-# except FileNotFoundError:
-#     print(f"ERROR: {QUESTIONS_FILE} not found. Place questions.json alongside main.py.")
-#     QUIZ = []
-
-# # -----------------------
-# # In-memory user state
-# # -----------------------
-# user_data: dict = {}  # telegram_id -> {"score": int, "current": int, "active": bool}
-
-# db_pool: asyncpg.pool.Pool | None = None  # global pool
-
-
-# USERNAME, ACCOUNT, EMAIL, CONFIRM = range(4)
-
-# # -----------------------
-# # Database
-# # -----------------------
-# async def init_db():
-#     global db_pool
-#     db_pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=5)
-#     print("✅ Connected to PostgreSQL")
-
-#     async with db_pool.acquire() as conn:
-#         await conn.execute(
-#             """
-#             CREATE TABLE IF NOT EXISTS users (
-#                 id SERIAL PRIMARY KEY,
-#                 telegram_id BIGINT UNIQUE NOT NULL,
-#                 username TEXT,
-#                 account_number TEXT,
-#                 first_name TEXT,
-#                 wallet NUMERIC DEFAULT 0,
-#                 total_score INTEGER DEFAULT 0,
-#                 created_at TIMESTAMP DEFAULT NOW()
-#             );
-#             """
-#         )
-#         await conn.execute(
-#             """
-#             CREATE TABLE IF NOT EXISTS scores (
-#                 id SERIAL PRIMARY KEY,
-#                 user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-#                 score INTEGER NOT NULL,
-#                 created_at TIMESTAMP DEFAULT NOW()
-#             );
-#             """
-#         )
-
-#           # safely add email column if missing (migration step)
-#         await conn.execute("ALTER TABLE users ADD COLUMN IF NOT EXISTS email TEXT;")
-#         # index to speed up email lookups if you search by it
-#         await conn.execute("CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);")
-
-#     print("📦 DB tables ensured")
-
-
-# async def get_user_record(telegram_id: int):
-#     global db_pool
-#     async with db_pool.acquire() as conn:
-#         return await conn.fetchrow("SELECT * FROM users WHERE telegram_id=$1", telegram_id)
-
-
-# async def create_or_update_user(telegram_id, username, account_number, first_name, email=None):
-#     """
-#     Create or update a user. email is optional.
-#     """
-#     global db_pool
-#     async with db_pool.acquire() as conn:
-#         await conn.execute(
-#             """
-#             INSERT INTO users (telegram_id, username, account_number, first_name, email)
-#             VALUES ($1, $2, $3, $4, $5)
-#             ON CONFLICT (telegram_id) DO UPDATE
-#             SET username = EXCLUDED.username,
-#                 account_number = COALESCE(EXCLUDED.account_number, users.account_number),
-#                 first_name = COALESCE(EXCLUDED.first_name, users.first_name),
-#                 email = COALESCE(EXCLUDED.email, users.email)
-#             """,
-#             telegram_id, username, account_number, first_name, email,
-#         )
-
-
-# async def add_funds(telegram_id: int, amount: Decimal):
-#     global db_pool
-#     async with db_pool.acquire() as conn:
-#         await conn.execute("INSERT INTO users (telegram_id) VALUES ($1) ON CONFLICT DO NOTHING", telegram_id)
-#         await conn.execute(
-#             "UPDATE users SET wallet = wallet + $1 WHERE telegram_id = $2",
-#             str(amount), telegram_id,
-#         )
-#         row = await conn.fetchrow("SELECT wallet FROM users WHERE telegram_id=$1", telegram_id)
-#         return Decimal(row["wallet"])
-
-
-# async def deduct_fee(telegram_id: int, fee: Decimal):
-#     global db_pool
-#     async with db_pool.acquire() as conn:
-#         row = await conn.fetchrow("SELECT wallet FROM users WHERE telegram_id=$1 FOR UPDATE", telegram_id)
-#         if not row:
-#             return None
-#         balance = Decimal(row["wallet"])
-#         if balance < fee:
-#             return None
-#         new_balance = balance - fee
-#         await conn.execute("UPDATE users SET wallet = $1 WHERE telegram_id = $2", str(new_balance), telegram_id)
-#         return new_balance
-
-
-# async def save_score_db(telegram_id: int, score: int):
-#     global db_pool
-#     async with db_pool.acquire() as conn:
-#         user = await conn.fetchrow("SELECT id FROM users WHERE telegram_id=$1", telegram_id)
-#         if not user:
-#             await conn.execute("INSERT INTO users (telegram_id) VALUES ($1) ON CONFLICT DO NOTHING", telegram_id)
-#             user = await conn.fetchrow("SELECT id FROM users WHERE telegram_id=$1", telegram_id)
-#         if user:
-#             await conn.execute("INSERT INTO scores (user_id, score) VALUES ($1, $2)", user["id"], score)
-#             await conn.execute("UPDATE users SET total_score = total_score + $1 WHERE id = $2", score, user["id"])
-
-
-# # async def get_leaderboard_db(limit: int = 10):
-# #     global db_pool
-# #     async with db_pool.acquire() as conn:
-# #         return await conn.fetch(
-# #             "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit
-# #         )
-
-# async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     global db_pool
-#     async with db_pool.acquire() as conn:
-#         rows = await conn.fetch(
-#             "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT 10"
-#         )
-
-#     if not rows:
-#         await update.message.reply_text("No scores yet.")
-#         return
-
-#     msg = "🏆 Leaderboard 🏆\n\n"
-#     for i, r in enumerate(rows, start=1):
-#         msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
-#     await update.message.reply_text(msg)
-
-
-
-# # -----------------------
-# # Quiz logic
-# # -----------------------
-# async def send_question(context: ContextTypes.DEFAULT_TYPE, user_id: int):
-#     if user_id not in user_data:
-#         return
-#     state = user_data[user_id]
-#     current = state["current"]
-#     if state.get("active") and current < len(QUIZ):
-#         q = QUIZ[current]
-#         keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
-#         await context.bot.send_message(
-#             chat_id=user_id,
-#             text=f"❓ Question {current + 1}: {q['question']}",
-#             reply_markup=InlineKeyboardMarkup(keyboard),
-#         )
-#     else:
-#         score = state["score"]
-#         total = len(QUIZ)
-#         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/{total}")
-#         state["active"] = False
-#         await save_score_db(user_id, score)
-
-
-# async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     query = update.callback_query
-#     await query.answer()
-#     user_id = query.from_user.id
-
-#     if user_id not in user_data or not user_data[user_id].get("active"):
-#         await query.edit_message_text("❌ You are not in an active quiz. Type /start to begin.")
-#         return
-
-#     state = user_data[user_id]
-#     current = state["current"]
-#     if current >= len(QUIZ):
-#         await query.edit_message_text("This quiz is already finished.")
-#         return
-
-#     correct = QUIZ[current]["answer"]
-#     selected = query.data
-#     if selected == correct:
-#         state["score"] += 1
-#         await query.edit_message_text(f"✅ Correct! The answer is {correct}")
-#     else:
-#         await query.edit_message_text(f"❌ Wrong! The correct answer is {correct}")
-
-#     state["current"] += 1
-#     await send_question(context, user_id)
-
-
-# # -----------------------
-# # Commands
-# # -----------------------
-# async def register_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user = update.effective_user
-#     args = context.args
-#     username = args[0] if len(args) >= 1 else user.username
-#     account_number = args[1] if len(args) >= 2 else None
-#     await create_or_update_user(user.id, username, account_number, user.first_name)
-#     await update.message.reply_text("✅ Registered successfully!")
-
-
-# async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     row = await get_user_record(update.effective_user.id)
-#     if not row:
-#         await update.message.reply_text("⚠️ Not registered. Use /register.")
-#         return
-#     await update.message.reply_text(f"💰 Balance: {Decimal(row['wallet'])}")
-
-
-# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     if len(context.args) < 1:
-#         await update.message.reply_text("Usage: /fund <amount>")
-#         return
-#     try:
-#         amount = Decimal(context.args[0])
-#         if amount <= 0:
-#             raise ValueError
-#     except Exception:
-#         await update.message.reply_text("Invalid amount.")
-#         return
-#     await create_or_update_user(update.effective_user.id, update.effective_user.username, None, update.effective_user.first_name)
-#     new_balance = await add_funds(update.effective_user.id, amount)
-#     await update.message.reply_text(f"✅ New balance: {new_balance}")
-
-
-# async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user = update.effective_user
-#     row = await get_user_record(user.id)
-#     if not row:
-#         await update.message.reply_text("⚠️ Not registered. Use /register.")
-#         return
-#     balance = Decimal(row["wallet"])
-#     if balance < QUIZ_FEE:
-#         await update.message.reply_text(f"💰 Insufficient funds ({balance}). Need {QUIZ_FEE}. Use /fund <amount>.")
-#         return
-#     new_balance = await deduct_fee(user.id, QUIZ_FEE)
-#     if new_balance is None:
-#         await update.message.reply_text("⚠️ Could not deduct fee.")
-#         return
-#     user_data[user.id] = {"score": 0, "current": 0, "active": True}
-#     await update.message.reply_text(f"✅ Fee deducted. Starting quiz. Balance: {new_balance}")
-#     await send_question(context, user.id)
-
-
-# async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user_id = update.effective_user.id
-#     if user_id not in user_data or not user_data[user_id].get("active"):
-#         await update.message.reply_text("Not in a quiz session.")
-#         return
-#     score = user_data[user_id]["score"]
-#     await save_score_db(user_id, score)
-#     user_data[user_id]["active"] = False
-#     await update.message.reply_text(f"✅ Quiz ended. Score: {score}")
-
-
-# async def table_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     rows = await get_leaderboard_db()
-#     if not rows:
-#         await update.message.reply_text("No scores yet.")
-#         return
-#     msg = "🏆 Leaderboard 🏆\n"
-#     for i, r in enumerate(rows, start=1):
-#         msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
-#     await update.message.reply_text(msg)
-
-
-# async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     await update.message.reply_text(
-#         "/register [username] - Register\n"
-#         "/fund <amount> - Add funds\n"
-#         "/balance - Check balance\n"
-#         f"/start - Pay {QUIZ_FEE} and play\n"
-#         "/end - End quiz\n"
-#         "/table - Leaderboard\n"
-#     )
-
-
-# async def fallback_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     await update.message.reply_text("Use /help for commands.")
-
-
-# # -----------------------
-# # Setup + run
-# # ... your imports remain the same ...
-
-
-
-
-# def _is_valid_email(email: str) -> bool:
-#     return re.match(r"^[^@]+@[^@]+\.[^@]+$", email) is not None
-
-# async def register_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     """Entry point for /register conversation"""
-#     user = update.effective_user
-#     # if user already registered, ask if they want to update
-#     existing = await get_user_record(user.id)
-#     if existing:
-#         await update.message.reply_text(
-#             "You are already registered. Send /cancel to abort or reply 'yes' to update your details.\n"
-#             "Reply 'yes' to update or /cancel to stop."
-#         )
-#         # store a flag to indicate update intent on confirm
-#         context.user_data["reg"] = {"updating": True}
-#         return USERNAME
-
-#     context.user_data["reg"] = {"updating": False}
-#     await update.message.reply_text(
-#         "Welcome — let's register you!\n"
-#         "Send your preferred username, or send /skip to use your Telegram username."
-#     )
-#     return USERNAME
-
-
-# #REGISTER USER
-# # def register_user(telegram_id, username):
-# #     supabase.table("users").upsert({
-# #         "telegram_id": telegram_id,
-# #         "username": username
-# #     }).execute()
-
-
-# #UPDATE SCORES
-# # def update_score(telegram_id, points):
-# #     # Fetch current score
-# #     current = supabase.table("users").select("score").eq("telegram_id", telegram_id).execute()
-# #     if current.data:
-# #         new_score = current.data[0]["score"] + points
-# #         supabase.table("users").update({"score": new_score}).eq("telegram_id", telegram_id).execute()
-
-
-
-
-# async def username_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     text = update.message.text.strip()
-#     if text.lower() == "/skip" or text.lower() == "skip":
-#         username = update.effective_user.username or None
-#     else:
-#         username = text
-#     context.user_data["reg"]["username"] = username
-#     await update.message.reply_text("Send your account number (or /skip to skip):")
-#     return ACCOUNT
-
-# async def account_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     text = update.message.text.strip()
-#     if text.lower() == "/skip" or text.lower() == "skip":
-#         account_number = None
-#     else:
-#         account_number = text
-#     context.user_data["reg"]["account_number"] = account_number
-#     await update.message.reply_text("Send your email address (this is required):")
-#     return EMAIL
-
-# async def email_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     email = update.message.text.strip()
-#     if not _is_valid_email(email):
-#         await update.message.reply_text("That's not a valid email. Please send a valid email address.")
-#         return EMAIL
-#     context.user_data["reg"]["email"] = email
-
-#     summary = context.user_data["reg"]
-#     await update.message.reply_text(
-#         "Please confirm your details:\n"
-#         f"Username: {summary.get('username')}\n"
-#         f"Account number: {summary.get('account_number') or '(none)'}\n"
-#         f"Email: {summary.get('email')}\n\n"
-#         "Send 'yes' to confirm and save, or 'no' to cancel."
-#     )
-#     return CONFIRM
-
-# async def confirm_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     answer = update.message.text.strip().lower()
-#     if answer not in ("yes", "y"):
-#         await update.message.reply_text("Registration cancelled. No changes were made.")
-#         context.user_data.pop("reg", None)
-#         return ConversationHandler.END
-
-#     reg = context.user_data.get("reg", {})
-#     username = reg.get("username")
-#     account_number = reg.get("account_number")
-#     email = reg.get("email")
-#     user = update.effective_user
-
-#     # Save to DB
-#     await create_or_update_user(user.id, username, account_number, user.first_name, email)
-#     context.user_data.pop("reg", None)
-#     await update.message.reply_text("✅ Registered successfully! Thank you.")
-#     return ConversationHandler.END
-
-# async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     context.user_data.pop("reg", None)
-#     await update.message.reply_text("Registration cancelled.")
-#     return ConversationHandler.END
-
-# # -----------------------
-# # Admin commands
-# # -----------------------
-# async def _is_admin(user_id: int) -> bool:
-#     return user_id in ADMIN_IDS
-
-# async def export_users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     uid = update.effective_user.id
-#     if not await _is_admin(uid):
-#         await update.message.reply_text("Unauthorized.")
-#         return
-
-#     # fetch all users
-#     global db_pool
-#     async with db_pool.acquire() as conn:
-#         rows = await conn.fetch(
-#             "SELECT telegram_id, username, email, account_number, first_name, wallet, total_score, created_at FROM users ORDER BY id"
-#         )
-
-#     if not rows:
-#         await update.message.reply_text("No users found.")
-#         return
-
-#     # build CSV in memory
-#     sio = io.StringIO()
-#     writer = csv.writer(sio)
-#     writer.writerow(['telegram_id', 'username', 'email', 'account_number', 'first_name', 'wallet', 'total_score', 'created_at'])
-#     for r in rows:
-#         writer.writerow([
-#             r['telegram_id'],
-#             r['username'] or "",
-#             r['email'] or "",
-#             r['account_number'] or "",
-#             r['first_name'] or "",
-#             str(r['wallet']) if r['wallet'] is not None else "0",
-#             r['total_score'] or 0,
-#             r['created_at'].isoformat() if r['created_at'] else ""
-#         ])
-
-#     bio = io.BytesIO(sio.getvalue().encode())
-#     bio.name = "users_export.csv"
-#     bio.seek(0)
-#     await update.message.reply_document(document=bio, filename="users_export.csv")
-
-# async def users_admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     uid = update.effective_user.id
-#     if not await _is_admin(uid):
-#         await update.message.reply_text("Unauthorized.")
-#         return
-#     limit = 20
-#     if context.args and context.args[0].isdigit():
-#         limit = min(100, int(context.args[0]))  # allow admin to request more up to 100
-#     async with db_pool.acquire() as conn:
-#         rows = await conn.fetch("SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit)
-#     if not rows:
-#         await update.message.reply_text("No users yet.")
-#         return
-#     msg = "🏆 Leaderboard 🏆\n"
-#     for i, r in enumerate(rows, start=1):
-#         msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
-#     await update.message.reply_text(msg)
-
-
-# # -----------------------
-# # Setup + run
-# # -----------------------
-# # -----------------------
-# # Setup + run
-# # -----------------------
-# # -----------------------
-# # Setup + run
-# # -----------------------
-
-
-
-
-
-
-# async def on_startup(app: Application):
-#     """Runs when the bot starts (inside PTB's loop)."""
-#     await init_db()   # Now db_pool lives in the correct loop
-#     print("🚀 Startup tasks done")
-
-
-# def main():
-#     # Create application
-#     app = Application.builder().token(TOKEN).post_init(on_startup).build()
-
-#      # Conversation for registration
-#     reg_conv = ConversationHandler(
-#         entry_points=[CommandHandler("register", register_start)],
-#         states={
-#             USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, username_handler)],
-#             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, account_handler)],
-#             EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, email_handler)],
-#             CONFIRM: [MessageHandler(filters.TEXT & ~filters.COMMAND, confirm_handler)],
-#         },
-#         fallbacks=[CommandHandler("cancel", cancel_registration)],
-#         allow_reentry=True,
-#     )
-
-
-#     # Handlers
-#     app.add_handler(reg_conv)
-#     app.add_handler(CommandHandler("fund", fund_command))
-#     app.add_handler(CommandHandler("balance", balance_command))
-#     app.add_handler(CommandHandler("start", start_command))
-#     app.add_handler(CommandHandler("end", end_command))
-#     app.add_handler(CommandHandler("table", table_command))
-#     app.add_handler(CommandHandler("leaderboard", leaderboard))
-#     app.add_handler(CommandHandler("help", help_command))
-#     app.add_handler(CommandHandler("export_users", export_users_command))
-#     app.add_handler(CommandHandler("users", users_admin_command))
-#     app.add_handler(CallbackQueryHandler(handle_answer))
-#     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, fallback_text))
-
-#     print("🤖 Bot is running...")
-#     app.run_polling(close_loop=False)  # keep loop open
-
-
-# if __name__ == "__main__":
-#     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#5ESyrJcJ4UCweJEN     SUPABASE DB PASSWORD
+# from supabase import create_client, Client
 import os
 import re
 import json
@@ -616,11 +27,17 @@ load_dotenv()
 # -----------------------
 # Config
 # -----------------------
+# SUPABASE_URL = os.getenv("SUPABASE_URL")
+# SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+# supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
 TOKEN = os.getenv("TOKEN")
-DATABASE_URL = os.getenv("DATABASE_URL")  # Railway Postgres
+DATABASE_URL = os.getenv("DATABASE_URL")  # Railway-provided Postgres URL
 ADMIN_IDS = set(
     int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()
 )
+
 
 if not TOKEN:
     raise RuntimeError("Environment variable TOKEN is required.")
@@ -637,14 +54,16 @@ try:
     with open(QUESTIONS_FILE, "r", encoding="utf-8") as f:
         QUIZ = json.load(f)
 except FileNotFoundError:
-    print(f"ERROR: {QUESTIONS_FILE} not found.")
+    print(f"ERROR: {QUESTIONS_FILE} not found. Place questions.json alongside main.py.")
     QUIZ = []
 
 # -----------------------
 # In-memory user state
 # -----------------------
 user_data: dict = {}  # telegram_id -> {"score": int, "current": int, "active": bool}
+
 db_pool: asyncpg.pool.Pool | None = None  # global pool
+
 
 USERNAME, ACCOUNT, EMAIL, CONFIRM = range(4)
 
@@ -665,7 +84,6 @@ async def init_db():
                 username TEXT,
                 account_number TEXT,
                 first_name TEXT,
-                email TEXT,
                 wallet NUMERIC DEFAULT 0,
                 total_score INTEGER DEFAULT 0,
                 created_at TIMESTAMP DEFAULT NOW()
@@ -682,6 +100,10 @@ async def init_db():
             );
             """
         )
+
+          # safely add email column if missing (migration step)
+        await conn.execute("ALTER TABLE users ADD COLUMN IF NOT EXISTS email TEXT;")
+        # index to speed up email lookups if you search by it
         await conn.execute("CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);")
 
     print("📦 DB tables ensured")
@@ -694,6 +116,9 @@ async def get_user_record(telegram_id: int):
 
 
 async def create_or_update_user(telegram_id, username, account_number, first_name, email=None):
+    """
+    Create or update a user. email is optional.
+    """
     global db_pool
     async with db_pool.acquire() as conn:
         await conn.execute(
@@ -748,9 +173,13 @@ async def save_score_db(telegram_id: int, score: int):
             await conn.execute("UPDATE users SET total_score = total_score + $1 WHERE id = $2", score, user["id"])
 
 
-# -----------------------
-# Leaderboard
-# -----------------------
+# async def get_leaderboard_db(limit: int = 10):
+#     global db_pool
+#     async with db_pool.acquire() as conn:
+#         return await conn.fetch(
+#             "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit
+#         )
+
 async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global db_pool
     async with db_pool.acquire() as conn:
@@ -768,222 +197,384 @@ async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(msg)
 
 
+
 # -----------------------
-# Export Users (Admin)
+# Quiz logic
 # -----------------------
-async def export_users(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.effective_user.id not in ADMIN_IDS:
-        await update.message.reply_text("You are not authorized.")
+async def send_question(context: ContextTypes.DEFAULT_TYPE, user_id: int):
+    if user_id not in user_data:
+        return
+    state = user_data[user_id]
+    current = state["current"]
+    if state.get("active") and current < len(QUIZ):
+        q = QUIZ[current]
+        keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
+        await context.bot.send_message(
+            chat_id=user_id,
+            text=f"❓ Question {current + 1}: {q['question']}",
+            reply_markup=InlineKeyboardMarkup(keyboard),
+        )
+    else:
+        score = state["score"]
+        total = len(QUIZ)
+        await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/{total}")
+        state["active"] = False
+        await save_score_db(user_id, score)
+
+
+async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    user_id = query.from_user.id
+
+    if user_id not in user_data or not user_data[user_id].get("active"):
+        await query.edit_message_text("❌ You are not in an active quiz. Type /start to begin.")
         return
 
+    state = user_data[user_id]
+    current = state["current"]
+    if current >= len(QUIZ):
+        await query.edit_message_text("This quiz is already finished.")
+        return
+
+    correct = QUIZ[current]["answer"]
+    selected = query.data
+    if selected == correct:
+        state["score"] += 1
+        await query.edit_message_text(f"✅ Correct! The answer is {correct}")
+    else:
+        await query.edit_message_text(f"❌ Wrong! The correct answer is {correct}")
+
+    state["current"] += 1
+    await send_question(context, user_id)
+
+
+# -----------------------
+# Commands
+# -----------------------
+async def register_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    args = context.args
+    username = args[0] if len(args) >= 1 else user.username
+    account_number = args[1] if len(args) >= 2 else None
+    await create_or_update_user(user.id, username, account_number, user.first_name)
+    await update.message.reply_text("✅ Registered successfully!")
+
+
+async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    row = await get_user_record(update.effective_user.id)
+    if not row:
+        await update.message.reply_text("⚠️ Not registered. Use /register.")
+        return
+    await update.message.reply_text(f"💰 Balance: {Decimal(row['wallet'])}")
+
+
+async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if len(context.args) < 1:
+        await update.message.reply_text("Usage: /fund <amount>")
+        return
+    try:
+        amount = Decimal(context.args[0])
+        if amount <= 0:
+            raise ValueError
+    except Exception:
+        await update.message.reply_text("Invalid amount.")
+        return
+    await create_or_update_user(update.effective_user.id, update.effective_user.username, None, update.effective_user.first_name)
+    new_balance = await add_funds(update.effective_user.id, amount)
+    await update.message.reply_text(f"✅ New balance: {new_balance}")
+
+
+async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.effective_user
+    row = await get_user_record(user.id)
+    if not row:
+        await update.message.reply_text("⚠️ Not registered. Use /register.")
+        return
+    balance = Decimal(row["wallet"])
+    if balance < QUIZ_FEE:
+        await update.message.reply_text(f"💰 Insufficient funds ({balance}). Need {QUIZ_FEE}. Use /fund <amount>.")
+        return
+    new_balance = await deduct_fee(user.id, QUIZ_FEE)
+    if new_balance is None:
+        await update.message.reply_text("⚠️ Could not deduct fee.")
+        return
+    user_data[user.id] = {"score": 0, "current": 0, "active": True}
+    await update.message.reply_text(f"✅ Fee deducted. Starting quiz. Balance: {new_balance}")
+    await send_question(context, user.id)
+
+
+async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.effective_user.id
+    if user_id not in user_data or not user_data[user_id].get("active"):
+        await update.message.reply_text("Not in a quiz session.")
+        return
+    score = user_data[user_id]["score"]
+    await save_score_db(user_id, score)
+    user_data[user_id]["active"] = False
+    await update.message.reply_text(f"✅ Quiz ended. Score: {score}")
+
+
+async def table_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    rows = await get_leaderboard_db()
+    if not rows:
+        await update.message.reply_text("No scores yet.")
+        return
+    msg = "🏆 Leaderboard 🏆\n"
+    for i, r in enumerate(rows, start=1):
+        msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
+    await update.message.reply_text(msg)
+
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "/register [username] - Register\n"
+        "/fund <amount> - Add funds\n"
+        "/balance - Check balance\n"
+        f"/start - Pay {QUIZ_FEE} and play\n"
+        "/end - End quiz\n"
+        "/table - Leaderboard\n"
+    )
+
+
+async def fallback_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Use /help for commands.")
+
+
+# -----------------------
+# Setup + run
+# ... your imports remain the same ...
+
+
+
+
+def _is_valid_email(email: str) -> bool:
+    return re.match(r"^[^@]+@[^@]+\.[^@]+$", email) is not None
+
+async def register_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Entry point for /register conversation"""
+    user = update.effective_user
+    # if user already registered, ask if they want to update
+    existing = await get_user_record(user.id)
+    if existing:
+        await update.message.reply_text(
+            "You are already registered. Send /cancel to abort or reply 'yes' to update your details.\n"
+            "Reply 'yes' to update or /cancel to stop."
+        )
+        # store a flag to indicate update intent on confirm
+        context.user_data["reg"] = {"updating": True}
+        return USERNAME
+
+    context.user_data["reg"] = {"updating": False}
+    await update.message.reply_text(
+        "Welcome — let's register you!\n"
+        "Send your preferred username, or send /skip to use your Telegram username."
+    )
+    return USERNAME
+
+
+#REGISTER USER
+# def register_user(telegram_id, username):
+#     supabase.table("users").upsert({
+#         "telegram_id": telegram_id,
+#         "username": username
+#     }).execute()
+
+
+#UPDATE SCORES
+# def update_score(telegram_id, points):
+#     # Fetch current score
+#     current = supabase.table("users").select("score").eq("telegram_id", telegram_id).execute()
+#     if current.data:
+#         new_score = current.data[0]["score"] + points
+#         supabase.table("users").update({"score": new_score}).eq("telegram_id", telegram_id).execute()
+
+
+
+
+async def username_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text.strip()
+    if text.lower() == "/skip" or text.lower() == "skip":
+        username = update.effective_user.username or None
+    else:
+        username = text
+    context.user_data["reg"]["username"] = username
+    await update.message.reply_text("Send your account number (or /skip to skip):")
+    return ACCOUNT
+
+async def account_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text.strip()
+    if text.lower() == "/skip" or text.lower() == "skip":
+        account_number = None
+    else:
+        account_number = text
+    context.user_data["reg"]["account_number"] = account_number
+    await update.message.reply_text("Send your email address (this is required):")
+    return EMAIL
+
+async def email_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    email = update.message.text.strip()
+    if not _is_valid_email(email):
+        await update.message.reply_text("That's not a valid email. Please send a valid email address.")
+        return EMAIL
+    context.user_data["reg"]["email"] = email
+
+    summary = context.user_data["reg"]
+    await update.message.reply_text(
+        "Please confirm your details:\n"
+        f"Username: {summary.get('username')}\n"
+        f"Account number: {summary.get('account_number') or '(none)'}\n"
+        f"Email: {summary.get('email')}\n\n"
+        "Send 'yes' to confirm and save, or 'no' to cancel."
+    )
+    return CONFIRM
+
+async def confirm_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    answer = update.message.text.strip().lower()
+    if answer not in ("yes", "y"):
+        await update.message.reply_text("Registration cancelled. No changes were made.")
+        context.user_data.pop("reg", None)
+        return ConversationHandler.END
+
+    reg = context.user_data.get("reg", {})
+    username = reg.get("username")
+    account_number = reg.get("account_number")
+    email = reg.get("email")
+    user = update.effective_user
+
+    # Save to DB
+    await create_or_update_user(user.id, username, account_number, user.first_name, email)
+    context.user_data.pop("reg", None)
+    await update.message.reply_text("✅ Registered successfully! Thank you.")
+    return ConversationHandler.END
+
+async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data.pop("reg", None)
+    await update.message.reply_text("Registration cancelled.")
+    return ConversationHandler.END
+
+# -----------------------
+# Admin commands
+# -----------------------
+async def _is_admin(user_id: int) -> bool:
+    return user_id in ADMIN_IDS
+
+async def export_users_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    uid = update.effective_user.id
+    if not await _is_admin(uid):
+        await update.message.reply_text("Unauthorized.")
+        return
+
+    # fetch all users
     global db_pool
     async with db_pool.acquire() as conn:
-        rows = await conn.fetch("SELECT * FROM users ORDER BY created_at DESC")
+        rows = await conn.fetch(
+            "SELECT telegram_id, username, email, account_number, first_name, wallet, total_score, created_at FROM users ORDER BY id"
+        )
 
     if not rows:
         await update.message.reply_text("No users found.")
         return
 
-    output = io.StringIO()
-    writer = csv.writer(output)
-    writer.writerow(rows[0].keys())
+    # build CSV in memory
+    sio = io.StringIO()
+    writer = csv.writer(sio)
+    writer.writerow(['telegram_id', 'username', 'email', 'account_number', 'first_name', 'wallet', 'total_score', 'created_at'])
     for r in rows:
-        writer.writerow(r.values())
+        writer.writerow([
+            r['telegram_id'],
+            r['username'] or "",
+            r['email'] or "",
+            r['account_number'] or "",
+            r['first_name'] or "",
+            str(r['wallet']) if r['wallet'] is not None else "0",
+            r['total_score'] or 0,
+            r['created_at'].isoformat() if r['created_at'] else ""
+        ])
 
-    output.seek(0)
-    await update.message.reply_document(
-        document=io.BytesIO(output.getvalue().encode()),
-        filename="users.csv",
-        caption="📂 Exported Users",
-    )
+    bio = io.BytesIO(sio.getvalue().encode())
+    bio.name = "users_export.csv"
+    bio.seek(0)
+    await update.message.reply_document(document=bio, filename="users_export.csv")
 
-
-# -----------------------
-# Quiz Flow
-# -----------------------
-async def start_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    telegram_id = update.effective_user.id
-    if not QUIZ:
-        await update.message.reply_text("No questions available.")
+async def users_admin_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    uid = update.effective_user.id
+    if not await _is_admin(uid):
+        await update.message.reply_text("Unauthorized.")
         return
-
-    balance = await deduct_fee(telegram_id, QUIZ_FEE)
-    if balance is None:
-        await update.message.reply_text("Insufficient funds. Use /addfunds <amount>")
+    limit = 20
+    if context.args and context.args[0].isdigit():
+        limit = min(100, int(context.args[0]))  # allow admin to request more up to 100
+    async with db_pool.acquire() as conn:
+        rows = await conn.fetch("SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit)
+    if not rows:
+        await update.message.reply_text("No users yet.")
         return
-
-    user_data[telegram_id] = {"score": 0, "current": 0, "active": True}
-    await update.message.reply_text(f"🎉 Quiz started! Fee deducted. Balance: {balance}.")
-    await send_question(update, context)
-
-
-async def send_question(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    telegram_id = update.effective_user.id
-    data = user_data.get(telegram_id)
-    if not data or not data["active"]:
-        return
-
-    current = data["current"]
-    if current >= len(QUIZ):
-        await update.message.reply_text(
-            f"✅ Quiz finished! Score: {data['score']} / {len(QUIZ)}"
-        )
-        await save_score_db(telegram_id, data["score"])
-        user_data[telegram_id]["active"] = False
-        return
-
-    q = QUIZ[current]
-    keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
-    await update.message.reply_text(q["question"], reply_markup=InlineKeyboardMarkup(keyboard))
-
-
-async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    query = update.callback_query
-    telegram_id = query.from_user.id
-    await query.answer()
-
-    data = user_data.get(telegram_id)
-    if not data or not data["active"]:
-        return
-
-    q = QUIZ[data["current"]]
-    answer = query.data
-
-    if answer == q["answer"]:
-        user_data[telegram_id]["score"] += 1
-        await query.edit_message_text(f"✅ Correct! +1 point")
-    else:
-        await query.edit_message_text(f"❌ Wrong! Correct answer: {q['answer']}")
-
-    user_data[telegram_id]["current"] += 1
-    await send_question(update, context)
-
-
-# -----------------------
-# Registration Flow
-# -----------------------
-async def register(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Enter your username:")
-    return USERNAME
-
-
-async def handle_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data["username"] = update.message.text
-    await update.message.reply_text("Enter your account number:")
-    return ACCOUNT
-
-
-async def handle_account(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data["account_number"] = update.message.text
-    await update.message.reply_text("Enter your email address:")
-    return EMAIL
-
-
-async def handle_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    email = update.message.text
-    if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-        await update.message.reply_text("Invalid email. Try again:")
-        return EMAIL
-    context.user_data["email"] = email
-
-    msg = (
-        f"Confirm your details:\n\n"
-        f"Username: {context.user_data['username']}\n"
-        f"Account: {context.user_data['account_number']}\n"
-        f"Email: {context.user_data['email']}\n\n"
-        "Type 'yes' to confirm, 'no' to cancel."
-    )
+    msg = "🏆 Leaderboard 🏆\n"
+    for i, r in enumerate(rows, start=1):
+        msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
     await update.message.reply_text(msg)
-    return CONFIRM
-
-
-async def handle_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.message.text.lower() == "yes":
-        user = update.effective_user
-        await create_or_update_user(
-            telegram_id=user.id,
-            username=context.user_data["username"],
-            account_number=context.user_data["account_number"],
-            first_name=user.first_name,
-            email=context.user_data["email"],
-        )
-        await update.message.reply_text("✅ Registration complete.")
-    else:
-        await update.message.reply_text("❌ Registration cancelled.")
-    return ConversationHandler.END
 
 
 # -----------------------
-# Helpers
+# Setup + run
 # -----------------------
-async def addfunds(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    try:
-        amount = Decimal(context.args[0])
-    except Exception:
-        await update.message.reply_text("Usage: /addfunds <amount>")
-        return
-    new_balance = await add_funds(update.effective_user.id, amount)
-    await update.message.reply_text(f"💰 Balance updated: {new_balance}")
-
-
-async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("❌ Registration cancelled.")
-    return ConversationHandler.END
-
-
-async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "/register - Register\n"
-        "/quiz - Start Quiz\n"
-        "/leaderboard - Show Leaderboard\n"
-        "/addfunds <amt> - Add Funds\n"
-        "/export_users - Export Users (Admin)\n"
-        "/help - Show Commands"
-    )
-
-
 # -----------------------
-# Main
+# Setup + run
 # -----------------------
+# -----------------------
+# Setup + run
+# -----------------------
+
+
+
+
+
+
+async def on_startup(app: Application):
+    """Runs when the bot starts (inside PTB's loop)."""
+    await init_db()   # Now db_pool lives in the correct loop
+    print("🚀 Startup tasks done")
+
+
 def main():
-    app = Application.builder().token(TOKEN).build()
+    # Create application
+    app = Application.builder().token(TOKEN).post_init(on_startup).build()
 
-    conv = ConversationHandler(
-        entry_points=[CommandHandler("register", register)],
+     # Conversation for registration
+    reg_conv = ConversationHandler(
+        entry_points=[CommandHandler("register", register_start)],
         states={
-            USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_username)],
-            ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_account)],
-            EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_email)],
-            CONFIRM: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_confirm)],
+            USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, username_handler)],
+            ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, account_handler)],
+            EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, email_handler)],
+            CONFIRM: [MessageHandler(filters.TEXT & ~filters.COMMAND, confirm_handler)],
         },
-        fallbacks=[CommandHandler("cancel", cancel)],
+        fallbacks=[CommandHandler("cancel", cancel_registration)],
+        allow_reentry=True,
     )
 
-    app.add_handler(conv)
-    app.add_handler(CommandHandler("quiz", start_quiz))
-    app.add_handler(CallbackQueryHandler(handle_answer))
-    app.add_handler(CommandHandler("leaderboard", leaderboard))
-    app.add_handler(CommandHandler("export_users", export_users))
-    app.add_handler(CommandHandler("addfunds", addfunds))
-    app.add_handler(CommandHandler("help", help_command))
 
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(init_db())
+    # Handlers
+    app.add_handler(reg_conv)
+    app.add_handler(CommandHandler("fund", fund_command))
+    app.add_handler(CommandHandler("balance", balance_command))
+    app.add_handler(CommandHandler("start", start_command))
+    app.add_handler(CommandHandler("end", end_command))
+    app.add_handler(CommandHandler("table", table_command))
+    app.add_handler(CommandHandler("leaderboard", leaderboard))
+    app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(CommandHandler("export_users", export_users_command))
+    app.add_handler(CommandHandler("users", users_admin_command))
+    app.add_handler(CallbackQueryHandler(handle_answer))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, fallback_text))
+
     print("🤖 Bot is running...")
-    app.run_polling()
+    app.run_polling(close_loop=False)  # keep loop open
 
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
 
 
 
