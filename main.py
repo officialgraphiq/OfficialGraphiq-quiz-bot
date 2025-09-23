@@ -67,6 +67,37 @@ db_pool: asyncpg.pool.Pool | None = None  # global pool
 
 USERNAME, ACCOUNT, EMAIL, CONFIRM = range(4)
 
+ASK_USERNAME, ASK_EMAIL = range(2)   # add a new state
+
+async def get_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data["username"] = update.message.text
+    await update.message.reply_text("Great! Now please enter your email:")
+    return ASK_EMAIL
+
+
+# Save email + username + telegram_id into DB
+async def get_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    email = update.message.text
+    username = context.user_data["username"]
+    telegram_id = update.effective_user.id
+
+    pool = context.application.bot_data["db_pool"]
+    async with pool.acquire() as conn:
+        await conn.execute(
+            """
+            INSERT INTO users (telegram_id, username, email)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (telegram_id) DO UPDATE
+            SET username = EXCLUDED.username,
+                email = EXCLUDED.email
+            """,
+            telegram_id, username, email
+        )
+
+    await update.message.reply_text("✅ Registration complete!")
+    return ConversationHandler.END
+
+
 # -----------------------
 # Database
 # -----------------------
