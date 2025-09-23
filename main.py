@@ -1,3 +1,5 @@
+#5ESyrJcJ4UCweJEN     SUPABASE DB PASSWORD
+from supabase import create_client, Client
 import os
 import re
 import json
@@ -25,6 +27,11 @@ load_dotenv()
 # -----------------------
 # Config
 # -----------------------
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
 TOKEN = os.getenv("TOKEN")
 DATABASE_URL = os.getenv("DATABASE_URL")  # Railway-provided Postgres URL
 ADMIN_IDS = set(
@@ -166,12 +173,29 @@ async def save_score_db(telegram_id: int, score: int):
             await conn.execute("UPDATE users SET total_score = total_score + $1 WHERE id = $2", score, user["id"])
 
 
-async def get_leaderboard_db(limit: int = 10):
+# async def get_leaderboard_db(limit: int = 10):
+#     global db_pool
+#     async with db_pool.acquire() as conn:
+#         return await conn.fetch(
+#             "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit
+#         )
+
+async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global db_pool
     async with db_pool.acquire() as conn:
-        return await conn.fetch(
-            "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit
+        rows = await conn.fetch(
+            "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT 10"
         )
+
+    if not rows:
+        await update.message.reply_text("No scores yet.")
+        return
+
+    msg = "🏆 Leaderboard 🏆\n\n"
+    for i, r in enumerate(rows, start=1):
+        msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
+    await update.message.reply_text(msg)
+
 
 
 # -----------------------
@@ -348,6 +372,26 @@ async def register_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     return USERNAME
 
+
+#REGISTER USER
+def register_user(telegram_id, username):
+    supabase.table("users").upsert({
+        "telegram_id": telegram_id,
+        "username": username
+    }).execute()
+
+
+#UPDATE SCORES
+def update_score(telegram_id, points):
+    # Fetch current score
+    current = supabase.table("users").select("score").eq("telegram_id", telegram_id).execute()
+    if current.data:
+        new_score = current.data[0]["score"] + points
+        supabase.table("users").update({"score": new_score}).eq("telegram_id", telegram_id).execute()
+
+
+
+
 async def username_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text.strip()
     if text.lower() == "/skip" or text.lower() == "skip":
@@ -518,6 +562,7 @@ def main():
     app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CommandHandler("end", end_command))
     app.add_handler(CommandHandler("table", table_command))
+    app.add_handler(CommandHandler("leaderboard", leaderboard))
     app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CommandHandler("export_users", export_users_command))
     app.add_handler(CommandHandler("users", users_admin_command))
