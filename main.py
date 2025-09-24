@@ -1152,7 +1152,7 @@ def main():
 
     # Handlers
     app.add_handler(reg_conv)
-    app.add_handler(CommandHandler("register", register_command))  # quick /register username flow
+    # app.add_handler(CommandHandler("register", register_command))  # quick /register username flow
     app.add_handler(CommandHandler("fund", fund_command))
     app.add_handler(CommandHandler("balance", balance_command))
     app.add_handler(CommandHandler("start", start_command))
