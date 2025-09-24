@@ -246,21 +246,21 @@ def get_leaderboard(limit=10):
     return result.data
 
 
-async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    global db_pool
-    async with db_pool.acquire() as conn:
-        rows = await conn.fetch(
-            "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT 10"
-        )
+# async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     global db_pool
+#     async with db_pool.acquire() as conn:
+#         rows = await conn.fetch(
+#             "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT 10"
+#         )
 
-    if not rows:
-        await update.message.reply_text("No scores yet.")
-        return
+#     if not rows:
+#         await update.message.reply_text("No scores yet.")
+#         return
 
-    msg = "🏆 Leaderboard 🏆\n\n"
-    for i, r in enumerate(rows, start=1):
-        msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
-    await update.message.reply_text(msg)
+#     msg = "🏆 Leaderboard 🏆\n\n"
+#     for i, r in enumerate(rows, start=1):
+#         msg += f"{i}. {r['username'] or 'Anonymous'} — {r['total_score']} pts\n"
+#     await update.message.reply_text(msg)
 
 
 
