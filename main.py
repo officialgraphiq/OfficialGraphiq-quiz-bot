@@ -1,5 +1,5 @@
 #5ESyrJcJ4UCweJEN     SUPABASE DB PASSWORD
-# from supabase import create_client, Client
+from supabase import create_client, Client
 import os
 import re
 import json
@@ -27,10 +27,10 @@ load_dotenv()
 # -----------------------
 # Config
 # -----------------------
-# SUPABASE_URL = os.getenv("SUPABASE_URL")
-# SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
-# supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 TOKEN = os.getenv("TOKEN")
 DATABASE_URL = os.getenv("DATABASE_URL")  # Railway-provided Postgres URL
@@ -146,24 +146,34 @@ async def get_user_record(telegram_id: int):
         return await conn.fetchrow("SELECT * FROM users WHERE telegram_id=$1", telegram_id)
 
 
-async def create_or_update_user(telegram_id, username, account_number, first_name, email=None):
-    """
-    Create or update a user. email is optional.
-    """
-    global db_pool
-    async with db_pool.acquire() as conn:
-        await conn.execute(
-            """
-            INSERT INTO users (telegram_id, username, account_number, first_name, email)
-            VALUES ($1, $2, $3, $4, $5)
-            ON CONFLICT (telegram_id) DO UPDATE
-            SET username = EXCLUDED.username,
-                account_number = COALESCE(EXCLUDED.account_number, users.account_number),
-                first_name = COALESCE(EXCLUDED.first_name, users.first_name),
-                email = COALESCE(EXCLUDED.email, users.email)
-            """,
-            telegram_id, username, account_number, first_name, email,
-        )
+# async def create_or_update_user(telegram_id, username, account_number, first_name, email=None):
+#     """
+#     Create or update a user. email is optional.
+#     """
+#     global db_pool
+#     async with db_pool.acquire() as conn:
+#         await conn.execute(
+#             """
+#             INSERT INTO users (telegram_id, username, account_number, first_name, email)
+#             VALUES ($1, $2, $3, $4, $5)
+#             ON CONFLICT (telegram_id) DO UPDATE
+#             SET username = EXCLUDED.username,
+#                 account_number = COALESCE(EXCLUDED.account_number, users.account_number),
+#                 first_name = COALESCE(EXCLUDED.first_name, users.first_name),
+#                 email = COALESCE(EXCLUDED.email, users.email)
+#             """,
+#             telegram_id, username, account_number, first_name, email,
+#         )
+
+def create_or_update_user(telegram_id, username, email=None):
+    supabase.table("users").upsert({
+        "telegram_id": telegram_id,
+        "username": username,
+        "email": email,
+    }).execute()
+
+
+
 
 
 async def add_funds(telegram_id: int, amount: Decimal):
@@ -192,24 +202,49 @@ async def deduct_fee(telegram_id: int, fee: Decimal):
         return new_balance
 
 
-async def save_score_db(telegram_id: int, score: int):
-    global db_pool
-    async with db_pool.acquire() as conn:
-        user = await conn.fetchrow("SELECT id FROM users WHERE telegram_id=$1", telegram_id)
-        if not user:
-            await conn.execute("INSERT INTO users (telegram_id) VALUES ($1) ON CONFLICT DO NOTHING", telegram_id)
-            user = await conn.fetchrow("SELECT id FROM users WHERE telegram_id=$1", telegram_id)
-        if user:
-            await conn.execute("INSERT INTO scores (user_id, score) VALUES ($1, $2)", user["id"], score)
-            await conn.execute("UPDATE users SET total_score = total_score + $1 WHERE id = $2", score, user["id"])
-
-
-# async def get_leaderboard_db(limit: int = 10):
+# async def save_score_db(telegram_id: int, score: int):
 #     global db_pool
 #     async with db_pool.acquire() as conn:
-#         return await conn.fetch(
-#             "SELECT username, total_score FROM users ORDER BY total_score DESC LIMIT $1", limit
-#         )
+#         user = await conn.fetchrow("SELECT id FROM users WHERE telegram_id=$1", telegram_id)
+#         if not user:
+#             await conn.execute("INSERT INTO users (telegram_id) VALUES ($1) ON CONFLICT DO NOTHING", telegram_id)
+#             user = await conn.fetchrow("SELECT id FROM users WHERE telegram_id=$1", telegram_id)
+#         if user:
+#             await conn.execute("INSERT INTO scores (user_id, score) VALUES ($1, $2)", user["id"], score)
+#             await conn.execute("UPDATE users SET total_score = total_score + $1 WHERE id = $2", score, user["id"])
+
+
+def save_score_db(telegram_id: int, score: int):
+    # fetch user
+    user = supabase.table("users").select("id", "total_score").eq("telegram_id", telegram_id).single().execute()
+    if not user.data:
+        return
+
+    user_id = user.data["id"]
+    new_total = user.data["total_score"] + score
+
+    # insert into scores table
+    supabase.table("scores").insert({
+        "user_id": user_id,
+        "score": score,
+    }).execute()
+
+    # update total score
+    supabase.table("users").update({"total_score": new_total}).eq("id", user_id).execute()
+
+
+
+
+
+
+def get_leaderboard(limit=10):
+    result = supabase.table("users") \
+        .select("username,total_score") \
+        .order("total_score", desc=True) \
+        .limit(limit) \
+        .execute()
+    return result.data
+
 
 async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global db_pool
