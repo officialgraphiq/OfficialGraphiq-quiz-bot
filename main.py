@@ -1159,8 +1159,7 @@ async def leaderboard_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TOKEN).build()
 
-    app.add_handler(CommandHandler("play", play_command))
-
+    
     # Conversation for registration
     reg_conv = ConversationHandler(
         entry_points=[CommandHandler("register", register_start)],
@@ -1176,6 +1175,8 @@ def main():
 
     # Handlers
     app.add_handler(reg_conv)
+    app.add_handler(CommandHandler("start", start_command))       # welcome/help
+    app.add_handler(CommandHandler("play", play_command))
     app.add_handler(CommandHandler("fund", fund_command))
     app.add_handler(CommandHandler("balance", balance_command))
     app.add_handler(CommandHandler("end", end_command))
