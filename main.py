@@ -761,15 +761,15 @@ async def get_user_record(telegram_id: int):
     return await asyncio.to_thread(_do)
 
 
-async def add_funds(telegram_id: int, amount: Decimal):
-    # ensure user exists
-    user = await get_user_record(telegram_id)
-    if not user:
-        # create minimal user record
-        await create_or_update_user(telegram_id, None, None, None, None)
-        user = await get_user_record(telegram_id)
-    old_balance = Decimal(str(user.get("wallet", 0) or 0))
-    new_balance = old_balance + amount
+# async def add_funds(telegram_id: int, amount: Decimal):
+#     # ensure user exists
+#     user = await get_user_record(telegram_id)
+#     if not user:
+#         # create minimal user record
+#         await create_or_update_user(telegram_id, None, None, None, None)
+#         user = await get_user_record(telegram_id)
+#     old_balance = Decimal(str(user.get("wallet", 0) or 0))
+#     new_balance = old_balance + amount
 
     # def _do():
     #     res = supabase.table("users")\
@@ -946,10 +946,9 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ Usage: /fund <amount>")
         return
 
-    # Accept "1,000", "₦1000", "$10.50", etc.
+    # Accept formats like "1,000", "₦1000", "$10.50"
     amt_raw = args[0].strip().replace(",", "")
-    # remove any non-digit/period characters (keeps decimals)
-    amt_raw = re.sub(r"[^\d.]", "", amt_raw)
+    amt_raw = re.sub(r"[^\d.]", "", amt_raw)  # keep only digits and "."
 
     try:
         amount = Decimal(amt_raw)
@@ -961,27 +960,26 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ Amount must be positive.")
         return
 
-    # await create_or_update_user(update.effective_user.id, update.effective_user.username, None, update.effective_user.first_name)
-    # new_balance = await add_funds(update.effective_user.id, amount)
-    # await update.message.reply_text(f"✅ New balance: {new_balance}")
-    try:
-        await create_or_update_user(user.id, user.username, None, user.first_name, None)
-    except Exception as e:
-        print("create_or_update_user error in fund:", repr(e))
-        # continue, add_funds will try to create too
+    # Ensure user exists
+    await create_or_update_user(
+        telegram_id=user.id,
+        username=user.username,
+        account_number=None,
+        first_name=user.first_name
+    )
 
-
-    # Use the add_funds helper which runs Supabase calls in a thread
     try:
+        # Add funds in Supabase
         new_balance = await add_funds(user.id, amount)
     except Exception as e:
-        # print to console so you can inspect the error in logs
-        print("fund_command error:", repr(e))
+        print("fund_command error:", repr(e))  # log for debugging
         await update.message.reply_text("⚠️ Could not add funds due to an internal error.")
         return
 
-    # add_funds returns the updated wallet (float/str) — show it nicely
-    await update.message.reply_text(f"✅ Funded {amount}. New balance: {new_balance}")
+    # Show success message
+    await update.message.reply_text(
+        f"✅ You funded {amount}. Your new balance is {new_balance}."
+    )
 
 
 
