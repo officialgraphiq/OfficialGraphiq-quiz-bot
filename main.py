@@ -742,10 +742,13 @@ def _upsert_user_payload(telegram_id, username=None, account_number=None, first_
 async def create_or_update_user(telegram_id, username=None, account_number=None, first_name=None, email=None):
     payload = _upsert_user_payload(telegram_id, username, account_number, first_name, email)
     # ensure defaults exist if creating
-    if "wallet" not in payload:
-        payload.setdefault("wallet", 0)
-    if "total_score" not in payload:
-        payload.setdefault("total_score", 0)
+    # if "wallet" not in payload:
+    #     payload.setdefault("wallet", 0)
+    # if "total_score" not in payload:
+    #     payload.setdefault("total_score", 0)
+
+    payload.setdefault("wallet", 0)
+    payload.setdefault("total_score", 0)
     def _do():
         return supabase.table("users").upsert(payload).execute()
     return await asyncio.to_thread(_do)
@@ -768,13 +771,28 @@ async def add_funds(telegram_id: int, amount: Decimal):
     old_balance = Decimal(str(user.get("wallet", 0) or 0))
     new_balance = old_balance + amount
 
+    # def _do():
+    #     res = supabase.table("users")\
+    #         .update({"wallet": float(new_balance)})\
+    #         .eq("telegram_id", telegram_id)\
+    #         .execute()
+    #     return res.data[0]["wallet"] if res.data else float(new_balance)
+
+    # return await asyncio.to_thread(_do)
+
+
     def _do():
+        # request select("*") so Supabase returns the updated row
         res = supabase.table("users")\
             .update({"wallet": float(new_balance)})\
             .eq("telegram_id", telegram_id)\
+            .select("*")\
             .execute()
-        return res.data[0]["wallet"] if res.data else float(new_balance)
-
+        # res.data is a list of rows matching; we expect the first to be the updated row
+        if res.data and isinstance(res.data, list) and len(res.data) > 0:
+            return Decimal(str(res.data[0].get("wallet", float(new_balance))))
+        # fallback to computed value
+        return Decimal(str(new_balance))
     return await asyncio.to_thread(_do)
 
 
@@ -786,9 +804,20 @@ async def deduct_fee(telegram_id: int, fee: Decimal):
     if balance < fee:
         return None
     new_balance = balance - fee
+    # def _do():
+    #     supabase.table("users").update({"wallet": float(new_balance)}).eq("telegram_id", telegram_id).execute()
+    #     return float(new_balance)
+    # return await asyncio.to_thread(_do)
+
     def _do():
-        supabase.table("users").update({"wallet": float(new_balance)}).eq("telegram_id", telegram_id).execute()
-        return float(new_balance)
+        res = supabase.table("users")\
+            .update({"wallet": float(new_balance)})\
+            .eq("telegram_id", telegram_id)\
+            .select("*")\
+            .execute()
+        if res.data and isinstance(res.data, list) and len(res.data) > 0:
+            return Decimal(str(res.data[0].get("wallet", float(new_balance))))
+        return Decimal(str(new_balance))
     return await asyncio.to_thread(_do)
 
 
@@ -890,7 +919,8 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not row:
         await update.message.reply_text("⚠️ Not registered. Use /register.")
         return
-    wallet = row.get("wallet", 0)
+    # wallet = row.get("wallet", 0)
+    wallet = Decimal(str(row.get("wallet", 0)))
     total_score = row.get("total_score", 0)
     await update.message.reply_text(f"💰 Balance: {Decimal(str(wallet))}\n🏅 Total score: {total_score}")
 
@@ -931,6 +961,16 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ Amount must be positive.")
         return
 
+    # await create_or_update_user(update.effective_user.id, update.effective_user.username, None, update.effective_user.first_name)
+    # new_balance = await add_funds(update.effective_user.id, amount)
+    # await update.message.reply_text(f"✅ New balance: {new_balance}")
+    try:
+        await create_or_update_user(user.id, user.username, None, user.first_name, None)
+    except Exception as e:
+        print("create_or_update_user error in fund:", repr(e))
+        # continue, add_funds will try to create too
+
+
     # Use the add_funds helper which runs Supabase calls in a thread
     try:
         new_balance = await add_funds(user.id, amount)
@@ -941,15 +981,12 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     # add_funds returns the updated wallet (float/str) — show it nicely
-    await update.message.reply_text(f"✅ Funded {amount}. New balance: {Decimal(str(new_balance))}")
+    await update.message.reply_text(f"✅ Funded {amount}. New balance: {new_balance}")
 
 
 
 
     # ensure user exists
-    await create_or_update_user(update.effective_user.id, update.effective_user.username, None, update.effective_user.first_name)
-    new_balance = await add_funds(update.effective_user.id, amount)
-    await update.message.reply_text(f"✅ New balance: {new_balance}")
 
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
