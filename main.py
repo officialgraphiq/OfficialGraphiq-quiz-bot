@@ -760,40 +760,32 @@ async def get_user_record(telegram_id: int):
         return res.data if res.data else None
     return await asyncio.to_thread(_do)
 
+async def add_funds(telegram_id: int, amount: Decimal):
+    # ensure user exists
+    user = await get_user_record(telegram_id)
+    if not user:
+        # create minimal user record if missing
+        await create_or_update_user(telegram_id, None, None, None, None)
+        user = await get_user_record(telegram_id)
 
-# async def add_funds(telegram_id: int, amount: Decimal):
-#     # ensure user exists
-#     user = await get_user_record(telegram_id)
-#     if not user:
-#         # create minimal user record
-#         await create_or_update_user(telegram_id, None, None, None, None)
-#         user = await get_user_record(telegram_id)
-#     old_balance = Decimal(str(user.get("wallet", 0) or 0))
-#     new_balance = old_balance + amount
-
-    # def _do():
-    #     res = supabase.table("users")\
-    #         .update({"wallet": float(new_balance)})\
-    #         .eq("telegram_id", telegram_id)\
-    #         .execute()
-    #     return res.data[0]["wallet"] if res.data else float(new_balance)
-
-    # return await asyncio.to_thread(_do)
-
+    old_balance = Decimal(str(user.get("wallet", 0) or 0))
+    new_balance = old_balance + amount
 
     def _do():
         # request select("*") so Supabase returns the updated row
-        res = supabase.table("users")\
-            .update({"wallet": float(new_balance)})\
-            .eq("telegram_id", telegram_id)\
-            .select("*")\
+        res = (
+            supabase.table("users")
+            .update({"wallet": float(new_balance)})
+            .eq("telegram_id", telegram_id)
+            .select("*")
             .execute()
-        # res.data is a list of rows matching; we expect the first to be the updated row
+        )
         if res.data and isinstance(res.data, list) and len(res.data) > 0:
             return Decimal(str(res.data[0].get("wallet", float(new_balance))))
-        # fallback to computed value
         return Decimal(str(new_balance))
+
     return await asyncio.to_thread(_do)
+
 
 
 async def deduct_fee(telegram_id: int, fee: Decimal):
@@ -905,13 +897,6 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # -----------------------
 # Commands
 # -----------------------
-# async def register_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user = update.effective_user
-#     args = context.args
-#     username = args[0] if len(args) >= 1 else user.username
-#     account_number = args[1] if len(args) >= 2 else None
-#     await create_or_update_user(user.id, username, account_number, user.first_name)
-#     await update.message.reply_text("✅ Registered successfully!")
 
 
 async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -924,18 +909,6 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     total_score = row.get("total_score", 0)
     await update.message.reply_text(f"💰 Balance: {Decimal(str(wallet))}\n🏅 Total score: {total_score}")
 
-
-# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     if len(context.args) < 1:
-#         await update.message.reply_text("Usage: /fund <amount>")
-#         return
-#     try:
-#         amount = Decimal(context.args[0])
-#         if amount <= 0:
-#             raise ValueError
-#     except Exception:
-#         await update.message.reply_text("Invalid amount.")
-#         return
 
 
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
