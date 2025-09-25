@@ -917,7 +917,8 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     try:
-        amount = Decimal(args[0])
+        amount = Decimal(args[0].strip())
+
     except:
         await update.message.reply_text("⚠️ Amount must be a number.")
         return
