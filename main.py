@@ -895,17 +895,50 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"💰 Balance: {Decimal(str(wallet))}\n🏅 Total score: {total_score}")
 
 
+# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     if len(context.args) < 1:
+#         await update.message.reply_text("Usage: /fund <amount>")
+#         return
+#     try:
+#         amount = Decimal(context.args[0])
+#         if amount <= 0:
+#             raise ValueError
+#     except Exception:
+#         await update.message.reply_text("Invalid amount.")
+#         return
+
+
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if len(context.args) < 1:
-        await update.message.reply_text("Usage: /fund <amount>")
+    user = update.effective_user
+    args = context.args
+
+    if not args:
+        await update.message.reply_text("⚠️ Usage: /fund <amount>")
         return
+
     try:
-        amount = Decimal(context.args[0])
-        if amount <= 0:
-            raise ValueError
-    except Exception:
-        await update.message.reply_text("Invalid amount.")
+        amount = Decimal(args[0])
+    except:
+        await update.message.reply_text("⚠️ Amount must be a number.")
         return
+
+    if amount <= 0:
+        await update.message.reply_text("⚠️ Amount must be positive.")
+        return
+
+    row = await get_user_record(user.id)
+    if not row:
+        await update.message.reply_text("⚠️ Not registered. Use /register first.")
+        return
+
+    # update wallet
+    new_balance = Decimal(str(row.get("wallet", 0))) + amount
+    await supabase.table("users").update({"wallet": float(new_balance)}).eq("telegram_id", user.id).execute()
+
+    await update.message.reply_text(f"💰 Funded {amount}. New balance: {new_balance}")
+
+
+
 
     # ensure user exists
     await create_or_update_user(update.effective_user.id, update.effective_user.username, None, update.effective_user.first_name)
