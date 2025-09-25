@@ -1651,17 +1651,20 @@ async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    tg_id = update.message.from_user.id
-    if len(context.args) != 1:
+    tg_id = update.effective_user.id
+    text = update.message.text.split()
+    if len(text) < 2:
         await update.message.reply_text("Usage: /fund <amount>")
         return
     try:
-        amount = Decimal(context.args[0])
+        amount = Decimal(text[1])
     except Exception:
-        await update.message.reply_text("Invalid amount.")
+        await update.message.reply_text("❌ Invalid amount. Example: /fund 100")
         return
+
     new_balance = await add_funds(tg_id, amount)
     await update.message.reply_text(f"✅ Funded {amount}. New balance: {new_balance}")
+
 
 
 async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1720,13 +1723,15 @@ async def ask_question(update: Update, context: ContextTypes.DEFAULT_TYPE):
     q_index = context.user_data["quiz"]["q_index"]
     if q_index >= len(QUESTIONS):
         score = context.user_data["quiz"]["score"]
-        tg_id = update.message.from_user.id
+        tg_id = update.effective_user.id
         await save_score_db(tg_id, score)
-        await update.message.reply_text(f"🏁 Quiz finished! Score: {score}")
+        await update.effective_message.reply_text(f"🏁 Quiz finished! Score: {score}")
         return
+
     q = QUESTIONS[q_index]
     buttons = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
-    await update.message.reply_text(q["question"], reply_markup=InlineKeyboardMarkup(buttons))
+    await update.effective_message.reply_text(q["question"], reply_markup=InlineKeyboardMarkup(buttons))
+
 
 
 async def answer_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1767,6 +1772,8 @@ def main():
     app.add_handler(CommandHandler("balance", balance_command))
     app.add_handler(CommandHandler("play", play_command))
     app.add_handler(CallbackQueryHandler(answer_callback))
+    app.add_handler(CallbackQueryHandler(register_confirm, pattern="confirm_register"))
+
 
     print("🤖 Bot running...")
     app.run_polling()
