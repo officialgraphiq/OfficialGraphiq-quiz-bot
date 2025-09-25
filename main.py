@@ -796,10 +796,6 @@ async def deduct_fee(telegram_id: int, fee: Decimal):
     if balance < fee:
         return None
     new_balance = balance - fee
-    # def _do():
-    #     supabase.table("users").update({"wallet": float(new_balance)}).eq("telegram_id", telegram_id).execute()
-    #     return float(new_balance)
-    # return await asyncio.to_thread(_do)
 
     def _do():
         res = supabase.table("users")\
@@ -846,25 +842,91 @@ async def get_leaderboard_db(limit=10):
 # -----------------------
 # Quiz logic
 # -----------------------
+# async def send_question(context: ContextTypes.DEFAULT_TYPE, user_id: int):
+#     if user_id not in user_data:
+#         return
+#     state = user_data[user_id]
+#     current = state["current"]
+#     if state.get("active") and current < len(QUIZ):
+#         q = QUIZ[current]
+#         keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
+#         await context.bot.send_message(
+#             chat_id=user_id,
+#             text=f"❓ Question {current + 1}: {q['question']}",
+#             reply_markup=InlineKeyboardMarkup(keyboard),
+#         )
+#     else:
+#         score = state["score"]
+#         total = len(QUIZ)
+#         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/{total}")
+#         state["active"] = False
+#         await save_score_db(user_id, score)
+
+
+# small helper for consistent money formatting
+def format_currency(d: Decimal) -> str:
+    try:
+        return f"{d:.2f}"
+    except Exception:
+        return str(d)
+
+
 async def send_question(context: ContextTypes.DEFAULT_TYPE, user_id: int):
+    """Send the next question to user_id. Safe guards for empty quiz and bad question shape."""
+    # ensure user still has a session
     if user_id not in user_data:
+        print(f"[send_question] no session for user {user_id}")
         return
+
     state = user_data[user_id]
-    current = state["current"]
-    if state.get("active") and current < len(QUIZ):
-        q = QUIZ[current]
-        keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
+    current = state.get("current", 0)
+
+    # safety: ensure QUIZ is loaded
+    if not QUIZ:
         await context.bot.send_message(
             chat_id=user_id,
-            text=f"❓ Question {current + 1}: {q['question']}",
-            reply_markup=InlineKeyboardMarkup(keyboard),
+            text="⚠️ Quiz questions are not available right now. Please contact the admin."
         )
-    else:
-        score = state["score"]
+        state["active"] = False
+        print("[send_question] QUIZ is empty or not loaded.")
+        return
+
+    # end condition
+    if not state.get("active") or current >= len(QUIZ):
+        score = state.get("score", 0)
         total = len(QUIZ)
         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/{total}")
         state["active"] = False
-        await save_score_db(user_id, score)
+        # persist score
+        try:
+            await save_score_db(user_id, score)
+        except Exception as e:
+            print(f"[send_question] save_score_db error for {user_id}: {e!r}")
+        return
+
+    # safe access to question
+    try:
+        q = QUIZ[current]
+        question_text = q.get("question", "No question text available.")
+        options = q.get("options", [])
+        if not options:
+            # fallback single-option so UI doesn't crash
+            options = ["(no options)"]
+        keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in options]
+    except Exception as e:
+        print(f"[send_question] failed to prepare question #{current} for {user_id}: {e!r}")
+        await context.bot.send_message(chat_id=user_id, text="⚠️ Error preparing the question. Contact admin.")
+        state["active"] = False
+        return
+
+    # send it
+    await context.bot.send_message(
+        chat_id=user_id,
+        text=f"❓ Question {current + 1}: {question_text}",
+        reply_markup=InlineKeyboardMarkup(keyboard),
+    )
+
+
 
 
 async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -975,25 +1037,68 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Attempt to charge the quiz fee and start a quiz session. Includes diagnostics/logging."""
     user = update.effective_user
-    row = await get_user_record(user.id)
+    uid = user.id
+
+    # Ensure user exists (create minimal record if missing)
+    try:
+        await create_or_update_user(uid, user.username, None, user.first_name)
+    except Exception as e:
+        print(f"[play_command] create_or_update_user failed for {uid}: {e!r}")
+        await update.message.reply_text("⚠️ Internal error when preparing your account. Try again later.")
+        return
+
+    # ensure there are quiz questions
+    if not QUIZ:
+        await update.message.reply_text("⚠️ No quiz questions are available right now. Please contact the admin.")
+        print("[play_command] QUIZ empty — cannot start quiz.")
+        return
+
+    # fetch latest wallet
+    row = await get_user_record(uid)
     if not row:
         await update.message.reply_text("⚠️ Not registered. Use /register.")
         return
-    balance = Decimal(str(row.get("wallet", 0)))
-    if balance < QUIZ_FEE:
-        await update.message.reply_text(
-            f"💰 Insufficient funds ({balance}). Need {QUIZ_FEE}. Use /fund <amount>."
-        )
-        return
-    new_balance = await deduct_fee(user.id, QUIZ_FEE)
-    if new_balance is None:
-        await update.message.reply_text("⚠️ Could not deduct fee.")
+
+    try:
+        balance = Decimal(str(row.get("wallet", 0)))
+    except Exception as e:
+        print(f"[play_command] invalid wallet for {uid}: {row.get('wallet')!r} ({e!r})")
+        await update.message.reply_text("⚠️ Your wallet balance is invalid. Contact admin.")
         return
 
-    user_data[user.id] = {"score": 0, "current": 0, "active": True}
-    await update.message.reply_text(f"✅ Fee deducted. Starting quiz. Balance: {new_balance}")
-    await send_question(context, user.id)
+    # check balance
+    if balance < QUIZ_FEE:
+        await update.message.reply_text(
+            f"💰 Insufficient funds ({format_currency(balance)}). Need {format_currency(QUIZ_FEE)}. Use /fund <amount>."
+        )
+        return
+
+    # attempt deduction with clear error handling
+    try:
+        new_balance = await deduct_fee(uid, QUIZ_FEE)
+    except Exception as e:
+        print(f"[play_command] deduct_fee exception for {uid}: {e!r}")
+        await update.message.reply_text("⚠️ Could not deduct fee due to an internal error. Try again later.")
+        return
+
+    if new_balance is None:
+        # deduct_fee returns None when balance is insufficient OR user not found
+        # re-check current balance and report
+        latest = await get_user_record(uid)
+        latest_bal = Decimal(str(latest.get("wallet", 0))) if latest else Decimal("0")
+        print(f"[play_command] deduct_fee returned None for {uid}; balance={latest_bal}")
+        await update.message.reply_text(
+            f"⚠️ Could not deduct fee. Your balance is {format_currency(latest_bal)}. Need {format_currency(QUIZ_FEE)}."
+        )
+        return
+
+    # initialize in-memory session and start
+    user_data[uid] = {"score": 0, "current": 0, "active": True}
+    await update.message.reply_text(f"✅ Fee {format_currency(QUIZ_FEE)} deducted. Starting quiz. Balance: {format_currency(new_balance)}")
+    # send first question
+    await send_question(context, uid)
 
 
 async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
