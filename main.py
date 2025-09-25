@@ -916,10 +916,14 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ Usage: /fund <amount>")
         return
 
-    try:
-        amount = Decimal(args[0].strip())
+    # Accept "1,000", "₦1000", "$10.50", etc.
+    amt_raw = args[0].strip().replace(",", "")
+    # remove any non-digit/period characters (keeps decimals)
+    amt_raw = re.sub(r"[^\d.]", "", amt_raw)
 
-    except:
+    try:
+        amount = Decimal(amt_raw)
+    except Exception:
         await update.message.reply_text("⚠️ Amount must be a number.")
         return
 
@@ -927,16 +931,17 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ Amount must be positive.")
         return
 
-    row = await get_user_record(user.id)
-    if not row:
-        await update.message.reply_text("⚠️ Not registered. Use /register first.")
+    # Use the add_funds helper which runs Supabase calls in a thread
+    try:
+        new_balance = await add_funds(user.id, amount)
+    except Exception as e:
+        # print to console so you can inspect the error in logs
+        print("fund_command error:", repr(e))
+        await update.message.reply_text("⚠️ Could not add funds due to an internal error.")
         return
 
-    # update wallet
-    new_balance = Decimal(str(row.get("wallet", 0))) + amount
-    await supabase.table("users").update({"wallet": float(new_balance)}).eq("telegram_id", user.id).execute()
-
-    await update.message.reply_text(f"💰 Funded {amount}. New balance: {new_balance}")
+    # add_funds returns the updated wallet (float/str) — show it nicely
+    await update.message.reply_text(f"✅ Funded {amount}. New balance: {Decimal(str(new_balance))}")
 
 
 
