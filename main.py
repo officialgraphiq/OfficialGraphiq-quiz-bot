@@ -765,11 +765,16 @@ async def add_funds(telegram_id: int, amount: Decimal):
         # create minimal user record
         await create_or_update_user(telegram_id, None, None, None, None)
         user = await get_user_record(telegram_id)
+    old_balance = Decimal(str(user.get("wallet", 0) or 0))
+    new_balance = old_balance + amount
 
     def _do():
-        new_balance = float(user.get("wallet", 0) + float(amount))
-        supabase.table("users").update({"wallet": new_balance}).eq("telegram_id", telegram_id).execute()
-        return new_balance
+        res = supabase.table("users")\
+            .update({"wallet": float(new_balance)})\
+            .eq("telegram_id", telegram_id)\
+            .execute()
+        return res.data[0]["wallet"] if res.data else float(new_balance)
+
     return await asyncio.to_thread(_do)
 
 
@@ -1137,6 +1142,8 @@ async def leaderboard_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TOKEN).build()
 
+    app.add_handler(CommandHandler("start", start_command))
+
     # Conversation for registration
     reg_conv = ConversationHandler(
         entry_points=[CommandHandler("register", register_start)],
@@ -1152,10 +1159,8 @@ def main():
 
     # Handlers
     app.add_handler(reg_conv)
-    # app.add_handler(CommandHandler("register", register_command))  # quick /register username flow
     app.add_handler(CommandHandler("fund", fund_command))
     app.add_handler(CommandHandler("balance", balance_command))
-    app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CommandHandler("end", end_command))
     app.add_handler(CommandHandler("table", table_command))
     app.add_handler(CommandHandler("leaderboard", leaderboard_cmd))
