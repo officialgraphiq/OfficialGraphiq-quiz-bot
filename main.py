@@ -876,13 +876,13 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # -----------------------
 # Commands
 # -----------------------
-async def register_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user = update.effective_user
-    args = context.args
-    username = args[0] if len(args) >= 1 else user.username
-    account_number = args[1] if len(args) >= 2 else None
-    await create_or_update_user(user.id, username, account_number, user.first_name)
-    await update.message.reply_text("✅ Registered successfully!")
+# async def register_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user = update.effective_user
+#     args = context.args
+#     username = args[0] if len(args) >= 1 else user.username
+#     account_number = args[1] if len(args) >= 2 else None
+#     await create_or_update_user(user.id, username, account_number, user.first_name)
+#     await update.message.reply_text("✅ Registered successfully!")
 
 
 async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -914,6 +914,20 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "👋 Welcome to the Quiz Bot!\n\n"
+        "/register - Register your account\n"
+        "/fund <amount> - Add funds\n"
+        "/balance - Check your balance\n"
+        "/play - Pay fee & start the quiz\n"
+        "/table - View leaderboard\n"
+        "/end - End quiz\n"
+        "/help - Show all commands"
+    )
+
+
+
+async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     row = await get_user_record(user.id)
     if not row:
@@ -921,12 +935,15 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
     balance = Decimal(str(row.get("wallet", 0)))
     if balance < QUIZ_FEE:
-        await update.message.reply_text(f"💰 Insufficient funds ({balance}). Need {QUIZ_FEE}. Use /fund <amount>.")
+        await update.message.reply_text(
+            f"💰 Insufficient funds ({balance}). Need {QUIZ_FEE}. Use /fund <amount>."
+        )
         return
     new_balance = await deduct_fee(user.id, QUIZ_FEE)
     if new_balance is None:
         await update.message.reply_text("⚠️ Could not deduct fee.")
         return
+
     user_data[user.id] = {"score": 0, "current": 0, "active": True}
     await update.message.reply_text(f"✅ Fee deducted. Starting quiz. Balance: {new_balance}")
     await send_question(context, user.id)
@@ -1142,7 +1159,7 @@ async def leaderboard_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TOKEN).build()
 
-    app.add_handler(CommandHandler("start", start_command))
+    app.add_handler(CommandHandler("play", play_command))
 
     # Conversation for registration
     reg_conv = ConversationHandler(
