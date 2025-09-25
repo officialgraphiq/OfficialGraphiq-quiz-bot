@@ -739,19 +739,71 @@ def _upsert_user_payload(telegram_id, username=None, account_number=None, first_
         payload["email"] = email
     return payload
 
-async def create_or_update_user(telegram_id, username=None, account_number=None, first_name=None, email=None):
-    payload = _upsert_user_payload(telegram_id, username, account_number, first_name, email)
-    # ensure defaults exist if creating
-    # if "wallet" not in payload:
-    #     payload.setdefault("wallet", 0)
-    # if "total_score" not in payload:
-    #     payload.setdefault("total_score", 0)
+# async def create_or_update_user(telegram_id, username=None, account_number=None, first_name=None, email=None):
+#     payload = _upsert_user_payload(telegram_id, username, account_number, first_name, email)
+#     # ensure defaults exist if creating
+#     # if "wallet" not in payload:
+#     #     payload.setdefault("wallet", 0)
+#     # if "total_score" not in payload:
+#     #     payload.setdefault("total_score", 0)
 
-    payload.setdefault("wallet", 0)
-    payload.setdefault("total_score", 0)
+#     payload.setdefault("wallet", 0)
+#     payload.setdefault("total_score", 0)
+#     def _do():
+#         return supabase.table("users").upsert(payload).execute()
+#     return await asyncio.to_thread(_do)
+
+
+
+async def create_or_update_user(telegram_id, username=None, account_number=None, first_name=None):
     def _do():
-        return supabase.table("users").upsert(payload).execute()
+        # Try to find user
+        existing = (
+            supabase.table("users")
+            .select("*")
+            .eq("telegram_id", telegram_id)
+            .execute()
+        )
+        if existing.data and len(existing.data) > 0:
+            # Update username / first_name if provided
+            updates = {}
+            if username is not None:
+                updates["username"] = username
+            if first_name is not None:
+                updates["first_name"] = first_name
+
+            if updates:
+                res = (
+                    supabase.table("users")
+                    .update(updates)
+                    .eq("telegram_id", telegram_id)
+                    .select("*")
+                    .execute()
+                )
+                return res.data[0] if res.data else existing.data[0]
+            return existing.data[0]
+
+        # If not found, create new
+        res = (
+            supabase.table("users")
+            .insert(
+                {
+                    "telegram_id": telegram_id,
+                    "username": username or "",
+                    "first_name": first_name or "",
+                    "account_number": account_number or "",
+                    "wallet": 0.0,
+                }
+            )
+            .select("*")
+            .execute()
+        )
+        return res.data[0] if res.data else None
+
     return await asyncio.to_thread(_do)
+
+
+
 
 
 async def get_user_record(telegram_id: int):
