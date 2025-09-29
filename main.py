@@ -3,6 +3,7 @@ import certifi
 import json
 import requests
 import random
+from datetime import datetime
 from typing import Final
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
@@ -285,32 +286,127 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
 
 # Handle Answer (cancel timeout if answered)
 # ---------------------------
-async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    query = update.callback_query
-    await query.answer()
-    user_id = query.from_user.id
-    quiz = context.user_data.get("quiz")
+# async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+#     user_id = query.from_user.id
+#     quiz = context.user_data.get("quiz")
 
-    if not quiz or not quiz["active"]:
-        await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
+#     if not quiz or not quiz["active"]:
+#         await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
+#         return
+
+#     current = quiz["current"]
+#     correct = quiz["questions"][current]["answer"]
+
+#     # Cancel timeout
+#     if quiz.get("timeout_job"):
+#         quiz["timeout_job"].schedule_removal()
+#         quiz["timeout_job"] = None
+
+#     if query.data == correct:
+#         quiz["score"] += 1
+#         await query.edit_message_text(f"✅ Correct! The answer is {correct}")
+#     else:
+#         await query.edit_message_text(f"❌ Wrong! The correct answer is {correct}")
+
+#     quiz["current"] += 1
+#     await send_question(update, context, user_id)
+
+
+
+async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Handle user answers, calculate base + bonus points, and update DB."""
+    user = update.effective_user
+    user_id = user.id
+    username = user.username or user.first_name
+
+    if "quiz" not in context.user_data or "current_question" not in context.user_data["quiz"]:
+        await update.message.reply_text("Please start the quiz using /quiz.")
         return
 
-    current = quiz["current"]
-    correct = quiz["questions"][current]["answer"]
+    # Fetch quiz state
+    quiz_data = context.user_data["quiz"]
+    current_question = quiz_data["current_question"]
+    question_id = current_question["id"]
+    correct_answer = current_question["answer"]
 
-    # Cancel timeout
-    if quiz.get("timeout_job"):
-        quiz["timeout_job"].schedule_removal()
-        quiz["timeout_job"] = None
+    # Calculate time taken
+    start_time = quiz_data.get("start_time")
+    if not start_time:
+        await update.message.reply_text("Something went wrong with timing, skipping question.")
+        return
+    time_taken = (datetime.now() - start_time).seconds
 
-    if query.data == correct:
-        quiz["score"] += 1
-        await query.edit_message_text(f"✅ Correct! The answer is {correct}")
+    # User answer
+    user_answer = update.message.text.strip()
+
+    # Base scoring
+    if user_answer.lower() == correct_answer.lower():
+        if time_taken <= 30:
+            base_points = 10
+        elif time_taken <= 60:
+            base_points = 5
+        else:
+            base_points = 0
     else:
-        await query.edit_message_text(f"❌ Wrong! The correct answer is {correct}")
+        base_points = 0
 
-    quiz["current"] += 1
-    await send_question(update, context, user_id)
+    # --- Speed Bonus ---
+    bonus_points = 0.0
+    if base_points > 0:
+        # Check other users’ times for this same question
+        other_answers = await users_col.aggregate([
+            {"$unwind": "$answers"},
+            {"$match": {"answers.question_id": question_id}},
+            {"$project": {"answers.time_taken": 1, "telegram_id": 1}}
+        ]).to_list(length=None)
+
+        for ans in other_answers:
+            other_time = ans["answers"]["time_taken"]
+            if time_taken < other_time:  # user was faster
+                bonus_points += (other_time - time_taken) * 0.1
+
+    total_points = base_points + bonus_points
+
+    # Save answer to DB
+    await users_col.update_one(
+        {"telegram_id": user_id},
+        {
+            "$setOnInsert": {
+                "telegram_id": user_id,
+                "username": username,
+                "score": 0,
+                "sessions": 0,
+                "answers": []
+            },
+            "$push": {
+                "answers": {
+                    "question_id": question_id,
+                    "time_taken": time_taken,
+                    "points": total_points
+                }
+            },
+            "$inc": {"score": total_points}
+        },
+        upsert=True
+    )
+
+    # Feedback to user
+    if base_points == 0:
+        response = f"❌ Wrong or too slow! Correct answer was: {correct_answer}"
+    else:
+        response = (
+            f"✅ Correct! You earned {base_points:.1f} points "
+            f"+ {bonus_points:.1f} speed bonus = {total_points:.1f} points.\n"
+            f"⏱️ Your time: {time_taken}s"
+        )
+    await update.message.reply_text(response)
+
+    # Move to next question
+    quiz_data.pop("start_time", None)  # clear for next round
+    await send_question(update, context)
+
 
 
 
@@ -339,6 +435,24 @@ async def leaderboard_command(update: Update, context: ContextTypes.DEFAULT_TYPE
             msg_lines.append(f"\n... {rank}. {requester.get('username','You')} — {requester.get('score',0)} pts")
 
     await update.message.reply_text("\n".join(msg_lines))
+
+
+async def table(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Show the leaderboard with decimal scores."""
+    top_users = await users_col.find().sort("score", -1).limit(10).to_list(length=10)
+
+    if not top_users:
+        await update.message.reply_text("📊 No scores yet. Start playing with /quiz!")
+        return
+
+    leaderboard = "🏆 *Leaderboard* 🏆\n\n"
+    for i, user in enumerate(top_users, start=1):
+        username = user.get("username", f"User{user['telegram_id']}")
+        score = user.get("score", 0)
+        leaderboard += f"{i}. {username} — *{score:.1f}* pts\n"
+
+    await update.message.reply_text(leaderboard, parse_mode="Markdown")
+
 
 
     # ---------------------------
