@@ -2,11 +2,12 @@ import os
 import certifi
 import json
 import requests
+import random
 from typing import Final
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     Application, CommandHandler, CallbackQueryHandler,
-    MessageHandler, ConversationHandler, ContextTypes, filters
+    MessageHandler, ConversationHandler, JobQueue, ContextTypes, filters
 )
 from pymongo import MongoClient
 
@@ -78,6 +79,11 @@ def update_score(tg_id, points):
 def update_balance(tg_id, amount):
     users_col.update_one({"telegram_id": tg_id}, {"$inc": {"balance": amount}})
     return get_user(tg_id)
+
+def increment_sessions(tg_id):
+    users_col.update_one({"telegram_id": tg_id}, {"$inc": {"sessions": 1}})
+    return get_user(tg_id)
+
 
 
 # Start Command
@@ -158,10 +164,22 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Deduct 500 for playing
     update_balance(tg_id, -500)
+    increment_sessions(tg_id)
 
-    context.user_data["quiz"] = {"score": 0, "current": 0, "active": True}
+    # Pick 5 random questions
+    questions = random.sample(QUIZ, 5)
+
+    context.user_data["quiz"] = {
+        "score": 0,
+        "current": 0,
+        "questions": questions,
+        "active": True,
+        "timeout_job": None,
+    }
+
     await update.message.reply_text("🎉 Quiz starting... Good luck!")
     await send_question(update, context, tg_id)
+
 
 
 # End quiz
@@ -215,23 +233,58 @@ async def send_question(update, context, user_id):
     quiz = context.user_data["quiz"]
     current = quiz["current"]
 
-    if current < len(QUIZ) and quiz["active"]:
-        q = QUIZ[current]
+    if current < len(quiz["questions"]) and quiz["active"]:
+        q = quiz["questions"][current]
         keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
         reply_markup = InlineKeyboardMarkup(keyboard)
 
-        await context.bot.send_message(
+        msg = await context.bot.send_message(
             chat_id=user_id,
-            text=f"❓ Question {current+1}: {q['question']}",
+            text=f"❓ Question {current+1}/5:\n{q['question']}\n\n⏳ You have 60 seconds!",
             reply_markup=reply_markup
         )
+
+        # Cancel old job if any
+        if quiz.get("timeout_job"):
+            quiz["timeout_job"].schedule_removal()
+
+        # Schedule timeout in 60s
+        job = context.job_queue.run_once(timeout_question, 60, data={"user_id": user_id, "msg_id": msg.message_id})
+        quiz["timeout_job"] = job
+
     else:
         score = quiz["score"]
         update_score(user_id, score)
-        await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/{len(QUIZ)}")
+        await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/5")
         quiz["active"] = False
 
-    # Handle answers
+
+# Timeout Handler
+# ---------------------------
+async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
+    data = context.job.data
+    user_id = data["user_id"]
+    user_data = context.application.user_data[user_id]
+    quiz = user_data.get("quiz")
+
+    if not quiz or not quiz["active"]:
+        return
+
+    current = quiz["current"]
+    correct = quiz["questions"][current]["answer"]
+
+    # Mark as failed due to timeout
+    await context.bot.send_message(
+        chat_id=user_id,
+        text=f"⌛ Time’s up! The correct answer was {correct}."
+    )
+
+    quiz["current"] += 1
+    await send_question(None, context, user_id)
+
+
+# Handle Answer (cancel timeout if answered)
+# ---------------------------
 async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -239,11 +292,16 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     quiz = context.user_data.get("quiz")
 
     if not quiz or not quiz["active"]:
-        await query.edit_message_text("❌ You are not in an active quiz. Type /start to begin.")
+        await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
         return
 
     current = quiz["current"]
-    correct = QUIZ[current]["answer"]
+    correct = quiz["questions"][current]["answer"]
+
+    # Cancel timeout
+    if quiz.get("timeout_job"):
+        quiz["timeout_job"].schedule_removal()
+        quiz["timeout_job"] = None
 
     if query.data == correct:
         quiz["score"] += 1
