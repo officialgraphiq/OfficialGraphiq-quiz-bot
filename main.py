@@ -465,7 +465,7 @@ async def table(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 # ---------------------------
 def main():
     print("🤖 Bot starting...")
-    app = Application.builder().token(TOKEN).arbitrary_callback_data(True).build()
+    app = Application.builder().token(TOKEN).build()
     app.job_queue
     
 
