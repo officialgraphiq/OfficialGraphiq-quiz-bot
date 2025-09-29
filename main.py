@@ -322,8 +322,13 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     username = user.username or user.first_name
 
     if "quiz" not in context.user_data or "current_question" not in context.user_data["quiz"]:
-        await update.message.reply_text("Please start the quiz using /quiz.")
-        return
+        # await update.message.reply_text("Please start the quiz using /quiz.")
+        # return
+     if update.callback_query:
+       await update.callback_query.message.reply_text("Please start the quiz using /quiz.")
+     else:
+       await update.message.reply_text("Please start the quiz using /quiz.")
+
 
     # Fetch quiz state
     quiz_data = context.user_data["quiz"]
@@ -460,7 +465,9 @@ async def table(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 # ---------------------------
 def main():
     print("🤖 Bot starting...")
-    app = Application.builder().token(TOKEN).build()
+    app = Application.builder().token(TOKEN).arbitrary_callback_data(True).build()
+    app.job_queue
+    
 
     # Register flow
     reg_conv = ConversationHandler(
