@@ -1529,7 +1529,7 @@ def update_balance(tg_id, amount):
 # ---------------------------
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     menu = (
-        "👋 Welcome to Icon Quiz Bot!\n\n"
+        "👋 Welcome to ORG Quiz Bot!\n\n"
         "Here are the available commands:\n"
         "/play - Start the quiz (must be registered + have ≥ 500 balance)\n"
         "/register - Register yourself\n"
