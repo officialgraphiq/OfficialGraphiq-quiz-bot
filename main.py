@@ -321,7 +321,7 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     user_id = user.id
     username = user.username or user.first_name
 
-    if "quiz" not in context.user_data or "current_question" not in context.user_data["quiz"]:
+    if "quiz" not in context.user_data or "current" not in context.user_data["quiz"]:
         # await update.message.reply_text("Please start the quiz using /quiz.")
         # return
      if update.callback_query:
@@ -332,9 +332,9 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
     # Fetch quiz state
     quiz_data = context.user_data["quiz"]
-    current_question = quiz_data["current_question"]
-    question_id = current_question["id"]
-    correct_answer = current_question["answer"]
+    current = quiz_data["current"]
+    question_id = current["id"]
+    correct_answer = current["answer"]
 
     # Calculate time taken
     start_time = quiz_data.get("start_time")
