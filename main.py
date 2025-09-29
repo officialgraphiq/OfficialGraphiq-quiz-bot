@@ -95,6 +95,12 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     await update.message.reply_text(menu)
 
+    # Help Command (reuse start)
+# ---------------------------
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Just call start_command so both are identical
+    await start_command(update, context)
+
 # ---------------------------
 # Command Handlers
 # ---------------------------
@@ -302,6 +308,7 @@ def main():
     app.add_handler(CommandHandler("fund", fund_command))
     app.add_handler(CommandHandler("balance", balance_command))
     app.add_handler(CommandHandler("leaderboard", leaderboard_command))
+    app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CallbackQueryHandler(handle_answer))
 
 
