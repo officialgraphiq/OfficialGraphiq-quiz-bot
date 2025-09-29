@@ -134,33 +134,6 @@ async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 
-async def register_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data["email"] = update.message.text
-    keyboard = [[InlineKeyboardButton("Confirm ✅", callback_data="confirm_register")]]
-    await update.message.reply_text(
-        f"Name: {context.user_data['first_name']}\n"
-        f"Account: {context.user_data['account_number']}\n"
-        f"Email: {context.user_data['email']}\n\n"
-        "Confirm registration?",
-        reply_markup=InlineKeyboardMarkup(keyboard),
-    )
-    return REGISTER_CONFIRM
-
-
-async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    query = update.callback_query
-    await query.answer()
-    tg_id = query.from_user.id
-    username = query.from_user.username
-    first_name = context.user_data.get("first_name")
-    account_number = context.user_data.get("account_number")
-    email = context.user_data.get("email")
-
-    await create_or_update_user(tg_id, username, account_number, first_name, email)
-    await query.edit_message_text("✅ Registered successfully!")
-    return ConversationHandler.END
-
-
 # ---------------------------
 # Start Quiz
 # ---------------------------
