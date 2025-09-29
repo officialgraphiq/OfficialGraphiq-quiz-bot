@@ -3,7 +3,6 @@ import certifi
 import json
 import requests
 import random
-from datetime import datetime
 from typing import Final
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
@@ -170,20 +169,16 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Pick 5 random questions
     questions = random.sample(QUIZ, 5)
 
-    # 🔑 Store quiz in app-level user_data
-    context.application.user_data[tg_id] = {
-        "quiz": {
-            "score": 0,
-            "current": 0,
-            "questions": questions,
-            "active": True,
-            "timeout_job": None,
-        }
+    context.user_data["quiz"] = {
+        "score": 0,
+        "current": 0,
+        "questions": questions,
+        "active": True,
+        "timeout_job": None,
     }
 
     await update.message.reply_text("🎉 Quiz starting... Good luck!")
     await send_question(update, context, tg_id)
-
 
 
 
@@ -235,7 +230,7 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Send question
 async def send_question(update, context, user_id):
-    quiz = context.application.user_data[user_id]["quiz"]
+    quiz = context.user_data["quiz"]
     current = quiz["current"]
 
     if current < len(quiz["questions"]) and quiz["active"]:
@@ -253,9 +248,10 @@ async def send_question(update, context, user_id):
         if quiz.get("timeout_job"):
             quiz["timeout_job"].schedule_removal()
 
-        # Schedule timeout
-        job = context.job_queue.run_once(timeout_question, 60, data={"user_id": user_id})
+        # Schedule timeout in 60s
+        job = context.job_queue.run_once(timeout_question, 60, data={"user_id": user_id, "msg_id": msg.message_id})
         quiz["timeout_job"] = job
+
     else:
         score = quiz["score"]
         update_score(user_id, score)
@@ -263,13 +259,12 @@ async def send_question(update, context, user_id):
         quiz["active"] = False
 
 
-
 # Timeout Handler
 # ---------------------------
 async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     data = context.job.data
     user_id = data["user_id"]
-    user_data = context.application.user_data.get(user_id, {})
+    user_data = context.application.user_data[user_id]
     quiz = user_data.get("quiz")
 
     if not quiz or not quiz["active"]:
@@ -278,6 +273,7 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     current = quiz["current"]
     correct = quiz["questions"][current]["answer"]
 
+    # Mark as failed due to timeout
     await context.bot.send_message(
         chat_id=user_id,
         text=f"⌛ Time’s up! The correct answer was {correct}."
@@ -287,19 +283,16 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     await send_question(None, context, user_id)
 
 
-
 # Handle Answer (cancel timeout if answered)
 # ---------------------------
 async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
     user_id = query.from_user.id
-
-    user_data = context.application.user_data.get(user_id, {})
-    quiz = user_data.get("quiz")
+    quiz = context.user_data.get("quiz")
 
     if not quiz or not quiz["active"]:
-        await query.edit_message_text("❌ You are not in an active quiz. Use /play to begin.")
+        await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
         return
 
     current = quiz["current"]
@@ -348,33 +341,12 @@ async def leaderboard_command(update: Update, context: ContextTypes.DEFAULT_TYPE
     await update.message.reply_text("\n".join(msg_lines))
 
 
-def table(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Show the leaderboard with decimal scores."""
-    top_users = list(users_col.find().sort("score", -1).limit(10))
-
-    if not top_users:
-        update.message.reply_text("📊 No scores yet. Start playing with /play!")
-        return
-
-    leaderboard = "🏆 *Leaderboard* 🏆\n\n"
-    for i, user in enumerate(top_users, start=1):
-        username = user.get("username", f"User{user['telegram_id']}")
-        score = user.get("score", 0)
-        leaderboard += f"{i}. {username} — *{score:.1f}* pts\n"
-
-    update.message.reply_text(leaderboard, parse_mode="Markdown")
-
-
-
-
     # ---------------------------
 # Main
 # ---------------------------
 def main():
     print("🤖 Bot starting...")
     app = Application.builder().token(TOKEN).build()
-    app.job_queue
-    
 
     # Register flow
     reg_conv = ConversationHandler(
