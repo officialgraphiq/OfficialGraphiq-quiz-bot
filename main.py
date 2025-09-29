@@ -286,61 +286,30 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
 
 # Handle Answer (cancel timeout if answered)
 # ---------------------------
-# async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     query = update.callback_query
-#     await query.answer()
-#     user_id = query.from_user.id
-#     quiz = context.user_data.get("quiz")
-
-#     if not quiz or not quiz["active"]:
-#         await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
-#         return
-
-#     current = quiz["current"]
-#     correct = quiz["questions"][current]["answer"]
-
-#     # Cancel timeout
-#     if quiz.get("timeout_job"):
-#         quiz["timeout_job"].schedule_removal()
-#         quiz["timeout_job"] = None
-
-#     if query.data == correct:
-#         quiz["score"] += 1
-#         await query.edit_message_text(f"✅ Correct! The answer is {correct}")
-#     else:
-#         await query.edit_message_text(f"❌ Wrong! The correct answer is {correct}")
-
-#     quiz["current"] += 1
-#     await send_question(update, context, user_id)
-
-
-
 async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
     user_id = query.from_user.id
-
     quiz = context.user_data.get("quiz")
-    if not quiz or not quiz.get("active"):
+
+    if not quiz or not quiz["active"]:
         await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
         return
 
-    current_index = quiz["current"]
-    question = quiz["questions"][current_index]
-    correct_answer = question["answer"]
+    current = quiz["current"]
+    correct = quiz["questions"][current]["answer"]
 
     # Cancel timeout
     if quiz.get("timeout_job"):
         quiz["timeout_job"].schedule_removal()
         quiz["timeout_job"] = None
 
-    if query.data == correct_answer:
+    if query.data == correct:
         quiz["score"] += 1
-        await query.edit_message_text(f"✅ Correct! The answer is {correct_answer}")
+        await query.edit_message_text(f"✅ Correct! The answer is {correct}")
     else:
-        await query.edit_message_text(f"❌ Wrong! The correct answer was {correct_answer}")
+        await query.edit_message_text(f"❌ Wrong! The correct answer is {correct}")
 
-    # Move to next question
     quiz["current"] += 1
     await send_question(update, context, user_id)
 
