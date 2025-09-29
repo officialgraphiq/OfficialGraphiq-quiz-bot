@@ -343,12 +343,12 @@ async def leaderboard_command(update: Update, context: ContextTypes.DEFAULT_TYPE
     await update.message.reply_text("\n".join(msg_lines))
 
 
-async def table(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+def table(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show the leaderboard with decimal scores."""
-    top_users = await users_col.find().sort("score", -1).limit(10).to_list(length=10)
+    top_users = list(users_col.find().sort("score", -1).limit(10))
 
     if not top_users:
-        await update.message.reply_text("📊 No scores yet. Start playing with /quiz!")
+        update.message.reply_text("📊 No scores yet. Start playing with /play!")
         return
 
     leaderboard = "🏆 *Leaderboard* 🏆\n\n"
@@ -357,7 +357,8 @@ async def table(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         score = user.get("score", 0)
         leaderboard += f"{i}. {username} — *{score:.1f}* pts\n"
 
-    await update.message.reply_text(leaderboard, parse_mode="Markdown")
+    update.message.reply_text(leaderboard, parse_mode="Markdown")
+
 
 
 
