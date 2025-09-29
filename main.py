@@ -244,19 +244,26 @@ async def send_question(update, context, user_id):
             reply_markup=reply_markup
         )
 
-        # Cancel old job if any
+        # Cancel old timeout if any
         if quiz.get("timeout_job"):
             quiz["timeout_job"].schedule_removal()
 
-        # Schedule timeout in 60s
-        job = context.job_queue.run_once(timeout_question, 60, data={"user_id": user_id, "msg_id": msg.message_id})
+        # Schedule timeout for THIS question
+        job = context.job_queue.run_once(
+            timeout_question, 
+            60, 
+            data={"user_id": user_id}
+        )
         quiz["timeout_job"] = job
 
     else:
+        # Quiz finished
         score = quiz["score"]
         update_score(user_id, score)
         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/5")
         quiz["active"] = False
+
+
 
 
 # Timeout Handler
@@ -273,12 +280,13 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     current = quiz["current"]
     correct = quiz["questions"][current]["answer"]
 
-    # Mark as failed due to timeout
+    # Tell user time’s up
     await context.bot.send_message(
         chat_id=user_id,
         text=f"⌛ Time’s up! The correct answer was {correct}."
     )
 
+    # Move to next question
     quiz["current"] += 1
     await send_question(None, context, user_id)
 
