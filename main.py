@@ -1176,41 +1176,25 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     user_id = query.from_user.id
 
-    # validate registration and balance again (safety)
-    user = get_user(user_id)
-    if not user:
-        await query.edit_message_text("⚠️ You must register first using /register")
-        return
-    if user.get("balance", 0) < 500:
-        await query.edit_message_text("⚠️ You need at least 500 balance to play. Use /fund to add funds.")
-        return
-
     cat = query.data.split("_", 1)[1]
     filepath = CATEGORIES.get(cat)
     if not filepath:
         await query.edit_message_text("⚠️ Unknown category selected.")
         return
 
-    # Deduct play fee and increment sessions
-    update_balance(user_id, -500)
-    increment_sessions(user_id)
-
-    # Load category file
     try:
         with open(filepath, "r") as f:
             all_questions = json.load(f)
     except Exception as e:
-        await query.edit_message_text(f"⚠️ Failed to load questions for {cat}: {e}")
+        await query.edit_message_text(f"⚠️ Failed to load {cat} questions: {e}")
         return
 
-    # Choose 5 random questions
     if len(all_questions) < 5:
-        await query.edit_message_text(f"⚠️ Not enough questions in {cat} (need >=5).")
+        await query.edit_message_text(f"⚠️ Not enough questions in {cat}.")
         return
 
     selected = random.sample(all_questions, 5)
 
-    # Store quiz state under application.user_data keyed by user_id (safe for JobQueue callbacks)
     context.application.user_data.setdefault(user_id, {})
     context.application.user_data[user_id]["quiz"] = {
         "score": 0,
@@ -1223,8 +1207,9 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "sent_at": None
     }
 
-    await query.edit_message_text(f"✅ You chose {cat}. Quiz starting — Good luck!")
-    await send_question(None, context, user_id)
+    await query.edit_message_text(f"✅ You chose {cat}. Quiz starting…")
+    await send_question(update, context, user_id)  # pass update instead of None
+
 
 
 # ---------------------------
