@@ -1073,37 +1073,6 @@ async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 
-# ---------------------------
-#Quiz: category selection --> start
-# ---------------------------
-# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     tg_id = update.message.from_user.id
-#     user = get_user(tg_id)
-
-#     if not user:
-#         await update.message.reply_text("⚠️ You must register first using /register")
-#         return
-#     if user.get("balance", 0) < 500:
-#         await update.message.reply_text("⚠️ You need at least 500 balance to play. Use /fund to add funds.")
-#         return
-
-#     update_balance(tg_id, -500)
-#     increment_sessions(tg_id)
-
-#     questions = random.sample(_, 5)
-
-#     context.user_data["quiz"] = {
-#         "score": 0,
-#         "current": 0,
-#         "questions": questions,
-#         "active": True,
-#         "timeout_job": None,
-#         "answers": []
-#     }
-
-#     await update.message.reply_text("🎉 Quiz starting... Good luck!")
-#     await send_question(update, context, tg_id)
-
 
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     tg_id = update.message.from_user.id
@@ -1171,6 +1140,47 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 
+# async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+#     user_id = query.from_user.id
+
+#     cat = query.data.split("_", 1)[1]
+#     filepath = CATEGORIES.get(cat)
+#     if not filepath:
+#         await query.edit_message_text("⚠️ Unknown category selected.")
+#         return
+
+#     try:
+#         with open(filepath, "r") as f:
+#             all_questions = json.load(f)
+#     except Exception as e:
+#         await query.edit_message_text(f"⚠️ Failed to load {cat} questions: {e}")
+#         return
+
+#     if len(all_questions) < 5:
+#         await query.edit_message_text(f"⚠️ Not enough questions in {cat}.")
+#         return
+
+#     selected = random.sample(all_questions, 5)
+
+#     context.user_data["quiz"] = {
+#     "score": 0,
+#     "current": 0,
+#     "questions": selected,
+#     "active": True,
+#     "timeout_job": None,
+#     "answers": [],
+#     "category": cat,
+#     "sent_at": None
+# }
+
+
+#     await query.edit_message_text(f"✅ You chose {cat}. Quiz starting…")
+#     await send_question(update, context, user_id)  # pass update instead of None
+
+
+
 async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -1182,6 +1192,7 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.edit_message_text("⚠️ Unknown category selected.")
         return
 
+    # Load questions
     try:
         with open(filepath, "r") as f:
             all_questions = json.load(f)
@@ -1195,48 +1206,76 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     selected = random.sample(all_questions, 5)
 
-    # context.application.user_data.setdefault(user_id, {})
-    # context.application.user_data[user_id]["quiz"] = {
-    #     "score": 0,
-    #     "current": 0,
-    #     "questions": selected,
-    #     "active": True,
-    #     "timeout_job": None,
-    #     "answers": [],
-    #     "category": cat,
-    #     "sent_at": None
-    # }
-
-    context.user_data["quiz"] = {
-    "score": 0,
-    "current": 0,
-    "questions": selected,
-    "active": True,
-    "timeout_job": None,
-    "answers": [],
-    "category": cat,
-    "sent_at": None
-}
-
+    # Store quiz in both user_data and application.user_data for job access
+    quiz_data = {
+        "score": 0,
+        "current": 0,
+        "questions": selected,
+        "active": True,
+        "timeout_job": None,
+        "answers": [],
+        "category": cat,
+        "sent_at": None
+    }
+    context.user_data["quiz"] = quiz_data
+    context.application.user_data[user_id] = {"quiz": quiz_data}
 
     await query.edit_message_text(f"✅ You chose {cat}. Quiz starting…")
-    await send_question(update, context, user_id)  # pass update instead of None
+    await send_question(None, context, user_id)  # pass None for update since job may call it
+
+
 
 
 
 # ---------------------------
 # Send Question
 # ---------------------------
-async def send_question(update, context, user_id):
-    # user_data = context.application.user_data.get(user_id, {})
-    # quiz = user_data.get("quiz")
-    quiz = context.user_data.get("quiz")
+# async def send_question(update, context, user_id):
+#     quiz = context.user_data.get("quiz")
 
-    if not quiz:
+#     if not quiz:
+#         return
+
+#     current = quiz["current"]
+#     if current < len(quiz["questions"]) and quiz["active"]:
+#         q = quiz["questions"][current]
+#         keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
+#         reply_markup = InlineKeyboardMarkup(keyboard)
+
+#         msg = await context.bot.send_message(
+#             chat_id=user_id,
+#             text=f"❓ Question {current+1}/5:\n{q['question']}\n\n⏳ You have 60 seconds!",
+#             reply_markup=reply_markup
+#         )
+
+#         # remove old timeout job safely
+#         safe_remove_job(quiz.get("timeout_job"))
+
+#         job = context.job_queue.run_once(
+#     timeout_question,
+#     60,
+#     data={"user_id": user_id, "msg_id": msg.message_id},
+# )
+#         quiz["timeout_job"] = job
+#         quiz["sent_at"] = time.time()
+
+#     else:
+#         await finalize_quiz(context, user_id, quiz)
+
+
+
+async def send_question(update, context, user_id):
+    # Use user_data if called from interaction, application.user_data if called by job
+    if update:
+        quiz = context.user_data.get("quiz")
+    else:
+        quiz = context.application.user_data.get(user_id, {}).get("quiz")
+
+    if not quiz or not quiz.get("active", True):
         return
 
     current = quiz["current"]
-    if current < len(quiz["questions"]) and quiz["active"]:
+    if current < len(quiz["questions"]):
         q = quiz["questions"][current]
         keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -1247,44 +1286,40 @@ async def send_question(update, context, user_id):
             reply_markup=reply_markup
         )
 
-        # remove old timeout job safely
+        # Remove old timeout safely
         safe_remove_job(quiz.get("timeout_job"))
 
-        # schedule new timeout
-        # job = context.job_queue.run_once(
-        #     timeout_question,
-        #     60,
-        #     data={"user_id": user_id, "msg_id": msg.message_id}
-        # )
+        # Schedule new timeout
         job = context.job_queue.run_once(
-    timeout_question,
-    60,
-    data={"user_id": user_id, "msg_id": msg.message_id},
-)
+            timeout_question,
+            60,
+            data={"user_id": user_id, "msg_id": msg.message_id},
+        )
         quiz["timeout_job"] = job
         quiz["sent_at"] = time.time()
-
     else:
         await finalize_quiz(context, user_id, quiz)
+
+
 
 
 # ---------------------------
 # Timeout Handler
 # ---------------------------
-# async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
-#     data = context.job.data
-#     user_id = data["user_id"]
-#     # user_data = context.application.user_data.get(user_id, {})
-#     # quiz = user_data.get("quiz")
-#     quiz = context.user_data.get("quiz")
 
-#     if not quiz or not quiz["active"]:
+# async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
+#     job = context.job
+#     data = job.data
+#     user_id = data["user_id"]
+
+#     quiz = context.application.user_data.get(user_id, {}).get("quiz")
+#     if not quiz or not quiz.get("active", True):
 #         return
 
 #     current = quiz["current"]
 #     correct = quiz["questions"][current]["answer"]
 
-#     # record as timeout (no base score)
+#     # Record timeout (no points)
 #     quiz["answers"].append({
 #         "user_id": user_id,
 #         "question_id": current,
@@ -1299,12 +1334,12 @@ async def send_question(update, context, user_id):
 
 
 
-
 async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     job = context.job
     data = job.data
     user_id = data["user_id"]
 
+    # Access the quiz from application.user_data
     quiz = context.application.user_data.get(user_id, {}).get("quiz")
     if not quiz or not quiz.get("active", True):
         return
@@ -1320,10 +1355,14 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
         "elapsed_time": 60
     })
 
-    await context.bot.send_message(chat_id=user_id, text=f"⌛ Time’s up! The correct answer was {correct}.")
+    await context.bot.send_message(
+        chat_id=user_id,
+        text=f"⌛ Time’s up! The correct answer was {correct}."
+    )
 
     quiz["current"] += 1
     await send_question(None, context, user_id)
+
 
 
 
