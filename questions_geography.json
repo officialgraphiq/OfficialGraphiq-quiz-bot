@@ -1,0 +1,502 @@
+[
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Lagos",
+            "Abuja",
+            "Kano",
+            "Port Harcourt"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "Which is the largest continent?",
+        "options": [
+            "Africa",
+            "Asia",
+            "Europe",
+            "Antarctica"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "Which river is the longest in the world?",
+        "options": [
+            "Amazon",
+            "Nile",
+            "Yangtze",
+            "Mississippi"
+        ],
+        "answer": "Nile"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Berlin",
+            "Madrid",
+            "Paris",
+            "Rome"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which ocean is the largest?",
+        "options": [
+            "Atlantic",
+            "Indian",
+            "Pacific",
+            "Arctic"
+        ],
+        "answer": "Pacific"
+    },
+    {
+        "question": "In which country is Mount Kilimanjaro located?",
+        "options": [
+            "Kenya",
+            "Tanzania",
+            "Uganda",
+            "Ethiopia"
+        ],
+        "answer": "Tanzania"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Kyoto",
+            "Osaka",
+            "Tokyo",
+            "Hiroshima"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "Which desert is the largest hot desert?",
+        "options": [
+            "Gobi",
+            "Sahara",
+            "Kalahari",
+            "Mojave"
+        ],
+        "answer": "Sahara"
+    },
+    {
+        "question": "Which country has the largest population?",
+        "options": [
+            "India",
+            "USA",
+            "China",
+            "Russia"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Which sea is between Europe and Africa?",
+        "options": [
+            "Caribbean Sea",
+            "Mediterranean Sea",
+            "Red Sea",
+            "Baltic Sea"
+        ],
+        "answer": "Mediterranean Sea"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Alexandria",
+            "Cairo",
+            "Giza",
+            "Luxor"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": [
+            "China",
+            "Japan",
+            "Thailand",
+            "India"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "Which US city is known as the Big Apple?",
+        "options": [
+            "Los Angeles",
+            "New York City",
+            "Chicago",
+            "Miami"
+        ],
+        "answer": "New York City"
+    },
+    {
+        "question": "What is the largest island in the world?",
+        "options": [
+            "Australia",
+            "Greenland",
+            "Madagascar",
+            "Borneo"
+        ],
+        "answer": "Greenland"
+    },
+    {
+        "question": "Which mountain is the highest in the world?",
+        "options": [
+            "K2",
+            "Mount Everest",
+            "Kilimanjaro",
+            "Denali"
+        ],
+        "answer": "Mount Everest"
+    },
+    {
+        "question": "Which strait separates Asia and North America?",
+        "options": [
+            "Bering Strait",
+            "Gibraltar Strait",
+            "Magellan Strait",
+            "Hormuz Strait"
+        ],
+        "answer": "Bering Strait"
+    },
+    {
+        "question": "Which country is famous for the fjords?",
+        "options": [
+            "Iceland",
+            "Norway",
+            "Canada",
+            "Chile"
+        ],
+        "answer": "Norway"
+    },
+    {
+        "question": "Which river flows through Baghdad?",
+        "options": [
+            "Tigris",
+            "Euphrates",
+            "Nile",
+            "Amazon"
+        ],
+        "answer": "Tigris"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "options": [
+            "Toronto",
+            "Vancouver",
+            "Ottawa",
+            "Montreal"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "Which country has the longest coastline?",
+        "options": [
+            "Australia",
+            "Russia",
+            "Canada",
+            "Indonesia"
+        ],
+        "answer": "Canada"
+    },
+    {
+        "question": "Which continent is Australia part of?",
+        "options": [
+            "Oceania",
+            "Asia",
+            "Europe",
+            "Africa"
+        ],
+        "answer": "Oceania"
+    },
+    {
+        "question": "Which country is home to the Amazon rainforest?",
+        "options": [
+            "Brazil",
+            "Peru",
+            "Colombia",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "What is the capital of South Africa (one of them)?",
+        "options": [
+            "Cape Town",
+            "Johannesburg",
+            "Durban",
+            "Pretoria"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "Which gulf lies between Saudi Arabia and Iran?",
+        "options": [
+            "Gulf of Oman",
+            "Persian Gulf",
+            "Gulf of Aden",
+            "Gulf of Mexico"
+        ],
+        "answer": "Persian Gulf"
+    },
+    {
+        "question": "Which city is built on 118 small islands and known for canals?",
+        "options": [
+            "Venice",
+            "Amsterdam",
+            "Bangkok",
+            "Stockholm"
+        ],
+        "answer": "Venice"
+    },
+    {
+        "question": "Which is the smallest country by area?",
+        "options": [
+            "Monaco",
+            "Vatican City",
+            "San Marino",
+            "Liechtenstein"
+        ],
+        "answer": "Vatican City"
+    },
+    {
+        "question": "Which country is famous for the Great Barrier Reef?",
+        "options": [
+            "USA",
+            "Australia",
+            "India",
+            "Brazil"
+        ],
+        "answer": "Australia"
+    },
+    {
+        "question": "Which US state is the Grand Canyon located in?",
+        "options": [
+            "Utah",
+            "Arizona",
+            "Nevada",
+            "Colorado"
+        ],
+        "answer": "Arizona"
+    },
+    {
+        "question": "Which mountain range runs along the west of South America?",
+        "options": [
+            "Andes",
+            "Rockies",
+            "Alps",
+            "Himalayas"
+        ],
+        "answer": "Andes"
+    },
+    {
+        "question": "Which is the coldest continent?",
+        "options": [
+            "Europe",
+            "Asia",
+            "Antarctica",
+            "North America"
+        ],
+        "answer": "Antarctica"
+    },
+    {
+        "question": "Which city hosted the 2016 Summer Olympics?",
+        "options": [
+            "China",
+            "Brazil",
+            "Japan",
+            "USA"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "Which country has the city of Lagos?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Cameroon",
+            "Benin"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which European country has the most volcanoes?",
+        "options": [
+            "Iceland",
+            "Italy",
+            "Greece",
+            "Turkey"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "Which country is crossed by the Prime Meridian?",
+        "options": [
+            "France",
+            "UK",
+            "Spain",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "question": "Which river flows through London?",
+        "options": [
+            "Thames",
+            "Seine",
+            "Danube",
+            "Rhine"
+        ],
+        "answer": "Thames"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Perth"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "Which country is landlocked?",
+        "options": [
+            "Bolivia",
+            "Chile",
+            "Ecuador",
+            "Peru"
+        ],
+        "answer": "Bolivia"
+    },
+    {
+        "question": "Which African country was never colonized?",
+        "options": [
+            "Nigeria",
+            "Ethiopia",
+            "Ghana",
+            "Kenya"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "Which ocean touches the east coast of Africa?",
+        "options": [
+            "Atlantic",
+            "Indian",
+            "Pacific",
+            "Arctic"
+        ],
+        "answer": "Indian"
+    },
+    {
+        "question": "Which desert is found in northern China and southern Mongolia?",
+        "options": [
+            "Sahara",
+            "Gobi",
+            "Kalahari",
+            "Thar"
+        ],
+        "answer": "Gobi"
+    },
+    {
+        "question": "Which city is the capital of Italy?",
+        "options": [
+            "Milan",
+            "Venice",
+            "Florence",
+            "Rome"
+        ],
+        "answer": "Rome"
+    },
+    {
+        "question": "Which country has the most natural lakes?",
+        "options": [
+            "Canada",
+            "USA",
+            "Finland",
+            "Russia"
+        ],
+        "answer": "Canada"
+    },
+    {
+        "question": "Which strait separates Spain and Morocco?",
+        "options": [
+            "Bosporus",
+            "Gibraltar Strait",
+            "Oresund",
+            "Dardanelles"
+        ],
+        "answer": "Gibraltar Strait"
+    },
+    {
+        "question": "Which country contains the region of Transylvania?",
+        "options": [
+            "Hungary",
+            "Romania",
+            "Bulgaria",
+            "Ukraine"
+        ],
+        "answer": "Romania"
+    },
+    {
+        "question": "Which country is the largest by area in Africa?",
+        "options": [
+            "Algeria",
+            "Sudan",
+            "DR Congo",
+            "Libya"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "Which is the deepest ocean trench?",
+        "options": [
+            "Mariana Trench",
+            "Tonga Trench",
+            "Kermadec Trench",
+            "Puerto Rico Trench"
+        ],
+        "answer": "Mariana Trench"
+    },
+    {
+        "question": "Which US state is known as the \"Sunshine State\"?",
+        "options": [
+            "California",
+            "Florida",
+            "Texas",
+            "Arizona"
+        ],
+        "answer": "Florida"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Munich",
+            "Hamburg",
+            "Berlin",
+            "Frankfurt"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "question": "Which ocean is the smallest by surface area?",
+        "options": [
+            "Pacific",
+            "Atlantic",
+            "Indian",
+            "Arctic"
+        ],
+        "answer": "Arctic"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Rio de Janeiro",
+            "São Paulo",
+            "Brasilia",
+            "Salvador"
+        ],
+        "answer": "Brasilia"
+    }
+]

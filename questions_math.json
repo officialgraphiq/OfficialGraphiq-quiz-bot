@@ -1,0 +1,502 @@
+[
+    {
+        "question": "What is 7 + 8?",
+        "options": [
+            "14",
+            "15",
+            "16",
+            "13"
+        ],
+        "answer": "15"
+    },
+    {
+        "question": "What is the square root of 81?",
+        "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "answer": "9"
+    },
+    {
+        "question": "Solve for x: 2x + 3 = 11",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "answer": "4"
+    },
+    {
+        "question": "What is 12 × 12?",
+        "options": [
+            "144",
+            "124",
+            "142",
+            "154"
+        ],
+        "answer": "144"
+    },
+    {
+        "question": "What is 15% of 200?",
+        "options": [
+            "20",
+            "25",
+            "30",
+            "35"
+        ],
+        "answer": "30"
+    },
+    {
+        "question": "What is the value of π (approx) to two decimal places?",
+        "options": [
+            "3.12",
+            "3.14",
+            "3.16",
+            "3.18"
+        ],
+        "answer": "3.14"
+    },
+    {
+        "question": "What is 2^5?",
+        "options": [
+            "16",
+            "32",
+            "64",
+            "8"
+        ],
+        "answer": "32"
+    },
+    {
+        "question": "What is the derivative of x^2 with respect to x?",
+        "options": [
+            "x",
+            "2x",
+            "x^2",
+            "2"
+        ],
+        "answer": "2x"
+    },
+    {
+        "question": "What is 100 divided by 4?",
+        "options": [
+            "20",
+            "25",
+            "24",
+            "30"
+        ],
+        "answer": "25"
+    },
+    {
+        "question": "What is the sum of the interior angles of a triangle (degrees)?",
+        "options": [
+            "180",
+            "360",
+            "90",
+            "270"
+        ],
+        "answer": "180"
+    },
+    {
+        "question": "What is 0 factorial (0!)?",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "undefined"
+        ],
+        "answer": "1"
+    },
+    {
+        "question": "Which number is prime?",
+        "options": [
+            "21",
+            "25",
+            "29",
+            "27"
+        ],
+        "answer": "29"
+    },
+    {
+        "question": "What is the area of a rectangle with sides 5 and 8?",
+        "options": [
+            "13",
+            "40",
+            "30",
+            "45"
+        ],
+        "answer": "40"
+    },
+    {
+        "question": "What is the next number in the sequence: 2, 4, 8, 16, ?",
+        "options": [
+            "18",
+            "24",
+            "32",
+            "64"
+        ],
+        "answer": "32"
+    },
+    {
+        "question": "What is 3/4 as a decimal?",
+        "options": [
+            "0.25",
+            "0.5",
+            "0.75",
+            "0.34"
+        ],
+        "answer": "0.75"
+    },
+    {
+        "question": "What is the GCD of 18 and 24?",
+        "options": [
+            "2",
+            "3",
+            "6",
+            "12"
+        ],
+        "answer": "6"
+    },
+    {
+        "question": "What is the LCM of 4 and 6?",
+        "options": [
+            "6",
+            "8",
+            "12",
+            "24"
+        ],
+        "answer": "12"
+    },
+    {
+        "question": "What is the perimeter of a square with side 7?",
+        "options": [
+            "14",
+            "21",
+            "28",
+            "49"
+        ],
+        "answer": "28"
+    },
+    {
+        "question": "What is the value of 9 × 9?",
+        "options": [
+            "81",
+            "72",
+            "91",
+            "99"
+        ],
+        "answer": "81"
+    },
+    {
+        "question": "What is the median of [2,5,7]?",
+        "options": [
+            "2",
+            "5",
+            "7",
+            "4.5"
+        ],
+        "answer": "5"
+    },
+    {
+        "question": "If f(x)=2x+1, what is f(3)?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer": "7"
+    },
+    {
+        "question": "What is the root of x^2 - 4 = 0?",
+        "options": [
+            "-1",
+            "0",
+            "2",
+            "4"
+        ],
+        "answer": "2"
+    },
+    {
+        "question": "What is the decimal equivalent of 1/8?",
+        "options": [
+            "0.125",
+            "0.25",
+            "0.2",
+            "0.0125"
+        ],
+        "answer": "0.125"
+    },
+    {
+        "question": "What is 11 × 11?",
+        "options": [
+            "111",
+            "121",
+            "131",
+            "141"
+        ],
+        "answer": "121"
+    },
+    {
+        "question": "What is the angle sum of a quadrilateral (degrees)?",
+        "options": [
+            "180",
+            "360",
+            "540",
+            "720"
+        ],
+        "answer": "360"
+    },
+    {
+        "question": "What is the value of 5! (5 factorial)?",
+        "options": [
+            "120",
+            "60",
+            "24",
+            "720"
+        ],
+        "answer": "120"
+    },
+    {
+        "question": "Solve for x: x/3 = 4",
+        "options": [
+            "7",
+            "12",
+            "9",
+            "1"
+        ],
+        "answer": "12"
+    },
+    {
+        "question": "What is the hypotenuse of a right triangle with legs 3 and 4?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer": "5"
+    },
+    {
+        "question": "What is 0.5 as a fraction?",
+        "options": [
+            "1/2",
+            "1/3",
+            "1/4",
+            "2/3"
+        ],
+        "answer": "1/2"
+    },
+    {
+        "question": "What is the cube of 4?",
+        "options": [
+            "12",
+            "16",
+            "64",
+            "48"
+        ],
+        "answer": "64"
+    },
+    {
+        "question": "What is the value of 2π radians in degrees?",
+        "options": [
+            "90",
+            "180",
+            "270",
+            "360"
+        ],
+        "answer": "360"
+    },
+    {
+        "question": "Which is an irrational number?",
+        "options": [
+            "1/2",
+            "3/4",
+            "√2",
+            "2"
+        ],
+        "answer": "√2"
+    },
+    {
+        "question": "What is 20% of 50?",
+        "options": [
+            "5",
+            "10",
+            "15",
+            "20"
+        ],
+        "answer": "10"
+    },
+    {
+        "question": "What is the probability of flipping heads on a fair coin?",
+        "options": [
+            "0.25",
+            "0.5",
+            "0.75",
+            "1"
+        ],
+        "answer": "0.5"
+    },
+    {
+        "question": "What is the sum of first 3 positive integers?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "9"
+        ],
+        "answer": "6"
+    },
+    {
+        "question": "What is the square of 12?",
+        "options": [
+            "124",
+            "142",
+            "144",
+            "154"
+        ],
+        "answer": "144"
+    },
+    {
+        "question": "Solve for x: 5x = 25",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "answer": "5"
+    },
+    {
+        "question": "What is the decimal 0.2 as a percentage?",
+        "options": [
+            "0.2%",
+            "2%",
+            "20%",
+            "200%"
+        ],
+        "answer": "20%"
+    },
+    {
+        "question": "What is the area of a circle with radius 3 (use π)?",
+        "options": [
+            "9π",
+            "6π",
+            "3π",
+            "12π"
+        ],
+        "answer": "9π"
+    },
+    {
+        "question": "What is 14 - 5?",
+        "options": [
+            "7",
+            "9",
+            "11",
+            "19"
+        ],
+        "answer": "9"
+    },
+    {
+        "question": "What is the next prime after 7?",
+        "options": [
+            "9",
+            "10",
+            "11",
+            "13"
+        ],
+        "answer": "11"
+    },
+    {
+        "question": "If y = 3x and x=4, y = ?",
+        "options": [
+            "7",
+            "10",
+            "12",
+            "15"
+        ],
+        "answer": "12"
+    },
+    {
+        "question": "What is the binary for decimal 2?",
+        "options": [
+            "10",
+            "11",
+            "01",
+            "00"
+        ],
+        "answer": "10"
+    },
+    {
+        "question": "What is the value of (2+3)×4?",
+        "options": [
+            "14",
+            "20",
+            "26",
+            "10"
+        ],
+        "answer": "20"
+    },
+    {
+        "question": "What is 25 × 4?",
+        "options": [
+            "100",
+            "75",
+            "50",
+            "125"
+        ],
+        "answer": "100"
+    },
+    {
+        "question": "What is 50 divided by 5?",
+        "options": [
+            "5",
+            "10",
+            "15",
+            "20"
+        ],
+        "answer": "10"
+    },
+    {
+        "question": "Solve for x: x + 7 = 12",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "answer": "5"
+    },
+    {
+        "question": "What is 6^2?",
+        "options": [
+            "12",
+            "18",
+            "36",
+            "42"
+        ],
+        "answer": "36"
+    },
+    {
+        "question": "What is one quarter of 80?",
+        "options": [
+            "10",
+            "15",
+            "20",
+            "25"
+        ],
+        "answer": "20"
+    },
+    {
+        "question": "Perimeter of triangle with sides 3,4,5?",
+        "options": [
+            "10",
+            "12",
+            "14",
+            "16"
+        ],
+        "answer": "12"
+    }
+]

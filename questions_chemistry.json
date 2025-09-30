@@ -1,0 +1,502 @@
+[
+    {
+        "question": "What is the chemical symbol for Gold?",
+        "options": [
+            "Au",
+            "Ag",
+            "Gd",
+            "Go"
+        ],
+        "answer": "Au"
+    },
+    {
+        "question": "What is H2O commonly known as?",
+        "options": [
+            "Hydrogen",
+            "Salt",
+            "Water",
+            "Oxygen"
+        ],
+        "answer": "Water"
+    },
+    {
+        "question": "What is the pH of pure water at 25°C?",
+        "options": [
+            "7",
+            "0",
+            "14",
+            "1"
+        ],
+        "answer": "7"
+    },
+    {
+        "question": "Which element has the atomic number 1?",
+        "options": [
+            "Helium",
+            "Hydrogen",
+            "Oxygen",
+            "Carbon"
+        ],
+        "answer": "Hydrogen"
+    },
+    {
+        "question": "Which gas is produced when acids react with metals?",
+        "options": [
+            "Oxygen",
+            "Hydrogen",
+            "Nitrogen",
+            "Carbon dioxide"
+        ],
+        "answer": "Hydrogen"
+    },
+    {
+        "question": "Which element has symbol \"O\"?",
+        "options": [
+            "Gold",
+            "Oxygen",
+            "Osmium",
+            "Oxide"
+        ],
+        "answer": "Oxygen"
+    },
+    {
+        "question": "What is table salt chemically called?",
+        "options": [
+            "Sodium chloride",
+            "Potassium chloride",
+            "Calcium carbonate",
+            "Magnesium sulfate"
+        ],
+        "answer": "Sodium chloride"
+    },
+    {
+        "question": "What is the main gas in Earth's atmosphere?",
+        "options": [
+            "Oxygen",
+            "Hydrogen",
+            "Carbon dioxide",
+            "Nitrogen"
+        ],
+        "answer": "Nitrogen"
+    },
+    {
+        "question": "Which scientist discovered penicillin?",
+        "options": [
+            "Alexander Fleming",
+            "Louis Pasteur",
+            "Marie Curie",
+            "Robert Koch"
+        ],
+        "answer": "Alexander Fleming"
+    },
+    {
+        "question": "What is the common name for NaHCO3?",
+        "options": [
+            "Baking soda",
+            "Epsom salt",
+            "Table sugar",
+            "Bleach"
+        ],
+        "answer": "Baking soda"
+    },
+    {
+        "question": "Which type of bond involves sharing of electron pairs?",
+        "options": [
+            "Ionic",
+            "Covalent",
+            "Metallic",
+            "Hydrogen"
+        ],
+        "answer": "Covalent"
+    },
+    {
+        "question": "Which element is a halogen?",
+        "options": [
+            "Oxygen",
+            "Chlorine",
+            "Iron",
+            "Calcium"
+        ],
+        "answer": "Chlorine"
+    },
+    {
+        "question": "What is the chemical formula for carbon dioxide?",
+        "options": [
+            "CO",
+            "CO2",
+            "C2O",
+            "O2C"
+        ],
+        "answer": "CO2"
+    },
+    {
+        "question": "What is the process of converting a liquid to gas called?",
+        "options": [
+            "Sublimation",
+            "Condensation",
+            "Evaporation",
+            "Freezing"
+        ],
+        "answer": "Evaporation"
+    },
+    {
+        "question": "What is the periodic table group that contains noble gases?",
+        "options": [
+            "Group 1",
+            "Group 17",
+            "Group 18",
+            "Group 2"
+        ],
+        "answer": "Group 18"
+    },
+    {
+        "question": "Which element has symbol \"Fe\"?",
+        "options": [
+            "Fluorine",
+            "Iron",
+            "Fermium",
+            "Francium"
+        ],
+        "answer": "Iron"
+    },
+    {
+        "question": "Acids have pH values less than what number?",
+        "options": [
+            "7",
+            "14",
+            "1",
+            "0"
+        ],
+        "answer": "7"
+    },
+    {
+        "question": "What is Avogadro's number (approx)?",
+        "options": [
+            "6.02×10^23",
+            "3.14×10^2",
+            "9.81",
+            "1.6×10^-19"
+        ],
+        "answer": "6.02×10^23"
+    },
+    {
+        "question": "Which is an alkaline earth metal?",
+        "options": [
+            "Sodium",
+            "Calcium",
+            "Chlorine",
+            "Argon"
+        ],
+        "answer": "Calcium"
+    },
+    {
+        "question": "What is the charge of an electron?",
+        "options": [
+            "Positive",
+            "Neutral",
+            "Negative",
+            "Variable"
+        ],
+        "answer": "Negative"
+    },
+    {
+        "question": "Which element is liquid at room temperature?",
+        "options": [
+            "Mercury",
+            "Iron",
+            "Gold",
+            "Sodium"
+        ],
+        "answer": "Mercury"
+    },
+    {
+        "question": "What is the chemical formula for ammonia?",
+        "options": [
+            "NH3",
+            "CH4",
+            "H2O",
+            "NO2"
+        ],
+        "answer": "NH3"
+    },
+    {
+        "question": "Which process releases energy by combining atoms?",
+        "options": [
+            "Endothermic",
+            "Exothermic",
+            "No reaction",
+            "Sublimation"
+        ],
+        "answer": "Exothermic"
+    },
+    {
+        "question": "What type of compound is NaCl?",
+        "options": [
+            "Covalent",
+            "Ionic",
+            "Metallic",
+            "Polymer"
+        ],
+        "answer": "Ionic"
+    },
+    {
+        "question": "Which element has symbol \"C\"?",
+        "options": [
+            "Calcium",
+            "Carbon",
+            "Chlorine",
+            "Cobalt"
+        ],
+        "answer": "Carbon"
+    },
+    {
+        "question": "What is the study of carbon compounds called?",
+        "options": [
+            "Inorganic chemistry",
+            "Organic chemistry",
+            "Physical chemistry",
+            "Analytical chemistry"
+        ],
+        "answer": "Organic chemistry"
+    },
+    {
+        "question": "Which isotope is used in radiocarbon dating?",
+        "options": [
+            "Carbon-12",
+            "Carbon-13",
+            "Carbon-14",
+            "Carbon-15"
+        ],
+        "answer": "Carbon-14"
+    },
+    {
+        "question": "What is the electron configuration shell called?",
+        "options": [
+            "Valence shell",
+            "Core shell",
+            "Outer shell",
+            "Inner shell"
+        ],
+        "answer": "Valence shell"
+    },
+    {
+        "question": "Which acid is found in vinegar?",
+        "options": [
+            "Sulfuric acid",
+            "Acetic acid",
+            "Hydrochloric acid",
+            "Nitric acid"
+        ],
+        "answer": "Acetic acid"
+    },
+    {
+        "question": "What gas do plants take in for photosynthesis?",
+        "options": [
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen",
+            "Helium"
+        ],
+        "answer": "Carbon dioxide"
+    },
+    {
+        "question": "Which chemical is used to bleach clothes?",
+        "options": [
+            "Ammonia",
+            "Hydrogen peroxide",
+            "Methane",
+            "Ethanol"
+        ],
+        "answer": "Hydrogen peroxide"
+    },
+    {
+        "question": "Which element is a transition metal?",
+        "options": [
+            "Sodium",
+            "Iron",
+            "Argon",
+            "Neon"
+        ],
+        "answer": "Iron"
+    },
+    {
+        "question": "What is the formula for glucose?",
+        "options": [
+            "C6H12O6",
+            "C2H5OH",
+            "CH4",
+            "H2O"
+        ],
+        "answer": "C6H12O6"
+    },
+    {
+        "question": "What does pH measure?",
+        "options": [
+            "Temperature",
+            "Acidity/alkalinity",
+            "Pressure",
+            "Density"
+        ],
+        "answer": "Acidity/alkalinity"
+    },
+    {
+        "question": "Which is not a compound?",
+        "options": [
+            "Water",
+            "Oxygen gas (O2)",
+            "Carbon dioxide",
+            "Sodium chloride"
+        ],
+        "answer": "Oxygen gas (O2)"
+    },
+    {
+        "question": "Which gas is greenhouse gas?",
+        "options": [
+            "Nitrogen",
+            "Oxygen",
+            "Carbon dioxide",
+            "Argon"
+        ],
+        "answer": "Carbon dioxide"
+    },
+    {
+        "question": "Which element has symbol \"Na\"?",
+        "options": [
+            "Nickel",
+            "Sodium",
+            "Neon",
+            "Nitrogen"
+        ],
+        "answer": "Sodium"
+    },
+    {
+        "question": "Which is the lightest noble gas?",
+        "options": [
+            "Helium",
+            "Neon",
+            "Argon",
+            "Krypton"
+        ],
+        "answer": "Helium"
+    },
+    {
+        "question": "What is the boiling point of water at sea level in Celsius?",
+        "options": [
+            "50",
+            "100",
+            "150",
+            "200"
+        ],
+        "answer": "100"
+    },
+    {
+        "question": "Which chemical family contains metals that react vigorously with water?",
+        "options": [
+            "Alkali metals",
+            "Noble gases",
+            "Halogens",
+            "Transition metals"
+        ],
+        "answer": "Alkali metals"
+    },
+    {
+        "question": "What is the main component of natural gas?",
+        "options": [
+            "Oxygen",
+            "Methane",
+            "Carbon dioxide",
+            "Hydrogen"
+        ],
+        "answer": "Methane"
+    },
+    {
+        "question": "Which element is necessary for hemoglobin?",
+        "options": [
+            "Sodium",
+            "Chlorine",
+            "Iron",
+            "Calcium"
+        ],
+        "answer": "Iron"
+    },
+    {
+        "question": "Which type of reaction swaps parts of molecules?",
+        "options": [
+            "Synthesis",
+            "Decomposition",
+            "Exchange (double displacement)",
+            "Combustion"
+        ],
+        "answer": "Exchange (double displacement)"
+    },
+    {
+        "question": "Which is used as a preservative because it inhibits bacterial growth?",
+        "options": [
+            "Salt",
+            "Sugar",
+            "Sulfur dioxide",
+            "Water"
+        ],
+        "answer": "Salt"
+    },
+    {
+        "question": "What is electrolysis used for?",
+        "options": [
+            "Heating",
+            "Separating elements/compounds using electricity",
+            "Freezing",
+            "Measuring pH"
+        ],
+        "answer": "Separating elements/compounds using electricity"
+    },
+    {
+        "question": "Which element has symbol 'K'?",
+        "options": [
+            "Potassium",
+            "Krypton",
+            "Kalium",
+            "Kadium"
+        ],
+        "answer": "Potassium"
+    },
+    {
+        "question": "Which element has atomic number 6?",
+        "options": [
+            "Oxygen",
+            "Carbon",
+            "Nitrogen",
+            "Helium"
+        ],
+        "answer": "Carbon"
+    },
+    {
+        "question": "What is the chemical formula for sulfuric acid?",
+        "options": [
+            "H2SO4",
+            "H2O",
+            "HCl",
+            "NaOH"
+        ],
+        "answer": "H2SO4"
+    },
+    {
+        "question": "What is the chemical name for CH4?",
+        "options": [
+            "Methane",
+            "Ethane",
+            "Methanol",
+            "Chloroform"
+        ],
+        "answer": "Methane"
+    },
+    {
+        "question": "What is a catalyst?",
+        "options": [
+            "Substance that slows reaction",
+            "Substance consumed in reaction",
+            "Substance that increases rate without being consumed",
+            "Reactant"
+        ],
+        "answer": "Substance that increases rate without being consumed"
+    }
+]

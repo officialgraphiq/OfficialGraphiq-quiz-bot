@@ -1,0 +1,502 @@
+[
+    {
+        "question": "What is the basic unit of life?",
+        "options": [
+            "Atom",
+            "Cell",
+            "Tissue",
+            "Organ"
+        ],
+        "answer": "Cell"
+    },
+    {
+        "question": "Where does photosynthesis occur in plant cells?",
+        "options": [
+            "Mitochondria",
+            "Chloroplast",
+            "Nucleus",
+            "Ribosome"
+        ],
+        "answer": "Chloroplast"
+    },
+    {
+        "question": "What molecule carries genetic information?",
+        "options": [
+            "RNA",
+            "ATP",
+            "DNA",
+            "Glucose"
+        ],
+        "answer": "DNA"
+    },
+    {
+        "question": "Which organ pumps blood in the human body?",
+        "options": [
+            "Liver",
+            "Lungs",
+            "Heart",
+            "Kidneys"
+        ],
+        "answer": "Heart"
+    },
+    {
+        "question": "Which blood cells help fight infection?",
+        "options": [
+            "Red blood cells",
+            "White blood cells",
+            "Platelets",
+            "Plasma"
+        ],
+        "answer": "White blood cells"
+    },
+    {
+        "question": "What is the process by which cells divide to produce two identical daughter cells?",
+        "options": [
+            "Meiosis",
+            "Mitosis",
+            "Binary fission",
+            "Fertilization"
+        ],
+        "answer": "Mitosis"
+    },
+    {
+        "question": "What is the powerhouse of the cell?",
+        "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Ribosome",
+            "Golgi apparatus"
+        ],
+        "answer": "Mitochondria"
+    },
+    {
+        "question": "Which process produces gametes (sperm and egg)?",
+        "options": [
+            "Mitosis",
+            "Meiosis",
+            "Binary fission",
+            "Budding"
+        ],
+        "answer": "Meiosis"
+    },
+    {
+        "question": "Which organelle makes proteins?",
+        "options": [
+            "Ribosome",
+            "Chloroplast",
+            "Lysosome",
+            "Vacuole"
+        ],
+        "answer": "Ribosome"
+    },
+    {
+        "question": "What is the largest organ in the human body?",
+        "options": [
+            "Liver",
+            "Skin",
+            "Brain",
+            "Heart"
+        ],
+        "answer": "Skin"
+    },
+    {
+        "question": "Which gas do humans exhale?",
+        "options": [
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen",
+            "Helium"
+        ],
+        "answer": "Carbon dioxide"
+    },
+    {
+        "question": "Which kingdom do mushrooms belong to?",
+        "options": [
+            "Plantae",
+            "Animalia",
+            "Fungi",
+            "Protista"
+        ],
+        "answer": "Fungi"
+    },
+    {
+        "question": "What do plants use to make food?",
+        "options": [
+            "Sunlight",
+            "Soil",
+            "Water only",
+            "Air only"
+        ],
+        "answer": "Sunlight"
+    },
+    {
+        "question": "Which biomolecule are enzymes?",
+        "options": [
+            "Lipids",
+            "Proteins",
+            "Carbohydrates",
+            "Nucleic acids"
+        ],
+        "answer": "Proteins"
+    },
+    {
+        "question": "What is the process of water movement across a semipermeable membrane?",
+        "options": [
+            "Diffusion",
+            "Osmosis",
+            "Active transport",
+            "Endocytosis"
+        ],
+        "answer": "Osmosis"
+    },
+    {
+        "question": "Which part of the brain controls balance and coordination?",
+        "options": [
+            "Cerebrum",
+            "Cerebellum",
+            "Brainstem",
+            "Hypothalamus"
+        ],
+        "answer": "Cerebellum"
+    },
+    {
+        "question": "What are the building blocks of proteins?",
+        "options": [
+            "Fatty acids",
+            "Amino acids",
+            "Nucleotides",
+            "Monosaccharides"
+        ],
+        "answer": "Amino acids"
+    },
+    {
+        "question": "What is the function of red blood cells?",
+        "options": [
+            "Fight infection",
+            "Transport oxygen",
+            "Clot blood",
+            "Produce hormones"
+        ],
+        "answer": "Transport oxygen"
+    },
+    {
+        "question": "Which structure contains the cell's DNA?",
+        "options": [
+            "Ribosome",
+            "Mitochondria",
+            "Nucleus",
+            "Vacuole"
+        ],
+        "answer": "Nucleus"
+    },
+    {
+        "question": "What is a group of similar cells called?",
+        "options": [
+            "Organ",
+            "Tissue",
+            "Organ system",
+            "Molecule"
+        ],
+        "answer": "Tissue"
+    },
+    {
+        "question": "Which animals are warm-blooded?",
+        "options": [
+            "Fish",
+            "Reptiles",
+            "Mammals",
+            "Amphibians"
+        ],
+        "answer": "Mammals"
+    },
+    {
+        "question": "What is ecology the study of?",
+        "options": [
+            "Cells",
+            "Ecosystems and organisms' interactions",
+            "Atoms",
+            "Diseases"
+        ],
+        "answer": "Ecosystems and organisms' interactions"
+    },
+    {
+        "question": "Which is the largest mammal?",
+        "options": [
+            "Elephant",
+            "Blue whale",
+            "Giraffe",
+            "Hippo"
+        ],
+        "answer": "Blue whale"
+    },
+    {
+        "question": "Which vitamin is produced by sunlight on skin?",
+        "options": [
+            "Vitamin A",
+            "Vitamin B12",
+            "Vitamin C",
+            "Vitamin D"
+        ],
+        "answer": "Vitamin D"
+    },
+    {
+        "question": "What do plants release as a byproduct of photosynthesis?",
+        "options": [
+            "Carbon dioxide",
+            "Oxygen",
+            "Nitrogen",
+            "Methane"
+        ],
+        "answer": "Oxygen"
+    },
+    {
+        "question": "Which blood type is a universal donor?",
+        "options": [
+            "A",
+            "B",
+            "O-",
+            "AB+"
+        ],
+        "answer": "O-"
+    },
+    {
+        "question": "Which structure helps plant cells maintain shape?",
+        "options": [
+            "Cell membrane",
+            "Cell wall",
+            "Nucleus",
+            "Mitochondria"
+        ],
+        "answer": "Cell wall"
+    },
+    {
+        "question": "Which macromolecule stores genetic information?",
+        "options": [
+            "Carbohydrates",
+            "Proteins",
+            "Lipids",
+            "Nucleic acids"
+        ],
+        "answer": "Nucleic acids"
+    },
+    {
+        "question": "Which process produces ATP in mitochondria?",
+        "options": [
+            "Photosynthesis",
+            "Cellular respiration",
+            "Fermentation",
+            "Transpiration"
+        ],
+        "answer": "Cellular respiration"
+    },
+    {
+        "question": "What is the term for a species at risk of extinction?",
+        "options": [
+            "Endangered",
+            "Common",
+            "Invasive",
+            "Domestic"
+        ],
+        "answer": "Endangered"
+    },
+    {
+        "question": "Which part of the plant is mainly responsible for water absorption?",
+        "options": [
+            "Stem",
+            "Leaf",
+            "Root",
+            "Flower"
+        ],
+        "answer": "Root"
+    },
+    {
+        "question": "What is the study of heredity called?",
+        "options": [
+            "Genetics",
+            "Ecology",
+            "Anatomy",
+            "Physiology"
+        ],
+        "answer": "Genetics"
+    },
+    {
+        "question": "Which organ filters blood to make urine?",
+        "options": [
+            "Lungs",
+            "Heart",
+            "Liver",
+            "Kidney"
+        ],
+        "answer": "Kidney"
+    },
+    {
+        "question": "Which blood vessels carry blood away from the heart?",
+        "options": [
+            "Veins",
+            "Arteries",
+            "Capillaries",
+            "Lymphatics"
+        ],
+        "answer": "Arteries"
+    },
+    {
+        "question": "Which type of organism makes its own food?",
+        "options": [
+            "Heterotroph",
+            "Autotroph",
+            "Consumer",
+            "Parasite"
+        ],
+        "answer": "Autotroph"
+    },
+    {
+        "question": "What is the developmental process from embryo to adult in insects called?",
+        "options": [
+            "Germination",
+            "Metamorphosis",
+            "Fertilization",
+            "Pollination"
+        ],
+        "answer": "Metamorphosis"
+    },
+    {
+        "question": "Which cell structure digests waste and old organelles?",
+        "options": [
+            "Ribosome",
+            "Golgi apparatus",
+            "Lysosome",
+            "Vacuole"
+        ],
+        "answer": "Lysosome"
+    },
+    {
+        "question": "Which human system includes lungs and trachea?",
+        "options": [
+            "Circulatory",
+            "Digestive",
+            "Respiratory",
+            "Nervous"
+        ],
+        "answer": "Respiratory"
+    },
+    {
+        "question": "What is the enzyme that breaks down starch?",
+        "options": [
+            "Lipase",
+            "Amylase",
+            "Protease",
+            "Cellulase"
+        ],
+        "answer": "Amylase"
+    },
+    {
+        "question": "Which organisms convert nitrogen gas into forms plants can use?",
+        "options": [
+            "Fungi",
+            "Nitrogen-fixing bacteria",
+            "Viruses",
+            "Insects"
+        ],
+        "answer": "Nitrogen-fixing bacteria"
+    },
+    {
+        "question": "Which structure allows gas exchange in leaves?",
+        "options": [
+            "Stomata",
+            "Xylem",
+            "Phloem",
+            "Cuticle"
+        ],
+        "answer": "Stomata"
+    },
+    {
+        "question": "Which molecule is the energy currency of the cell?",
+        "options": [
+            "DNA",
+            "ATP",
+            "RNA",
+            "Glucose"
+        ],
+        "answer": "ATP"
+    },
+    {
+        "question": "Which tissue transports water in plants?",
+        "options": [
+            "Phloem",
+            "Xylem",
+            "Epidermis",
+            "Palisade"
+        ],
+        "answer": "Xylem"
+    },
+    {
+        "question": "What is the process of programmed cell death called?",
+        "options": [
+            "Apoptosis",
+            "Mitosis",
+            "Necrosis",
+            "Meiosis"
+        ],
+        "answer": "Apoptosis"
+    },
+    {
+        "question": "Which organ stores bile?",
+        "options": [
+            "Liver",
+            "Gallbladder",
+            "Pancreas",
+            "Spleen"
+        ],
+        "answer": "Gallbladder"
+    },
+    {
+        "question": "What is the largest artery in the human body?",
+        "options": [
+            "Pulmonary artery",
+            "Femoral artery",
+            "Aorta",
+            "Carotid artery"
+        ],
+        "answer": "Aorta"
+    },
+    {
+        "question": "What is the loss of water from plant leaves called?",
+        "options": [
+            "Transpiration",
+            "Evaporation",
+            "Sublimation",
+            "Condensation"
+        ],
+        "answer": "Transpiration"
+    },
+    {
+        "question": "What is a mature bone cell called?",
+        "options": [
+            "Osteoblast",
+            "Osteocyte",
+            "Chondrocyte",
+            "Myocyte"
+        ],
+        "answer": "Osteocyte"
+    },
+    {
+        "question": "Which pigment in red blood cells carries oxygen?",
+        "options": [
+            "Chlorophyll",
+            "Hemoglobin",
+            "Melanin",
+            "Myoglobin"
+        ],
+        "answer": "Hemoglobin"
+    },
+    {
+        "question": "Which macronutrient provides most energy per gram?",
+        "options": [
+            "Carbohydrates",
+            "Proteins",
+            "Fats",
+            "Vitamins"
+        ],
+        "answer": "Fats"
+    }
+]
