@@ -230,8 +230,15 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Send question
 async def send_question(update, context, user_id):
-    quiz = context.user_data["quiz"]
+    user_data = context.application.user_data.get(user_id, {})
+    quiz = user_data.get("quiz")
+
+    if not quiz:
+        return  # nothing to do
+
     current = quiz["current"]
+    # quiz = context.user_data["quiz"]
+    # current = quiz["current"]
 
     if current < len(quiz["questions"]) and quiz["active"]:
         q = quiz["questions"][current]
