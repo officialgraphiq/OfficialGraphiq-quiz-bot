@@ -260,8 +260,9 @@ async def send_question(update, context, user_id):
         )
 
         # Cancel old timeout if any
-        if quiz.get("timeout_job"):
-            quiz["timeout_job"].schedule_removal()
+        # if quiz.get("timeout_job"):
+        #     quiz["timeout_job"].schedule_removal()
+        safe_remove_job(quiz.get("timeout_job"))
 
         # Schedule timeout for THIS question
         job = context.job_queue.run_once(
