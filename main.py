@@ -1195,17 +1195,29 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     selected = random.sample(all_questions, 5)
 
-    context.application.user_data.setdefault(user_id, {})
-    context.application.user_data[user_id]["quiz"] = {
-        "score": 0,
-        "current": 0,
-        "questions": selected,
-        "active": True,
-        "timeout_job": None,
-        "answers": [],
-        "category": cat,
-        "sent_at": None
-    }
+    # context.application.user_data.setdefault(user_id, {})
+    # context.application.user_data[user_id]["quiz"] = {
+    #     "score": 0,
+    #     "current": 0,
+    #     "questions": selected,
+    #     "active": True,
+    #     "timeout_job": None,
+    #     "answers": [],
+    #     "category": cat,
+    #     "sent_at": None
+    # }
+
+    context.user_data["quiz"] = {
+    "score": 0,
+    "current": 0,
+    "questions": selected,
+    "active": True,
+    "timeout_job": None,
+    "answers": [],
+    "category": cat,
+    "sent_at": None
+}
+
 
     await query.edit_message_text(f"✅ You chose {cat}. Quiz starting…")
     await send_question(update, context, user_id)  # pass update instead of None
@@ -1216,8 +1228,10 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Send Question
 # ---------------------------
 async def send_question(update, context, user_id):
-    user_data = context.application.user_data.get(user_id, {})
-    quiz = user_data.get("quiz")
+    # user_data = context.application.user_data.get(user_id, {})
+    # quiz = user_data.get("quiz")
+    quiz = context.user_data.get("quiz")
+
     if not quiz:
         return
 
@@ -1255,8 +1269,10 @@ async def send_question(update, context, user_id):
 async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     data = context.job.data
     user_id = data["user_id"]
-    user_data = context.application.user_data.get(user_id, {})
-    quiz = user_data.get("quiz")
+    # user_data = context.application.user_data.get(user_id, {})
+    # quiz = user_data.get("quiz")
+    quiz = context.user_data.get("quiz")
+
     if not quiz or not quiz["active"]:
         return
 
@@ -1285,8 +1301,10 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     user_id = query.from_user.id
 
-    user_data = context.application.user_data.get(user_id, {})
-    quiz = user_data.get("quiz")
+    # user_data = context.application.user_data.get(user_id, {})
+    # quiz = user_data.get("quiz")
+    quiz = context.user_data.get("quiz")
+
     if not quiz or not quiz["active"]:
         await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
         return
