@@ -259,6 +259,7 @@ async def send_question(update, context, user_id):
     else:
         # Quiz finished
         score = quiz["score"]
+        answered = quiz.get("answered", quiz["current"])
         update_score(user_id, score)
         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {score}/5")
         quiz["active"] = False
@@ -285,6 +286,8 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
         chat_id=user_id,
         text=f"⌛ Time’s up! The correct answer was {correct}."
     )
+
+    quiz["answered"] = quiz.get("answered", 0) + 1
 
     # Move to next question
     quiz["current"] += 1
