@@ -355,7 +355,7 @@ async def leaderboard_command(update: Update, context: ContextTypes.DEFAULT_TYPE
 def main():
     print("🤖 Bot starting...")
     app = Application.builder().token(TOKEN).build()
-
+    
     # Register flow
     reg_conv = ConversationHandler(
         entry_points=[CommandHandler("register", register_command)],
