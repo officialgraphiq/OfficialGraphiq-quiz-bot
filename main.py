@@ -84,7 +84,13 @@ def increment_sessions(tg_id):
     users_col.update_one({"telegram_id": tg_id}, {"$inc": {"sessions": 1}})
     return get_user(tg_id)
 
-
+def safe_remove_job(job):
+    if job:
+        try:
+            job.schedule_removal()
+        except Exception:
+            # Job already removed or expired
+            pass
 
 # Start Command
 # ---------------------------
@@ -144,6 +150,8 @@ async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("❌ Registration cancelled.")
     return ConversationHandler.END
+
+
 
 
 # ---------------------------
@@ -307,25 +315,32 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
     user_id = query.from_user.id
-    quiz = context.user_data.get("quiz")
+    # quiz = context.user_data.get("quiz")
+    user_data = context.application.user_data.get(user_id, {})
+    quiz = user_data.get("quiz")
 
     if not quiz or not quiz["active"]:
         await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
         return
 
     current = quiz["current"]
+    
     correct = quiz["questions"][current]["answer"]
 
     # Cancel timeout
-    if quiz.get("timeout_job"):
-        quiz["timeout_job"].schedule_removal()
-        quiz["timeout_job"] = None
+    # if quiz.get("timeout_job"):
+    #     quiz["timeout_job"].schedule_removal()
+    #     quiz["timeout_job"] = None
+
+    safe_remove_job(quiz.get("timeout_job"))
 
     if query.data == correct:
         quiz["score"] += 1
         await query.edit_message_text(f"✅ Correct! The answer is {correct}")
     else:
         await query.edit_message_text(f"❌ Wrong! The correct answer is {correct}")
+
+        quiz["answered"] = quiz.get("answered", 0) + 1
 
     quiz["current"] += 1
     await send_question(update, context, user_id)
