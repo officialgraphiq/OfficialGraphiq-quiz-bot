@@ -1251,11 +1251,18 @@ async def send_question(update, context, user_id):
         safe_remove_job(quiz.get("timeout_job"))
 
         # schedule new timeout
+        # job = context.job_queue.run_once(
+        #     timeout_question,
+        #     60,
+        #     data={"user_id": user_id, "msg_id": msg.message_id}
+        # )
         job = context.job_queue.run_once(
-            timeout_question,
-            60,
-            data={"user_id": user_id, "msg_id": msg.message_id}
-        )
+    callback=timeout_question,
+    when=60,
+    data={"user_id": user_id, "msg_id": msg.message_id},
+    name=str(user_id)  # optional, useful for removing
+)
+
         quiz["timeout_job"] = job
         quiz["sent_at"] = time.time()
 
@@ -1266,20 +1273,48 @@ async def send_question(update, context, user_id):
 # ---------------------------
 # Timeout Handler
 # ---------------------------
-async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
-    data = context.job.data
-    user_id = data["user_id"]
-    # user_data = context.application.user_data.get(user_id, {})
-    # quiz = user_data.get("quiz")
-    quiz = context.user_data.get("quiz")
+# async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
+#     data = context.job.data
+#     user_id = data["user_id"]
+#     # user_data = context.application.user_data.get(user_id, {})
+#     # quiz = user_data.get("quiz")
+#     quiz = context.user_data.get("quiz")
 
+#     if not quiz or not quiz["active"]:
+#         return
+
+#     current = quiz["current"]
+#     correct = quiz["questions"][current]["answer"]
+
+#     # record as timeout (no base score)
+#     quiz["answers"].append({
+#         "user_id": user_id,
+#         "question_id": current,
+#         "base_score": 0,
+#         "elapsed_time": 60
+#     })
+
+#     await context.bot.send_message(chat_id=user_id, text=f"⌛ Time’s up! The correct answer was {correct}.")
+
+#     quiz["current"] += 1
+#     await send_question(None, context, user_id)
+
+
+
+
+async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
+    job = context.job
+    data = job.data
+    user_id = data["user_id"]
+    
+    quiz = context.user_data.get("quiz")
     if not quiz or not quiz["active"]:
         return
 
     current = quiz["current"]
     correct = quiz["questions"][current]["answer"]
 
-    # record as timeout (no base score)
+    # Record as timeout
     quiz["answers"].append({
         "user_id": user_id,
         "question_id": current,
@@ -1291,6 +1326,10 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
 
     quiz["current"] += 1
     await send_question(None, context, user_id)
+
+
+
+
 
 
 # ---------------------------
