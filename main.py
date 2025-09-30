@@ -775,21 +775,35 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     user_id = query.from_user.id
 
-    # check user & balance again (safety)
+    # 🔹 Fetch user
     user = get_user(user_id)
     if not user:
-        await query.edit_message_text("❌ You must register first using /register.")
-        return
-    if user.get("balance", 0) < 300:
-        await query.edit_message_text(f"💳 Your balance is ₦{user.get('balance',0):,}.\n❌ You need at least ₦300 to play. Please top up.")
+        await query.edit_message_text("❌ You don’t have an account. Please register first.")
         return
 
+    # 🔹 Check balance
+    if user.get("balance", 0) < 300:
+        await query.edit_message_text(
+            f"💳 Your balance is ₦{user.get('balance',0):,}.\n"
+            "❌ You need at least ₦300 to start a quiz."
+        )
+        return
+
+    # 🔹 Deduct ₦300 and increment sessions
+    users_col.find_one_and_update(
+        {"telegram_id": user_id},
+        {"$inc": {"sessions": 1, "balance": -300}},
+    )
+    updated_user = get_user(user_id)
+
+    # 🔹 Get category
     cat = query.data.split("_", 1)[1]
     filepath = CATEGORIES.get(cat)
     if not filepath:
         await query.edit_message_text("⚠️ Unknown category selected.")
         return
 
+    # 🔹 Load questions
     try:
         with open(filepath, "r") as f:
             all_questions = json.load(f)
@@ -801,22 +815,10 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.edit_message_text(f"⚠️ Not enough questions in {cat}.")
         return
 
-    # Deduct ₦300 and increment sessions atomically, return updated user
-    updated_user = users_col.find_one_and_update(
-        {"telegram_id": user_id},
-        {"$inc": {"balance": -300, "sessions": 1}},
-        return_document=ReturnDocument.AFTER,
-        upsert=True
-    )
-
-    new_balance = updated_user.get("balance", 0)
-
     selected = random.sample(all_questions, 5)
 
-    # store quiz state in application.user_data for job access
-    if user_id not in context.application.user_data:
-        context.application.user_data[user_id] = {}
-
+    # 🔹 Initialize quiz session
+    context.application.user_data[user_id] = context.application.user_data.get(user_id, {})
     context.application.user_data[user_id]["quiz"] = {
         "score": 0,
         "current": 0,
@@ -828,8 +830,17 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "sent_at": None
     }
 
-    await query.edit_message_text(f"✅ ₦300 deducted. Remaining balance: ₦{new_balance:,}\n✅ You chose {cat}. Quiz starting…")
+    # 🔹 Confirm & show new balance
+    await query.edit_message_text(
+        f"✅ You chose *{cat}*.\n"
+        f"💳 ₦300 deducted. Remaining balance: ₦{updated_user['balance']:,}\n\n"
+        "🎮 Quiz starting…",
+        parse_mode="Markdown"
+    )
+
+    # 🔹 Start with first question
     await send_question(update, context, user_id)
+
 
 
 # ---------------------------
