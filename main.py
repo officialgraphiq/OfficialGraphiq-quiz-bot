@@ -251,10 +251,8 @@ async def send_question(update, context, user_id):
         # Schedule timeout for THIS question
         job = context.job_queue.run_once(
             timeout_question, 
-            when=60,
-            chat_id=user_id,  # ✅ bind job to this chat
-            name=str(user_id),  # optional, makes debugging easier
-            data={"user_id": user_id}
+            60,
+            data={"user_id": user_id, "msg_id": msg.message_id}
         )
         quiz["timeout_job"] = job
 
