@@ -1076,6 +1076,35 @@ async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 #Quiz: category selection --> start
 # ---------------------------
+# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     tg_id = update.message.from_user.id
+#     user = get_user(tg_id)
+
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+#     if user.get("balance", 0) < 500:
+#         await update.message.reply_text("⚠️ You need at least 500 balance to play. Use /fund to add funds.")
+#         return
+
+#     update_balance(tg_id, -500)
+#     increment_sessions(tg_id)
+
+#     questions = random.sample(_, 5)
+
+#     context.user_data["quiz"] = {
+#         "score": 0,
+#         "current": 0,
+#         "questions": questions,
+#         "active": True,
+#         "timeout_job": None,
+#         "answers": []
+#     }
+
+#     await update.message.reply_text("🎉 Quiz starting... Good luck!")
+#     await send_question(update, context, tg_id)
+
+
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     tg_id = update.message.from_user.id
     user = get_user(tg_id)
@@ -1087,22 +1116,18 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ You need at least 500 balance to play. Use /fund to add funds.")
         return
 
-    update_balance(tg_id, -500)
-    increment_sessions(tg_id)
+    # Build category keyboard
+    keyboard = [
+        [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
+        for cat in CATEGORIES.keys()
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
 
-    questions = random.sample(_, 5)
+    await update.message.reply_text(
+        "🎮 Choose a category to start your quiz:",
+        reply_markup=reply_markup
+    )
 
-    context.user_data["quiz"] = {
-        "score": 0,
-        "current": 0,
-        "questions": questions,
-        "active": True,
-        "timeout_job": None,
-        "answers": []
-    }
-
-    await update.message.reply_text("🎉 Quiz starting... Good luck!")
-    await send_question(update, context, tg_id)
 
 async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     tg_id = update.message.from_user.id
