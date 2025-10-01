@@ -874,6 +874,7 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     job = context.job
     data = job.data
     user_id = data["user_id"]
+    msg_id = data["msg_id"]
 
     quiz = ACTIVE_QUIZZES.get(user_id)
     if not quiz or not quiz.get("active", True):
@@ -894,6 +895,16 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
         "base_score": 0,
         "elapsed_time": 60
     })
+
+     # ❌ Disable old buttons
+    try:
+        await context.bot.edit_message_reply_markup(
+            chat_id=user_id,
+            message_id=msg_id,
+            reply_markup=None
+        )
+    except Exception:
+        pass  # Ignore if already answered/edited
 
     await context.bot.send_message(chat_id=user_id, text=f"⌛ Time’s up! The correct answer was {correct}.")
 
