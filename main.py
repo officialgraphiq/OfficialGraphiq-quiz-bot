@@ -630,23 +630,61 @@ def safe_remove_job(job):
 # ---------------------------
 # Speed Bonus Scoring
 # ---------------------------
+# def apply_speed_bonus(all_answers):
+#     grouped = defaultdict(list)
+#     for ans in all_answers:
+#         grouped[ans["question_id"]].append(ans)
+
+#     final_scores = defaultdict(float)
+#     for qid, answers in grouped.items():
+#         for ans in answers:
+#             final_scores[ans["user_id"]] += ans["base_score"]
+
+#         sorted_answers = sorted(answers, key=lambda x: x["elapsed_time"])
+#         for i, faster in enumerate(sorted_answers):
+#             for slower in sorted_answers[i+1:]:
+#                 diff = slower["elapsed_time"] - faster["elapsed_time"]
+#                 if diff > 0:
+#                     final_scores[faster["user_id"]] += diff * 0.1
+#     return dict(final_scores)
+
+
 def apply_speed_bonus(all_answers):
+    """
+    Apply speed-based tiebreak bonus.
+    For each question:
+      - All users who answered (correct or wrong) are considered.
+      - Base score is added normally.
+      - For correct answers, compare elapsed times.
+      - Faster users gain +0.1 points per second difference vs slower correct users.
+    """
     grouped = defaultdict(list)
     for ans in all_answers:
         grouped[ans["question_id"]].append(ans)
 
     final_scores = defaultdict(float)
+
     for qid, answers in grouped.items():
+        # Add base scores first
         for ans in answers:
             final_scores[ans["user_id"]] += ans["base_score"]
 
-        sorted_answers = sorted(answers, key=lambda x: x["elapsed_time"])
-        for i, faster in enumerate(sorted_answers):
-            for slower in sorted_answers[i+1:]:
+        # Compare only correct answers
+        correct_answers = [ans for ans in answers if ans["base_score"] > 0]
+
+        # Sort by elapsed time (fastest first)
+        sorted_correct = sorted(correct_answers, key=lambda x: x["elapsed_time"])
+
+        # Apply fractional bonuses
+        for i, faster in enumerate(sorted_correct):
+            for slower in sorted_correct[i+1:]:
                 diff = slower["elapsed_time"] - faster["elapsed_time"]
                 if diff > 0:
                     final_scores[faster["user_id"]] += diff * 0.1
+
     return dict(final_scores)
+
+
 
 
 # ---------------------------
