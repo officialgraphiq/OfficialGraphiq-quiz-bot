@@ -630,23 +630,34 @@ def safe_remove_job(job):
 # ---------------------------
 # Speed Bonus Scoring
 # ---------------------------
+# def apply_speed_bonus(all_answers):
+#     grouped = defaultdict(list)
+#     for ans in all_answers:
+#         grouped[ans["question_id"]].append(ans)
+
+#     final_scores = defaultdict(float)
+#     for qid, answers in grouped.items():
+#         for ans in answers:
+#             final_scores[ans["user_id"]] += ans["base_score"]
+
+#         sorted_answers = sorted(answers, key=lambda x: x["elapsed_time"])
+#         for i, faster in enumerate(sorted_answers):
+#             for slower in sorted_answers[i+1:]:
+#                 diff = slower["elapsed_time"] - faster["elapsed_time"]
+#                 if diff > 0:
+#                     final_scores[faster["user_id"]] += diff * 0.1
+#     return dict(final_scores)
+
 def apply_speed_bonus(all_answers):
-    grouped = defaultdict(list)
-    for ans in all_answers:
-        grouped[ans["question_id"]].append(ans)
-
+    """
+    Finalize scores by summing the stored base_score (which already includes time bonuses).
+    """
     final_scores = defaultdict(float)
-    for qid, answers in grouped.items():
-        for ans in answers:
-            final_scores[ans["user_id"]] += ans["base_score"]
-
-        sorted_answers = sorted(answers, key=lambda x: x["elapsed_time"])
-        for i, faster in enumerate(sorted_answers):
-            for slower in sorted_answers[i+1:]:
-                diff = slower["elapsed_time"] - faster["elapsed_time"]
-                if diff > 0:
-                    final_scores[faster["user_id"]] += diff * 0.1
+    for ans in all_answers:
+        final_scores[ans["user_id"]] += ans.get("base_score", 0)
     return dict(final_scores)
+
+
 
 
 # ---------------------------
