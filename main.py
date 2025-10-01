@@ -637,7 +637,7 @@ def apply_speed_bonus(all_answers):
     """
     final_scores = defaultdict(float)
     for ans in all_answers:
-        final_scores[ans["user_id"]] += ans.get("base_score", 0)
+        final_scores[ans["user_id"]] += ans.get("total_score", 0)
     return dict(final_scores)
 
 
