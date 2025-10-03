@@ -1046,6 +1046,9 @@ async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     quiz = ACTIVE_QUIZZES.pop(user_id, None)
     if quiz:
+        # Cancel any scheduled timeout job
+        safe_remove_job(quiz.get("timeout_job"))
+
         await query.edit_message_text(
             "❌ Your quiz session has been *ended*.\n\n"
             "⚠️ No refund is given for ending early.\n"
@@ -1054,6 +1057,7 @@ async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
     else:
         await query.edit_message_text("⚠️ You have no active session.")
+
         
 
 async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
