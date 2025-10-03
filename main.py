@@ -2388,10 +2388,12 @@ def main():
 
     # Global blocker for commands during quiz (except /end)
     # Register early so users get immediate block reply when they try commands mid-quiz.
+    # Blocker (placed AFTER command handlers, so they get first chance)
     app.add_handler(
-        MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
-        group=0,
-    )
+    MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
+    group=1,
+)
+
 
     # Core command handlers
     app.add_handler(CommandHandler("start", start_command))
