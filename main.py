@@ -869,7 +869,12 @@ async def cancel_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 
-
+# Fallback for blocking other commands
+async def block_other_commands(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "⚠️ You’re currently in the middle of registration/update. "
+        "Please finish or /cancel before using other commands."
+    )
 
 
 # ---------------------------
@@ -1234,9 +1239,11 @@ update_conv_handler = ConversationHandler(
         UPD_BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_bank)],
         UPD_ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_account)],
     },
-    fallbacks=[],
-    per_user=True,
-    per_chat=True,
+    fallbacks=[
+        CommandHandler("cancel", cancel_update),
+        MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
+    ],
+    allow_reentry=True,
 )
 
 def main():
@@ -1255,10 +1262,10 @@ def main():
             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
         },
         # fallbacks=[],
-        fallbacks=[CommandHandler("cancel", cancel_registration)],
-        per_user=True,
-        per_chat=True,
-        allow_reentry=True
+        fallbacks=[CommandHandler("cancel", cancel_registration),
+        MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
+    ],
+    allow_reentry=True,
     )
 
     app.add_handler(reg_conv)
