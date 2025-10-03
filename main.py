@@ -1217,21 +1217,19 @@ async def leaderboard_command(update: Update, context: ContextTypes.DEFAULT_TYPE
 # ---------------------------
 # Main
 # ---------------------------
-def update_conv_handler():
-    return ConversationHandler(
-        entry_points=[CommandHandler("update", start_update)],
-        states={
-            UPD_USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_username)],
-            UPD_EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_email)],
-            UPD_PHONE: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_phone)],
-            UPD_BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_bank)],
-            UPD_ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_account)],
-        },
-        fallbacks=[CommandHandler("cancel", cancel_update)],
-        per_user=True,
-        per_chat=True,
-        allow_reentry=True
-    )
+update_conv_handler = ConversationHandler(
+    entry_points=[CommandHandler("update", start_update)],
+    states={
+        UPD_USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_username)],
+        UPD_EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_email)],
+        UPD_PHONE: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_phone)],
+        UPD_BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_bank)],
+        UPD_ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_account)],
+    },
+    fallbacks=[],
+    per_user=True,
+    per_chat=True,
+)
 
 def main():
     print("🤖 Bot starting...")
