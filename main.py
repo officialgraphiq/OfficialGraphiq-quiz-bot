@@ -654,6 +654,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/register - Register yourself\n"
         "/leaderboard - Show leaderboard\n"
         "/fund - Add funds to your balance\n"
+        "/update - Update your profile details\n"
+        "/profile - View your profile\n"
         "/balance - Check your balance\n"
         "/end - End your current quiz\n"
     )
