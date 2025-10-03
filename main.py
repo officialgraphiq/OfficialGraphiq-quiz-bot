@@ -1998,23 +1998,51 @@ async def block_during_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
 
+# async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # handle confirm_end callback BEFORE generic answer handler
+#     query = update.callback_query
+#     await query.answer()
+#     user_id = query.from_user.id
+
+#     quiz = ACTIVE_QUIZZES.pop(user_id, None)
+#     if quiz:
+#         safe_remove_job(quiz.get("timeout_job"))
+#         await query.edit_message_text(
+#             "❌ Your quiz session has been *ended*.\n\n"
+#             "⚠️ No refund is given for ending early.\n"
+#             "👉 You can start again anytime with /play.",
+#             parse_mode="Markdown"
+#         )
+#     else:
+#         await query.edit_message_text("⚠️ You have no active session.")
+
+
 async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # handle confirm_end callback BEFORE generic answer handler
     query = update.callback_query
     await query.answer()
     user_id = query.from_user.id
 
     quiz = ACTIVE_QUIZZES.pop(user_id, None)
     if quiz:
+        # Cancel any timeout jobs
         safe_remove_job(quiz.get("timeout_job"))
+
+        # ✅ Record the points earned so far
+        final_results = apply_speed_bonus(quiz.get("answers", []))
+        user_score_so_far = final_results.get(user_id, 0)
+
+        # Update DB with current points
+        update_score(user_id, user_score_so_far)
+
         await query.edit_message_text(
-            "❌ Your quiz session has been *ended*.\n\n"
-            "⚠️ No refund is given for ending early.\n"
+            f"❌ Your quiz session has been *ended*.\n\n"
+            f"⚠️ You forfeited the remaining questions, but your current points ({user_score_so_far:.1f}) have been recorded.\n"
             "👉 You can start again anytime with /play.",
             parse_mode="Markdown"
         )
     else:
         await query.edit_message_text("⚠️ You have no active session.")
+
 
 
 async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
