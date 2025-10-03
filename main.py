@@ -1420,11 +1420,11 @@ update_conv_handler = ConversationHandler(
     allow_reentry=True,
 )
 
+    
+
 def main():
     print("🤖 Bot starting...")
     app = Application.builder().token(TOKEN).build()
-    
-
     # Register flow
     reg_conv = ConversationHandler(
         entry_points=[CommandHandler("register", start_registration)],
@@ -1444,9 +1444,13 @@ def main():
 
     app.add_handler(reg_conv)
     app.add_handler(update_conv_handler)
-    app.add_handler(MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"),
-        block_during_quiz
-    ))
+    # app.add_handler(MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"),
+    #     block_during_quiz
+    # ))
+    app.add_handler(
+    MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
+    group=1,
+)
     app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CommandHandler("play", play_command))
     app.add_handler(CommandHandler("end", end_command))
