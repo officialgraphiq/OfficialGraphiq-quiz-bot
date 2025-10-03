@@ -924,6 +924,30 @@ async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Quiz: show categories (balance check)
 # ---------------------------
+# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     tg_id = update.message.from_user.id
+#     user = get_user(tg_id)
+
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+#     # Require at least 300 to start a session
+#     if user.get("balance", 0) < 300:
+#         await update.message.reply_text("⚠️ You need at least ₦300 to play. Use /fund to add funds.")
+#         return
+
+#     keyboard = [
+#         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
+#         for cat in CATEGORIES.keys()
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await update.message.reply_text(
+#         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
+#         reply_markup=reply_markup
+#     )
+
+
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     tg_id = update.message.from_user.id
     user = get_user(tg_id)
@@ -931,11 +955,21 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not user:
         await update.message.reply_text("⚠️ You must register first using /register")
         return
+
     # Require at least 300 to start a session
     if user.get("balance", 0) < 300:
         await update.message.reply_text("⚠️ You need at least ₦300 to play. Use /fund to add funds.")
         return
 
+    # Prevent starting multiple sessions
+    if tg_id in ACTIVE_QUIZZES:
+        await update.message.reply_text(
+            "⚠️ You are already in an active quiz session!\n"
+            "👉 Use /end first if you want to quit and start again."
+        )
+        return
+
+    # Otherwise, let them pick a category
     keyboard = [
         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
         for cat in CATEGORIES.keys()
@@ -948,21 +982,15 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-# async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     tg_id = update.message.from_user.id
-#     quiz = ACTIVE_QUIZZES.get(tg_id)
-#     if not quiz or not quiz.get("active", False):
-#         await update.message.reply_text("❌ You are not currently in a quiz session.")
-#         return
-#     quiz["active"] = False
-#     await finalize_quiz(context, tg_id, quiz)
-from telegram import InlineKeyboardMarkup, InlineKeyboardButton
+
+
 
 # async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #     user_id = update.effective_user.id
 
-#     if user_id not in ACTIVE_QUIZZES:
-#         await update.message.reply_text("⚠️ You are not in an active quiz session.")
+#     quiz = ACTIVE_QUIZZES.get(user_id)
+#     if not quiz or not quiz.get("active", False):
+#         await update.message.reply_text("⚠️ You are not currently in an active quiz session.")
 #         return
 
 #     keyboard = [
@@ -973,12 +1001,19 @@ from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 #     ]
 #     reply_markup = InlineKeyboardMarkup(keyboard)
 
-#     await update.message.reply_text(
+#     sent_msg = await update.message.reply_text(
 #         "⚠️ Are you sure you want to *end your quiz session*?\n\n"
 #         "👉 Ending early means you *forfeit the session* and *will not be refunded*.",
 #         reply_markup=reply_markup,
 #         parse_mode="Markdown"
 #     )
+
+#     # Schedule expiration after 30s
+#     context.job_queue.run_once(
+#         expire_end_confirmation, 30, 
+#         data={"chat_id": sent_msg.chat.id, "message_id": sent_msg.message_id, "user_id": user_id}
+#     )
+
 
 async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
@@ -1005,9 +1040,17 @@ async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Schedule expiration after 30s
     context.job_queue.run_once(
-        expire_end_confirmation, 30, 
-        data={"chat_id": sent_msg.chat.id, "message_id": sent_msg.message_id, "user_id": user_id}
+        expire_end_confirmation,
+        30,
+        data={
+            "chat_id": sent_msg.chat.id,
+            "message_id": sent_msg.message_id,
+            "user_id": user_id,
+        },
     )
+
+
+
 
 async def expire_end_confirmation(context: ContextTypes.DEFAULT_TYPE):
     data = context.job.data
@@ -1015,7 +1058,7 @@ async def expire_end_confirmation(context: ContextTypes.DEFAULT_TYPE):
     message_id = data["message_id"]
     user_id = data["user_id"]
 
-    # If the quiz still exists, it means the user didn’t confirm or cancel
+    # Only expire if quiz is still active
     if user_id in ACTIVE_QUIZZES:
         try:
             await context.bot.edit_message_text(
@@ -1025,7 +1068,7 @@ async def expire_end_confirmation(context: ContextTypes.DEFAULT_TYPE):
                 parse_mode="Markdown"
             )
         except:
-            pass  # ignore if message already changed
+            pass
 
 
 def is_in_quiz(update: Update) -> bool:
@@ -1034,10 +1077,19 @@ def is_in_quiz(update: Update) -> bool:
 
 
 async def block_during_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "⚠️ You are currently in a quiz session.\n"
-        "👉 The only command available is /end to quit."
-    )
+    user_id = update.effective_user.id
+
+    # Allow /end to always go through
+    if update.message and update.message.text.startswith("/end"):
+        return
+
+    if user_id in ACTIVE_QUIZZES:
+        await update.message.reply_text(
+            "⛔ You are currently in a quiz session.\n"
+            "👉 The only command available is /end to quit."
+        )
+        return
+
 
 async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
@@ -1046,9 +1098,7 @@ async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     quiz = ACTIVE_QUIZZES.pop(user_id, None)
     if quiz:
-        # Cancel any scheduled timeout job
         safe_remove_job(quiz.get("timeout_job"))
-
         await query.edit_message_text(
             "❌ Your quiz session has been *ended*.\n\n"
             "⚠️ No refund is given for ending early.\n"
