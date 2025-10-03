@@ -1707,8 +1707,11 @@ async def register_account(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 
+# async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text("❌ Registration cancelled.")
+#     return ConversationHandler.END
 async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("❌ Registration cancelled.")
+    await update.message.reply_text("❌ Registration cancelled. You can start again anytime with /register.")
     return ConversationHandler.END
 
 
@@ -1808,8 +1811,11 @@ async def update_account(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 
+# async def cancel_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text("❌ Update cancelled.")
+#     return ConversationHandler.END
 async def cancel_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("❌ Update cancelled.")
+    await update.message.reply_text("❌ Update cancelled. You can start again anytime with /update.")
     return ConversationHandler.END
 
 
@@ -2354,11 +2360,11 @@ update_conv_handler = ConversationHandler(
         UPD_BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_bank)],
         UPD_ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_account)],
     },
-    fallbacks=[
-        CommandHandler("cancel", cancel_update),
-        MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
-    ],
-    allow_reentry=True,
+    # fallbacks=[
+    #     CommandHandler("cancel", cancel_update),
+    #     MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
+    # ],
+fallbacks=[CommandHandler("cancel", cancel_update)],
 )
 
     
@@ -2377,10 +2383,11 @@ def main():
             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
         },
         # fallbacks=[],
-        fallbacks=[CommandHandler("cancel", cancel_registration),
-        MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
-    ],
-    allow_reentry=True,
+    #     fallbacks=[CommandHandler("cancel", cancel_registration),
+    #     MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
+    # ],
+    # allow_reentry=True,
+        fallbacks=[CommandHandler("cancel", cancel_registration)],
     )
 
     app.add_handler(reg_conv)
