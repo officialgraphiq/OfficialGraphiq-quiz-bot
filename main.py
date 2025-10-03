@@ -870,24 +870,30 @@ async def cancel_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 
-async def view_profile(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user = users_col.find_one({"telegram_id": update.effective_user.id})
+# ---------------------------
+# Profile Command
+# ---------------------------
+async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    tg_id = update.message.from_user.id
+    user = get_user(tg_id)
 
     if not user:
-        await update.message.reply_text("⚠️ You are not registered yet. Use /register to get started.")
+        await update.message.reply_text("⚠️ You are not registered yet. Use /register first.")
         return
 
     profile_text = (
-        "📋 *Your Profile Details:*\n\n"
-        f"👤 Username: `{user.get('username', 'Not set')}`\n"
-        f"📧 Email: `{user.get('email', 'Not set')}`\n"
-        f"📱 Phone: `{user.get('phone', 'Not set')}`\n"
-        f"🏦 Bank: `{user.get('bank', 'Not set')}`\n"
-        f"💳 Account: `{user.get('account_number', 'Not set')}`"
+        "👤 Your Profile:\n\n"
+        f"Username: {user.get('username', '—')}\n"
+        f"Email: {user.get('email', '—')}\n"
+        f"Phone: {user.get('phone', '—')}\n"
+        f"Bank: {user.get('bank', '—')}\n"
+        f"Account No: {user.get('account_number', '—')}\n"
+        f"Score: {user.get('score', 0):.1f}\n"
+        f"Balance: ₦{user.get('balance', 0):,}\n"
+        f"Sessions: {user.get('sessions', 0)}"
     )
 
-    await update.message.reply_text(profile_text, parse_mode="Markdown")
-
+    await update.message.reply_text(profile_text)
 
 
 
@@ -1261,7 +1267,7 @@ def main():
     app.add_handler(CommandHandler("fund", fund_command))
     app.add_handler(CommandHandler("balance", balance_command))
     app.add_handler(CommandHandler("leaderboard", leaderboard_command))
-    app.add_handler(CommandHandler("profile", view_profile))
+    app.add_handler(CommandHandler("profile", profile_command))
     app.add_handler(CommandHandler("help", help_command))
 
     # category chooser must be registered *before* the generic answer handler
