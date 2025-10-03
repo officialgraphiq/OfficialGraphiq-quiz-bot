@@ -1620,6 +1620,9 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Register
 # ---------------------------
+ACTIVE_REGISTRATIONS = set()
+ACTIVE_UPDATES = set()
+
 async def start_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     if user_in_quiz(user_id):
@@ -1830,7 +1833,7 @@ async def block_other_commands(update: Update, context: ContextTypes.DEFAULT_TYP
     # Otherwise block everything
     await update.message.reply_text(
         "⚠️ You cannot use other commands right now.\n"
-        "👉 Finish your ongoing quiz or registration/update first."
+        "👉 Finish your profile update first, or type /cancel to stop updating."
     )
 
 
@@ -2364,7 +2367,11 @@ update_conv_handler = ConversationHandler(
     #     CommandHandler("cancel", cancel_update),
     #     MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
     # ],
-fallbacks=[CommandHandler("cancel", cancel_update)],
+fallbacks=[CommandHandler("cancel", cancel_update),
+           MessageHandler(filters.COMMAND, block_other_commands),
+           ],
+           allow_reentry=True,   # so user can restart update after finishing/cancelling
+    per_user=True,        # ensure blocking applies per user
 )
 
     
