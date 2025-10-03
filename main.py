@@ -527,7 +527,7 @@ import random
 import time
 from typing import Final
 from collections import defaultdict
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 from telegram.ext import (
     Application, CommandHandler, CallbackQueryHandler,
     MessageHandler, ConversationHandler, ContextTypes, filters
@@ -574,8 +574,8 @@ except Exception:
 # ---------------------------
 # Conversation states
 # ---------------------------
-REGISTER_USERNAME, REGISTER_EMAIL, REGISTER_CONFIRM = range(3)
-
+# REGISTER_USERNAME, REGISTER_EMAIL, REGISTER_CONFIRM = range(3)
+USERNAME, EMAIL, PHONE, BANK, ACCOUNT = range(5)
 
 # ---------------------------
 # In-memory active quizzes
@@ -666,34 +666,115 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Register
 # ---------------------------
-async def register_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Please enter your username:")
-    return REGISTER_USERNAME
+# async def register_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text("Please enter your username:")
+#     return USERNAME
+async def start_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Welcome to registration!\nPlease enter a username:")
+    return USERNAME
 
+# async def register_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     context.user_data["username"] = update.message.text
+#     await update.message.reply_text("Now enter your email:")
+#     return EMAIL
 async def register_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data["username"] = update.message.text
-    await update.message.reply_text("Now enter your email:")
-    return REGISTER_EMAIL
+    username = update.message.text.strip()
+    db = context.bot_data["db"]
+
+    # Check uniqueness
+    if db.users.find_one({"username": username, "telegram_id": {"$ne": update.effective_user.id}}):
+        await update.message.reply_text("❌ Username already taken, try another one.")
+        return USERNAME
+
+    context.user_data["username"] = username
+    await update.message.reply_text("✅ Username saved.\nNow enter your email:")
+    return EMAIL
+
+
+
+
+# async def register_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     context.user_data["email"] = update.message.text
+#     await update.message.reply_text(
+#         f"Confirm registration:\n\nUsername: {context.user_data['username']}\nEmail: {context.user_data['email']}\n\nType 'yes' to confirm or 'no' to cancel."
+#     )
+#     return CONFIRM
 
 async def register_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data["email"] = update.message.text
-    await update.message.reply_text(
-        f"Confirm registration:\n\nUsername: {context.user_data['username']}\nEmail: {context.user_data['email']}\n\nType 'yes' to confirm or 'no' to cancel."
-    )
-    return REGISTER_CONFIRM
+    email = update.message.text.strip()
+    db = context.bot_data["db"]
 
-async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.message.text.lower() == "yes":
-        tg_id = update.message.from_user.id
-        create_or_update_user(
-            tg_id,
-            username=context.user_data["username"],
-            email=context.user_data["email"]
-        )
-        await update.message.reply_text("✅ Registration successful! You can now use /play.")
-    else:
-        await update.message.reply_text("❌ Registration cancelled.")
+    if db.users.find_one({"email": email, "telegram_id": {"$ne": update.effective_user.id}}):
+        await update.message.reply_text("❌ Email already registered, try another one.")
+        return EMAIL
+
+    context.user_data["email"] = email
+    await update.message.reply_text("✅ Email saved.\nNow enter your phone number:")
+    return PHONE
+
+
+async def register_phone(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    phone = update.message.text.strip()
+    db = context.bot_data["db"]
+
+    if db.users.find_one({"phone": phone, "telegram_id": {"$ne": update.effective_user.id}}):
+        await update.message.reply_text("❌ Phone already used, enter a different number.")
+        return PHONE
+
+    context.user_data["phone"] = phone
+    await update.message.reply_text("✅ Phone saved.\nEnter your bank name:")
+    return BANK
+
+async def register_bank(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data["bank"] = update.message.text.strip()
+    await update.message.reply_text("✅ Bank name saved.\nEnter your account number:")
+    return ACCOUNT
+
+async def register_account(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    account_number = update.message.text.strip()
+    db = context.bot_data["db"]
+
+    if db.users.find_one({"account_number": account_number, "telegram_id": {"$ne": update.effective_user.id}}):
+        await update.message.reply_text("❌ Account number already registered, try again.")
+        return ACCOUNT
+
+    context.user_data["account_number"] = account_number
+
+    # Save to DB
+    db.users.update_one(
+        {"telegram_id": update.effective_user.id},
+        {"$set": {
+            "username": context.user_data["username"],
+            "email": context.user_data["email"],
+            "phone": context.user_data["phone"],
+            "bank": context.user_data["bank"],
+            "account_number": account_number,
+            "telegram_id": update.effective_user.id
+        }},
+        upsert=True
+    )
+
+    await update.message.reply_text("🎉 Registration complete! You may now use the bot.")
     return ConversationHandler.END
+
+
+async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("❌ Registration cancelled.")
+    return ConversationHandler.END
+
+
+# async def register_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     if update.message.text.lower() == "yes":
+#         tg_id = update.message.from_user.id
+#         create_or_update_user(
+#             tg_id,
+#             username=context.user_data["username"],
+#             email=context.user_data["email"]
+#         )
+#         await update.message.reply_text("✅ Registration successful! You can now use /play.")
+#     else:
+#         await update.message.reply_text("❌ Registration cancelled.")
+#     return ConversationHandler.END
 
 
 # ---------------------------
@@ -1025,13 +1106,19 @@ def main():
 
     # Register flow
     reg_conv = ConversationHandler(
-        entry_points=[CommandHandler("register", register_command)],
+        entry_points=[CommandHandler("register", start_registration)],
         states={
-            REGISTER_USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_username)],
-            REGISTER_EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_email)],
-            REGISTER_CONFIRM: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_confirm)],
+            USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_username)],
+            EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_email)],
+            PHONE: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_phone)],
+            BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_bank)],
+            ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
         },
-        fallbacks=[],
+        # fallbacks=[],
+        fallbacks=[CommandHandler("cancel", cancel_registration)],
+        per_user=True,
+        per_chat=True,
+        allow_reentry=True
     )
 
     app.add_handler(reg_conv)
