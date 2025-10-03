@@ -526,6 +526,7 @@ import json
 import random
 import time
 from typing import Final
+from telegram.ext import JobQueue
 from collections import defaultdict
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 from telegram.ext import (
@@ -870,11 +871,24 @@ async def cancel_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # Fallback for blocking other commands
+# async def block_other_commands(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text(
+#         "⚠️ You’re currently in the middle of registration/update. "
+#         "Please finish or /cancel before using other commands."
+#     )
 async def block_other_commands(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.effective_user.id
+
+    # Allow /end if in quiz
+    if user_id in ACTIVE_QUIZZES and update.message.text.strip().startswith("/end"):
+        return  # don't block, let /end handler run
+
+    # Otherwise block everything
     await update.message.reply_text(
-        "⚠️ You’re currently in the middle of registration/update. "
-        "Please finish or /cancel before using other commands."
+        "⚠️ You cannot use other commands right now.\n"
+        "👉 Finish your ongoing quiz or registration/update first."
     )
+
 
 
 # ---------------------------
@@ -934,14 +948,120 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
+# async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     tg_id = update.message.from_user.id
+#     quiz = ACTIVE_QUIZZES.get(tg_id)
+#     if not quiz or not quiz.get("active", False):
+#         await update.message.reply_text("❌ You are not currently in a quiz session.")
+#         return
+#     quiz["active"] = False
+#     await finalize_quiz(context, tg_id, quiz)
+from telegram import InlineKeyboardMarkup, InlineKeyboardButton
+
+# async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.effective_user.id
+
+#     if user_id not in ACTIVE_QUIZZES:
+#         await update.message.reply_text("⚠️ You are not in an active quiz session.")
+#         return
+
+#     keyboard = [
+#         [
+#             InlineKeyboardButton("✅ Yes, end now", callback_data="confirm_end"),
+#             InlineKeyboardButton("❌ No, continue", callback_data="cancel_end"),
+#         ]
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await update.message.reply_text(
+#         "⚠️ Are you sure you want to *end your quiz session*?\n\n"
+#         "👉 Ending early means you *forfeit the session* and *will not be refunded*.",
+#         reply_markup=reply_markup,
+#         parse_mode="Markdown"
+#     )
+
 async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    tg_id = update.message.from_user.id
-    quiz = ACTIVE_QUIZZES.get(tg_id)
+    user_id = update.effective_user.id
+
+    quiz = ACTIVE_QUIZZES.get(user_id)
     if not quiz or not quiz.get("active", False):
-        await update.message.reply_text("❌ You are not currently in a quiz session.")
+        await update.message.reply_text("⚠️ You are not currently in an active quiz session.")
         return
-    quiz["active"] = False
-    await finalize_quiz(context, tg_id, quiz)
+
+    keyboard = [
+        [
+            InlineKeyboardButton("✅ Yes, end now", callback_data="confirm_end"),
+            InlineKeyboardButton("❌ No, continue", callback_data="cancel_end"),
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
+    sent_msg = await update.message.reply_text(
+        "⚠️ Are you sure you want to *end your quiz session*?\n\n"
+        "👉 Ending early means you *forfeit the session* and *will not be refunded*.",
+        reply_markup=reply_markup,
+        parse_mode="Markdown"
+    )
+
+    # Schedule expiration after 30s
+    context.job_queue.run_once(
+        expire_end_confirmation, 30, 
+        data={"chat_id": sent_msg.chat.id, "message_id": sent_msg.message_id, "user_id": user_id}
+    )
+
+async def expire_end_confirmation(context: ContextTypes.DEFAULT_TYPE):
+    data = context.job.data
+    chat_id = data["chat_id"]
+    message_id = data["message_id"]
+    user_id = data["user_id"]
+
+    # If the quiz still exists, it means the user didn’t confirm or cancel
+    if user_id in ACTIVE_QUIZZES:
+        try:
+            await context.bot.edit_message_text(
+                chat_id=chat_id,
+                message_id=message_id,
+                text="⌛ The end request *expired*. Your quiz continues! 🎉",
+                parse_mode="Markdown"
+            )
+        except:
+            pass  # ignore if message already changed
+
+
+def is_in_quiz(update: Update) -> bool:
+    user_id = update.effective_user.id
+    return user_id in ACTIVE_QUIZZES
+
+
+async def block_during_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "⚠️ You are currently in a quiz session.\n"
+        "👉 The only command available is /end to quit."
+    )
+
+async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    user_id = query.from_user.id
+
+    quiz = ACTIVE_QUIZZES.pop(user_id, None)
+    if quiz:
+        await query.edit_message_text(
+            "❌ Your quiz session has been *ended*.\n\n"
+            "⚠️ No refund is given for ending early.\n"
+            "👉 You can start again anytime with /play.",
+            parse_mode="Markdown"
+        )
+    else:
+        await query.edit_message_text("⚠️ You have no active session.")
+        
+
+async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    await query.edit_message_text("✅ You chose to continue your quiz. Good luck! 🎉")
+
+
 
 
 # ---------------------------
@@ -1270,6 +1390,9 @@ def main():
 
     app.add_handler(reg_conv)
     app.add_handler(update_conv_handler)
+    app.add_handler(MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"),
+        block_during_quiz
+    ))
     app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CommandHandler("play", play_command))
     app.add_handler(CommandHandler("end", end_command))
@@ -1282,6 +1405,9 @@ def main():
     # category chooser must be registered *before* the generic answer handler
     app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
     app.add_handler(CallbackQueryHandler(handle_answer))
+    app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
+    app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
+
 
     print(f"🚀 Starting webhook at {WEBHOOK_URL}/webhook")
     app.run_webhook(
