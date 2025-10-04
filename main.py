@@ -1461,6 +1461,7 @@ import json
 import random
 import time
 from typing import Final
+from datetime import datetime, timedelta
 from telegram.ext import JobQueue
 from collections import defaultdict
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
@@ -1585,14 +1586,90 @@ def apply_speed_bonus(all_answers):
 
 
 
+
+
+
+
+#RESTRICT BOT--------------
+
+ALLOWED_START_HOUR = 8   # 8 AM
+ALLOWED_END_HOUR = 21    # 9 PM
+
+
+async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    now = datetime.now()
+    if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+        await update.message.reply_text(
+            "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+            "Please come back during active hours."
+        )
+        return True  # Block further handlers
+    return False
+
+async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
+    # Reset all scores, balances, and sessions in DB
+    users_col.update_many({}, {"$set": {"score": 0, "sessions": 0, "balance": 0}})
+
+    # Clear in-memory ACTIVE_QUIZZES
+    ACTIVE_QUIZZES.clear()
+
+    print("✅ Daily reset completed at", datetime.now())
+
+
+def schedule_daily_reset(job_queue: JobQueue):
+    now = datetime.now()
+    # Next midnight
+    next_midnight = datetime.combine(now.date() + timedelta(days=1), datetime.min.time())
+    delay = (next_midnight - now).total_seconds()
+
+    job_queue.run_repeating(
+        reset_daily,
+        interval=86400,  # every 24 hours
+        first=delay
+    )
+
+
+
 # ---------------------------
 # Commands
 # ---------------------------
+# async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.effective_user.id
+#     # Block if in quiz (only /end allowed)
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+#         return
+
+#     menu = (
+#         "👋 Welcome to ORG Quiz Bot!\n\n"
+#         "Here are the available commands:\n"
+#         "/play - Start the quiz (must be registered + have ≥ ₦300 balance)\n"
+#         "/register - Register yourself\n"
+#         "/leaderboard - Show leaderboard\n"
+#         "/fund - Add funds to your balance\n"
+#         "/update - Update your profile details\n"
+#         "/profile - View your profile\n"
+#         "/balance - Check your balance\n"
+#         "/end - End your current quiz\n"
+#     )
+#     await update.message.reply_text(menu)
+
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # ⏰ Global pre-check: allow only between 8AM - 9PM
+    now = datetime.now()
+    if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+        await update.message.reply_text(
+            "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+            "Please come back during active hours."
+        )
+        return
+
     user_id = update.effective_user.id
     # Block if in quiz (only /end allowed)
     if user_in_quiz(user_id):
-        await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+        await update.message.reply_text(
+            "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+        )
         return
 
     menu = (
@@ -1608,6 +1685,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/end - End your current quiz\n"
     )
     await update.message.reply_text(menu)
+
+
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
@@ -1875,10 +1954,61 @@ async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Quiz: show categories (balance check)
 # ---------------------------
+# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+#         return
+
+#     tg_id = user_id
+#     user = get_user(tg_id)
+
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     # Require at least 300 to start a session
+#     if user.get("balance", 0) < 300:
+#         await update.message.reply_text("⚠️ You need at least ₦300 to play. Use /fund to add funds.")
+#         return
+
+#     # Prevent starting multiple sessions
+#     if tg_id in ACTIVE_QUIZZES:
+#         await update.message.reply_text(
+#             "⚠️ You are already in an active quiz session!\n"
+#             "👉 Use /end first if you want to quit and start again."
+#         )
+#         return
+
+#     # Otherwise, let them pick a category
+#     keyboard = [
+#         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
+#         for cat in CATEGORIES.keys()
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await update.message.reply_text(
+#         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
+#         reply_markup=reply_markup
+#     )
+
+
+
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # ⏰ Global pre-check: only active between 8AM - 9PM
+    now = datetime.now()
+    if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+        await update.message.reply_text(
+            "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+            "Please come back during active hours."
+        )
+        return
+
     user_id = update.message.from_user.id
     if user_in_quiz(user_id):
-        await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+        await update.message.reply_text(
+            "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+        )
         return
 
     tg_id = user_id
@@ -1888,12 +2018,12 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ You must register first using /register")
         return
 
-    # Require at least 300 to start a session
     if user.get("balance", 0) < 300:
-        await update.message.reply_text("⚠️ You need at least ₦300 to play. Use /fund to add funds.")
+        await update.message.reply_text(
+            "⚠️ You need at least ₦300 to play. Use /fund to add funds."
+        )
         return
 
-    # Prevent starting multiple sessions
     if tg_id in ACTIVE_QUIZZES:
         await update.message.reply_text(
             "⚠️ You are already in an active quiz session!\n"
@@ -1901,7 +2031,6 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
-    # Otherwise, let them pick a category
     keyboard = [
         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
         for cat in CATEGORIES.keys()
@@ -1912,6 +2041,8 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
         reply_markup=reply_markup
     )
+
+
 
 
 
@@ -2057,28 +2188,68 @@ async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Fund & Balance
 # ---------------------------
+# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+#         return
+
+#     tg_id = update.message.from_user.id
+#     user = get_user(tg_id)
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+#     try:
+#         amount = int(context.args[0])
+#         if amount <= 0:
+#             raise ValueError
+#     except (IndexError, ValueError):
+#         await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
+#         return
+
+#     update_balance(tg_id, amount)
+#     user = get_user(tg_id)
+#     await update.message.reply_text(f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}")
+
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_id = update.message.from_user.id
-    if user_in_quiz(user_id):
-        await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+    # ⏰ Global pre-check: only active between 8AM - 9PM
+    now = datetime.now()
+    if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+        await update.message.reply_text(
+            "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+            "Please come back during active hours."
+        )
         return
 
-    tg_id = update.message.from_user.id
+    user_id = update.message.from_user.id
+    if user_in_quiz(user_id):
+        await update.message.reply_text(
+            "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+        )
+        return
+
+    tg_id = user_id
     user = get_user(tg_id)
     if not user:
         await update.message.reply_text("⚠️ You must register first using /register")
         return
+
     try:
         amount = int(context.args[0])
         if amount <= 0:
             raise ValueError
     except (IndexError, ValueError):
-        await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
+        await update.message.reply_text(
+            "Usage: /fund <amount>\nExample: /fund 1000"
+        )
         return
 
     update_balance(tg_id, amount)
     user = get_user(tg_id)
-    await update.message.reply_text(f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}")
+    await update.message.reply_text(
+        f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}"
+    )
+
 
 
 async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -2407,6 +2578,7 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 def main():
     print("🤖 Bot starting...")
     app = Application.builder().token(TOKEN).build()
+    schedule_daily_reset(app.job_queue)
     # Register flow
     reg_conv = ConversationHandler(
         entry_points=[CommandHandler("register", start_registration)],
