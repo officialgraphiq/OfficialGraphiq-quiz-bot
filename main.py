@@ -1815,6 +1815,7 @@ async def start_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(
         f"📝 Updating your profile.\n"
+        f"📝 To cancel update, use /cancel.\n"
         f"Current details:\n"
         f"- Username: {user.get('username', 'Not set')}\n"
         f"- Email: {user.get('email', 'Not set')}\n"
