@@ -1607,25 +1607,25 @@ async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return False
 
 async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
-    # Reset all scores, balances, and sessions in DB
-    users_col.update_many({}, {"$set": {"score": 0, "sessions": 0, "balance": 0}})
-
-    # Clear in-memory ACTIVE_QUIZZES
+    # Reset only scores and sessions (leave balance untouched)
+    users_col.update_many({}, {"$set": {"score": 0, "sessions": 0}})
+    
+    # Clear in-memory active quizzes
     ACTIVE_QUIZZES.clear()
 
-    print("✅ Daily reset completed at", datetime.now())
+    print("✅ Daily reset completed at", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
 
 
 def schedule_daily_reset(job_queue: JobQueue):
     now = datetime.now()
-    # Next midnight
     next_midnight = datetime.combine(now.date() + timedelta(days=1), datetime.min.time())
     delay = (next_midnight - now).total_seconds()
 
     job_queue.run_repeating(
         reset_daily,
         interval=86400,  # every 24 hours
-        first=delay
+        first=delay      # first run at next midnight
     )
 
 
