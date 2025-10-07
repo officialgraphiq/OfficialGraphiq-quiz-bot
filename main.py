@@ -224,7 +224,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     menu = (
         "👋 Welcome to ORG Quiz Bot!\n\n"
         "Here are the available commands:\n"
-        "/play - Start the quiz (must be registered + have ≥ ₦500 balance)\n"
+        "/play - Start the quiz (must be registered + have ≥ ₦200 balance)\n"
         "/register - Register yourself\n"
         "/leaderboard - Show leaderboard\n"
         "/fund - Add funds to your balance\n"
