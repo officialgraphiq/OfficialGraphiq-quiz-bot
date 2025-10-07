@@ -1,34 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # import os
 # import certifi
 # import json
@@ -1190,7 +1159,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     menu = (
         "👋 Welcome to ORG Quiz Bot!\n\n"
         "Here are the available commands:\n"
-        "/play - Start the quiz (must be registered + have ≥ ₦300 balance)\n"
+        "/play - Start the quiz (must be registered + have ≥ ₦200 balance)\n"
         "/register - Register yourself\n"
         "/leaderboard - Show leaderboard\n"
         "/fund - Add funds to your balance\n"
@@ -1470,44 +1439,6 @@ async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Quiz: show categories (balance check)
 # ---------------------------
-# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user_id = update.message.from_user.id
-#     if user_in_quiz(user_id):
-#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
-#         return
-
-#     tg_id = user_id
-#     user = get_user(tg_id)
-
-#     if not user:
-#         await update.message.reply_text("⚠️ You must register first using /register")
-#         return
-
-#     # Require at least 300 to start a session
-#     if user.get("balance", 0) < 300:
-#         await update.message.reply_text("⚠️ You need at least ₦300 to play. Use /fund to add funds.")
-#         return
-
-#     # Prevent starting multiple sessions
-#     if tg_id in ACTIVE_QUIZZES:
-#         await update.message.reply_text(
-#             "⚠️ You are already in an active quiz session!\n"
-#             "👉 Use /end first if you want to quit and start again."
-#         )
-#         return
-
-#     # Otherwise, let them pick a category
-#     keyboard = [
-#         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
-#         for cat in CATEGORIES.keys()
-#     ]
-#     reply_markup = InlineKeyboardMarkup(keyboard)
-
-#     await update.message.reply_text(
-#         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
-#         reply_markup=reply_markup
-#     )
-
 
 
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1534,9 +1465,9 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ You must register first using /register")
         return
 
-    if user.get("balance", 0) < 300:
+    if user.get("balance", 0) < 200:
         await update.message.reply_text(
-            "⚠️ You need at least ₦300 to play. Use /fund to add funds."
+            "⚠️ You need at least ₦200 to play. Use /fund to add funds."
         )
         return
 
@@ -1645,24 +1576,6 @@ async def block_during_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
 
-# async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     # handle confirm_end callback BEFORE generic answer handler
-#     query = update.callback_query
-#     await query.answer()
-#     user_id = query.from_user.id
-
-#     quiz = ACTIVE_QUIZZES.pop(user_id, None)
-#     if quiz:
-#         safe_remove_job(quiz.get("timeout_job"))
-#         await query.edit_message_text(
-#             "❌ Your quiz session has been *ended*.\n\n"
-#             "⚠️ No refund is given for ending early.\n"
-#             "👉 You can start again anytime with /play.",
-#             parse_mode="Markdown"
-#         )
-#     else:
-#         await query.edit_message_text("⚠️ You have no active session.")
-
 
 async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
@@ -1704,28 +1617,6 @@ async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Fund & Balance
 # ---------------------------
-# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user_id = update.message.from_user.id
-#     if user_in_quiz(user_id):
-#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
-#         return
-
-#     tg_id = update.message.from_user.id
-#     user = get_user(tg_id)
-#     if not user:
-#         await update.message.reply_text("⚠️ You must register first using /register")
-#         return
-#     try:
-#         amount = int(context.args[0])
-#         if amount <= 0:
-#             raise ValueError
-#     except (IndexError, ValueError):
-#         await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
-#         return
-
-#     update_balance(tg_id, amount)
-#     user = get_user(tg_id)
-#     await update.message.reply_text(f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}")
 
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # ⏰ Global pre-check: only active between 8AM - 9PM
@@ -1795,8 +1686,8 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not user:
         await query.edit_message_text("❌ You must register first using /register.")
         return
-    if user.get("balance", 0) < 300:
-        await query.edit_message_text(f"💳 Your balance is ₦{user.get('balance',0):,}.\n❌ You need at least ₦300 to play. Please top up.")
+    if user.get("balance", 0) < 200:
+        await query.edit_message_text(f"💳 Your balance is ₦{user.get('balance',0):,}.\n❌ You need at least ₦200 to play. Please top up.")
         return
 
     cat = query.data.split("_", 1)[1]
@@ -1819,7 +1710,7 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Deduct ₦300 and increment sessions atomically, return updated user
     updated_user = users_col.find_one_and_update(
         {"telegram_id": user_id},
-        {"$inc": {"balance": -300, "sessions": 1}},
+        {"$inc": {"balance": -200, "sessions": 1}},
         return_document=ReturnDocument.AFTER,
         upsert=True
     )
@@ -1841,7 +1732,7 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     }
     ACTIVE_QUIZZES[user_id] = quiz_state
 
-    await query.edit_message_text(f"✅ ₦300 deducted. Remaining balance: ₦{new_balance:,}\n✅ You chose {cat}. Quiz starting…")
+    await query.edit_message_text(f"✅ ₦200 deducted. Remaining balance: ₦{new_balance:,}\n✅ You chose {cat}. Quiz starting…")
     # start the first question
     await send_question(update, context, user_id)
 
