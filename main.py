@@ -1471,6 +1471,12 @@ from telegram.ext import (
 )
 from pymongo import MongoClient, ReturnDocument
 
+#officialgraphiq25(GITIHUB PASS, MONGODB)
+#cluster pass (Wd4qWrB30QGprjMa)
+
+#mongodb+srv://tokumasamuel03_db_user:5QNgIFXxlLzyBGJv@graphiz-quizet.os3eb7u.mongodb.net/?retryWrites=true&w=majority&appName=graphiz-quizet
+
+
 
 # ---------------------------
 # MongoDB Setup
