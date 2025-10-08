@@ -28,6 +28,7 @@ MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 db = client["quiz_bot"]
 users_col = db["users"]
+winners_col = db["daily_winners"]   # NEW: store historical winners
 
 
 # ---------------------------
@@ -36,6 +37,7 @@ users_col = db["users"]
 TOKEN: Final = os.getenv("BOT_TOKEN")
 BOT_USERNAME: Final = "@Icon_Ayce_Org_Bot"
 WEBHOOK_URL = os.getenv("WEBHOOK_URL", "")
+ANNOUNCE_CHAT_ID = os.getenv("ANNOUNCE_CHAT_ID")  # set to integer string, e.g. -1001234567890
 
 
 # ---------------------------
@@ -180,28 +182,106 @@ def schedule_daily_reset(job_queue: JobQueue):
 
 
 # ---------------------------
+# Winner announcement feature (NEW)
+async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """
+    When a user calls /winner, we simply acknowledge that the winner will
+    be announced by 9:10 PM today.
+    """
+    # enforce active hours if you want: (optional)
+    now = datetime.now()
+    if now.hour >= ALLOWED_END_HOUR:
+        await update.message.reply_text("⛔ The bot is already closed for the day. Winner will be announced at 9:10 PM.")
+        return
+
+    await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
+
+async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
+    """
+    Job scheduled to run daily at 21:10.
+    Picks top scorer, stores in winners_col, announces to ANNOUNCE_CHAT_ID (if set) or DMs the winner.
+    """
+    try:
+        # get top user by score
+        top_user = users_col.find_one({}, sort=[("score", -1)])
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        announce_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        if not top_user or top_user.get("score", 0) <= 0:
+            # No winner today
+            message = f"🏆 Winner announcement for {today_str}:\nNo winner today (no players or scores)."
+            # If ANNOUNCE_CHAT_ID is set, announce there; otherwise no action
+            if ANNOUNCE_CHAT_ID:
+                try:
+                    chat_id = int(ANNOUNCE_CHAT_ID)
+                    await context.bot.send_message(chat_id=chat_id, text=message)
+                except Exception as e:
+                    print("Failed to send no-winner announcement to ANNOUNCE_CHAT_ID:", e)
+            else:
+                print(message)
+            return
+
+        winner_record = {
+            "date": today_str,
+            "username": top_user.get("username", "Anonymous"),
+            "telegram_id": top_user.get("telegram_id"),
+            "score": float(top_user.get("score", 0)),
+            "announced_at": announce_time
+        }
+
+        # Persist winner to winners collection
+        winners_col.insert_one(winner_record)
+
+        # Prepare announcement text
+        announcement = (
+            f"🏆 *Daily Winner — {today_str}* 🏆\n\n"
+            f"🥇 Username: {winner_record['username']}\n"
+            f"🔢 Score: {winner_record['score']:.1f}\n\n"
+            f"Congratulations! 🎉"
+        )
+
+        # Send to announce chat if provided; else DM the winner
+        if ANNOUNCE_CHAT_ID:
+            try:
+                chat_id = int(ANNOUNCE_CHAT_ID)
+                await context.bot.send_message(chat_id=chat_id, text=announcement, parse_mode="Markdown")
+            except Exception as e:
+                print("Failed to send winner announcement to ANNOUNCE_CHAT_ID:", e)
+                # fallback: DM the winner
+                try:
+                    await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
+                except Exception as e2:
+                    print("Failed to DM winner as a fallback:", e2)
+        else:
+            # No announce chat set — DM the winner
+            try:
+                await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
+            except Exception as e:
+                print("Failed to DM winner:", e)
+
+        print(f"✅ Announced winner for {today_str}: {winner_record['username']} ({winner_record['telegram_id']})")
+    except Exception as ex:
+        print("Error in announce_winner job:", ex)
+
+def schedule_winner_announcement(job_queue: JobQueue):
+    """
+    Schedule the announce_winner job for 21:10 daily.
+    """
+    now = datetime.now()
+    target_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
+    if now >= target_time:
+        # schedule for tomorrow
+        target_time = target_time + timedelta(days=1)
+    delay = (target_time - now).total_seconds()
+    job_queue.run_repeating(announce_winner, interval=86400, first=delay)
+    print(f"🕘 Winner announcement scheduled for {target_time}")
+
+
+
+
+# ---------------------------
 # Commands
 # ---------------------------
-# async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user_id = update.effective_user.id
-#     # Block if in quiz (only /end allowed)
-#     if user_in_quiz(user_id):
-#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
-#         return
-
-#     menu = (
-#         "👋 Welcome to ORG Quiz Bot!\n\n"
-#         "Here are the available commands:\n"
-#         "/play - Start the quiz (must be registered + have ≥ ₦300 balance)\n"
-#         "/register - Register yourself\n"
-#         "/leaderboard - Show leaderboard\n"
-#         "/fund - Add funds to your balance\n"
-#         "/update - Update your profile details\n"
-#         "/profile - View your profile\n"
-#         "/balance - Check your balance\n"
-#         "/end - End your current quiz\n"
-#     )
-#     await update.message.reply_text(menu)
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # ⏰ Global pre-check: allow only between 8AM - 9PM
@@ -1090,6 +1170,7 @@ def main():
     app.add_handler(CommandHandler("leaderboard", leaderboard_command))
     app.add_handler(CommandHandler("profile", profile_command))
     app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(CommandHandler("winner", winner_command))
 
     # CALLBACK QUERY HANDLERS: specific handlers first, then the generic answer handler
     app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
