@@ -205,7 +205,7 @@ async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     now = datetime.now()
     today_str = now.strftime("%Y-%m-%d")
     announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
-    reset_time = now.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
+    reset_time = now.replace(hour=0, minute=30, second=0, microsecond=0) + timedelta(days=1)
 
     # Before announcement time (9:10 PM)
     if now < announce_time:
@@ -261,11 +261,15 @@ async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
             return
 
         winner_record = {
-            "date": today_str,
-            "username": top_user.get("username", "Anonymous"),
-            "telegram_id": top_user.get("telegram_id"),
-            "score": float(top_user.get("score", 0)),
-            "announced_at": announce_time
+            # "date": today_str,
+            # "username": top_user.get("username", "Anonymous"),
+            # "telegram_id": top_user.get("telegram_id"),
+            # "score": float(top_user.get("score", 0)),
+            # "announced_at": announce_time
+             "date": today_str,
+             "username": top_user["username"],
+             "score": top_user["score"],
+             "announced_at": now.strftime("%H:%M:%S")
         }
 
         # Persist winner to winners collection
