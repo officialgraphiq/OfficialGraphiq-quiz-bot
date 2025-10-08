@@ -268,73 +268,64 @@ async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
     """
     Job scheduled to run daily at 21:10.
-    Picks top scorer, stores in winners_col, announces to ANNOUNCE_CHAT_ID (if set) or DMs the winner.
+    Picks top scorer, stores in winners_col, and announces it.
     """
     try:
+        now = datetime.now()
+        today_str = now.strftime("%Y-%m-%d")
+        announce_time = now.strftime("%Y-%m-%d %H:%M:%S")
+
         # get top user by score
         top_user = users_col.find_one({}, sort=[("score", -1)])
-        today_str = datetime.now().strftime("%Y-%m-%d")
-        announce_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         if not top_user or top_user.get("score", 0) <= 0:
-            # No winner today
-            message = f"🏆 Winner announcement for {today_str}:\nNo winner today (no players or scores)."
-            # If ANNOUNCE_CHAT_ID is set, announce there; otherwise no action
-            if ANNOUNCE_CHAT_ID:
-                try:
-                    chat_id = int(ANNOUNCE_CHAT_ID)
-                    await context.bot.send_message(chat_id=chat_id, text=message)
-                except Exception as e:
-                    print("Failed to send no-winner announcement to ANNOUNCE_CHAT_ID:", e)
-            else:
-                print(message)
+            print(f"⚠️ No winner to announce for {today_str}")
             return
 
         winner_record = {
-            # "date": today_str,
-            # "username": top_user.get("username", "Anonymous"),
-            # "telegram_id": top_user.get("telegram_id"),
-            # "score": float(top_user.get("score", 0)),
-            # "announced_at": announce_time
-             "date": today_str,
-             "username": top_user["username"],
-             "score": top_user["score"],
-             "announced_at": now.strftime("%H:%M:%S")
+            "date": today_str,
+            "username": top_user.get("username", "Anonymous"),
+            "telegram_id": top_user.get("telegram_id"),
+            "score": float(top_user.get("score", 0)),
+            "announced_at": announce_time,
         }
 
-        # Persist winner to winners collection
+        # Insert winner record into DB
         winners_col.insert_one(winner_record)
 
-        # Prepare announcement text
         announcement = (
             f"🏆 *Daily Winner — {today_str}* 🏆\n\n"
             f"🥇 Username: {winner_record['username']}\n"
             f"🔢 Score: {winner_record['score']:.1f}\n\n"
-            f"Congratulations! 🎉"
+            f"🎉 Congratulations to today’s champion!"
         )
 
-        # Send to announce chat if provided; else DM the winner
+        # Send announcement
         if ANNOUNCE_CHAT_ID:
             try:
-                chat_id = int(ANNOUNCE_CHAT_ID)
-                await context.bot.send_message(chat_id=chat_id, text=announcement, parse_mode="Markdown")
+                await context.bot.send_message(
+                    chat_id=int(ANNOUNCE_CHAT_ID),
+                    text=announcement,
+                    parse_mode="Markdown",
+                )
             except Exception as e:
-                print("Failed to send winner announcement to ANNOUNCE_CHAT_ID:", e)
-                # fallback: DM the winner
-                try:
-                    await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
-                except Exception as e2:
-                    print("Failed to DM winner as a fallback:", e2)
+                print("⚠️ Failed to announce to ANNOUNCE_CHAT_ID:", e)
         else:
-            # No announce chat set — DM the winner
+            # fallback: DM winner directly
             try:
-                await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
+                await context.bot.send_message(
+                    chat_id=winner_record["telegram_id"],
+                    text=announcement,
+                    parse_mode="Markdown",
+                )
             except Exception as e:
-                print("Failed to DM winner:", e)
+                print("⚠️ Failed to DM winner:", e)
 
-        print(f"✅ Announced winner for {today_str}: {winner_record['username']} ({winner_record['telegram_id']})")
+        print(f"✅ Winner announced for {today_str}: {winner_record['username']}")
+
     except Exception as ex:
-        print("Error in announce_winner job:", ex)
+        print("❌ Error in announce_winner job:", ex)
+
 
 def schedule_winner_announcement(job_queue: JobQueue):
     """
