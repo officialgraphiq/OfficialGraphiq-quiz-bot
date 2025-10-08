@@ -338,6 +338,11 @@ def schedule_winner_announcement(job_queue: JobQueue):
     delay = (target_time - now).total_seconds()
     job_queue.run_repeating(announce_winner, interval=86400, first=delay)
     print(f"🕘 Winner announcement scheduled for {target_time}")
+    import asyncio
+    try:
+        asyncio.run(announce_winner(job_queue.application))
+    except Exception as e:
+        print("Manual winner announcement test failed:", e)
 
 
 
