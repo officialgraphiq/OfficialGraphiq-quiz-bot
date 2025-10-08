@@ -183,18 +183,57 @@ def schedule_daily_reset(job_queue: JobQueue):
 
 # ---------------------------
 # Winner announcement feature (NEW)
+# async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     """
+#     When a user calls /winner, we simply acknowledge that the winner will
+#     be announced by 9:10 PM today.
+#     """
+#     # enforce active hours if you want: (optional)
+#     now = datetime.now()
+#     if now.hour >= ALLOWED_END_HOUR:
+#         await update.message.reply_text("⛔ The bot is already closed for the day. Winner will be announced at 9:10 PM.")
+#         return
+
+#     await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
 async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """
-    When a user calls /winner, we simply acknowledge that the winner will
-    be announced by 9:10 PM today.
+    Handles /winner command:
+    - Before 9:10 PM → tells users when the winner will be announced.
+    - Between 9:10 PM and 11:59 PM → shows the winner of the day.
+    - After midnight (before next winner) → shows no winner yet.
     """
-    # enforce active hours if you want: (optional)
     now = datetime.now()
-    if now.hour >= ALLOWED_END_HOUR:
-        await update.message.reply_text("⛔ The bot is already closed for the day. Winner will be announced at 9:10 PM.")
+    today_str = now.strftime("%Y-%m-%d")
+    announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
+    reset_time = now.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
+
+    # Before announcement time (9:10 PM)
+    if now < announce_time:
+        await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
         return
 
-    await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
+    # Between 9:10 PM and midnight — show today's winner if available
+    if announce_time <= now < reset_time:
+        winner = winners_col.find_one({"date": today_str})
+        if winner:
+            msg = (
+                f"🏆 *Winner for {today_str}* 🏆\n\n"
+                f"🥇 Username: {winner['username']}\n"
+                f"🔢 Score: {winner['score']:.1f}\n\n"
+                f"Announced at: {winner['announced_at']}"
+            )
+            await update.message.reply_text(msg, parse_mode="Markdown")
+        else:
+            await update.message.reply_text(
+                "⚠️ Winner for today hasn't been announced yet. Please check back shortly after 9:10 PM."
+            )
+        return
+
+    # After midnight (scores reset)
+    await update.message.reply_text(
+        "🕛 The leaderboard has been reset for a new day.\nToday's winner will be announced by 9:10 PM."
+    )
+
 
 async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
     """
