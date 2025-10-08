@@ -268,63 +268,62 @@ async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
     """
     Job scheduled to run daily at 21:10.
-    Picks top scorer, stores in winners_col, and announces it.
+    Picks top scorer, stores in winners_col, announces to ANNOUNCE_CHAT_ID (if set) or DMs the winner.
     """
     try:
-        now = datetime.now()
+        now = datetime.now()  # <-- Add this line
         today_str = now.strftime("%Y-%m-%d")
         announce_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
-        # get top user by score
+        # Get top user by score
         top_user = users_col.find_one({}, sort=[("score", -1)])
 
         if not top_user or top_user.get("score", 0) <= 0:
-            print(f"⚠️ No winner to announce for {today_str}")
+            message = f"🏆 Winner announcement for {today_str}:\nNo winner today (no players or scores)."
+            if ANNOUNCE_CHAT_ID:
+                try:
+                    await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=message)
+                except Exception as e:
+                    print("Failed to send no-winner announcement:", e)
+            else:
+                print(message)
             return
 
+        # ✅ Build winner record correctly
         winner_record = {
             "date": today_str,
             "username": top_user.get("username", "Anonymous"),
             "telegram_id": top_user.get("telegram_id"),
             "score": float(top_user.get("score", 0)),
-            "announced_at": announce_time,
+            "announced_at": announce_time
         }
 
-        # Insert winner record into DB
+        # ✅ Insert winner into MongoDB
         winners_col.insert_one(winner_record)
 
+        # ✅ Prepare and send announcement
         announcement = (
             f"🏆 *Daily Winner — {today_str}* 🏆\n\n"
             f"🥇 Username: {winner_record['username']}\n"
             f"🔢 Score: {winner_record['score']:.1f}\n\n"
-            f"🎉 Congratulations to today’s champion!"
+            f"Congratulations! 🎉"
         )
 
-        # Send announcement
         if ANNOUNCE_CHAT_ID:
             try:
-                await context.bot.send_message(
-                    chat_id=int(ANNOUNCE_CHAT_ID),
-                    text=announcement,
-                    parse_mode="Markdown",
-                )
+                await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=announcement, parse_mode="Markdown")
             except Exception as e:
-                print("⚠️ Failed to announce to ANNOUNCE_CHAT_ID:", e)
+                print("Failed to send to announce chat:", e)
+                # Fallback: DM the winner
+                await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
         else:
-            # fallback: DM winner directly
-            try:
-                await context.bot.send_message(
-                    chat_id=winner_record["telegram_id"],
-                    text=announcement,
-                    parse_mode="Markdown",
-                )
-            except Exception as e:
-                print("⚠️ Failed to DM winner:", e)
+            await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
 
-        print(f"✅ Winner announced for {today_str}: {winner_record['username']}")
+        print(f"✅ Announced and stored winner for {today_str}: {winner_record['username']}")
 
     except Exception as ex:
-        print("❌ Error in announce_winner job:", ex)
+        print("Error in announce_winner job:", ex)
+
 
 
 def schedule_winner_announcement(job_queue: JobQueue):
