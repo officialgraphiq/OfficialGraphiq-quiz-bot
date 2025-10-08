@@ -307,6 +307,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/play - Start the quiz (must be registered + have ≥ ₦200 balance)\n"
         "/register - Register yourself\n"
         "/leaderboard - Show leaderboard\n"
+        "/winner - Show today's winner\n"
         "/fund - Add funds to your balance\n"
         "/update - Update your profile details\n"
         "/profile - View your profile\n"
