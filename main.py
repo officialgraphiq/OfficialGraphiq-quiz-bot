@@ -184,145 +184,189 @@ def schedule_daily_reset(job_queue: JobQueue):
 # ---------------------------
 # Winner announcement feature (NEW)
 # async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     """
-#     Handles /winner command:
-#     - Before 9:10 PM → tells users when the winner will be announced.
-#     - Between 9:10 PM and 11:59 PM → shows the winner of the day.
-#     - After midnight (before next winner) → shows no winner yet.
-#     """
 #     now = datetime.now()
-#     today_str = now.strftime("%Y-%m-%d")
-#     # announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
 #     announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
 
-# # Show winner until 6AM the next day
+#     # Determine which day's winner to show
 #     if now.hour < 6:
-#     # If it's between midnight and 6AM, still refer to *yesterday's* winner
-#      today_str = (now - timedelta(days=1)).strftime("%Y-%m-%d")
+#         # Between midnight and 6AM → still show yesterday's winner
+#         today_str = (now - timedelta(days=1)).strftime("%Y-%m-%d")
 #     else:
-#      today_str = now.strftime("%Y-%m-%d")
+#         today_str = now.strftime("%Y-%m-%d")
 
-#     # reset_time = now.replace(hour=5, minute=0, second=0, microsecond=0) + timedelta(days=1)
-
-#     # Before announcement time (9:10 PM)
-#     if now < announce_time:
+#     # Before 9:10PM → not announced yet
+#     if now < announce_time and now.hour >= 6:
 #         await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
 #         return
 
-#     # Between 9:10 PM and midnight — show today's winner if available
-#     if announce_time <= now < reset_time:
-#         winner = winners_col.find_one({"date": today_str})
-#         if winner:
-#             msg = (
-#                 f"🏆 *Winner for {today_str}* 🏆\n\n"
-#                 f"🥇 Username: {winner['username']}\n"
-#                 f"🔢 Score: {winner['score']:.1f}\n\n"
-#                 f"Announced at: {winner['announced_at']}"
-#             )
-#             await update.message.reply_text(msg, parse_mode="Markdown")
+#     # Retrieve winner for today (or yesterday if before 6AM)
+#     winner = winners_col.find_one({"date": today_str})
+
+#     if winner:
+#         msg = (
+#             f"🏆 *Winner for {today_str}* 🏆\n\n"
+#             f"🥇 Username: {winner['username']}\n"
+#             f"🔢 Score: {winner['score']:.1f}\n\n"
+#             f"Announced at: {winner['announced_at']}"
+#         )
+#         await update.message.reply_text(msg, parse_mode="Markdown")
+#     else:
+#         await update.message.reply_text(
+#             "⚠️ Winner for today hasn't been announced yet. Please check back shortly after 9:10 PM."
+#         )
+
+
+# async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
+#     """
+#     Job scheduled to run daily at 21:10.
+#     Picks top scorer, stores in winners_col, announces to ANNOUNCE_CHAT_ID (if set) or DMs the winner.
+#     """
+#     try:
+#         now = datetime.now()  # <-- Add this line
+#         today_str = now.strftime("%Y-%m-%d")
+#         announce_time = now.strftime("%Y-%m-%d %H:%M:%S")
+
+#         # Get top user by score
+#         top_user = users_col.find_one({}, sort=[("score", -1)])
+
+#         if not top_user or top_user.get("score", 0) <= 0:
+#             message = f"🏆 Winner announcement for {today_str}:\nNo winner today (no players or scores)."
+#             if ANNOUNCE_CHAT_ID:
+#                 try:
+#                     await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=message)
+#                 except Exception as e:
+#                     print("Failed to send no-winner announcement:", e)
+#             else:
+#                 print(message)
+#             return
+
+#         # ✅ Build winner record correctly
+#         winner_record = {
+#             "date": today_str,
+#             "username": top_user.get("username", "Anonymous"),
+#             "telegram_id": top_user.get("telegram_id"),
+#             "score": float(top_user.get("score", 0)),
+#             "announced_at": announce_time
+#         }
+
+#         # ✅ Insert winner into MongoDB
+#         winners_col.insert_one(winner_record)
+
+#         # ✅ Prepare and send announcement
+#         announcement = (
+#             f"🏆 *Daily Winner — {today_str}* 🏆\n\n"
+#             f"🥇 Username: {winner_record['username']}\n"
+#             f"🔢 Score: {winner_record['score']:.1f}\n\n"
+#             f"Congratulations! 🎉"
+#         )
+
+#         if ANNOUNCE_CHAT_ID:
+#             try:
+#                 await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=announcement, parse_mode="Markdown")
+#             except Exception as e:
+#                 print("Failed to send to announce chat:", e)
+#                 # Fallback: DM the winner
+#                 await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
 #         else:
-#             await update.message.reply_text(
-#                 "⚠️ Winner for today hasn't been announced yet. Please check back shortly after 9:10 PM."
-#             )
-#         return
+#             await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
 
-#     # After midnight (scores reset)
-#     await update.message.reply_text(
-#         "🕛 The leaderboard has been reset for a new day.\nToday's winner will be announced by 9:10 PM."
-#     )
+#         print(f"✅ Announced and stored winner for {today_str}: {winner_record['username']}")
 
+#     except Exception as ex:
+#         print("Error in announce_winner job:", ex)
+
+
+
+from datetime import datetime
 
 async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     now = datetime.now()
     announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
+    midnight = now.replace(hour=23, minute=59, second=59, microsecond=0)
 
-    # Determine which day's winner to show
-    if now.hour < 6:
-        # Between midnight and 6AM → still show yesterday's winner
-        today_str = (now - timedelta(days=1)).strftime("%Y-%m-%d")
-    else:
-        today_str = now.strftime("%Y-%m-%d")
+    # Determine today's and current month's info
+    today_str = now.strftime("%Y-%m-%d")
+    month_collection_name = f"daily_winners_{now.strftime('%Y_%m')}"
+    winners_col = db[month_collection_name]  # dynamically use the correct monthly collection
 
-    # Before 9:10PM → not announced yet
-    if now < announce_time and now.hour >= 6:
+    # If before 9:10PM → too early
+    if now < announce_time:
         await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
         return
 
-    # Retrieve winner for today (or yesterday if before 6AM)
+    # Between 9:10PM and 11:59PM → allow winner view or creation
     winner = winners_col.find_one({"date": today_str})
 
-    if winner:
-        msg = (
-            f"🏆 *Winner for {today_str}* 🏆\n\n"
-            f"🥇 Username: {winner['username']}\n"
-            f"🔢 Score: {winner['score']:.1f}\n\n"
-            f"Announced at: {winner['announced_at']}"
-        )
-        await update.message.reply_text(msg, parse_mode="Markdown")
-    else:
-        await update.message.reply_text(
-            "⚠️ Winner for today hasn't been announced yet. Please check back shortly after 9:10 PM."
-        )
-
-
-async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
-    """
-    Job scheduled to run daily at 21:10.
-    Picks top scorer, stores in winners_col, announces to ANNOUNCE_CHAT_ID (if set) or DMs the winner.
-    """
-    try:
-        now = datetime.now()  # <-- Add this line
-        today_str = now.strftime("%Y-%m-%d")
-        announce_time = now.strftime("%Y-%m-%d %H:%M:%S")
-
-        # Get top user by score
+    # If no winner stored yet → find top scorer
+    if not winner:
         top_user = users_col.find_one({}, sort=[("score", -1)])
 
         if not top_user or top_user.get("score", 0) <= 0:
-            message = f"🏆 Winner announcement for {today_str}:\nNo winner today (no players or scores)."
-            if ANNOUNCE_CHAT_ID:
-                try:
-                    await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=message)
-                except Exception as e:
-                    print("Failed to send no-winner announcement:", e)
-            else:
-                print(message)
+            await update.message.reply_text("⚠️ No winner today (no players or no scores).")
             return
 
-        # ✅ Build winner record correctly
+        announce_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
         winner_record = {
             "date": today_str,
             "username": top_user.get("username", "Anonymous"),
             "telegram_id": top_user.get("telegram_id"),
             "score": float(top_user.get("score", 0)),
-            "announced_at": announce_time
+            "announced_at": announce_time_str
         }
 
-        # ✅ Insert winner into MongoDB
+        # Save in monthly collection
         winners_col.insert_one(winner_record)
+        winner = winner_record
 
-        # ✅ Prepare and send announcement
-        announcement = (
-            f"🏆 *Daily Winner — {today_str}* 🏆\n\n"
-            f"🥇 Username: {winner_record['username']}\n"
-            f"🔢 Score: {winner_record['score']:.1f}\n\n"
-            f"Congratulations! 🎉"
-        )
+        print(f"✅ Stored daily winner for {today_str} in {month_collection_name}: {winner_record['username']}")
 
-        if ANNOUNCE_CHAT_ID:
-            try:
-                await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=announcement, parse_mode="Markdown")
-            except Exception as e:
-                print("Failed to send to announce chat:", e)
-                # Fallback: DM the winner
-                await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
-        else:
-            await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
+    # Display winner
+    msg = (
+        f"🏆 *Winner for {today_str}* 🏆\n\n"
+        f"🥇 Username: {winner['username']}\n"
+        f"🔢 Score: {winner['score']:.1f}\n\n"
+        f"Announced at: {winner['announced_at']}"
+    )
+    await update.message.reply_text(msg, parse_mode="Markdown")
 
-        print(f"✅ Announced and stored winner for {today_str}: {winner_record['username']}")
+    # Optional note if it's almost midnight
+    if now > midnight:
+        await update.message.reply_text("⚠️ A new leaderboard will start soon, so today’s winner data will reset.")
 
-    except Exception as ex:
-        print("Error in announce_winner job:", ex)
+async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
+    """
+    Automatically announce and store the daily winner at 9:10 PM.
+    """
+    now = datetime.now()
+    today_str = now.strftime("%Y-%m-%d")
+    month_collection_name = f"daily_winners_{now.strftime('%Y_%m')}"
+    winners_col = db[month_collection_name]
+
+    # Check if a winner already exists for today
+    existing_winner = winners_col.find_one({"date": today_str})
+    if existing_winner:
+        print(f"⚠️ Winner for {today_str} already stored: {existing_winner['username']}")
+        return
+
+    # Find the top user from users_col
+    top_user = users_col.find_one({}, sort=[("score", -1)])
+
+    if not top_user or top_user.get("score", 0) <= 0:
+        print(f"⚠️ No valid winner for {today_str} (no players or scores).")
+        return
+
+    # Store winner
+    announce_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
+    winner_record = {
+        "date": today_str,
+        "username": top_user.get("username", "Anonymous"),
+        "telegram_id": top_user.get("telegram_id"),
+        "score": float(top_user.get("score", 0)),
+        "announced_at": announce_time_str
+    }
+
+    winners_col.insert_one(winner_record)
+    print(f"✅ Automatically stored winner for {today_str}: {winner_record['username']}")
 
 
 
