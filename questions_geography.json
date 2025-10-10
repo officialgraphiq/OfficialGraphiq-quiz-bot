@@ -1,502 +1,5002 @@
 [
-    {
-        "question": "What is the capital of Nigeria?",
+   {
+        "question": "Which of these flags belongs to Australia?",
         "options": [
-            "Lagos",
-            "Abuja",
-            "Kano",
-            "Port Harcourt"
+            "🇮🇳",
+            "🇦🇺",
+            "🇩🇪",
+            "🇳🇬"
         ],
-        "answer": "Abuja"
+        "answer": "🇦🇺"
     },
     {
-        "question": "Which is the largest continent?",
+        "question": "On which continent is South Africa located?",
         "options": [
+            "South America",
+            "Oceania",
             "Africa",
-            "Asia",
-            "Europe",
-            "Antarctica"
+            "North America"
         ],
-        "answer": "Asia"
+        "answer": "Africa"
     },
     {
-        "question": "Which river is the longest in the world?",
+        "question": "What is the official currency of Australia?",
         "options": [
-            "Amazon",
-            "Nile",
-            "Yangtze",
-            "Mississippi"
+            "Australian Dollar",
+            "Kenyan Shilling",
+            "Egyptian Pound",
+            "Euro"
         ],
-        "answer": "Nile"
+        "answer": "Australian Dollar"
     },
     {
-        "question": "What is the capital of France?",
+        "question": "What is the official currency of Mexico?",
         "options": [
-            "Berlin",
-            "Madrid",
-            "Paris",
-            "Rome"
+            "Euro",
+            "Peso",
+            "Real",
+            "Peso"
         ],
-        "answer": "Paris"
+        "answer": "Peso"
     },
     {
-        "question": "Which ocean is the largest?",
+        "question": "What is the official currency of Brazil?",
         "options": [
-            "Atlantic",
-            "Indian",
-            "Pacific",
-            "Arctic"
+            "Won",
+            "Euro",
+            "Australian Dollar",
+            "Real"
         ],
-        "answer": "Pacific"
+        "answer": "Real"
     },
     {
-        "question": "In which country is Mount Kilimanjaro located?",
+        "question": "What is the official currency of South Korea?",
         "options": [
-            "Kenya",
-            "Tanzania",
-            "Uganda",
-            "Ethiopia"
+            "Rand",
+            "Yuan",
+            "Won",
+            "Real"
         ],
-        "answer": "Tanzania"
+        "answer": "Won"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Mexico",
+            "Australia",
+            "China",
+            "Brazil"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇨🇦",
+            "🇯🇵",
+            "🇦🇺",
+            "🇧🇷"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Mexico City",
+            "Ottawa",
+            "New Delhi",
+            "Abuja"
+        ],
+        "answer": "Mexico City"
     },
     {
         "question": "What is the capital of Japan?",
         "options": [
-            "Kyoto",
-            "Osaka",
             "Tokyo",
-            "Hiroshima"
+            "Abuja",
+            "Tokyo",
+            "Rome"
         ],
         "answer": "Tokyo"
     },
     {
-        "question": "Which desert is the largest hot desert?",
+        "question": "What is the official currency of Nigeria?",
         "options": [
-            "Gobi",
-            "Sahara",
-            "Kalahari",
-            "Mojave"
+            "Kenyan Shilling",
+            "Naira",
+            "Canadian Dollar",
+            "Won"
         ],
-        "answer": "Sahara"
+        "answer": "Naira"
     },
     {
-        "question": "Which country has the largest population?",
+        "question": "In which country can you find Christ the Redeemer?",
         "options": [
-            "India",
-            "USA",
-            "China",
-            "Russia"
+            "Germany",
+            "Mexico",
+            "Brazil",
+            "Italy"
         ],
-        "answer": "China"
+        "answer": "Brazil"
     },
     {
-        "question": "Which sea is between Europe and Africa?",
+        "question": "In which country can you find Christ the Redeemer?",
         "options": [
-            "Caribbean Sea",
-            "Mediterranean Sea",
-            "Red Sea",
-            "Baltic Sea"
+            "Brazil",
+            "South Africa",
+            "Nigeria",
+            "Australia"
         ],
-        "answer": "Mediterranean Sea"
+        "answer": "Brazil"
     },
     {
-        "question": "What is the capital of Egypt?",
+        "question": "What is the official currency of Egypt?",
         "options": [
-            "Alexandria",
-            "Cairo",
-            "Giza",
-            "Luxor"
+            "Canadian Dollar",
+            "Egyptian Pound",
+            "Naira",
+            "Euro"
         ],
-        "answer": "Cairo"
+        "answer": "Egyptian Pound"
     },
     {
-        "question": "Which country is known as the Land of the Rising Sun?",
+        "question": "What is the capital of Germany?",
         "options": [
-            "China",
-            "Japan",
-            "Thailand",
-            "India"
+            "Paris",
+            "Mexico City",
+            "Berlin",
+            "Pretoria"
         ],
-        "answer": "Japan"
+        "answer": "Berlin"
     },
     {
-        "question": "Which US city is known as the Big Apple?",
+        "question": "On which continent is Nigeria located?",
         "options": [
-            "Los Angeles",
-            "New York City",
-            "Chicago",
-            "Miami"
-        ],
-        "answer": "New York City"
-    },
-    {
-        "question": "What is the largest island in the world?",
-        "options": [
-            "Australia",
-            "Greenland",
-            "Madagascar",
-            "Borneo"
-        ],
-        "answer": "Greenland"
-    },
-    {
-        "question": "Which mountain is the highest in the world?",
-        "options": [
-            "K2",
-            "Mount Everest",
-            "Kilimanjaro",
-            "Denali"
-        ],
-        "answer": "Mount Everest"
-    },
-    {
-        "question": "Which strait separates Asia and North America?",
-        "options": [
-            "Bering Strait",
-            "Gibraltar Strait",
-            "Magellan Strait",
-            "Hormuz Strait"
-        ],
-        "answer": "Bering Strait"
-    },
-    {
-        "question": "Which country is famous for the fjords?",
-        "options": [
-            "Iceland",
-            "Norway",
-            "Canada",
-            "Chile"
-        ],
-        "answer": "Norway"
-    },
-    {
-        "question": "Which river flows through Baghdad?",
-        "options": [
-            "Tigris",
-            "Euphrates",
-            "Nile",
-            "Amazon"
-        ],
-        "answer": "Tigris"
-    },
-    {
-        "question": "What is the capital of Canada?",
-        "options": [
-            "Toronto",
-            "Vancouver",
-            "Ottawa",
-            "Montreal"
-        ],
-        "answer": "Ottawa"
-    },
-    {
-        "question": "Which country has the longest coastline?",
-        "options": [
-            "Australia",
-            "Russia",
-            "Canada",
-            "Indonesia"
-        ],
-        "answer": "Canada"
-    },
-    {
-        "question": "Which continent is Australia part of?",
-        "options": [
-            "Oceania",
             "Asia",
+            "South America",
             "Europe",
             "Africa"
         ],
-        "answer": "Oceania"
+        "answer": "Africa"
     },
     {
-        "question": "Which country is home to the Amazon rainforest?",
+        "question": "What is the official currency of Nigeria?",
+        "options": [
+            "Kenyan Shilling",
+            "Won",
+            "Australian Dollar",
+            "Naira"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "On which continent is Canada located?",
+        "options": [
+            "North America",
+            "South America",
+            "Europe",
+            "Oceania"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "What is the official currency of Brazil?",
+        "options": [
+            "Real",
+            "Euro",
+            "Rupee",
+            "Canadian Dollar"
+        ],
+        "answer": "Real"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇯🇵",
+            "🇰🇷",
+            "🇰🇷",
+            "🇳🇬"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
         "options": [
             "Brazil",
-            "Peru",
-            "Colombia",
-            "All of the above"
+            "Canada",
+            "France",
+            "India"
         ],
-        "answer": "All of the above"
+        "answer": "Brazil"
     },
     {
-        "question": "What is the capital of South Africa (one of them)?",
+        "question": "What is the capital of France?",
         "options": [
-            "Cape Town",
-            "Johannesburg",
-            "Durban",
+            "Paris",
+            "Canberra",
+            "Abuja",
+            "Paris"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "options": [
+            "Seoul",
+            "Paris",
+            "Rome",
             "Pretoria"
         ],
         "answer": "Pretoria"
     },
     {
-        "question": "Which gulf lies between Saudi Arabia and Iran?",
+        "question": "In which country can you find the Pyramids of Giza?",
         "options": [
-            "Gulf of Oman",
-            "Persian Gulf",
-            "Gulf of Aden",
-            "Gulf of Mexico"
+            "Egypt",
+            "South Korea",
+            "Egypt",
+            "France"
         ],
-        "answer": "Persian Gulf"
+        "answer": "Egypt"
     },
     {
-        "question": "Which city is built on 118 small islands and known for canals?",
+        "question": "Which of these flags belongs to Egypt?",
         "options": [
-            "Venice",
-            "Amsterdam",
-            "Bangkok",
-            "Stockholm"
+            "🇩🇪",
+            "🇪🇬",
+            "🇿🇦",
+            "🇨🇦"
         ],
-        "answer": "Venice"
+        "answer": "🇪🇬"
     },
     {
-        "question": "Which is the smallest country by area?",
+        "question": "Which of these flags belongs to Brazil?",
         "options": [
-            "Monaco",
-            "Vatican City",
-            "San Marino",
-            "Liechtenstein"
+            "🇯🇵",
+            "🇮🇳",
+            "🇧🇷",
+            "🇿🇦"
         ],
-        "answer": "Vatican City"
+        "answer": "🇧🇷"
     },
     {
-        "question": "Which country is famous for the Great Barrier Reef?",
+        "question": "In which country can you find the Eiffel Tower?",
         "options": [
-            "USA",
-            "Australia",
+            "South Korea",
             "India",
-            "Brazil"
+            "France",
+            "Egypt"
         ],
-        "answer": "Australia"
+        "answer": "France"
     },
     {
-        "question": "Which US state is the Grand Canyon located in?",
+        "question": "What is the capital of South Korea?",
         "options": [
-            "Utah",
-            "Arizona",
-            "Nevada",
-            "Colorado"
+            "Seoul",
+            "Beijing",
+            "Canberra",
+            "Paris"
         ],
-        "answer": "Arizona"
+        "answer": "Seoul"
     },
     {
-        "question": "Which mountain range runs along the west of South America?",
+        "question": "What is the official currency of Japan?",
         "options": [
-            "Andes",
-            "Rockies",
-            "Alps",
-            "Himalayas"
+            "Yen",
+            "Real",
+            "Rupee",
+            "Euro"
         ],
-        "answer": "Andes"
+        "answer": "Yen"
     },
     {
-        "question": "Which is the coldest continent?",
-        "options": [
-            "Europe",
-            "Asia",
-            "Antarctica",
-            "North America"
-        ],
-        "answer": "Antarctica"
-    },
-    {
-        "question": "Which city hosted the 2016 Summer Olympics?",
+        "question": "In which country can you find Christ the Redeemer?",
         "options": [
             "China",
+            "France",
             "Brazil",
-            "Japan",
-            "USA"
+            "South Korea"
         ],
         "answer": "Brazil"
     },
     {
-        "question": "Which country has the city of Lagos?",
+        "question": "On which continent is South Africa located?",
         "options": [
-            "Ghana",
+            "Oceania",
+            "South America",
+            "Africa",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which of these flags belongs to Egypt?",
+        "options": [
+            "🇨🇳",
+            "🇨🇦",
+            "🇪🇬",
+            "🇿🇦"
+        ],
+        "answer": "🇪🇬"
+    },
+    {
+        "question": "Which of these flags belongs to India?",
+        "options": [
+            "🇯🇵",
+            "🇮🇹",
+            "🇮🇳",
+            "🇮🇳"
+        ],
+        "answer": "🇮🇳"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Canada",
+            "Brazil",
+            "Germany",
+            "China"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇫🇷",
+            "🇨🇦",
+            "🇩🇪",
+            "🇰🇪"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
             "Nigeria",
-            "Cameroon",
-            "Benin"
-        ],
-        "answer": "Nigeria"
-    },
-    {
-        "question": "Which European country has the most volcanoes?",
-        "options": [
-            "Iceland",
             "Italy",
-            "Greece",
-            "Turkey"
+            "South Korea"
         ],
-        "answer": "Italy"
+        "answer": "Japan"
     },
     {
-        "question": "Which country is crossed by the Prime Meridian?",
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Mexico",
+            "Italy",
+            "China",
+            "Nigeria"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "On which continent is Canada located?",
+        "options": [
+            "Asia",
+            "South America",
+            "North America",
+            "Oceania"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Paris",
+            "Tokyo",
+            "Abuja",
+            "Mexico City"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇰🇷",
+            "🇳🇬",
+            "🇩🇪",
+            "🇯🇵"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "New Delhi",
+            "Abuja",
+            "Mexico City",
+            "Seoul"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Mexico",
+            "Canada",
+            "China",
+            "Italy"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Which of these flags belongs to China?",
+        "options": [
+            "🇩🇪",
+            "🇨🇳",
+            "🇦🇺",
+            "🇨🇳"
+        ],
+        "answer": "🇨🇳"
+    },
+    {
+        "question": "On which continent is China located?",
+        "options": [
+            "South America",
+            "Africa",
+            "Asia",
+            "North America"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Egypt",
+            "Germany",
+            "Japan",
+            "South Africa"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Australia",
+            "Egypt",
+            "Canada",
+            "Italy"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Which of these flags belongs to Brazil?",
+        "options": [
+            "🇧🇷",
+            "🇳🇬",
+            "🇧🇷",
+            "🇩🇪"
+        ],
+        "answer": "🇧🇷"
+    },
+    {
+        "question": "Which of these flags belongs to Mexico?",
+        "options": [
+            "🇰🇷",
+            "🇦🇺",
+            "🇯🇵",
+            "🇲🇽"
+        ],
+        "answer": "🇲🇽"
+    },
+    {
+        "question": "Which of these flags belongs to China?",
+        "options": [
+            "🇳🇬",
+            "🇰🇷",
+            "🇨🇳",
+            "🇲🇽"
+        ],
+        "answer": "🇨🇳"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "options": [
+            "Berlin",
+            "Brasilia",
+            "Pretoria",
+            "Nairobi"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "On which continent is Kenya located?",
+        "options": [
+            "Africa",
+            "Oceania",
+            "Asia",
+            "South America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Cairo",
+            "Abuja",
+            "Abuja",
+            "Ottawa"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
         "options": [
             "France",
-            "UK",
-            "Spain",
-            "All of the above"
+            "Brazil",
+            "Canada",
+            "Australia"
         ],
-        "answer": "All of the above"
+        "answer": "France"
     },
     {
-        "question": "Which river flows through London?",
+        "question": "In which country can you find the Great Wall?",
         "options": [
-            "Thames",
-            "Seine",
-            "Danube",
-            "Rhine"
+            "China",
+            "South Korea",
+            "Australia",
+            "South Africa"
         ],
-        "answer": "Thames"
+        "answer": "China"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Brazil",
+            "Italy",
+            "South Africa",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "options": [
+            "Canberra",
+            "Paris",
+            "Ottawa",
+            "Cairo"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "What is the official currency of Italy?",
+        "options": [
+            "Euro",
+            "Naira",
+            "Rupee",
+            "Peso"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": [
+            "Rome",
+            "Nairobi",
+            "Pretoria",
+            "Brasilia"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "China",
+            "India",
+            "Japan",
+            "Egypt"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Euro",
+            "Kenyan Shilling",
+            "Naira",
+            "Won"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "India",
+            "Italy",
+            "Brazil",
+            "Germany"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Cairo",
+            "Brasilia",
+            "Nairobi",
+            "Ottawa"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Australia",
+            "Canada",
+            "Egypt",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Brazil",
+            "India",
+            "France",
+            "Kenya"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Egypt",
+            "Mexico",
+            "Italy",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the official currency of Egypt?",
+        "options": [
+            "Euro",
+            "Rand",
+            "Euro",
+            "Egyptian Pound"
+        ],
+        "answer": "Egyptian Pound"
+    },
+    {
+        "question": "Which of these flags belongs to Egypt?",
+        "options": [
+            "🇧🇷",
+            "🇦🇺",
+            "🇪🇬",
+            "🇪🇬"
+        ],
+        "answer": "🇪🇬"
+    },
+    {
+        "question": "On which continent is Germany located?",
+        "options": [
+            "South America",
+            "North America",
+            "Oceania",
+            "Europe"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Europe",
+            "Africa",
+            "Asia",
+            "Oceania"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Tokyo",
+            "Berlin",
+            "Pretoria",
+            "Brasilia"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "question": "On which continent is Germany located?",
+        "options": [
+            "South America",
+            "Oceania",
+            "Africa",
+            "Europe"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Canberra",
+            "Brasilia",
+            "Pretoria",
+            "Rome"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Paris",
+            "Pretoria",
+            "Cairo",
+            "Nairobi"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Kenya",
+            "Egypt",
+            "Mexico",
+            "Brazil"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the official currency of South Korea?",
+        "options": [
+            "Euro",
+            "Australian Dollar",
+            "Euro",
+            "Won"
+        ],
+        "answer": "Won"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "Oceania",
+            "Africa",
+            "North America",
+            "South America"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Naira",
+            "Australian Dollar",
+            "Yen",
+            "Peso"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "Which of these flags belongs to China?",
+        "options": [
+            "🇦🇺",
+            "🇫🇷",
+            "🇨🇳",
+            "🇨🇳"
+        ],
+        "answer": "🇨🇳"
+    },
+    {
+        "question": "On which continent is South Korea located?",
+        "options": [
+            "Africa",
+            "South America",
+            "Oceania",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇯🇵",
+            "🇰🇪",
+            "🇰🇪",
+            "🇮🇹"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Canada",
+            "China",
+            "Brazil",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "On which continent is India located?",
+        "options": [
+            "Africa",
+            "North America",
+            "Asia",
+            "Oceania"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the official currency of Canada?",
+        "options": [
+            "Canadian Dollar",
+            "Australian Dollar",
+            "Naira",
+            "Canadian Dollar"
+        ],
+        "answer": "Canadian Dollar"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇰🇷",
+            "🇧🇷",
+            "🇳🇬",
+            "🇩🇪"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Beijing",
+            "Ottawa",
+            "Abuja",
+            "Berlin"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "question": "On which continent is France located?",
+        "options": [
+            "Europe",
+            "Oceania",
+            "North America",
+            "South America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the official currency of Germany?",
+        "options": [
+            "Won",
+            "Euro",
+            "Real",
+            "Rupee"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "Oceania",
+            "South America",
+            "Africa",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "South Africa",
+            "Brazil",
+            "Australia",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "On which continent is Kenya located?",
+        "options": [
+            "North America",
+            "Europe",
+            "Africa",
+            "Oceania"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Africa",
+            "Europe",
+            "Asia",
+            "North America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which of these flags belongs to France?",
+        "options": [
+            "🇿🇦",
+            "🇫🇷",
+            "🇧🇷",
+            "🇫🇷"
+        ],
+        "answer": "🇫🇷"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Egypt",
+            "China",
+            "Japan",
+            "Brazil"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the official currency of Egypt?",
+        "options": [
+            "Won",
+            "Egyptian Pound",
+            "Egyptian Pound",
+            "Naira"
+        ],
+        "answer": "Egyptian Pound"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "options": [
+            "Pretoria",
+            "Beijing",
+            "Paris",
+            "Seoul"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Peso",
+            "Peso",
+            "Kenyan Shilling",
+            "Naira"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇯🇵",
+            "🇪🇬",
+            "🇰🇷",
+            "🇰🇪"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Mexico City",
+            "Abuja",
+            "Ottawa",
+            "Seoul"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "South America",
+            "Europe",
+            "Asia",
+            "Africa"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "Tokyo",
+            "Abuja",
+            "New Delhi",
+            "Paris"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇧🇷",
+            "🇨🇳",
+            "🇰🇪",
+            "🇿🇦"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Brazil",
+            "Brazil",
+            "South Africa",
+            "South Korea"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Asia",
+            "North America",
+            "Africa",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "On which continent is France located?",
+        "options": [
+            "North America",
+            "Europe",
+            "Africa",
+            "Asia"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "On which continent is South Korea located?",
+        "options": [
+            "Oceania",
+            "Europe",
+            "Asia",
+            "South America"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Mexico",
+            "India",
+            "Kenya",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the official currency of Japan?",
+        "options": [
+            "Yen",
+            "Yen",
+            "Egyptian Pound",
+            "Australian Dollar"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "North America",
+            "South America",
+            "Europe",
+            "Africa"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "South Africa",
+            "Brazil",
+            "Italy",
+            "Egypt"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Italy",
+            "China",
+            "Nigeria",
+            "South Africa"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "On which continent is Canada located?",
+        "options": [
+            "North America",
+            "Europe",
+            "South America",
+            "Africa"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "Which of these flags belongs to China?",
+        "options": [
+            "🇧🇷",
+            "🇯🇵",
+            "🇮🇹",
+            "🇨🇳"
+        ],
+        "answer": "🇨🇳"
+    },
+    {
+        "question": "What is the official currency of Australia?",
+        "options": [
+            "Euro",
+            "Australian Dollar",
+            "Rupee",
+            "Australian Dollar"
+        ],
+        "answer": "Australian Dollar"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "France",
+            "Japan",
+            "South Korea",
+            "China"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Mexico",
+            "South Korea",
+            "Brazil",
+            "Brazil"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Berlin",
+            "Mexico City",
+            "Seoul",
+            "Brasilia"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "Which of these flags belongs to Mexico?",
+        "options": [
+            "🇲🇽",
+            "🇨🇦",
+            "🇮🇳",
+            "🇫🇷"
+        ],
+        "answer": "🇲🇽"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Naira",
+            "Won",
+            "Peso",
+            "Peso"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Italy",
+            "France",
+            "Japan",
+            "China"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "What is the official currency of Australia?",
+        "options": [
+            "Euro",
+            "Euro",
+            "Australian Dollar",
+            "Yen"
+        ],
+        "answer": "Australian Dollar"
+    },
+    {
+        "question": "Which of these flags belongs to Nigeria?",
+        "options": [
+            "🇿🇦",
+            "🇲🇽",
+            "🇳🇬",
+            "🇰🇷"
+        ],
+        "answer": "🇳🇬"
+    },
+    {
+        "question": "On which continent is Canada located?",
+        "options": [
+            "Oceania",
+            "Africa",
+            "Europe",
+            "North America"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "What is the capital of China?",
+        "options": [
+            "Rome",
+            "Brasilia",
+            "Pretoria",
+            "Beijing"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "Nairobi",
+            "Canberra",
+            "Cairo",
+            "New Delhi"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "options": [
+            "Paris",
+            "Berlin",
+            "Pretoria",
+            "Seoul"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "New Delhi",
+            "Cairo",
+            "Beijing",
+            "Canberra"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Brazil",
+            "Kenya",
+            "Germany",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇪🇬",
+            "🇮🇳",
+            "🇰🇷",
+            "🇨🇦"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "On which continent is Mexico located?",
+        "options": [
+            "Europe",
+            "Asia",
+            "South America",
+            "North America"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Japan",
+            "Egypt",
+            "China",
+            "Germany"
+        ],
+        "answer": "Egypt"
     },
     {
         "question": "What is the capital of Australia?",
         "options": [
-            "Sydney",
-            "Melbourne",
+            "Pretoria",
             "Canberra",
-            "Perth"
+            "Paris",
+            "Canberra"
         ],
         "answer": "Canberra"
     },
     {
-        "question": "Which country is landlocked?",
+        "question": "On which continent is Canada located?",
         "options": [
-            "Bolivia",
-            "Chile",
-            "Ecuador",
-            "Peru"
+            "South America",
+            "North America",
+            "Africa",
+            "Oceania"
         ],
-        "answer": "Bolivia"
+        "answer": "North America"
     },
     {
-        "question": "Which African country was never colonized?",
+        "question": "What is the official currency of Germany?",
         "options": [
+            "Naira",
+            "Egyptian Pound",
+            "Euro",
+            "Rupee"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": [
+            "Tokyo",
+            "Nairobi",
+            "Berlin",
+            "Paris"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "Which of these flags belongs to South Africa?",
+        "options": [
+            "🇿🇦",
+            "🇳🇬",
+            "🇿🇦",
+            "🇲🇽"
+        ],
+        "answer": "🇿🇦"
+    },
+    {
+        "question": "What is the official currency of Germany?",
+        "options": [
+            "Won",
+            "Euro",
+            "Euro",
+            "Yen"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the official currency of Kenya?",
+        "options": [
+            "Euro",
+            "Rand",
+            "Kenyan Shilling",
+            "Kenyan Shilling"
+        ],
+        "answer": "Kenyan Shilling"
+    },
+    {
+        "question": "Which of these flags belongs to Australia?",
+        "options": [
+            "🇦🇺",
+            "🇲🇽",
+            "🇰🇷",
+            "🇰🇪"
+        ],
+        "answer": "🇦🇺"
+    },
+    {
+        "question": "What is the official currency of South Korea?",
+        "options": [
+            "Euro",
+            "Won",
+            "Won",
+            "Naira"
+        ],
+        "answer": "Won"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
+            "Italy",
+            "South Korea",
+            "Australia"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Germany",
+            "Kenya",
+            "Brazil",
+            "China"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Abuja",
+            "Pretoria",
+            "Cairo",
+            "Abuja"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "What is the official currency of China?",
+        "options": [
+            "Peso",
+            "Yuan",
+            "Egyptian Pound",
+            "Euro"
+        ],
+        "answer": "Yuan"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Kenya",
+            "France",
+            "South Korea",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Peso",
+            "Egyptian Pound",
+            "Yuan",
+            "Euro"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "What is the capital of China?",
+        "options": [
+            "Ottawa",
+            "Berlin",
+            "Beijing",
+            "Rome"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "Europe",
+            "Africa",
+            "South America",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Australia",
+            "Brazil",
+            "South Korea",
+            "China"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Cairo",
+            "New Delhi",
+            "Abuja",
+            "Berlin"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Rand",
+            "Peso",
+            "Naira",
+            "Peso"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "What is the official currency of South Korea?",
+        "options": [
+            "Euro",
+            "Won",
+            "Won",
+            "Rand"
+        ],
+        "answer": "Won"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Africa",
+            "Oceania",
+            "Europe",
+            "North America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Kenya",
+            "Brazil",
+            "Germany",
+            "Canada"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "On which continent is Italy located?",
+        "options": [
+            "North America",
+            "Europe",
+            "Asia",
+            "South America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Rome",
+            "Mexico City",
+            "Canberra",
+            "Cairo"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Rome",
+            "Paris",
+            "New Delhi",
+            "Tokyo"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "Africa",
+            "South America",
+            "Oceania",
+            "North America"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "On which continent is Germany located?",
+        "options": [
+            "Asia",
+            "South America",
+            "Europe",
+            "North America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the official currency of Nigeria?",
+        "options": [
+            "Won",
+            "Naira",
+            "Euro",
+            "Naira"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "China",
+            "India",
             "Nigeria",
-            "Ethiopia",
-            "Ghana",
-            "Kenya"
+            "Canada"
         ],
-        "answer": "Ethiopia"
+        "answer": "China"
     },
     {
-        "question": "Which ocean touches the east coast of Africa?",
+        "question": "Which of these flags belongs to Canada?",
         "options": [
-            "Atlantic",
-            "Indian",
-            "Pacific",
-            "Arctic"
+            "🇦🇺",
+            "🇰🇷",
+            "🇰🇪",
+            "🇨🇦"
         ],
-        "answer": "Indian"
+        "answer": "🇨🇦"
     },
     {
-        "question": "Which desert is found in northern China and southern Mongolia?",
+        "question": "What is the capital of Japan?",
         "options": [
-            "Sahara",
-            "Gobi",
-            "Kalahari",
-            "Thar"
+            "Tokyo",
+            "Abuja",
+            "Beijing",
+            "Berlin"
         ],
-        "answer": "Gobi"
+        "answer": "Tokyo"
     },
     {
-        "question": "Which city is the capital of Italy?",
+        "question": "Which of these flags belongs to South Korea?",
         "options": [
-            "Milan",
-            "Venice",
-            "Florence",
+            "🇮🇹",
+            "🇨🇳",
+            "🇰🇷",
+            "🇰🇪"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "What is the official currency of South Africa?",
+        "options": [
+            "Rupee",
+            "Rand",
+            "Peso",
+            "Real"
+        ],
+        "answer": "Rand"
+    },
+    {
+        "question": "What is the official currency of India?",
+        "options": [
+            "Kenyan Shilling",
+            "Australian Dollar",
+            "Rand",
+            "Rupee"
+        ],
+        "answer": "Rupee"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "Canberra",
+            "New Delhi",
+            "Berlin",
+            "Tokyo"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "North America",
+            "Europe",
+            "Asia",
+            "Oceania"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "Which of these flags belongs to Egypt?",
+        "options": [
+            "🇧🇷",
+            "🇯🇵",
+            "🇪🇬",
+            "🇿🇦"
+        ],
+        "answer": "🇪🇬"
+    },
+    {
+        "question": "On which continent is Kenya located?",
+        "options": [
+            "Africa",
+            "South America",
+            "North America",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇿🇦",
+            "🇫🇷",
+            "🇨🇦",
+            "🇨🇳"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Mexico City",
+            "Brasilia",
+            "New Delhi",
+            "Pretoria"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "What is the official currency of Japan?",
+        "options": [
+            "Rupee",
+            "Canadian Dollar",
+            "Naira",
+            "Yen"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Euro",
+            "Rand",
+            "Real",
+            "Canadian Dollar"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Beijing",
+            "Seoul",
+            "Pretoria",
+            "Brasilia"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇰🇪",
+            "🇪🇬",
+            "🇩🇪",
+            "🇨🇳"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "China",
+            "Kenya",
+            "Brazil",
+            "Germany"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the official currency of Italy?",
+        "options": [
+            "Rupee",
+            "Australian Dollar",
+            "Euro",
+            "Kenyan Shilling"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇦🇺",
+            "🇰🇪",
+            "🇫🇷",
+            "🇧🇷"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "South America",
+            "Africa",
+            "Oceania",
+            "North America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇫🇷",
+            "🇳🇬",
+            "🇰🇪",
+            "🇩🇪"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "On which continent is Nigeria located?",
+        "options": [
+            "North America",
+            "Europe",
+            "Africa",
+            "Asia"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the official currency of Italy?",
+        "options": [
+            "Rupee",
+            "Euro",
+            "Euro",
+            "Peso"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "Which of these flags belongs to India?",
+        "options": [
+            "🇯🇵",
+            "🇳🇬",
+            "🇮🇳",
+            "🇦🇺"
+        ],
+        "answer": "🇮🇳"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": [
+            "Nairobi",
+            "Pretoria",
+            "Ottawa",
+            "Beijing"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Brasilia",
+            "Brasilia",
+            "Beijing",
+            "Canberra"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "On which continent is Nigeria located?",
+        "options": [
+            "Europe",
+            "Asia",
+            "Africa",
+            "Oceania"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "options": [
+            "Canberra",
+            "Paris",
+            "Berlin",
             "Rome"
         ],
         "answer": "Rome"
     },
     {
-        "question": "Which country has the most natural lakes?",
+        "question": "What is the capital of Japan?",
         "options": [
-            "Canada",
-            "USA",
-            "Finland",
-            "Russia"
+            "Brasilia",
+            "Abuja",
+            "Tokyo",
+            "Beijing"
         ],
-        "answer": "Canada"
+        "answer": "Tokyo"
     },
     {
-        "question": "Which strait separates Spain and Morocco?",
+        "question": "What is the official currency of France?",
         "options": [
-            "Bosporus",
-            "Gibraltar Strait",
-            "Oresund",
-            "Dardanelles"
+            "Euro",
+            "Rupee",
+            "Euro",
+            "Euro"
         ],
-        "answer": "Gibraltar Strait"
+        "answer": "Euro"
     },
     {
-        "question": "Which country contains the region of Transylvania?",
+        "question": "Which of these flags belongs to Japan?",
         "options": [
-            "Hungary",
-            "Romania",
-            "Bulgaria",
-            "Ukraine"
+            "🇯🇵",
+            "🇰🇷",
+            "🇧🇷",
+            "🇯🇵"
         ],
-        "answer": "Romania"
+        "answer": "🇯🇵"
     },
     {
-        "question": "Which country is the largest by area in Africa?",
+        "question": "What is the official currency of Brazil?",
         "options": [
-            "Algeria",
-            "Sudan",
-            "DR Congo",
-            "Libya"
+            "Egyptian Pound",
+            "Rand",
+            "Rupee",
+            "Real"
         ],
-        "answer": "Algeria"
+        "answer": "Real"
     },
     {
-        "question": "Which is the deepest ocean trench?",
+        "question": "What is the capital of Canada?",
         "options": [
-            "Mariana Trench",
-            "Tonga Trench",
-            "Kermadec Trench",
-            "Puerto Rico Trench"
-        ],
-        "answer": "Mariana Trench"
-    },
-    {
-        "question": "Which US state is known as the \"Sunshine State\"?",
-        "options": [
-            "California",
-            "Florida",
-            "Texas",
-            "Arizona"
-        ],
-        "answer": "Florida"
-    },
-    {
-        "question": "What is the capital of Germany?",
-        "options": [
-            "Munich",
-            "Hamburg",
+            "Brasilia",
+            "Ottawa",
             "Berlin",
-            "Frankfurt"
+            "Canberra"
         ],
-        "answer": "Berlin"
+        "answer": "Ottawa"
     },
     {
-        "question": "Which ocean is the smallest by surface area?",
+        "question": "In which country can you find Christ the Redeemer?",
         "options": [
-            "Pacific",
-            "Atlantic",
-            "Indian",
-            "Arctic"
+            "Nigeria",
+            "Brazil",
+            "South Africa",
+            "Brazil"
         ],
-        "answer": "Arctic"
+        "answer": "Brazil"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Germany",
+            "India",
+            "Australia",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Real",
+            "Kenyan Shilling",
+            "Peso",
+            "Canadian Dollar"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "North America",
+            "Africa",
+            "Asia",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Canberra",
+            "Abuja",
+            "Ottawa",
+            "Berlin"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "On which continent is Nigeria located?",
+        "options": [
+            "North America",
+            "Asia",
+            "Africa",
+            "South America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "On which continent is India located?",
+        "options": [
+            "Asia",
+            "Oceania",
+            "South America",
+            "Africa"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "options": [
+            "Rome",
+            "Cairo",
+            "New Delhi",
+            "Rome"
+        ],
+        "answer": "Rome"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Canberra",
+            "Beijing",
+            "Abuja",
+            "Rome"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "Which of these flags belongs to Brazil?",
+        "options": [
+            "🇩🇪",
+            "🇨🇳",
+            "🇳🇬",
+            "🇧🇷"
+        ],
+        "answer": "🇧🇷"
+    },
+    {
+        "question": "On which continent is Kenya located?",
+        "options": [
+            "Africa",
+            "Oceania",
+            "South America",
+            "Asia"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "South Africa",
+            "Germany",
+            "Japan",
+            "Canada"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "On which continent is Germany located?",
+        "options": [
+            "South America",
+            "Africa",
+            "Oceania",
+            "Europe"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "North America",
+            "Asia",
+            "South America",
+            "Oceania"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Italy",
+            "South Korea",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Beijing",
+            "Tokyo",
+            "Paris",
+            "Cairo"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇯🇵",
+            "🇲🇽",
+            "🇰🇪",
+            "🇮🇹"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "What is the official currency of South Korea?",
+        "options": [
+            "Peso",
+            "Rand",
+            "Won",
+            "Real"
+        ],
+        "answer": "Won"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "Europe",
+            "South America",
+            "North America",
+            "Oceania"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "North America",
+            "Oceania",
+            "Africa",
+            "South America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the official currency of Canada?",
+        "options": [
+            "Egyptian Pound",
+            "Euro",
+            "Rupee",
+            "Canadian Dollar"
+        ],
+        "answer": "Canadian Dollar"
+    },
+    {
+        "question": "Which of these flags belongs to Italy?",
+        "options": [
+            "🇧🇷",
+            "🇮🇹",
+            "🇳🇬",
+            "🇰🇷"
+        ],
+        "answer": "🇮🇹"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇩🇪",
+            "🇰🇷",
+            "🇯🇵",
+            "🇰🇪"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Euro",
+            "Peso",
+            "Peso",
+            "Yen"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "South Africa",
+            "Japan",
+            "India",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Tokyo",
+            "Mexico City",
+            "Abuja",
+            "Paris"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "options": [
+            "Pretoria",
+            "Berlin",
+            "Canberra",
+            "Cairo"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Canadian Dollar",
+            "Egyptian Pound",
+            "Euro",
+            "Peso"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Australia",
+            "France",
+            "Germany",
+            "Egypt"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "options": [
+            "Berlin",
+            "Rome",
+            "Ottawa",
+            "Paris"
+        ],
+        "answer": "Rome"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Australia",
+            "Egypt",
+            "South Africa",
+            "Nigeria"
+        ],
+        "answer": "Egypt"
     },
     {
         "question": "What is the capital of Brazil?",
         "options": [
-            "Rio de Janeiro",
-            "São Paulo",
             "Brasilia",
-            "Salvador"
+            "New Delhi",
+            "Pretoria",
+            "Paris"
         ],
         "answer": "Brasilia"
+    },
+    {
+        "question": "What is the official currency of Egypt?",
+        "options": [
+            "Real",
+            "Egyptian Pound",
+            "Egyptian Pound",
+            "Australian Dollar"
+        ],
+        "answer": "Egyptian Pound"
+    },
+    {
+        "question": "What is the capital of China?",
+        "options": [
+            "Ottawa",
+            "Berlin",
+            "Beijing",
+            "Rome"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "What is the capital of South Korea?",
+        "options": [
+            "New Delhi",
+            "Mexico City",
+            "Canberra",
+            "Seoul"
+        ],
+        "answer": "Seoul"
+    },
+    {
+        "question": "On which continent is India located?",
+        "options": [
+            "Asia",
+            "Oceania",
+            "Africa",
+            "South America"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Egypt",
+            "France",
+            "China",
+            "South Africa"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "On which continent is France located?",
+        "options": [
+            "South America",
+            "Africa",
+            "Europe",
+            "North America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the official currency of Nigeria?",
+        "options": [
+            "Euro",
+            "Canadian Dollar",
+            "Naira",
+            "Naira"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "On which continent is France located?",
+        "options": [
+            "Africa",
+            "South America",
+            "North America",
+            "Europe"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "Which of these flags belongs to Nigeria?",
+        "options": [
+            "🇫🇷",
+            "🇪🇬",
+            "🇳🇬",
+            "🇮🇳"
+        ],
+        "answer": "🇳🇬"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "options": [
+            "Cairo",
+            "Abuja",
+            "Pretoria",
+            "Pretoria"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "North America",
+            "Asia",
+            "Africa",
+            "Europe"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Paris",
+            "Rome",
+            "Cairo",
+            "Paris"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "North America",
+            "South America",
+            "Africa",
+            "Asia"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Mexico",
+            "Brazil",
+            "Brazil",
+            "Italy"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "On which continent is France located?",
+        "options": [
+            "Europe",
+            "Africa",
+            "North America",
+            "South America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Brazil",
+            "Nigeria",
+            "Brazil",
+            "France"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the official currency of China?",
+        "options": [
+            "Kenyan Shilling",
+            "Yuan",
+            "Rupee",
+            "Peso"
+        ],
+        "answer": "Yuan"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Tokyo",
+            "Canberra",
+            "Canberra",
+            "Seoul"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "Which of these flags belongs to Egypt?",
+        "options": [
+            "🇧🇷",
+            "🇳🇬",
+            "🇪🇬",
+            "🇰🇷"
+        ],
+        "answer": "🇪🇬"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Australia",
+            "Canada",
+            "Kenya",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "On which continent is Kenya located?",
+        "options": [
+            "North America",
+            "Africa",
+            "Asia",
+            "South America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "options": [
+            "Ottawa",
+            "Tokyo",
+            "New Delhi",
+            "Ottawa"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇩🇪",
+            "🇿🇦",
+            "🇫🇷",
+            "🇳🇬"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇩🇪",
+            "🇩🇪",
+            "🇲🇽",
+            "🇯🇵"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "options": [
+            "Pretoria",
+            "Seoul",
+            "Tokyo",
+            "Ottawa"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "On which continent is Nigeria located?",
+        "options": [
+            "Oceania",
+            "South America",
+            "Europe",
+            "Africa"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇨🇦",
+            "🇧🇷",
+            "🇲🇽",
+            "🇮🇳"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "What is the capital of China?",
+        "options": [
+            "Seoul",
+            "Beijing",
+            "Tokyo",
+            "Mexico City"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
+            "Germany",
+            "India",
+            "France"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "What is the official currency of South Korea?",
+        "options": [
+            "Won",
+            "Kenyan Shilling",
+            "Real",
+            "Euro"
+        ],
+        "answer": "Won"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Naira",
+            "Rand",
+            "Euro",
+            "Rupee"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇧🇷",
+            "🇰🇷",
+            "🇰🇷",
+            "🇿🇦"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Japan",
+            "China",
+            "Brazil",
+            "France"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the capital of South Korea?",
+        "options": [
+            "Paris",
+            "Brasilia",
+            "Abuja",
+            "Seoul"
+        ],
+        "answer": "Seoul"
+    },
+    {
+        "question": "On which continent is Canada located?",
+        "options": [
+            "Africa",
+            "North America",
+            "South America",
+            "Asia"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "South America",
+            "Asia",
+            "Africa",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "On which continent is Australia located?",
+        "options": [
+            "Oceania",
+            "Europe",
+            "South America",
+            "North America"
+        ],
+        "answer": "Oceania"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "North America",
+            "Asia",
+            "South America",
+            "Oceania"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "options": [
+            "Canberra",
+            "Nairobi",
+            "Ottawa",
+            "Cairo"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "On which continent is South Korea located?",
+        "options": [
+            "South America",
+            "Europe",
+            "Africa",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "Which of these flags belongs to India?",
+        "options": [
+            "🇮🇳",
+            "🇿🇦",
+            "🇰🇪",
+            "🇳🇬"
+        ],
+        "answer": "🇮🇳"
+    },
+    {
+        "question": "On which continent is Nigeria located?",
+        "options": [
+            "Africa",
+            "Oceania",
+            "Europe",
+            "Asia"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the official currency of Egypt?",
+        "options": [
+            "Kenyan Shilling",
+            "Euro",
+            "Egyptian Pound",
+            "Peso"
+        ],
+        "answer": "Egyptian Pound"
+    },
+    {
+        "question": "What is the official currency of Japan?",
+        "options": [
+            "Euro",
+            "Real",
+            "Peso",
+            "Yen"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Kenya",
+            "Japan",
+            "Egypt",
+            "Mexico"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "On which continent is Mexico located?",
+        "options": [
+            "North America",
+            "South America",
+            "Africa",
+            "Oceania"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "On which continent is Australia located?",
+        "options": [
+            "Asia",
+            "Europe",
+            "Oceania",
+            "Africa"
+        ],
+        "answer": "Oceania"
+    },
+    {
+        "question": "What is the capital of South Korea?",
+        "options": [
+            "Paris",
+            "Seoul",
+            "Brasilia",
+            "Beijing"
+        ],
+        "answer": "Seoul"
+    },
+    {
+        "question": "Which of these flags belongs to Australia?",
+        "options": [
+            "🇿🇦",
+            "🇦🇺",
+            "🇰🇷",
+            "🇲🇽"
+        ],
+        "answer": "🇦🇺"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": [
+            "Nairobi",
+            "New Delhi",
+            "Tokyo",
+            "Beijing"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Seoul",
+            "Tokyo",
+            "Paris",
+            "Brasilia"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Egypt",
+            "Germany",
+            "Brazil",
+            "Kenya"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Which of these flags belongs to Egypt?",
+        "options": [
+            "🇰🇪",
+            "🇪🇬",
+            "🇰🇷",
+            "🇨🇦"
+        ],
+        "answer": "🇪🇬"
+    },
+    {
+        "question": "What is the official currency of South Africa?",
+        "options": [
+            "Canadian Dollar",
+            "Peso",
+            "Rand",
+            "Euro"
+        ],
+        "answer": "Rand"
+    },
+    {
+        "question": "What is the official currency of Germany?",
+        "options": [
+            "Egyptian Pound",
+            "Euro",
+            "Australian Dollar",
+            "Naira"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Brasilia",
+            "Cairo",
+            "Nairobi",
+            "Rome"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇰🇷",
+            "🇰🇪",
+            "🇰🇷",
+            "🇨🇦"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Australian Dollar",
+            "Peso",
+            "Yen",
+            "Yuan"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "New Delhi",
+            "Abuja",
+            "Rome",
+            "Ottawa"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "On which continent is Italy located?",
+        "options": [
+            "Asia",
+            "Europe",
+            "Africa",
+            "North America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Egypt",
+            "France",
+            "South Africa",
+            "Australia"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the official currency of Canada?",
+        "options": [
+            "Egyptian Pound",
+            "Canadian Dollar",
+            "Rupee",
+            "Rand"
+        ],
+        "answer": "Canadian Dollar"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇨🇦",
+            "🇦🇺",
+            "🇰🇪",
+            "🇯🇵"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "Oceania",
+            "South America",
+            "Africa",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the official currency of Germany?",
+        "options": [
+            "Euro",
+            "Kenyan Shilling",
+            "Euro",
+            "Rand"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Australia",
+            "India",
+            "Brazil",
+            "Canada"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Japan",
+            "Nigeria",
+            "France",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "On which continent is Mexico located?",
+        "options": [
+            "South America",
+            "Africa",
+            "Asia",
+            "North America"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Euro",
+            "Euro",
+            "Australian Dollar",
+            "Canadian Dollar"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Rome",
+            "Paris",
+            "New Delhi",
+            "Abuja"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "India",
+            "South Africa",
+            "China",
+            "Japan"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Peso",
+            "Euro",
+            "Yuan",
+            "Australian Dollar"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Egypt",
+            "Germany",
+            "Egypt",
+            "Kenya"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇮🇳",
+            "🇳🇬",
+            "🇨🇦",
+            "🇮🇹"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": [
+            "Paris",
+            "Canberra",
+            "Nairobi",
+            "Cairo"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Beijing",
+            "Berlin",
+            "Seoul",
+            "Abuja"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "question": "What is the capital of China?",
+        "options": [
+            "Canberra",
+            "Beijing",
+            "New Delhi",
+            "Berlin"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "Africa",
+            "South America",
+            "Europe",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "On which continent is Italy located?",
+        "options": [
+            "Europe",
+            "South America",
+            "Asia",
+            "North America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "New Delhi",
+            "Tokyo",
+            "Rome",
+            "Seoul"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Paris",
+            "Beijing",
+            "Nairobi",
+            "Abuja"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which of these flags belongs to South Africa?",
+        "options": [
+            "🇮🇹",
+            "🇿🇦",
+            "🇳🇬",
+            "🇩🇪"
+        ],
+        "answer": "🇿🇦"
+    },
+    {
+        "question": "Which of these flags belongs to Italy?",
+        "options": [
+            "🇦🇺",
+            "🇧🇷",
+            "🇮🇹",
+            "🇲🇽"
+        ],
+        "answer": "🇮🇹"
+    },
+    {
+        "question": "What is the official currency of India?",
+        "options": [
+            "Peso",
+            "Rupee",
+            "Rand",
+            "Euro"
+        ],
+        "answer": "Rupee"
+    },
+    {
+        "question": "On which continent is China located?",
+        "options": [
+            "North America",
+            "Europe",
+            "Asia",
+            "Oceania"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Brazil",
+            "China",
+            "China",
+            "Mexico"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the official currency of Egypt?",
+        "options": [
+            "Egyptian Pound",
+            "Euro",
+            "Yuan",
+            "Australian Dollar"
+        ],
+        "answer": "Egyptian Pound"
+    },
+    {
+        "question": "On which continent is Nigeria located?",
+        "options": [
+            "Africa",
+            "South America",
+            "Europe",
+            "Asia"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the official currency of Brazil?",
+        "options": [
+            "Rand",
+            "Real",
+            "Australian Dollar",
+            "Yen"
+        ],
+        "answer": "Real"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Mexico City",
+            "Beijing",
+            "Paris",
+            "Mexico City"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "What is the official currency of Australia?",
+        "options": [
+            "Rupee",
+            "Euro",
+            "Won",
+            "Australian Dollar"
+        ],
+        "answer": "Australian Dollar"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇮🇹",
+            "🇨🇦",
+            "🇪🇬",
+            "🇨🇦"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "What is the official currency of Germany?",
+        "options": [
+            "Rupee",
+            "Euro",
+            "Peso",
+            "Euro"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": [
+            "Paris",
+            "Nairobi",
+            "Rome",
+            "Beijing"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Nigeria",
+            "Italy",
+            "Japan",
+            "Canada"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "On which continent is Mexico located?",
+        "options": [
+            "Europe",
+            "North America",
+            "South America",
+            "Asia"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "Asia",
+            "Europe",
+            "Oceania",
+            "South America"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Paris",
+            "Beijing",
+            "Mexico City",
+            "Tokyo"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "On which continent is South Korea located?",
+        "options": [
+            "Europe",
+            "Africa",
+            "Asia",
+            "South America"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "Egypt",
+            "South Korea",
+            "Kenya",
+            "France"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Nigeria",
+            "France",
+            "Australia",
+            "Brazil"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
+            "South Africa",
+            "Italy",
+            "Japan"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Brasilia",
+            "Paris",
+            "Brasilia",
+            "Nairobi"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "What is the official currency of Nigeria?",
+        "options": [
+            "Rupee",
+            "Naira",
+            "Canadian Dollar",
+            "Naira"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Nairobi",
+            "Paris",
+            "Berlin",
+            "Cairo"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "Which of these flags belongs to India?",
+        "options": [
+            "🇮🇳",
+            "🇿🇦",
+            "🇩🇪",
+            "🇰🇷"
+        ],
+        "answer": "🇮🇳"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Brasilia",
+            "Paris",
+            "Canberra",
+            "Brasilia"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "What is the official currency of China?",
+        "options": [
+            "Yen",
+            "Won",
+            "Euro",
+            "Yuan"
+        ],
+        "answer": "Yuan"
+    },
+    {
+        "question": "Which of these flags belongs to Italy?",
+        "options": [
+            "🇲🇽",
+            "🇮🇹",
+            "🇯🇵",
+            "🇳🇬"
+        ],
+        "answer": "🇮🇹"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Naira",
+            "Kenyan Shilling",
+            "Peso",
+            "Won"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Euro",
+            "Canadian Dollar",
+            "Egyptian Pound",
+            "Peso"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the official currency of Nigeria?",
+        "options": [
+            "Euro",
+            "Naira",
+            "Real",
+            "Yuan"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "Oceania",
+            "Asia",
+            "South America",
+            "Africa"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the official currency of South Africa?",
+        "options": [
+            "Rand",
+            "Canadian Dollar",
+            "Rupee",
+            "Euro"
+        ],
+        "answer": "Rand"
+    },
+    {
+        "question": "What is the official currency of Kenya?",
+        "options": [
+            "Kenyan Shilling",
+            "Euro",
+            "Naira",
+            "Yuan"
+        ],
+        "answer": "Kenyan Shilling"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "Oceania",
+            "Europe",
+            "North America",
+            "Africa"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the official currency of Germany?",
+        "options": [
+            "Australian Dollar",
+            "Real",
+            "Euro",
+            "Rupee"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "On which continent is France located?",
+        "options": [
+            "Europe",
+            "South America",
+            "Asia",
+            "Africa"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Mexico City",
+            "Nairobi",
+            "Abuja",
+            "Paris"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "What is the official currency of Australia?",
+        "options": [
+            "Euro",
+            "Australian Dollar",
+            "Egyptian Pound",
+            "Yen"
+        ],
+        "answer": "Australian Dollar"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "New Delhi",
+            "Rome",
+            "Beijing",
+            "Tokyo"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "On which continent is Australia located?",
+        "options": [
+            "North America",
+            "Asia",
+            "Oceania",
+            "South America"
+        ],
+        "answer": "Oceania"
+    },
+    {
+        "question": "What is the official currency of South Korea?",
+        "options": [
+            "Kenyan Shilling",
+            "Euro",
+            "Won",
+            "Euro"
+        ],
+        "answer": "Won"
+    },
+    {
+        "question": "On which continent is India located?",
+        "options": [
+            "Asia",
+            "Oceania",
+            "South America",
+            "Europe"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "On which continent is Germany located?",
+        "options": [
+            "Europe",
+            "North America",
+            "Oceania",
+            "Asia"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "On which continent is Nigeria located?",
+        "options": [
+            "Africa",
+            "South America",
+            "Asia",
+            "Oceania"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Nairobi",
+            "Canberra",
+            "Paris",
+            "Mexico City"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "On which continent is Italy located?",
+        "options": [
+            "South America",
+            "North America",
+            "Europe",
+            "Africa"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Mexico",
+            "Brazil",
+            "France",
+            "China"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the official currency of South Africa?",
+        "options": [
+            "Rand",
+            "Yuan",
+            "Peso",
+            "Naira"
+        ],
+        "answer": "Rand"
+    },
+    {
+        "question": "What is the official currency of Egypt?",
+        "options": [
+            "Australian Dollar",
+            "Egyptian Pound",
+            "Rupee",
+            "Rand"
+        ],
+        "answer": "Egyptian Pound"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Australia",
+            "France",
+            "Germany",
+            "China"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Germany",
+            "Australia",
+            "South Africa",
+            "Brazil"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Oceania",
+            "South America",
+            "Africa",
+            "North America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the official currency of Italy?",
+        "options": [
+            "Euro",
+            "Naira",
+            "Peso",
+            "Kenyan Shilling"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the official currency of India?",
+        "options": [
+            "Rand",
+            "Rupee",
+            "Yuan",
+            "Rupee"
+        ],
+        "answer": "Rupee"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "France",
+            "South Africa",
+            "India",
+            "South Korea"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Brazil",
+            "Germany",
+            "Canada",
+            "Brazil"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "New Delhi",
+            "Beijing",
+            "Canberra",
+            "New Delhi"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇫🇷",
+            "🇰🇪",
+            "🇯🇵",
+            "🇩🇪"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Nigeria",
+            "China",
+            "France",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Egypt",
+            "Canada",
+            "China",
+            "South Africa"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "On which continent is India located?",
+        "options": [
+            "Asia",
+            "South America",
+            "Europe",
+            "North America"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Rome",
+            "Seoul",
+            "Cairo",
+            "New Delhi"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇰🇷",
+            "🇧🇷",
+            "🇮🇹",
+            "🇦🇺"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "On which continent is India located?",
+        "options": [
+            "Europe",
+            "North America",
+            "Oceania",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the official currency of Canada?",
+        "options": [
+            "Egyptian Pound",
+            "Canadian Dollar",
+            "Euro",
+            "Peso"
+        ],
+        "answer": "Canadian Dollar"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "France",
+            "China",
+            "Kenya",
+            "Mexico"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "New Delhi",
+            "Canberra",
+            "New Delhi",
+            "Paris"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "options": [
+            "Nairobi",
+            "Seoul",
+            "Berlin",
+            "Rome"
+        ],
+        "answer": "Rome"
+    },
+    {
+        "question": "On which continent is Australia located?",
+        "options": [
+            "Asia",
+            "Africa",
+            "Europe",
+            "Oceania"
+        ],
+        "answer": "Oceania"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "North America",
+            "Oceania",
+            "Africa",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the official currency of France?",
+        "options": [
+            "Euro",
+            "Euro",
+            "Euro",
+            "Rupee"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "North America",
+            "Africa",
+            "South America",
+            "Asia"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Mexico City",
+            "Rome",
+            "Cairo",
+            "New Delhi"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Pretoria",
+            "Cairo",
+            "Nairobi",
+            "Rome"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "What is the official currency of China?",
+        "options": [
+            "Kenyan Shilling",
+            "Yuan",
+            "Yuan",
+            "Rupee"
+        ],
+        "answer": "Yuan"
+    },
+    {
+        "question": "What is the official currency of Japan?",
+        "options": [
+            "Yen",
+            "Euro",
+            "Naira",
+            "Peso"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Africa",
+            "South America",
+            "North America",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Brasilia",
+            "Berlin",
+            "Seoul",
+            "Nairobi"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "question": "Which of these flags belongs to Japan?",
+        "options": [
+            "🇯🇵",
+            "🇩🇪",
+            "🇧🇷",
+            "🇦🇺"
+        ],
+        "answer": "🇯🇵"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Mexico",
+            "France",
+            "Brazil",
+            "Canada"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
+            "Germany",
+            "Australia",
+            "India"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇰🇷",
+            "🇦🇺",
+            "🇨🇳",
+            "🇰🇷"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "What is the capital of South Korea?",
+        "options": [
+            "Cairo",
+            "Paris",
+            "Seoul",
+            "Seoul"
+        ],
+        "answer": "Seoul"
+    },
+    {
+        "question": "What is the official currency of Japan?",
+        "options": [
+            "Real",
+            "Euro",
+            "Euro",
+            "Yen"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇰🇷",
+            "🇳🇬",
+            "🇰🇷",
+            "🇿🇦"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "Which of these flags belongs to Egypt?",
+        "options": [
+            "🇪🇬",
+            "🇨🇦",
+            "🇮🇹",
+            "🇿🇦"
+        ],
+        "answer": "🇪🇬"
+    },
+    {
+        "question": "Which of these flags belongs to France?",
+        "options": [
+            "🇫🇷",
+            "🇨🇦",
+            "🇫🇷",
+            "🇳🇬"
+        ],
+        "answer": "🇫🇷"
+    },
+    {
+        "question": "Which of these flags belongs to Italy?",
+        "options": [
+            "🇮🇹",
+            "🇳🇬",
+            "🇮🇳",
+            "🇩🇪"
+        ],
+        "answer": "🇮🇹"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "China",
+            "China",
+            "Egypt",
+            "Kenya"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the capital of South Korea?",
+        "options": [
+            "Seoul",
+            "Rome",
+            "Seoul",
+            "Tokyo"
+        ],
+        "answer": "Seoul"
+    },
+    {
+        "question": "What is the official currency of South Korea?",
+        "options": [
+            "Real",
+            "Won",
+            "Won",
+            "Euro"
+        ],
+        "answer": "Won"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "South America",
+            "Africa",
+            "Oceania",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Oceania",
+            "South America",
+            "Africa",
+            "Europe"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Nairobi",
+            "Berlin",
+            "Rome",
+            "Paris"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "question": "What is the official currency of Canada?",
+        "options": [
+            "Euro",
+            "Kenyan Shilling",
+            "Euro",
+            "Canadian Dollar"
+        ],
+        "answer": "Canadian Dollar"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "South America",
+            "Europe",
+            "Oceania",
+            "North America"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "Which of these flags belongs to Germany?",
+        "options": [
+            "🇩🇪",
+            "🇲🇽",
+            "🇯🇵",
+            "🇳🇬"
+        ],
+        "answer": "🇩🇪"
+    },
+    {
+        "question": "Which of these flags belongs to Italy?",
+        "options": [
+            "🇨🇦",
+            "🇮🇹",
+            "🇲🇽",
+            "🇪🇬"
+        ],
+        "answer": "🇮🇹"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "South Africa",
+            "China",
+            "China",
+            "Mexico"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Cairo",
+            "Ottawa",
+            "Rome",
+            "Paris"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Mexico City",
+            "Brasilia",
+            "Beijing",
+            "Berlin"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "New Delhi",
+            "Mexico City",
+            "Berlin",
+            "Seoul"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "Which of these flags belongs to Nigeria?",
+        "options": [
+            "🇩🇪",
+            "🇲🇽",
+            "🇮🇹",
+            "🇳🇬"
+        ],
+        "answer": "🇳🇬"
+    },
+    {
+        "question": "Which of these flags belongs to Japan?",
+        "options": [
+            "🇫🇷",
+            "🇯🇵",
+            "🇯🇵",
+            "🇳🇬"
+        ],
+        "answer": "🇯🇵"
+    },
+    {
+        "question": "Which of these flags belongs to South Korea?",
+        "options": [
+            "🇲🇽",
+            "🇪🇬",
+            "🇦🇺",
+            "🇰🇷"
+        ],
+        "answer": "🇰🇷"
+    },
+    {
+        "question": "On which continent is Mexico located?",
+        "options": [
+            "Europe",
+            "Africa",
+            "North America",
+            "Oceania"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Nigeria",
+            "Brazil",
+            "China",
+            "France"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the capital of China?",
+        "options": [
+            "Beijing",
+            "Brasilia",
+            "Ottawa",
+            "Beijing"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇪🇬",
+            "🇲🇽",
+            "🇨🇦",
+            "🇦🇺"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Canberra",
+            "Seoul",
+            "New Delhi",
+            "Rome"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "Oceania",
+            "South America",
+            "Asia",
+            "North America"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "Which of these flags belongs to China?",
+        "options": [
+            "🇿🇦",
+            "🇩🇪",
+            "🇨🇳",
+            "🇪🇬"
+        ],
+        "answer": "🇨🇳"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Mexico City",
+            "Brasilia",
+            "Tokyo",
+            "Brasilia"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "Which of these flags belongs to Italy?",
+        "options": [
+            "🇩🇪",
+            "🇮🇳",
+            "🇮🇹",
+            "🇿🇦"
+        ],
+        "answer": "🇮🇹"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "North America",
+            "Asia",
+            "Europe",
+            "South America"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "What is the official currency of Italy?",
+        "options": [
+            "Rand",
+            "Rupee",
+            "Euro",
+            "Won"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Nairobi",
+            "Cairo",
+            "Tokyo",
+            "Ottawa"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "What is the official currency of India?",
+        "options": [
+            "Peso",
+            "Rupee",
+            "Rupee",
+            "Kenyan Shilling"
+        ],
+        "answer": "Rupee"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Beijing",
+            "Tokyo",
+            "Rome",
+            "Brasilia"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "What is the official currency of China?",
+        "options": [
+            "Yuan",
+            "Canadian Dollar",
+            "Won",
+            "Naira"
+        ],
+        "answer": "Yuan"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Abuja",
+            "Beijing",
+            "Canberra",
+            "Ottawa"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "France",
+            "Australia",
+            "France",
+            "Kenya"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "France",
+            "Japan",
+            "Germany",
+            "South Korea"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Canberra",
+            "Brasilia",
+            "Abuja",
+            "Tokyo"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Pretoria",
+            "Paris",
+            "Ottawa",
+            "Paris"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "What is the official currency of Japan?",
+        "options": [
+            "Yen",
+            "Peso",
+            "Yuan",
+            "Naira"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "What is the capital of Kenya?",
+        "options": [
+            "Cairo",
+            "Tokyo",
+            "Nairobi",
+            "Rome"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Canberra",
+            "Nairobi",
+            "Abuja",
+            "Abuja"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
+            "Egypt",
+            "Canada",
+            "Japan"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
+            "Australia",
+            "France",
+            "Italy"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "On which continent is India located?",
+        "options": [
+            "Asia",
+            "Oceania",
+            "North America",
+            "Africa"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "In which country can you find Christ the Redeemer?",
+        "options": [
+            "Kenya",
+            "Brazil",
+            "Egypt",
+            "Canada"
+        ],
+        "answer": "Brazil"
+    },
+    {
+        "question": "On which continent is Canada located?",
+        "options": [
+            "Oceania",
+            "Asia",
+            "North America",
+            "Africa"
+        ],
+        "answer": "North America"
+    },
+    {
+        "question": "In which country can you find the Pyramids of Giza?",
+        "options": [
+            "China",
+            "Brazil",
+            "South Africa",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "On which continent is Australia located?",
+        "options": [
+            "North America",
+            "Asia",
+            "Europe",
+            "Oceania"
+        ],
+        "answer": "Oceania"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "France",
+            "France",
+            "South Africa",
+            "South Korea"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Tokyo",
+            "Berlin",
+            "Canberra",
+            "Seoul"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "France",
+            "India",
+            "Brazil",
+            "Germany"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇨🇦",
+            "🇯🇵",
+            "🇳🇬",
+            "🇦🇺"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Tokyo",
+            "Mexico City",
+            "New Delhi",
+            "Berlin"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "options": [
+            "Cairo",
+            "Brasilia",
+            "Mexico City",
+            "Rome"
+        ],
+        "answer": "Rome"
+    },
+    {
+        "question": "On which continent is Germany located?",
+        "options": [
+            "Europe",
+            "Africa",
+            "North America",
+            "Oceania"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "South Korea",
+            "Japan",
+            "Germany",
+            "Japan"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Cairo",
+            "Beijing",
+            "Berlin",
+            "Brasilia"
+        ],
+        "answer": "Cairo"
+    },
+    {
+        "question": "What is the official currency of Japan?",
+        "options": [
+            "Rupee",
+            "Euro",
+            "Naira",
+            "Yen"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Nairobi",
+            "Rome",
+            "New Delhi",
+            "Abuja"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "What is the official currency of India?",
+        "options": [
+            "Euro",
+            "Yen",
+            "Rupee",
+            "Peso"
+        ],
+        "answer": "Rupee"
+    },
+    {
+        "question": "What is the official currency of China?",
+        "options": [
+            "Yen",
+            "Euro",
+            "Euro",
+            "Yuan"
+        ],
+        "answer": "Yuan"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Yuan",
+            "Real",
+            "Peso",
+            "Euro"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "On which continent is Kenya located?",
+        "options": [
+            "North America",
+            "Asia",
+            "Europe",
+            "Africa"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which of these flags belongs to Kenya?",
+        "options": [
+            "🇰🇪",
+            "🇰🇪",
+            "🇫🇷",
+            "🇳🇬"
+        ],
+        "answer": "🇰🇪"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Germany",
+            "France",
+            "France",
+            "Mexico"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "options": [
+            "Tokyo",
+            "Pretoria",
+            "Ottawa",
+            "Pretoria"
+        ],
+        "answer": "Pretoria"
+    },
+    {
+        "question": "On which continent is Italy located?",
+        "options": [
+            "Africa",
+            "Oceania",
+            "Asia",
+            "Europe"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Seoul",
+            "New Delhi",
+            "Tokyo",
+            "Mexico City"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "Which of these flags belongs to Italy?",
+        "options": [
+            "🇿🇦",
+            "🇮🇹",
+            "🇧🇷",
+            "🇳🇬"
+        ],
+        "answer": "🇮🇹"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "China",
+            "Australia",
+            "Kenya",
+            "Canada"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Canberra",
+            "Cairo",
+            "Brasilia",
+            "New Delhi"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "What is the capital of Mexico?",
+        "options": [
+            "Rome",
+            "Pretoria",
+            "Mexico City",
+            "New Delhi"
+        ],
+        "answer": "Mexico City"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "Nairobi",
+            "Tokyo",
+            "New Delhi",
+            "Cairo"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "What is the official currency of Kenya?",
+        "options": [
+            "Yen",
+            "Won",
+            "Kenyan Shilling",
+            "Peso"
+        ],
+        "answer": "Kenyan Shilling"
+    },
+    {
+        "question": "What is the capital of Nigeria?",
+        "options": [
+            "Berlin",
+            "Paris",
+            "Mexico City",
+            "Abuja"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Cairo",
+            "Brasilia",
+            "Tokyo",
+            "Berlin"
+        ],
+        "answer": "Brasilia"
+    },
+    {
+        "question": "What is the official currency of Nigeria?",
+        "options": [
+            "Naira",
+            "Real",
+            "Rand",
+            "Yuan"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "What is the official currency of Mexico?",
+        "options": [
+            "Australian Dollar",
+            "Peso",
+            "Yen",
+            "Rand"
+        ],
+        "answer": "Peso"
+    },
+    {
+        "question": "Which of these flags belongs to China?",
+        "options": [
+            "🇨🇳",
+            "🇯🇵",
+            "🇧🇷",
+            "🇰🇪"
+        ],
+        "answer": "🇨🇳"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Germany",
+            "Italy",
+            "Canada",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "What is the official currency of South Africa?",
+        "options": [
+            "Won",
+            "Rand",
+            "Australian Dollar",
+            "Naira"
+        ],
+        "answer": "Rand"
+    },
+    {
+        "question": "Which of these flags belongs to France?",
+        "options": [
+            "🇲🇽",
+            "🇮🇹",
+            "🇨🇦",
+            "🇫🇷"
+        ],
+        "answer": "🇫🇷"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "Abuja",
+            "New Delhi",
+            "Pretoria",
+            "Rome"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "China",
+            "Japan",
+            "Canada",
+            "Kenya"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Which of these flags belongs to Nigeria?",
+        "options": [
+            "🇨🇳",
+            "🇳🇬",
+            "🇯🇵",
+            "🇰🇷"
+        ],
+        "answer": "🇳🇬"
+    },
+    {
+        "question": "What is the capital of India?",
+        "options": [
+            "Nairobi",
+            "Canberra",
+            "New Delhi",
+            "Rome"
+        ],
+        "answer": "New Delhi"
+    },
+    {
+        "question": "On which continent is Egypt located?",
+        "options": [
+            "Europe",
+            "Africa",
+            "North America",
+            "Asia"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "Which of these flags belongs to Canada?",
+        "options": [
+            "🇰🇪",
+            "🇨🇦",
+            "🇳🇬",
+            "🇩🇪"
+        ],
+        "answer": "🇨🇦"
+    },
+    {
+        "question": "On which continent is Brazil located?",
+        "options": [
+            "South America",
+            "Europe",
+            "Oceania",
+            "Asia"
+        ],
+        "answer": "South America"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Paris",
+            "Berlin",
+            "New Delhi",
+            "Cairo"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "What is the official currency of Nigeria?",
+        "options": [
+            "Rupee",
+            "Australian Dollar",
+            "Naira",
+            "Euro"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "On which continent is Italy located?",
+        "options": [
+            "Africa",
+            "Europe",
+            "Asia",
+            "South America"
+        ],
+        "answer": "Europe"
+    },
+    {
+        "question": "Which of these flags belongs to Egypt?",
+        "options": [
+            "🇪🇬",
+            "🇦🇺",
+            "🇧🇷",
+            "🇨🇦"
+        ],
+        "answer": "🇪🇬"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "North America",
+            "Africa",
+            "Europe",
+            "Asia"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "What is the capital of China?",
+        "options": [
+            "Ottawa",
+            "Beijing",
+            "Beijing",
+            "Nairobi"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "South Korea",
+            "Canada",
+            "China",
+            "Mexico"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Which of these flags belongs to South Africa?",
+        "options": [
+            "🇮🇹",
+            "🇳🇬",
+            "🇨🇳",
+            "🇿🇦"
+        ],
+        "answer": "🇿🇦"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "South Africa",
+            "South Korea",
+            "Japan",
+            "Japan"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "In which country can you find the Eiffel Tower?",
+        "options": [
+            "Egypt",
+            "Mexico",
+            "France",
+            "Canada"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country can you find Mount Fuji?",
+        "options": [
+            "Japan",
+            "South Korea",
+            "Egypt",
+            "Germany"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "In which country can you find the Great Wall?",
+        "options": [
+            "Canada",
+            "South Africa",
+            "Egypt",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "What is the official currency of Canada?",
+        "options": [
+            "Naira",
+            "Euro",
+            "Australian Dollar",
+            "Canadian Dollar"
+        ],
+        "answer": "Canadian Dollar"
+    },
+    {
+        "question": "Which of these flags belongs to China?",
+        "options": [
+            "🇧🇷",
+            "🇨🇳",
+            "🇿🇦",
+            "🇨🇦"
+        ],
+        "answer": "🇨🇳"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Canberra",
+            "Mexico City",
+            "Rome",
+            "Brasilia"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "What is the official currency of Canada?",
+        "options": [
+            "Naira",
+            "Egyptian Pound",
+            "Rupee",
+            "Canadian Dollar"
+        ],
+        "answer": "Canadian Dollar"
+    },
+    {
+        "question": "On which continent is South Africa located?",
+        "options": [
+            "Europe",
+            "North America",
+            "Africa",
+            "South America"
+        ],
+        "answer": "Africa"
+    },
+    {
+        "question": "On which continent is Japan located?",
+        "options": [
+            "Oceania",
+            "South America",
+            "Europe",
+            "Asia"
+        ],
+        "answer": "Asia"
     }
 ]

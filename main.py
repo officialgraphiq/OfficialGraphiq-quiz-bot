@@ -46,8 +46,8 @@ ANNOUNCE_CHAT_ID = os.getenv("ANNOUNCE_CHAT_ID")  # set to integer string, e.g. 
 CATEGORIES = {
     "General": "questions.json",
     "Math": "questions_math.json",
-    "Chemistry": "questions_chemistry.json",
-    "Biology": "questions_biology.json",
+    # "Chemistry": "questions_chemistry.json",
+    # "Biology": "questions_biology.json",
     "Geography": "questions_geography.json",
     "Science": "questions_science.json",
     "Sports": "questions_sports.json",
@@ -170,16 +170,41 @@ async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
 
 
 
+# def schedule_daily_reset(job_queue: JobQueue):
+#     now = datetime.now()
+#     next_midnight = datetime.combine(now.date() + timedelta(days=1), datetime.min.time())
+#     delay = (next_midnight - now).total_seconds()
+
+#     job_queue.run_repeating(
+#         reset_daily,
+#         interval=86400,  # every 24 hours
+#         first=delay      # first run at next midnight
+#     )
+
+
+
 def schedule_daily_reset(job_queue: JobQueue):
+    """
+    Schedule the daily reset job for 6:00 AM instead of midnight.
+    """
     now = datetime.now()
-    next_midnight = datetime.combine(now.date() + timedelta(days=1), datetime.min.time())
-    delay = (next_midnight - now).total_seconds()
+
+    # 6:00 AM of the next reset day
+    next_reset_time = datetime.combine(now.date(), datetime.min.time()).replace(hour=6)
+
+    # If it’s already past 6 AM today, schedule for tomorrow
+    if now >= next_reset_time:
+        next_reset_time = next_reset_time + timedelta(days=1)
+
+    delay = (next_reset_time - now).total_seconds()
 
     job_queue.run_repeating(
         reset_daily,
         interval=86400,  # every 24 hours
-        first=delay      # first run at next midnight
+        first=delay      # first run at 6 AM
     )
+
+    print(f"🌅 Daily reset scheduled for {next_reset_time}")
 
 
 
