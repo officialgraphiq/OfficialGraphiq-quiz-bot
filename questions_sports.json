@@ -1,0 +1,5432 @@
+[
+      {
+    "question": "Which club has won the most Bundesliga titles?",
+    "options": [
+      "Borussia Dortmund",
+      "Bayern Munich",
+      "Hamburg SV",
+      "Borussia Mönchengladbach"
+    ],
+    "answer": "Bayern Munich"
+  },
+  {
+    "question": "What is the term for a basketball shot attempt that misses everything?",
+    "options": [
+      "Swish",
+      "Airball",
+      "Brick",
+      "Clanker"
+    ],
+    "answer": "Airball"
+  },
+  {
+    "question": "In which sport would you find a 'birdie'?",
+    "options": [
+      "Badminton",
+      "Tennis",
+      "Golf",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country won the 1998 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "France",
+      "Germany",
+      "Italy"
+    ],
+    "answer": "France"
+  },
+  {
+    "question": "How many fouls until an NBA player fouls out?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "In tennis, what is a zero score called?",
+    "options": [
+      "Nil",
+      "Zero",
+      "Love",
+      "Nothing"
+    ],
+    "answer": "Love"
+  },
+  {
+    "question": "Which English club plays at Stamford Bridge?",
+    "options": [
+      "Arsenal",
+      "Chelsea",
+      "Tottenham",
+      "West Ham"
+    ],
+    "answer": "Chelsea"
+  },
+  {
+    "question": "What is the term for a basketball pass that leads to a score?",
+    "options": [
+      "Helper",
+      "Assist",
+      "Setup",
+      "Feeder"
+    ],
+    "answer": "Assist"
+  },
+  {
+    "question": "Which country hosts the Monaco Grand Prix?",
+    "options": [
+      "Italy",
+      "France",
+      "Monaco",
+      "Spain"
+    ],
+    "answer": "Monaco"
+  },
+  {
+    "question": "Who scored the 'Hand of God' goal?",
+    "options": [
+      "Lionel Messi",
+      "Diego Maradona",
+      "Pele",
+      "Zinedine Zidane"
+    ],
+    "answer": "Diego Maradona"
+  },
+  {
+    "question": "What is the distance from the three-point line in the NBA?",
+    "options": [
+      "22 feet",
+      "23 feet 9 inches",
+      "24 feet",
+      "25 feet"
+    ],
+    "answer": "23 feet 9 inches"
+  },
+  {
+    "question": "In which sport is the term 'knockout' used?",
+    "options": [
+      "Boxing",
+      "MMA",
+      "Both Boxing and MMA",
+      "Neither"
+    ],
+    "answer": "Both Boxing and MMA"
+  },
+  {
+    "question": "Which country has never won the World Cup?",
+    "options": [
+      "England",
+      "Spain",
+      "Netherlands",
+      "Portugal"
+    ],
+    "answer": "Portugal"
+  },
+  {
+    "question": "What is the term for a basketball violation when a player dribbles with two hands?",
+    "options": [
+      "Traveling",
+      "Double dribble",
+      "Carrying",
+      "Palming"
+    ],
+    "answer": "Double dribble"
+  },
+  {
+    "question": "In cricket, how many players are on a team?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "Which club has the nickname 'The Citizens'?",
+    "options": [
+      "Manchester United",
+      "Manchester City",
+      "Liverpool",
+      "Arsenal"
+    ],
+    "answer": "Manchester City"
+  },
+  {
+    "question": "Which NBA team plays in the 'Madison Square Garden'?",
+    "options": [
+      "Brooklyn Nets",
+      "New York Knicks",
+      "Boston Celtics",
+      "Philadelphia 76ers"
+    ],
+    "answer": "New York Knicks"
+  },
+  {
+    "question": "In which sport is the term 'eagle' used?",
+    "options": [
+      "Golf",
+      "Tennis",
+      "Badminton",
+      "Squash"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Champions League?",
+    "options": [
+      "Lionel Messi",
+      "Cristiano Ronaldo",
+      "Robert Lewandowski",
+      "Karim Benzema"
+    ],
+    "answer": "Cristiano Ronaldo"
+  },
+  {
+    "question": "What is the term for a basketball shot made while falling away from the basket?",
+    "options": [
+      "Jump shot",
+      "Fadeaway",
+      "Hook shot",
+      "Layup"
+    ],
+    "answer": "Fadeaway"
+  },
+  {
+    "question": "Which country won the 2023 Rugby World Cup?",
+    "options": [
+      "New Zealand",
+      "South Africa",
+      "England",
+      "Ireland"
+    ],
+    "answer": "South Africa"
+  },
+  {
+    "question": "Which club has won the most Copa Libertadores titles?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "Independiente",
+      "São Paulo"
+    ],
+    "answer": "Independiente"
+  },
+  {
+    "question": "What is the term for a basketball player who brings the ball up the court?",
+    "options": [
+      "Shooting guard",
+      "Point guard",
+      "Small forward",
+      "Center"
+    ],
+    "answer": "Point guard"
+  },
+  {
+    "question": "In which sport is the term 'home run' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Rounders",
+      "All of the above"
+    ],
+    "answer": "Baseball"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in basketball?",
+    "options": [
+      "United States",
+      "Soviet Union",
+      "Spain",
+      "Argentina"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a football match official who runs the line?",
+    "options": [
+      "Referee",
+      "Linesman",
+      "Umpire",
+      "Judge"
+    ],
+    "answer": "Linesman"
+  },
+  {
+    "question": "Which NBA player is known as 'The Beard'?",
+    "options": [
+      "James Harden",
+      "Russell Westbrook",
+      "Chris Paul",
+      "Damian Lillard"
+    ],
+    "answer": "James Harden"
+  },
+  {
+    "question": "In tennis, what is the term for a score of 40-0?",
+    "options": [
+      "Game point",
+      "Set point",
+      "Match point",
+      "Triple point"
+    ],
+    "answer": "Game point"
+  },
+  {
+    "question": "Which country won the 2002 FIFA World Cup?",
+    "options": [
+      "Germany",
+      "Brazil",
+      "Turkey",
+      "South Korea"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "What is the term for a basketball shot made close to the basket?",
+    "options": [
+      "Three-pointer",
+      "Layup",
+      "Jump shot",
+      "Fadeaway"
+    ],
+    "answer": "Layup"
+  },
+  {
+    "question": "In which sport is the term 'try' used for scoring?",
+    "options": [
+      "American Football",
+      "Rugby",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Rugby"
+  },
+  {
+    "question": "Which club has won the most FA Cups?",
+    "options": [
+      "Manchester United",
+      "Arsenal",
+      "Liverpool",
+      "Chelsea"
+    ],
+    "answer": "Arsenal"
+  },
+  {
+    "question": "What is the term for a basketball violation for staying in the key too long?",
+    "options": [
+      "3-second violation",
+      "5-second violation",
+      "8-second violation",
+      "24-second violation"
+    ],
+    "answer": "3-second violation"
+  },
+  {
+    "question": "Which country invented rugby?",
+    "options": [
+      "United States",
+      "England",
+      "Australia",
+      "New Zealand"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "Who is the all-time top scorer for Brazil?",
+    "options": [
+      "Pele",
+      "Ronaldo",
+      "Neymar",
+      "Romario"
+    ],
+    "answer": "Neymar"
+  },
+  {
+    "question": "What is the term for a basketball shot that hits the rim but doesn't go in?",
+    "options": [
+      "Airball",
+      "Brick",
+      "Swish",
+      "Clank"
+    ],
+    "answer": "Brick"
+  },
+  {
+    "question": "In which sport is the term 'stump' used?",
+    "options": [
+      "Baseball",
+      "Cricket",
+      "Golf",
+      "Tennis"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 2010 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "South Africa",
+      "Germany",
+      "Japan"
+    ],
+    "answer": "South Africa"
+  },
+  {
+    "question": "What is the term for a basketball player who primarily scores points?",
+    "options": [
+      "Point guard",
+      "Shooting guard",
+      "Power forward",
+      "Center"
+    ],
+    "answer": "Shooting guard"
+  },
+  {
+    "question": "In which sport is the term 'ace' used for a serve not touched?",
+    "options": [
+      "Tennis",
+      "Volleyball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which club has won the most European Cup/Champions League titles?",
+    "options": [
+      "AC Milan",
+      "Bayern Munich",
+      "Real Madrid",
+      "Liverpool"
+    ],
+    "answer": "Real Madrid"
+  },
+  {
+    "question": "What is the term for a basketball shot made with one hand swinging from the side?",
+    "options": [
+      "Jump shot",
+      "Hook shot",
+      "Layup",
+      "Fadeaway"
+    ],
+    "answer": "Hook shot"
+  },
+  {
+    "question": "Which country won the 2015 Cricket World Cup?",
+    "options": [
+      "India",
+      "Australia",
+      "New Zealand",
+      "England"
+    ],
+    "answer": "Australia"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Premier League?",
+    "options": [
+      "Alan Shearer",
+      "Wayne Rooney",
+      "Harry Kane",
+      "Andy Cole"
+    ],
+    "answer": "Alan Shearer"
+  },
+  {
+    "question": "What is the term for a basketball violation for not advancing the ball in time?",
+    "options": [
+      "3-second violation",
+      "5-second violation",
+      "8-second violation",
+      "24-second violation"
+    ],
+    "answer": "8-second violation"
+  },
+  {
+    "question": "In which sport is the term 'puck' used?",
+    "options": [
+      "Hockey",
+      "Curling",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which country has won the most Asian Cup titles?",
+    "options": [
+      "Japan",
+      "South Korea",
+      "Saudi Arabia",
+      "Iran"
+    ],
+    "answer": "Japan"
+  },
+  {
+    "question": "What is the term for a football shot that curves in the air?",
+    "options": [
+      "Knuckleball",
+      "Curve",
+      "Bend",
+      "Swerve"
+    ],
+    "answer": "Bend"
+  },
+  {
+    "question": "Which country won the 2018 FIFA World Cup?",
+    "options": [
+      "Germany",
+      "Brazil",
+      "France",
+      "Argentina"
+    ],
+    "answer": "France"
+  },
+  {
+    "question": "How many points is a three-point shot worth in basketball?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "In tennis, what is the score of 40-40 called?",
+    "options": [
+      "Advantage",
+      "Deuce",
+      "Game Point",
+      "Match Point"
+    ],
+    "answer": "Deuce"
+  },
+  {
+    "question": "Which Portuguese star is famous for his 'Siu' celebration?",
+    "options": [
+      "Luis Figo",
+      "Cristiano Ronaldo",
+      "Eusebio",
+      "Pepe"
+    ],
+    "answer": "Cristiano Ronaldo"
+  },
+  {
+    "question": "What color card indicates a sending-off in football?",
+    "options": [
+      "Yellow",
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "answer": "Red"
+  },
+  {
+    "question": "Which NBA team plays its home games at the TD Garden?",
+    "options": [
+      "Los Angeles Lakers",
+      "Boston Celtics",
+      "Chicago Bulls",
+      "Miami Heat"
+    ],
+    "answer": "Boston Celtics"
+  },
+  {
+    "question": "In American football, how many points is a touchdown worth?",
+    "options": [
+      "3",
+      "6",
+      "7",
+      "2"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "Which English club plays its home games at Anfield?",
+    "options": [
+      "Manchester United",
+      "Chelsea",
+      "Liverpool",
+      "Arsenal"
+    ],
+    "answer": "Liverpool"
+  },
+  {
+    "question": "What is the last name of Argentine superstar Lionel?",
+    "options": [
+      "Ronaldo",
+      "Neymar",
+      "Mbappé",
+      "Messi"
+    ],
+    "answer": "Messi"
+  },
+  {
+    "question": "Which position is typically the tallest player on a basketball team?",
+    "options": [
+      "Point Guard",
+      "Shooting Guard",
+      "Small Forward",
+      "Center"
+    ],
+    "answer": "Center"
+  },
+  {
+    "question": "In baseball, how many strikes make an out?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "How many players from one team are on a football pitch at the start of a match?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "9"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "What is the name of the trophy awarded to the Wimbledon men's singles champion?",
+    "options": [
+      "The Wimbledon Cup",
+      "The Golden Trophy",
+      "The Challenge Cup",
+      "The Venus Rosewater Dish"
+    ],
+    "answer": "The Challenge Cup"
+  },
+  {
+    "question": "Which Spanish clubs are famous for their rivalry 'El Clásico'?",
+    "options": [
+      "Barcelona and Atlético Madrid",
+      "Real Madrid and Sevilla",
+      "Barcelona and Real Madrid",
+      "Real Madrid and Valencia"
+    ],
+    "answer": "Barcelona and Real Madrid"
+  },
+  {
+    "question": "What is the term for a shot that goes directly through the net without touching the rim in basketball?",
+    "options": [
+      "Bank Shot",
+      "Airball",
+      "Swish",
+      "Dunk"
+    ],
+    "answer": "Swish"
+  },
+  {
+    "question": "In golf, what is the term for a score of one under par on a hole?",
+    "options": [
+      "Eagle",
+      "Birdie",
+      "Bogey",
+      "Par"
+    ],
+    "answer": "Birdie"
+  },
+  {
+    "question": "What is the term for when the ball goes out of play over the sideline in football?",
+    "options": [
+      "Goal Kick",
+      "Corner Kick",
+      "Free Kick",
+      "Throw-in"
+    ],
+    "answer": "Throw-in"
+  },
+  {
+    "question": "Which of these NBA players is known as 'The Greek Freak'?",
+    "options": [
+      "Luka Dončić",
+      "Giannis Antetokounmpo",
+      "Nikola Jokić",
+      "Joel Embiid"
+    ],
+    "answer": "Giannis Antetokounmpo"
+  },
+  {
+    "question": "In cricket, how many deliveries are in an over?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "What is the most prestigious club competition in European football?",
+    "options": [
+      "Europa League",
+      "UEFA Super Cup",
+      "Champions League",
+      "Premier League"
+    ],
+    "answer": "Champions League"
+  },
+  {
+    "question": "Which of these is a violation in basketball for taking too many steps without dribbling?",
+    "options": [
+      "Double Dribble",
+      "Traveling",
+      "Carrying",
+      "Palming"
+    ],
+    "answer": "Traveling"
+  },
+  {
+    "question": "Which country is known as the birthplace of modern football?",
+    "options": [
+      "Brazil",
+      "Italy",
+      "England",
+      "Spain"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "What is it called when a player scores three goals in one football match?",
+    "options": [
+      "Double",
+      "Hat-trick",
+      "Triple",
+      "Brace"
+    ],
+    "answer": "Hat-trick"
+  },
+  {
+    "question": "In rugby, what is the term for scoring by grounding the ball over the opponent's goal line?",
+    "options": [
+      "Touchdown",
+      "Goal",
+      "Try",
+      "Run"
+    ],
+    "answer": "Try"
+  },
+  {
+    "question": "Which Italian club is known as 'The Old Lady'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Napoli"
+    ],
+    "answer": "Juventus"
+  },
+  {
+    "question": "What is the term for a pass that leads directly to a goal in football?",
+    "options": [
+      "Save",
+      "Assist",
+      "Cross",
+      "Through-ball"
+    ],
+    "answer": "Assist"
+  },
+  {
+    "question": "Which of these basketball terms refers to grabbing the ball after a missed shot?",
+    "options": [
+      "Steal",
+      "Rebound",
+      "Block",
+      "Interception"
+    ],
+    "answer": "Rebound"
+  },
+  {
+    "question": "In which sport would you perform a 'spike'?",
+    "options": [
+      "Tennis",
+      "Volleyball",
+      "Badminton",
+      "Table Tennis"
+    ],
+    "answer": "Volleyball"
+  },
+  {
+    "question": "Which African nation is known as the 'Super Eagles' in football?",
+    "options": [
+      "Ghana",
+      "Nigeria",
+      "Egypt",
+      "Cameroon"
+    ],
+    "answer": "Nigeria"
+  },
+  {
+    "question": "What is the name of the kick that starts a football match?",
+    "options": [
+      "Penalty",
+      "Free Kick",
+      "Corner",
+      "Kick-off"
+    ],
+    "answer": "Kick-off"
+  },
+  {
+    "question": "Which of these NBA teams is based in Canada?",
+    "options": [
+      "Boston Celtics",
+      "Toronto Raptors",
+      "Memphis Grizzlies",
+      "Detroit Pistons"
+    ],
+    "answer": "Toronto Raptors"
+  },
+  {
+    "question": "In which sport is the Stanley Cup awarded?",
+    "options": [
+      "Basketball",
+      "American Football",
+      "Ice Hockey",
+      "Baseball"
+    ],
+    "answer": "Ice Hockey"
+  },
+  {
+    "question": "What is the term for a match between two teams from the same city in football?",
+    "options": [
+      "Final",
+      "Classic",
+      "Derby",
+      "Showdown"
+    ],
+    "answer": "Derby"
+  },
+  {
+    "question": "Which of these basketball moves involves jumping and putting the ball directly through the hoop?",
+    "options": [
+      "Layup",
+      "Dunk",
+      "Hook Shot",
+      "Fadeaway"
+    ],
+    "answer": "Dunk"
+  },
+  {
+    "question": "In athletics, what is the race where runners jump over barriers called?",
+    "options": [
+      "Steeplechase",
+      "Sprint",
+      "Hurdles",
+      "Marathon"
+    ],
+    "answer": "Hurdles"
+  },
+  {
+    "question": "Which country hosted the 2014 FIFA World Cup?",
+    "options": [
+      "Germany",
+      "South Africa",
+      "Brazil",
+      "Russia"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "How many quarters are there in an NBA game?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "In which sport would you use the term 'love' to mean zero?",
+    "options": [
+      "Cricket",
+      "Tennis",
+      "Golf",
+      "Rugby"
+    ],
+    "answer": "Tennis"
+  },
+  {
+    "question": "What is the name of the rectangular area in front of the goal in football?",
+    "options": [
+      "Center Circle",
+      "Penalty Area",
+      "Corner Arc",
+      "Halfway Line"
+    ],
+    "answer": "Penalty Area"
+  },
+  {
+    "question": "Which NBA legend was known as 'His Airness'?",
+    "options": [
+      "LeBron James",
+      "Michael Jordan",
+      "Kobe Bryant",
+      "Magic Johnson"
+    ],
+    "answer": "Michael Jordan"
+  },
+  {
+    "question": "In swimming, what is the term for a race that combines four different strokes?",
+    "options": [
+      "Medley",
+      "Freestyle",
+      "Butterfly",
+      "Backstroke"
+    ],
+    "answer": "Medley"
+  },
+  {
+    "question": "Which English club is known as 'The Gunners'?",
+    "options": [
+      "Manchester United",
+      "Arsenal",
+      "Tottenham",
+      "Chelsea"
+    ],
+    "answer": "Arsenal"
+  },
+  {
+    "question": "What is the violation called when a basketball player remains in the key for more than 3 seconds?",
+    "options": [
+      "5-second violation",
+      "8-second violation",
+      "3-second violation",
+      "24-second violation"
+    ],
+    "answer": "3-second violation"
+  },
+  {
+    "question": "In which sport do teams compete for the Ashes?",
+    "options": [
+      "Rugby",
+      "Cricket",
+      "Baseball",
+      "Football"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country won the first ever FIFA World Cup in 1930?",
+    "options": [
+      "Brazil",
+      "Uruguay",
+      "Argentina",
+      "Italy"
+    ],
+    "answer": "Uruguay"
+  },
+  {
+    "question": "What is the name of the championship trophy awarded to the NBA winners?",
+    "options": [
+      "Vince Lombardi Trophy",
+      "Stanley Cup",
+      "Larry O'Brien Trophy",
+      "Commissioner's Trophy"
+    ],
+    "answer": "Larry O'Brien Trophy"
+  },
+  {
+    "question": "In boxing, what does KO stand for?",
+    "options": [
+      "Knock Over",
+      "Kick Off",
+      "Knock Out",
+      "Keep Out"
+    ],
+    "answer": "Knock Out"
+  },
+  {
+    "question": "Which French striker famously headbutted an opponent in the 2006 World Cup final?",
+    "options": [
+      "Thierry Henry",
+      "Zinedine Zidane",
+      "Eric Cantona",
+      "David Trezeguet"
+    ],
+    "answer": "Zinedine Zidane"
+  },
+  {
+    "question": "Which of these is NOT a position in basketball?",
+    "options": [
+      "Point Guard",
+      "Striker",
+      "Small Forward",
+      "Power Forward"
+    ],
+    "answer": "Striker"
+  },
+  {
+    "question": "Which club has won the most Hungarian Nemzeti Bajnokság titles?",
+    "options": [
+      "Ferencváros",
+      "MTK Budapest",
+      "Újpest",
+      "Budapest Honvéd"
+    ],
+    "answer": "Ferencváros"
+  },
+  {
+    "question": "What is the term for a basketball play where a player drives baseline and scores?",
+    "options": [
+      "Baseline drive",
+      "Baseline cut",
+      "Baseline layup",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport would you perform a 'triple lutz'?",
+    "options": [
+      "Figure skating",
+      "Gymnastics",
+      "Diving",
+      "Synchronized swimming"
+    ],
+    "answer": "Figure skating"
+  },
+  {
+    "question": "Which country won the 1938 FIFA World Cup?",
+    "options": [
+      "Italy",
+      "Hungary",
+      "Brazil",
+      "Sweden"
+    ],
+    "answer": "Italy"
+  },
+  {
+    "question": "How many seconds does an NBA team have to shoot after an offensive rebound?",
+    "options": [
+      "14 seconds",
+      "16 seconds",
+      "18 seconds",
+      "20 seconds"
+    ],
+    "answer": "14 seconds"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that hits the net cord and goes over during a point?",
+    "options": [
+      "Let",
+      "Net cord",
+      "Net ball",
+      "It remains in play"
+    ],
+    "answer": "It remains in play"
+  },
+  {
+    "question": "Which French club is known as 'Les Dogues'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Lille",
+      "Lyon",
+      "Marseille"
+    ],
+    "answer": "Lille"
+  },
+  {
+    "question": "What is the term for a basketball pass that leads to an easy score in transition?",
+    "options": [
+      "Outlet pass",
+      "Breakaway pass",
+      "Fast break pass",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country hosts the Tour de France cycling race?",
+    "options": [
+      "France",
+      "Spain",
+      "Italy",
+      "Belgium"
+    ],
+    "answer": "France"
+  },
+  {
+    "question": "Who holds the record for most goals in a single World Cup tournament?",
+    "options": [
+      "Gerd Müller",
+      "Ronaldo",
+      "Just Fontaine",
+      "Miroslav Klose"
+    ],
+    "answer": "Just Fontaine"
+  },
+  {
+    "question": "What is the diameter of the center circle on a basketball court?",
+    "options": [
+      "8 feet",
+      "10 feet",
+      "12 feet",
+      "14 feet"
+    ],
+    "answer": "12 feet"
+  },
+  {
+    "question": "In which sport is the term 'bobsleigh' used?",
+    "options": [
+      "Winter sports",
+      "Summer sports",
+      "Water sports",
+      "Extreme sports"
+    ],
+    "answer": "Winter sports"
+  },
+  {
+    "question": "Which country has the most players with 100+ international caps?",
+    "options": [
+      "England",
+      "Germany",
+      "Spain",
+      "United States"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a basketball play where all five players move without the ball?",
+    "options": [
+      "Motion offense",
+      "Princeton offense",
+      "Triangle offense",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In cricket, what is a 'doosra'?",
+    "options": [
+      "A type of bat",
+      "A fielding position",
+      "A type of delivery that turns the other way",
+      "A scoring shot"
+    ],
+    "answer": "A type of delivery that turns the other way"
+  },
+  {
+    "question": "Which club has the nickname 'The Potters'?",
+    "options": [
+      "Stoke City",
+      "Port Vale",
+      "West Ham United",
+      "Sunderland"
+    ],
+    "answer": "Stoke City"
+  },
+  {
+    "question": "Which NBA team plays in the 'Gainbridge Fieldhouse'?",
+    "options": [
+      "Indiana Pacers",
+      "Detroit Pistons",
+      "Cleveland Cavaliers",
+      "Milwaukee Bucks"
+    ],
+    "answer": "Indiana Pacers"
+  },
+  {
+    "question": "In which sport is the term 'albatross' also known as a 'double eagle'?",
+    "options": [
+      "Golf",
+      "Tennis",
+      "Badminton",
+      "Archery"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for Sweden?",
+    "options": [
+      "Zlatan Ibrahimović",
+      "Henrik Larsson",
+      "Gunnar Nordahl",
+      "Sven Rydell"
+    ],
+    "answer": "Zlatan Ibrahimović"
+  },
+  {
+    "question": "What is the term for a basketball move where a player uses a behind-the-back dribble?",
+    "options": [
+      "Behind-the-back crossover",
+      "Spin move",
+      "Hesitation move",
+      "Euro step"
+    ],
+    "answer": "Behind-the-back crossover"
+  },
+  {
+    "question": "Which country won the 2011 Rugby World Cup?",
+    "options": [
+      "New Zealand",
+      "France",
+      "Australia",
+      "South Africa"
+    ],
+    "answer": "New Zealand"
+  },
+  {
+    "question": "Which club has won the most Norwegian Eliteserien titles?",
+    "options": [
+      "Rosenborg",
+      "Molde",
+      "Viking",
+      "Lillestrøm"
+    ],
+    "answer": "Rosenborg"
+  },
+  {
+    "question": "What is the term for a basketball player who can score from anywhere on the court?",
+    "options": [
+      "Volume scorer",
+      "Three-level scorer",
+      "Offensive weapon",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'leg before wicket' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Rounders",
+      "Softball"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in weightlifting?",
+    "options": [
+      "China",
+      "Russia",
+      "United States",
+      "Bulgaria"
+    ],
+    "answer": "China"
+  },
+  {
+    "question": "What is the term for a football player who takes goal kicks?",
+    "options": [
+      "Goalkeeper",
+      "Any defender",
+      "The captain",
+      "Any player"
+    ],
+    "answer": "Goalkeeper"
+  },
+  {
+    "question": "Which NBA player is known as 'The Brow'?",
+    "options": [
+      "Anthony Davis",
+      "Giannis Antetokounmpo",
+      "Joel Embiid",
+      "Karl-Anthony Towns"
+    ],
+    "answer": "Anthony Davis"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that is hit with sidespin?",
+    "options": [
+      "Slice",
+      "Topspin",
+      "Flat shot",
+      "American twist"
+    ],
+    "answer": "American twist"
+  },
+  {
+    "question": "Which country won the 1954 FIFA World Cup?",
+    "options": [
+      "West Germany",
+      "Hungary",
+      "Brazil",
+      "Uruguay"
+    ],
+    "answer": "West Germany"
+  },
+  {
+    "question": "What is the term for a basketball shot made while being heavily contested?",
+    "options": [
+      "Contested shot",
+      "Difficult shot",
+      "Challenged shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'hooker' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which club has won the most Finnish Veikkausliiga titles?",
+    "options": [
+      "HJK Helsinki",
+      "KuPS",
+      "Haka",
+      "TPS"
+    ],
+    "answer": "HJK Helsinki"
+  },
+  {
+    "question": "What is the term for a basketball defense that focuses on protecting the paint?",
+    "options": [
+      "Pack-line defense",
+      "Zone defense",
+      "Sagging defense",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country invented volleyball?",
+    "options": [
+      "United States",
+      "Brazil",
+      "Russia",
+      "Japan"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "Who is the all-time top scorer for Poland?",
+    "options": [
+      "Robert Lewandowski",
+      "Włodzimierz Lubański",
+      "Grzegorz Lato",
+      "Kazimierz Deyna"
+    ],
+    "answer": "Robert Lewandowski"
+  },
+  {
+    "question": "What is the term for a basketball shot that is released off the dribble?",
+    "options": [
+      "Pull-up jumper",
+      "Off-the-dribble shot",
+      "Dribble pull-up",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'bouncer' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 1950 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "Uruguay",
+      "Sweden",
+      "Switzerland"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "What is the term for a basketball player who excels at shot blocking?",
+    "options": [
+      "Rim protector",
+      "Shot blocker",
+      "Defensive anchor",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'game' used instead of 'match'?",
+    "options": [
+      "Basketball",
+      "Baseball",
+      "Hockey",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Bulgarian First League titles?",
+    "options": [
+      "CSKA Sofia",
+      "Levski Sofia",
+      "Ludogorets Razgrad",
+      "Slavia Sofia"
+    ],
+    "answer": "CSKA Sofia"
+  },
+  {
+    "question": "What is the term for a basketball shot made from the corner three-point area?",
+    "options": [
+      "Corner three",
+      "Wing three",
+      "Baseline three",
+      "All of the above"
+    ],
+    "answer": "Corner three"
+  },
+  {
+    "question": "Which country won the 1979 Cricket World Cup?",
+    "options": [
+      "West Indies",
+      "England",
+      "Australia",
+      "Pakistan"
+    ],
+    "answer": "West Indies"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Belgian First Division A?",
+    "options": [
+      "Albert De Cleyn",
+      "Jef Mermans",
+      "Arthur Ceuleers",
+      "Erwin Vandenbergh"
+    ],
+    "answer": "Albert De Cleyn"
+  },
+  {
+    "question": "What is the term for a basketball violation when a player hangs on the rim?",
+    "options": [
+      "Rim hanging",
+      "Goal tending",
+      "Basket interference",
+      "Technical foul"
+    ],
+    "answer": "Technical foul"
+  },
+  {
+    "question": "In which sport is the term 'sheet' used?",
+    "options": [
+      "Curling",
+      "Sailing",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Curling"
+  },
+  {
+    "question": "Which country has won the most Arab Cup titles?",
+    "options": [
+      "Iraq",
+      "Saudi Arabia",
+      "Egypt",
+      "Tunisia"
+    ],
+    "answer": "Iraq"
+  },
+  {
+    "question": "What is the term for a football shot that is volleyed from a cross?",
+    "options": [
+      "Volley",
+      "Half-volley",
+      "First-time shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which NBA team has the most consecutive playoff appearances?",
+    "options": [
+      "San Antonio Spurs",
+      "Boston Celtics",
+      "Los Angeles Lakers",
+      "Philadelphia 76ers"
+    ],
+    "answer": "San Antonio Spurs"
+  },
+  {
+    "question": "Which club has won the most Primeira Liga titles in Portugal?",
+    "options": [
+      "Sporting CP",
+      "Porto",
+      "Benfica",
+      "Braga"
+    ],
+    "answer": "Benfica"
+  },
+  {
+    "question": "What is the term for a basketball play where a player scores after an offensive rebound?",
+    "options": [
+      "Putback",
+      "Tip-in",
+      "Follow-up",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport would you perform a 'fosbury flop'?",
+    "options": [
+      "Pole vault",
+      "High jump",
+      "Long jump",
+      "Triple jump"
+    ],
+    "answer": "High jump"
+  },
+  {
+    "question": "Which country won the 1966 FIFA World Cup?",
+    "options": [
+      "West Germany",
+      "Portugal",
+      "England",
+      "Brazil"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "How many timeouts does each team get per NBA game?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that lands near the net?",
+    "options": [
+      "Volley",
+      "Drop shot",
+      "Lob",
+      "Smash"
+    ],
+    "answer": "Drop shot"
+  },
+  {
+    "question": "Which Scottish club plays at Celtic Park?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Celtic"
+  },
+  {
+    "question": "What is the term for a basketball pass that leads to an alley-oop dunk?",
+    "options": [
+      "Lob pass",
+      "Bounce pass",
+      "Outlet pass",
+      "Chest pass"
+    ],
+    "answer": "Lob pass"
+  },
+  {
+    "question": "Which country hosts the Australian Open?",
+    "options": [
+      "Australia",
+      "New Zealand",
+      "South Africa",
+      "India"
+    ],
+    "answer": "Australia"
+  },
+  {
+    "question": "Who holds the record for most goals in a single Premier League season?",
+    "options": [
+      "Alan Shearer",
+      "Mohamed Salah",
+      "Erling Haaland",
+      "Andy Cole"
+    ],
+    "answer": "Erling Haaland"
+  },
+  {
+    "question": "What is the circumference of an NBA basketball in inches?",
+    "options": [
+      "28.5 inches",
+      "29.5 inches",
+      "30.5 inches",
+      "31.5 inches"
+    ],
+    "answer": "29.5 inches"
+  },
+  {
+    "question": "In which sport is the term 'pinfall' used?",
+    "options": [
+      "Bowling",
+      "Wrestling",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which country has hosted the most World Cups?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Italy",
+      "United States"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a basketball violation when a defender stays in the paint too long?",
+    "options": [
+      "Offensive 3-second violation",
+      "Defensive 3-second violation",
+      "Lane violation",
+      "Key violation"
+    ],
+    "answer": "Defensive 3-second violation"
+  },
+  {
+    "question": "In cricket, what is a 'googly'?",
+    "options": [
+      "A type of bat",
+      "A fielding position",
+      "A type of delivery",
+      "A scoring shot"
+    ],
+    "answer": "A type of delivery"
+  },
+  {
+    "question": "Which club has the nickname 'The Villans'?",
+    "options": [
+      "Newcastle United",
+      "Aston Villa",
+      "Wolverhampton",
+      "Leeds United"
+    ],
+    "answer": "Aston Villa"
+  },
+  {
+    "question": "Which NBA team plays in the 'Chase Center'?",
+    "options": [
+      "Golden State Warriors",
+      "Sacramento Kings",
+      "Los Angeles Clippers",
+      "Portland Trail Blazers"
+    ],
+    "answer": "Golden State Warriors"
+  },
+  {
+    "question": "In which sport is the term 'albatross' used?",
+    "options": [
+      "Golf",
+      "Tennis",
+      "Badminton",
+      "Squash"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for France?",
+    "options": [
+      "Thierry Henry",
+      "Olivier Giroud",
+      "Michel Platini",
+      "Kylian Mbappé"
+    ],
+    "answer": "Olivier Giroud"
+  },
+  {
+    "question": "What is the term for a basketball move where a player changes direction quickly?",
+    "options": [
+      "Crossover",
+      "Spin move",
+      "Euro step",
+      "Hesitation move"
+    ],
+    "answer": "Crossover"
+  },
+  {
+    "question": "Which country won the 2015 Rugby World Cup?",
+    "options": [
+      "New Zealand",
+      "Australia",
+      "South Africa",
+      "England"
+    ],
+    "answer": "New Zealand"
+  },
+  {
+    "question": "Which club has won the most Scottish Premier League titles?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Rangers"
+  },
+  {
+    "question": "What is the term for a basketball player who is the primary scorer?",
+    "options": [
+      "Point guard",
+      "Shooting guard",
+      "Small forward",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'inning' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in athletics?",
+    "options": [
+      "United States",
+      "Russia",
+      "Jamaica",
+      "Kenya"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a football player who takes throw-ins?",
+    "options": [
+      "Any player",
+      "Only defenders",
+      "Only attackers",
+      "The captain"
+    ],
+    "answer": "Any player"
+  },
+  {
+    "question": "Which NBA player is known as 'The Joker'?",
+    "options": [
+      "Nikola Jokić",
+      "Luka Dončić",
+      "Giannis Antetokounmpo",
+      "Joel Embiid"
+    ],
+    "answer": "Nikola Jokić"
+  },
+  {
+    "question": "In tennis, what is the term for a shot hit before the ball bounces?",
+    "options": [
+      "Volley",
+      "Half-volley",
+      "Smash",
+      "Drive"
+    ],
+    "answer": "Volley"
+  },
+  {
+    "question": "Which country won the 1994 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "Italy",
+      "Bulgaria",
+      "Sweden"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "What is the term for a basketball shot made with one hand while jumping?",
+    "options": [
+      "Set shot",
+      "Jump shot",
+      "Hook shot",
+      "Layup"
+    ],
+    "answer": "Jump shot"
+  },
+  {
+    "question": "In which sport is the term 'maul' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "American football",
+      "Australian rules football"
+    ],
+    "answer": "Rugby union"
+  },
+  {
+    "question": "Which club has won the most DFB-Pokal titles?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Werder Bremen",
+      "Schalke 04"
+    ],
+    "answer": "Bayern Munich"
+  },
+  {
+    "question": "What is the term for a basketball play where two defenders guard one offensive player?",
+    "options": [
+      "Zone defense",
+      "Man-to-man defense",
+      "Double team",
+      "Press defense"
+    ],
+    "answer": "Double team"
+  },
+  {
+    "question": "Which country invented Australian rules football?",
+    "options": [
+      "Australia",
+      "New Zealand",
+      "England",
+      "Ireland"
+    ],
+    "answer": "Australia"
+  },
+  {
+    "question": "Who is the all-time top scorer for Spain?",
+    "options": [
+      "David Villa",
+      "Fernando Torres",
+      "Raúl",
+      "Fernando Hierro"
+    ],
+    "answer": "David Villa"
+  },
+  {
+    "question": "What is the term for a basketball shot that hits the backboard and goes in?",
+    "options": [
+      "Bank shot",
+      "Glass shot",
+      "Board shot",
+      "Backboard shot"
+    ],
+    "answer": "Bank shot"
+  },
+  {
+    "question": "In which sport is the term 'boundary' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Tennis",
+      "Soccer"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 1998 FIFA World Cup?",
+    "options": [
+      "United States",
+      "France",
+      "Japan/South Korea",
+      "Germany"
+    ],
+    "answer": "France"
+  },
+  {
+    "question": "What is the term for a basketball player who specializes in three-point shooting?",
+    "options": [
+      "Sniper",
+      "Sharpshooter",
+      "Long-range specialist",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'fault' used?",
+    "options": [
+      "Tennis",
+      "Volleyball",
+      "Badminton",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Copa del Rey titles?",
+    "options": [
+      "Real Madrid",
+      "Barcelona",
+      "Athletic Bilbao",
+      "Atlético Madrid"
+    ],
+    "answer": "Barcelona"
+  },
+  {
+    "question": "What is the term for a basketball shot made while falling to the side?",
+    "options": [
+      "Floater",
+      "Runner",
+      "Leaner",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country won the 2007 Cricket World Cup?",
+    "options": [
+      "India",
+      "Sri Lanka",
+      "Australia",
+      "Pakistan"
+    ],
+    "answer": "Australia"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Bundesliga?",
+    "options": [
+      "Gerd Müller",
+      "Robert Lewandowski",
+      "Klaus Fischer",
+      "Jupp Heynckes"
+    ],
+    "answer": "Gerd Müller"
+  },
+  {
+    "question": "What is the term for a basketball violation for interfering with a shot on its downward path?",
+    "options": [
+      "Goaltending",
+      "Basket interference",
+      "Shot blocking",
+      "Defensive violation"
+    ],
+    "answer": "Goaltending"
+  },
+  {
+    "question": "In which sport is the term 'house' used?",
+    "options": [
+      "Curling",
+      "Bowling",
+      "Golf",
+      "Tennis"
+    ],
+    "answer": "Curling"
+  },
+  {
+    "question": "Which country has won the most Copa América titles?",
+    "options": [
+      "Brazil",
+      "Argentina",
+      "Uruguay",
+      "Chile"
+    ],
+    "answer": "Uruguay"
+  },
+  {
+    "question": "What is the term for a football shot that is hit with the outside of the foot?",
+    "options": [
+      "Trivela",
+      "Rabona",
+      "Bicycle kick",
+      "Scissor kick"
+    ],
+    "answer": "Trivela"
+  },
+  {
+    "question": "Which NBA team has the most regular season wins in history?",
+    "options": [
+      "Los Angeles Lakers",
+      "Boston Celtics",
+      "San Antonio Spurs",
+      "Chicago Bulls"
+    ],
+    "answer": "Boston Celtics"
+  },
+  {
+    "question": "Which club has won the most Serie A titles?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Roma"
+    ],
+    "answer": "Juventus"
+  },
+  {
+    "question": "What is the term for a basketball shot that is blocked but still goes in?",
+    "options": [
+      "Lucky shot",
+      "And-one",
+      "Contested shot",
+      "Swish"
+    ],
+    "answer": "And-one"
+  },
+  {
+    "question": "In which sport would you find a 'pit stop'?",
+    "options": [
+      "Cycling",
+      "Motor racing",
+      "Horse racing",
+      "Track and field"
+    ],
+    "answer": "Motor racing"
+  },
+  {
+    "question": "Which country won the 1970 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "Italy",
+      "West Germany",
+      "Uruguay"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "How many teams make the NBA playoffs?",
+    "options": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "answer": "16"
+  },
+  {
+    "question": "In tennis, what is the term for winning a game without losing a point?",
+    "options": [
+      "Perfect game",
+      "Love game",
+      "Clean sweep",
+      "Golden game"
+    ],
+    "answer": "Love game"
+  },
+  {
+    "question": "Which English club plays at the Emirates Stadium?",
+    "options": [
+      "Chelsea",
+      "Arsenal",
+      "Tottenham",
+      "West Ham"
+    ],
+    "answer": "Arsenal"
+  },
+  {
+    "question": "What is the term for a basketball pass that goes through a defender's legs?",
+    "options": [
+      "Bounce pass",
+      "Chest pass",
+      "Between-the-legs pass",
+      "Overhead pass"
+    ],
+    "answer": "Between-the-legs pass"
+  },
+  {
+    "question": "Which country hosts the Tour de France?",
+    "options": [
+      "Italy",
+      "Spain",
+      "France",
+      "Belgium"
+    ],
+    "answer": "France"
+  },
+  {
+    "question": "Who scored the fastest hat-trick in Premier League history?",
+    "options": [
+      "Sergio Aguero",
+      "Sadio Mane",
+      "Robbie Fowler",
+      "James Ward-Prowse"
+    ],
+    "answer": "Sadio Mane"
+  },
+  {
+    "question": "What is the width of an NBA basketball court in feet?",
+    "options": [
+      "48 feet",
+      "50 feet",
+      "52 feet",
+      "54 feet"
+    ],
+    "answer": "50 feet"
+  },
+  {
+    "question": "In which sport is the term 'takedown' used?",
+    "options": [
+      "Boxing",
+      "Wrestling",
+      "Judo",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country has never reached a World Cup final?",
+    "options": [
+      "Portugal",
+      "Belgium",
+      "Croatia",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the term for a basketball violation when an offensive player stays in the paint too long?",
+    "options": [
+      "Offensive 3-second violation",
+      "Defensive 3-second violation",
+      "Lane violation",
+      "Paint violation"
+    ],
+    "answer": "Offensive 3-second violation"
+  },
+  {
+    "question": "In cricket, what is a 'duck'?",
+    "options": [
+      "A score of zero",
+      "A type of shot",
+      "A fielding position",
+      "A type of delivery"
+    ],
+    "answer": "A score of zero"
+  },
+  {
+    "question": "Which club has the nickname 'The Blues'?",
+    "options": [
+      "Manchester City",
+      "Chelsea",
+      "Everton",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which NBA team plays in the 'United Center'?",
+    "options": [
+      "Chicago Bulls",
+      "Detroit Pistons",
+      "Cleveland Cavaliers",
+      "Indiana Pacers"
+    ],
+    "answer": "Chicago Bulls"
+  },
+  {
+    "question": "In which sport is the term 'bogey' used?",
+    "options": [
+      "Golf",
+      "Tennis",
+      "Badminton",
+      "Squash"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for Argentina?",
+    "options": [
+      "Diego Maradona",
+      "Lionel Messi",
+      "Gabriel Batistuta",
+      "Sergio Aguero"
+    ],
+    "answer": "Lionel Messi"
+  },
+  {
+    "question": "What is the term for a basketball shot made while moving sideways?",
+    "options": [
+      "Floater",
+      "Runner",
+      "Fadeaway",
+      "Step-back"
+    ],
+    "answer": "Step-back"
+  },
+  {
+    "question": "Which country won the 2019 Rugby World Cup?",
+    "options": [
+      "New Zealand",
+      "South Africa",
+      "England",
+      "Wales"
+    ],
+    "answer": "South Africa"
+  },
+  {
+    "question": "Which club has won the most Ligue 1 titles?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Saint-Étienne",
+      "Monaco"
+    ],
+    "answer": "Paris Saint-Germain"
+  },
+  {
+    "question": "What is the term for a basketball player who primarily defends and rebounds?",
+    "options": [
+      "Point guard",
+      "Shooting guard",
+      "Power forward",
+      "Small forward"
+    ],
+    "answer": "Power forward"
+  },
+  {
+    "question": "In which sport is the term 'strike zone' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Baseball"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in swimming?",
+    "options": [
+      "United States",
+      "Australia",
+      "China",
+      "Germany"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a football match official who oversees substitutions?",
+    "options": [
+      "Referee",
+      "Assistant referee",
+      "Fourth official",
+      "VAR official"
+    ],
+    "answer": "Fourth official"
+  },
+  {
+    "question": "Which NBA player is known as 'The Klaw'?",
+    "options": [
+      "Kawhi Leonard",
+      "Paul George",
+      "Jimmy Butler",
+      "Draymond Green"
+    ],
+    "answer": "Kawhi Leonard"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that hits the net and goes over?",
+    "options": [
+      "Net ball",
+      "Let",
+      "Net cord",
+      "Lucky shot"
+    ],
+    "answer": "Net cord"
+  },
+  {
+    "question": "Which country won the 2014 FIFA World Cup?",
+    "options": [
+      "Argentina",
+      "Brazil",
+      "Germany",
+      "Netherlands"
+    ],
+    "answer": "Germany"
+  },
+  {
+    "question": "What is the term for a basketball shot made with high arc?",
+    "options": [
+      "Line drive",
+      "Rainbow shot",
+      "Lob shot",
+      "Arced shot"
+    ],
+    "answer": "Rainbow shot"
+  },
+  {
+    "question": "In which sport is the term 'scrum' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which club has won the most League Cups in England?",
+    "options": [
+      "Manchester United",
+      "Arsenal",
+      "Liverpool",
+      "Chelsea"
+    ],
+    "answer": "Liverpool"
+  },
+  {
+    "question": "What is the term for a basketball violation for crossing half-court in time?",
+    "options": [
+      "3-second violation",
+      "5-second violation",
+      "8-second violation",
+      "10-second violation"
+    ],
+    "answer": "8-second violation"
+  },
+  {
+    "question": "Which country invented cricket?",
+    "options": [
+      "Australia",
+      "England",
+      "India",
+      "South Africa"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "Who is the all-time top scorer for Germany?",
+    "options": [
+      "Miroslav Klose",
+      "Gerd Muller",
+      "Thomas Muller",
+      "Lukas Podolski"
+    ],
+    "answer": "Miroslav Klose"
+  },
+  {
+    "question": "What is the term for a basketball shot that rolls around the rim before going in?",
+    "options": [
+      "Swish",
+      "Brick",
+      "Roller",
+      "Friendly roll"
+    ],
+    "answer": "Friendly roll"
+  },
+  {
+    "question": "In which sport is the term 'wicket' used?",
+    "options": [
+      "Baseball",
+      "Cricket",
+      "Hockey",
+      "Tennis"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 2006 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "South Africa",
+      "Germany",
+      "Japan"
+    ],
+    "answer": "Germany"
+  },
+  {
+    "question": "What is the term for a basketball player who can play multiple positions?",
+    "options": [
+      "Specialist",
+      "Utility player",
+      "Versatile player",
+      "All-rounder"
+    ],
+    "answer": "Versatile player"
+  },
+  {
+    "question": "In which sport is the term 'deuce' used?",
+    "options": [
+      "Tennis",
+      "Volleyball",
+      "Table tennis",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Eredivisie titles?",
+    "options": [
+      "PSV Eindhoven",
+      "Feyenoord",
+      "Ajax",
+      "FC Twente"
+    ],
+    "answer": "Ajax"
+  },
+  {
+    "question": "What is the term for a basketball shot made while being fouled?",
+    "options": [
+      "And-one",
+      "Contested shot",
+      "Foul shot",
+      "Penalty shot"
+    ],
+    "answer": "And-one"
+  },
+  {
+    "question": "Which country won the 2011 Cricket World Cup?",
+    "options": [
+      "India",
+      "Sri Lanka",
+      "Australia",
+      "Pakistan"
+    ],
+    "answer": "India"
+  },
+  {
+    "question": "Who is the all-time top scorer in La Liga?",
+    "options": [
+      "Cristiano Ronaldo",
+      "Lionel Messi",
+      "Telmo Zarra",
+      "Hugo Sanchez"
+    ],
+    "answer": "Lionel Messi"
+  },
+  {
+    "question": "What is the term for a basketball violation for holding the ball too long?",
+    "options": [
+      "3-second violation",
+      "5-second violation",
+      "8-second violation",
+      "24-second violation"
+    ],
+    "answer": "5-second violation"
+  },
+  {
+    "question": "In which sport is the term 'stone' used?",
+    "options": [
+      "Curling",
+      "Bowling",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Curling"
+  },
+  {
+    "question": "Which country has won the most Gold Cup titles?",
+    "options": [
+      "United States",
+      "Mexico",
+      "Canada",
+      "Costa Rica"
+    ],
+    "answer": "Mexico"
+  },
+  {
+    "question": "What is the term for a football shot that dips suddenly?",
+    "options": [
+      "Knuckleball",
+      "Dipping shot",
+      "Curve",
+      "Swerve"
+    ],
+    "answer": "Knuckleball"
+  },
+  {
+    "question": "Which NBA team has the most consecutive playoff appearances?",
+    "options": [
+      "San Antonio Spurs",
+      "Boston Celtics",
+      "Los Angeles Lakers",
+      "Philadelphia 76ers"
+    ],
+    "answer": "San Antonio Spurs"
+  },
+  {
+    "question": "Which club has won the most Czech First League titles?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Sparta Prague"
+  },
+  {
+    "question": "What is the term for a basketball play where a player scores after an offensive rebound without dribbling?",
+    "options": [
+      "Putback dunk",
+      "Tip-in",
+      "Follow shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport would you perform a 'double axel'?",
+    "options": [
+      "Figure skating",
+      "Gymnastics",
+      "Ski jumping",
+      "Snowboarding"
+    ],
+    "answer": "Figure skating"
+  },
+  {
+    "question": "Which country won the 1990 FIFA World Cup?",
+    "options": [
+      "West Germany",
+      "Argentina",
+      "Italy",
+      "England"
+    ],
+    "answer": "West Germany"
+  },
+  {
+    "question": "How many referees are on the court during an NBA game?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that lands just inside the baseline?",
+    "options": [
+      "Deep shot",
+      "Baseline shot",
+      "Long shot",
+      "Drive"
+    ],
+    "answer": "Deep shot"
+  },
+  {
+    "question": "Which German club is known as 'Die Roten Bullen'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "RB Leipzig",
+      "Bayer Leverkusen"
+    ],
+    "answer": "RB Leipzig"
+  },
+  {
+    "question": "What is the term for a basketball pass that goes through the defense to a cutter?",
+    "options": [
+      "Bounce pass",
+      "Thread pass",
+      "Needle pass",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country hosts the Australian Rules Football Grand Final?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Perth",
+      "Brisbane"
+    ],
+    "answer": "Melbourne"
+  },
+  {
+    "question": "Who holds the record for most goals in a single Champions League season?",
+    "options": [
+      "Cristiano Ronaldo",
+      "Lionel Messi",
+      "Robert Lewandowski",
+      "Karim Benzema"
+    ],
+    "answer": "Cristiano Ronaldo"
+  },
+  {
+    "question": "What is the width of the key (paint) in the NBA?",
+    "options": [
+      "12 feet",
+      "14 feet",
+      "16 feet",
+      "18 feet"
+    ],
+    "answer": "16 feet"
+  },
+  {
+    "question": "In which sport is the term 'skeleton' used?",
+    "options": [
+      "Winter sports",
+      "Summer sports",
+      "Water sports",
+      "Extreme sports"
+    ],
+    "answer": "Winter sports"
+  },
+  {
+    "question": "Which country has produced the most FIFA World Cup winning captains?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Italy",
+      "Argentina"
+    ],
+    "answer": "Germany"
+  },
+  {
+    "question": "What is the term for a basketball play where a player sets a screen away from the ball?",
+    "options": [
+      "Off-ball screen",
+      "Back screen",
+      "Down screen",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In cricket, what is a 'googly' also known as?",
+    "options": [
+      "Wrong'un",
+      "Leg break",
+      "Off break",
+      "Top spinner"
+    ],
+    "answer": "Wrong'un"
+  },
+  {
+    "question": "Which club has the nickname 'The Lions'?",
+    "options": [
+      "Millwall",
+      "Aston Villa",
+      "Chelsea",
+      "Rangers"
+    ],
+    "answer": "Millwall"
+  },
+  {
+    "question": "Which NBA team plays in the 'Moda Center'?",
+    "options": [
+      "Portland Trail Blazers",
+      "Utah Jazz",
+      "Denver Nuggets",
+      "Sacramento Kings"
+    ],
+    "answer": "Portland Trail Blazers"
+  },
+  {
+    "question": "In which sport is the term 'ostrich' theoretically possible but never achieved?",
+    "options": [
+      "Golf",
+      "Tennis",
+      "Badminton",
+      "Archery"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for Belgium?",
+    "options": [
+      "Romelu Lukaku",
+      "Eden Hazard",
+      "Kevin De Bruyne",
+      "Jan Ceulemans"
+    ],
+    "answer": "Romelu Lukaku"
+  },
+  {
+    "question": "What is the term for a basketball move where a player uses the glass to score?",
+    "options": [
+      "Bank shot",
+      "Glass shot",
+      "Board shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country won the 1995 Rugby World Cup?",
+    "options": [
+      "South Africa",
+      "New Zealand",
+      "Australia",
+      "England"
+    ],
+    "answer": "South Africa"
+  },
+  {
+    "question": "Which club has won the most Polish Ekstraklasa titles?",
+    "options": [
+      "Legia Warsaw",
+      "Górnik Zabrze",
+      "Ruch Chorzów",
+      "Wisła Kraków"
+    ],
+    "answer": "Legia Warsaw"
+  },
+  {
+    "question": "What is the term for a basketball player who can handle the ball like a guard but has forward size?",
+    "options": [
+      "Point forward",
+      "Combo forward",
+      "Swingman",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'bye' used?",
+    "options": [
+      "Cricket",
+      "Tennis",
+      "Golf",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in sailing?",
+    "options": [
+      "Great Britain",
+      "United States",
+      "Australia",
+      "Norway"
+    ],
+    "answer": "Great Britain"
+  },
+  {
+    "question": "What is the term for a football player who takes penalty kicks?",
+    "options": [
+      "Any player",
+      "Only the captain",
+      "Only attacking players",
+      "The team's designated penalty taker"
+    ],
+    "answer": "Any player"
+  },
+  {
+    "question": "Which NBA player is known as 'The Process'?",
+    "options": [
+      "Joel Embiid",
+      "Ben Simmons",
+      "James Harden",
+      "Tobias Harris"
+    ],
+    "answer": "Joel Embiid"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that barely clears the net?",
+    "options": [
+      "Drop shot",
+      "Net skimmer",
+      "Low shot",
+      "Flat shot"
+    ],
+    "answer": "Net skimmer"
+  },
+  {
+    "question": "Which country won the 1934 FIFA World Cup?",
+    "options": [
+      "Italy",
+      "Czechoslovakia",
+      "Germany",
+      "Austria"
+    ],
+    "answer": "Italy"
+  },
+  {
+    "question": "What is the term for a basketball shot made while moving sideways away from the defender?",
+    "options": [
+      "Step-back jumper",
+      "Fadeaway",
+      "Pull-up jumper",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'mark' used?",
+    "options": [
+      "Australian rules football",
+      "Gaelic football",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which club has won the most Romanian Liga I titles?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Steaua Bucharest"
+  },
+  {
+    "question": "What is the term for a basketball defense that traps the ball handler?",
+    "options": [
+      "Trap defense",
+      "Double team",
+      "Press defense",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country invented the modern Olympic Games?",
+    "options": [
+      "Greece",
+      "France",
+      "United States",
+      "United Kingdom"
+    ],
+    "answer": "France"
+  },
+  {
+    "question": "Who is the all-time top scorer for Croatia?",
+    "options": [
+      "Davor Šuker",
+      "Luka Modrić",
+      "Ivan Perišić",
+      "Mario Mandžukić"
+    ],
+    "answer": "Davor Šuker"
+  },
+  {
+    "question": "What is the term for a basketball shot that is released very quickly?",
+    "options": [
+      "Quick release",
+      "Catch and shoot",
+      "Spot-up shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'wicket-keeper' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Rounders",
+      "Softball"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 1966 FIFA World Cup?",
+    "options": [
+      "England",
+      "West Germany",
+      "Spain",
+      "Italy"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "What is the term for a basketball player who excels at offensive rebounding?",
+    "options": [
+      "Glass cleaner",
+      "Board man",
+      "Rebound specialist",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'deuce' also used besides tennis?",
+    "options": [
+      "Volleyball",
+      "Table tennis",
+      "Badminton",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Swedish Allsvenskan titles?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Helsingborg"
+    ],
+    "answer": "Malmö FF"
+  },
+  {
+    "question": "What is the term for a basketball shot made with a high arc from long range?",
+    "options": [
+      "Rainbow three",
+      "Deep three",
+      "Logo three",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country won the 1975 Cricket World Cup?",
+    "options": [
+      "West Indies",
+      "Australia",
+      "England",
+      "India"
+    ],
+    "answer": "West Indies"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Portuguese Primeira Liga?",
+    "options": [
+      "Fernando Peyroteo",
+      "Eusébio",
+      "Fernando Gomes",
+      "Néné"
+    ],
+    "answer": "Fernando Peyroteo"
+  },
+  {
+    "question": "What is the term for a basketball violation when a player carries the ball?",
+    "options": [
+      "Carrying",
+      "Palming",
+      "Both carrying and palming",
+      "Traveling"
+    ],
+    "answer": "Both carrying and palming"
+  },
+  {
+    "question": "In which sport is the term 'end' used?",
+    "options": [
+      "Curling",
+      "Bowling",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Curling"
+  },
+  {
+    "question": "Which country has won the most OFC Nations Cup titles?",
+    "options": [
+      "New Zealand",
+      "Australia",
+      "Tahiti",
+      "Fiji"
+    ],
+    "answer": "New Zealand"
+  },
+  {
+    "question": "What is the term for a football shot that is chipped over the goalkeeper?",
+    "options": [
+      "Chip shot",
+      "Lob",
+      "Dink",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which NBA team has the most retired jersey numbers?",
+    "options": [
+      "Boston Celtics",
+      "Los Angeles Lakers",
+      "Chicago Bulls",
+      "New York Knicks"
+    ],
+    "answer": "Boston Celtics"
+  },
+  {
+    "question": "Which club has won the most Ukrainian Premier League titles?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Dynamo Kyiv"
+  },
+  {
+    "question": "What is the term for a basketball play where a player drives to the basket and passes to an open teammate?",
+    "options": [
+      "Drive and kick",
+      "Pick and roll",
+      "Isolation",
+      "Post-up"
+    ],
+    "answer": "Drive and kick"
+  },
+  {
+    "question": "In which sport would you perform a 'salchow'?",
+    "options": [
+      "Figure skating",
+      "Ski jumping",
+      "Snowboarding",
+      "Speed skating"
+    ],
+    "answer": "Figure skating"
+  },
+  {
+    "question": "Which country won the 1930 FIFA World Cup?",
+    "options": [
+      "Uruguay",
+      "Argentina",
+      "Brazil",
+      "United States"
+    ],
+    "answer": "Uruguay"
+  },
+  {
+    "question": "How many team fouls before the bonus free throws are awarded in college basketball?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that hits the line?",
+    "options": [
+      "Out",
+      "Let",
+      "In",
+      "Fault"
+    ],
+    "answer": "In"
+  },
+  {
+    "question": "Which Spanish club is known as 'Los Colchoneros'?",
+    "options": [
+      "Real Madrid",
+      "Barcelona",
+      "Atlético Madrid",
+      "Sevilla"
+    ],
+    "answer": "Atlético Madrid"
+  },
+  {
+    "question": "What is the term for a basketball pass that goes the length of the court?",
+    "options": [
+      "Outlet pass",
+      "Baseball pass",
+      "Long pass",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country hosts the French Open tennis tournament?",
+    "options": [
+      "France",
+      "Spain",
+      "Italy",
+      "Switzerland"
+    ],
+    "answer": "France"
+  },
+  {
+    "question": "Who holds the record for most clean sheets in Premier League history?",
+    "options": [
+      "Petr Čech",
+      "David de Gea",
+      "Edwin van der Sar",
+      "David James"
+    ],
+    "answer": "Petr Čech"
+  },
+  {
+    "question": "What is the distance from the free throw line to the basket in the NBA?",
+    "options": [
+      "13 feet",
+      "15 feet",
+      "17 feet",
+      "19 feet"
+    ],
+    "answer": "15 feet"
+  },
+  {
+    "question": "In which sport is the term 'luge' used?",
+    "options": [
+      "Winter sports",
+      "Summer sports",
+      "Water sports",
+      "Extreme sports"
+    ],
+    "answer": "Winter sports"
+  },
+  {
+    "question": "Which country has the most players in the Premier League Hall of Fame?",
+    "options": [
+      "England",
+      "France",
+      "Netherlands",
+      "Spain"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "What is the term for a basketball play where a player fakes a shot to draw a foul?",
+    "options": [
+      "Shot fake",
+      "Pump fake",
+      "Ball fake",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In cricket, what is a 'stump'?",
+    "options": [
+      "A type of bat",
+      "A fielding position",
+      "One of the three vertical posts",
+      "A scoring shot"
+    ],
+    "answer": "One of the three vertical posts"
+  },
+  {
+    "question": "Which club has the nickname 'The Baggies'?",
+    "options": [
+      "West Bromwich Albion",
+      "Wolverhampton Wanderers",
+      "Birmingham City",
+      "Aston Villa"
+    ],
+    "answer": "West Bromwich Albion"
+  },
+  {
+    "question": "Which NBA team plays in the 'Fiserv Forum'?",
+    "options": [
+      "Milwaukee Bucks",
+      "Indiana Pacers",
+      "Detroit Pistons",
+      "Cleveland Cavaliers"
+    ],
+    "answer": "Milwaukee Bucks"
+  },
+  {
+    "question": "In which sport is the term 'condor' used?",
+    "options": [
+      "Golf",
+      "Bird watching",
+      "Archery",
+      "Skeet shooting"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for Portugal?",
+    "options": [
+      "Cristiano Ronaldo",
+      "Eusébio",
+      "Luís Figo",
+      "Pauleta"
+    ],
+    "answer": "Cristiano Ronaldo"
+  },
+  {
+    "question": "What is the term for a basketball move where a player spins away from a defender?",
+    "options": [
+      "Spin move",
+      "Crossover",
+      "Euro step",
+      "Hesitation move"
+    ],
+    "answer": "Spin move"
+  },
+  {
+    "question": "Which country won the 1987 Rugby World Cup?",
+    "options": [
+      "New Zealand",
+      "Australia",
+      "France",
+      "South Africa"
+    ],
+    "answer": "New Zealand"
+  },
+  {
+    "question": "Which club has won the most Austrian Bundesliga titles?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Rapid Vienna"
+  },
+  {
+    "question": "What is the term for a basketball player who can play both forward positions?",
+    "options": [
+      "Combo forward",
+      "Point forward",
+      "Swingman",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'wide' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in rowing?",
+    "options": [
+      "United States",
+      "Great Britain",
+      "Germany",
+      "Romania"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a football player who takes free kicks?",
+    "options": [
+      "Any player",
+      "Only the captain",
+      "Only attacking players",
+      "The team's best striker"
+    ],
+    "answer": "Any player"
+  },
+  {
+    "question": "Which NBA player is known as 'The Big Fundamental'?",
+    "options": [
+      "Tim Duncan",
+      "Kevin Garnett",
+      "Dirk Nowitzki",
+      "Shaquille O'Neal"
+    ],
+    "answer": "Tim Duncan"
+  },
+  {
+    "question": "In tennis, what is the term for a shot hit with extreme power?",
+    "options": [
+      "Drive",
+      "Smash",
+      "Blast",
+      "Rocket"
+    ],
+    "answer": "Smash"
+  },
+  {
+    "question": "Which country won the 1958 FIFA World Cup?",
+    "options": [
+      "Sweden",
+      "Brazil",
+      "West Germany",
+      "France"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "What is the term for a basketball shot made while jumping off one foot?",
+    "options": [
+      "Jump shot",
+      "Floater",
+      "Runner",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'ruck' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "Australian rules football",
+      "American football"
+    ],
+    "answer": "Rugby union"
+  },
+  {
+    "question": "Which club has won the most Danish Superliga titles?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Aarhus",
+      "Midtjylland"
+    ],
+    "answer": "Copenhagen"
+  },
+  {
+    "question": "What is the term for a basketball defense where players switch assignments?",
+    "options": [
+      "Switch defense",
+      "Zone defense",
+      "Man-to-man defense",
+      "Help defense"
+    ],
+    "answer": "Switch defense"
+  },
+  {
+    "question": "Which country invented badminton?",
+    "options": [
+      "China",
+      "India",
+      "England",
+      "Japan"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "Who is the all-time top scorer for England?",
+    "options": [
+      "Wayne Rooney",
+      "Harry Kane",
+      "Gary Lineker",
+      "Bobby Charlton"
+    ],
+    "answer": "Harry Kane"
+  },
+  {
+    "question": "What is the term for a basketball shot that is softly laid into the basket?",
+    "options": [
+      "Finger roll",
+      "Layup",
+      "Floater",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'pitch' used?",
+    "options": [
+      "Cricket",
+      "Soccer",
+      "Rugby",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country hosted the 1970 FIFA World Cup?",
+    "options": [
+      "Mexico",
+      "Argentina",
+      "Spain",
+      "Italy"
+    ],
+    "answer": "Mexico"
+  },
+  {
+    "question": "What is the term for a basketball player who can play center and power forward?",
+    "options": [
+      "Combo big",
+      "Stretch four",
+      "Point center",
+      "Post player"
+    ],
+    "answer": "Combo big"
+  },
+  {
+    "question": "In which sport is the term 'advantage' used?",
+    "options": [
+      "Tennis",
+      "Soccer",
+      "Rugby",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Swiss Super League titles?",
+    "options": [
+      "Grasshopper",
+      "Basel",
+      "Young Boys",
+      "Zurich"
+    ],
+    "answer": "Grasshopper"
+  },
+  {
+    "question": "What is the term for a basketball shot made with a sweeping motion across the body?",
+    "options": [
+      "Sweep shot",
+      "Hook shot",
+      "Scoop shot",
+      "Sweeping hook"
+    ],
+    "answer": "Hook shot"
+  },
+  {
+    "question": "Which country won the 1983 Cricket World Cup?",
+    "options": [
+      "India",
+      "West Indies",
+      "Pakistan",
+      "England"
+    ],
+    "answer": "India"
+  },
+  {
+    "question": "Who is the all-time top scorer in Ligue 1?",
+    "options": [
+      "Delio Onnis",
+      "Jean-Pierre Papin",
+      "Zlatan Ibrahimović",
+      "Kylian Mbappé"
+    ],
+    "answer": "Delio Onnis"
+  },
+  {
+    "question": "What is the term for a basketball violation when a player steps out of bounds with the ball?",
+    "options": [
+      "Out of bounds",
+      "Stepping out",
+      "Boundary violation",
+      "Line violation"
+    ],
+    "answer": "Out of bounds"
+  },
+  {
+    "question": "In which sport is the term 'jack' used?",
+    "options": [
+      "Lawn bowls",
+      "Darts",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Lawn bowls"
+  },
+  {
+    "question": "Which country has won the most CONCACAF Champions League titles?",
+    "options": [
+      "Mexico",
+      "United States",
+      "Costa Rica",
+      "Honduras"
+    ],
+    "answer": "Mexico"
+  },
+  {
+    "question": "What is the term for a football shot that is hit with the instep?",
+    "options": [
+      "Laces shot",
+      "Instep drive",
+      "Power shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which NBA team has the most 60+ win seasons?",
+    "options": [
+      "San Antonio Spurs",
+      "Los Angeles Lakers",
+      "Boston Celtics",
+      "Chicago Bulls"
+    ],
+    "answer": "San Antonio Spurs"
+  },
+  {
+    "question": "Which club has won the most Turkish Süper Lig titles?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Galatasaray"
+  },
+  {
+    "question": "What is the term for a basketball play where a player scores immediately after receiving a pass?",
+    "options": [
+      "Catch and shoot",
+      "Pick and roll",
+      "Give and go",
+      "Isolation"
+    ],
+    "answer": "Catch and shoot"
+  },
+  {
+    "question": "In which sport would you find a 'pommel horse'?",
+    "options": [
+      "Gymnastics",
+      "Equestrian",
+      "Weightlifting",
+      "Track and field"
+    ],
+    "answer": "Gymnastics"
+  },
+  {
+    "question": "Which country won the 1986 FIFA World Cup?",
+    "options": [
+      "West Germany",
+      "Argentina",
+      "France",
+      "Brazil"
+    ],
+    "answer": "Argentina"
+  },
+  {
+    "question": "How many personal fouls result in ejection from an NBA game?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that is hit with heavy topspin?",
+    "options": [
+      "Slice",
+      "Flat shot",
+      "Moonball",
+      "Drive"
+    ],
+    "answer": "Moonball"
+  },
+  {
+    "question": "Which Italian club plays at the San Siro?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Both AC Milan and Inter Milan",
+      "Juventus"
+    ],
+    "answer": "Both AC Milan and Inter Milan"
+  },
+  {
+    "question": "What is the term for a basketball pass that leads directly to a dunk?",
+    "options": [
+      "Alley-oop",
+      "Bounce pass",
+      "Outlet pass",
+      "Skip pass"
+    ],
+    "answer": "Alley-oop"
+  },
+  {
+    "question": "Which country hosts the US Open tennis tournament?",
+    "options": [
+      "United Kingdom",
+      "United States",
+      "Canada",
+      "Australia"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "Who holds the record for most assists in Premier League history?",
+    "options": [
+      "Ryan Giggs",
+      "Cesc Fàbregas",
+      "Kevin De Bruyne",
+      "Frank Lampard"
+    ],
+    "answer": "Ryan Giggs"
+  },
+  {
+    "question": "What is the weight of an NBA basketball in ounces?",
+    "options": [
+      "18 ounces",
+      "20 ounces",
+      "22 ounces",
+      "24 ounces"
+    ],
+    "answer": "22 ounces"
+  },
+  {
+    "question": "In which sport is the term 'tackle' used to describe equipment?",
+    "options": [
+      "Fishing",
+      "American football",
+      "Rugby",
+      "Soccer"
+    ],
+    "answer": "Fishing"
+  },
+  {
+    "question": "Which country has produced the most Ballon d'Or winners?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Argentina",
+      "Netherlands"
+    ],
+    "answer": "Germany"
+  },
+  {
+    "question": "What is the term for a basketball play where a player sets a screen and then rolls to the basket?",
+    "options": [
+      "Pick and pop",
+      "Pick and roll",
+      "Screen and cut",
+      "Backdoor cut"
+    ],
+    "answer": "Pick and roll"
+  },
+  {
+    "question": "In cricket, what is a 'yorker'?",
+    "options": [
+      "A type of bat",
+      "A fielding position",
+      "A delivery that lands at the batsman's feet",
+      "A scoring shot"
+    ],
+    "answer": "A delivery that lands at the batsman's feet"
+  },
+  {
+    "question": "Which club has the nickname 'The Toffees'?",
+    "options": [
+      "Everton",
+      "Tottenham",
+      "Newcastle United",
+      "West Ham United"
+    ],
+    "answer": "Everton"
+  },
+  {
+    "question": "Which NBA team plays in the 'Footprint Center'?",
+    "options": [
+      "Phoenix Suns",
+      "Utah Jazz",
+      "Denver Nuggets",
+      "Oklahoma City Thunder"
+    ],
+    "answer": "Phoenix Suns"
+  },
+  {
+    "question": "In which sport is the term 'eagle' better than 'birdie'?",
+    "options": [
+      "Golf",
+      "Badminton",
+      "Tennis",
+      "Archery"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for the Netherlands?",
+    "options": [
+      "Robin van Persie",
+      "Patrick Kluivert",
+      "Dennis Bergkamp",
+      "Ruud van Nistelrooy"
+    ],
+    "answer": "Robin van Persie"
+  },
+  {
+    "question": "What is the term for a basketball move where a player fakes one way and goes another?",
+    "options": [
+      "Crossover",
+      "Hesitation move",
+      "Spin move",
+      "Euro step"
+    ],
+    "answer": "Hesitation move"
+  },
+  {
+    "question": "Which country won the 2003 Rugby World Cup?",
+    "options": [
+      "Australia",
+      "England",
+      "South Africa",
+      "New Zealand"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "Which club has won the most Belgian First Division A titles?",
+    "options": [
+      "Club Brugge",
+      "Anderlecht",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Anderlecht"
+  },
+  {
+    "question": "What is the term for a basketball player who excels at defense?",
+    "options": [
+      "Lockdown defender",
+      "Stopper",
+      "Defensive specialist",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'no-ball' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in diving?",
+    "options": [
+      "United States",
+      "China",
+      "Russia",
+      "Australia"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a football player who takes corner kicks?",
+    "options": [
+      "Any player",
+      "Only attackers",
+      "Only midfielders",
+      "The team's best shooter"
+    ],
+    "answer": "Any player"
+  },
+  {
+    "question": "Which NBA player is known as 'Spida'?",
+    "options": [
+      "Donovan Mitchell",
+      "Ja Morant",
+      "Trae Young",
+      "Zion Williamson"
+    ],
+    "answer": "Donovan Mitchell"
+  },
+  {
+    "question": "In tennis, what is the term for a shot hit with backspin?",
+    "options": [
+      "Slice",
+      "Topspin",
+      "Flat shot",
+      "Lob"
+    ],
+    "answer": "Slice"
+  },
+  {
+    "question": "Which country won the 1974 FIFA World Cup?",
+    "options": [
+      "Netherlands",
+      "West Germany",
+      "Poland",
+      "Brazil"
+    ],
+    "answer": "West Germany"
+  },
+  {
+    "question": "What is the term for a basketball shot made while moving toward the basket?",
+    "options": [
+      "Pull-up jumper",
+      "Floater",
+      "Runner",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'lineout' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "American football",
+      "Australian rules football"
+    ],
+    "answer": "Rugby union"
+  },
+  {
+    "question": "Which club has won the most Greek Super League titles?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Olympiacos"
+  },
+  {
+    "question": "What is the term for a basketball defense that pressures the ball full-court?",
+    "options": [
+      "Zone defense",
+      "Man-to-man defense",
+      "Press defense",
+      "Help defense"
+    ],
+    "answer": "Press defense"
+  },
+  {
+    "question": "Which country invented table tennis?",
+    "options": [
+      "China",
+      "Japan",
+      "England",
+      "United States"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "Who is the all-time top scorer for Italy?",
+    "options": [
+      "Luigi Riva",
+      "Roberto Baggio",
+      "Alessandro Del Piero",
+      "Francesco Totti"
+    ],
+    "answer": "Luigi Riva"
+  },
+  {
+    "question": "What is the term for a basketball shot that is lightly tossed over a defender?",
+    "options": [
+      "Floater",
+      "Teardrop",
+      "Runner",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In which sport is the term 'crease' used?",
+    "options": [
+      "Cricket",
+      "Ice hockey",
+      "Lacrosse",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country hosted the 2002 FIFA World Cup?",
+    "options": [
+      "Japan and South Korea",
+      "United States",
+      "France",
+      "Germany"
+    ],
+    "answer": "Japan and South Korea"
+  },
+  {
+    "question": "What is the term for a basketball player who can play both guard positions?",
+    "options": [
+      "Combo guard",
+      "Point forward",
+      "Swingman",
+      "Utility player"
+    ],
+    "answer": "Combo guard"
+  },
+  {
+    "question": "In which sport is the term 'let' used?",
+    "options": [
+      "Tennis",
+      "Squash",
+      "Table tennis",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Russian Premier League titles?",
+    "options": [
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Zenit Saint Petersburg",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Spartak Moscow"
+  },
+  {
+    "question": "What is the term for a basketball shot made with a high arc to avoid shot blockers?",
+    "options": [
+      "Rainbow shot",
+      "Floater",
+      "Hook shot",
+      "Fadeaway"
+    ],
+    "answer": "Rainbow shot"
+  },
+  {
+    "question": "Which country won the 1999 Cricket World Cup?",
+    "options": [
+      "Australia",
+      "Pakistan",
+      "South Africa",
+      "New Zealand"
+    ],
+    "answer": "Australia"
+  },
+  {
+    "question": "Who is the all-time top scorer in Serie A?",
+    "options": [
+      "Silvio Piola",
+      "Francesco Totti",
+      "Roberto Baggio",
+      "Alessandro Del Piero"
+    ],
+    "answer": "Silvio Piola"
+  },
+  {
+    "question": "What is the term for a basketball violation when a player kicks the ball?",
+    "options": [
+      "Kicking violation",
+      "Foot violation",
+      "Leg violation",
+      "There is no violation for kicking the ball"
+    ],
+    "answer": "There is no violation for kicking the ball"
+  },
+  {
+    "question": "In which sport is the term 'hammer' used?",
+    "options": [
+      "Curling",
+      "Track and field",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which country has won the most Asian Games gold medals in football?",
+    "options": [
+      "South Korea",
+      "Japan",
+      "Iran",
+      "China"
+    ],
+    "answer": "South Korea"
+  },
+  {
+    "question": "What is the term for a football shot that is hit with the heel?",
+    "options": [
+      "Backheel",
+      "Rabona",
+      "Bicycle kick",
+      "Scissor kick"
+    ],
+    "answer": "Backheel"
+  },
+  {
+    "question": "Which NBA team has the most consecutive championships?",
+    "options": [
+      "Boston Celtics",
+      "Los Angeles Lakers",
+      "Chicago Bulls",
+      "Golden State Warriors"
+    ],
+    "answer": "Boston Celtics"
+  },
+  {
+    "question": "Which club has won the most Scottish Cup titles?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Celtic"
+  },
+  {
+    "question": "In which sport would you perform a 'camel spin'?",
+    "options": [
+      "Figure skating",
+      "Gymnastics",
+      "Diving",
+      "Synchronized swimming"
+    ],
+    "answer": "Figure skating"
+  },
+  {
+    "question": "Which country won the 1958 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "Sweden",
+      "France",
+      "West Germany"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "In tennis, what is the term for winning all four Grand Slams in a calendar year?",
+    "options": [
+      "Golden Slam",
+      "Calendar Slam",
+      "Grand Slam",
+      "Clean Sweep"
+    ],
+    "answer": "Calendar Slam"
+  },
+  {
+    "question": "Which Dutch club is known as 'De Godenzonen'?",
+    "options": [
+      "Ajax",
+      "PSV",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "Ajax"
+  },
+  {
+    "question": "What is the term for a football shot that is hit with the outside of the boot creating curve?",
+    "options": [
+      "Trivela",
+      "Rabona",
+      "Knuckleball",
+      "Bicycle kick"
+    ],
+    "answer": "Trivela"
+  },
+  {
+    "question": "Which country hosts the Giro d'Italia cycling race?",
+    "options": [
+      "Italy",
+      "France",
+      "Spain",
+      "Belgium"
+    ],
+    "answer": "Italy"
+  },
+  {
+    "question": "Who holds the record for most assists in a single Premier League season?",
+    "options": [
+      "Thierry Henry",
+      "Kevin De Bruyne",
+      "Cesc Fàbregas",
+      "Ryan Giggs"
+    ],
+    "answer": "Kevin De Bruyne"
+  },
+  {
+    "question": "In which sport is the term 'luge' specifically used for a sledding event?",
+    "options": [
+      "Winter sports",
+      "Summer sports",
+      "Water sports",
+      "Extreme sports"
+    ],
+    "answer": "Winter sports"
+  },
+  {
+    "question": "Which country has the most players to have scored in a World Cup final?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Italy",
+      "Argentina"
+    ],
+    "answer": "Germany"
+  },
+  {
+    "question": "In cricket, what is a 'chinaman'?",
+    "options": [
+      "A type of bat",
+      "A left-arm unorthodox spin delivery",
+      "A fielding position",
+      "A scoring shot"
+    ],
+    "answer": "A left-arm unorthodox spin delivery"
+  },
+  {
+    "question": "Which club has the nickname 'The Tigers'?",
+    "options": [
+      "Hull City",
+      "Leicester City",
+      "Sunderland",
+      "Norwich City"
+    ],
+    "answer": "Hull City"
+  },
+  {
+    "question": "In which sport is the term 'condor' used for a score of four under par?",
+    "options": [
+      "Golf",
+      "Disc golf",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Who is the all-time top scorer for Ukraine?",
+    "options": [
+      "Andriy Shevchenko",
+      "Andriy Yarmolenko",
+      "Serhiy Rebrov",
+      "Oleg Blokhin"
+    ],
+    "answer": "Andriy Shevchenko"
+  },
+  {
+    "question": "Which country won the 2007 Rugby World Cup?",
+    "options": [
+      "South Africa",
+      "England",
+      "Argentina",
+      "France"
+    ],
+    "answer": "South Africa"
+  },
+  {
+    "question": "Which club has won the most Croatian First Football League titles?",
+    "options": [
+      "Dinamo Zagreb",
+      "Hajduk Split",
+      "Rijeka",
+      "Osijek"
+    ],
+    "answer": "Dinamo Zagreb"
+  },
+  {
+    "question": "In which sport is the term 'silly point' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Rounders",
+      "Softball"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in judo?",
+    "options": [
+      "Japan",
+      "France",
+      "South Korea",
+      "Russia"
+    ],
+    "answer": "Japan"
+  },
+  {
+    "question": "What is the term for a football player who takes direct free kicks?",
+    "options": [
+      "Set-piece specialist",
+      "Free-kick taker",
+      "Dead-ball specialist",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that is hit with heavy topspin and high trajectory?",
+    "options": [
+      "Moonball",
+      "Lob",
+      "Topspin lob",
+      "Defensive lob"
+    ],
+    "answer": "Moonball"
+  },
+  {
+    "question": "Which country won the 1962 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "Czechoslovakia",
+      "Chile",
+      "Yugoslavia"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "In which sport is the term 'prop' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Both"
+  },
+  {
+    "question": "Which club has won the most Serbian SuperLiga titles?",
+    "options": [
+      "Red Star Belgrade",
+      "Partizan Belgrade",
+      "Vojvodina",
+      "Radnički Niš"
+    ],
+    "answer": "Red Star Belgrade"
+  },
+  {
+    "question": "Which country invented handball?",
+    "options": [
+      "Germany",
+      "Denmark",
+      "Sweden",
+      "France"
+    ],
+    "answer": "Germany"
+  },
+  {
+    "question": "Who is the all-time top scorer for the Czech Republic?",
+    "options": [
+      "Jan Koller",
+      "Pavel Nedvěd",
+      "Milan Baroš",
+      "Vladimír Šmicer"
+    ],
+    "answer": "Jan Koller"
+  },
+  {
+    "question": "In which sport is the term 'bumper' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 1974 FIFA World Cup?",
+    "options": [
+      "West Germany",
+      "Netherlands",
+      "Poland",
+      "Brazil"
+    ],
+    "answer": "West Germany"
+  },
+  {
+    "question": "In which sport is the term 'match point' used?",
+    "options": [
+      "Tennis",
+      "Volleyball",
+      "Badminton",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Israeli Premier League titles?",
+    "options": [
+      "Maccabi Tel Aviv",
+      "Hapoel Tel Aviv",
+      "Beitar Jerusalem",
+      "Maccabi Haifa"
+    ],
+    "answer": "Maccabi Tel Aviv"
+  },
+  {
+    "question": "Which country won the 1983 Cricket World Cup?",
+    "options": [
+      "India",
+      "West Indies",
+      "Pakistan",
+      "England"
+    ],
+    "answer": "India"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Turkish Süper Lig?",
+    "options": [
+      "Hakan Şükür",
+      "Tanju Çolak",
+      "Metin Oktay",
+      "Bobo"
+    ],
+    "answer": "Hakan Şükür"
+  },
+  {
+    "question": "In which sport is the term 'house' specifically used for the target area?",
+    "options": [
+      "Curling",
+      "Bowling",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Curling"
+  },
+  {
+    "question": "Which country has won the most CONCACAF Gold Cup titles?",
+    "options": [
+      "Mexico",
+      "United States",
+      "Costa Rica",
+      "Canada"
+    ],
+    "answer": "Mexico"
+  },
+  {
+    "question": "What is the term for a football shot that is acrobatically overhead?",
+    "options": [
+      "Bicycle kick",
+      "Scissor kick",
+      "Overhead kick",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Dragões'?",
+    "options": [
+      "Porto",
+      "Benfica",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Porto"
+  },
+  {
+    "question": "In which sport would you perform a 'toe loop'?",
+    "options": [
+      "Figure skating",
+      "Gymnastics",
+      "Diving",
+      "Synchronized swimming"
+    ],
+    "answer": "Figure skating"
+  },
+  {
+    "question": "Which country won the 1978 FIFA World Cup?",
+    "options": [
+      "Argentina",
+      "Netherlands",
+      "Brazil",
+      "Italy"
+    ],
+    "answer": "Argentina"
+  },
+  {
+    "question": "In tennis, what is the term for a serve that is not touched by the receiver?",
+    "options": [
+      "Ace",
+      "Service winner",
+      "Unreturnable serve",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which English club is known as 'The Seagulls'?",
+    "options": [
+      "Brighton & Hove Albion",
+      "Newcastle United",
+      "Southampton",
+      "Liverpool"
+    ],
+    "answer": "Brighton & Hove Albion"
+  },
+  {
+    "question": "What is the term for a football move where a player nutmegs an opponent?",
+    "options": [
+      "Nutmeg",
+      "Panna",
+      "Through the legs",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country hosts the Vuelta a España cycling race?",
+    "options": [
+      "Spain",
+      "France",
+      "Italy",
+      "Portugal"
+    ],
+    "answer": "Spain"
+  },
+  {
+    "question": "Who holds the record for most goals in a single Champions League match?",
+    "options": [
+      "Lionel Messi",
+      "Cristiano Ronaldo",
+      "Luiz Adriano",
+      "Robert Lewandowski"
+    ],
+    "answer": "Luiz Adriano"
+  },
+  {
+    "question": "In which sport is the term 'skeleton' used for a head-first sledding event?",
+    "options": [
+      "Winter sports",
+      "Summer sports",
+      "Water sports",
+      "Extreme sports"
+    ],
+    "answer": "Winter sports"
+  },
+  {
+    "question": "Which country has the most players with 50+ international goals?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Argentina",
+      "United States"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "In cricket, what is a 'flipper'?",
+    "options": [
+      "A type of bat",
+      "A leg-spin delivery that stays low",
+      "A fielding position",
+      "A scoring shot"
+    ],
+    "answer": "A leg-spin delivery that stays low"
+  },
+  {
+    "question": "Which club has the nickname 'The Royals'?",
+    "options": [
+      "Reading",
+      "Queens Park Rangers",
+      "Crystal Palace",
+      "Derby County"
+    ],
+    "answer": "Reading"
+  },
+  {
+    "question": "In which sport is the term 'phoenix' used for a score of 12 under par?",
+    "options": [
+      "Disc golf",
+      "Traditional golf",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Disc golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for Denmark?",
+    "options": [
+      "Jon Dahl Tomasson",
+      "Michael Laudrup",
+      "Brian Laudrup",
+      "Poul Nielsen"
+    ],
+    "answer": "Jon Dahl Tomasson"
+  },
+  {
+    "question": "Which country won the 1991 Rugby World Cup?",
+    "options": [
+      "Australia",
+      "New Zealand",
+      "England",
+      "South Africa"
+    ],
+    "answer": "Australia"
+  },
+  {
+    "question": "Which club has won the most Greek Football Cup titles?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Olympiacos"
+  },
+  {
+    "question": "In which sport is the term 'third man' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in taekwondo?",
+    "options": [
+      "South Korea",
+      "China",
+      "United States",
+      "Iran"
+    ],
+    "answer": "South Korea"
+  },
+  {
+    "question": "What is the term for a football player who specializes in defensive duties?",
+    "options": [
+      "Defensive specialist",
+      "Stopper",
+      "Destroyer",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that is hit with slice and stays low?",
+    "options": [
+      "Slice",
+      "Chip",
+      "Drop shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country won the 1934 FIFA World Cup?",
+    "options": [
+      "Italy",
+      "Czechoslovakia",
+      "Germany",
+      "Austria"
+    ],
+    "answer": "Italy"
+  },
+  {
+    "question": "In which sport is the term 'lock' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Rugby union"
+  },
+  {
+    "question": "Which club has won the most Swiss Cup titles?",
+    "options": [
+      "Grasshopper",
+      "Basel",
+      "Young Boys",
+      "Zurich"
+    ],
+    "answer": "Grasshopper"
+  },
+  {
+    "question": "Which country invented the sport of squash?",
+    "options": [
+      "England",
+      "United States",
+      "Canada",
+      "Australia"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "Who is the all-time top scorer for Austria?",
+    "options": [
+      "Anton Polster",
+      "Hans Krankl",
+      "Toni Fritsch",
+      "Herbert Prohaska"
+    ],
+    "answer": "Anton Polster"
+  },
+  {
+    "question": "In which sport is the term 'beamer' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 1994 FIFA World Cup?",
+    "options": [
+      "United States",
+      "Brazil",
+      "Germany",
+      "France"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "In which sport is the term 'break point' used?",
+    "options": [
+      "Tennis",
+      "Snooker",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Tennis"
+  },
+  {
+    "question": "Which club has won the most Danish Cup titles?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Aarhus",
+      "Vejle"
+    ],
+    "answer": "Copenhagen"
+  },
+  {
+    "question": "Which country won the 1975 Cricket World Cup?",
+    "options": [
+      "West Indies",
+      "Australia",
+      "England",
+      "New Zealand"
+    ],
+    "answer": "West Indies"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Russian Premier League?",
+    "options": [
+      "Oleg Veretennikov",
+      "Aleksandr Kerzhakov",
+      "Fyodor Smolov",
+      "Artyom Dzyuba"
+    ],
+    "answer": "Oleg Veretennikov"
+  },
+  {
+    "question": "In which sport is the term 'hammer' used for the last stone in an end?",
+    "options": [
+      "Curling",
+      "Bowling",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Curling"
+  },
+  {
+    "question": "Which country has won the most African Nations Championship titles?",
+    "options": [
+      "Morocco",
+      "DR Congo",
+      "Tunisia",
+      "Senegal"
+    ],
+    "answer": "DR Congo"
+  },
+  {
+    "question": "What is the term for a football shot that is powerfully struck from distance?",
+    "options": [
+      "Long-range shot",
+      "Rocket",
+      "Thunderbolt",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Turkish club is known as 'The Yellow Canaries'?",
+    "options": [
+      "Fenerbahçe",
+      "Galatasaray",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Fenerbahçe"
+  },
+  {
+    "question": "In which sport would you perform a 'biellmann spin'?",
+    "options": [
+      "Figure skating",
+      "Gymnastics",
+      "Diving",
+      "Synchronized swimming"
+    ],
+    "answer": "Figure skating"
+  },
+  {
+    "question": "Which country won the 2006 FIFA World Cup?",
+    "options": [
+      "Italy",
+      "France",
+      "Germany",
+      "Portugal"
+    ],
+    "answer": "Italy"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that is hit with extreme angle?",
+    "options": [
+      "Angle shot",
+      "Cross-court shot",
+      "Inside-out shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which English club is known as 'The Hornets'?",
+    "options": [
+      "Watford",
+      "Brentford",
+      "Ipswich Town",
+      "Leeds United"
+    ],
+    "answer": "Watford"
+  },
+  {
+    "question": "What is the term for a football move where a player beats multiple opponents?",
+    "options": [
+      "Dribbling run",
+      "Solo run",
+      "Mazy run",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country hosts the Tour Down Under cycling race?",
+    "options": [
+      "Australia",
+      "New Zealand",
+      "South Africa",
+      "Argentina"
+    ],
+    "answer": "Australia"
+  },
+  {
+    "question": "Who holds the record for most clean sheets in a single Premier League season?",
+    "options": [
+      "Petr Čech",
+      "Edwin van der Sar",
+      "David de Gea",
+      "Alisson Becker"
+    ],
+    "answer": "Petr Čech"
+  },
+  {
+    "question": "In which sport is the term 'nordic combined' used?",
+    "options": [
+      "Winter sports",
+      "Summer sports",
+      "Water sports",
+      "Extreme sports"
+    ],
+    "answer": "Winter sports"
+  },
+  {
+    "question": "Which country has the most players with 200+ international caps?",
+    "options": [
+      "United States",
+      "Japan",
+      "Germany",
+      "Brazil"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "In cricket, what is a 'carrom ball'?",
+    "options": [
+      "A type of bat",
+      "A finger-flicked delivery",
+      "A fielding position",
+      "A scoring shot"
+    ],
+    "answer": "A finger-flicked delivery"
+  },
+  {
+    "question": "Which club has the nickname 'The Bantams'?",
+    "options": [
+      "Bradford City",
+      "Luton Town",
+      "Plymouth Argyle",
+      "Shrewsbury Town"
+    ],
+    "answer": "Bradford City"
+  },
+  {
+    "question": "In which sport is the term 'albatross' the rarest score?",
+    "options": [
+      "Golf",
+      "Disc golf",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Golf"
+  },
+  {
+    "question": "Who is the all-time top scorer for Norway?",
+    "options": [
+      "Jørgen Juve",
+      "Erling Haaland",
+      "John Carew",
+      "Ole Gunnar Solskjær"
+    ],
+    "answer": "Jørgen Juve"
+  },
+  {
+    "question": "Which country won the 2019 Rugby World Cup?",
+    "options": [
+      "South Africa",
+      "England",
+      "New Zealand",
+      "Wales"
+    ],
+    "answer": "South Africa"
+  },
+  {
+    "question": "Which club has won the most Austrian Cup titles?",
+    "options": [
+      "Austria Vienna",
+      "Rapid Vienna",
+      "Red Bull Salzburg",
+      "Sturm Graz"
+    ],
+    "answer": "Austria Vienna"
+  },
+  {
+    "question": "In which sport is the term 'deep extra cover' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in fencing?",
+    "options": [
+      "Italy",
+      "France",
+      "Hungary",
+      "Russia"
+    ],
+    "answer": "Italy"
+  },
+  {
+    "question": "What is the term for a football player who excels at creating chances?",
+    "options": [
+      "Playmaker",
+      "Creative midfielder",
+      "Number 10",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In tennis, what is the term for a shot that is hit between the legs?",
+    "options": [
+      "Tweener",
+      "Between-the-legs shot",
+      "Hot dog",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country won the 2010 FIFA World Cup?",
+    "options": [
+      "Spain",
+      "Netherlands",
+      "Germany",
+      "Uruguay"
+    ],
+    "answer": "Spain"
+  },
+  {
+    "question": "In which sport is the term 'fly-half' used?",
+    "options": [
+      "Rugby union",
+      "Rugby league",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Rugby union"
+  },
+  {
+    "question": "Which club has won the most Czech Cup titles?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Sparta Prague"
+  },
+  {
+    "question": "Which country invented the sport of badminton?",
+    "options": [
+      "England",
+      "India",
+      "China",
+      "Malaysia"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "Who is the all-time top scorer for Switzerland?",
+    "options": [
+      "Alexander Frei",
+      "Kubilay Türkyılmaz",
+      "Stéphane Chapuisat",
+      "Xherdan Shaqiri"
+    ],
+    "answer": "Alexander Frei"
+  },
+  {
+    "question": "In which sport is the term 'jaffa' used?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both",
+      "Neither"
+    ],
+    "answer": "Cricket"
+  },
+  {
+    "question": "Which country hosted the 2018 FIFA World Cup?",
+    "options": [
+      "Russia",
+      "Qatar",
+      "Brazil",
+      "South Africa"
+    ],
+    "answer": "Russia"
+  },
+  {
+    "question": "In which sport is the term 'set point' used?",
+    "options": [
+      "Tennis",
+      "Volleyball",
+      "Badminton",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which club has won the most Polish Cup titles?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Górnik Zabrze",
+      "Wisła Kraków"
+    ],
+    "answer": "Legia Warsaw"
+  },
+  {
+    "question": "Which country won the 1992 Cricket World Cup?",
+    "options": [
+      "Pakistan",
+      "England",
+      "South Africa",
+      "New Zealand"
+    ],
+    "answer": "Pakistan"
+  },
+  {
+    "question": "Who is the all-time top scorer in the Ukrainian Premier League?",
+    "options": [
+      "Maksim Shatskikh",
+      "Andriy Vorobey",
+      "Serhiy Rebrov",
+      "Yevhen Seleznyov"
+    ],
+    "answer": "Maksim Shatskikh"
+  },
+  {
+    "question": "In which sport is the term 'button' used for the center of the target?",
+    "options": [
+      "Curling",
+      "Archery",
+      "Darts",
+      "All of the above"
+    ],
+    "answer": "Curling"
+  },
+  {
+    "question": "Which country has won the most Copa América titles?",
+    "options": [
+      "Uruguay",
+      "Argentina",
+      "Brazil",
+      "Chile"
+    ],
+    "answer": "Uruguay"
+  },
+  {
+    "question": "What is the term for a football shot that is placed precisely into the corner?",
+    "options": [
+      "Placed shot",
+      "Precision shot",
+      "Corner shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which country has won the most FIFA World Cups?",
+    "options": [
+      "Germany",
+      "Italy",
+      "Brazil",
+      "Argentina"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "What is the maximum number of substitutions allowed in a standard football match?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "Unlimited"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "Which NBA team has won the most championships?",
+    "options": [
+      "Los Angeles Lakers",
+      "Boston Celtics",
+      "Chicago Bulls",
+      "Golden State Warriors"
+    ],
+    "answer": "Boston Celtics"
+  },
+  {
+    "question": "In tennis, which Grand Slam tournament is played on clay courts?",
+    "options": [
+      "Wimbledon",
+      "US Open",
+      "Australian Open",
+      "French Open"
+    ],
+    "answer": "French Open"
+  },
+  {
+    "question": "Which player has won the most Ballon d'Or awards?",
+    "options": [
+      "Cristiano Ronaldo",
+      "Lionel Messi",
+      "Michel Platini",
+      "Johan Cruyff"
+    ],
+    "answer": "Lionel Messi"
+  },
+  {
+    "question": "What is the diameter of a basketball hoop in inches?",
+    "options": [
+      "16 inches",
+      "18 inches",
+      "20 inches",
+      "24 inches"
+    ],
+    "answer": "18 inches"
+  },
+  {
+    "question": "Which country won the 2022 FIFA World Cup?",
+    "options": [
+      "France",
+      "Argentina",
+      "Croatia",
+      "Morocco"
+    ],
+    "answer": "Argentina"
+  },
+  {
+    "question": "How many players are on a rugby union team?",
+    "options": [
+      "11",
+      "13",
+      "15",
+      "17"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "Which club has won the most UEFA Champions League titles?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Bayern Munich",
+      "AC Milan"
+    ],
+    "answer": "Real Madrid"
+  },
+  {
+    "question": "What is the name of the championship series in the NBA?",
+    "options": [
+      "World Series",
+      "Super Bowl",
+      "NBA Finals",
+      "Stanley Cup Finals"
+    ],
+    "answer": "NBA Finals"
+  },
+  {
+    "question": "In golf, what is a score of two under par called?",
+    "options": [
+      "Birdie",
+      "Eagle",
+      "Albatross",
+      "Par"
+    ],
+    "answer": "Eagle"
+  },
+  {
+    "question": "Which English club is known as 'The Red Devils'?",
+    "options": [
+      "Liverpool",
+      "Arsenal",
+      "Manchester United",
+      "Chelsea"
+    ],
+    "answer": "Manchester United"
+  },
+  {
+    "question": "How many periods are in an ice hockey game?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "Which country hosted the 2016 Summer Olympics?",
+    "options": [
+      "China",
+      "Brazil",
+      "United Kingdom",
+      "Greece"
+    ],
+    "answer": "Brazil"
+  },
+  {
+    "question": "What is the term for a goal scored from a corner kick in football?",
+    "options": [
+      "Olympic Goal",
+      "Direct Goal",
+      "Corner Goal",
+      "Set-piece Goal"
+    ],
+    "answer": "Olympic Goal"
+  },
+  {
+    "question": "Which basketball player is known as 'The King'?",
+    "options": [
+      "Stephen Curry",
+      "LeBron James",
+      "Kevin Durant",
+      "James Harden"
+    ],
+    "answer": "LeBron James"
+  },
+  {
+    "question": "In baseball, how many bases must a runner touch to score a run?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "Which nation won the 2020 European Championship?",
+    "options": [
+      "Portugal",
+      "France",
+      "England",
+      "Italy"
+    ],
+    "answer": "Italy"
+  },
+  {
+    "question": "What is the distance of a marathon in kilometers?",
+    "options": [
+      "40.2 km",
+      "41.8 km",
+      "42.2 km",
+      "43.5 km"
+    ],
+    "answer": "42.2 km"
+  },
+  {
+    "question": "Which club did Diego Maradona lead to Serie A glory in 1987?",
+    "options": [
+      "Juventus",
+      "AC Milan",
+      "Napoli",
+      "Inter Milan"
+    ],
+    "answer": "Napoli"
+  },
+  {
+    "question": "What is the name of the award given to the NBA's best defensive player?",
+    "options": [
+      "Defensive Player of the Year",
+      "Best Defender Award",
+      "Defensive MVP",
+      "Guardian Award"
+    ],
+    "answer": "Defensive Player of the Year"
+  },
+  {
+    "question": "In which sport would you find a 'scrum'?",
+    "options": [
+      "American Football",
+      "Rugby",
+      "Cricket",
+      "Hockey"
+    ],
+    "answer": "Rugby"
+  },
+  {
+    "question": "Which country has appeared in the most World Cup finals without winning?",
+    "options": [
+      "England",
+      "Spain",
+      "Netherlands",
+      "Sweden"
+    ],
+    "answer": "Netherlands"
+  },
+  {
+    "question": "How many rings are on the Olympic flag?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "Which NBA team drafted Michael Jordan?",
+    "options": [
+      "Chicago Bulls",
+      "Portland Trail Blazers",
+      "Houston Rockets",
+      "Dallas Mavericks"
+    ],
+    "answer": "Chicago Bulls"
+  },
+  {
+    "question": "What is the term for an attacking player in football who operates mainly in wide areas?",
+    "options": [
+      "Striker",
+      "Winger",
+      "Sweeper",
+      "Full-back"
+    ],
+    "answer": "Winger"
+  },
+  {
+    "question": "In tennis, how many points is a game won by?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "Which country invented basketball?",
+    "options": [
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "France"
+    ],
+    "answer": "United States"
+  },
+  {
+    "question": "What is the term for a football match that ends 0-0?",
+    "options": [
+      "Clean sheet",
+      "Goalless draw",
+      "Nil-nil",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which boxer was known as 'The Greatest'?",
+    "options": [
+      "Mike Tyson",
+      "Muhammad Ali",
+      "Sugar Ray Leonard",
+      "Floyd Mayweather"
+    ],
+    "answer": "Muhammad Ali"
+  },
+  {
+    "question": "How many teams compete in the English Premier League?",
+    "options": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "answer": "20"
+  },
+  {
+    "question": "What is the name of the tournament held every four years to determine basketball's world champion?",
+    "options": [
+      "Basketball World Cup",
+      "FIBA World Championship",
+      "Olympic Basketball Tournament",
+      "NBA World Championship"
+    ],
+    "answer": "Basketball World Cup"
+  },
+  {
+    "question": "In American football, what is a safety worth?",
+    "options": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "6 points"
+    ],
+    "answer": "2 points"
+  },
+  {
+    "question": "Which Spanish club plays at the Camp Nou?",
+    "options": [
+      "Real Madrid",
+      "Barcelona",
+      "Atlético Madrid",
+      "Valencia"
+    ],
+    "answer": "Barcelona"
+  },
+  {
+    "question": "What is the term for a basketball shot made while jumping and releasing the ball at the peak of the jump?",
+    "options": [
+      "Layup",
+      "Dunk",
+      "Jump shot",
+      "Hook shot"
+    ],
+    "answer": "Jump shot"
+  },
+  {
+    "question": "Which country won the 2019 Cricket World Cup?",
+    "options": [
+      "India",
+      "Australia",
+      "England",
+      "New Zealand"
+    ],
+    "answer": "England"
+  },
+  {
+    "question": "What is the term for a football player who can play in multiple positions?",
+    "options": [
+      "Specialist",
+      "Utility player",
+      "Flex player",
+      "Multi-role"
+    ],
+    "answer": "Utility player"
+  },
+  {
+    "question": "Which NBA player holds the record for most three-pointers in a career?",
+    "options": [
+      "Ray Allen",
+      "Stephen Curry",
+      "Reggie Miller",
+      "Klay Thompson"
+    ],
+    "answer": "Stephen Curry"
+  },
+  {
+    "question": "In which sport would you find a 'pitcher'?",
+    "options": [
+      "Cricket",
+      "Baseball",
+      "Both Cricket and Baseball",
+      "Neither"
+    ],
+    "answer": "Both Cricket and Baseball"
+  },
+  {
+    "question": "Which nation has won the most African Cup of Nations titles?",
+    "options": [
+      "Nigeria",
+      "Ghana",
+      "Egypt",
+      "Cameroon"
+    ],
+    "answer": "Egypt"
+  },
+  {
+    "question": "What is the height of an NBA basketball hoop from the floor?",
+    "options": [
+      "9 feet",
+      "10 feet",
+      "11 feet",
+      "12 feet"
+    ],
+    "answer": "10 feet"
+  },
+  {
+    "question": "In football, what is the term for when a player is level with the second-last defender?",
+    "options": [
+      "Offside",
+      "Onside",
+      "Level",
+      "Neutral"
+    ],
+    "answer": "Onside"
+  },
+  {
+    "question": "Which tennis player has won the most Grand Slam singles titles?",
+    "options": [
+      "Roger Federer",
+      "Rafael Nadal",
+      "Novak Djokovic",
+      "Margaret Court"
+    ],
+    "answer": "Margaret Court"
+  },
+  {
+    "question": "What is the term for a basketball shot that banks off the backboard?",
+    "options": [
+      "Swish",
+      "Bank shot",
+      "Rebound shot",
+      "Glass shot"
+    ],
+    "answer": "Bank shot"
+  },
+  {
+    "question": "Which country has won the most Olympic gold medals in football?",
+    "options": [
+      "Brazil",
+      "Argentina",
+      "Hungary",
+      "Great Britain"
+    ],
+    "answer": "Hungary"
+  },
+  {
+    "question": "In volleyball, how many touches is a team allowed before returning the ball?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "Which club has won the most English top-flight league titles?",
+    "options": [
+      "Manchester United",
+      "Liverpool",
+      "Arsenal",
+      "Everton"
+    ],
+    "answer": "Manchester United"
+  },
+  {
+    "question": "What is the term for a basketball violation where a player takes too long to shoot?",
+    "options": [
+      "Traveling",
+      "Shot clock violation",
+      "Three-second violation",
+      "Eight-second violation"
+    ],
+    "answer": "Shot clock violation"
+  },
+  {
+    "question": "In which sport is the term 'strike' used for three consecutive perfect shots?",
+    "options": [
+      "Baseball",
+      "Bowling",
+      "Cricket",
+      "Tennis"
+    ],
+    "answer": "Bowling"
+  },
+  {
+    "question": "Which nation won the 2006 FIFA World Cup?",
+    "options": [
+      "Brazil",
+      "Germany",
+      "Italy",
+      "France"
+    ],
+    "answer": "Italy"
+  }
+]

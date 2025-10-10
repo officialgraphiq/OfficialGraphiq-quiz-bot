@@ -49,6 +49,8 @@ CATEGORIES = {
     "Chemistry": "questions_chemistry.json",
     "Biology": "questions_biology.json",
     "Geography": "questions_geography.json",
+    "Science": "questions_science.json",
+    "Sports": "questions_sports.json",
 }
 
 # Optional: preload a file so missing files don't break startup

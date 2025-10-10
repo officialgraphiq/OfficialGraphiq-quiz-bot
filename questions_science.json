@@ -1,0 +1,4812 @@
+[
+      {
+    "question": "What is the chemical symbol for radium?",
+    "options": [
+      "Ra",
+      "Rd",
+      "Rm",
+      "Rn"
+    ],
+    "answer": "Ra"
+  },
+  {
+    "question": "Which part of the plant conducts water and nutrients?",
+    "options": [
+      "Xylem",
+      "Phloem",
+      "Both xylem and phloem",
+      "Root hairs"
+    ],
+    "answer": "Both xylem and phloem"
+  },
+  {
+    "question": "What is the nearest galaxy to the Milky Way?",
+    "options": [
+      "Andromeda Galaxy",
+      "Triangulum Galaxy",
+      "Large Magellanic Cloud",
+      "Small Magellanic Cloud"
+    ],
+    "answer": "Andromeda Galaxy"
+  },
+  {
+    "question": "Which gas is used in neon signs?",
+    "options": [
+      "Neon",
+      "Argon",
+      "Xenon",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of soil called?",
+    "options": [
+      "Geology",
+      "Pedology",
+      "Agronomy",
+      "Botany"
+    ],
+    "answer": "Pedology"
+  },
+  {
+    "question": "How many transition metals are in the periodic table?",
+    "options": [
+      "28",
+      "32",
+      "38",
+      "42"
+    ],
+    "answer": "38"
+  },
+  {
+    "question": "Which animal has the most advanced echolocation?",
+    "options": [
+      "Bat",
+      "Dolphin",
+      "Whale",
+      "Shrew"
+    ],
+    "answer": "Dolphin"
+  },
+  {
+    "question": "What is the unit of electric charge?",
+    "options": [
+      "Ampere",
+      "Coulomb",
+      "Volt",
+      "Ohm"
+    ],
+    "answer": "Coulomb"
+  },
+  {
+    "question": "Which planet has the largest volcano?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Venus",
+      "Io"
+    ],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is the smallest bone in the human ear?",
+    "options": [
+      "Malleus",
+      "Incus",
+      "Stapes",
+      "Anvil"
+    ],
+    "answer": "Stapes"
+  },
+  {
+    "question": "Which metal is the most malleable?",
+    "options": [
+      "Gold",
+      "Silver",
+      "Copper",
+      "Aluminum"
+    ],
+    "answer": "Gold"
+  },
+  {
+    "question": "What is the study of mushrooms called?",
+    "options": [
+      "Mycology",
+      "Botany",
+      "Biology",
+      "Fungology"
+    ],
+    "answer": "Mycology"
+  },
+  {
+    "question": "How many bones are in the human ankle?",
+    "options": [
+      "5",
+      "7",
+      "9",
+      "11"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "What is the chemical symbol for cesium?",
+    "options": [
+      "Ce",
+      "Cs",
+      "Cm",
+      "Ci"
+    ],
+    "answer": "Cs"
+  },
+  {
+    "question": "Which bird has the most complex nest?",
+    "options": [
+      "Eagle",
+      "Weaver bird",
+      "Hummingbird",
+      "Penguin"
+    ],
+    "answer": "Weaver bird"
+  },
+  {
+    "question": "What is the unit of pressure?",
+    "options": [
+      "Newton",
+      "Pascal",
+      "Joule",
+      "Watt"
+    ],
+    "answer": "Pascal"
+  },
+  {
+    "question": "Which planet has the most extreme seasons?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Uranus"
+  },
+  {
+    "question": "What is the largest type of neuron in the brain?",
+    "options": [
+      "Purkinje cell",
+      "Pyramidal cell",
+      "Granule cell",
+      "Basket cell"
+    ],
+    "answer": "Pyramidal cell"
+  },
+  {
+    "question": "Which element is essential for vitamin B12?",
+    "options": [
+      "Iron",
+      "Cobalt",
+      "Copper",
+      "Zinc"
+    ],
+    "answer": "Cobalt"
+  },
+  {
+    "question": "What is the study of animal classification called?",
+    "options": [
+      "Taxonomy",
+      "Ecology",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Taxonomy"
+  },
+  {
+    "question": "How many pairs of spinal nerves do humans have?",
+    "options": [
+      "28",
+      "30",
+      "31",
+      "33"
+    ],
+    "answer": "31"
+  },
+  {
+    "question": "What is the chemical symbol for barium?",
+    "options": [
+      "Ba",
+      "Br",
+      "Bi",
+      "Bm"
+    ],
+    "answer": "Ba"
+  },
+  {
+    "question": "Which animal has the most sensitive hearing?",
+    "options": [
+      "Bat",
+      "Moth",
+      "Owl",
+      "Dog"
+    ],
+    "answer": "Moth"
+  },
+  {
+    "question": "What is the unit of inductance?",
+    "options": [
+      "Farad",
+      "Henry",
+      "Ohm",
+      "Volt"
+    ],
+    "answer": "Henry"
+  },
+  {
+    "question": "Which planet has the fastest rotation?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Jupiter"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the largest type of cartilage?",
+    "options": [
+      "Hyaline cartilage",
+      "Elastic cartilage",
+      "Fibrocartilage",
+      "Articular cartilage"
+    ],
+    "answer": "Fibrocartilage"
+  },
+  {
+    "question": "Which metal is the most dense?",
+    "options": [
+      "Gold",
+      "Platinum",
+      "Osmium",
+      "Iridium"
+    ],
+    "answer": "Osmium"
+  },
+  {
+    "question": "What is the study of algae called?",
+    "options": [
+      "Algology",
+      "Phycology",
+      "Botany",
+      "Marine biology"
+    ],
+    "answer": "Phycology"
+  },
+  {
+    "question": "How many bones are in the human pelvis?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the chemical symbol for lanthanum?",
+    "options": [
+      "La",
+      "Ln",
+      "Lh",
+      "Lt"
+    ],
+    "answer": "La"
+  },
+  {
+    "question": "Which bird has the longest migration?",
+    "options": [
+      "Arctic tern",
+      "Swallow",
+      "Albatross",
+      "Godwit"
+    ],
+    "answer": "Arctic tern"
+  },
+  {
+    "question": "What is the unit of capacitance?",
+    "options": [
+      "Farad",
+      "Henry",
+      "Ohm",
+      "Volt"
+    ],
+    "answer": "Farad"
+  },
+  {
+    "question": "Which planet has the most elliptical orbit?",
+    "options": [
+      "Mercury",
+      "Mars",
+      "Pluto",
+      "Eris"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the largest endocrine gland?",
+    "options": [
+      "Thyroid",
+      "Pancreas",
+      "Pituitary",
+      "Adrenal"
+    ],
+    "answer": "Thyroid"
+  },
+  {
+    "question": "Which element is used in nuclear medicine?",
+    "options": [
+      "Technetium",
+      "Uranium",
+      "Plutonium",
+      "Radium"
+    ],
+    "answer": "Technetium"
+  },
+  {
+    "question": "What is the study of animal distribution called?",
+    "options": [
+      "Biogeography",
+      "Ecology",
+      "Zoology",
+      "Geography"
+    ],
+    "answer": "Biogeography"
+  },
+  {
+    "question": "How many chambers does a fish heart have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "What is the chemical symbol for cerium?",
+    "options": [
+      "Ce",
+      "Cr",
+      "Cm",
+      "Ci"
+    ],
+    "answer": "Ce"
+  },
+  {
+    "question": "Which animal has the fastest reproductive rate?",
+    "options": [
+      "Rabbit",
+      "Mouse",
+      "Fruit fly",
+      "Bacteria"
+    ],
+    "answer": "Bacteria"
+  },
+  {
+    "question": "What is the unit of magnetic field strength?",
+    "options": [
+      "Tesla",
+      "Weber",
+      "Henry",
+      "Gauss"
+    ],
+    "answer": "Tesla"
+  },
+  {
+    "question": "Which planet has the most tilted axis?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Uranus"
+  },
+  {
+    "question": "What is the largest lymphatic organ?",
+    "options": [
+      "Spleen",
+      "Thymus",
+      "Tonsils",
+      "Appendix"
+    ],
+    "answer": "Spleen"
+  },
+  {
+    "question": "Which element is essential for bone formation?",
+    "options": [
+      "Calcium",
+      "Phosphorus",
+      "Both calcium and phosphorus",
+      "Magnesium"
+    ],
+    "answer": "Both calcium and phosphorus"
+  },
+  {
+    "question": "What is the study of animal sounds called?",
+    "options": [
+      "Acoustics",
+      "Bioacoustics",
+      "Zoology",
+      "Ecology"
+    ],
+    "answer": "Bioacoustics"
+  },
+  {
+    "question": "How many bones are in the human chest?",
+    "options": [
+      "20",
+      "24",
+      "28",
+      "32"
+    ],
+    "answer": "24"
+  },
+  {
+    "question": "What is the chemical symbol for praseodymium?",
+    "options": [
+      "Pa",
+      "Pr",
+      "Pd",
+      "Pm"
+    ],
+    "answer": "Pr"
+  },
+  {
+    "question": "Which bird has the most colorful plumage?",
+    "options": [
+      "Peacock",
+      "Parrot",
+      "Bird of paradise",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the unit of radioactivity?",
+    "options": [
+      "Becquerel",
+      "Curie",
+      "Gray",
+      "Sievert"
+    ],
+    "answer": "Becquerel"
+  },
+  {
+    "question": "Which planet is known as the 'Giant Planet'?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+    {
+    "question": "What is the chemical symbol for aluminum?",
+    "options": [
+      "Al",
+      "Am",
+      "Au",
+      "An"
+    ],
+    "answer": "Al"
+  },
+  {
+    "question": "Which part of the plant absorbs water and minerals?",
+    "options": [
+      "Stem",
+      "Leaves",
+      "Roots",
+      "Flowers"
+    ],
+    "answer": "Roots"
+  },
+  {
+    "question": "What is the closest galaxy to the Milky Way?",
+    "options": [
+      "Andromeda",
+      "Triangulum",
+      "Large Magellanic Cloud",
+      "Small Magellanic Cloud"
+    ],
+    "answer": "Andromeda"
+  },
+  {
+    "question": "Which gas is known as laughing gas?",
+    "options": [
+      "Oxygen",
+      "Nitrous oxide",
+      "Carbon dioxide",
+      "Helium"
+    ],
+    "answer": "Nitrous oxide"
+  },
+  {
+    "question": "What is the study of earthquakes called?",
+    "options": [
+      "Volcanology",
+      "Seismology",
+      "Meteorology",
+      "Geology"
+    ],
+    "answer": "Seismology"
+  },
+  {
+    "question": "How many phases of matter are there?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "Which animal has the longest gestation period?",
+    "options": [
+      "Human",
+      "Elephant",
+      "Whale",
+      "Giraffe"
+    ],
+    "answer": "Elephant"
+  },
+  {
+    "question": "What is the unit of luminous flux?",
+    "options": [
+      "Lux",
+      "Lumen",
+      "Candela",
+      "Watt"
+    ],
+    "answer": "Lumen"
+  },
+  {
+    "question": "Which planet has the most moons?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the voice box in humans called?",
+    "options": [
+      "Pharynx",
+      "Larynx",
+      "Trachea",
+      "Esophagus"
+    ],
+    "answer": "Larynx"
+  },
+  {
+    "question": "Which metal is the best conductor of heat?",
+    "options": [
+      "Copper",
+      "Silver",
+      "Gold",
+      "Aluminum"
+    ],
+    "answer": "Silver"
+  },
+  {
+    "question": "What is the study of trees called?",
+    "options": [
+      "Botany",
+      "Dendrology",
+      "Horticulture",
+      "Agriculture"
+    ],
+    "answer": "Dendrology"
+  },
+  {
+    "question": "How many bones are in the human foot?",
+    "options": [
+      "19",
+      "22",
+      "26",
+      "30"
+    ],
+    "answer": "26"
+  },
+  {
+    "question": "What is the chemical symbol for neon?",
+    "options": [
+      "N",
+      "Ne",
+      "No",
+      "Nr"
+    ],
+    "answer": "Ne"
+  },
+  {
+    "question": "Which bird has the largest egg?",
+    "options": [
+      "Eagle",
+      "Ostrich",
+      "Emu",
+      "Albatross"
+    ],
+    "answer": "Ostrich"
+  },
+  {
+    "question": "What is the unit of work or energy?",
+    "options": [
+      "Watt",
+      "Joule",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": "Joule"
+  },
+  {
+    "question": "Which planet has the most circular orbit?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Neptune"
+    ],
+    "answer": "Venus"
+  },
+  {
+    "question": "What is the smallest organ in the human body?",
+    "options": [
+      "Pancreas",
+      "Pineal gland",
+      "Pituitary gland",
+      "Thyroid"
+    ],
+    "answer": "Pineal gland"
+  },
+  {
+    "question": "Which element is essential for thyroid function?",
+    "options": [
+      "Iron",
+      "Iodine",
+      "Calcium",
+      "Zinc"
+    ],
+    "answer": "Iodine"
+  },
+  {
+    "question": "What is the study of aging called?",
+    "options": [
+      "Gerontology",
+      "Pediatrics",
+      "Cardiology",
+      "Neurology"
+    ],
+    "answer": "Gerontology"
+  },
+  {
+    "question": "How many taste sensations can humans detect?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "What is the chemical symbol for argon?",
+    "options": [
+      "A",
+      "Ar",
+      "Ag",
+      "An"
+    ],
+    "answer": "Ar"
+  },
+  {
+    "question": "Which animal has the most powerful venom?",
+    "options": [
+      "Cobra",
+      "Black mamba",
+      "Box jellyfish",
+      "Stonefish"
+    ],
+    "answer": "Box jellyfish"
+  },
+  {
+    "question": "What is the unit of catalytic activity?",
+    "options": [
+      "Mole",
+      "Katal",
+      "Gram",
+      "Liter"
+    ],
+    "answer": "Katal"
+  },
+  {
+    "question": "Which planet has the strongest magnetic field?",
+    "options": [
+      "Earth",
+      "Jupiter",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the largest joint in the human body?",
+    "options": [
+      "Shoulder",
+      "Hip",
+      "Knee",
+      "Elbow"
+    ],
+    "answer": "Knee"
+  },
+  {
+    "question": "Which metal is the most ductile?",
+    "options": [
+      "Copper",
+      "Silver",
+      "Gold",
+      "Platinum"
+    ],
+    "answer": "Gold"
+  },
+  {
+    "question": "What is the study of cells called?",
+    "options": [
+      "Histology",
+      "Cytology",
+      "Biology",
+      "Genetics"
+    ],
+    "answer": "Cytology"
+  },
+  {
+    "question": "How many muscles control the human eye?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "What is the chemical symbol for helium?",
+    "options": [
+      "H",
+      "He",
+      "Hl",
+      "Hy"
+    ],
+    "answer": "He"
+  },
+  {
+    "question": "Which bird can dive the deepest?",
+    "options": [
+      "Penguin",
+      "Cormorant",
+      "Puffin",
+      "Albatross"
+    ],
+    "answer": "Penguin"
+  },
+  {
+    "question": "What is the unit of amount of substance?",
+    "options": [
+      "Gram",
+      "Mole",
+      "Liter",
+      "Pascal"
+    ],
+    "answer": "Mole"
+  },
+  {
+    "question": "Which planet has the most extreme seasons?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Uranus"
+  },
+  {
+    "question": "What is the largest artery in the human body?",
+    "options": [
+      "Pulmonary artery",
+      "Aorta",
+      "Carotid artery",
+      "Femoral artery"
+    ],
+    "answer": "Aorta"
+  },
+  {
+    "question": "Which element is the lightest gas?",
+    "options": [
+      "Helium",
+      "Hydrogen",
+      "Neon",
+      "Nitrogen"
+    ],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "What is the study of tissues called?",
+    "options": [
+      "Cytology",
+      "Histology",
+      "Biology",
+      "Anatomy"
+    ],
+    "answer": "Histology"
+  },
+  {
+    "question": "How many bones do babies have at birth?",
+    "options": [
+      "206",
+      "250",
+      "300",
+      "350"
+    ],
+    "answer": "300"
+  },
+  {
+    "question": "What is the chemical symbol for krypton?",
+    "options": [
+      "K",
+      "Kr",
+      "Ky",
+      "Kp"
+    ],
+    "answer": "Kr"
+  },
+  {
+    "question": "Which animal has the longest tongue?",
+    "options": [
+      "Giraffe",
+      "Anteater",
+      "Chameleon",
+      "Blue whale"
+    ],
+    "answer": "Blue whale"
+  },
+  {
+    "question": "What is the unit of absorbed radiation dose?",
+    "options": [
+      "Becquerel",
+      "Gray",
+      "Sievert",
+      "Curie"
+    ],
+    "answer": "Gray"
+  },
+  {
+    "question": "Which planet has the most tilted axis?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Uranus"
+  },
+  {
+    "question": "What is the largest lymphatic organ?",
+    "options": [
+      "Thymus",
+      "Spleen",
+      "Tonsils",
+      "Appendix"
+    ],
+    "answer": "Spleen"
+  },
+  {
+    "question": "Which element is used in fluorescent lights?",
+    "options": [
+      "Neon",
+      "Argon",
+      "Mercury",
+      "Xenon"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the study of heredity called?",
+    "options": [
+      "Ecology",
+      "Genetics",
+      "Evolution",
+      "Biology"
+    ],
+    "answer": "Genetics"
+  },
+  {
+    "question": "How many chambers does a reptile heart have?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the chemical symbol for barium?",
+    "options": [
+      "Ba",
+      "Br",
+      "Bi",
+      "Bm"
+    ],
+    "answer": "Ba"
+  },
+  {
+    "question": "Which bird is the fastest runner?",
+    "options": [
+      "Emu",
+      "Ostrich",
+      "Roadrunner",
+      "Cassowary"
+    ],
+    "answer": "Ostrich"
+  },
+  {
+    "question": "What is the unit of equivalent radiation dose?",
+    "options": [
+      "Gray",
+      "Sievert",
+      "Becquerel",
+      "Curie"
+    ],
+    "answer": "Sievert"
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": [
+      "Venus",
+      "Mars",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": "Mars"
+  },
+    {
+    "question": "What is the chemical symbol for tungsten?",
+    "options": [
+      "Tu",
+      "W",
+      "Tg",
+      "Tn"
+    ],
+    "answer": "W"
+  },
+  {
+    "question": "Which part of the cell contains digestive enzymes?",
+    "options": [
+      "Mitochondria",
+      "Lysosome",
+      "Ribosome",
+      "Nucleus"
+    ],
+    "answer": "Lysosome"
+  },
+  {
+    "question": "What is the most common type of star in the universe?",
+    "options": [
+      "Red dwarf",
+      "Yellow dwarf",
+      "Blue giant",
+      "White dwarf"
+    ],
+    "answer": "Red dwarf"
+  },
+  {
+    "question": "Which gas is used in party balloons to make them float?",
+    "options": [
+      "Hydrogen",
+      "Oxygen",
+      "Helium",
+      "Nitrogen"
+    ],
+    "answer": "Helium"
+  },
+  {
+    "question": "What is the study of crystals called?",
+    "options": [
+      "Mineralogy",
+      "Crystallography",
+      "Geology",
+      "Chemistry"
+    ],
+    "answer": "Crystallography"
+  },
+  {
+    "question": "How many noble gases are there?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "Which animal has the most complex brain?",
+    "options": [
+      "Dolphin",
+      "Elephant",
+      "Human",
+      "Octopus"
+    ],
+    "answer": "Human"
+  },
+  {
+    "question": "What is the unit of electrical resistance?",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": "Ohm"
+  },
+  {
+    "question": "Which planet has the largest canyon?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Venus",
+      "Mercury"
+    ],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is the largest type of cartilage in the human body?",
+    "options": [
+      "Hyaline cartilage",
+      "Elastic cartilage",
+      "Fibrocartilage",
+      "Articular cartilage"
+    ],
+    "answer": "Hyaline cartilage"
+  },
+  {
+    "question": "Which metal is the most corrosion-resistant?",
+    "options": [
+      "Gold",
+      "Platinum",
+      "Titanium",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of freshwater ecosystems called?",
+    "options": [
+      "Marine biology",
+      "Limnology",
+      "Ecology",
+      "Hydrology"
+    ],
+    "answer": "Limnology"
+  },
+  {
+    "question": "How many bones are in the human arm?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the chemical symbol for antimony?",
+    "options": [
+      "An",
+      "At",
+      "Sb",
+      "Am"
+    ],
+    "answer": "Sb"
+  },
+  {
+    "question": "Which bird has the most feathers?",
+    "options": [
+      "Swan",
+      "Eagle",
+      "Penguin",
+      "Ostrich"
+    ],
+    "answer": "Swan"
+  },
+  {
+    "question": "What is the unit of electric current?",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": "Ampere"
+  },
+  {
+    "question": "Which planet has the most volcanic activity?",
+    "options": [
+      "Earth",
+      "Venus",
+      "Mars",
+      "Io (moon of Jupiter)"
+    ],
+    "answer": "Io (moon of Jupiter)"
+  },
+  {
+    "question": "What is the largest type of blood cell?",
+    "options": [
+      "Red blood cell",
+      "White blood cell",
+      "Platelet",
+      "Macrophage"
+    ],
+    "answer": "White blood cell"
+  },
+  {
+    "question": "Which element is essential for plant growth?",
+    "options": [
+      "Nitrogen",
+      "Phosphorus",
+      "Potassium",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal behavior called?",
+    "options": [
+      "Ethology",
+      "Ecology",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Ethology"
+  },
+  {
+    "question": "How many pairs of cranial nerves do humans have?",
+    "options": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "answer": "12"
+  },
+  {
+    "question": "What is the chemical symbol for cadmium?",
+    "options": [
+      "Cd",
+      "Cm",
+      "Ca",
+      "Cn"
+    ],
+    "answer": "Cd"
+  },
+  {
+    "question": "Which animal has the longest lifespan?",
+    "options": [
+      "Galapagos tortoise",
+      "Bowhead whale",
+      "Greenland shark",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the unit of magnetic flux density?",
+    "options": [
+      "Weber",
+      "Tesla",
+      "Henry",
+      "Gauss"
+    ],
+    "answer": "Tesla"
+  },
+  {
+    "question": "Which planet has the most extreme temperature variations?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Mars",
+      "Pluto"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the largest type of gland in the human body?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Thyroid",
+      "Pituitary"
+    ],
+    "answer": "Liver"
+  },
+  {
+    "question": "Which metal is the best electrical conductor?",
+    "options": [
+      "Copper",
+      "Silver",
+      "Gold",
+      "Aluminum"
+    ],
+    "answer": "Silver"
+  },
+  {
+    "question": "What is the study of insects called?",
+    "options": [
+      "Arachnology",
+      "Entomology",
+      "Ornithology",
+      "Herpetology"
+    ],
+    "answer": "Entomology"
+  },
+  {
+    "question": "How many bones are in the human leg?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the chemical symbol for tellurium?",
+    "options": [
+      "Te",
+      "Tl",
+      "Tr",
+      "Tu"
+    ],
+    "answer": "Te"
+  },
+  {
+    "question": "Which bird has the fastest wing beat?",
+    "options": [
+      "Hummingbird",
+      "Sparrow",
+      "Swift",
+      "Eagle"
+    ],
+    "answer": "Hummingbird"
+  },
+  {
+    "question": "What is the unit of frequency?",
+    "options": [
+      "Hertz",
+      "Decibel",
+      "Watt",
+      "Ohm"
+    ],
+    "answer": "Hertz"
+  },
+  {
+    "question": "Which planet has the most circular orbit?",
+    "options": [
+      "Venus",
+      "Earth",
+      "Neptune",
+      "Jupiter"
+    ],
+    "answer": "Venus"
+  },
+  {
+    "question": "What is the largest type of white blood cell?",
+    "options": [
+      "Lymphocyte",
+      "Monocyte",
+      "Neutrophil",
+      "Basophil"
+    ],
+    "answer": "Monocyte"
+  },
+  {
+    "question": "Which element is the most abundant in the human body?",
+    "options": [
+      "Carbon",
+      "Hydrogen",
+      "Oxygen",
+      "Nitrogen"
+    ],
+    "answer": "Oxygen"
+  },
+  {
+    "question": "What is the study of fish called?",
+    "options": [
+      "Ichthyology",
+      "Herpetology",
+      "Ornithology",
+      "Mammalogy"
+    ],
+    "answer": "Ichthyology"
+  },
+  {
+    "question": "How many chambers does a mammal heart have?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the chemical symbol for iodine?",
+    "options": [
+      "Io",
+      "In",
+      "I",
+      "Id"
+    ],
+    "answer": "I"
+  },
+  {
+    "question": "Which animal has the most powerful bite force?",
+    "options": [
+      "Lion",
+      "Crocodile",
+      "Hippopotamus",
+      "Great white shark"
+    ],
+    "answer": "Crocodile"
+  },
+  {
+    "question": "What is the unit of power?",
+    "options": [
+      "Joule",
+      "Watt",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": "Watt"
+  },
+  {
+    "question": "Which planet has the most visible rings?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "Liver",
+      "Skin",
+      "Brain",
+      "Lungs"
+    ],
+    "answer": "Skin"
+  },
+  {
+    "question": "Which element is essential for chlorophyll?",
+    "options": [
+      "Iron",
+      "Magnesium",
+      "Calcium",
+      "Potassium"
+    ],
+    "answer": "Magnesium"
+  },
+  {
+    "question": "What is the study of reptiles and amphibians called?",
+    "options": [
+      "Herpetology",
+      "Ichthyology",
+      "Ornithology",
+      "Mammalogy"
+    ],
+    "answer": "Herpetology"
+  },
+  {
+    "question": "How many bones are in the human wrist?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": "8"
+  },
+  {
+    "question": "What is the chemical symbol for xenon?",
+    "options": [
+      "Xe",
+      "Xn",
+      "Xo",
+      "X"
+    ],
+    "answer": "Xe"
+  },
+  {
+    "question": "Which bird has the largest wingspan?",
+    "options": [
+      "Albatross",
+      "Condor",
+      "Eagle",
+      "Pelican"
+    ],
+    "answer": "Albatross"
+  },
+  {
+    "question": "What is the unit of energy?",
+    "options": [
+      "Watt",
+      "Joule",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": "Joule"
+  },
+  {
+    "question": "Which planet is known as the 'Blue Planet'?",
+    "options": [
+      "Earth",
+      "Neptune",
+      "Uranus",
+      "Mars"
+    ],
+    "answer": "Earth"
+  },
+    {
+    "question": "What is the chemical symbol for cobalt?",
+    "options": [
+      "Cb",
+      "Co",
+      "Ct",
+      "Cl"
+    ],
+    "answer": "Co"
+  },
+  {
+    "question": "Which part of the cell produces energy?",
+    "options": [
+      "Nucleus",
+      "Mitochondria",
+      "Ribosome",
+      "Golgi apparatus"
+    ],
+    "answer": "Mitochondria"
+  },
+  {
+    "question": "What is the hottest type of star?",
+    "options": [
+      "Red dwarf",
+      "Yellow star",
+      "Blue giant",
+      "White dwarf"
+    ],
+    "answer": "Blue giant"
+  },
+  {
+    "question": "Which gas is used in fluorescent lights?",
+    "options": [
+      "Neon",
+      "Argon",
+      "Xenon",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of volcanoes called?",
+    "options": [
+      "Seismology",
+      "Volcanology",
+      "Geology",
+      "Meteorology"
+    ],
+    "answer": "Volcanology"
+  },
+  {
+    "question": "How many natural elements are there?",
+    "options": [
+      "92",
+      "94",
+      "98",
+      "102"
+    ],
+    "answer": "94"
+  },
+  {
+    "question": "Which animal has the strongest sense of smell?",
+    "options": [
+      "Dog",
+      "Bear",
+      "Shark",
+      "Moth"
+    ],
+    "answer": "Bear"
+  },
+  {
+    "question": "What is the unit of electrical conductivity?",
+    "options": [
+      "Siemens",
+      "Mho",
+      "Both siemens and mho",
+      "Ohm"
+    ],
+    "answer": "Both siemens and mho"
+  },
+  {
+    "question": "Which planet has the most complex ring system?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the smallest muscle in the human body?",
+    "options": [
+      "Stapedius",
+      "Sartorius",
+      "Masseter",
+      "Orbicularis oculi"
+    ],
+    "answer": "Stapedius"
+  },
+  {
+    "question": "Which metal is the most reactive?",
+    "options": [
+      "Sodium",
+      "Potassium",
+      "Lithium",
+      "Cesium"
+    ],
+    "answer": "Cesium"
+  },
+  {
+    "question": "What is the study of fossils called?",
+    "options": [
+      "Archaeology",
+      "Paleontology",
+      "Geology",
+      "Anthropology"
+    ],
+    "answer": "Paleontology"
+  },
+  {
+    "question": "How many bones are in the human spine?",
+    "options": [
+      "24",
+      "26",
+      "33",
+      "36"
+    ],
+    "answer": "33"
+  },
+  {
+    "question": "What is the chemical symbol for nickel?",
+    "options": [
+      "Ni",
+      "Nk",
+      "Nc",
+      "Nl"
+    ],
+    "answer": "Ni"
+  },
+  {
+    "question": "Which bird has the best eyesight?",
+    "options": [
+      "Eagle",
+      "Hawk",
+      "Owl",
+      "Falcon"
+    ],
+    "answer": "Eagle"
+  },
+  {
+    "question": "What is the unit of illuminance?",
+    "options": [
+      "Lumen",
+      "Lux",
+      "Candela",
+      "Watt"
+    ],
+    "answer": "Lux"
+  },
+  {
+    "question": "Which planet has the most moons?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the largest organelle in animal cells?",
+    "options": [
+      "Nucleus",
+      "Mitochondria",
+      "Golgi apparatus",
+      "Endoplasmic reticulum"
+    ],
+    "answer": "Nucleus"
+  },
+  {
+    "question": "Which element is essential for hemoglobin?",
+    "options": [
+      "Copper",
+      "Iron",
+      "Zinc",
+      "Magnesium"
+    ],
+    "answer": "Iron"
+  },
+  {
+    "question": "What is the study of drugs called?",
+    "options": [
+      "Toxicology",
+      "Pharmacology",
+      "Chemistry",
+      "Biology"
+    ],
+    "answer": "Pharmacology"
+  },
+  {
+    "question": "How many pairs of ribs do humans have?",
+    "options": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "answer": "12"
+  },
+  {
+    "question": "What is the chemical symbol for manganese?",
+    "options": [
+      "Ma",
+      "Mn",
+      "Mg",
+      "Mh"
+    ],
+    "answer": "Mn"
+  },
+  {
+    "question": "Which animal has the longest pregnancy?",
+    "options": [
+      "Human",
+      "Elephant",
+      "Whale",
+      "Rhinoceros"
+    ],
+    "answer": "Elephant"
+  },
+  {
+    "question": "What is the unit of magnetic permeability?",
+    "options": [
+      "Henry",
+      "Tesla",
+      "Weber",
+      "Gauss"
+    ],
+    "answer": "Henry"
+  },
+  {
+    "question": "Which planet has the shortest year?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Mars"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the largest type of white blood cell?",
+    "options": [
+      "Lymphocyte",
+      "Monocyte",
+      "Neutrophil",
+      "Eosinophil"
+    ],
+    "answer": "Monocyte"
+  },
+  {
+    "question": "Which metal is the most abundant in Earth's crust?",
+    "options": [
+      "Iron",
+      "Aluminum",
+      "Calcium",
+      "Sodium"
+    ],
+    "answer": "Aluminum"
+  },
+  {
+    "question": "What is the study of animal classification called?",
+    "options": [
+      "Ecology",
+      "Taxonomy",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Taxonomy"
+  },
+  {
+    "question": "How many muscles are in the human face?",
+    "options": [
+      "26",
+      "32",
+      "43",
+      "57"
+    ],
+    "answer": "43"
+  },
+  {
+    "question": "What is the chemical symbol for chromium?",
+    "options": [
+      "Ch",
+      "Cr",
+      "Cm",
+      "Co"
+    ],
+    "answer": "Cr"
+  },
+  {
+    "question": "Which bird has the most complex song?",
+    "options": [
+      "Nightingale",
+      "Mockingbird",
+      "Canary",
+      "Lark"
+    ],
+    "answer": "Mockingbird"
+  },
+  {
+    "question": "What is the unit of dynamic viscosity?",
+    "options": [
+      "Pascal-second",
+      "Poise",
+      "Stokes",
+      "Both pascal-second and poise"
+    ],
+    "answer": "Both pascal-second and poise"
+  },
+  {
+    "question": "Which planet has the most extreme pressure?",
+    "options": [
+      "Earth",
+      "Venus",
+      "Jupiter",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the largest type of neuron?",
+    "options": [
+      "Sensory neuron",
+      "Motor neuron",
+      "Interneuron",
+      "Pyramidal cell"
+    ],
+    "answer": "Motor neuron"
+  },
+  {
+    "question": "Which element is used in computer chips?",
+    "options": [
+      "Germanium",
+      "Silicon",
+      "Gallium",
+      "Arsenic"
+    ],
+    "answer": "Silicon"
+  },
+  {
+    "question": "What is the study of animal development called?",
+    "options": [
+      "Embryology",
+      "Genetics",
+      "Evolution",
+      "Zoology"
+    ],
+    "answer": "Embryology"
+  },
+  {
+    "question": "How many bones are in the human skull?",
+    "options": [
+      "18",
+      "22",
+      "26",
+      "30"
+    ],
+    "answer": "22"
+  },
+  {
+    "question": "What is the chemical symbol for selenium?",
+    "options": [
+      "Se",
+      "Sl",
+      "Sn",
+      "Sa"
+    ],
+    "answer": "Se"
+  },
+  {
+    "question": "Which animal has the fastest metabolism?",
+    "options": [
+      "Hummingbird",
+      "Shrew",
+      "Bat",
+      "Mouse"
+    ],
+    "answer": "Hummingbird"
+  },
+  {
+    "question": "What is the unit of thermal conductivity?",
+    "options": [
+      "Watt per meter-kelvin",
+      "Joule per kilogram-kelvin",
+      "Calorie per gram-celsius",
+      "BTU per pound-fahrenheit"
+    ],
+    "answer": "Watt per meter-kelvin"
+  },
+  {
+    "question": "Which planet has the most eccentric orbit?",
+    "options": [
+      "Mercury",
+      "Mars",
+      "Pluto",
+      "Eris"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the largest endocrine gland?",
+    "options": [
+      "Pituitary",
+      "Thyroid",
+      "Pancreas",
+      "Adrenal"
+    ],
+    "answer": "Thyroid"
+  },
+  {
+    "question": "Which element is essential for DNA synthesis?",
+    "options": [
+      "Nitrogen",
+      "Phosphorus",
+      "Carbon",
+      "Oxygen"
+    ],
+    "answer": "Phosphorus"
+  },
+  {
+    "question": "What is the study of animal distribution called?",
+    "options": [
+      "Ecology",
+      "Biogeography",
+      "Zoology",
+      "Geography"
+    ],
+    "answer": "Biogeography"
+  },
+  {
+    "question": "How many chambers does an amphibian heart have?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the chemical symbol for molybdenum?",
+    "options": [
+      "Mb",
+      "Mo",
+      "Ml",
+      "Mn"
+    ],
+    "answer": "Mo"
+  },
+  {
+    "question": "Which bird has the longest lifespan?",
+    "options": [
+      "Eagle",
+      "Albatross",
+      "Parrot",
+      "Swan"
+    ],
+    "answer": "Albatross"
+  },
+  {
+    "question": "What is the unit of electrical conductance?",
+    "options": [
+      "Ohm",
+      "Siemens",
+      "Mho",
+      "Both siemens and mho"
+    ],
+    "answer": "Both siemens and mho"
+  },
+  {
+    "question": "Which planet is known as the 'Giant Planet'?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+    {
+    "question": "What is the chemical symbol for magnesium?",
+    "options": [
+      "Ma",
+      "Mg",
+      "Mn",
+      "Mt"
+    ],
+    "answer": "Mg"
+  },
+  {
+    "question": "Which part of the cell contains genetic material?",
+    "options": [
+      "Mitochondria",
+      "Nucleus",
+      "Ribosome",
+      "Cytoplasm"
+    ],
+    "answer": "Nucleus"
+  },
+  {
+    "question": "What is the brightest star in the night sky?",
+    "options": [
+      "Polaris",
+      "Sirius",
+      "Betelgeuse",
+      "Vega"
+    ],
+    "answer": "Sirius"
+  },
+  {
+    "question": "Which gas is used in photosynthesis?",
+    "options": [
+      "Oxygen",
+      "Carbon dioxide",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "question": "What is the study of animal behavior called?",
+    "options": [
+      "Ecology",
+      "Ethology",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Ethology"
+  },
+  {
+    "question": "How many pairs of chromosomes do humans have?",
+    "options": [
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "answer": "23"
+  },
+  {
+    "question": "Which animal can live without water the longest?",
+    "options": [
+      "Camel",
+      "Kangaroo rat",
+      "Desert tortoise",
+      "Fennec fox"
+    ],
+    "answer": "Kangaroo rat"
+  },
+  {
+    "question": "What is the unit of electric potential?",
+    "options": [
+      "Ampere",
+      "Volt",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": "Volt"
+  },
+  {
+    "question": "Which planet has the most elliptical orbit?",
+    "options": [
+      "Mercury",
+      "Mars",
+      "Pluto",
+      "Neptune"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the largest type of blood vessel?",
+    "options": [
+      "Artery",
+      "Vein",
+      "Capillary",
+      "Aorta"
+    ],
+    "answer": "Aorta"
+  },
+  {
+    "question": "Which metal is used in thermometers?",
+    "options": [
+      "Lead",
+      "Mercury",
+      "Silver",
+      "Copper"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the study of the nervous system called?",
+    "options": [
+      "Cardiology",
+      "Neurology",
+      "Psychology",
+      "Biology"
+    ],
+    "answer": "Neurology"
+  },
+  {
+    "question": "How many senses do humans have?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "What is the chemical symbol for silicon?",
+    "options": [
+      "S",
+      "Si",
+      "Sl",
+      "Sn"
+    ],
+    "answer": "Si"
+  },
+  {
+    "question": "Which bird is the smallest in the world?",
+    "options": [
+      "Sparrow",
+      "Finch",
+      "Hummingbird",
+      "Wren"
+    ],
+    "answer": "Hummingbird"
+  },
+  {
+    "question": "What is the unit of radioactivity?",
+    "options": [
+      "Becquerel",
+      "Curie",
+      "Gray",
+      "Sievert"
+    ],
+    "answer": "Becquerel"
+  },
+  {
+    "question": "Which planet has the most volcanoes?",
+    "options": [
+      "Earth",
+      "Venus",
+      "Mars",
+      "Io (moon of Jupiter)"
+    ],
+    "answer": "Venus"
+  },
+  {
+    "question": "What is the longest nerve in the human body?",
+    "options": [
+      "Optic nerve",
+      "Sciatic nerve",
+      "Vagus nerve",
+      "Spinal nerve"
+    ],
+    "answer": "Sciatic nerve"
+  },
+  {
+    "question": "Which element is essential for strong bones?",
+    "options": [
+      "Iron",
+      "Calcium",
+      "Potassium",
+      "Sodium"
+    ],
+    "answer": "Calcium"
+  },
+  {
+    "question": "What is the study of cancer called?",
+    "options": [
+      "Cardiology",
+      "Oncology",
+      "Neurology",
+      "Dermatology"
+    ],
+    "answer": "Oncology"
+  },
+  {
+    "question": "How many stomachs does a human have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "1"
+  },
+  {
+    "question": "What is the chemical symbol for zinc?",
+    "options": [
+      "Zi",
+      "Zn",
+      "Zc",
+      "Z"
+    ],
+    "answer": "Zn"
+  },
+  {
+    "question": "Which animal has the best hearing?",
+    "options": [
+      "Bat",
+      "Dolphin",
+      "Elephant",
+      "Owl"
+    ],
+    "answer": "Bat"
+  },
+  {
+    "question": "What is the unit of capacitance?",
+    "options": [
+      "Ohm",
+      "Farad",
+      "Henry",
+      "Tesla"
+    ],
+    "answer": "Farad"
+  },
+  {
+    "question": "Which planet has the fastest winds?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Neptune",
+      "Mars"
+    ],
+    "answer": "Neptune"
+  },
+  {
+    "question": "What is the largest part of the human brain?",
+    "options": [
+      "Cerebellum",
+      "Cerebrum",
+      "Brainstem",
+      "Hypothalamus"
+    ],
+    "answer": "Cerebrum"
+  },
+  {
+    "question": "Which metal is the lightest?",
+    "options": [
+      "Aluminum",
+      "Magnesium",
+      "Lithium",
+      "Titanium"
+    ],
+    "answer": "Lithium"
+  },
+  {
+    "question": "What is the study of hormones called?",
+    "options": [
+      "Cardiology",
+      "Endocrinology",
+      "Neurology",
+      "Hematology"
+    ],
+    "answer": "Endocrinology"
+  },
+  {
+    "question": "How many bones are in the human hand?",
+    "options": [
+      "14",
+      "19",
+      "27",
+      "32"
+    ],
+    "answer": "27"
+  },
+  {
+    "question": "What is the chemical symbol for phosphorus?",
+    "options": [
+      "Ph",
+      "P",
+      "Ps",
+      "Po"
+    ],
+    "answer": "P"
+  },
+  {
+    "question": "Which bird can't fly but can swim?",
+    "options": [
+      "Ostrich",
+      "Penguin",
+      "Kiwi",
+      "Emu"
+    ],
+    "answer": "Penguin"
+  },
+  {
+    "question": "What is the unit of magnetic flux?",
+    "options": [
+      "Tesla",
+      "Weber",
+      "Henry",
+      "Gauss"
+    ],
+    "answer": "Weber"
+  },
+  {
+    "question": "Which planet has the longest year?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Neptune",
+      "Uranus"
+    ],
+    "answer": "Neptune"
+  },
+  {
+    "question": "What is the smallest blood vessel?",
+    "options": [
+      "Artery",
+      "Vein",
+      "Capillary",
+      "Arteriole"
+    ],
+    "answer": "Capillary"
+  },
+  {
+    "question": "Which element is used in nuclear reactors?",
+    "options": [
+      "Uranium",
+      "Plutonium",
+      "Both uranium and plutonium",
+      "Radium"
+    ],
+    "answer": "Both uranium and plutonium"
+  },
+  {
+    "question": "What is the study of the immune system called?",
+    "options": [
+      "Hematology",
+      "Immunology",
+      "Oncology",
+      "Pathology"
+    ],
+    "answer": "Immunology"
+  },
+  {
+    "question": "How many muscles are in the human body?",
+    "options": [
+      "206",
+      "360",
+      "600",
+      "850"
+    ],
+    "answer": "600"
+  },
+  {
+    "question": "What is the chemical symbol for sulfur?",
+    "options": [
+      "Su",
+      "S",
+      "Sl",
+      "Sr"
+    ],
+    "answer": "S"
+  },
+  {
+    "question": "Which animal has the longest migration?",
+    "options": [
+      "Monarch butterfly",
+      "Arctic tern",
+      "Gray whale",
+      "Caribou"
+    ],
+    "answer": "Arctic tern"
+  },
+  {
+    "question": "What is the unit of inductance?",
+    "options": [
+      "Farad",
+      "Henry",
+      "Ohm",
+      "Volt"
+    ],
+    "answer": "Henry"
+  },
+  {
+    "question": "Which planet has the most similar day length to Earth?",
+    "options": [
+      "Venus",
+      "Mars",
+      "Mercury",
+      "Jupiter"
+    ],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is the largest gland in the human body?",
+    "options": [
+      "Pancreas",
+      "Thyroid",
+      "Liver",
+      "Pituitary"
+    ],
+    "answer": "Liver"
+  },
+  {
+    "question": "Which element is the main component of diamonds?",
+    "options": [
+      "Silicon",
+      "Carbon",
+      "Oxygen",
+      "Calcium"
+    ],
+    "answer": "Carbon"
+  },
+  {
+    "question": "What is the study of blood called?",
+    "options": [
+      "Cardiology",
+      "Hematology",
+      "Neurology",
+      "Oncology"
+    ],
+    "answer": "Hematology"
+  },
+  {
+    "question": "How many chambers does a bird heart have?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the chemical symbol for chlorine?",
+    "options": [
+      "Ch",
+      "Cl",
+      "Cn",
+      "Cr"
+    ],
+    "answer": "Cl"
+  },
+  {
+    "question": "Which bird is known for its colorful plumage?",
+    "options": [
+      "Peacock",
+      "Parrot",
+      "Flamingo",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the unit of magnetic field strength?",
+    "options": [
+      "Weber",
+      "Tesla",
+      "Henry",
+      "Farad"
+    ],
+    "answer": "Tesla"
+  },
+  {
+    "question": "Which planet is known as the 'Morning Star'?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Jupiter"
+    ],
+    "answer": "Venus"
+  },
+    {
+    "question": "What is the chemical symbol for calcium?",
+    "options": [
+      "Ca",
+      "Cm",
+      "Cl",
+      "C"
+    ],
+    "answer": "Ca"
+  },
+  {
+    "question": "Which organ filters waste from blood?",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Pancreas",
+      "Spleen"
+    ],
+    "answer": "Kidney"
+  },
+  {
+    "question": "What is the smallest planet in our solar system?",
+    "options": [
+      "Mars",
+      "Mercury",
+      "Venus",
+      "Pluto"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "Which gas do fire extinguishers often use?",
+    "options": [
+      "Oxygen",
+      "Carbon dioxide",
+      "Nitrogen",
+      "Helium"
+    ],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "question": "What is the study of earthquakes called?",
+    "options": [
+      "Volcanology",
+      "Seismology",
+      "Meteorology",
+      "Geology"
+    ],
+    "answer": "Seismology"
+  },
+  {
+    "question": "How many elements are gases at room temperature?",
+    "options": [
+      "8",
+      "11",
+      "15",
+      "20"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "Which animal has the largest eyes?",
+    "options": [
+      "Elephant",
+      "Whale",
+      "Giant Squid",
+      "Ostrich"
+    ],
+    "answer": "Giant Squid"
+  },
+  {
+    "question": "What is the unit of frequency?",
+    "options": [
+      "Hertz",
+      "Decibel",
+      "Watt",
+      "Ohm"
+    ],
+    "answer": "Hertz"
+  },
+  {
+    "question": "Which planet has the most visible rings?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the hardest tissue in the human body?",
+    "options": [
+      "Bone",
+      "Tooth enamel",
+      "Cartilage",
+      "Nail"
+    ],
+    "answer": "Tooth enamel"
+  },
+  {
+    "question": "Which metal is the best conductor of electricity?",
+    "options": [
+      "Copper",
+      "Silver",
+      "Gold",
+      "Aluminum"
+    ],
+    "answer": "Silver"
+  },
+  {
+    "question": "What is the study of fungi called?",
+    "options": [
+      "Bacteriology",
+      "Virology",
+      "Mycology",
+      "Parasitology"
+    ],
+    "answer": "Mycology"
+  },
+  {
+    "question": "How many taste buds do humans have?",
+    "options": [
+      "1,000",
+      "5,000",
+      "10,000",
+      "20,000"
+    ],
+    "answer": "10,000"
+  },
+  {
+    "question": "What is the chemical symbol for nitrogen?",
+    "options": [
+      "Ni",
+      "N",
+      "Ng",
+      "Nt"
+    ],
+    "answer": "N"
+  },
+  {
+    "question": "Which bird is the fastest in flight?",
+    "options": [
+      "Eagle",
+      "Falcon",
+      "Swift",
+      "Albatross"
+    ],
+    "answer": "Falcon"
+  },
+  {
+    "question": "What is the unit of force?",
+    "options": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": "Newton"
+  },
+  {
+    "question": "Which planet is known as the 'Ice Giant'?",
+    "options": [
+      "Uranus",
+      "Neptune",
+      "Pluto",
+      "Saturn"
+    ],
+    "answer": "Neptune"
+  },
+  {
+    "question": "What is the largest bone in the human face?",
+    "options": [
+      "Mandible",
+      "Maxilla",
+      "Zygomatic",
+      "Nasal"
+    ],
+    "answer": "Mandible"
+  },
+  {
+    "question": "Which element is the most abundant in the universe?",
+    "options": [
+      "Oxygen",
+      "Carbon",
+      "Hydrogen",
+      "Helium"
+    ],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "What is the study of viruses called?",
+    "options": [
+      "Bacteriology",
+      "Virology",
+      "Mycology",
+      "Parasitology"
+    ],
+    "answer": "Virology"
+  },
+  {
+    "question": "How many stomachs does a cow have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the chemical symbol for tin?",
+    "options": [
+      "Ti",
+      "Tn",
+      "Sn",
+      "Ts"
+    ],
+    "answer": "Sn"
+  },
+  {
+    "question": "Which animal can regrow its limbs?",
+    "options": [
+      "Frog",
+      "Lizard",
+      "Starfish",
+      "Snake"
+    ],
+    "answer": "Starfish"
+  },
+  {
+    "question": "What is the unit of pressure?",
+    "options": [
+      "Newton",
+      "Pascal",
+      "Joule",
+      "Watt"
+    ],
+    "answer": "Pascal"
+  },
+  {
+    "question": "Which planet has the longest day?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Mars"
+    ],
+    "answer": "Venus"
+  },
+  {
+    "question": "What is the strongest muscle in the human body?",
+    "options": [
+      "Heart",
+      "Tongue",
+      "Jaw",
+      "Gluteus"
+    ],
+    "answer": "Jaw"
+  },
+  {
+    "question": "Which metal is the most magnetic?",
+    "options": [
+      "Iron",
+      "Nickel",
+      "Cobalt",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of bacteria called?",
+    "options": [
+      "Virology",
+      "Bacteriology",
+      "Mycology",
+      "Parasitology"
+    ],
+    "answer": "Bacteriology"
+  },
+  {
+    "question": "How many vertebrae are in the human spine?",
+    "options": [
+      "24",
+      "26",
+      "28",
+      "33"
+    ],
+    "answer": "33"
+  },
+  {
+    "question": "What is the chemical symbol for uranium?",
+    "options": [
+      "Ur",
+      "Um",
+      "U",
+      "Un"
+    ],
+    "answer": "U"
+  },
+  {
+    "question": "Which bird has the largest wingspan?",
+    "options": [
+      "Eagle",
+      "Albatross",
+      "Condor",
+      "Pelican"
+    ],
+    "answer": "Albatross"
+  },
+  {
+    "question": "What is the unit of electric charge?",
+    "options": [
+      "Ampere",
+      "Volt",
+      "Coulomb",
+      "Ohm"
+    ],
+    "answer": "Coulomb"
+  },
+  {
+    "question": "Which planet has the Great Dark Spot?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Neptune"
+  },
+  {
+    "question": "What is the smallest bone in the human body?",
+    "options": [
+      "Femur",
+      "Stapes",
+      "Incus",
+      "Malleus"
+    ],
+    "answer": "Stapes"
+  },
+  {
+    "question": "Which element is liquid at room temperature?",
+    "options": [
+      "Mercury",
+      "Bromine",
+      "Both mercury and bromine",
+      "Gallium"
+    ],
+    "answer": "Both mercury and bromine"
+  },
+  {
+    "question": "What is the study of algae called?",
+    "options": [
+      "Algology",
+      "Phycology",
+      "Botany",
+      "Mycology"
+    ],
+    "answer": "Phycology"
+  },
+  {
+    "question": "How many teeth do sharks have in their lifetime?",
+    "options": [
+      "Hundreds",
+      "Thousands",
+      "Tens of thousands",
+      "Millions"
+    ],
+    "answer": "Tens of thousands"
+  },
+  {
+    "question": "What is the chemical symbol for platinum?",
+    "options": [
+      "Pl",
+      "Pt",
+      "Pn",
+      "Pm"
+    ],
+    "answer": "Pt"
+  },
+  {
+    "question": "Which animal has the strongest bite?",
+    "options": [
+      "Lion",
+      "Crocodile",
+      "Shark",
+      "Hyena"
+    ],
+    "answer": "Crocodile"
+  },
+  {
+    "question": "What is the unit of temperature in the metric system?",
+    "options": [
+      "Fahrenheit",
+      "Celsius",
+      "Kelvin",
+      "Both Celsius and Kelvin"
+    ],
+    "answer": "Both Celsius and Kelvin"
+  },
+  {
+    "question": "Which planet has the most extreme temperature changes?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Mars",
+      "Jupiter"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the largest internal organ?",
+    "options": [
+      "Heart",
+      "Liver",
+      "Lungs",
+      "Brain"
+    ],
+    "answer": "Liver"
+  },
+  {
+    "question": "Which element is the most abundant in Earth's crust?",
+    "options": [
+      "Silicon",
+      "Oxygen",
+      "Aluminum",
+      "Iron"
+    ],
+    "answer": "Oxygen"
+  },
+  {
+    "question": "What is the study of parasites called?",
+    "options": [
+      "Bacteriology",
+      "Virology",
+      "Parasitology",
+      "Mycology"
+    ],
+    "answer": "Parasitology"
+  },
+  {
+    "question": "How many chambers does a fish heart have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "What is the chemical symbol for iodine?",
+    "options": [
+      "Io",
+      "In",
+      "I",
+      "Id"
+    ],
+    "answer": "I"
+  },
+  {
+    "question": "Which bird is the national symbol of the United States?",
+    "options": [
+      "Eagle",
+      "Hawk",
+      "Falcon",
+      "Owl"
+    ],
+    "answer": "Eagle"
+  },
+  {
+    "question": "What is the unit of luminous intensity?",
+    "options": [
+      "Lumen",
+      "Candela",
+      "Lux",
+      "Watt"
+    ],
+    "answer": "Candela"
+  },
+  {
+    "question": "Which planet is most similar to Earth in size?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Pluto"
+    ],
+    "answer": "Venus"
+  },
+    {
+    "question": "What is the chemical symbol for neodymium?",
+    "options": [
+      "Nd",
+      "Ne",
+      "Nm",
+      "No"
+    ],
+    "answer": "Nd"
+  },
+  {
+    "question": "Which part of the cell is responsible for protein synthesis?",
+    "options": [
+      "Mitochondria",
+      "Ribosome",
+      "Nucleus",
+      "Golgi apparatus"
+    ],
+    "answer": "Ribosome"
+  },
+  {
+    "question": "What is the most common element in the universe?",
+    "options": [
+      "Oxygen",
+      "Hydrogen",
+      "Helium",
+      "Carbon"
+    ],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "Which gas is known as marsh gas?",
+    "options": [
+      "Methane",
+      "Ethane",
+      "Propane",
+      "Butane"
+    ],
+    "answer": "Methane"
+  },
+  {
+    "question": "What is the study of the atmosphere called?",
+    "options": [
+      "Meteorology",
+      "Geology",
+      "Astronomy",
+      "Oceanography"
+    ],
+    "answer": "Meteorology"
+  },
+  {
+    "question": "How many alkaline earth metals are there?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "Which animal has the most complex social structure?",
+    "options": [
+      "Ants",
+      "Bees",
+      "Dolphins",
+      "Elephants"
+    ],
+    "answer": "Ants"
+  },
+  {
+    "question": "What is the unit of electrical potential?",
+    "options": [
+      "Ampere",
+      "Volt",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": "Volt"
+  },
+  {
+    "question": "Which planet has the largest dust storms?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Venus",
+      "Jupiter"
+    ],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is the smallest organ in the human body?",
+    "options": [
+      "Pineal gland",
+      "Pituitary gland",
+      "Thyroid",
+      "Pancreas"
+    ],
+    "answer": "Pineal gland"
+  },
+  {
+    "question": "Which metal is the best thermal conductor?",
+    "options": [
+      "Copper",
+      "Silver",
+      "Gold",
+      "Aluminum"
+    ],
+    "answer": "Silver"
+  },
+  {
+    "question": "What is the study of worms called?",
+    "options": [
+      "Helminthology",
+      "Entomology",
+      "Herpetology",
+      "Ichthyology"
+    ],
+    "answer": "Helminthology"
+  },
+  {
+    "question": "How many bones are in the human face?",
+    "options": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "What is the chemical symbol for promethium?",
+    "options": [
+      "Pm",
+      "Pr",
+      "Pt",
+      "Po"
+    ],
+    "answer": "Pm"
+  },
+  {
+    "question": "Which bird has the most acute vision?",
+    "options": [
+      "Eagle",
+      "Hawk",
+      "Owl",
+      "Falcon"
+    ],
+    "answer": "Eagle"
+  },
+  {
+    "question": "What is the unit of force?",
+    "options": [
+      "Newton",
+      "Joule",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": "Newton"
+  },
+  {
+    "question": "Which planet has the most extreme gravity?",
+    "options": [
+      "Earth",
+      "Jupiter",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the largest type of white blood cell?",
+    "options": [
+      "Lymphocyte",
+      "Monocyte",
+      "Neutrophil",
+      "Eosinophil"
+    ],
+    "answer": "Monocyte"
+  },
+  {
+    "question": "Which element is essential for nerve function?",
+    "options": [
+      "Sodium",
+      "Potassium",
+      "Calcium",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal development called?",
+    "options": [
+      "Embryology",
+      "Genetics",
+      "Evolution",
+      "Zoology"
+    ],
+    "answer": "Embryology"
+  },
+  {
+    "question": "How many pairs of cranial nerves are there?",
+    "options": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "answer": "12"
+  },
+  {
+    "question": "What is the chemical symbol for samarium?",
+    "options": [
+      "Sa",
+      "Sm",
+      "Sr",
+      "Si"
+    ],
+    "answer": "Sm"
+  },
+  {
+    "question": "Which animal has the fastest growth rate?",
+    "options": [
+      "Bamboo",
+      "Bacteria",
+      "Blue whale",
+      "Sunflower"
+    ],
+    "answer": "Bacteria"
+  },
+  {
+    "question": "What is the unit of electrical conductivity?",
+    "options": [
+      "Siemens",
+      "Mho",
+      "Both siemens and mho",
+      "Ohm"
+    ],
+    "answer": "Both siemens and mho"
+  },
+  {
+    "question": "Which planet has the most visible surface features?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Venus",
+      "Mercury"
+    ],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is the largest organ in the digestive system?",
+    "options": [
+      "Stomach",
+      "Liver",
+      "Small intestine",
+      "Large intestine"
+    ],
+    "answer": "Small intestine"
+  },
+  {
+    "question": "Which metal is the most abundant in seawater?",
+    "options": [
+      "Sodium",
+      "Magnesium",
+      "Calcium",
+      "Potassium"
+    ],
+    "answer": "Sodium"
+  },
+  {
+    "question": "What is the study of spiders called?",
+    "options": [
+      "Arachnology",
+      "Entomology",
+      "Herpetology",
+      "Ichthyology"
+    ],
+    "answer": "Arachnology"
+  },
+  {
+    "question": "How many bones are in the human neck?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "What is the chemical symbol for europium?",
+    "options": [
+      "Eu",
+      "Ep",
+      "Er",
+      "Em"
+    ],
+    "answer": "Eu"
+  },
+  {
+    "question": "Which bird has the longest beak?",
+    "options": [
+      "Pelican",
+      "Toucan",
+      "Hummingbird",
+      "Spoonbill"
+    ],
+    "answer": "Pelican"
+  },
+  {
+    "question": "What is the unit of luminous intensity?",
+    "options": [
+      "Lumen",
+      "Lux",
+      "Candela",
+      "Watt"
+    ],
+    "answer": "Candela"
+  },
+  {
+    "question": "Which planet has the most complex weather system?",
+    "options": [
+      "Earth",
+      "Jupiter",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the largest gland in the endocrine system?",
+    "options": [
+      "Thyroid",
+      "Pancreas",
+      "Pituitary",
+      "Adrenal"
+    ],
+    "answer": "Thyroid"
+  },
+  {
+    "question": "Which element is used in batteries?",
+    "options": [
+      "Lithium",
+      "Lead",
+      "Nickel",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal classification called?",
+    "options": [
+      "Taxonomy",
+      "Ecology",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Taxonomy"
+  },
+  {
+    "question": "How many bones are in the human skull?",
+    "options": [
+      "20",
+      "22",
+      "24",
+      "26"
+    ],
+    "answer": "22"
+  },
+  {
+    "question": "What is the chemical symbol for gadolinium?",
+    "options": [
+      "Gd",
+      "Ga",
+      "Gl",
+      "Gn"
+    ],
+    "answer": "Gd"
+  },
+  {
+    "question": "Which animal has the most complex communication system?",
+    "options": [
+      "Dolphin",
+      "Whale",
+      "Primate",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the unit of magnetic flux?",
+    "options": [
+      "Tesla",
+      "Weber",
+      "Henry",
+      "Gauss"
+    ],
+    "answer": "Weber"
+  },
+  {
+    "question": "Which planet has the most extreme axial tilt?",
+    "options": [
+      "Earth",
+      "Mars",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Uranus"
+  },
+  {
+    "question": "What is the largest organ in the respiratory system?",
+    "options": [
+      "Trachea",
+      "Bronchi",
+      "Lungs",
+      "Diaphragm"
+    ],
+    "answer": "Lungs"
+  },
+  {
+    "question": "Which element is essential for DNA structure?",
+    "options": [
+      "Nitrogen",
+      "Phosphorus",
+      "Carbon",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal behavior patterns called?",
+    "options": [
+      "Ethology",
+      "Ecology",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Ethology"
+  },
+  {
+    "question": "How many bones are in the human backbone?",
+    "options": [
+      "24",
+      "26",
+      "33",
+      "36"
+    ],
+    "answer": "33"
+  },
+  {
+    "question": "What is the chemical symbol for terbium?",
+    "options": [
+      "Tb",
+      "Te",
+      "Tr",
+      "Ty"
+    ],
+    "answer": "Tb"
+  },
+  {
+    "question": "Which bird has the most elaborate courtship display?",
+    "options": [
+      "Peacock",
+      "Bird of paradise",
+      "Bowerbird",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the unit of catalytic activity?",
+    "options": [
+      "Mole",
+      "Katal",
+      "Gram",
+      "Liter"
+    ],
+    "answer": "Katal"
+  },
+  {
+    "question": "Which planet has the most complex ring system?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the largest organ in the circulatory system?",
+    "options": [
+      "Heart",
+      "Aorta",
+      "Liver",
+      "Spleen"
+    ],
+    "answer": "Heart"
+  },
+  {
+    "question": "Which metal is the most resistant to acid?",
+    "options": [
+      "Gold",
+      "Platinum",
+      "Tantalum",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal locomotion called?",
+    "options": [
+      "Kinesiology",
+      "Biomechanics",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Biomechanics"
+  },
+  {
+    "question": "How many bones are in the human rib cage?",
+    "options": [
+      "20",
+      "24",
+      "28",
+      "32"
+    ],
+    "answer": "24"
+  },
+  {
+    "question": "What is the chemical symbol for dysprosium?",
+    "options": [
+      "Dy",
+      "Dp",
+      "Ds",
+      "Dr"
+    ],
+    "answer": "Dy"
+  },
+  {
+    "question": "Which animal has the most advanced tool use?",
+    "options": [
+      "Chimpanzee",
+      "Dolphin",
+      "Octopus",
+      "Crow"
+    ],
+    "answer": "Chimpanzee"
+  },
+  {
+    "question": "What is the unit of absorbed dose?",
+    "options": [
+      "Gray",
+      "Sievert",
+      "Becquerel",
+      "Curie"
+    ],
+    "answer": "Gray"
+  },
+  {
+    "question": "Which planet has the most extreme temperature range?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Mars",
+      "Pluto"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the largest organ in the nervous system?",
+    "options": [
+      "Brain",
+      "Spinal cord",
+      "Nerves",
+      "Ganglia"
+    ],
+    "answer": "Brain"
+  },
+  {
+    "question": "Which element is essential for muscle function?",
+    "options": [
+      "Calcium",
+      "Magnesium",
+      "Potassium",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal sleep patterns called?",
+    "options": [
+      "Chronobiology",
+      "Ethology",
+      "Zoology",
+      "Biology"
+    ],
+    "answer": "Chronobiology"
+  },
+  {
+    "question": "How many bones are in the human pelvis?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the chemical symbol for holmium?",
+    "options": [
+      "Ho",
+      "Hl",
+      "Hm",
+      "Hy"
+    ],
+    "answer": "Ho"
+  },
+  {
+    "question": "Which bird has the most complex vocalizations?",
+    "options": [
+      "Parrot",
+      "Mockingbird",
+      "Nightingale",
+      "Lyrebird"
+    ],
+    "answer": "Lyrebird"
+  },
+  {
+    "question": "What is the unit of equivalent dose?",
+    "options": [
+      "Gray",
+      "Sievert",
+      "Becquerel",
+      "Curie"
+    ],
+    "answer": "Sievert"
+  },
+  {
+    "question": "Which planet has the most visible cloud bands?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the largest organ in the immune system?",
+    "options": [
+      "Spleen",
+      "Thymus",
+      "Lymph nodes",
+      "Bone marrow"
+    ],
+    "answer": "Spleen"
+  },
+  {
+    "question": "Which element is essential for oxygen transport?",
+    "options": [
+      "Iron",
+      "Copper",
+      "Zinc",
+      "Manganese"
+    ],
+    "answer": "Iron"
+  },
+  {
+    "question": "What is the study of animal migration called?",
+    "options": [
+      "Migration biology",
+      "Animal navigation",
+      "Zoogeography",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "How many bones are in the human arm?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the chemical symbol for erbium?",
+    "options": [
+      "Er",
+      "Eb",
+      "Em",
+      "Ey"
+    ],
+    "answer": "Er"
+  },
+  {
+    "question": "Which animal has the most sophisticated navigation system?",
+    "options": [
+      "Bird",
+      "Sea turtle",
+      "Salmon",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the unit of dynamic viscosity?",
+    "options": [
+      "Pascal-second",
+      "Poise",
+      "Stokes",
+      "Both pascal-second and poise"
+    ],
+    "answer": "Both pascal-second and poise"
+  },
+  {
+    "question": "Which planet has the most complex magnetic field?",
+    "options": [
+      "Earth",
+      "Jupiter",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the largest organ in the excretory system?",
+    "options": [
+      "Kidneys",
+      "Liver",
+      "Skin",
+      "Lungs"
+    ],
+    "answer": "Kidneys"
+  },
+  {
+    "question": "Which element is essential for enzyme function?",
+    "options": [
+      "Zinc",
+      "Magnesium",
+      "Manganese",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal learning called?",
+    "options": [
+      "Animal cognition",
+      "Ethology",
+      "Zoology",
+      "Psychology"
+    ],
+    "answer": "Animal cognition"
+  },
+  {
+    "question": "How many bones are in the human leg?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the chemical symbol for thulium?",
+    "options": [
+      "Tm",
+      "Th",
+      "Tl",
+      "Tu"
+    ],
+    "answer": "Tm"
+  },
+  {
+    "question": "Which bird has the most efficient flight?",
+    "options": [
+      "Albatross",
+      "Swift",
+      "Falcon",
+      "Eagle"
+    ],
+    "answer": "Albatross"
+  },
+  {
+    "question": "What is the unit of thermal conductivity?",
+    "options": [
+      "Watt per meter-kelvin",
+      "Joule per kilogram-kelvin",
+      "Calorie per gram-celsius",
+      "BTU per pound-fahrenheit"
+    ],
+    "answer": "Watt per meter-kelvin"
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "Liver",
+      "Skin",
+      "Brain",
+      "Lungs"
+    ],
+    "answer": "Skin"
+  },
+  {
+    "question": "Which element is essential for photosynthesis?",
+    "options": [
+      "Carbon",
+      "Hydrogen",
+      "Oxygen",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the study of animal evolution called?",
+    "options": [
+      "Evolutionary biology",
+      "Paleontology",
+      "Zoology",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "How many bones are in the adult human body?",
+    "options": [
+      "196",
+      "206",
+      "216",
+      "226"
+    ],
+    "answer": "206"
+  },
+  {
+    "question": "What is the chemical symbol for ytterbium?",
+    "options": [
+      "Yb",
+      "Yt",
+      "Yr",
+      "Ym"
+    ],
+    "answer": "Yb"
+  },
+  {
+    "question": "Which animal has the most complex brain relative to body size?",
+    "options": [
+      "Human",
+      "Dolphin",
+      "Octopus",
+      "Ant"
+    ],
+    "answer": "Ant"
+  },
+  {
+    "question": "What is the unit of electrical resistance?",
+    "options": [
+      "Ohm",
+      "Volt",
+      "Ampere",
+      "Watt"
+    ],
+    "answer": "Ohm"
+  },
+  {
+    "question": "Which planet is known as the 'Blue Planet'?",
+    "options": [
+      "Earth",
+      "Neptune",
+      "Uranus",
+      "Mars"
+    ],
+    "answer": "Earth"
+  },
+    {
+    "question": "What is the chemical symbol for silver?",
+    "options": [
+      "Si",
+      "Ag",
+      "Sv",
+      "Sr"
+    ],
+    "answer": "Ag"
+  },
+  {
+    "question": "Which gas is produced by plants during photosynthesis?",
+    "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    "answer": "Oxygen"
+  },
+  {
+    "question": "What is the largest type of big cat?",
+    "options": [
+      "Lion",
+      "Tiger",
+      "Jaguar",
+      "Leopard"
+    ],
+    "answer": "Tiger"
+  },
+  {
+    "question": "How many hearts does an octopus have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the study of fossils called?",
+    "options": [
+      "Archaeology",
+      "Paleontology",
+      "Geology",
+      "Anthropology"
+    ],
+    "answer": "Paleontology"
+  },
+  {
+    "question": "Which planet is known for its Great Red Spot?",
+    "options": [
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the human body's normal temperature in Celsius?",
+    "options": [
+      "35°C",
+      "36°C",
+      "37°C",
+      "38°C"
+    ],
+    "answer": "37°C"
+  },
+  {
+    "question": "Which element has the atomic number 1?",
+    "options": [
+      "Helium",
+      "Hydrogen",
+      "Oxygen",
+      "Carbon"
+    ],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "What is the fastest land animal?",
+    "options": [
+      "Lion",
+      "Cheetah",
+      "Pronghorn",
+      "Horse"
+    ],
+    "answer": "Cheetah"
+  },
+  {
+    "question": "Which part of the brain controls balance?",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Brainstem",
+      "Hypothalamus"
+    ],
+    "answer": "Cerebellum"
+  },
+  {
+    "question": "What is the chemical formula for table salt?",
+    "options": [
+      "NaCl",
+      "KCl",
+      "CaCl2",
+      "MgCl2"
+    ],
+    "answer": "NaCl"
+  },
+  {
+    "question": "How many moons does Earth have?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "1"
+  },
+  {
+    "question": "What is the process of a liquid turning into a gas called?",
+    "options": [
+      "Condensation",
+      "Evaporation",
+      "Sublimation",
+      "Freezing"
+    ],
+    "answer": "Evaporation"
+  },
+  {
+    "question": "Which blood cells fight infection?",
+    "options": [
+      "Red blood cells",
+      "White blood cells",
+      "Platelets",
+      "Plasma"
+    ],
+    "answer": "White blood cells"
+  },
+  {
+    "question": "What is the main gas in the Sun?",
+    "options": [
+      "Oxygen",
+      "Helium",
+      "Hydrogen",
+      "Nitrogen"
+    ],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "Which planet is the hottest in our solar system?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Mars",
+      "Jupiter"
+    ],
+    "answer": "Venus"
+  },
+  {
+    "question": "What is the study of insects called?",
+    "options": [
+      "Ornithology",
+      "Entomology",
+      "Herpetology",
+      "Ichthyology"
+    ],
+    "answer": "Entomology"
+  },
+  {
+    "question": "How many bones are in the human skull?",
+    "options": [
+      "14",
+      "22",
+      "28",
+      "32"
+    ],
+    "answer": "22"
+  },
+  {
+    "question": "What is the chemical symbol for potassium?",
+    "options": [
+      "P",
+      "Pt",
+      "K",
+      "Po"
+    ],
+    "answer": "K"
+  },
+  {
+    "question": "Which animal can change its color?",
+    "options": [
+      "Frog",
+      "Chameleon",
+      "Lizard",
+      "Snake"
+    ],
+    "answer": "Chameleon"
+  },
+  {
+    "question": "What is the unit of electric current?",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": "Ampere"
+  },
+  {
+    "question": "Which planet has the most moons?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "options": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Pacific Ocean",
+      "Arctic Ocean"
+    ],
+    "answer": "Pacific Ocean"
+  },
+  {
+    "question": "Which gas makes soda fizzy?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Helium"
+    ],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "question": "What is the study of birds called?",
+    "options": [
+      "Entomology",
+      "Ornithology",
+      "Herpetology",
+      "Mammalogy"
+    ],
+    "answer": "Ornithology"
+  },
+  {
+    "question": "How many ribs do humans have?",
+    "options": [
+      "12 pairs",
+      "10 pairs",
+      "14 pairs",
+      "16 pairs"
+    ],
+    "answer": "12 pairs"
+  },
+  {
+    "question": "What is the chemical symbol for lead?",
+    "options": [
+      "Ld",
+      "Pb",
+      "Le",
+      "Pl"
+    ],
+    "answer": "Pb"
+  },
+  {
+    "question": "Which animal sleeps standing up?",
+    "options": [
+      "Horse",
+      "Cow",
+      "Elephant",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the unit of electrical resistance?",
+    "options": [
+      "Volt",
+      "Ampere",
+      "Ohm",
+      "Watt"
+    ],
+    "answer": "Ohm"
+  },
+  {
+    "question": "Which planet is known as the 'Evening Star'?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Mercury",
+      "Jupiter"
+    ],
+    "answer": "Venus"
+  },
+  {
+    "question": "What is the largest desert in the world?",
+    "options": [
+      "Sahara Desert",
+      "Arabian Desert",
+      "Gobi Desert",
+      "Antarctica"
+    ],
+    "answer": "Antarctica"
+  },
+  {
+    "question": "Which vitamin is produced when skin is exposed to sunlight?",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin E"
+    ],
+    "answer": "Vitamin D"
+  },
+  {
+    "question": "What is the study of fish called?",
+    "options": [
+      "Ornithology",
+      "Entomology",
+      "Ichthyology",
+      "Herpetology"
+    ],
+    "answer": "Ichthyology"
+  },
+  {
+    "question": "How many chambers does the human heart have?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the chemical symbol for copper?",
+    "options": [
+      "Co",
+      "Cp",
+      "Cu",
+      "Cr"
+    ],
+    "answer": "Cu"
+  },
+  {
+    "question": "Which animal has the longest lifespan?",
+    "options": [
+      "Elephant",
+      "Whale",
+      "Tortoise",
+      "Parrot"
+    ],
+    "answer": "Tortoise"
+  },
+  {
+    "question": "What is the unit of power?",
+    "options": [
+      "Joule",
+      "Watt",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": "Watt"
+  },
+  {
+    "question": "Which planet rotates on its side?",
+    "options": [
+      "Neptune",
+      "Uranus",
+      "Saturn",
+      "Jupiter"
+    ],
+    "answer": "Uranus"
+  },
+  {
+    "question": "What is the largest continent?",
+    "options": [
+      "Africa",
+      "Asia",
+      "North America",
+      "Europe"
+    ],
+    "answer": "Asia"
+  },
+  {
+    "question": "Which vitamin is essential for blood clotting?",
+    "options": [
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin K"
+    ],
+    "answer": "Vitamin K"
+  },
+  {
+    "question": "What is the study of reptiles and amphibians called?",
+    "options": [
+      "Entomology",
+      "Ornithology",
+      "Herpetology",
+      "Ichthyology"
+    ],
+    "answer": "Herpetology"
+  },
+  {
+    "question": "How many lungs do humans have?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "What is the chemical symbol for mercury?",
+    "options": [
+      "Me",
+      "Mg",
+      "Mr",
+      "Hg"
+    ],
+    "answer": "Hg"
+  },
+  {
+    "question": "Which bird can fly backwards?",
+    "options": [
+      "Eagle",
+      "Hummingbird",
+      "Sparrow",
+      "Owl"
+    ],
+    "answer": "Hummingbird"
+  },
+  {
+    "question": "What is the unit of energy?",
+    "options": [
+      "Watt",
+      "Joule",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": "Joule"
+  },
+  {
+    "question": "Which planet has the shortest day?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Jupiter"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the deepest ocean trench?",
+    "options": [
+      "Puerto Rico Trench",
+      "Java Trench",
+      "Mariana Trench",
+      "Tonga Trench"
+    ],
+    "answer": "Mariana Trench"
+  },
+  {
+    "question": "Which vitamin is found in citrus fruits?",
+    "options": [
+      "Vitamin A",
+      "Vitamin B",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "answer": "Vitamin C"
+  },
+  {
+    "question": "What is the study of mammals called?",
+    "options": [
+      "Mammalogy",
+      "Ornithology",
+      "Herpetology",
+      "Entomology"
+    ],
+    "answer": "Mammalogy"
+  },
+  {
+    "question": "What is the basic unit of life?",
+    "options": [
+      "Atom",
+      "Cell",
+      "Tissue",
+      "Organ"
+    ],
+    "answer": "Cell"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Venus",
+      "Mars",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": "Mars"
+  },
+  {
+    "question": "What is H2O commonly known as?",
+    "options": [
+      "Oxygen",
+      "Hydrogen",
+      "Water",
+      "Carbon dioxide"
+    ],
+    "answer": "Water"
+  },
+  {
+    "question": "How many bones are in the adult human body?",
+    "options": [
+      "156",
+      "206",
+      "250",
+      "300"
+    ],
+    "answer": "206"
+  },
+  {
+    "question": "What force pulls objects toward Earth's center?",
+    "options": [
+      "Magnetism",
+      "Gravity",
+      "Friction",
+      "Inertia"
+    ],
+    "answer": "Gravity"
+  },
+  {
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Helium"
+    ],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "question": "What is the closest star to Earth?",
+    "options": [
+      "Proxima Centauri",
+      "Sirius",
+      "The Sun",
+      "Alpha Centauri"
+    ],
+    "answer": "The Sun"
+  },
+  {
+    "question": "Which organ pumps blood throughout the body?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Lungs",
+      "Brain"
+    ],
+    "answer": "Heart"
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Go",
+      "Gd",
+      "Au",
+      "Ag"
+    ],
+    "answer": "Au"
+  },
+  {
+    "question": "Which planet is the largest in our solar system?",
+    "options": [
+      "Earth",
+      "Saturn",
+      "Jupiter",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "What is the process by which plants make their own food?",
+    "options": [
+      "Respiration",
+      "Photosynthesis",
+      "Digestion",
+      "Fermentation"
+    ],
+    "answer": "Photosynthesis"
+  },
+  {
+    "question": "Which gas do humans breathe in?",
+    "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Helium"
+    ],
+    "answer": "Oxygen"
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "options": [
+      "Gold",
+      "Iron",
+      "Diamond",
+      "Platinum"
+    ],
+    "answer": "Diamond"
+  },
+  {
+    "question": "How many legs does a spider typically have?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": "8"
+  },
+  {
+    "question": "What is the center of an atom called?",
+    "options": [
+      "Electron",
+      "Proton",
+      "Nucleus",
+      "Neutron"
+    ],
+    "answer": "Nucleus"
+  },
+  {
+    "question": "Which metal is liquid at room temperature?",
+    "options": [
+      "Iron",
+      "Mercury",
+      "Copper",
+      "Aluminum"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the study of living organisms called?",
+    "options": [
+      "Geology",
+      "Biology",
+      "Chemistry",
+      "Physics"
+    ],
+    "answer": "Biology"
+  },
+  {
+    "question": "Which planet has rings around it?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Saturn",
+      "Mercury"
+    ],
+    "answer": "Saturn"
+  },
+  {
+    "question": "What is the speed of light in a vacuum?",
+    "options": [
+      "300,000 km/s",
+      "150,000 km/s",
+      "500,000 km/s",
+      "1,000,000 km/s"
+    ],
+    "answer": "300,000 km/s"
+  },
+  {
+    "question": "Which gas makes up most of Earth's atmosphere?",
+    "options": [
+      "Oxygen",
+      "Carbon dioxide",
+      "Nitrogen",
+      "Helium"
+    ],
+    "answer": "Nitrogen"
+  },
+  {
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Skin",
+      "Lungs"
+    ],
+    "answer": "Skin"
+  },
+  {
+    "question": "Which scientist developed the theory of relativity?",
+    "options": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Marie Curie",
+      "Stephen Hawking"
+    ],
+    "answer": "Albert Einstein"
+  },
+  {
+    "question": "What is the chemical symbol for iron?",
+    "options": [
+      "Ir",
+      "Fe",
+      "In",
+      "Au"
+    ],
+    "answer": "Fe"
+  },
+  {
+    "question": "How many teeth does an adult human typically have?",
+    "options": [
+      "28",
+      "30",
+      "32",
+      "36"
+    ],
+    "answer": "32"
+  },
+  {
+    "question": "What is the main gas found in the air we exhale?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon dioxide",
+      "Hydrogen"
+    ],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "question": "Which planet is closest to the Sun?",
+    "options": [
+      "Venus",
+      "Earth",
+      "Mercury",
+      "Mars"
+    ],
+    "answer": "Mercury"
+  },
+  {
+    "question": "What is the study of rocks called?",
+    "options": [
+      "Biology",
+      "Geology",
+      "Meteorology",
+      "Archaeology"
+    ],
+    "answer": "Geology"
+  },
+  {
+    "question": "Which blood type is known as the universal donor?",
+    "options": [
+      "A",
+      "B",
+      "AB",
+      "O"
+    ],
+    "answer": "O"
+  },
+  {
+    "question": "What is the smallest unit of matter?",
+    "options": [
+      "Cell",
+      "Atom",
+      "Molecule",
+      "Electron"
+    ],
+    "answer": "Atom"
+  },
+  {
+    "question": "Which animal is known as the 'ship of the desert'?",
+    "options": [
+      "Horse",
+      "Camel",
+      "Elephant",
+      "Donkey"
+    ],
+    "answer": "Camel"
+  },
+  {
+    "question": "What is the chemical symbol for sodium?",
+    "options": [
+      "So",
+      "Sd",
+      "Na",
+      "Sa"
+    ],
+    "answer": "Na"
+  },
+  {
+    "question": "How many chromosomes do humans have?",
+    "options": [
+      "23",
+      "46",
+      "48",
+      "52"
+    ],
+    "answer": "46"
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "options": [
+      "Earth",
+      "Saturn",
+      "Jupiter",
+      "Neptune"
+    ],
+    "answer": "Jupiter"
+  },
+  {
+    "question": "Which organ produces insulin?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Kidney",
+      "Stomach"
+    ],
+    "answer": "Pancreas"
+  },
+  {
+    "question": "What is the freezing point of water in Celsius?",
+    "options": [
+      "0°C",
+      "32°C",
+      "100°C",
+      "-10°C"
+    ],
+    "answer": "0°C"
+  },
+  {
+    "question": "Which gas is used in balloons to make them float?",
+    "options": [
+      "Oxygen",
+      "Hydrogen",
+      "Helium",
+      "Nitrogen"
+    ],
+    "answer": "Helium"
+  },
+  {
+    "question": "What is the study of the weather called?",
+    "options": [
+      "Geology",
+      "Meteorology",
+      "Biology",
+      "Astronomy"
+    ],
+    "answer": "Meteorology"
+  },
+  {
+    "question": "Which planet is known for having life?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Earth",
+      "Jupiter"
+    ],
+    "answer": "Earth"
+  },
+  {
+    "question": "What is the chemical symbol for carbon?",
+    "options": [
+      "Ca",
+      "Cb",
+      "C",
+      "Co"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "How many elements are in the periodic table?",
+    "options": [
+      "92",
+      "108",
+      "118",
+      "126"
+    ],
+    "answer": "118"
+  },
+  {
+    "question": "What is the largest mammal in the world?",
+    "options": [
+      "Elephant",
+      "Blue Whale",
+      "Giraffe",
+      "Polar Bear"
+    ],
+    "answer": "Blue Whale"
+  },
+  {
+    "question": "Which part of the plant conducts photosynthesis?",
+    "options": [
+      "Root",
+      "Stem",
+      "Leaf",
+      "Flower"
+    ],
+    "answer": "Leaf"
+  },
+  {
+    "question": "What is the boiling point of water in Celsius?",
+    "options": [
+      "0°C",
+      "50°C",
+      "100°C",
+      "212°C"
+    ],
+    "answer": "100°C"
+  },
+  {
+    "question": "Which scientist discovered penicillin?",
+    "options": [
+      "Marie Curie",
+      "Alexander Fleming",
+      "Louis Pasteur",
+      "Robert Koch"
+    ],
+    "answer": "Alexander Fleming"
+  },
+  {
+    "question": "What is the chemical symbol for oxygen?",
+    "options": [
+      "Ox",
+      "O",
+      "Oy",
+      "Og"
+    ],
+    "answer": "O"
+  },
+  {
+    "question": "How many planets are in our solar system?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": "8"
+  },
+  {
+    "question": "What is the main component of the Sun?",
+    "options": [
+      "Oxygen",
+      "Hydrogen",
+      "Helium",
+      "Carbon"
+    ],
+    "answer": "Hydrogen"
+  },
+  {
+    "question": "Which bone is the longest in the human body?",
+    "options": [
+      "Spine",
+      "Femur",
+      "Humerus",
+      "Tibia"
+    ],
+    "answer": "Femur"
+  },
+  {
+    "question": "What is the study of the universe called?",
+    "options": [
+      "Geology",
+      "Biology",
+      "Astronomy",
+      "Meteorology"
+    ],
+    "answer": "Astronomy"
+  }
+]

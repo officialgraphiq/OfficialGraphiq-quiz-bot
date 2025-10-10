@@ -498,5 +498,4506 @@
             "16"
         ],
         "answer": "12"
-    }
+    },
+    {
+    "question": "If 6x + 4 = 52, what is x?",
+    "options": [
+      "8",
+      "13.11",
+      "4.92",
+      "-1.88"
+    ],
+    "answer": "8"
+  },
+  {
+    "question": "What is 27 - 25?",
+    "options": [
+      "5.49",
+      "2",
+      "8.56",
+      "9.88"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "In the ratio 6:9, what is the first part of 44?",
+    "options": [
+      "25.67",
+      "17.6",
+      "11.19",
+      "7.61"
+    ],
+    "answer": "17.6"
+  },
+  {
+    "question": "What is the next number in the sequence 2, 12, 22, 32, 42?",
+    "options": [
+      "61.15",
+      "48.01",
+      "52",
+      "55.92"
+    ],
+    "answer": "52"
+  },
+  {
+    "question": "What is 79 \u00d7 63?",
+    "options": [
+      "4973.51",
+      "4982.64",
+      "4971.05",
+      "4977"
+    ],
+    "answer": "4977"
+  },
+  {
+    "question": "If 7x + 9 = 58, what is x?",
+    "options": [
+      "12.6",
+      "7",
+      "0.08",
+      "-0.98"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "What is 87% of 358?",
+    "options": [
+      "318.72",
+      "305.49",
+      "308.7",
+      "311.46"
+    ],
+    "answer": "311.46"
+  },
+  {
+    "question": "What is 13 - 59?",
+    "options": [
+      "-54.8",
+      "-46",
+      "-50.53",
+      "-52.65"
+    ],
+    "answer": "-46"
+  },
+  {
+    "question": "What is 84% of 448?",
+    "options": [
+      "381.84",
+      "378.04",
+      "385.39",
+      "376.32"
+    ],
+    "answer": "376.32"
+  },
+  {
+    "question": "What is 59 \u00f7 12?",
+    "options": [
+      "14.88",
+      "4.92",
+      "0.86",
+      "14.77"
+    ],
+    "answer": "4.92"
+  },
+  {
+    "question": "What is the next number in the sequence 5, 10, 15, 20, 25?",
+    "options": [
+      "36.72",
+      "22.46",
+      "30",
+      "37.5"
+    ],
+    "answer": "30"
+  },
+  {
+    "question": "What is the next number in the sequence 10, 12, 14, 16, 18?",
+    "options": [
+      "28.01",
+      "20",
+      "23.95",
+      "24.02"
+    ],
+    "answer": "20"
+  },
+  {
+    "question": "What is 67% of 356?",
+    "options": [
+      "231.35",
+      "243.47",
+      "238.52",
+      "233.53"
+    ],
+    "answer": "238.52"
+  },
+  {
+    "question": "In the ratio 8:3, what is the first part of 111?",
+    "options": [
+      "80.36",
+      "80.73",
+      "84.27",
+      "83.79"
+    ],
+    "answer": "80.73"
+  },
+  {
+    "question": "If 2x + 8 = 14, what is x?",
+    "options": [
+      "3",
+      "-5.32",
+      "-4.54",
+      "-1.19"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "In the ratio 5:3, what is the second part of 80?",
+    "options": [
+      "25.49",
+      "30.0",
+      "24.77",
+      "27.93"
+    ],
+    "answer": "30.0"
+  },
+  {
+    "question": "Find the area of a circle with radius 14 cm.",
+    "options": [
+      "618.17",
+      "608.3",
+      "615.75",
+      "622.3"
+    ],
+    "answer": "615.75"
+  },
+  {
+    "question": "What is 7/8 of 58?",
+    "options": [
+      "50.75",
+      "53.88",
+      "52.78",
+      "41.44"
+    ],
+    "answer": "50.75"
+  },
+  {
+    "question": "In the ratio 10:4, what is the second part of 165?",
+    "options": [
+      "45.48",
+      "47.14",
+      "44.24",
+      "54.02"
+    ],
+    "answer": "47.14"
+  },
+  {
+    "question": "What is the next number in the sequence 4, 11, 18, 25, 32?",
+    "options": [
+      "33.54",
+      "40.61",
+      "41.55",
+      "39"
+    ],
+    "answer": "39"
+  },
+  {
+    "question": "What is 6/12 of 169?",
+    "options": [
+      "78.07",
+      "84.5",
+      "83.42",
+      "86.13"
+    ],
+    "answer": "84.5"
+  },
+  {
+    "question": "Find the area of a triangle with base 8 cm and height 9 cm.",
+    "options": [
+      "36.0",
+      "45.68",
+      "28.32",
+      "34.76"
+    ],
+    "answer": "36.0"
+  },
+  {
+    "question": "Find the area of a circle with radius 7 cm.",
+    "options": [
+      "155.18",
+      "161.26",
+      "143.97",
+      "153.94"
+    ],
+    "answer": "153.94"
+  },
+  {
+    "question": "What is 2/9 of 157?",
+    "options": [
+      "34.89",
+      "33.31",
+      "25.53",
+      "30.73"
+    ],
+    "answer": "34.89"
+  },
+  {
+    "question": "Find the area of a triangle with base 4 cm and height 7 cm.",
+    "options": [
+      "22.22",
+      "7.75",
+      "4.44",
+      "14.0"
+    ],
+    "answer": "14.0"
+  },
+  {
+    "question": "What is 32% of 214?",
+    "options": [
+      "64.38",
+      "65.63",
+      "75.25",
+      "68.48"
+    ],
+    "answer": "68.48"
+  },
+  {
+    "question": "What is 50% of 402?",
+    "options": [
+      "193.78",
+      "198.03",
+      "192.05",
+      "201.0"
+    ],
+    "answer": "201.0"
+  },
+  {
+    "question": "What is 41% of 332?",
+    "options": [
+      "134.52",
+      "136.12",
+      "140.47",
+      "134.5"
+    ],
+    "answer": "136.12"
+  },
+  {
+    "question": "What is 89% of 287?",
+    "options": [
+      "253.1",
+      "253.33",
+      "255.43",
+      "248.54"
+    ],
+    "answer": "255.43"
+  },
+  {
+    "question": "What is 21 - 30?",
+    "options": [
+      "-9.24",
+      "0.01",
+      "-9",
+      "-8.32"
+    ],
+    "answer": "-9"
+  },
+  {
+    "question": "What is 36 \u00d7 64?",
+    "options": [
+      "2298.66",
+      "2305.02",
+      "2299.81",
+      "2304"
+    ],
+    "answer": "2304"
+  },
+  {
+    "question": "Find the area of a rectangle with length 12 cm and width 13 cm.",
+    "options": [
+      "151.4",
+      "160.59",
+      "156",
+      "159.11"
+    ],
+    "answer": "156"
+  },
+  {
+    "question": "Find the area of a rectangle with length 16 cm and width 7 cm.",
+    "options": [
+      "112",
+      "118.17",
+      "113.46",
+      "111.59"
+    ],
+    "answer": "112"
+  },
+  {
+    "question": "What is 6/9 of 87?",
+    "options": [
+      "59.44",
+      "55.63",
+      "56.86",
+      "58.0"
+    ],
+    "answer": "58.0"
+  },
+  {
+    "question": "What is 69 \u00d7 22?",
+    "options": [
+      "1509.43",
+      "1523.04",
+      "1520.58",
+      "1518"
+    ],
+    "answer": "1518"
+  },
+  {
+    "question": "In the ratio 7:9, what is the first part of 82?",
+    "options": [
+      "35.88",
+      "29.27",
+      "39.25",
+      "41.18"
+    ],
+    "answer": "35.88"
+  },
+  {
+    "question": "In the ratio 2:8, what is the first part of 114?",
+    "options": [
+      "19.74",
+      "22.16",
+      "22.8",
+      "20.04"
+    ],
+    "answer": "22.8"
+  },
+  {
+    "question": "What is 90 + 75?",
+    "options": [
+      "164.18",
+      "160.65",
+      "165",
+      "170.91"
+    ],
+    "answer": "165"
+  },
+  {
+    "question": "What is the next number in the sequence 10, 12, 14, 16, 18?",
+    "options": [
+      "23.8",
+      "17.46",
+      "20",
+      "14.75"
+    ],
+    "answer": "20"
+  },
+  {
+    "question": "In the ratio 8:8, what is the first part of 106?",
+    "options": [
+      "45.46",
+      "52.12",
+      "53.0",
+      "61.63"
+    ],
+    "answer": "53.0"
+  },
+  {
+    "question": "What is 5/9 of 129?",
+    "options": [
+      "71.67",
+      "66.8",
+      "67.97",
+      "79.22"
+    ],
+    "answer": "71.67"
+  },
+  {
+    "question": "What is 12% of 361?",
+    "options": [
+      "52.04",
+      "43.32",
+      "51.5",
+      "38.64"
+    ],
+    "answer": "43.32"
+  },
+  {
+    "question": "What is 21% of 186?",
+    "options": [
+      "44.46",
+      "36.34",
+      "44.32",
+      "39.06"
+    ],
+    "answer": "39.06"
+  },
+  {
+    "question": "Find the area of a rectangle with length 18 cm and width 10 cm.",
+    "options": [
+      "189.31",
+      "180",
+      "181.17",
+      "179.82"
+    ],
+    "answer": "180"
+  },
+  {
+    "question": "What is 81% of 473?",
+    "options": [
+      "383.13",
+      "375.14",
+      "391.61",
+      "391.01"
+    ],
+    "answer": "383.13"
+  },
+  {
+    "question": "What is 89% of 201?",
+    "options": [
+      "186.98",
+      "178.89",
+      "180.54",
+      "172.76"
+    ],
+    "answer": "178.89"
+  },
+  {
+    "question": "Find the area of a rectangle with length 16 cm and width 8 cm.",
+    "options": [
+      "134.27",
+      "128",
+      "137.99",
+      "128.79"
+    ],
+    "answer": "128"
+  },
+  {
+    "question": "In the ratio 10:7, what is the first part of 75?",
+    "options": [
+      "44.12",
+      "52.54",
+      "50.03",
+      "41.21"
+    ],
+    "answer": "44.12"
+  },
+  {
+    "question": "What is 80 - 54?",
+    "options": [
+      "35.53",
+      "20.37",
+      "27.35",
+      "26"
+    ],
+    "answer": "26"
+  },
+  {
+    "question": "Find the area of a rectangle with length 4 cm and width 6 cm.",
+    "options": [
+      "19.28",
+      "24",
+      "19.41",
+      "26.18"
+    ],
+    "answer": "24"
+  },
+  {
+    "question": "If 10x + 10 = 140, what is x?",
+    "options": [
+      "22.64",
+      "6.18",
+      "3.29",
+      "13"
+    ],
+    "answer": "13"
+  },
+  {
+    "question": "What is 2/10 of 133?",
+    "options": [
+      "26.6",
+      "32.64",
+      "27.02",
+      "23.42"
+    ],
+    "answer": "26.6"
+  },
+  {
+    "question": "Find the area of a circle with radius 15 cm.",
+    "options": [
+      "712.29",
+      "706.86",
+      "705.49",
+      "714.77"
+    ],
+    "answer": "706.86"
+  },
+  {
+    "question": "In the ratio 3:3, what is the first part of 99?",
+    "options": [
+      "49.5",
+      "41.73",
+      "39.62",
+      "52.79"
+    ],
+    "answer": "49.5"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 12, 21, 30, 39?",
+    "options": [
+      "44.8",
+      "55.64",
+      "38.24",
+      "48"
+    ],
+    "answer": "48"
+  },
+  {
+    "question": "What is 6/10 of 141?",
+    "options": [
+      "93.47",
+      "79.12",
+      "77.97",
+      "84.6"
+    ],
+    "answer": "84.6"
+  },
+  {
+    "question": "Find the area of a triangle with base 9 cm and height 8 cm.",
+    "options": [
+      "36.0",
+      "30.29",
+      "42.8",
+      "36.7"
+    ],
+    "answer": "36.0"
+  },
+  {
+    "question": "What is 47 \u00d7 81?",
+    "options": [
+      "3797.92",
+      "3808.84",
+      "3807",
+      "3797.29"
+    ],
+    "answer": "3807"
+  },
+  {
+    "question": "In the ratio 8:8, what is the second part of 128?",
+    "options": [
+      "54.53",
+      "69.94",
+      "64.0",
+      "64.43"
+    ],
+    "answer": "64.0"
+  },
+  {
+    "question": "What is 21% of 144?",
+    "options": [
+      "39.89",
+      "39.63",
+      "30.24",
+      "34.05"
+    ],
+    "answer": "30.24"
+  },
+  {
+    "question": "What is 53% of 185?",
+    "options": [
+      "98.05",
+      "93.69",
+      "99.6",
+      "102.26"
+    ],
+    "answer": "98.05"
+  },
+  {
+    "question": "In the ratio 9:4, what is the second part of 61?",
+    "options": [
+      "18.77",
+      "28.38",
+      "28.01",
+      "12.34"
+    ],
+    "answer": "18.77"
+  },
+  {
+    "question": "What is 64% of 277?",
+    "options": [
+      "172.15",
+      "172.82",
+      "174.26",
+      "177.28"
+    ],
+    "answer": "177.28"
+  },
+  {
+    "question": "What is 60 + 11?",
+    "options": [
+      "73.21",
+      "78.32",
+      "74.23",
+      "71"
+    ],
+    "answer": "71"
+  },
+  {
+    "question": "If 3x + 7 = 28, what is x?",
+    "options": [
+      "7",
+      "8.17",
+      "12.04",
+      "8.2"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "If 7x + 6 = 27, what is x?",
+    "options": [
+      "3.6",
+      "6.26",
+      "3",
+      "9.14"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is the next number in the sequence 4, 11, 18, 25, 32?",
+    "options": [
+      "40.52",
+      "45.28",
+      "39",
+      "41.95"
+    ],
+    "answer": "39"
+  },
+  {
+    "question": "If 1x + 4 = 17, what is x?",
+    "options": [
+      "13",
+      "15.65",
+      "20.12",
+      "5.3"
+    ],
+    "answer": "13"
+  },
+  {
+    "question": "What is 61 \u00f7 11?",
+    "options": [
+      "2.35",
+      "3.99",
+      "5.55",
+      "0.62"
+    ],
+    "answer": "5.55"
+  },
+  {
+    "question": "In the ratio 10:5, what is the second part of 152?",
+    "options": [
+      "50.67",
+      "44.49",
+      "43.32",
+      "57.55"
+    ],
+    "answer": "50.67"
+  },
+  {
+    "question": "What is 5/11 of 51?",
+    "options": [
+      "18.96",
+      "23.18",
+      "28.18",
+      "31.06"
+    ],
+    "answer": "23.18"
+  },
+  {
+    "question": "Find the area of a triangle with base 17 cm and height 5 cm.",
+    "options": [
+      "42.5",
+      "44.18",
+      "33.99",
+      "45.04"
+    ],
+    "answer": "42.5"
+  },
+  {
+    "question": "What is 3/10 of 92?",
+    "options": [
+      "27.01",
+      "27.6",
+      "31.38",
+      "28.77"
+    ],
+    "answer": "27.6"
+  },
+  {
+    "question": "What is 1/2 of 67?",
+    "options": [
+      "33.5",
+      "43.48",
+      "41.2",
+      "29.63"
+    ],
+    "answer": "33.5"
+  },
+  {
+    "question": "What is 7% of 414?",
+    "options": [
+      "26.84",
+      "33.17",
+      "19.55",
+      "28.98"
+    ],
+    "answer": "28.98"
+  },
+  {
+    "question": "What is 76 \u00d7 38?",
+    "options": [
+      "2880.52",
+      "2895.11",
+      "2888",
+      "2891.15"
+    ],
+    "answer": "2888"
+  },
+  {
+    "question": "What is 28 - 31?",
+    "options": [
+      "4.42",
+      "-3",
+      "-1.5",
+      "2.53"
+    ],
+    "answer": "-3"
+  },
+  {
+    "question": "What is 90 \u00f7 12?",
+    "options": [
+      "-0.3",
+      "7.58",
+      "8.79",
+      "6.99"
+    ],
+    "answer": "7.58"
+  },
+  {
+    "question": "Find the area of a rectangle with length 19 cm and width 6 cm.",
+    "options": [
+      "109.49",
+      "110.76",
+      "114",
+      "119.92"
+    ],
+    "answer": "114"
+  },
+  {
+    "question": "In the ratio 3:5, what is the first part of 140?",
+    "options": [
+      "52.5",
+      "51.82",
+      "60.21",
+      "51.72"
+    ],
+    "answer": "52.5"
+  },
+  {
+    "question": "If 2x + 8 = 16, what is x?",
+    "options": [
+      "-4.17",
+      "10.07",
+      "3.17",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the next number in the sequence 5, 7, 9, 11, 13?",
+    "options": [
+      "16.53",
+      "15",
+      "18.61",
+      "18.34"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "Find the area of a triangle with base 18 cm and height 6 cm.",
+    "options": [
+      "54.66",
+      "46.27",
+      "54.0",
+      "50.68"
+    ],
+    "answer": "54.0"
+  },
+  {
+    "question": "If 10x + 1 = 61, what is x?",
+    "options": [
+      "-3.34",
+      "6",
+      "8.37",
+      "14.26"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "What is 8/10 of 25?",
+    "options": [
+      "20.0",
+      "17.03",
+      "22.61",
+      "29.36"
+    ],
+    "answer": "20.0"
+  },
+  {
+    "question": "Find the area of a circle with radius 14 cm.",
+    "options": [
+      "619.92",
+      "618.92",
+      "615.75",
+      "606.72"
+    ],
+    "answer": "615.75"
+  },
+  {
+    "question": "What is 7/8 of 87?",
+    "options": [
+      "73.12",
+      "71.01",
+      "80.04",
+      "76.12"
+    ],
+    "answer": "76.12"
+  },
+  {
+    "question": "What is 90 + 88?",
+    "options": [
+      "178",
+      "180.48",
+      "187.48",
+      "184.62"
+    ],
+    "answer": "178"
+  },
+  {
+    "question": "What is 9/12 of 180?",
+    "options": [
+      "130.65",
+      "135.0",
+      "139.94",
+      "128.83"
+    ],
+    "answer": "135.0"
+  },
+  {
+    "question": "Find the area of a triangle with base 12 cm and height 11 cm.",
+    "options": [
+      "62.15",
+      "70.13",
+      "66.0",
+      "59.37"
+    ],
+    "answer": "66.0"
+  },
+  {
+    "question": "If 7x + 3 = 45, what is x?",
+    "options": [
+      "-0.88",
+      "-0.13",
+      "6",
+      "-2.13"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "What is 24 \u00f7 3?",
+    "options": [
+      "8.0",
+      "6.77",
+      "0.91",
+      "4.48"
+    ],
+    "answer": "8.0"
+  },
+  {
+    "question": "What is 74% of 245?",
+    "options": [
+      "177.34",
+      "181.3",
+      "180.48",
+      "188.39"
+    ],
+    "answer": "181.3"
+  },
+  {
+    "question": "What is 74% of 292?",
+    "options": [
+      "216.08",
+      "222.28",
+      "210.87",
+      "220.2"
+    ],
+    "answer": "216.08"
+  },
+  {
+    "question": "What is 4/9 of 35?",
+    "options": [
+      "10.33",
+      "10.05",
+      "22.52",
+      "15.56"
+    ],
+    "answer": "15.56"
+  },
+  {
+    "question": "What is 4/12 of 48?",
+    "options": [
+      "24.34",
+      "16.12",
+      "25.61",
+      "16.0"
+    ],
+    "answer": "16.0"
+  },
+  {
+    "question": "What is 26% of 210?",
+    "options": [
+      "56.44",
+      "59.19",
+      "49.87",
+      "54.6"
+    ],
+    "answer": "54.6"
+  },
+  {
+    "question": "Find the area of a triangle with base 19 cm and height 8 cm.",
+    "options": [
+      "84.31",
+      "75.3",
+      "72.42",
+      "76.0"
+    ],
+    "answer": "76.0"
+  },
+  {
+    "question": "What is 66 \u00f7 12?",
+    "options": [
+      "14.79",
+      "5.5",
+      "6.44",
+      "3.16"
+    ],
+    "answer": "5.5"
+  },
+  {
+    "question": "What is 4/6 of 175?",
+    "options": [
+      "121.55",
+      "110.93",
+      "116.67",
+      "110.34"
+    ],
+    "answer": "116.67"
+  },
+  {
+    "question": "What is 24% of 199?",
+    "options": [
+      "55.26",
+      "47.76",
+      "49.45",
+      "41.65"
+    ],
+    "answer": "47.76"
+  },
+  {
+    "question": "What is 36 \u00f7 11?",
+    "options": [
+      "-1.1",
+      "7.49",
+      "0.41",
+      "3.36"
+    ],
+    "answer": "3.36"
+  },
+  {
+    "question": "What is 53 \u00d7 67?",
+    "options": [
+      "3551",
+      "3558.36",
+      "3555.14",
+      "3549.69"
+    ],
+    "answer": "3551"
+  },
+  {
+    "question": "What is 15% of 189?",
+    "options": [
+      "28.35",
+      "29.4",
+      "37.26",
+      "36.94"
+    ],
+    "answer": "28.35"
+  },
+  {
+    "question": "What is 4/11 of 138?",
+    "options": [
+      "50.18",
+      "46.16",
+      "57.51",
+      "51.37"
+    ],
+    "answer": "50.18"
+  },
+  {
+    "question": "In the ratio 3:5, what is the first part of 85?",
+    "options": [
+      "31.88",
+      "40.65",
+      "34.79",
+      "31.62"
+    ],
+    "answer": "31.88"
+  },
+  {
+    "question": "What is 24% of 248?",
+    "options": [
+      "50.31",
+      "60.37",
+      "59.52",
+      "53.0"
+    ],
+    "answer": "59.52"
+  },
+  {
+    "question": "If 4x + 3 = 19, what is x?",
+    "options": [
+      "-3.84",
+      "4.55",
+      "4",
+      "7.01"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the next number in the sequence 1, 7, 13, 19, 25?",
+    "options": [
+      "31",
+      "25.29",
+      "39.95",
+      "30.84"
+    ],
+    "answer": "31"
+  },
+  {
+    "question": "In the ratio 5:10, what is the second part of 154?",
+    "options": [
+      "108.18",
+      "102.46",
+      "102.67",
+      "100.72"
+    ],
+    "answer": "102.67"
+  },
+  {
+    "question": "What is 37% of 159?",
+    "options": [
+      "58.54",
+      "56.67",
+      "50.49",
+      "58.83"
+    ],
+    "answer": "58.83"
+  },
+  {
+    "question": "Find the area of a circle with radius 14 cm.",
+    "options": [
+      "615.75",
+      "624.42",
+      "608.18",
+      "614.04"
+    ],
+    "answer": "615.75"
+  },
+  {
+    "question": "What is 78% of 242?",
+    "options": [
+      "184.59",
+      "188.76",
+      "182.54",
+      "188.51"
+    ],
+    "answer": "188.76"
+  },
+  {
+    "question": "In the ratio 4:6, what is the second part of 108?",
+    "options": [
+      "57.69",
+      "57.4",
+      "64.8",
+      "68.44"
+    ],
+    "answer": "64.8"
+  },
+  {
+    "question": "What is 6/7 of 113?",
+    "options": [
+      "96.86",
+      "103.21",
+      "100.8",
+      "92.36"
+    ],
+    "answer": "96.86"
+  },
+  {
+    "question": "Find the area of a rectangle with length 14 cm and width 3 cm.",
+    "options": [
+      "42",
+      "47.82",
+      "45.78",
+      "49.55"
+    ],
+    "answer": "42"
+  },
+  {
+    "question": "What is 2/6 of 192?",
+    "options": [
+      "73.42",
+      "64.0",
+      "62.48",
+      "70.8"
+    ],
+    "answer": "64.0"
+  },
+  {
+    "question": "Find the area of a rectangle with length 14 cm and width 11 cm.",
+    "options": [
+      "158.38",
+      "160.52",
+      "154",
+      "155.28"
+    ],
+    "answer": "154"
+  },
+  {
+    "question": "Find the area of a rectangle with length 8 cm and width 3 cm.",
+    "options": [
+      "14.56",
+      "16.53",
+      "24",
+      "24.29"
+    ],
+    "answer": "24"
+  },
+  {
+    "question": "Find the area of a triangle with base 14 cm and height 14 cm.",
+    "options": [
+      "98.0",
+      "105.98",
+      "96.53",
+      "106.99"
+    ],
+    "answer": "98.0"
+  },
+  {
+    "question": "What is 10% of 324?",
+    "options": [
+      "34.34",
+      "25.77",
+      "32.4",
+      "22.86"
+    ],
+    "answer": "32.4"
+  },
+  {
+    "question": "What is 84% of 350?",
+    "options": [
+      "290.19",
+      "297.89",
+      "294.0",
+      "303.9"
+    ],
+    "answer": "294.0"
+  },
+  {
+    "question": "What is 5/6 of 76?",
+    "options": [
+      "63.33",
+      "65.74",
+      "70.91",
+      "58.65"
+    ],
+    "answer": "63.33"
+  },
+  {
+    "question": "If 1x + 5 = 8, what is x?",
+    "options": [
+      "10.24",
+      "8.23",
+      "3",
+      "5.07"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is 50% of 358?",
+    "options": [
+      "186.95",
+      "179.0",
+      "172.24",
+      "173.85"
+    ],
+    "answer": "179.0"
+  },
+  {
+    "question": "If 1x + 10 = 13, what is x?",
+    "options": [
+      "6.28",
+      "-6.98",
+      "3",
+      "7.88"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "If 5x + 8 = 78, what is x?",
+    "options": [
+      "20.33",
+      "14.37",
+      "5.55",
+      "14"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "What is 59 \u00d7 48?",
+    "options": [
+      "2830.33",
+      "2832",
+      "2826.58",
+      "2830.99"
+    ],
+    "answer": "2832"
+  },
+  {
+    "question": "What is 40 \u00d7 21?",
+    "options": [
+      "840.2",
+      "847.69",
+      "840",
+      "838.09"
+    ],
+    "answer": "840"
+  },
+  {
+    "question": "What is 48% of 221?",
+    "options": [
+      "102.52",
+      "106.08",
+      "101.58",
+      "103.77"
+    ],
+    "answer": "106.08"
+  },
+  {
+    "question": "Find the area of a circle with radius 6 cm.",
+    "options": [
+      "106.56",
+      "113.45",
+      "113.1",
+      "110.34"
+    ],
+    "answer": "113.1"
+  },
+  {
+    "question": "What is 15% of 285?",
+    "options": [
+      "43.09",
+      "42.75",
+      "39.47",
+      "36.19"
+    ],
+    "answer": "42.75"
+  },
+  {
+    "question": "Find the area of a circle with radius 7 cm.",
+    "options": [
+      "153.0",
+      "159.08",
+      "153.94",
+      "151.65"
+    ],
+    "answer": "153.94"
+  },
+  {
+    "question": "What is 58 \u00d7 53?",
+    "options": [
+      "3074",
+      "3080.94",
+      "3072.21",
+      "3072.24"
+    ],
+    "answer": "3074"
+  },
+  {
+    "question": "What is 30 \u00f7 10?",
+    "options": [
+      "2.64",
+      "-5.62",
+      "3.0",
+      "1.74"
+    ],
+    "answer": "3.0"
+  },
+  {
+    "question": "What is 84% of 392?",
+    "options": [
+      "330.09",
+      "336.09",
+      "328.35",
+      "329.28"
+    ],
+    "answer": "329.28"
+  },
+  {
+    "question": "If 7x + 9 = 79, what is x?",
+    "options": [
+      "10",
+      "9.35",
+      "8.16",
+      "11.8"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What is 31% of 477?",
+    "options": [
+      "138.65",
+      "148.62",
+      "149.06",
+      "147.87"
+    ],
+    "answer": "147.87"
+  },
+  {
+    "question": "What is the next number in the sequence 10, 18, 26, 34, 42?",
+    "options": [
+      "59.73",
+      "53.89",
+      "48.06",
+      "50"
+    ],
+    "answer": "50"
+  },
+  {
+    "question": "If 3x + 1 = 37, what is x?",
+    "options": [
+      "10.79",
+      "5.17",
+      "12",
+      "21.16"
+    ],
+    "answer": "12"
+  },
+  {
+    "question": "What is 9/12 of 196?",
+    "options": [
+      "149.66",
+      "147.0",
+      "152.86",
+      "156.75"
+    ],
+    "answer": "147.0"
+  },
+  {
+    "question": "What is 13 \u00d7 62?",
+    "options": [
+      "815.05",
+      "809.79",
+      "806",
+      "808.29"
+    ],
+    "answer": "806"
+  },
+  {
+    "question": "What is the next number in the sequence 2, 11, 20, 29, 38?",
+    "options": [
+      "44.38",
+      "48.94",
+      "47.4",
+      "47"
+    ],
+    "answer": "47"
+  },
+  {
+    "question": "What is 28 \u00d7 90?",
+    "options": [
+      "2520",
+      "2515.25",
+      "2519.07",
+      "2517.72"
+    ],
+    "answer": "2520"
+  },
+  {
+    "question": "What is 11% of 222?",
+    "options": [
+      "15.05",
+      "23.31",
+      "19.86",
+      "24.42"
+    ],
+    "answer": "24.42"
+  },
+  {
+    "question": "In the ratio 8:2, what is the second part of 49?",
+    "options": [
+      "17.76",
+      "11.48",
+      "9.8",
+      "5.87"
+    ],
+    "answer": "9.8"
+  },
+  {
+    "question": "What is 8/12 of 45?",
+    "options": [
+      "32.09",
+      "30.0",
+      "34.65",
+      "31.21"
+    ],
+    "answer": "30.0"
+  },
+  {
+    "question": "In the ratio 3:10, what is the first part of 129?",
+    "options": [
+      "29.77",
+      "32.66",
+      "22.92",
+      "28.44"
+    ],
+    "answer": "29.77"
+  },
+  {
+    "question": "What is 34% of 116?",
+    "options": [
+      "46.67",
+      "39.83",
+      "37.99",
+      "39.44"
+    ],
+    "answer": "39.44"
+  },
+  {
+    "question": "What is 50 - 50?",
+    "options": [
+      "-6.17",
+      "-7.79",
+      "4.92",
+      "0"
+    ],
+    "answer": "0"
+  },
+  {
+    "question": "What is 37% of 450?",
+    "options": [
+      "173.03",
+      "166.5",
+      "169.46",
+      "171.15"
+    ],
+    "answer": "166.5"
+  },
+  {
+    "question": "In the ratio 9:6, what is the first part of 186?",
+    "options": [
+      "117.25",
+      "111.6",
+      "116.5",
+      "112.71"
+    ],
+    "answer": "111.6"
+  },
+  {
+    "question": "What is 9/11 of 120?",
+    "options": [
+      "97.56",
+      "89.65",
+      "102.26",
+      "98.18"
+    ],
+    "answer": "98.18"
+  },
+  {
+    "question": "If 3x + 6 = 21, what is x?",
+    "options": [
+      "8.63",
+      "-0.28",
+      "5",
+      "10.67"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "What is the next number in the sequence 7, 11, 15, 19, 23?",
+    "options": [
+      "23.53",
+      "25.47",
+      "32.4",
+      "27"
+    ],
+    "answer": "27"
+  },
+  {
+    "question": "In the ratio 3:2, what is the second part of 76?",
+    "options": [
+      "25.06",
+      "26.48",
+      "26.95",
+      "30.4"
+    ],
+    "answer": "30.4"
+  },
+  {
+    "question": "What is the next number in the sequence 7, 17, 27, 37, 47?",
+    "options": [
+      "54.61",
+      "57",
+      "63.34",
+      "58.75"
+    ],
+    "answer": "57"
+  },
+  {
+    "question": "Find the area of a rectangle with length 11 cm and width 9 cm.",
+    "options": [
+      "99",
+      "99.18",
+      "104.63",
+      "105.07"
+    ],
+    "answer": "99"
+  },
+  {
+    "question": "Find the area of a rectangle with length 14 cm and width 13 cm.",
+    "options": [
+      "182",
+      "179.31",
+      "174.28",
+      "175.58"
+    ],
+    "answer": "182"
+  },
+  {
+    "question": "What is 48% of 95?",
+    "options": [
+      "43.99",
+      "52.28",
+      "45.6",
+      "49.22"
+    ],
+    "answer": "45.6"
+  },
+  {
+    "question": "What is 29 + 88?",
+    "options": [
+      "119.74",
+      "125.17",
+      "113.18",
+      "117"
+    ],
+    "answer": "117"
+  },
+  {
+    "question": "What is the next number in the sequence 9, 17, 25, 33, 41?",
+    "options": [
+      "50.74",
+      "49",
+      "41.32",
+      "54.83"
+    ],
+    "answer": "49"
+  },
+  {
+    "question": "If 8x + 6 = 46, what is x?",
+    "options": [
+      "5.66",
+      "9.85",
+      "1.95",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "What is 2/7 of 59?",
+    "options": [
+      "16.86",
+      "14.11",
+      "22.48",
+      "17.71"
+    ],
+    "answer": "16.86"
+  },
+  {
+    "question": "If 10x + 8 = 98, what is x?",
+    "options": [
+      "6.65",
+      "9",
+      "14.25",
+      "9.72"
+    ],
+    "answer": "9"
+  },
+  {
+    "question": "What is the next number in the sequence 4, 13, 22, 31, 40?",
+    "options": [
+      "40.62",
+      "49",
+      "45.34",
+      "41.06"
+    ],
+    "answer": "49"
+  },
+  {
+    "question": "If 9x + 3 = 39, what is x?",
+    "options": [
+      "-4.02",
+      "8.82",
+      "4",
+      "3.82"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "If 4x + 5 = 65, what is x?",
+    "options": [
+      "23.36",
+      "24.72",
+      "15",
+      "10.24"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "If 8x + 10 = 98, what is x?",
+    "options": [
+      "6.25",
+      "13.44",
+      "12.96",
+      "11"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "If 10x + 7 = 77, what is x?",
+    "options": [
+      "5.02",
+      "5.04",
+      "6.1",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "What is 69 \u00f7 11?",
+    "options": [
+      "4.59",
+      "6.36",
+      "15.95",
+      "7.54"
+    ],
+    "answer": "6.36"
+  },
+  {
+    "question": "What is 7/10 of 107?",
+    "options": [
+      "74.9",
+      "71.95",
+      "73.78",
+      "77.21"
+    ],
+    "answer": "74.9"
+  },
+  {
+    "question": "What is 55 + 90?",
+    "options": [
+      "146.83",
+      "146.71",
+      "145",
+      "141.46"
+    ],
+    "answer": "145"
+  },
+  {
+    "question": "What is 9/12 of 126?",
+    "options": [
+      "100.5",
+      "97.14",
+      "94.5",
+      "90.87"
+    ],
+    "answer": "94.5"
+  },
+  {
+    "question": "What is 14% of 385?",
+    "options": [
+      "53.9",
+      "50.69",
+      "47.52",
+      "57.01"
+    ],
+    "answer": "53.9"
+  },
+  {
+    "question": "In the ratio 5:2, what is the second part of 157?",
+    "options": [
+      "41.6",
+      "44.86",
+      "35.92",
+      "51.48"
+    ],
+    "answer": "44.86"
+  },
+  {
+    "question": "Find the area of a circle with radius 15 cm.",
+    "options": [
+      "706.86",
+      "702.11",
+      "702.91",
+      "710.67"
+    ],
+    "answer": "706.86"
+  },
+  {
+    "question": "What is the next number in the sequence 2, 8, 14, 20, 26?",
+    "options": [
+      "41.02",
+      "32",
+      "24.7",
+      "37.33"
+    ],
+    "answer": "32"
+  },
+  {
+    "question": "What is 4/11 of 182?",
+    "options": [
+      "66.18",
+      "65.64",
+      "58.9",
+      "63.83"
+    ],
+    "answer": "66.18"
+  },
+  {
+    "question": "What is 81% of 231?",
+    "options": [
+      "193.9",
+      "187.91",
+      "187.11",
+      "179.54"
+    ],
+    "answer": "187.11"
+  },
+  {
+    "question": "What is 54 \u00d7 86?",
+    "options": [
+      "4641.8",
+      "4648.73",
+      "4651.57",
+      "4644"
+    ],
+    "answer": "4644"
+  },
+  {
+    "question": "In the ratio 8:10, what is the first part of 131?",
+    "options": [
+      "58.22",
+      "61.84",
+      "52.24",
+      "49.32"
+    ],
+    "answer": "58.22"
+  },
+  {
+    "question": "What is 83 \u00d7 6?",
+    "options": [
+      "493.67",
+      "490.87",
+      "500.64",
+      "498"
+    ],
+    "answer": "498"
+  },
+  {
+    "question": "What is the next number in the sequence 10, 17, 24, 31, 38?",
+    "options": [
+      "36.2",
+      "47.44",
+      "45",
+      "43.63"
+    ],
+    "answer": "45"
+  },
+  {
+    "question": "What is the next number in the sequence 8, 17, 26, 35, 44?",
+    "options": [
+      "48.95",
+      "53.68",
+      "53",
+      "44.5"
+    ],
+    "answer": "53"
+  },
+  {
+    "question": "What is 7/11 of 83?",
+    "options": [
+      "62.38",
+      "45.46",
+      "52.82",
+      "46.25"
+    ],
+    "answer": "52.82"
+  },
+  {
+    "question": "What is the next number in the sequence 8, 13, 18, 23, 28?",
+    "options": [
+      "29.25",
+      "33",
+      "34.95",
+      "39.03"
+    ],
+    "answer": "33"
+  },
+  {
+    "question": "What is 7/8 of 196?",
+    "options": [
+      "176.85",
+      "171.32",
+      "171.5",
+      "163.6"
+    ],
+    "answer": "171.5"
+  },
+  {
+    "question": "What is 3/11 of 44?",
+    "options": [
+      "12.0",
+      "3.57",
+      "4.46",
+      "14.83"
+    ],
+    "answer": "12.0"
+  },
+  {
+    "question": "What is the next number in the sequence 1, 10, 19, 28, 37?",
+    "options": [
+      "46",
+      "50.71",
+      "39.17",
+      "47.12"
+    ],
+    "answer": "46"
+  },
+  {
+    "question": "In the ratio 9:4, what is the first part of 177?",
+    "options": [
+      "117.61",
+      "122.54",
+      "128.83",
+      "129.16"
+    ],
+    "answer": "122.54"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 13, 23, 33, 43?",
+    "options": [
+      "60.57",
+      "49.01",
+      "53",
+      "43.03"
+    ],
+    "answer": "53"
+  },
+  {
+    "question": "What is 13 + 18?",
+    "options": [
+      "25.18",
+      "34.24",
+      "31",
+      "34.78"
+    ],
+    "answer": "31"
+  },
+  {
+    "question": "Find the area of a circle with radius 15 cm.",
+    "options": [
+      "703.46",
+      "713.99",
+      "706.86",
+      "712.38"
+    ],
+    "answer": "706.86"
+  },
+  {
+    "question": "Find the area of a triangle with base 8 cm and height 10 cm.",
+    "options": [
+      "40.0",
+      "33.95",
+      "39.94",
+      "36.29"
+    ],
+    "answer": "40.0"
+  },
+  {
+    "question": "What is 22 + 62?",
+    "options": [
+      "88.46",
+      "91.76",
+      "84",
+      "92.82"
+    ],
+    "answer": "84"
+  },
+  {
+    "question": "Find the area of a circle with radius 9 cm.",
+    "options": [
+      "248.28",
+      "254.47",
+      "252.36",
+      "249.34"
+    ],
+    "answer": "254.47"
+  },
+  {
+    "question": "In the ratio 5:8, what is the second part of 170?",
+    "options": [
+      "104.62",
+      "108.85",
+      "97.57",
+      "96.96"
+    ],
+    "answer": "104.62"
+  },
+  {
+    "question": "What is 23% of 70?",
+    "options": [
+      "25.56",
+      "9.83",
+      "15.72",
+      "16.1"
+    ],
+    "answer": "16.1"
+  },
+  {
+    "question": "If 3x + 1 = 46, what is x?",
+    "options": [
+      "15",
+      "10.57",
+      "20.68",
+      "18.05"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "What is the next number in the sequence 1, 6, 11, 16, 21?",
+    "options": [
+      "26",
+      "31.74",
+      "16.0",
+      "24.96"
+    ],
+    "answer": "26"
+  },
+  {
+    "question": "Find the area of a circle with radius 13 cm.",
+    "options": [
+      "522.45",
+      "528.58",
+      "530.93",
+      "525.17"
+    ],
+    "answer": "530.93"
+  },
+  {
+    "question": "What is 45 + 45?",
+    "options": [
+      "98.47",
+      "90",
+      "92.64",
+      "89.51"
+    ],
+    "answer": "90"
+  },
+  {
+    "question": "What is 44 - 34?",
+    "options": [
+      "4.8",
+      "13.95",
+      "10",
+      "19.88"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What is 31 + 81?",
+    "options": [
+      "116.48",
+      "109.59",
+      "112",
+      "105.43"
+    ],
+    "answer": "112"
+  },
+  {
+    "question": "What is the next number in the sequence 10, 16, 22, 28, 34?",
+    "options": [
+      "40",
+      "48.8",
+      "41.39",
+      "32.89"
+    ],
+    "answer": "40"
+  },
+  {
+    "question": "If 2x + 1 = 21, what is x?",
+    "options": [
+      "10",
+      "16.77",
+      "7.09",
+      "1.05"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What is 5/11 of 178?",
+    "options": [
+      "81.17",
+      "75.35",
+      "80.91",
+      "77.7"
+    ],
+    "answer": "80.91"
+  },
+  {
+    "question": "Find the area of a rectangle with length 9 cm and width 5 cm.",
+    "options": [
+      "41.39",
+      "53.57",
+      "45",
+      "49.89"
+    ],
+    "answer": "45"
+  },
+  {
+    "question": "What is 64% of 404?",
+    "options": [
+      "258.56",
+      "259.05",
+      "250.46",
+      "263.04"
+    ],
+    "answer": "258.56"
+  },
+  {
+    "question": "What is the next number in the sequence 7, 10, 13, 16, 19?",
+    "options": [
+      "19.39",
+      "28.72",
+      "22.1",
+      "22"
+    ],
+    "answer": "22"
+  },
+  {
+    "question": "In the ratio 9:4, what is the first part of 83?",
+    "options": [
+      "48.5",
+      "57.46",
+      "65.77",
+      "55.11"
+    ],
+    "answer": "57.46"
+  },
+  {
+    "question": "If 1x + 1 = 11, what is x?",
+    "options": [
+      "10",
+      "1.56",
+      "4.23",
+      "4.15"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What is the next number in the sequence 2, 6, 10, 14, 18?",
+    "options": [
+      "27.06",
+      "16.9",
+      "22",
+      "22.37"
+    ],
+    "answer": "22"
+  },
+  {
+    "question": "What is 21% of 307?",
+    "options": [
+      "63.38",
+      "64.47",
+      "64.04",
+      "74.06"
+    ],
+    "answer": "64.47"
+  },
+  {
+    "question": "What is 8/12 of 71?",
+    "options": [
+      "47.33",
+      "50.33",
+      "43.37",
+      "56.75"
+    ],
+    "answer": "47.33"
+  },
+  {
+    "question": "What is 88 - 36?",
+    "options": [
+      "56.63",
+      "43.49",
+      "52",
+      "48.38"
+    ],
+    "answer": "52"
+  },
+  {
+    "question": "If 5x + 1 = 36, what is x?",
+    "options": [
+      "2.86",
+      "16.36",
+      "11.67",
+      "7"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "What is 31% of 475?",
+    "options": [
+      "147.86",
+      "149.71",
+      "145.93",
+      "147.25"
+    ],
+    "answer": "147.25"
+  },
+  {
+    "question": "What is 89% of 141?",
+    "options": [
+      "116.37",
+      "124.81",
+      "118.62",
+      "125.49"
+    ],
+    "answer": "125.49"
+  },
+  {
+    "question": "What is 50% of 408?",
+    "options": [
+      "204.0",
+      "195.64",
+      "202.02",
+      "195.89"
+    ],
+    "answer": "204.0"
+  },
+  {
+    "question": "What is 1/10 of 121?",
+    "options": [
+      "18.34",
+      "14.21",
+      "12.1",
+      "7.0"
+    ],
+    "answer": "12.1"
+  },
+  {
+    "question": "What is 63% of 322?",
+    "options": [
+      "198.78",
+      "202.25",
+      "202.86",
+      "211.43"
+    ],
+    "answer": "202.86"
+  },
+  {
+    "question": "What is the next number in the sequence 6, 12, 18, 24, 30?",
+    "options": [
+      "42.6",
+      "36",
+      "31.24",
+      "29.91"
+    ],
+    "answer": "36"
+  },
+  {
+    "question": "What is 68% of 67?",
+    "options": [
+      "47.92",
+      "52.56",
+      "48.1",
+      "45.56"
+    ],
+    "answer": "45.56"
+  },
+  {
+    "question": "What is 21% of 408?",
+    "options": [
+      "91.02",
+      "85.41",
+      "87.79",
+      "85.68"
+    ],
+    "answer": "85.68"
+  },
+  {
+    "question": "What is 5/11 of 56?",
+    "options": [
+      "25.45",
+      "25.37",
+      "22.98",
+      "33.22"
+    ],
+    "answer": "25.45"
+  },
+  {
+    "question": "What is 33% of 477?",
+    "options": [
+      "157.41",
+      "149.68",
+      "151.03",
+      "156.68"
+    ],
+    "answer": "157.41"
+  },
+  {
+    "question": "What is 1/8 of 106?",
+    "options": [
+      "3.64",
+      "5.27",
+      "13.25",
+      "4.85"
+    ],
+    "answer": "13.25"
+  },
+  {
+    "question": "Find the area of a circle with radius 10 cm.",
+    "options": [
+      "320.11",
+      "314.16",
+      "310.92",
+      "310.58"
+    ],
+    "answer": "314.16"
+  },
+  {
+    "question": "Find the area of a rectangle with length 18 cm and width 7 cm.",
+    "options": [
+      "119.79",
+      "118.55",
+      "126",
+      "134.16"
+    ],
+    "answer": "126"
+  },
+  {
+    "question": "In the ratio 9:8, what is the second part of 96?",
+    "options": [
+      "37.4",
+      "47.98",
+      "45.18",
+      "52.3"
+    ],
+    "answer": "45.18"
+  },
+  {
+    "question": "What is the next number in the sequence 7, 11, 15, 19, 23?",
+    "options": [
+      "27",
+      "28.05",
+      "20.35",
+      "18.89"
+    ],
+    "answer": "27"
+  },
+  {
+    "question": "What is the next number in the sequence 9, 19, 29, 39, 49?",
+    "options": [
+      "59.7",
+      "61.3",
+      "64.84",
+      "59"
+    ],
+    "answer": "59"
+  },
+  {
+    "question": "What is 8/10 of 20?",
+    "options": [
+      "19.16",
+      "22.77",
+      "16.0",
+      "6.14"
+    ],
+    "answer": "16.0"
+  },
+  {
+    "question": "If 6x + 6 = 30, what is x?",
+    "options": [
+      "7.82",
+      "4",
+      "8.16",
+      "7.5"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is 18% of 214?",
+    "options": [
+      "40.69",
+      "44.54",
+      "38.52",
+      "34.64"
+    ],
+    "answer": "38.52"
+  },
+  {
+    "question": "What is the next number in the sequence 2, 12, 22, 32, 42?",
+    "options": [
+      "51.96",
+      "52",
+      "51.75",
+      "52.56"
+    ],
+    "answer": "52"
+  },
+  {
+    "question": "In the ratio 4:6, what is the second part of 189?",
+    "options": [
+      "112.93",
+      "103.95",
+      "113.4",
+      "118.25"
+    ],
+    "answer": "113.4"
+  },
+  {
+    "question": "Find the area of a circle with radius 14 cm.",
+    "options": [
+      "615.75",
+      "607.68",
+      "619.12",
+      "622.23"
+    ],
+    "answer": "615.75"
+  },
+  {
+    "question": "Find the area of a rectangle with length 16 cm and width 14 cm.",
+    "options": [
+      "222.4",
+      "224",
+      "232.03",
+      "221.47"
+    ],
+    "answer": "224"
+  },
+  {
+    "question": "Find the area of a triangle with base 8 cm and height 6 cm.",
+    "options": [
+      "24.0",
+      "20.93",
+      "28.25",
+      "14.8"
+    ],
+    "answer": "24.0"
+  },
+  {
+    "question": "Find the area of a circle with radius 6 cm.",
+    "options": [
+      "111.91",
+      "107.81",
+      "105.94",
+      "113.1"
+    ],
+    "answer": "113.1"
+  },
+  {
+    "question": "If 1x + 6 = 9, what is x?",
+    "options": [
+      "3.95",
+      "2.5",
+      "-5.17",
+      "3"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is 60% of 58?",
+    "options": [
+      "36.54",
+      "30.55",
+      "33.3",
+      "34.8"
+    ],
+    "answer": "34.8"
+  },
+  {
+    "question": "In the ratio 4:9, what is the second part of 116?",
+    "options": [
+      "80.31",
+      "71.16",
+      "79.78",
+      "78.52"
+    ],
+    "answer": "80.31"
+  },
+  {
+    "question": "If 3x + 7 = 13, what is x?",
+    "options": [
+      "6.2",
+      "0.25",
+      "-7.79",
+      "2"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "In the ratio 7:10, what is the first part of 161?",
+    "options": [
+      "66.29",
+      "56.39",
+      "57.52",
+      "69.54"
+    ],
+    "answer": "66.29"
+  },
+  {
+    "question": "What is 60% of 500?",
+    "options": [
+      "301.42",
+      "296.31",
+      "303.38",
+      "300.0"
+    ],
+    "answer": "300.0"
+  },
+  {
+    "question": "In the ratio 4:8, what is the second part of 118?",
+    "options": [
+      "78.67",
+      "69.78",
+      "71.3",
+      "78.02"
+    ],
+    "answer": "78.67"
+  },
+  {
+    "question": "What is the next number in the sequence 1, 6, 11, 16, 21?",
+    "options": [
+      "21.62",
+      "26",
+      "32.85",
+      "31.38"
+    ],
+    "answer": "26"
+  },
+  {
+    "question": "What is 37 - 71?",
+    "options": [
+      "-24.47",
+      "-34",
+      "-27.31",
+      "-28.34"
+    ],
+    "answer": "-34"
+  },
+  {
+    "question": "If 6x + 3 = 27, what is x?",
+    "options": [
+      "7.48",
+      "-2.22",
+      "8.3",
+      "4"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 9, 15, 21, 27?",
+    "options": [
+      "25.15",
+      "33",
+      "42.11",
+      "31.25"
+    ],
+    "answer": "33"
+  },
+  {
+    "question": "What is 46 \u00f7 4?",
+    "options": [
+      "5.3",
+      "11.5",
+      "15.57",
+      "9.01"
+    ],
+    "answer": "11.5"
+  },
+  {
+    "question": "What is the next number in the sequence 8, 17, 26, 35, 44?",
+    "options": [
+      "61.85",
+      "53",
+      "57.52",
+      "46.1"
+    ],
+    "answer": "53"
+  },
+  {
+    "question": "Find the area of a rectangle with length 16 cm and width 9 cm.",
+    "options": [
+      "145.74",
+      "145.9",
+      "147.68",
+      "144"
+    ],
+    "answer": "144"
+  },
+  {
+    "question": "Find the area of a rectangle with length 10 cm and width 15 cm.",
+    "options": [
+      "150",
+      "152.8",
+      "149.73",
+      "158.15"
+    ],
+    "answer": "150"
+  },
+  {
+    "question": "If 9x + 7 = 133, what is x?",
+    "options": [
+      "7.57",
+      "6.84",
+      "16.29",
+      "14"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "What is the next number in the sequence 9, 15, 21, 27, 33?",
+    "options": [
+      "33.17",
+      "45.5",
+      "39",
+      "43.0"
+    ],
+    "answer": "39"
+  },
+  {
+    "question": "What is the next number in the sequence 6, 13, 20, 27, 34?",
+    "options": [
+      "34.37",
+      "41.12",
+      "41",
+      "36.14"
+    ],
+    "answer": "41"
+  },
+  {
+    "question": "What is the next number in the sequence 6, 12, 18, 24, 30?",
+    "options": [
+      "34.22",
+      "45.11",
+      "30.44",
+      "36"
+    ],
+    "answer": "36"
+  },
+  {
+    "question": "Find the area of a triangle with base 13 cm and height 12 cm.",
+    "options": [
+      "78.0",
+      "82.94",
+      "68.45",
+      "77.66"
+    ],
+    "answer": "78.0"
+  },
+  {
+    "question": "What is 83 + 59?",
+    "options": [
+      "136.89",
+      "146.41",
+      "146.58",
+      "142"
+    ],
+    "answer": "142"
+  },
+  {
+    "question": "What is 5% of 444?",
+    "options": [
+      "31.76",
+      "31.95",
+      "22.2",
+      "15.31"
+    ],
+    "answer": "22.2"
+  },
+  {
+    "question": "If 7x + 3 = 59, what is x?",
+    "options": [
+      "10.08",
+      "13.61",
+      "8",
+      "16.32"
+    ],
+    "answer": "8"
+  },
+  {
+    "question": "What is 27% of 50?",
+    "options": [
+      "17.28",
+      "9.51",
+      "13.5",
+      "8.29"
+    ],
+    "answer": "13.5"
+  },
+  {
+    "question": "If 5x + 2 = 47, what is x?",
+    "options": [
+      "14.85",
+      "4.34",
+      "0.02",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "question": "What is 5/12 of 128?",
+    "options": [
+      "60.95",
+      "55.94",
+      "59.44",
+      "53.33"
+    ],
+    "answer": "53.33"
+  },
+  {
+    "question": "What is the next number in the sequence 9, 18, 27, 36, 45?",
+    "options": [
+      "57.54",
+      "52.04",
+      "54",
+      "55.23"
+    ],
+    "answer": "54"
+  },
+  {
+    "question": "Find the area of a rectangle with length 18 cm and width 9 cm.",
+    "options": [
+      "162",
+      "153.47",
+      "160.68",
+      "159.55"
+    ],
+    "answer": "162"
+  },
+  {
+    "question": "Find the area of a rectangle with length 11 cm and width 10 cm.",
+    "options": [
+      "109.33",
+      "114.6",
+      "110",
+      "107.11"
+    ],
+    "answer": "110"
+  },
+  {
+    "question": "In the ratio 6:2, what is the first part of 122?",
+    "options": [
+      "96.27",
+      "87.19",
+      "93.19",
+      "91.5"
+    ],
+    "answer": "91.5"
+  },
+  {
+    "question": "What is 29 - 63?",
+    "options": [
+      "-30.72",
+      "-34",
+      "-29.07",
+      "-37.05"
+    ],
+    "answer": "-34"
+  },
+  {
+    "question": "What is 5/9 of 40?",
+    "options": [
+      "26.32",
+      "18.72",
+      "22.22",
+      "20.75"
+    ],
+    "answer": "22.22"
+  },
+  {
+    "question": "What is 3/6 of 137?",
+    "options": [
+      "68.5",
+      "71.96",
+      "66.4",
+      "67.89"
+    ],
+    "answer": "68.5"
+  },
+  {
+    "question": "What is the next number in the sequence 9, 14, 19, 24, 29?",
+    "options": [
+      "30.86",
+      "39.78",
+      "26.53",
+      "34"
+    ],
+    "answer": "34"
+  },
+  {
+    "question": "Find the area of a triangle with base 20 cm and height 10 cm.",
+    "options": [
+      "100.58",
+      "100.0",
+      "104.86",
+      "92.06"
+    ],
+    "answer": "100.0"
+  },
+  {
+    "question": "Find the area of a rectangle with length 5 cm and width 5 cm.",
+    "options": [
+      "15.49",
+      "24.26",
+      "25",
+      "27.49"
+    ],
+    "answer": "25"
+  },
+  {
+    "question": "What is 81% of 319?",
+    "options": [
+      "260.74",
+      "258.39",
+      "261.78",
+      "255.96"
+    ],
+    "answer": "258.39"
+  },
+  {
+    "question": "What is 78% of 338?",
+    "options": [
+      "263.64",
+      "268.96",
+      "266.28",
+      "262.28"
+    ],
+    "answer": "263.64"
+  },
+  {
+    "question": "Find the area of a triangle with base 17 cm and height 9 cm.",
+    "options": [
+      "72.75",
+      "70.16",
+      "79.89",
+      "76.5"
+    ],
+    "answer": "76.5"
+  },
+  {
+    "question": "What is 3/4 of 90?",
+    "options": [
+      "71.15",
+      "67.5",
+      "75.13",
+      "60.48"
+    ],
+    "answer": "67.5"
+  },
+  {
+    "question": "If 1x + 9 = 24, what is x?",
+    "options": [
+      "20.83",
+      "9.96",
+      "23.32",
+      "15"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "What is 85% of 247?",
+    "options": [
+      "209.95",
+      "209.82",
+      "209.6",
+      "202.89"
+    ],
+    "answer": "209.95"
+  },
+  {
+    "question": "What is 8/11 of 144?",
+    "options": [
+      "104.73",
+      "108.04",
+      "106.08",
+      "101.46"
+    ],
+    "answer": "104.73"
+  },
+  {
+    "question": "What is 17% of 335?",
+    "options": [
+      "66.06",
+      "56.95",
+      "50.49",
+      "64.1"
+    ],
+    "answer": "56.95"
+  },
+  {
+    "question": "Find the area of a triangle with base 12 cm and height 4 cm.",
+    "options": [
+      "24.0",
+      "28.75",
+      "31.21",
+      "26.73"
+    ],
+    "answer": "24.0"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 5, 7, 9, 11?",
+    "options": [
+      "13.11",
+      "8.4",
+      "16.91",
+      "13"
+    ],
+    "answer": "13"
+  },
+  {
+    "question": "What is 19 + 15?",
+    "options": [
+      "36.35",
+      "42.52",
+      "37.15",
+      "34"
+    ],
+    "answer": "34"
+  },
+  {
+    "question": "If 6x + 1 = 55, what is x?",
+    "options": [
+      "9",
+      "13.17",
+      "8.07",
+      "6.03"
+    ],
+    "answer": "9"
+  },
+  {
+    "question": "In the ratio 10:3, what is the second part of 191?",
+    "options": [
+      "51.67",
+      "37.92",
+      "46.27",
+      "44.08"
+    ],
+    "answer": "44.08"
+  },
+  {
+    "question": "In the ratio 4:5, what is the first part of 110?",
+    "options": [
+      "51.77",
+      "48.89",
+      "56.47",
+      "57.39"
+    ],
+    "answer": "48.89"
+  },
+  {
+    "question": "What is 99 \u00d7 32?",
+    "options": [
+      "3176.05",
+      "3175.26",
+      "3165.05",
+      "3168"
+    ],
+    "answer": "3168"
+  },
+  {
+    "question": "What is the next number in the sequence 2, 10, 18, 26, 34?",
+    "options": [
+      "44.98",
+      "40.26",
+      "44.25",
+      "42"
+    ],
+    "answer": "42"
+  },
+  {
+    "question": "Find the area of a rectangle with length 17 cm and width 15 cm.",
+    "options": [
+      "253.84",
+      "264.04",
+      "255",
+      "252.81"
+    ],
+    "answer": "255"
+  },
+  {
+    "question": "What is 1/10 of 178?",
+    "options": [
+      "19.0",
+      "27.13",
+      "17.8",
+      "11.29"
+    ],
+    "answer": "17.8"
+  },
+  {
+    "question": "If 1x + 6 = 21, what is x?",
+    "options": [
+      "8.51",
+      "15",
+      "19.92",
+      "5.95"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "What is 43% of 487?",
+    "options": [
+      "211.29",
+      "201.57",
+      "209.41",
+      "213.11"
+    ],
+    "answer": "209.41"
+  },
+  {
+    "question": "Find the area of a rectangle with length 10 cm and width 13 cm.",
+    "options": [
+      "122.17",
+      "130",
+      "129.25",
+      "130.51"
+    ],
+    "answer": "130"
+  },
+  {
+    "question": "What is 2/6 of 138?",
+    "options": [
+      "41.65",
+      "45.55",
+      "42.46",
+      "46.0"
+    ],
+    "answer": "46.0"
+  },
+  {
+    "question": "In the ratio 10:6, what is the second part of 190?",
+    "options": [
+      "71.25",
+      "74.52",
+      "78.89",
+      "66.3"
+    ],
+    "answer": "71.25"
+  },
+  {
+    "question": "In the ratio 7:6, what is the first part of 72?",
+    "options": [
+      "38.77",
+      "45.02",
+      "32.72",
+      "38.06"
+    ],
+    "answer": "38.77"
+  },
+  {
+    "question": "If 8x + 5 = 29, what is x?",
+    "options": [
+      "-2.36",
+      "-0.22",
+      "3",
+      "8.05"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "What is 8/11 of 165?",
+    "options": [
+      "120.0",
+      "118.4",
+      "128.02",
+      "124.59"
+    ],
+    "answer": "120.0"
+  },
+  {
+    "question": "What is the next number in the sequence 8, 17, 26, 35, 44?",
+    "options": [
+      "48.58",
+      "48.27",
+      "50.04",
+      "53"
+    ],
+    "answer": "53"
+  },
+  {
+    "question": "What is 6/11 of 163?",
+    "options": [
+      "88.91",
+      "87.23",
+      "81.25",
+      "92.21"
+    ],
+    "answer": "88.91"
+  },
+  {
+    "question": "What is 2/10 of 47?",
+    "options": [
+      "14.55",
+      "1.76",
+      "9.4",
+      "15.18"
+    ],
+    "answer": "9.4"
+  },
+  {
+    "question": "What is 33% of 415?",
+    "options": [
+      "136.95",
+      "129.82",
+      "143.98",
+      "133.12"
+    ],
+    "answer": "136.95"
+  },
+  {
+    "question": "What is 88% of 96?",
+    "options": [
+      "92.29",
+      "88.84",
+      "77.78",
+      "84.48"
+    ],
+    "answer": "84.48"
+  },
+  {
+    "question": "If 8x + 10 = 50, what is x?",
+    "options": [
+      "0.21",
+      "12.55",
+      "5",
+      "6.39"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "Find the area of a rectangle with length 8 cm and width 14 cm.",
+    "options": [
+      "118.3",
+      "112.64",
+      "115.9",
+      "112"
+    ],
+    "answer": "112"
+  },
+  {
+    "question": "In the ratio 9:9, what is the first part of 159?",
+    "options": [
+      "81.2",
+      "79.5",
+      "84.51",
+      "80.98"
+    ],
+    "answer": "79.5"
+  },
+  {
+    "question": "What is 4/9 of 66?",
+    "options": [
+      "29.33",
+      "28.92",
+      "20.53",
+      "37.58"
+    ],
+    "answer": "29.33"
+  },
+  {
+    "question": "If 8x + 5 = 37, what is x?",
+    "options": [
+      "4",
+      "-5.95",
+      "11.34",
+      "-3.53"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is 57 - 33?",
+    "options": [
+      "33.79",
+      "24",
+      "19.78",
+      "16.75"
+    ],
+    "answer": "24"
+  },
+  {
+    "question": "In the ratio 5:9, what is the first part of 85?",
+    "options": [
+      "30.36",
+      "21.18",
+      "35.84",
+      "26.35"
+    ],
+    "answer": "30.36"
+  },
+  {
+    "question": "In the ratio 8:9, what is the first part of 150?",
+    "options": [
+      "79.16",
+      "79.54",
+      "70.59",
+      "69.39"
+    ],
+    "answer": "70.59"
+  },
+  {
+    "question": "Find the area of a triangle with base 19 cm and height 8 cm.",
+    "options": [
+      "76.0",
+      "76.25",
+      "74.12",
+      "66.94"
+    ],
+    "answer": "76.0"
+  },
+  {
+    "question": "What is 3/10 of 100?",
+    "options": [
+      "33.74",
+      "30.0",
+      "26.07",
+      "24.04"
+    ],
+    "answer": "30.0"
+  },
+  {
+    "question": "What is 55% of 474?",
+    "options": [
+      "260.7",
+      "266.34",
+      "252.51",
+      "268.13"
+    ],
+    "answer": "260.7"
+  },
+  {
+    "question": "What is the next number in the sequence 5, 15, 25, 35, 45?",
+    "options": [
+      "64.41",
+      "55",
+      "63.37",
+      "60.73"
+    ],
+    "answer": "55"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 9, 15, 21, 27?",
+    "options": [
+      "24.64",
+      "28.26",
+      "33",
+      "35.92"
+    ],
+    "answer": "33"
+  },
+  {
+    "question": "What is the next number in the sequence 6, 15, 24, 33, 42?",
+    "options": [
+      "48.52",
+      "59.76",
+      "51",
+      "41.48"
+    ],
+    "answer": "51"
+  },
+  {
+    "question": "What is 33% of 368?",
+    "options": [
+      "121.44",
+      "121.61",
+      "116.62",
+      "125.42"
+    ],
+    "answer": "121.44"
+  },
+  {
+    "question": "What is the next number in the sequence 1, 11, 21, 31, 41?",
+    "options": [
+      "51.53",
+      "53.03",
+      "51",
+      "56.55"
+    ],
+    "answer": "51"
+  },
+  {
+    "question": "In the ratio 3:2, what is the second part of 187?",
+    "options": [
+      "70.25",
+      "81.74",
+      "75.76",
+      "74.8"
+    ],
+    "answer": "74.8"
+  },
+  {
+    "question": "What is 7/12 of 135?",
+    "options": [
+      "78.75",
+      "87.2",
+      "81.77",
+      "81.29"
+    ],
+    "answer": "78.75"
+  },
+  {
+    "question": "What is 14 - 47?",
+    "options": [
+      "-33.93",
+      "-35.72",
+      "-27.54",
+      "-33"
+    ],
+    "answer": "-33"
+  },
+  {
+    "question": "If 4x + 5 = 25, what is x?",
+    "options": [
+      "5",
+      "14.03",
+      "-1.0",
+      "4.92"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "In the ratio 7:4, what is the second part of 192?",
+    "options": [
+      "68.75",
+      "69.82",
+      "69.89",
+      "77.84"
+    ],
+    "answer": "69.82"
+  },
+  {
+    "question": "What is 13 + 40?",
+    "options": [
+      "62.97",
+      "57.44",
+      "53.89",
+      "53"
+    ],
+    "answer": "53"
+  },
+  {
+    "question": "What is 56% of 73?",
+    "options": [
+      "35.26",
+      "41.62",
+      "42.45",
+      "40.88"
+    ],
+    "answer": "40.88"
+  },
+  {
+    "question": "Find the area of a rectangle with length 4 cm and width 11 cm.",
+    "options": [
+      "43.91",
+      "35.18",
+      "44",
+      "49.67"
+    ],
+    "answer": "44"
+  },
+  {
+    "question": "In the ratio 3:3, what is the second part of 145?",
+    "options": [
+      "65.26",
+      "72.5",
+      "66.1",
+      "81.51"
+    ],
+    "answer": "72.5"
+  },
+  {
+    "question": "What is 48 - 34?",
+    "options": [
+      "16.14",
+      "14",
+      "6.39",
+      "20.53"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "In the ratio 3:4, what is the second part of 41?",
+    "options": [
+      "23.43",
+      "16.13",
+      "32.73",
+      "31.84"
+    ],
+    "answer": "23.43"
+  },
+  {
+    "question": "What is 74 - 18?",
+    "options": [
+      "51.21",
+      "52.81",
+      "58.98",
+      "56"
+    ],
+    "answer": "56"
+  },
+  {
+    "question": "In the ratio 7:8, what is the second part of 70?",
+    "options": [
+      "37.33",
+      "37.43",
+      "28.37",
+      "31.22"
+    ],
+    "answer": "37.33"
+  },
+  {
+    "question": "What is the next number in the sequence 6, 16, 26, 36, 46?",
+    "options": [
+      "53.12",
+      "55.14",
+      "60.09",
+      "56"
+    ],
+    "answer": "56"
+  },
+  {
+    "question": "What is 42 - 20?",
+    "options": [
+      "13.59",
+      "22",
+      "15.82",
+      "16.71"
+    ],
+    "answer": "22"
+  },
+  {
+    "question": "What is 17 \u00d7 78?",
+    "options": [
+      "1332.43",
+      "1333.07",
+      "1334.35",
+      "1326"
+    ],
+    "answer": "1326"
+  },
+  {
+    "question": "What is 84% of 465?",
+    "options": [
+      "394.57",
+      "389.95",
+      "381.15",
+      "390.6"
+    ],
+    "answer": "390.6"
+  },
+  {
+    "question": "What is 58% of 491?",
+    "options": [
+      "291.35",
+      "277.11",
+      "278.37",
+      "284.78"
+    ],
+    "answer": "284.78"
+  },
+  {
+    "question": "What is the next number in the sequence 9, 17, 25, 33, 41?",
+    "options": [
+      "54.27",
+      "48.3",
+      "49",
+      "39.55"
+    ],
+    "answer": "49"
+  },
+  {
+    "question": "In the ratio 8:4, what is the first part of 154?",
+    "options": [
+      "104.02",
+      "102.67",
+      "94.25",
+      "92.69"
+    ],
+    "answer": "102.67"
+  },
+  {
+    "question": "If 6x + 2 = 32, what is x?",
+    "options": [
+      "14.61",
+      "8.74",
+      "3.83",
+      "5"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "What is 54% of 355?",
+    "options": [
+      "191.7",
+      "189.05",
+      "183.07",
+      "194.5"
+    ],
+    "answer": "191.7"
+  },
+  {
+    "question": "What is 6/12 of 29?",
+    "options": [
+      "14.5",
+      "21.63",
+      "4.77",
+      "22.46"
+    ],
+    "answer": "14.5"
+  },
+  {
+    "question": "What is the next number in the sequence 10, 13, 16, 19, 22?",
+    "options": [
+      "19.09",
+      "22.17",
+      "25",
+      "26.25"
+    ],
+    "answer": "25"
+  },
+  {
+    "question": "What is the next number in the sequence 7, 14, 21, 28, 35?",
+    "options": [
+      "37.79",
+      "42",
+      "35.75",
+      "40.41"
+    ],
+    "answer": "42"
+  },
+  {
+    "question": "What is 8/10 of 184?",
+    "options": [
+      "147.2",
+      "137.89",
+      "141.22",
+      "154.63"
+    ],
+    "answer": "147.2"
+  },
+  {
+    "question": "What is 11% of 206?",
+    "options": [
+      "22.66",
+      "16.72",
+      "21.45",
+      "16.12"
+    ],
+    "answer": "22.66"
+  },
+  {
+    "question": "What is 29 \u00d7 22?",
+    "options": [
+      "638",
+      "635.39",
+      "638.22",
+      "635.3"
+    ],
+    "answer": "638"
+  },
+  {
+    "question": "What is 82 \u00d7 38?",
+    "options": [
+      "3121.78",
+      "3121.46",
+      "3107.26",
+      "3116"
+    ],
+    "answer": "3116"
+  },
+  {
+    "question": "What is the next number in the sequence 5, 15, 25, 35, 45?",
+    "options": [
+      "62.65",
+      "55",
+      "52.58",
+      "60.33"
+    ],
+    "answer": "55"
+  },
+  {
+    "question": "What is the next number in the sequence 1, 10, 19, 28, 37?",
+    "options": [
+      "46",
+      "48.53",
+      "44.9",
+      "44.39"
+    ],
+    "answer": "46"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 9, 15, 21, 27?",
+    "options": [
+      "38.02",
+      "24.07",
+      "33",
+      "23.5"
+    ],
+    "answer": "33"
+  },
+  {
+    "question": "If 3x + 3 = 33, what is x?",
+    "options": [
+      "10",
+      "11.73",
+      "3.97",
+      "14.41"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What is 45 \u00d7 60?",
+    "options": [
+      "2700",
+      "2691.31",
+      "2695.52",
+      "2690.21"
+    ],
+    "answer": "2700"
+  },
+  {
+    "question": "What is 7/12 of 105?",
+    "options": [
+      "52.52",
+      "61.25",
+      "66.88",
+      "58.65"
+    ],
+    "answer": "61.25"
+  },
+  {
+    "question": "What is 80 + 33?",
+    "options": [
+      "113",
+      "114.13",
+      "115.96",
+      "113.32"
+    ],
+    "answer": "113"
+  },
+  {
+    "question": "What is 1/12 of 194?",
+    "options": [
+      "22.35",
+      "23.88",
+      "15.23",
+      "16.17"
+    ],
+    "answer": "16.17"
+  },
+  {
+    "question": "If 7x + 4 = 46, what is x?",
+    "options": [
+      "2.69",
+      "1.51",
+      "6",
+      "8.54"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "What is 47% of 356?",
+    "options": [
+      "175.73",
+      "167.32",
+      "176.77",
+      "165.69"
+    ],
+    "answer": "167.32"
+  },
+  {
+    "question": "In the ratio 4:6, what is the first part of 175?",
+    "options": [
+      "70.0",
+      "67.48",
+      "74.96",
+      "74.81"
+    ],
+    "answer": "70.0"
+  },
+  {
+    "question": "If 8x + 5 = 117, what is x?",
+    "options": [
+      "5.72",
+      "23.91",
+      "9.62",
+      "14"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "In the ratio 10:4, what is the second part of 191?",
+    "options": [
+      "52.62",
+      "50.68",
+      "53.97",
+      "54.57"
+    ],
+    "answer": "54.57"
+  },
+  {
+    "question": "In the ratio 5:8, what is the first part of 195?",
+    "options": [
+      "68.98",
+      "66.37",
+      "75.0",
+      "74.46"
+    ],
+    "answer": "75.0"
+  },
+  {
+    "question": "What is 15% of 484?",
+    "options": [
+      "72.6",
+      "62.74",
+      "72.64",
+      "78.31"
+    ],
+    "answer": "72.6"
+  },
+  {
+    "question": "In the ratio 6:6, what is the second part of 179?",
+    "options": [
+      "89.6",
+      "96.09",
+      "96.13",
+      "89.5"
+    ],
+    "answer": "89.5"
+  },
+  {
+    "question": "What is the next number in the sequence 7, 17, 27, 37, 47?",
+    "options": [
+      "58.33",
+      "57",
+      "56.08",
+      "58.53"
+    ],
+    "answer": "57"
+  },
+  {
+    "question": "What is 49 + 25?",
+    "options": [
+      "69.87",
+      "74",
+      "75.42",
+      "72.95"
+    ],
+    "answer": "74"
+  },
+  {
+    "question": "What is 15% of 254?",
+    "options": [
+      "37.47",
+      "38.1",
+      "40.23",
+      "45.0"
+    ],
+    "answer": "38.1"
+  },
+  {
+    "question": "If 9x + 4 = 139, what is x?",
+    "options": [
+      "15",
+      "5.3",
+      "23.12",
+      "7.4"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "What is 67% of 150?",
+    "options": [
+      "107.2",
+      "100.5",
+      "90.72",
+      "106.6"
+    ],
+    "answer": "100.5"
+  },
+  {
+    "question": "What is 11% of 81?",
+    "options": [
+      "10.27",
+      "3.33",
+      "8.91",
+      "17.28"
+    ],
+    "answer": "8.91"
+  },
+  {
+    "question": "Find the area of a rectangle with length 12 cm and width 14 cm.",
+    "options": [
+      "162.39",
+      "170.35",
+      "160.89",
+      "168"
+    ],
+    "answer": "168"
+  },
+  {
+    "question": "What is 77% of 174?",
+    "options": [
+      "139.74",
+      "140.38",
+      "137.72",
+      "133.98"
+    ],
+    "answer": "133.98"
+  },
+  {
+    "question": "What is 15% of 100?",
+    "options": [
+      "20.3",
+      "15.0",
+      "12.06",
+      "24.3"
+    ],
+    "answer": "15.0"
+  },
+  {
+    "question": "Find the area of a rectangle with length 12 cm and width 6 cm.",
+    "options": [
+      "67.99",
+      "66.38",
+      "63.54",
+      "72"
+    ],
+    "answer": "72"
+  },
+  {
+    "question": "If 10x + 6 = 106, what is x?",
+    "options": [
+      "10",
+      "8.3",
+      "16.66",
+      "17.72"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "Find the area of a rectangle with length 17 cm and width 5 cm.",
+    "options": [
+      "85",
+      "87.09",
+      "92.36",
+      "81.21"
+    ],
+    "answer": "85"
+  },
+  {
+    "question": "What is 52% of 90?",
+    "options": [
+      "45.66",
+      "46.8",
+      "46.82",
+      "49.69"
+    ],
+    "answer": "46.8"
+  },
+  {
+    "question": "In the ratio 4:6, what is the first part of 76?",
+    "options": [
+      "30.4",
+      "31.22",
+      "20.88",
+      "22.74"
+    ],
+    "answer": "30.4"
+  },
+  {
+    "question": "Find the area of a triangle with base 17 cm and height 15 cm.",
+    "options": [
+      "125.77",
+      "127.5",
+      "120.39",
+      "137.23"
+    ],
+    "answer": "127.5"
+  },
+  {
+    "question": "If 4x + 10 = 54, what is x?",
+    "options": [
+      "2.39",
+      "19.62",
+      "11",
+      "2.08"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "If 9x + 9 = 45, what is x?",
+    "options": [
+      "4",
+      "12.2",
+      "12.35",
+      "-0.08"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "If 5x + 3 = 78, what is x?",
+    "options": [
+      "5.25",
+      "23.75",
+      "22.29",
+      "15"
+    ],
+    "answer": "15"
+  },
+  {
+    "question": "What is the next number in the sequence 8, 14, 20, 26, 32?",
+    "options": [
+      "40.06",
+      "43.47",
+      "38",
+      "47.04"
+    ],
+    "answer": "38"
+  },
+  {
+    "question": "What is 3/12 of 62?",
+    "options": [
+      "19.77",
+      "16.64",
+      "20.78",
+      "15.5"
+    ],
+    "answer": "15.5"
+  },
+  {
+    "question": "In the ratio 2:9, what is the first part of 193?",
+    "options": [
+      "40.66",
+      "39.22",
+      "35.09",
+      "36.44"
+    ],
+    "answer": "35.09"
+  },
+  {
+    "question": "If 1x + 8 = 10, what is x?",
+    "options": [
+      "2",
+      "-5.41",
+      "-6.94",
+      "-7.95"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "In the ratio 10:3, what is the second part of 59?",
+    "options": [
+      "19.43",
+      "17.33",
+      "13.62",
+      "10.71"
+    ],
+    "answer": "13.62"
+  },
+  {
+    "question": "What is 30% of 426?",
+    "options": [
+      "134.02",
+      "123.24",
+      "132.9",
+      "127.8"
+    ],
+    "answer": "127.8"
+  },
+  {
+    "question": "If 8x + 7 = 95, what is x?",
+    "options": [
+      "13.16",
+      "11",
+      "8.75",
+      "17.18"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "What is 28 \u00f7 6?",
+    "options": [
+      "5.95",
+      "4.1",
+      "8.19",
+      "4.83"
+    ],
+    "answer": "4.83"
+  },
+  {
+    "question": "In the ratio 6:3, what is the first part of 65?",
+    "options": [
+      "43.33",
+      "39.39",
+      "42.05",
+      "47.39"
+    ],
+    "answer": "43.33"
+  },
+  {
+    "question": "If 5x + 5 = 40, what is x?",
+    "options": [
+      "6.93",
+      "9.26",
+      "7",
+      "5.83"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "Find the area of a rectangle with length 16 cm and width 11 cm.",
+    "options": [
+      "166.64",
+      "179.61",
+      "171.59",
+      "176"
+    ],
+    "answer": "176"
+  },
+  {
+    "question": "If 8x + 1 = 17, what is x?",
+    "options": [
+      "1.8",
+      "-6.52",
+      "2",
+      "6.19"
+    ],
+    "answer": "2"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 13, 23, 33, 43?",
+    "options": [
+      "59.28",
+      "53",
+      "48.96",
+      "59.8"
+    ],
+    "answer": "53"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 5, 7, 9, 11?",
+    "options": [
+      "3.63",
+      "18.02",
+      "13",
+      "21.02"
+    ],
+    "answer": "13"
+  },
+  {
+    "question": "In the ratio 2:5, what is the second part of 128?",
+    "options": [
+      "91.43",
+      "85.2",
+      "84.21",
+      "83.12"
+    ],
+    "answer": "91.43"
+  },
+  {
+    "question": "What is 35% of 66?",
+    "options": [
+      "16.73",
+      "23.1",
+      "15.41",
+      "19.45"
+    ],
+    "answer": "23.1"
+  },
+  {
+    "question": "Find the area of a circle with radius 3 cm.",
+    "options": [
+      "31.76",
+      "36.02",
+      "26.52",
+      "28.27"
+    ],
+    "answer": "28.27"
+  },
+  {
+    "question": "In the ratio 7:9, what is the second part of 111?",
+    "options": [
+      "67.84",
+      "62.44",
+      "71.76",
+      "54.12"
+    ],
+    "answer": "62.44"
+  },
+  {
+    "question": "In the ratio 10:2, what is the second part of 135?",
+    "options": [
+      "24.48",
+      "28.96",
+      "22.5",
+      "17.03"
+    ],
+    "answer": "22.5"
+  },
+  {
+    "question": "In the ratio 5:4, what is the second part of 113?",
+    "options": [
+      "60.08",
+      "40.48",
+      "50.22",
+      "42.39"
+    ],
+    "answer": "50.22"
+  },
+  {
+    "question": "In the ratio 8:7, what is the second part of 99?",
+    "options": [
+      "52.7",
+      "46.2",
+      "38.43",
+      "54.95"
+    ],
+    "answer": "46.2"
+  },
+  {
+    "question": "If 7x + 4 = 102, what is x?",
+    "options": [
+      "14",
+      "10.72",
+      "12.26",
+      "15.41"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "In the ratio 8:3, what is the first part of 128?",
+    "options": [
+      "88.74",
+      "93.09",
+      "93.74",
+      "96.61"
+    ],
+    "answer": "93.09"
+  },
+  {
+    "question": "What is the next number in the sequence 3, 5, 7, 9, 11?",
+    "options": [
+      "13.24",
+      "22.1",
+      "21.51",
+      "13"
+    ],
+    "answer": "13"
+  },
+  {
+    "question": "Find the area of a rectangle with length 12 cm and width 14 cm.",
+    "options": [
+      "162.35",
+      "161.66",
+      "168",
+      "168.35"
+    ],
+    "answer": "168"
+  },
+  {
+    "question": "What is the next number in the sequence 4, 13, 22, 31, 40?",
+    "options": [
+      "46.9",
+      "40.19",
+      "44.57",
+      "49"
+    ],
+    "answer": "49"
+  },
+  {
+    "question": "What is the next number in the sequence 7, 11, 15, 19, 23?",
+    "options": [
+      "18.32",
+      "29.38",
+      "27",
+      "25.35"
+    ],
+    "answer": "27"
+  },
+  {
+    "question": "What is the next number in the sequence 10, 13, 16, 19, 22?",
+    "options": [
+      "29.83",
+      "19.08",
+      "25",
+      "18.58"
+    ],
+    "answer": "25"
+  },
+  {
+    "question": "What is 44 - 21?",
+    "options": [
+      "23",
+      "28.28",
+      "17.22",
+      "17.06"
+    ],
+    "answer": "23"
+  },
+  {
+    "question": "What is 63 \u00f7 5?",
+    "options": [
+      "11.6",
+      "13.74",
+      "12.6",
+      "20.42"
+    ],
+    "answer": "12.6"
+  },
+  {
+    "question": "Find the area of a rectangle with length 5 cm and width 12 cm.",
+    "options": [
+      "60",
+      "61.48",
+      "55.52",
+      "60.36"
+    ],
+    "answer": "60"
+  },
+  {
+    "question": "If 10x + 10 = 150, what is x?",
+    "options": [
+      "12.73",
+      "14",
+      "21.5",
+      "11.45"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "What is the next number in the sequence 2, 12, 22, 32, 42?",
+    "options": [
+      "46.29",
+      "57.64",
+      "57.56",
+      "52"
+    ],
+    "answer": "52"
+  },
+  {
+    "question": "What is 57 \u00d7 8?",
+    "options": [
+      "461.72",
+      "447.28",
+      "463.52",
+      "456"
+    ],
+    "answer": "456"
+  },
+  {
+    "question": "What is 77 + 56?",
+    "options": [
+      "140.04",
+      "136.73",
+      "133",
+      "131.4"
+    ],
+    "answer": "133"
+  },
+  {
+    "question": "What is 55% of 202?",
+    "options": [
+      "111.1",
+      "111.13",
+      "109.56",
+      "108.13"
+    ],
+    "answer": "111.1"
+  },
+  {
+    "question": "Find the area of a circle with radius 8 cm.",
+    "options": [
+      "191.27",
+      "207.9",
+      "193.14",
+      "201.06"
+    ],
+    "answer": "201.06"
+  },
+  {
+    "question": "What is 6/12 of 56?",
+    "options": [
+      "37.46",
+      "34.48",
+      "28.0",
+      "26.8"
+    ],
+    "answer": "28.0"
+  },
+  {
+    "question": "What is 4/8 of 130?",
+    "options": [
+      "73.32",
+      "58.48",
+      "65.0",
+      "56.08"
+    ],
+    "answer": "65.0"
+  },
+  {
+    "question": "Find the area of a circle with radius 11 cm.",
+    "options": [
+      "386.26",
+      "381.2",
+      "380.13",
+      "375.77"
+    ],
+    "answer": "380.13"
+  },
+  {
+    "question": "If 8x + 2 = 114, what is x?",
+    "options": [
+      "15.85",
+      "17.44",
+      "14",
+      "20.62"
+    ],
+    "answer": "14"
+  },
+  {
+    "question": "If 10x + 10 = 80, what is x?",
+    "options": [
+      "7.59",
+      "7",
+      "2.04",
+      "-2.46"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "Find the area of a circle with radius 2 cm.",
+    "options": [
+      "12.57",
+      "17.56",
+      "17.03",
+      "8.06"
+    ],
+    "answer": "12.57"
+  },
+  {
+    "question": "What is the next number in the sequence 6, 14, 22, 30, 38?",
+    "options": [
+      "46",
+      "45.53",
+      "47.45",
+      "52.37"
+    ],
+    "answer": "46"
+  },
+  {
+    "question": "What is 99 \u00d7 56?",
+    "options": [
+      "5547.26",
+      "5544",
+      "5542.95",
+      "5534.77"
+    ],
+    "answer": "5544"
+  },
+  {
+    "question": "Find the area of a circle with radius 15 cm.",
+    "options": [
+      "706.86",
+      "697.42",
+      "714.54",
+      "712.65"
+    ],
+    "answer": "706.86"
+  },
+  {
+    "question": "If 1x + 3 = 15, what is x?",
+    "options": [
+      "14.84",
+      "18.67",
+      "12",
+      "3.89"
+    ],
+    "answer": "12"
+  },
+  {
+    "question": "What is 9/11 of 26?",
+    "options": [
+      "21.27",
+      "27.8",
+      "16.34",
+      "25.42"
+    ],
+    "answer": "21.27"
+  },
+  {
+    "question": "Find the area of a circle with radius 7 cm.",
+    "options": [
+      "151.5",
+      "147.48",
+      "153.94",
+      "156.87"
+    ],
+    "answer": "153.94"
+  },
+  {
+    "question": "If 5x + 2 = 52, what is x?",
+    "options": [
+      "6.92",
+      "10",
+      "4.7",
+      "18.9"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "Find the area of a triangle with base 18 cm and height 7 cm.",
+    "options": [
+      "59.04",
+      "63.0",
+      "70.81",
+      "71.86"
+    ],
+    "answer": "63.0"
+  },
+  {
+    "question": "Find the area of a triangle with base 11 cm and height 8 cm.",
+    "options": [
+      "41.41",
+      "44.0",
+      "35.66",
+      "37.77"
+    ],
+    "answer": "44.0"
+  },
+  {
+    "question": "If 10x + 8 = 98, what is x?",
+    "options": [
+      "-0.67",
+      "16.76",
+      "4.65",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "question": "If 4x + 1 = 17, what is x?",
+    "options": [
+      "7.88",
+      "10.36",
+      "4",
+      "-4.28"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "What is 83 - 15?",
+    "options": [
+      "68",
+      "76.75",
+      "71.34",
+      "74.41"
+    ],
+    "answer": "68"
+  },
+  {
+    "question": "What is 19 \u00d7 24?",
+    "options": [
+      "456",
+      "452.07",
+      "456.62",
+      "460.33"
+    ],
+    "answer": "456"
+  },
+  {
+    "question": "If 8x + 5 = 85, what is x?",
+    "options": [
+      "17.16",
+      "7.21",
+      "10",
+      "8.12"
+    ],
+    "answer": "10"
+  },
+  {
+    "question": "What is 33% of 324?",
+    "options": [
+      "106.92",
+      "108.13",
+      "104.62",
+      "100.52"
+    ],
+    "answer": "106.92"
+  },
+  {
+    "question": "Find the area of a circle with radius 4 cm.",
+    "options": [
+      "41.11",
+      "55.03",
+      "50.27",
+      "58.75"
+    ],
+    "answer": "50.27"
+  },
+  {
+    "question": "If 7x + 4 = 39, what is x?",
+    "options": [
+      "11.01",
+      "12.7",
+      "5",
+      "13.91"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "In the ratio 2:9, what is the second part of 187?",
+    "options": [
+      "153.0",
+      "153.98",
+      "155.37",
+      "162.56"
+    ],
+    "answer": "153.0"
+  }
+    
 ]
