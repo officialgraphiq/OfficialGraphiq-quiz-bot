@@ -113,44 +113,47 @@ for cat, file in CATEGORIES.items():
 
 
 def get_random_question(user_id: int, category: str):
+    print(f"📊 [DEBUG] Fetching random question for telegram_id={user_id}, category={category}")
+
     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
         raise ValueError(f"No questions found for category: {category}")
 
-    # ✅ Ensure user record exists with the correct key (_id)
-    user = users_col.find_one({"_id": user_id})
-    if not user:
-        users_col.insert_one({"_id": user_id, "seen_questions": {}})
-        user = users_col.find_one({"_id": user_id})
+    # ✅ Use telegram_id as the lookup field
+    user = users_col.find_one({"telegram_id": user_id})
 
-    # ✅ Retrieve seen question indices for this category
+    if not user:
+        print(f"⚠️ [DEBUG] No user found, creating one for {user_id}")
+        users_col.insert_one({"telegram_id": user_id, "seen_questions": {}})
+        user = users_col.find_one({"telegram_id": user_id})
+
     seen_data = user.get("seen_questions", {})
     seen = seen_data.get(category, [])
+    print(f"👁️ [DEBUG] Seen questions so far: {seen}")
 
     total_questions = len(QUESTION_BANKS[category])
     unseen_indices = [i for i in range(total_questions) if i not in seen]
 
-    # ✅ If user has seen all questions, reset the list for that category
     if not unseen_indices:
+        print(f"🔁 [DEBUG] All questions seen, resetting list for {category}")
         users_col.update_one(
-            {"_id": user_id},
+            {"telegram_id": user_id},
             {"$set": {f"seen_questions.{category}": []}},
             upsert=True
         )
         unseen_indices = list(range(total_questions))
 
-    # ✅ Pick a random unseen question
     random_index = random.choice(unseen_indices)
     question_data = QUESTION_BANKS[category][random_index]
 
-    # ✅ Add the selected question to the seen list
-    users_col.update_one(
-        {"_id": user_id},
+    result = users_col.update_one(
+        {"telegram_id": user_id},
         {"$push": {f"seen_questions.{category}": random_index}},
         upsert=True
     )
+    print(f"✅ [DEBUG] Mongo update result: {result.modified_count} (added {random_index})")
 
-    print(f"✅ Updated seen_questions for user {user_id} → {category}:{random_index}")
     return question_data
+
 
 
 
