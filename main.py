@@ -1095,16 +1095,21 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         bonus_text = "🔹 10% deposit bonus applied."
 
     amount_with_bonus = int(amount + (amount * bonus_multiplier))
-    expected_balance = user.get("balance", 0) + amount_with_bonus
 
     # Initialize Paystack payment
-    headers = {"Authorization": f"Bearer {PAYSTACK_SECRET_KEY}"}
+    headers = {
+        "Authorization": f"Bearer {PAYSTACK_SECRET_KEY}",
+        "Content-Type": "application/json"
+    }
     payload = {
         "email": user.get("email", f"user{user_id}@example.com"),
-        "amount": amount * 100,
+        "amount": amount * 100,  # in kobo
         "currency": "NGN",
-        "callback_url": "https://example.com",  # dummy
-        "metadata": {"user_id": user_id, "amount_with_bonus": amount_with_bonus}
+        "callback_url": "https://example.com",  # dummy, webhook not used
+        "metadata": {
+            "user_id": user_id,
+            "amount_with_bonus": amount_with_bonus
+        }
     }
 
     async with httpx.AsyncClient() as client:
@@ -1115,7 +1120,7 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reference = data["data"]["reference"]
         payment_url = data["data"]["authorization_url"]
 
-        # Store pending deposit for later verification
+        # Save reference for manual verification
         users_col.update_one(
             {"telegram_id": user_id},
             {"$set": {"pending_deposit": amount_with_bonus, "deposit_amount": amount, "paystack_reference": reference}},
@@ -1125,7 +1130,6 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             f"💰 Fund request: ₦{amount:,}\n{bonus_text}\n"
             f"👉 Complete payment here: {payment_url}\n\n"
-            f"💡 Expected balance after payment: ₦{expected_balance:,}\n"
             f"After payment, verify with:\n/verify {reference}"
         )
     else:
@@ -1134,6 +1138,9 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 
+
+# Verify Command
+# -----------------------------
 async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
     try:
@@ -1142,7 +1149,10 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Usage: /verify <reference>")
         return
 
-    headers = {"Authorization": f"Bearer {PAYSTACK_SECRET_KEY}"}
+    headers = {
+        "Authorization": f"Bearer {PAYSTACK_SECRET_KEY}",
+        "Content-Type": "application/json"
+    }
     async with httpx.AsyncClient() as client:
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
@@ -1160,6 +1170,17 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
     else:
         await update.message.reply_text("❌ Payment not successful or still pending. Try again later.")
+
+# -----------------------------
+# Test secret key
+# -----------------------------
+def test_paystack_key():
+    if not PAYSTACK_SECRET_KEY:
+        print("❌ PAYSTACK_SECRET_KEY not set!")
+    elif not PAYSTACK_SECRET_KEY.startswith("sk_"):
+        print("❌ PAYSTACK_SECRET_KEY seems invalid (does not start with sk_)")
+    else:
+        print("✅ PAYSTACK_SECRET_KEY looks good!")
 
 
 
