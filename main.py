@@ -163,15 +163,15 @@ ALLOWED_END_HOUR = 21    # 9 PM
 #         return True  # Block further handlers
 #     return False
 
-# async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
-#     # Reset only scores and sessions (leave balance untouched)
-#     users_col.update_many({}, {"$set": {"score": 0, "sessions": 0}})
+async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
+    # Reset only scores and sessions (leave balance untouched)
+    users_col.update_many({}, {"$set": {"score": 0, "sessions": 0}})
     
-#     # Clear in-memory active quizzes
-#     ACTIVE_QUIZZES.clear()
+    # Clear in-memory active quizzes
+    ACTIVE_QUIZZES.clear()
 
-#     print("✅ Daily reset completed at", datetime.now(NIGERIA_TZ)
-# .strftime("%Y-%m-%d %H:%M:%S"))
+    print("✅ Daily reset completed at", datetime.now(NIGERIA_TZ)
+.strftime("%Y-%m-%d %H:%M:%S"))
 async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """
     Restrict bot usage to 8:00 AM - 9:00 PM (Africa/Lagos time).
@@ -382,7 +382,7 @@ def schedule_winner_announcement(job_queue: JobQueue):
     delay = (target_time - now).total_seconds()
 
     job_queue.run_repeating(
-        announce_daily_winner,
+        announce_winner,
         interval=86400,  # every 24 hours
         first=delay
     )
