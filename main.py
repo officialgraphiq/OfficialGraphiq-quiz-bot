@@ -108,6 +108,8 @@ def get_random_question(user_id: int, category: str):
         {"$push": {f"seen_questions.{category}": random_index}},
         upsert=True
     )
+    print(f"✅ Updating seen_questions for user {user_id}, category={category}, question_index={random_index}")
+
 
     return question_data
 
