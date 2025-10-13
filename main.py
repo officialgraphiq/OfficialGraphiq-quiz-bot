@@ -3,8 +3,9 @@ import certifi
 import json
 import random
 import time
+import pytz
 from typing import Final
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from telegram.ext import JobQueue
 from collections import defaultdict
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
@@ -30,7 +31,7 @@ db = client["quiz_bot"]
 users_col = db["users"]
 winners_col = db["daily_winners"]   # NEW: store historical winners
 
-
+NIGERIA_TZ = pytz.timezone("Africa/Lagos")
 # ---------------------------
 # Environment
 # ---------------------------
@@ -150,7 +151,8 @@ ALLOWED_END_HOUR = 21    # 9 PM
 
 
 async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    now = datetime.now()
+    # now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
         await update.message.reply_text(
             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
@@ -166,20 +168,8 @@ async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
     # Clear in-memory active quizzes
     ACTIVE_QUIZZES.clear()
 
-    print("✅ Daily reset completed at", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-
-
-
-# def schedule_daily_reset(job_queue: JobQueue):
-#     now = datetime.now()
-#     next_midnight = datetime.combine(now.date() + timedelta(days=1), datetime.min.time())
-#     delay = (next_midnight - now).total_seconds()
-
-#     job_queue.run_repeating(
-#         reset_daily,
-#         interval=86400,  # every 24 hours
-#         first=delay      # first run at next midnight
-#     )
+    print("✅ Daily reset completed at", datetime.now(NIGERIA_TZ)
+.strftime("%Y-%m-%d %H:%M:%S"))
 
 
 
@@ -187,7 +177,8 @@ def schedule_daily_reset(job_queue: JobQueue):
     """
     Schedule the daily reset job for 6:00 AM instead of midnight.
     """
-    now = datetime.now()
+    # now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
 
     # 6:00 AM of the next reset day
     next_reset_time = datetime.combine(now.date(), datetime.min.time()).replace(hour=6)
@@ -210,104 +201,13 @@ def schedule_daily_reset(job_queue: JobQueue):
 
 # ---------------------------
 # Winner announcement feature (NEW)
-# async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     now = datetime.now()
-#     announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
-
-#     # Determine which day's winner to show
-#     if now.hour < 6:
-#         # Between midnight and 6AM → still show yesterday's winner
-#         today_str = (now - timedelta(days=1)).strftime("%Y-%m-%d")
-#     else:
-#         today_str = now.strftime("%Y-%m-%d")
-
-#     # Before 9:10PM → not announced yet
-#     if now < announce_time and now.hour >= 6:
-#         await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
-#         return
-
-#     # Retrieve winner for today (or yesterday if before 6AM)
-#     winner = winners_col.find_one({"date": today_str})
-
-#     if winner:
-#         msg = (
-#             f"🏆 *Winner for {today_str}* 🏆\n\n"
-#             f"🥇 Username: {winner['username']}\n"
-#             f"🔢 Score: {winner['score']:.1f}\n\n"
-#             f"Announced at: {winner['announced_at']}"
-#         )
-#         await update.message.reply_text(msg, parse_mode="Markdown")
-#     else:
-#         await update.message.reply_text(
-#             "⚠️ Winner for today hasn't been announced yet. Please check back shortly after 9:10 PM."
-#         )
-
-
-# async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
-#     """
-#     Job scheduled to run daily at 21:10.
-#     Picks top scorer, stores in winners_col, announces to ANNOUNCE_CHAT_ID (if set) or DMs the winner.
-#     """
-#     try:
-#         now = datetime.now()  # <-- Add this line
-#         today_str = now.strftime("%Y-%m-%d")
-#         announce_time = now.strftime("%Y-%m-%d %H:%M:%S")
-
-#         # Get top user by score
-#         top_user = users_col.find_one({}, sort=[("score", -1)])
-
-#         if not top_user or top_user.get("score", 0) <= 0:
-#             message = f"🏆 Winner announcement for {today_str}:\nNo winner today (no players or scores)."
-#             if ANNOUNCE_CHAT_ID:
-#                 try:
-#                     await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=message)
-#                 except Exception as e:
-#                     print("Failed to send no-winner announcement:", e)
-#             else:
-#                 print(message)
-#             return
-
-#         # ✅ Build winner record correctly
-#         winner_record = {
-#             "date": today_str,
-#             "username": top_user.get("username", "Anonymous"),
-#             "telegram_id": top_user.get("telegram_id"),
-#             "score": float(top_user.get("score", 0)),
-#             "announced_at": announce_time
-#         }
-
-#         # ✅ Insert winner into MongoDB
-#         winners_col.insert_one(winner_record)
-
-#         # ✅ Prepare and send announcement
-#         announcement = (
-#             f"🏆 *Daily Winner — {today_str}* 🏆\n\n"
-#             f"🥇 Username: {winner_record['username']}\n"
-#             f"🔢 Score: {winner_record['score']:.1f}\n\n"
-#             f"Congratulations! 🎉"
-#         )
-
-#         if ANNOUNCE_CHAT_ID:
-#             try:
-#                 await context.bot.send_message(chat_id=int(ANNOUNCE_CHAT_ID), text=announcement, parse_mode="Markdown")
-#             except Exception as e:
-#                 print("Failed to send to announce chat:", e)
-#                 # Fallback: DM the winner
-#                 await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
-#         else:
-#             await context.bot.send_message(chat_id=winner_record["telegram_id"], text=announcement, parse_mode="Markdown")
-
-#         print(f"✅ Announced and stored winner for {today_str}: {winner_record['username']}")
-
-#     except Exception as ex:
-#         print("Error in announce_winner job:", ex)
-
 
 
 from datetime import datetime
 
 async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
+
     announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
     midnight = now.replace(hour=23, minute=59, second=59, microsecond=0)
 
@@ -364,7 +264,8 @@ async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
     """
     Automatically announce and store the daily winner at 9:10 PM.
     """
-    now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
+
     today_str = now.strftime("%Y-%m-%d")
     month_collection_name = f"daily_winners_{now.strftime('%Y_%m')}"
     winners_col = db[month_collection_name]
@@ -401,7 +302,8 @@ def schedule_winner_announcement(job_queue: JobQueue):
     """
     Schedule the announce_winner job for 21:10 daily.
     """
-    now = datetime.now()
+    # now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
     target_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
     if now >= target_time:
         # schedule for tomorrow
@@ -419,7 +321,8 @@ def schedule_winner_announcement(job_queue: JobQueue):
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # ⏰ Global pre-check: allow only between 8AM - 9PM
-    now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
+
     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
         await update.message.reply_text(
             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
@@ -723,7 +626,8 @@ async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # ⏰ Global pre-check: only active between 8AM - 9PM
-    now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
+
     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
         await update.message.reply_text(
             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
@@ -900,7 +804,8 @@ async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # ⏰ Global pre-check: only active between 8AM - 9PM
-    now = datetime.now()
+    now = datetime.now(NIGERIA_TZ)
+
     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
         await update.message.reply_text(
             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
