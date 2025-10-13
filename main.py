@@ -1493,61 +1493,61 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Finalize Quiz
 # ---------------------------
-# async def finalize_quiz(context, user_id, quiz):
-#     if not quiz or not quiz.get("active", True):
-#         return
-#     quiz["active"] = False
-
-#     final_results = apply_speed_bonus(quiz.get("answers", []))
-
-#     # update DB for every participant found in final_results
-#     for uid, pts in final_results.items():
-#         update_score(uid, pts)
-
-#     user_final_score = final_results.get(user_id, 0)
-
-#     # Cancel any job
-#     safe_remove_job(quiz.get("timeout_job"))
-
-#     # clear stored quiz state
-#     ACTIVE_QUIZZES.pop(user_id, None)
-
-#     try:
-#         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {user_final_score:.1f}")
-#     except Exception:
-#         pass
-
-
 async def finalize_quiz(context, user_id, quiz):
     if not quiz or not quiz.get("active", True):
         return
-
     quiz["active"] = False
 
-    # ✅ Apply speed bonus and calculate total points
     final_results = apply_speed_bonus(quiz.get("answers", []))
-    category = quiz.get("category", "debug")  # fallback to debug if not defined
 
-    # ✅ Update DB for every participant
+    # update DB for every participant found in final_results
     for uid, pts in final_results.items():
-        update_score(uid, pts, category=category, answers=quiz.get("answers", []))
+        update_score(uid, pts)
 
     user_final_score = final_results.get(user_id, 0)
 
-    # ✅ Cancel any running timeout job
+    # Cancel any job
     safe_remove_job(quiz.get("timeout_job"))
 
-    # ✅ Clear stored quiz state
+    # clear stored quiz state
     ACTIVE_QUIZZES.pop(user_id, None)
 
-    # ✅ Notify user
     try:
-        await context.bot.send_message(
-            chat_id=user_id,
-            text=f"✅ Quiz finished!\nCategory: {category}\nYour score: {user_final_score:.1f}"
-        )
+        await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {user_final_score:.1f}")
     except Exception:
         pass
+
+
+# async def finalize_quiz(context, user_id, quiz):
+#     if not quiz or not quiz.get("active", True):
+#         return
+
+#     quiz["active"] = False
+
+#     # ✅ Apply speed bonus and calculate total points
+#     final_results = apply_speed_bonus(quiz.get("answers", []))
+#     category = quiz.get("category", "debug")  # fallback to debug if not defined
+
+#     # ✅ Update DB for every participant
+#     for uid, pts in final_results.items():
+#         update_score(uid, pts, category=category, answers=quiz.get("answers", []))
+
+#     user_final_score = final_results.get(user_id, 0)
+
+#     # ✅ Cancel any running timeout job
+#     safe_remove_job(quiz.get("timeout_job"))
+
+#     # ✅ Clear stored quiz state
+#     ACTIVE_QUIZZES.pop(user_id, None)
+
+#     # ✅ Notify user
+#     try:
+#         await context.bot.send_message(
+#             chat_id=user_id,
+#             text=f"✅ Quiz finished!\nCategory: {category}\nYour score: {user_final_score:.1f}"
+#         )
+#     except Exception:
+#         pass
 
 
 
