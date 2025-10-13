@@ -1,0 +1,4912 @@
+[
+    {
+        "question": "Who is the current President of Nigeria",
+        "options": [
+            "Muhammadu Buhari",
+            "Bola Ahmed Tinubu",
+            "Goodluck Jonathan",
+            "Atiku Abubakar \no"
+        ],
+        "answer": "Bola Ahmed Tinubu"
+    },
+    {
+        "question": "What is the name of Nigeria's current Vice President",
+        "options": [
+            "Yemi Osinbajo",
+            "Kashim Shettima",
+            "Namadi Sambo",
+            "Atiku Abubakar \no"
+        ],
+        "answer": "Kashim Shettima"
+    },
+    {
+        "question": "How many states are in Nigeria",
+        "options": [
+            "30",
+            "32",
+            "36",
+            "40 \no"
+        ],
+        "answer": "36"
+    },
+    {
+        "question": "What is the capital city of Nigeria",
+        "options": [
+            "Lagos",
+            "Abuja",
+            "Kano",
+            "Port Harcourt \no"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "Which political party is currently ruling Nigeria",
+        "options": [
+            "PDP",
+            "APC",
+            "LP",
+            "APGA \no"
+        ],
+        "answer": "APC"
+    },
+    {
+        "question": "When did Nigeria gain independence",
+        "options": [
+            "October 1, 1960",
+            "October 1, 1963",
+            "January 1, 1960",
+            "January 1, 1963 \no"
+        ],
+        "answer": "October 1, 1960"
+    },
+    {
+        "question": "Who is the current Governor of Lagos State",
+        "options": [
+            "Akinwunmi Ambode",
+            "Babajide Sanwo-Olu",
+            "Bola Tinubu",
+            "Fashola \no"
+        ],
+        "answer": "Babajide Sanwo-Olu"
+    },
+    {
+        "question": "What does INEC stand for",
+        "options": [
+            "Independent National Electoral Commission",
+            "International Electoral Commission",
+            "Internal National Electoral Committee",
+            "Independent Nigerian Election Council \no"
+        ],
+        "answer": "Independent National Electoral Commission"
+    },
+    {
+        "question": "When was Nigeria declared a Republic",
+        "options": [
+            "October 1, 1960",
+            "October 1, 1963",
+            "May 29, 1999",
+            "January 1, 1970 \no"
+        ],
+        "answer": "October 1, 1963"
+    },
+    {
+        "question": "What is Nigeria's Democracy Day date",
+        "options": [
+            "May 29",
+            "June 12",
+            "October 1",
+            "January 1 \no"
+        ],
+        "answer": "June 12"
+    },
+    {
+        "question": "What is the currency of Nigeria",
+        "options": [
+            "Naira",
+            "Cedi",
+            "Rand",
+            "Dollar \no"
+        ],
+        "answer": "Naira"
+    },
+    {
+        "question": "What does CBN stand for",
+        "options": [
+            "Central Bank of Nigeria",
+            "Commercial Bank of Nigeria",
+            "Central Banking Network",
+            "Citizens Bank of Nigeria \no"
+        ],
+        "answer": "Central Bank of Nigeria"
+    },
+    {
+        "question": "Which is Nigeria's main export product",
+        "options": [
+            "Cocoa",
+            "Petroleum/Crude Oil",
+            "Palm Oil",
+            "Cotton \n\no"
+        ],
+        "answer": "Petroleum/Crude Oil"
+    },
+    {
+        "question": "What does NNPC stand for",
+        "options": [
+            "Nigerian National Petroleum Corporation",
+            "National Nigerian Petroleum Company",
+            "Nigerian Natural Petroleum Council",
+            "National Nigerian Power Corporation \no"
+        ],
+        "answer": "Nigerian National Petroleum Corporation"
+    },
+    {
+        "question": "Which city is known as Nigeria's commercial capital",
+        "options": [
+            "Abuja",
+            "Lagos",
+            "Kano",
+            "Port Harcourt \no"
+        ],
+        "answer": "Lagos"
+    },
+    {
+        "question": "Which river is the longest in Nigeria",
+        "options": [
+            "River Benue",
+            "River Niger",
+            "River Kaduna",
+            "River Ogun \no"
+        ],
+        "answer": "River Niger"
+    },
+    {
+        "question": "How many local government areas are in Nigeria",
+        "options": [
+            "700",
+            "744",
+            "774",
+            "800 \no"
+        ],
+        "answer": "774"
+    },
+    {
+        "question": "Which is the most populous city in Nigeria",
+        "options": [
+            "Abuja",
+            "Kano",
+            "Lagos",
+            "Ibadan \no"
+        ],
+        "answer": "Lagos"
+    },
+    {
+        "question": "Which state is known as the \"Centre of Excellence\"",
+        "options": [
+            "Rivers State",
+            "Lagos State",
+            "Kano State",
+            "Oyo State \no"
+        ],
+        "answer": "Lagos State"
+    },
+    {
+        "question": "Which state is called the \"Treasure Base of the Nation\"",
+        "options": [
+            "Delta State",
+            "Kano State",
+            "Rivers State",
+            "Bayelsa State \no"
+        ],
+        "answer": "Rivers State"
+    },
+    {
+        "question": "What is the highest mountain in Nigeria",
+        "options": [
+            "Chappal Waddi",
+            "Mount Cameroon",
+            "Obudu Plateau",
+            "Aso Rock \no"
+        ],
+        "answer": "Chappal Waddi"
+    },
+    {
+        "question": "Which ocean borders Nigeria",
+        "options": [
+            "Indian Ocean",
+            "Pacific Ocean",
+            "Atlantic Ocean",
+            "Arctic Ocean \no"
+        ],
+        "answer": "Atlantic Ocean"
+    },
+    {
+        "question": "How many geopolitical zones does Nigeria have",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "7 \no"
+        ],
+        "answer": "6"
+    },
+    {
+        "question": "Which state is known as \"The Gateway State\"",
+        "options": [
+            "Ogun State",
+            "Lagos State",
+            "Osun State",
+            "Ondo State \no"
+        ],
+        "answer": "Ogun State"
+    },
+    {
+        "question": "What is the largest state in Nigeria by land area",
+        "options": [
+            "Kano State",
+            "Niger State",
+            "Borno State",
+            "Taraba State \no"
+        ],
+        "answer": "Niger State"
+    },
+    {
+        "question": "What are the official colors of Nigeria's flag",
+        "options": [
+            "Red and White",
+            "Green and White",
+            "Green and Yellow",
+            "Blue and White \no"
+        ],
+        "answer": "Green and White"
+    },
+    {
+        "question": "What is Nigeria's national language",
+        "options": [
+            "Yoruba",
+            "Igbo",
+            "Hausa",
+            "English \no"
+        ],
+        "answer": "English \no"
+    },
+    {
+        "question": "How many major ethnic groups does Nigeria have",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5 \no"
+        ],
+        "answer": "3"
+    },
+    {
+        "question": "Which Nigerian won the Nobel Prize for Literature",
+        "options": [
+            "Chinua Achebe",
+            "Wole Soyinka",
+            "Ben Okri",
+            "Chimamanda Adichie \no"
+        ],
+        "answer": "Wole Soyinka"
+    },
+    {
+        "question": "What is Nigeria's national anthem called",
+        "options": [
+            "God Bless Nigeria",
+            "Arise, O Compatriots",
+            "Nigeria We Hail Thee",
+            "One Nation, One Destiny \n\no"
+        ],
+        "answer": "Arise, O Compatriots"
+    },
+    {
+        "question": "What is the name of Nigeria's music genre that gained global recognition",
+        "options": [
+            "Highlife",
+            "Afrobeats",
+            "Juju",
+            "Fuji \no"
+        ],
+        "answer": "Afrobeats"
+    },
+    {
+        "question": "Who wrote the book \"Things Fall Apart\"",
+        "options": [
+            "Wole Soyinka",
+            "Chinua Achebe",
+            "Cyprian Ekwensi",
+            "Amos Tutuola \no"
+        ],
+        "answer": "Chinua Achebe"
+    },
+    {
+        "question": "Which Nigerian actress is known as \"Omotola Jalade\"",
+        "options": [
+            "Genevieve Nnaji",
+            "Funke Akindele",
+            "Omotola Jalade-Ekeinde",
+            "Rita Dominic \no"
+        ],
+        "answer": "Omotola Jalade-Ekeinde"
+    },
+    {
+        "question": "What is the name of Nigeria's film industry",
+        "options": [
+            "Bollywood",
+            "Hollywood",
+            "Nollywood",
+            "Ghollywood \no"
+        ],
+        "answer": "Nollywood"
+    },
+    {
+        "question": "Which festival is celebrated by the Yoruba people to honor their ancestors",
+        "options": [
+            "New Yam Festival",
+            "Eyo Festival",
+            "Durbar Festival",
+            "Calabar Carnival \no"
+        ],
+        "answer": "Eyo Festival"
+    },
+    {
+        "question": "Which sport is most popular in Nigeria",
+        "options": [
+            "Basketball",
+            "Cricket",
+            "Football",
+            "Athletics \no"
+        ],
+        "answer": "Football"
+    },
+    {
+        "question": "What is the nickname of Nigeria's national football team",
+        "options": [
+            "The Eagles",
+            "Super Eagles",
+            "Green Eagles",
+            "Flying Eagles \no"
+        ],
+        "answer": "Super Eagles"
+    },
+    {
+        "question": "In which year did Nigeria win the Olympic gold medal in football",
+        "options": [
+            "1992",
+            "1996",
+            "2000",
+            "2008 \no"
+        ],
+        "answer": "1996"
+    },
+    {
+        "question": "Who is Nigeria's most successful track and field athlete",
+        "options": [
+            "Falilat Ogunkoya",
+            "Mary Onyali",
+            "Blessing Okagbare",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "How many times has Nigeria won the African Cup of Nations (AFCON)",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5 \no"
+        ],
+        "answer": "3"
+    },
+    {
+        "question": "What is the oldest university in Nigeria",
+        "options": [
+            "University of Lagos",
+            "University of Ibadan",
+            "Ahmadu Bello University",
+            "University of Nigeria, Nsukka \no"
+        ],
+        "answer": "University of Ibadan"
+    },
+    {
+        "question": "What does JAMB stand for",
+        "options": [
+            "Joint Admissions and Matriculation Board",
+            "Joint Administration and Management Board",
+            "Junior Admission and Matriculation Board",
+            "Joint Academic Merit Board \no"
+        ],
+        "answer": "Joint Admissions and Matriculation Board"
+    },
+    {
+        "question": "What does NYSC stand for",
+        "options": [
+            "National Youth Service Corps",
+            "Nigerian Youth Service Committee",
+            "National Young Service Corps",
+            "Nigerian Youth Support Council \no"
+        ],
+        "answer": "National Youth Service Corps"
+    },
+    {
+        "question": "What is the minimum age for primary school enrollment in Nigeria",
+        "options": [
+            "4 years",
+            "5 years",
+            "6 years",
+            "7 years \no"
+        ],
+        "answer": "6 years"
+    },
+    {
+        "question": "What does WAEC stand for",
+        "options": [
+            "West African Examination Council",
+            "Western African Education Council",
+            "West African Education Committee",
+            "World African Examination Council \no"
+        ],
+        "answer": "West African Examination Council"
+    },
+    {
+        "question": "What is the name of Nigeria's military",
+        "options": [
+            "Nigerian Armed Forces",
+            "Nigerian Defense Force",
+            "Nigerian Military Command",
+            "Nigerian Army \no"
+        ],
+        "answer": "Nigerian Armed Forces"
+    },
+    {
+        "question": "What does EFCC stand for",
+        "options": [
+            "Economic and Financial Crimes Commission",
+            "Economic and Fraud Control Commission",
+            "Economic Finance and Crime Committee",
+            "Enforcement of Financial Crimes Commission \no"
+        ],
+        "answer": "Economic and Financial Crimes Commission"
+    },
+    {
+        "question": "What does ICPC stand for",
+        "options": [
+            "Independent Corrupt Practices Commission",
+            "International Crime Prevention Council",
+            "Internal Corruption Prevention Committee",
+            "Independent Crime Prevention Council \no"
+        ],
+        "answer": "Independent Corrupt Practices Commission"
+    },
+    {
+        "question": "What does NPF stand for",
+        "options": [
+            "Nigerian Police Force",
+            "National Protection Force",
+            "Nigerian Protection Force",
+            "National Police Federation \no"
+        ],
+        "answer": "Nigerian Police Force"
+    },
+    {
+        "question": "What does NDLEA stand for",
+        "options": [
+            "National Drug Law Enforcement Agency",
+            "Nigerian Drug and Law Enforcement Agency",
+            "National Defense and Law Enforcement Agency",
+            "Nigerian Drug Law and Enforcement Association \no"
+        ],
+        "answer": "National Drug Law Enforcement Agency"
+    },
+    {
+        "question": "What is the name of Nigeria's major international airport in Lagos",
+        "options": [
+            "Lagos International Airport",
+            "Murtala Muhammed International Airport",
+            "Nnamdi Azikiwe International Airport",
+            "Port Harcourt International Airport \n\no"
+        ],
+        "answer": "Murtala Muhammed International Airport"
+    },
+    {
+        "question": "What does NEPA stand for (former name)",
+        "options": [
+            "National Electric Power Authority",
+            "Nigerian Electricity Power Association",
+            "National Energy and Power Authority",
+            "Nigerian Electric Power Agency \no"
+        ],
+        "answer": "National Electric Power Authority"
+    },
+    {
+        "question": "What is NEPA now called",
+        "options": [
+            "PHCN (Power Holding Company of Nigeria)",
+            "Nigerian Power Company",
+            "National Grid",
+            "Power Nigeria \no"
+        ],
+        "answer": "PHCN (Power Holding Company of Nigeria)"
+    },
+    {
+        "question": "Which seaport is the largest in Nigeria",
+        "options": [
+            "Calabar Port",
+            "Port Harcourt Port",
+            "Tin Can Island Port",
+            "Apapa Port \no"
+        ],
+        "answer": "Apapa Port \no"
+    },
+    {
+        "question": "What does FRSC stand for",
+        "options": [
+            "Federal Road Safety Corps",
+            "Federal Road Safety Commission",
+            "Federal Republic Safety Corps",
+            "Federal Road Security Commission \no"
+        ],
+        "answer": "Federal Road Safety Corps"
+    },
+    {
+        "question": "What is the name of Nigeria's national television station",
+        "options": [
+            "Channels TV",
+            "NTA (Nigerian Television Authority)",
+            "AIT",
+            "Silverbird TV \no"
+        ],
+        "answer": "NTA (Nigerian Television Authority)"
+    },
+    {
+        "question": "Which newspaper is one of the oldest in Nigeria",
+        "options": [
+            "The Guardian",
+            "The Punch",
+            "Daily Times",
+            "Vanguard \no"
+        ],
+        "answer": "Daily Times"
+    },
+    {
+        "question": "What does NCC stand for in Nigeria",
+        "options": [
+            "Nigerian Communications Commission",
+            "National Communication Council",
+            "Nigerian Copyright Commission",
+            "National Copyright Council \no"
+        ],
+        "answer": "Nigerian Communications Commission"
+    },
+    {
+        "question": "Which of these is a major telecommunications company in Nigeria",
+        "options": [
+            "MTN",
+            "Airtel",
+            "Glo",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the name of Nigeria's premier news agency",
+        "options": [
+            "NAN (News Agency of Nigeria)",
+            "Nigerian Press Agency",
+            "National News Service",
+            "Federal News Agency \no"
+        ],
+        "answer": "NAN (News Agency of Nigeria)"
+    },
+    {
+        "question": "What does NAFDAC stand for",
+        "options": [
+            "National Agency for Food and Drug Administration and Control",
+            "Nigerian Agency for Food and Drug Assessment",
+            "National Association for Food and Drug Control",
+            "Nigerian Authority for Food and Drug Administration \no"
+        ],
+        "answer": "National Agency for Food and Drug Administration and Control"
+    },
+    {
+        "question": "What does NCDC stand for",
+        "options": [
+            "Nigerian Centre for Disease Control",
+            "National Centre for Disease Control",
+            "Nigerian Council for Disease Control",
+            "National Council for Disease Control \no"
+        ],
+        "answer": "National Centre for Disease Control"
+    },
+    {
+        "question": "What is Nigeria's main health insurance scheme called",
+        "options": [
+            "NHIS (National Health Insurance Scheme)",
+            "Nigerian Health Insurance",
+            "Federal Health Insurance",
+            "Universal Health Insurance \no"
+        ],
+        "answer": "NHIS (National Health Insurance Scheme)"
+    },
+    {
+        "question": "What does FMC stand for in healthcare",
+        "options": [
+            "Federal Medical Centre",
+            "Federal Medical Council",
+            "Federal Medicine Centre",
+            "Federal Medical Committee \no"
+        ],
+        "answer": "Federal Medical Centre"
+    },
+    {
+        "question": "What does LUTH stand for",
+        "options": [
+            "Lagos University Teaching Hospital",
+            "Lagos United Teaching Hospital",
+            "Lagos University Therapy Hospital",
+            "Lagos Universal Teaching Hospital \no"
+        ],
+        "answer": "Lagos University Teaching Hospital"
+    },
+    {
+        "question": "What does BRT stand for in Lagos",
+        "options": [
+            "Bus Rapid Transit",
+            "Bus Route Transport",
+            "Bus Regulation Transit",
+            "Bus Railway Transport \no"
+        ],
+        "answer": "Bus Rapid Transit"
+    },
+    {
+        "question": "What is the name of Nigeria's national carrier airline",
+        "options": [
+            "Air Nigeria",
+            "Nigeria Airways",
+            "Air Peace",
+            "Dana Air \no"
+        ],
+        "answer": "Nigeria Airways"
+    },
+    {
+        "question": "What does LASTMA stand for",
+        "options": [
+            "Lagos State Traffic Management Authority",
+            "Lagos Street Traffic Management Agency",
+            "Lagos State Transport Management Authority",
+            "Lagos State Traffic and Motor Authority \no"
+        ],
+        "answer": "Lagos State Traffic Management Authority"
+    },
+    {
+        "question": "Which city in Nigeria has the most extensive road network",
+        "options": [
+            "Abuja",
+            "Lagos",
+            "Kano",
+            "Port Harcourt \no"
+        ],
+        "answer": "Lagos"
+    },
+    {
+        "question": "What is the Third Mainland Bridge",
+        "options": [
+            "A bridge connecting Lagos Island to the Mainland",
+            "The longest bridge in Nigeria",
+            "A bridge in Abuja",
+            "Both A and B \no"
+        ],
+        "answer": "Both A and B \no"
+    },
+    {
+        "question": "Who was Nigeria's first Prime Minister",
+        "options": [
+            "Nnamdi Azikiwe",
+            "Obafemi Awolowo",
+            "Tafawa Balewa",
+            "Ahmadu Bello \no"
+        ],
+        "answer": "Tafawa Balewa"
+    },
+    {
+        "question": "Who was Nigeria's first President",
+        "options": [
+            "Tafawa Balewa",
+            "Nnamdi Azikiwe",
+            "Aguiyi-Ironsi",
+            "Yakubu Gowon \n\no"
+        ],
+        "answer": "Nnamdi Azikiwe"
+    },
+    {
+        "question": "When did the Nigerian Civil War (Biafran War) start",
+        "options": [
+            "1965",
+            "1967",
+            "1969",
+            "1970 \no"
+        ],
+        "answer": "1967"
+    },
+    {
+        "question": "Who was Nigeria's first military Head of State",
+        "options": [
+            "Yakubu Gowon",
+            "Aguiyi-Ironsi",
+            "Murtala Mohammed",
+            "Olusegun Obasanjo \no"
+        ],
+        "answer": "Aguiyi-Ironsi"
+    },
+    {
+        "question": "When did military rule end in Nigeria (most recently)",
+        "options": [
+            "1996",
+            "1998",
+            "1999",
+            "2000 \no"
+        ],
+        "answer": "1999"
+    },
+    {
+        "question": "Who is known as the \"Father of Nigerian Nationalism\"",
+        "options": [
+            "Obafemi Awolowo",
+            "Herbert Macaulay",
+            "Nnamdi Azikiwe",
+            "Ahmadu Bello \no"
+        ],
+        "answer": "Herbert Macaulay"
+    },
+    {
+        "question": "Which Nigerian musician won a Grammy Award",
+        "options": [
+            "Wizkid",
+            "Burna Boy",
+            "Davido",
+            "Both A and B \no"
+        ],
+        "answer": "Both A and B \no"
+    },
+    {
+        "question": "Who is the richest person in Nigeria",
+        "options": [
+            "Tony Elumelu",
+            "Aliko Dangote",
+            "Mike Adenuga",
+            "Femi Otedola \no"
+        ],
+        "answer": "Aliko Dangote"
+    },
+    {
+        "question": "Which Nigerian won the Big Brother Africa show",
+        "options": [
+            "Uti Nwachukwu",
+            "Efe Ejeba",
+            "Mercy Eke",
+            "Laycon \no"
+        ],
+        "answer": "Uti Nwachukwu"
+    },
+    {
+        "question": "Who designed Nigeria's national flag",
+        "options": [
+            "Taiwo Akinkunmi",
+            "Obafemi Awolowo",
+            "Ben Enwonwu",
+            "Hakeem Olajuwon \no"
+        ],
+        "answer": "Taiwo Akinkunmi"
+    },
+    {
+        "question": "Which African country hosted the 2010 FIFA World Cup",
+        "options": [
+            "Nigeria",
+            "Egypt",
+            "South Africa",
+            "Morocco \no"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "What is the headquarters of the African Union",
+        "options": [
+            "Cairo, Egypt",
+            "Nairobi, Kenya",
+            "Addis Ababa, Ethiopia",
+            "Johannesburg, South Africa \no"
+        ],
+        "answer": "Addis Ababa, Ethiopia"
+    },
+    {
+        "question": "Which is the largest country in Africa by land area",
+        "options": [
+            "Sudan",
+            "Algeria",
+            "Democratic Republic of Congo",
+            "Libya \no"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "What is the currency of South Africa",
+        "options": [
+            "Dollar",
+            "Rand",
+            "Shilling",
+            "Pound \no"
+        ],
+        "answer": "Rand"
+    },
+    {
+        "question": "Which African country was never colonized",
+        "options": [
+            "Nigeria",
+            "Ethiopia",
+            "Ghana",
+            "Kenya \no"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "What is the most populous country in Africa",
+        "options": [
+            "Ethiopia",
+            "Egypt",
+            "Nigeria",
+            "South Africa \no"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which river is the longest in Africa",
+        "options": [
+            "River Congo",
+            "River Zambezi",
+            "River Nile",
+            "River Niger \no"
+        ],
+        "answer": "River Nile"
+    },
+    {
+        "question": "What is the capital of Kenya",
+        "options": [
+            "Kampala",
+            "Nairobi",
+            "Dar es Salaam",
+            "Addis Ababa \no"
+        ],
+        "answer": "Nairobi"
+    },
+    {
+        "question": "Which African country is known as the \"Rainbow Nation\"",
+        "options": [
+            "Nigeria",
+            "Kenya",
+            "South Africa",
+            "Ghana \n\no"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "What does ECOWAS stand for",
+        "options": [
+            "Economic Community of West African States",
+            "Economic Council of West African States",
+            "Economic Community of World African States",
+            "Eastern Community of West African States \no"
+        ],
+        "answer": "Economic Community of West African States"
+    },
+    {
+        "question": "Who is the current Secretary-General of the United Nations",
+        "options": [
+            "Ban Ki-moon",
+            "Kofi Annan",
+            "António Guterres",
+            "Boutros Boutros-Ghali \no"
+        ],
+        "answer": "António Guterres"
+    },
+    {
+        "question": "Which country hosted the 2024 Olympic Games",
+        "options": [
+            "Japan",
+            "France",
+            "USA",
+            "Brazil \no"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "What is the largest country in the world by land area",
+        "options": [
+            "Canada",
+            "China",
+            "USA",
+            "Russia \no"
+        ],
+        "answer": "Russia \no"
+    },
+    {
+        "question": "Which organization has the acronym WHO",
+        "options": [
+            "World Health Organization",
+            "World Health Office",
+            "World Hospital Organization",
+            "World Humanitarian Organization \no"
+        ],
+        "answer": "World Health Organization"
+    },
+    {
+        "question": "What is the capital of the United States",
+        "options": [
+            "New York",
+            "Washington D.C.",
+            "Los Angeles",
+            "Chicago \no"
+        ],
+        "answer": "Washington D.C."
+    },
+    {
+        "question": "Which country is known as the \"Land of the Rising Sun\"",
+        "options": [
+            "China",
+            "South Korea",
+            "Japan",
+            "Thailand \no"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "What does FIFA stand for",
+        "options": [
+            "Federation of International Football Association",
+            "Fédération Internationale de Football Association",
+            "Federal International Football Association",
+            "Foreign International Football Association \no"
+        ],
+        "answer": "Fédération Internationale de Football Association"
+    },
+    {
+        "question": "Which is the smallest country in the world",
+        "options": [
+            "Monaco",
+            "Vatican City",
+            "San Marino",
+            "Liechtenstein \no"
+        ],
+        "answer": "Vatican City"
+    },
+    {
+        "question": "What is the currency of the United Kingdom",
+        "options": [
+            "Euro",
+            "Dollar",
+            "Pound Sterling",
+            "Franc \no"
+        ],
+        "answer": "Pound Sterling"
+    },
+    {
+        "question": "Which international organization promotes world peace and security",
+        "options": [
+            "NATO",
+            "United Nations",
+            "World Bank",
+            "International Monetary Fund \no"
+        ],
+        "answer": "United Nations"
+    },
+    {
+        "question": "What does the Senate President do in Nigeria",
+        "options": [
+            "Head of the Judiciary",
+            "Head of the National Assembly",
+            "Head of State",
+            "Head of Government \no"
+        ],
+        "answer": "Head of the National Assembly"
+    },
+    {
+        "question": "How many senators are in the Nigerian Senate",
+        "options": [
+            "100",
+            "109",
+            "120",
+            "150 \no"
+        ],
+        "answer": "109"
+    },
+    {
+        "question": "What is the official residence of the Nigerian President called",
+        "options": [
+            "Presidential Villa/Aso Rock",
+            "State House",
+            "Government House",
+            "Presidential Palace \no"
+        ],
+        "answer": "Presidential Villa/Aso Rock"
+    },
+    {
+        "question": "How long is a presidential term in Nigeria",
+        "options": [
+            "3 years",
+            "4 years",
+            "5 years",
+            "6 years \no"
+        ],
+        "answer": "4 years"
+    },
+    {
+        "question": "What is the maximum number of terms a president can serve",
+        "options": [
+            "1 term",
+            "2 terms",
+            "3 terms",
+            "Unlimited \no"
+        ],
+        "answer": "2 terms"
+    },
+    {
+        "question": "Which body conducts elections in Nigeria",
+        "options": [
+            "Electoral Commission",
+            "INEC",
+            "National Assembly",
+            "Federal Government \n\no"
+        ],
+        "answer": "INEC"
+    },
+    {
+        "question": "What does LGA stand for in Nigerian governance",
+        "options": [
+            "Local Government Area",
+            "Local Government Association",
+            "Legal Government Area",
+            "Land Government Authority \no"
+        ],
+        "answer": "Local Government Area"
+    },
+    {
+        "question": "Who heads the Nigerian judiciary",
+        "options": [
+            "Chief Judge",
+            "Chief Justice of Nigeria",
+            "Supreme Court Judge",
+            "Attorney General \no"
+        ],
+        "answer": "Chief Justice of Nigeria"
+    },
+    {
+        "question": "What is the lower house of the National Assembly called",
+        "options": [
+            "House of Commons",
+            "House of Representatives",
+            "House of Assembly",
+            "Legislative House \no"
+        ],
+        "answer": "House of Representatives"
+    },
+    {
+        "question": "How many members are in the House of Representatives",
+        "options": [
+            "300",
+            "350",
+            "360",
+            "400 \no"
+        ],
+        "answer": "360"
+    },
+    {
+        "question": "What does GDP stand for",
+        "options": [
+            "Gross Domestic Product",
+            "General Domestic Product",
+            "Global Domestic Product",
+            "Government Domestic Product \no"
+        ],
+        "answer": "Gross Domestic Product"
+    },
+    {
+        "question": "Which is Nigeria's stock exchange",
+        "options": [
+            "Nigerian Stock Market",
+            "Nigerian Stock Exchange (NSE)",
+            "Lagos Stock Exchange",
+            "Abuja Stock Market \no"
+        ],
+        "answer": "Nigerian Stock Exchange (NSE)"
+    },
+    {
+        "question": "What is the symbol for Nigerian Naira",
+        "options": [
+            "N",
+            "₦",
+            "NGN",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian bank is known as \"First Bank\"",
+        "options": [
+            "United Bank for Africa",
+            "First Bank of Nigeria",
+            "Access Bank",
+            "GTBank \no"
+        ],
+        "answer": "First Bank of Nigeria"
+    },
+    {
+        "question": "What does VAT stand for",
+        "options": [
+            "Value Added Tax",
+            "Variable Addition Tax",
+            "Value Assessment Tax",
+            "Vendor Added Tax \no"
+        ],
+        "answer": "Value Added Tax"
+    },
+    {
+        "question": "Which sector is Nigeria's economy heavily dependent on",
+        "options": [
+            "Agriculture",
+            "Oil and Gas",
+            "Manufacturing",
+            "Tourism \no"
+        ],
+        "answer": "Oil and Gas"
+    },
+    {
+        "question": "What is Nigeria's minimum wage (as of recent times)",
+        "options": [
+            "₦18,000",
+            "₦30,000",
+            "₦70,000",
+            "₦50,000 \no"
+        ],
+        "answer": "₦30,000"
+    },
+    {
+        "question": "Which Nigerian owns Dangote Group",
+        "options": [
+            "Tony Elumelu",
+            "Mike Adenuga",
+            "Aliko Dangote",
+            "Jim Ovia \no"
+        ],
+        "answer": "Aliko Dangote"
+    },
+    {
+        "question": "What does BVN stand for in banking",
+        "options": [
+            "Bank Verification Number",
+            "Banking Verification Network",
+            "Bank Value Number",
+            "Banking Validation Number \no"
+        ],
+        "answer": "Bank Verification Number"
+    },
+    {
+        "question": "Which international organization provides financial assistance to Nigeria",
+        "options": [
+            "World Bank",
+            "IMF",
+            "African Development Bank",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the capital of Kano State",
+        "options": [
+            "Kaduna",
+            "Kano",
+            "Sokoto",
+            "Zaria \no"
+        ],
+        "answer": "Kano"
+    },
+    {
+        "question": "Which state is known as \"God's Own State\"",
+        "options": [
+            "Anambra State",
+            "Enugu State",
+            "Abia State",
+            "Imo State \no"
+        ],
+        "answer": "Anambra State"
+    },
+    {
+        "question": "What is the capital of Rivers State",
+        "options": [
+            "Calabar",
+            "Warri",
+            "Port Harcourt",
+            "Yenagoa \n\no"
+        ],
+        "answer": "Port Harcourt"
+    },
+    {
+        "question": "Which state is known as the \"Food Basket of the Nation\"",
+        "options": [
+            "Plateau State",
+            "Benue State",
+            "Niger State",
+            "Kogi State \no"
+        ],
+        "answer": "Benue State"
+    },
+    {
+        "question": "What is the capital of Plateau State",
+        "options": [
+            "Makurdi",
+            "Lafia",
+            "Jos",
+            "Minna \no"
+        ],
+        "answer": "Jos"
+    },
+    {
+        "question": "Which state was created most recently in Nigeria",
+        "options": [
+            "Ebonyi State",
+            "Ekiti State",
+            "Bayelsa State",
+            "All created in 1996 \no"
+        ],
+        "answer": "All created in 1996 \no"
+    },
+    {
+        "question": "What is the capital of Oyo State",
+        "options": [
+            "Ife",
+            "Ibadan",
+            "Osogbo",
+            "Ilorin \no"
+        ],
+        "answer": "Ibadan"
+    },
+    {
+        "question": "Which state is the smallest in Nigeria by land area",
+        "options": [
+            "Anambra State",
+            "Abia State",
+            "Lagos State",
+            "Imo State \no"
+        ],
+        "answer": "Lagos State"
+    },
+    {
+        "question": "What is the slogan of Edo State",
+        "options": [
+            "The Sunshine State",
+            "The Heartbeat of the Nation",
+            "Centre of Excellence",
+            "Home of Hospitality \no"
+        ],
+        "answer": "The Heartbeat of the Nation"
+    },
+    {
+        "question": "Which city is known as the \"Ancient City\"",
+        "options": [
+            "Kano",
+            "Ibadan",
+            "Benin City",
+            "Ife \no"
+        ],
+        "answer": "Ibadan"
+    },
+    {
+        "question": "What is the traditional attire for Yoruba men called",
+        "options": [
+            "Kaftan",
+            "Agbada",
+            "Wrapper",
+            "Dashiki \no"
+        ],
+        "answer": "Agbada"
+    },
+    {
+        "question": "Which Nigerian ethnic group celebrates the New Yam Festival",
+        "options": [
+            "Yoruba",
+            "Hausa",
+            "Igbo",
+            "Fulani \no"
+        ],
+        "answer": "Igbo"
+    },
+    {
+        "question": "What is the Yoruba greeting for \"Good morning\"",
+        "options": [
+            "E kaaro",
+            "E kaabo",
+            "E ku ise",
+            "Bawo ni \no"
+        ],
+        "answer": "E kaaro"
+    },
+    {
+        "question": "Which masquerade is famous in Yoruba culture",
+        "options": [
+            "Ekpe",
+            "Egungun",
+            "Ekpo",
+            "Mmanwu \no"
+        ],
+        "answer": "Egungun"
+    },
+    {
+        "question": "What is the Igbo word for \"Welcome\"",
+        "options": [
+            "Sannu",
+            "Kaabo",
+            "Nnọọ",
+            "Habari \no"
+        ],
+        "answer": "Nnọọ"
+    },
+    {
+        "question": "Which festival is celebrated annually in Calabar",
+        "options": [
+            "Ojude Oba",
+            "Osun-Osogbo Festival",
+            "Calabar Carnival",
+            "Argungu Fishing Festival \no"
+        ],
+        "answer": "Calabar Carnival"
+    },
+    {
+        "question": "What is the traditional Igbo hat called",
+        "options": [
+            "Fila",
+            "Cap",
+            "Okpu",
+            "Kufi \no"
+        ],
+        "answer": "Okpu"
+    },
+    {
+        "question": "Which Nigerian king is called the Ooni",
+        "options": [
+            "Ooni of Ife",
+            "Oba of Benin",
+            "Oba of Lagos",
+            "Sultan of Sokoto \no"
+        ],
+        "answer": "Ooni of Ife"
+    },
+    {
+        "question": "What does \"Omo Naija\" mean",
+        "options": [
+            "Nigerian child/person",
+            "Welcome to Nigeria",
+            "Nigerian pride",
+            "Nigeria forever \no"
+        ],
+        "answer": "Nigerian child/person"
+    },
+    {
+        "question": "Which language is widely spoken in Northern Nigeria",
+        "options": [
+            "Yoruba",
+            "Igbo",
+            "Hausa",
+            "Fulfulde \no"
+        ],
+        "answer": "Hausa"
+    },
+    {
+        "question": "Who is known as the \"African Giant\" in Nigerian music",
+        "options": [
+            "Wizkid",
+            "Burna Boy",
+            "Davido",
+            "2Baba \no"
+        ],
+        "answer": "Burna Boy"
+    },
+    {
+        "question": "Which Nigerian artist is known for the song \"Ojuelegba\"",
+        "options": [
+            "Davido",
+            "Wizkid",
+            "Olamide",
+            "Tekno \no"
+        ],
+        "answer": "Wizkid"
+    },
+    {
+        "question": "Who is the founder of Mavin Records",
+        "options": [
+            "Don Jazzy",
+            "Olamide",
+            "D'banj",
+            "Phyno \no"
+        ],
+        "answer": "Don Jazzy"
+    },
+    {
+        "question": "Which Nigerian comedian is known as \"Mr. Ibu\"",
+        "options": [
+            "Charles Inojie",
+            "John Okafor",
+            "Osita Iheme",
+            "Chinedu Ikedieze \no"
+        ],
+        "answer": "John Okafor"
+    },
+    {
+        "question": "What is the stage name of Nigerian singer Ayodeji Balogun",
+        "options": [
+            "Davido",
+            "Wizkid",
+            "Tekno",
+            "Kizz Daniel \no"
+        ],
+        "answer": "Wizkid"
+    },
+    {
+        "question": "Who directed the movie \"King of Boys\"",
+        "options": [
+            "Kunle Afolayan",
+            "Kemi Adetiba",
+            "Genevieve Nnaji",
+            "Mo Abudu \no"
+        ],
+        "answer": "Kemi Adetiba"
+    },
+    {
+        "question": "Which Nigerian actress produced \"Lionheart\"",
+        "options": [
+            "Funke Akindele",
+            "Genevieve Nnaji",
+            "Omotola Jalade",
+            "Rita Dominic \no"
+        ],
+        "answer": "Genevieve Nnaji"
+    },
+    {
+        "question": "What does Afrobeats combine",
+        "options": [
+            "African and Western music",
+            "Highlife, Jazz, and Funk",
+            "Traditional and contemporary sounds",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Who is known as \"Baba Fela\"",
+        "options": [
+            "King Sunny Ade",
+            "Fela Anikulapo-Kuti",
+            "Ebenezer Obey",
+            "Orlando Owoh \no"
+        ],
+        "answer": "Fela Anikulapo-Kuti"
+    },
+    {
+        "question": "Which TV show featured \"Papa Ajasco\"",
+        "options": [
+            "New Masquerade",
+            "Papa Ajasco and Company",
+            "The Johnsons",
+            "Fuji House of Commotion \no"
+        ],
+        "answer": "Papa Ajasco and Company"
+    },
+    {
+        "question": "Who is Nigeria's most famous boxer",
+        "options": [
+            "Samuel Peter",
+            "Bash Ali",
+            "Dick Tiger",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian footballer played for Chelsea FC",
+        "options": [
+            "Jay-Jay Okocha",
+            "Kanu Nwankwo",
+            "John Obi Mikel",
+            "Victor Moses \no"
+        ],
+        "answer": "John Obi Mikel"
+    },
+    {
+        "question": "What is the nickname of Nigeria's women's football team",
+        "options": [
+            "Super Falcons",
+            "Green Eagles",
+            "Flying Eagles",
+            "Golden Eaglets \no"
+        ],
+        "answer": "Super Falcons"
+    },
+    {
+        "question": "Which Nigerian won Olympic gold in long jump",
+        "options": [
+            "Mary Onyali",
+            "Blessing Okagbare",
+            "Chioma Ajunwa",
+            "Gloria Alozie \no"
+        ],
+        "answer": "Chioma Ajunwa"
+    },
+    {
+        "question": "Who captained Nigeria to Olympic gold in 1996",
+        "options": [
+            "Daniel Amokachi",
+            "Jay-Jay Okocha",
+            "Nwankwo Kanu",
+            "Sunday Oliseh \no"
+        ],
+        "answer": "Nwankwo Kanu"
+    },
+    {
+        "question": "Which stadium is Nigeria's largest",
+        "options": [
+            "Teslim Balogun Stadium",
+            "National Stadium Lagos",
+            "Moshood Abiola Stadium",
+            "All of similar capacity \no"
+        ],
+        "answer": "Moshood Abiola Stadium"
+    },
+    {
+        "question": "What is Nigeria's under-17 football team called",
+        "options": [
+            "Flying Eagles",
+            "Golden Eaglets",
+            "Super Eagles",
+            "Dream Team \no"
+        ],
+        "answer": "Golden Eaglets"
+    },
+    {
+        "question": "Which Nigerian played for Barcelona FC",
+        "options": [
+            "Obafemi Martins",
+            "Victor Osimhen",
+            "Samuel Chukwueze",
+            "None of the above (but notable players went to other top clubs) \no"
+        ],
+        "answer": "None of the above (but notable players went to other top clubs) \no"
+    },
+    {
+        "question": "Who is Nigeria's record goal scorer",
+        "options": [
+            "Rashidi Yekini",
+            "Daniel Amokachi",
+            "Jay-Jay Okocha",
+            "Yakubu Aiyegbeni \no"
+        ],
+        "answer": "Rashidi Yekini"
+    },
+    {
+        "question": "Which sport is traditionally popular in the North",
+        "options": [
+            "Wrestling",
+            "Boxing",
+            "Polo",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What does UNN stand for",
+        "options": [
+            "University of Northern Nigeria",
+            "University of Nigeria, Nsukka",
+            "University of Nigerian Nations",
+            "Unity National Network \no"
+        ],
+        "answer": "University of Nigeria, Nsukka"
+    },
+    {
+        "question": "Which university is located in Ile-Ife",
+        "options": [
+            "University of Lagos",
+            "Obafemi Awolowo University",
+            "University of Ibadan",
+            "Lagos State University \no"
+        ],
+        "answer": "Obafemi Awolowo University"
+    },
+    {
+        "question": "What is the first private university in Nigeria",
+        "options": [
+            "Covenant University",
+            "Babcock University",
+            "Igbinedion University",
+            "Bowen University \no"
+        ],
+        "answer": "Igbinedion University"
+    },
+    {
+        "question": "What does SSCE stand for",
+        "options": [
+            "Secondary School Certificate Examination",
+            "Senior Secondary Certificate Examination",
+            "State Secondary Certificate Examination",
+            "Special Secondary Certificate Examination \no"
+        ],
+        "answer": "Senior Secondary Certificate Examination"
+    },
+    {
+        "question": "How many years is primary education in Nigeria",
+        "options": [
+            "5 years",
+            "6 years",
+            "7 years",
+            "8 years \no"
+        ],
+        "answer": "6 years"
+    },
+    {
+        "question": "What is UTME",
+        "options": [
+            "Unified Tertiary Matriculation Examination",
+            "Universal Teaching and Management Examination",
+            "University Training and Management Examination",
+            "Unified Testing and Matriculation Exam \no"
+        ],
+        "answer": "Unified Tertiary Matriculation Examination"
+    },
+    {
+        "question": "Which is Nigeria's premier technology university",
+        "options": [
+            "University of Lagos",
+            "Federal University of Technology, Akure",
+            "Federal University of Technology, Owerri",
+            "All are technology universities \no"
+        ],
+        "answer": "All are technology universities \no"
+    },
+    {
+        "question": "What does NUC stand for",
+        "options": [
+            "National Universities Commission",
+            "Nigerian University Council",
+            "National University Committee",
+            "Nigerian Universities Commission \no"
+        ],
+        "answer": "National Universities Commission"
+    },
+    {
+        "question": "What is the minimum entry age for university in Nigeria",
+        "options": [
+            "15 years",
+            "16 years",
+            "17 years",
+            "18 years \no"
+        ],
+        "answer": "16 years"
+    },
+    {
+        "question": "Which examination body is for university entrance",
+        "options": [
+            "WAEC",
+            "NECO",
+            "JAMB",
+            "NABTEB \n\no"
+        ],
+        "answer": "JAMB"
+    },
+    {
+        "question": "What is Nigeria's major seaport in Lagos called",
+        "options": [
+            "Lagos Port",
+            "Apapa Port",
+            "Tin Can Island Port",
+            "Both B and C \no"
+        ],
+        "answer": "Both B and C \no"
+    },
+    {
+        "question": "Which is the longest bridge in West Africa",
+        "options": [
+            "Third Mainland Bridge",
+            "Eko Bridge",
+            "Carter Bridge",
+            "Lekki-Ikoyi Link Bridge \no"
+        ],
+        "answer": "Third Mainland Bridge"
+    },
+    {
+        "question": "What does LAWMA stand for",
+        "options": [
+            "Lagos Waste Management Authority",
+            "Lagos Water Management Agency",
+            "Lagos Waste and Management Authority",
+            "Lagos Wildlife Management Authority \no"
+        ],
+        "answer": "Lagos Waste Management Authority"
+    },
+    {
+        "question": "Which airport serves Abuja",
+        "options": [
+            "Abuja International Airport",
+            "Nnamdi Azikiwe International Airport",
+            "Federal Capital Territory Airport",
+            "Abuja Federal Airport \no"
+        ],
+        "answer": "Nnamdi Azikiwe International Airport"
+    },
+    {
+        "question": "What is the major railway line connecting Lagos and Kano",
+        "options": [
+            "Nigerian Railway Corporation line",
+            "Trans-Nigerian Railway",
+            "Western Line",
+            "Lagos-Kano Railway \no"
+        ],
+        "answer": "Nigerian Railway Corporation line"
+    },
+    {
+        "question": "Which ministry oversees roads in Nigeria",
+        "options": [
+            "Ministry of Transport",
+            "Ministry of Works",
+            "Ministry of Infrastructure",
+            "Ministry of Power \no"
+        ],
+        "answer": "Ministry of Works"
+    },
+    {
+        "question": "What does FERMA stand for",
+        "options": [
+            "Federal Roads Maintenance Agency",
+            "Federal Emergency Road Management Agency",
+            "Federal Roads Management Authority",
+            "Federal Emergency and Road Maintenance Agency \no"
+        ],
+        "answer": "Federal Roads Maintenance Agency"
+    },
+    {
+        "question": "Which dam is the largest in Nigeria",
+        "options": [
+            "Shiroro Dam",
+            "Kainji Dam",
+            "Jebba Dam",
+            "Oyan Dam \no"
+        ],
+        "answer": "Kainji Dam"
+    },
+    {
+        "question": "What is Lagos Island also known as",
+        "options": [
+            "Mainland",
+            "Isale Eko",
+            "Eko",
+            "All of the above refer to different areas \no"
+        ],
+        "answer": "Eko"
+    },
+    {
+        "question": "Which Nigerian city has a light rail system",
+        "options": [
+            "Lagos",
+            "Abuja",
+            "Port Harcourt",
+            "Kano \no"
+        ],
+        "answer": "Abuja"
+    },
+    {
+        "question": "Which African country has the Pyramids",
+        "options": [
+            "Sudan",
+            "Egypt",
+            "Morocco",
+            "Tunisia \no"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the capital of Ghana",
+        "options": [
+            "Kumasi",
+            "Accra",
+            "Tamale",
+            "Cape Coast \no"
+        ],
+        "answer": "Accra"
+    },
+    {
+        "question": "Which African leader was known as \"Madiba\"",
+        "options": [
+            "Kwame Nkrumah",
+            "Jomo Kenyatta",
+            "Nelson Mandela",
+            "Julius Nyerere \no"
+        ],
+        "answer": "Nelson Mandela"
+    },
+    {
+        "question": "What is the official language of Ethiopia",
+        "options": [
+            "Swahili",
+            "Amharic",
+            "Arabic",
+            "English \no"
+        ],
+        "answer": "Amharic"
+    },
+    {
+        "question": "Which African country is known for its mountain gorillas",
+        "options": [
+            "Kenya",
+            "Tanzania",
+            "Rwanda",
+            "Uganda \no"
+        ],
+        "answer": "Rwanda"
+    },
+    {
+        "question": "What is the currency of Kenya",
+        "options": [
+            "Rand",
+            "Shilling",
+            "Cedi",
+            "Dollar \no"
+        ],
+        "answer": "Shilling"
+    },
+    {
+        "question": "Which is the smallest country in mainland Africa",
+        "options": [
+            "Gambia",
+            "Djibouti",
+            "Swaziland",
+            "Rwanda \no"
+        ],
+        "answer": "Gambia"
+    },
+    {
+        "question": "What does AU stand for",
+        "options": [
+            "African Unity",
+            "African Union",
+            "Association of Unity",
+            "Alliance Union \no"
+        ],
+        "answer": "African Union"
+    },
+    {
+        "question": "Which African country was formerly known as Abyssinia",
+        "options": [
+            "Somalia",
+            "Sudan",
+            "Ethiopia",
+            "Eritrea \no"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "What is the Sahara",
+        "options": [
+            "A mountain",
+            "A river",
+            "A desert",
+            "A forest \no"
+        ],
+        "answer": "A desert"
+    },
+    {
+        "question": "Which country is known as the \"Land of a Thousand Hills\"",
+        "options": [
+            "Switzerland",
+            "Nepal",
+            "Rwanda",
+            "Bhutan \no"
+        ],
+        "answer": "Rwanda"
+    },
+    {
+        "question": "What is the capital of China",
+        "options": [
+            "Shanghai",
+            "Beijing",
+            "Hong Kong",
+            "Guangzhou \no"
+        ],
+        "answer": "Beijing"
+    },
+    {
+        "question": "Which is the tallest building in the world",
+        "options": [
+            "Empire State Building",
+            "Shanghai Tower",
+            "Burj Khalifa",
+            "One World Trade Center \no"
+        ],
+        "answer": "Burj Khalifa"
+    },
+    {
+        "question": "What does UNESCO stand for",
+        "options": [
+            "United Nations Educational, Scientific and Cultural Organization",
+            "Universal Educational and Scientific Organization",
+            "United Nations Economic and Social Council Organization",
+            "Universal Nations Educational System and Culture Organization \no"
+        ],
+        "answer": "United Nations Educational, Scientific and Cultural Organization"
+    },
+    {
+        "question": "Which country has the largest population in the world",
+        "options": [
+            "India",
+            "China",
+            "USA",
+            "Indonesia \no"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "What is the currency of Japan",
+        "options": [
+            "Yuan",
+            "Won",
+            "Yen",
+            "Ringgit \no"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "Which organization deals with international trade",
+        "options": [
+            "IMF",
+            "WTO",
+            "World Bank",
+            "UN \no"
+        ],
+        "answer": "WTO"
+    },
+    {
+        "question": "What is the Eiffel Tower's location",
+        "options": [
+            "London",
+            "Rome",
+            "Paris",
+            "Berlin \no"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which is the largest ocean",
+        "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Pacific Ocean",
+            "Arctic Ocean \no"
+        ],
+        "answer": "Pacific Ocean"
+    },
+    {
+        "question": "What does G20 represent",
+        "options": [
+            "Group of 20 major economies",
+            "Global 20 nations",
+            "Government of 20 countries",
+            "General Assembly of 20 \no"
+        ],
+        "answer": "Group of 20 major economies"
+    },
+    {
+        "question": "What does FIRS stand for",
+        "options": [
+            "Federal Inland Revenue Service",
+            "Federal Internal Revenue Service",
+            "Federal Income and Revenue Service",
+            "Federal Inland Revenue System \no"
+        ],
+        "answer": "Federal Inland Revenue Service"
+    },
+    {
+        "question": "Which ministry oversees education in Nigeria",
+        "options": [
+            "Ministry of Education",
+            "Federal Ministry of Education",
+            "Ministry of Schools and Education",
+            "National Education Ministry \no"
+        ],
+        "answer": "Federal Ministry of Education"
+    },
+    {
+        "question": "What does NEMA stand for",
+        "options": [
+            "National Emergency Management Agency",
+            "Nigerian Emergency Management Authority",
+            "National Emergency and Management Agency",
+            "Nigerian Emergency Medical Agency \no"
+        ],
+        "answer": "National Emergency Management Agency"
+    },
+    {
+        "question": "Which agency regulates telecommunications in Nigeria",
+        "options": [
+            "NITDA",
+            "NCC",
+            "FMCT",
+            "NTA \no"
+        ],
+        "answer": "NCC"
+    },
+    {
+        "question": "What does NIPOST stand for",
+        "options": [
+            "Nigerian Postal Service",
+            "Nigerian Post Office Service and Telecommunications",
+            "National Independent Postal Service",
+            "Nigerian Postal and Telegraph Service \no"
+        ],
+        "answer": "Nigerian Postal Service"
+    },
+    {
+        "question": "Which agency regulates insurance in Nigeria",
+        "options": [
+            "NAICOM",
+            "SEC",
+            "CBN",
+            "NDIC \no"
+        ],
+        "answer": "NAICOM"
+    },
+    {
+        "question": "What does PENCOM stand for",
+        "options": [
+            "Pension Commission",
+            "National Pension Commission",
+            "Professional Pension Commission",
+            "Public Employee National Commission \no"
+        ],
+        "answer": "National Pension Commission"
+    },
+    {
+        "question": "Which body regulates the stock market",
+        "options": [
+            "CBN",
+            "SEC (Securities and Exchange Commission)",
+            "NSE",
+            "FIRS \no"
+        ],
+        "answer": "SEC (Securities and Exchange Commission)"
+    },
+    {
+        "question": "What does NDIC stand for",
+        "options": [
+            "Nigerian Deposit Insurance Corporation",
+            "National Development and Investment Corporation",
+            "Nigerian Development Insurance Corporation",
+            "National Deposit and Investment Corporation \no"
+        ],
+        "answer": "Nigerian Deposit Insurance Corporation"
+    },
+    {
+        "question": "Which agency is responsible for passport issuance",
+        "options": [
+            "FMFA",
+            "Nigerian Immigration Service",
+            "Ministry of Interior",
+            "NIMC \no"
+        ],
+        "answer": "Nigerian Immigration Service"
+    },
+    {
+        "question": "Which crop is Nigeria the largest producer of in Africa",
+        "options": [
+            "Rice",
+            "Cassava",
+            "Yam",
+            "Both B and C \no"
+        ],
+        "answer": "Both B and C \no"
+    },
+    {
+        "question": "What is Nigeria's main cash crop",
+        "options": [
+            "Cocoa",
+            "Groundnut",
+            "Palm oil",
+            "Cotton \no"
+        ],
+        "answer": "Cocoa"
+    },
+    {
+        "question": "Which region of Nigeria produces most of the oil",
+        "options": [
+            "North",
+            "South-South (Niger Delta)",
+            "South-West",
+            "South-East \n\no"
+        ],
+        "answer": "South-South (Niger Delta)"
+    },
+    {
+        "question": "What does the Middle Belt produce primarily",
+        "options": [
+            "Oil",
+            "Agricultural products",
+            "Minerals",
+            "Textiles \no"
+        ],
+        "answer": "Agricultural products"
+    },
+    {
+        "question": "Which state is known for groundnut production",
+        "options": [
+            "Kano State",
+            "Lagos State",
+            "Delta State",
+            "Enugu State \no"
+        ],
+        "answer": "Kano State"
+    },
+    {
+        "question": "What is Nigeria's solid mineral potential",
+        "options": [
+            "Gold and tin",
+            "Coal and limestone",
+            "Iron ore and bitumen",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian state has abundant coal deposits",
+        "options": [
+            "Plateau State",
+            "Enugu State",
+            "Kogi State",
+            "Benue State \no"
+        ],
+        "answer": "Enugu State"
+    },
+    {
+        "question": "What does NALDA stand for",
+        "options": [
+            "National Agricultural Land Development Authority",
+            "Nigerian Agricultural and Livestock Development Agency",
+            "National Agriculture and Land Development Agency",
+            "Nigerian Agricultural Land and Development Authority \no"
+        ],
+        "answer": "National Agricultural Land Development Authority"
+    },
+    {
+        "question": "Which tree is the cocoa industry based on",
+        "options": [
+            "Theobroma cacao",
+            "Oil palm",
+            "Rubber tree",
+            "Cashew tree \no"
+        ],
+        "answer": "Theobroma cacao"
+    },
+    {
+        "question": "What is the major fishing area in Nigeria",
+        "options": [
+            "Lake Chad",
+            "Niger Delta",
+            "Coastal waters",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Where do Rivers Niger and Benue meet",
+        "options": [
+            "Abuja",
+            "Lokoja",
+            "Makurdi",
+            "Onitsha \no"
+        ],
+        "answer": "Lokoja"
+    },
+    {
+        "question": "Which lake borders Nigeria, Niger, Chad, and Cameroon",
+        "options": [
+            "Lake Victoria",
+            "Lake Tanganyika",
+            "Lake Chad",
+            "Lake Malawi \no"
+        ],
+        "answer": "Lake Chad"
+    },
+    {
+        "question": "What is the second longest river in Nigeria",
+        "options": [
+            "River Kaduna",
+            "River Benue",
+            "River Cross",
+            "River Ogun \no"
+        ],
+        "answer": "River Benue"
+    },
+    {
+        "question": "Which waterfall is located in Plateau State",
+        "options": [
+            "Erin Ijesha Waterfalls",
+            "Gurara Falls",
+            "Assop Falls",
+            "Farin Ruwa Falls \no"
+        ],
+        "answer": "Assop Falls"
+    },
+    {
+        "question": "What is the major river in Cross River State",
+        "options": [
+            "River Niger",
+            "River Benue",
+            "Cross River",
+            "River Ogun \no"
+        ],
+        "answer": "Cross River"
+    },
+    {
+        "question": "What is Zuma Rock",
+        "options": [
+            "A mountain in Abuja area",
+            "A large monolith near Abuja",
+            "A tourist attraction",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which city is known for the Olumo Rock",
+        "options": [
+            "Ibadan",
+            "Abeokuta",
+            "Ijebu-Ode",
+            "Osogbo \no"
+        ],
+        "answer": "Abeokuta"
+    },
+    {
+        "question": "Where is the Yankari National Park located",
+        "options": [
+            "Plateau State",
+            "Bauchi State",
+            "Borno State",
+            "Taraba State \no"
+        ],
+        "answer": "Bauchi State"
+    },
+    {
+        "question": "Which is Nigeria's oldest surviving skyscraper",
+        "options": [
+            "NECOM House",
+            "Cocoa House",
+            "Independence House",
+            "NITEL Tower \no"
+        ],
+        "answer": "Cocoa House"
+    },
+    {
+        "question": "Where is the Osun-Osogbo Sacred Grove located",
+        "options": [
+            "Oyo State",
+            "Osun State",
+            "Ondo State",
+            "Ekiti State \n\no"
+        ],
+        "answer": "Osun State"
+    },
+    {
+        "question": "What is the Lekki Conservation Centre known for",
+        "options": [
+            "Canopy walkway",
+            "Wildlife",
+            "Nature reserve",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which beach is famous in Lagos",
+        "options": [
+            "Bar Beach",
+            "Elegushi Beach",
+            "Tarkwa Bay",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Where is the National War Museum located",
+        "options": [
+            "Lagos",
+            "Abuja",
+            "Umuahia",
+            "Kaduna \no"
+        ],
+        "answer": "Umuahia"
+    },
+    {
+        "question": "What is Idanre Hills",
+        "options": [
+            "A tourist site in Ondo State",
+            "A mountain range",
+            "An ancient settlement",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which city is called the \"Ancient City\"",
+        "options": [
+            "Ile-Ife",
+            "Benin City",
+            "Kano",
+            "All have ancient history \no"
+        ],
+        "answer": "All have ancient history \no"
+    },
+    {
+        "question": "What is the title of the traditional ruler of Benin",
+        "options": [
+            "Oba of Benin",
+            "Oba of Lagos",
+            "Ooni of Ife",
+            "Sultan of Sokoto \no"
+        ],
+        "answer": "Oba of Benin"
+    },
+    {
+        "question": "Who is the paramount ruler of Yorubaland",
+        "options": [
+            "Alaafin of Oyo",
+            "Ooni of Ife",
+            "Oba of Lagos",
+            "Oba of Benin \no"
+        ],
+        "answer": "Ooni of Ife"
+    },
+    {
+        "question": "What is the title of the Kano traditional ruler",
+        "options": [
+            "Sultan",
+            "Emir of Kano",
+            "Sarkin Kano",
+            "Both B and C \no"
+        ],
+        "answer": "Both B and C \no"
+    },
+    {
+        "question": "Who is the spiritual head of Muslims in Nigeria",
+        "options": [
+            "Emir of Kano",
+            "Sultan of Sokoto",
+            "Grand Khadi",
+            "Chief Imam \no"
+        ],
+        "answer": "Sultan of Sokoto"
+    },
+    {
+        "question": "What is the traditional ruler of Lagos called",
+        "options": [
+            "Oba of Lagos (Oba of Eko)",
+            "Oba of Benin",
+            "Ooni of Lagos",
+            "King of Lagos \no"
+        ],
+        "answer": "Oba of Lagos (Oba of Eko)"
+    },
+    {
+        "question": "Which festival celebrates the fishing culture in Kebbi State",
+        "options": [
+            "Arugungu Fishing Festival",
+            "Calabar Carnival",
+            "Eyo Festival",
+            "Durbar Festival \no"
+        ],
+        "answer": "Arugungu Fishing Festival"
+    },
+    {
+        "question": "What is the Durbar Festival",
+        "options": [
+            "A harvest celebration",
+            "A horse-riding festival",
+            "A cultural festival in Northern Nigeria",
+            "Both B and C \no"
+        ],
+        "answer": "Both B and C \no"
+    },
+    {
+        "question": "When is Independence Day celebrated",
+        "options": [
+            "January 1",
+            "May 29",
+            "October 1",
+            "December 31 \no"
+        ],
+        "answer": "October 1"
+    },
+    {
+        "question": "What is the Ojude Oba Festival",
+        "options": [
+            "A Yoruba festival in Ijebu-Ode",
+            "A harvest festival",
+            "A cultural parade",
+            "Both A and C \no"
+        ],
+        "answer": "Both A and C \no"
+    },
+    {
+        "question": "Which month is the Calabar Carnival held",
+        "options": [
+            "November",
+            "December",
+            "January",
+            "March \no"
+        ],
+        "answer": "December"
+    },
+    {
+        "question": "How many languages are spoken in Nigeria",
+        "options": [
+            "About 250",
+            "About 350",
+            "About 500+",
+            "About 100 \no"
+        ],
+        "answer": "About 500+"
+    },
+    {
+        "question": "What is \"Thank you\" in Hausa",
+        "options": [
+            "Nagode",
+            "Dalu",
+            "E se",
+            "Sanu \no"
+        ],
+        "answer": "Nagode"
+    },
+    {
+        "question": "What is \"Thank you\" in Igbo",
+        "options": [
+            "E se",
+            "Daalụ",
+            "Nagode",
+            "Bawo \no"
+        ],
+        "answer": "Daalụ"
+    },
+    {
+        "question": "What is \"Thank you\" in Yoruba",
+        "options": [
+            "Dalu",
+            "Nagode",
+            "E se/O se",
+            "Modupe \no"
+        ],
+        "answer": "E se/O se"
+    },
+    {
+        "question": "What is Pidgin English",
+        "options": [
+            "Broken English",
+            "A creole language",
+            "A lingua franca in Nigeria",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is Jollof Rice",
+        "options": [
+            "A Nigerian rice dish",
+            "A West African delicacy",
+            "A popular party food",
+            "All of the above \n\no"
+        ],
+        "answer": "All of the above \n\no"
+    },
+    {
+        "question": "What is Egusi soup made from",
+        "options": [
+            "Palm fruit",
+            "Melon seeds",
+            "Peanuts",
+            "Beans \no"
+        ],
+        "answer": "Melon seeds"
+    },
+    {
+        "question": "What is Suya",
+        "options": [
+            "Grilled spicy meat",
+            "A soup",
+            "A rice dish",
+            "A vegetable \no"
+        ],
+        "answer": "Grilled spicy meat"
+    },
+    {
+        "question": "What is Garri made from",
+        "options": [
+            "Yam",
+            "Corn",
+            "Cassava",
+            "Rice \no"
+        ],
+        "answer": "Cassava"
+    },
+    {
+        "question": "What is Akara",
+        "options": [
+            "Bean cake/fritter",
+            "Bread",
+            "Rice cake",
+            "Meat pie \no"
+        ],
+        "answer": "Bean cake/fritter"
+    },
+    {
+        "question": "What is Moi Moi",
+        "options": [
+            "Steamed bean pudding",
+            "Rice cake",
+            "Corn meal",
+            "Meat dish \no"
+        ],
+        "answer": "Steamed bean pudding"
+    },
+    {
+        "question": "What is Pounded Yam",
+        "options": [
+            "A Nigerian swallow",
+            "Made from yam",
+            "Eaten with soup",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is Pepper Soup",
+        "options": [
+            "A spicy broth",
+            "Made with meat or fish",
+            "A popular Nigerian soup",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is Kilishi",
+        "options": [
+            "Dried spiced meat",
+            "Northern Nigerian delicacy",
+            "Similar to beef jerky",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is Eba",
+        "options": [
+            "Made from garri",
+            "A swallow food",
+            "Eaten with soup",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What does NITDA stand for",
+        "options": [
+            "National Information Technology Development Agency",
+            "Nigerian Information and Technology Development Agency",
+            "National IT and Digital Agency",
+            "Nigerian Information Technology Department Agency \no"
+        ],
+        "answer": "National Information Technology Development Agency"
+    },
+    {
+        "question": "Which Nigerian founded Paystack",
+        "options": [
+            "Sim Shagaya",
+            "Shola Akinlade",
+            "Jason Njoku",
+            "Tunde Kehinde \no"
+        ],
+        "answer": "Shola Akinlade"
+    },
+    {
+        "question": "What is Flutterwave",
+        "options": [
+            "A payment technology company",
+            "A fintech startup",
+            "A Nigerian unicorn",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian tech company was acquired by Stripe",
+        "options": [
+            "Flutterwave",
+            "Paystack",
+            "Interswitch",
+            "Konga \no"
+        ],
+        "answer": "Paystack"
+    },
+    {
+        "question": "What is Jumia",
+        "options": [
+            "An e-commerce platform",
+            "An online marketplace",
+            "Africa's first tech unicorn",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What does BVN enable",
+        "options": [
+            "Bank account verification",
+            "Identity management",
+            "Fraud prevention",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is USSD banking",
+        "options": [
+            "Internet banking",
+            "Mobile banking via code",
+            "ATM service",
+            "Branch banking \no"
+        ],
+        "answer": "Mobile banking via code"
+    },
+    {
+        "question": "Which Nigerian founded iROKOtv",
+        "options": [
+            "Sim Shagaya",
+            "Jason Njoku",
+            "Tunde Kehinde",
+            "Mark Essien \no"
+        ],
+        "answer": "Jason Njoku"
+    },
+    {
+        "question": "What is Konga",
+        "options": [
+            "An e-commerce platform",
+            "A Nigerian online retailer",
+            "A technology company",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What does NIN stand for",
+        "options": [
+            "National Identification Number",
+            "Nigerian Identity Number",
+            "National Identity Number",
+            "Nigerian Identification Number \no"
+        ],
+        "answer": "National Identification Number"
+    },
+    {
+        "question": "What type of climate does Northern Nigeria have",
+        "options": [
+            "Tropical",
+            "Sahel/Semi-arid",
+            "Mediterranean",
+            "Temperate \no"
+        ],
+        "answer": "Sahel/Semi-arid"
+    },
+    {
+        "question": "What is Nigeria's rainy season period (in most regions)",
+        "options": [
+            "January-March",
+            "April-October",
+            "November-February",
+            "All year round \no"
+        ],
+        "answer": "April-October"
+    },
+    {
+        "question": "What is desertification",
+        "options": [
+            "Desert expansion",
+            "Land degradation",
+            "A problem in Northern Nigeria",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the harmattan",
+        "options": [
+            "A dry, dusty wind",
+            "A rainy season",
+            "A winter period from Sahara",
+            "Both A and C \no"
+        ],
+        "answer": "Both A and C \no"
+    },
+    {
+        "question": "Which vegetation zone has the most rainfall",
+        "options": [
+            "Sahel",
+            "Rainforest",
+            "Guinea Savanna",
+            "Sudan Savanna \no"
+        ],
+        "answer": "Rainforest"
+    },
+    {
+        "question": "What environmental challenge affects the Niger Delta",
+        "options": [
+            "Oil spillage",
+            "Gas flaring",
+            "Water pollution",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian state experiences flooding frequently",
+        "options": [
+            "Bayelsa State",
+            "Delta State",
+            "Rivers State",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is erosion",
+        "options": [
+            "Soil degradation",
+            "Land washing away",
+            "An environmental problem",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which tree is common in the mangrove forests",
+        "options": [
+            "Mangrove trees",
+            "Rhizophora",
+            "Salt-tolerant species",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What causes air pollution in Lagos",
+        "options": [
+            "Vehicle emissions",
+            "Generators",
+            "Industrial activities",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which African country is the newest nation (gained independence in 2011)",
+        "options": [
+            "Eritrea",
+            "South Sudan",
+            "Namibia",
+            "Zimbabwe \n\no"
+        ],
+        "answer": "South Sudan"
+    },
+    {
+        "question": "What is the capital of Morocco",
+        "options": [
+            "Casablanca",
+            "Marrakech",
+            "Rabat",
+            "Fez \no"
+        ],
+        "answer": "Rabat"
+    },
+    {
+        "question": "Which African country produces the most oil",
+        "options": [
+            "Nigeria",
+            "Angola",
+            "Libya",
+            "Algeria \no"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "What is the Swahili word for \"Hello\"",
+        "options": [
+            "Jambo",
+            "Habari",
+            "Mambo",
+            "All can be used \no"
+        ],
+        "answer": "All can be used \no"
+    },
+    {
+        "question": "Which African country hosted the 2019 African Cup of Nations",
+        "options": [
+            "Cameroon",
+            "Egypt",
+            "South Africa",
+            "Ivory Coast \no"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the largest island country in Africa",
+        "options": [
+            "Mauritius",
+            "Seychelles",
+            "Madagascar",
+            "Cape Verde \no"
+        ],
+        "answer": "Madagascar"
+    },
+    {
+        "question": "Which African mountain is the highest",
+        "options": [
+            "Mount Kenya",
+            "Mount Kilimanjaro",
+            "Mount Stanley",
+            "Atlas Mountains \no"
+        ],
+        "answer": "Mount Kilimanjaro"
+    },
+    {
+        "question": "What does SADC stand for",
+        "options": [
+            "Southern African Development Community",
+            "South African Development Council",
+            "Southern African Democratic Community",
+            "South African Development Community \no"
+        ],
+        "answer": "Southern African Development Community"
+    },
+    {
+        "question": "Which African country has two capitals",
+        "options": [
+            "Nigeria",
+            "South Africa",
+            "Tanzania",
+            "Both B and C \no"
+        ],
+        "answer": "Both B and C \no"
+    },
+    {
+        "question": "What is the Great Rift Valley",
+        "options": [
+            "A geographical feature in East Africa",
+            "A valley system",
+            "A geological formation",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which country hosted the 2022 FIFA World Cup",
+        "options": [
+            "Russia",
+            "Qatar",
+            "Brazil",
+            "Germany \no"
+        ],
+        "answer": "Qatar"
+    },
+    {
+        "question": "What is the capital of Australia",
+        "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane \no"
+        ],
+        "answer": "Canberra"
+    },
+    {
+        "question": "Which is the longest river in the world",
+        "options": [
+            "Amazon River",
+            "Nile River",
+            "Yangtze River",
+            "Mississippi River \no"
+        ],
+        "answer": "Nile River"
+    },
+    {
+        "question": "What does NATO stand for",
+        "options": [
+            "North Atlantic Treaty Organization",
+            "National Atlantic Treaty Organization",
+            "North American Treaty Organization",
+            "Northern Atlantic Trade Organization \n\no"
+        ],
+        "answer": "North Atlantic Treaty Organization"
+    },
+    {
+        "question": "Which country is known as the \"Land of the Midnight Sun\"",
+        "options": [
+            "Finland",
+            "Norway",
+            "Sweden",
+            "All Nordic countries \no"
+        ],
+        "answer": "Norway"
+    },
+    {
+        "question": "What is the capital of Canada",
+        "options": [
+            "Toronto",
+            "Vancouver",
+            "Ottawa",
+            "Montreal \no"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "Which organization promotes health worldwide",
+        "options": [
+            "WHO",
+            "UNESCO",
+            "UNICEF",
+            "Red Cross \no"
+        ],
+        "answer": "WHO"
+    },
+    {
+        "question": "What is the Great Wall located in",
+        "options": [
+            "Japan",
+            "China",
+            "Mongolia",
+            "Korea \no"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Which is the smallest continent",
+        "options": [
+            "Europe",
+            "Australia",
+            "Antarctica",
+            "South America \no"
+        ],
+        "answer": "Australia"
+    },
+    {
+        "question": "What does BRICS stand for",
+        "options": [
+            "Brazil, Russia, India, China, South Africa",
+            "Britain, Russia, Italy, China, Spain",
+            "Brazil, Romania, India, Cuba, Sudan",
+            "Belgium, Russia, Indonesia, China, Switzerland \no"
+        ],
+        "answer": "Brazil, Russia, India, China, South Africa"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has a digital currency called e-Naira. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the name of Nigeria's new minimum wage debate topic",
+        "options": [
+            "₦30,000",
+            "₦50,000",
+            "₦70,000",
+            "₦100,000 \no"
+        ],
+        "answer": "₦70,000"
+    },
+    {
+        "question": "Which Nigerian state experienced major flooding in recent years",
+        "options": [
+            "Lagos State",
+            "Kogi State",
+            "Anambra State",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria removed fuel subsidy in 2023. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the name of Nigeria's railway project connecting Lagos to Ibadan",
+        "options": [
+            "Lagos-Ibadan Railway",
+            "Standard Gauge Railway",
+            "Both A and B",
+            "Express Railway \no"
+        ],
+        "answer": "Both A and B"
+    },
+    {
+        "question": "Which Nigerian athlete recently won medals at international competitions",
+        "options": [
+            "Tobi Amusan",
+            "Ese Brume",
+            "Favour Ofili",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria's Super Falcons won the Women's Africa Cup of Nations in \n2024. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What major policy change did President Tinubu announce on his first day",
+        "options": [
+            "Fuel subsidy removal",
+            "New currency",
+            "Border closure",
+            "Tax increase \no"
+        ],
+        "answer": "Fuel subsidy removal"
+    },
+    {
+        "question": "Which state in Nigeria is known for recent security challenges",
+        "options": [
+            "Borno State",
+            "Zamfara State",
+            "Kaduna State",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has signed agreements to export natural gas to Europe. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the controversy around the old Naira notes",
+        "options": [
+            "Redesign and withdrawal",
+            "Color change",
+            "New security features",
+            "All of the above \no"
+        ],
+        "answer": "Redesign and withdrawal"
+    },
+    {
+        "question": "Which Nigerian port is being expanded for international trade",
+        "options": [
+            "Lekki Deep Sea Port",
+            "Apapa Port",
+            "Tin Can Island Port",
+            "Calabar Port \no"
+        ],
+        "answer": "Lekki Deep Sea Port"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has started producing electric vehicles locally. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the Student Loan scheme in Nigeria about",
+        "options": [
+            "Free education",
+            "Loans for tertiary students",
+            "Scholarship program",
+            "Grant for all students \no"
+        ],
+        "answer": "Loans for tertiary students"
+    },
+    {
+        "question": "What does the Naira float policy mean",
+        "options": [
+            "Fixed exchange rate",
+            "Market-determined exchange rate",
+            "Government controls currency",
+            "No foreign exchange \no"
+        ],
+        "answer": "Market-determined exchange rate"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria's inflation rate has increased in recent years. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "Which Nigerian fintech company was acquired by Stripe",
+        "options": [
+            "Flutterwave",
+            "Paystack",
+            "Interswitch",
+            "Kuda Bank \no"
+        ],
+        "answer": "Paystack"
+    },
+    {
+        "question": "What is the main source of Nigeria's foreign exchange",
+        "options": [
+            "Agriculture",
+            "Oil and gas",
+            "Tourism",
+            "Manufacturing \no"
+        ],
+        "answer": "Oil and gas"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has the largest economy in Africa. \n\no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is Bitcoin and cryptocurrency regulation in Nigeria",
+        "options": [
+            "Fully banned",
+            "Restricted by CBN",
+            "Fully legal",
+            "No regulations \no"
+        ],
+        "answer": "Restricted by CBN"
+    },
+    {
+        "question": "What does NNPCL stand for now",
+        "options": [
+            "Nigerian National Petroleum Company Limited",
+            "Nigerian National Petroleum Corporation",
+            "National Nigerian Petroleum Company",
+            "Nigerian National Petroleum Commission \no"
+        ],
+        "answer": "Nigerian National Petroleum Company Limited"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has privatized some electricity distribution companies. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the cashless policy about",
+        "options": [
+            "Promoting digital payments",
+            "Reducing cash transactions",
+            "Encouraging bank transfers",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which sector is the Nigerian government trying to diversify into",
+        "options": [
+            "Agriculture",
+            "Technology",
+            "Manufacturing",
+            "All of the above \n\no"
+        ],
+        "answer": "All of the above \n\no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has its own satellite in space. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the name of Nigeria's space agency",
+        "options": [
+            "NASRDA",
+            "NASA Nigeria",
+            "NSSA",
+            "Nigerian Space Agency \no"
+        ],
+        "answer": "NASRDA"
+    },
+    {
+        "question": "Which Nigerian city is known as a tech hub",
+        "options": [
+            "Lagos (Yaba)",
+            "Abuja",
+            "Port Harcourt",
+            "Ibadan \no"
+        ],
+        "answer": "Lagos (Yaba)"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has a National Identity Number (NIN) system. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is NIMC",
+        "options": [
+            "National Identity Management Commission",
+            "Nigerian Immigration Commission",
+            "National Information Management Center",
+            "Nigerian Identity and Migration Commission \no"
+        ],
+        "answer": "National Identity Management Commission"
+    },
+    {
+        "question": "Which technology has Nigeria adopted for voter registration",
+        "options": [
+            "Biometric registration",
+            "BVAS (Bimodal Voter Accreditation System)",
+            "Digital voting",
+            "Both A and B \no"
+        ],
+        "answer": "Both A and B \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has 5G network coverage in some cities. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is Nigeria's e-government initiative about",
+        "options": [
+            "Digital government services",
+            "Online public services",
+            "Reducing paper work",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian company produces smartphones locally",
+        "options": [
+            "Tecno",
+            "Infinix",
+            "IrokoTV",
+            "Several companies assemble phones locally \no"
+        ],
+        "answer": "Several companies assemble phones locally \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has banned social media before. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is Nigeria's major environmental challenge",
+        "options": [
+            "Oil spillage in Niger Delta",
+            "Deforestation",
+            "Flooding",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria signed the Paris Climate Agreement. \n\no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What causes annual flooding in Nigeria",
+        "options": [
+            "Heavy rainfall",
+            "Dam releases from Cameroon",
+            "Poor drainage",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is desertification affecting in Nigeria",
+        "options": [
+            "Northern states",
+            "Lake Chad",
+            "Agricultural land",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has renewable energy projects like solar power. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is causing erosion in South-East Nigeria",
+        "options": [
+            "Heavy rainfall",
+            "Poor soil management",
+            "Climate change",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which forest reserve is Nigeria trying to protect",
+        "options": [
+            "Yankari",
+            "Cross River National Park",
+            "Omo Forest Reserve",
+            "All of the above \n\no"
+        ],
+        "answer": "All of the above \n\no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has a Ministry of Environment. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is gas flaring",
+        "options": [
+            "Burning excess gas in oil production",
+            "Environmental pollution",
+            "Common in Niger Delta",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is Nigeria's target for reducing carbon emissions",
+        "options": [
+            "Net-zero by 2060",
+            "No target",
+            "Carbon neutral by 2030",
+            "Net-zero by 2050 \no"
+        ],
+        "answer": "Net-zero by 2060"
+    },
+    {
+        "question": "How many senatorial districts does each state have",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4 \no"
+        ],
+        "answer": "3"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria practices a federal system of government. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the Local Government autonomy debate about",
+        "options": [
+            "Financial independence for LGAs",
+            "Direct allocation from federation account",
+            "Removing state governor control",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is BVAS used for",
+        "options": [
+            "Voter accreditation",
+            "Biometric verification",
+            "Election transparency",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: The Nigerian Supreme Court is the highest court. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What does the EFCC fight against",
+        "options": [
+            "Economic crimes",
+            "Financial fraud",
+            "Corruption",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the Freedom of Information Act",
+        "options": [
+            "Law for accessing government information",
+            "Press freedom law",
+            "Transparency law",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has term limits for the President. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the National Assembly made up of",
+        "options": [
+            "Senate only",
+            "House of Representatives only",
+            "Both Senate and House of Representatives",
+            "State assemblies \no"
+        ],
+        "answer": "Both Senate and House of Representatives"
+    },
+    {
+        "question": "What is the controversy around state police",
+        "options": [
+            "Decentralizing security",
+            "State-controlled police force",
+            "Federal vs state control",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: ASUU (Academic Staff Union of Universities) has gone on strike \nmultiple times. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the NYSC program",
+        "options": [
+            "One-year national service",
+            "For graduates",
+            "Community service",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the \"Japa\" syndrome",
+        "options": [
+            "Brain drain",
+            "Nigerians relocating abroad",
+            "Migration trend",
+            "All of the above \n\no"
+        ],
+        "answer": "All of the above \n\no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has free maternal healthcare in public hospitals. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the Almajiri system",
+        "options": [
+            "Islamic education system",
+            "Street education in Northern Nigeria",
+            "Traditional learning",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the National Health Insurance Scheme",
+        "options": [
+            "Health coverage for Nigerians",
+            "Subsidized healthcare",
+            "NHIS",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has a minimum education age. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the UBE program",
+        "options": [
+            "Universal Basic Education",
+            "Free primary and junior secondary education",
+            "Government education initiative",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What social media platform was temporarily banned in Nigeria",
+        "options": [
+            "Facebook",
+            "Twitter",
+            "Instagram",
+            "TikTok \no"
+        ],
+        "answer": "Twitter"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has laws against cyberbullying. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the Second Niger Bridge",
+        "options": [
+            "New bridge linking Onitsha and Asaba",
+            "Infrastructure project",
+            "Completed recently",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Lagos has a light rail system planned. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the Dangote Refinery",
+        "options": [
+            "Largest refinery in Africa",
+            "In Lagos",
+            "Private refinery",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the Lekki Deep Sea Port for",
+        "options": [
+            "International shipping",
+            "Cargo handling",
+            "Trade gateway",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has ongoing road construction projects nationwide. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the Ajaokuta Steel Company",
+        "options": [
+            "Steel production plant",
+            "In Kogi State",
+            "Uncompleted project",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the National Broadband Plan",
+        "options": [
+            "Internet expansion project",
+            "Digital infrastructure",
+            "Connectivity for all Nigerians",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has metro systems in major cities. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "FALSE"
+    },
+    {
+        "question": "What is the Lagos-Calabar Coastal Highway",
+        "options": [
+            "New highway project",
+            "Coastal road",
+            "Infrastructure development",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What challenge does Nigeria face with electricity",
+        "options": [
+            "Power outages",
+            "Low generation capacity",
+            "Distribution problems",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria is Africa's largest oil producer. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the Nigerian Exchange Group (NGX)",
+        "options": [
+            "Stock market",
+            "Trading platform",
+            "Investment exchange",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which sector attracts most foreign investment in Nigeria",
+        "options": [
+            "Oil and gas",
+            "Telecommunications",
+            "Fintech",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Nigeria has free trade zones. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is the African Continental Free Trade Area (AfCFTA)",
+        "options": [
+            "Free trade agreement",
+            "Nigeria is a member",
+            "Intra-African trade",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Who is the current United Nations Secretary-General",
+        "options": [
+            "Ban Ki-moon",
+            "António Guterres",
+            "Kofi Annan",
+            "Boutros-Ghali \no"
+        ],
+        "answer": "António Guterres"
+    },
+    {
+        "question": "TRUE or FALSE: The Russia-Ukraine conflict started in 2022. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "Which country hosted COP28 climate summit",
+        "options": [
+            "Egypt",
+            "UAE (United Arab Emirates)",
+            "USA",
+            "UK \no"
+        ],
+        "answer": "UAE (United Arab Emirates)"
+    },
+    {
+        "question": "What is NATO",
+        "options": [
+            "North Atlantic Treaty Organization",
+            "Military alliance",
+            "Defense organization",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: China has the world's second largest economy. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is ChatGPT",
+        "options": [
+            "AI chatbot",
+            "By OpenAI",
+            "Language model",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Artificial Intelligence (AI) is being used in many industries. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "Who is the CEO of Tesla and SpaceX",
+        "options": [
+            "Jeff Bezos",
+            "Elon Musk",
+            "Bill Gates",
+            "Mark Zuckerberg \no"
+        ],
+        "answer": "Elon Musk"
+    },
+    {
+        "question": "What is the Metaverse",
+        "options": [
+            "Virtual reality space",
+            "Digital universe",
+            "Online world",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Electric vehicles are becoming more popular worldwide. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is global warming",
+        "options": [
+            "Increase in Earth's temperature",
+            "Climate change",
+            "Environmental issue",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: The Amazon rainforest is in South America. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What causes climate change",
+        "options": [
+            "Greenhouse gases",
+            "Carbon emissions",
+            "Human activities",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is renewable energy",
+        "options": [
+            "Solar power",
+            "Wind energy",
+            "Sustainable energy",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "TRUE or FALSE: Many countries are switching to electric cars to reduce pollution. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What does IMF stand for",
+        "options": [
+            "International Monetary Fund",
+            "International Money Federation",
+            "International Market Fund",
+            "International Monetary Foundation \no"
+        ],
+        "answer": "International Monetary Fund"
+    },
+    {
+        "question": "TRUE or FALSE: The US Dollar is the most used currency in international trade. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What is cryptocurrency",
+        "options": [
+            "Digital currency",
+            "Bitcoin, Ethereum, etc.",
+            "Decentralized money",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which region has the largest population",
+        "options": [
+            "Africa",
+            "Asia",
+            "Europe",
+            "Americas \no"
+        ],
+        "answer": "Asia"
+    },
+    {
+        "question": "TRUE or FALSE: The World Bank provides loans to developing countries. \no",
+        "options": [
+            "TRUE",
+            "FALSE"
+        ],
+        "answer": "TRUE"
+    },
+    {
+        "question": "What year did President Bola Tinubu assume office",
+        "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024 \no"
+        ],
+        "answer": "2023"
+    },
+    {
+        "question": "Which Nigerian won the 100m hurdles world championship",
+        "options": [
+            "Blessing Okagbare",
+            "Tobi Amusan",
+            "Ese Brume",
+            "Favour Ofili \no"
+        ],
+        "answer": "Tobi Amusan"
+    },
+    {
+        "question": "What is the name of the new Lagos airport terminal",
+        "options": [
+            "Terminal 1",
+            "Terminal 2",
+            "Murtala Muhammed Terminal 2",
+            "International Terminal \n\no"
+        ],
+        "answer": "Murtala Muhammed Terminal 2"
+    },
+    {
+        "question": "Which Nigerian state recently commissioned a new airport",
+        "options": [
+            "Anambra State",
+            "Ebonyi State",
+            "Ekiti State",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What caused nationwide protests in Nigeria in 2023",
+        "options": [
+            "Fuel subsidy removal",
+            "New tax laws",
+            "Currency redesign",
+            "Both A and C \no"
+        ],
+        "answer": "Both A and C \no"
+    },
+    {
+        "question": "Which international organization did Nigeria host a summit for",
+        "options": [
+            "ECOWAS",
+            "African Union",
+            "Commonwealth",
+            "All have been hosted \no"
+        ],
+        "answer": "All have been hosted \no"
+    },
+    {
+        "question": "What is Nigeria's current debt status",
+        "options": [
+            "Debt-free",
+            "Low debt",
+            "Rising debt",
+            "No information \no"
+        ],
+        "answer": "Rising debt"
+    },
+    {
+        "question": "Which Nigerian state banned open grazing",
+        "options": [
+            "Lagos",
+            "Benue",
+            "Ondo",
+            "Multiple states \no"
+        ],
+        "answer": "Multiple states \no"
+    },
+    {
+        "question": "What year was the #EndSARS protest",
+        "options": [
+            "2018",
+            "2019",
+            "2020",
+            "2021 \no"
+        ],
+        "answer": "2020"
+    },
+    {
+        "question": "Which country did Nigeria sign a defense pact with recently",
+        "options": [
+            "USA",
+            "France",
+            "UK",
+            "All have defense cooperation \no"
+        ],
+        "answer": "All have defense cooperation \no"
+    },
+    {
+        "question": "What is the population of Nigeria approximately",
+        "options": [
+            "150 million",
+            "180 million",
+            "Over 200 million",
+            "250 million \no"
+        ],
+        "answer": "Over 200 million"
+    },
+    {
+        "question": "Which Nigerian film was submitted for the Oscars",
+        "options": [
+            "King of Boys",
+            "Lionheart",
+            "A Tribe Called Judah",
+            "The Woman King \no"
+        ],
+        "answer": "Lionheart"
+    },
+    {
+        "question": "What is the Lagos State Slogan",
+        "options": [
+            "Centre of Excellence",
+            "Heart of the Nation",
+            "Gateway State",
+            "Treasure Base \no"
+        ],
+        "answer": "Centre of Excellence"
+    },
+    {
+        "question": "Which bridge in Lagos underwent major repairs recently",
+        "options": [
+            "Eko Bridge",
+            "Third Mainland Bridge",
+            "Carter Bridge",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the name of Nigeria's new digital tax system",
+        "options": [
+            "TaxPro",
+            "TaxPro-Max",
+            "e-Tax",
+            "Digital Tax Platform \no"
+        ],
+        "answer": "TaxPro-Max"
+    },
+    {
+        "question": "What is Nigeria's main export commodity",
+        "options": [
+            "Cocoa",
+            "Crude oil",
+            "Agriculture",
+            "Textiles \n\no"
+        ],
+        "answer": "Crude oil"
+    },
+    {
+        "question": "Which Nigerian bank is the oldest",
+        "options": [
+            "First Bank of Nigeria",
+            "Union Bank",
+            "UBA",
+            "Access Bank \no"
+        ],
+        "answer": "First Bank of Nigeria"
+    },
+    {
+        "question": "What does SME stand for in business",
+        "options": [
+            "Small and Medium Enterprises",
+            "Small Manufacturing Enterprises",
+            "Small Market Enterprises",
+            "Small Micro Enterprises \no"
+        ],
+        "answer": "Small and Medium Enterprises"
+    },
+    {
+        "question": "Which Nigerian entrepreneur founded Guaranty Trust Bank",
+        "options": [
+            "Tony Elumelu",
+            "Jim Ovia",
+            "Fola Adeola and Tayo Aderinokun",
+            "Herbert Wigwe \no"
+        ],
+        "answer": "Fola Adeola and Tayo Aderinokun"
+    },
+    {
+        "question": "What percentage did the Central Bank increase interest rates to",
+        "options": [
+            "10%",
+            "15%",
+            "Over 18%",
+            "25% \no"
+        ],
+        "answer": "Over 18%"
+    },
+    {
+        "question": "Which fintech company offers free bank accounts in Nigeria",
+        "options": [
+            "Kuda Bank",
+            "OPay",
+            "PalmPay",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the name of Lagos State employment trust fund",
+        "options": [
+            "LSETF",
+            "Lagos Job Fund",
+            "Employment Support Fund",
+            "Lagos Work Fund \no"
+        ],
+        "answer": "LSETF"
+    },
+    {
+        "question": "Which commodity does Nigeria export to earn foreign exchange besides oil",
+        "options": [
+            "Cocoa",
+            "Sesame seeds",
+            "Cashew nuts",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the Nigeria Customs Service responsible for",
+        "options": [
+            "Border control",
+            "Import duties",
+            "Trade regulation",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian state has the highest IGR (Internally Generated Revenue)",
+        "options": [
+            "Rivers State",
+            "Lagos State",
+            "Kano State",
+            "Oyo State \no"
+        ],
+        "answer": "Lagos State"
+    },
+    {
+        "question": "What is the name of Nigeria's digital identity system",
+        "options": [
+            "BVN",
+            "NIN (National Identification Number)",
+            "E-ID",
+            "Digital Identity Card \no"
+        ],
+        "answer": "NIN (National Identification Number)"
+    },
+    {
+        "question": "Which Nigerian startup became a unicorn in 2021",
+        "options": [
+            "Paystack",
+            "Flutterwave",
+            "Andela",
+            "Jumia \no"
+        ],
+        "answer": "Flutterwave"
+    },
+    {
+        "question": "*What does USSD code 966# belong to",
+        "options": [
+            "GTBank",
+            "Zenith Bank",
+            "Access Bank",
+            "First Bank \no"
+        ],
+        "answer": "Zenith Bank"
+    },
+    {
+        "question": "Which tech hub is located in Yaba, Lagos",
+        "options": [
+            "Yaba Tech Hub",
+            "Co-Creation Hub (CcHub)",
+            "Innovation Center",
+            "Tech Village \n\no"
+        ],
+        "answer": "Co-Creation Hub (CcHub)"
+    },
+    {
+        "question": "What is Nigeria's domain extension",
+        "options": [
+            ".nig",
+            ".nga",
+            ".ng",
+            ".nigeria \no"
+        ],
+        "answer": ".ng"
+    },
+    {
+        "question": "Which Nigerian company provides internet services via satellite",
+        "options": [
+            "MTN",
+            "Airtel",
+            "NICOMSAT",
+            "Starlink (licensed) \no"
+        ],
+        "answer": "Starlink (licensed) \no"
+    },
+    {
+        "question": "What is the name of Nigeria's biometric voter registration system",
+        "options": [
+            "BVAS",
+            "PVC",
+            "E-Vote",
+            "Digital Voting \no"
+        ],
+        "answer": "BVAS"
+    },
+    {
+        "question": "Which Nigerian telecommunications company has the most subscribers",
+        "options": [
+            "Glo",
+            "Airtel",
+            "MTN",
+            "9mobile \no"
+        ],
+        "answer": "MTN"
+    },
+    {
+        "question": "What does API stand for in technology",
+        "options": [
+            "Application Programming Interface",
+            "Automated Program Integration",
+            "Advanced Program Interface",
+            "Application Process Integration \no"
+        ],
+        "answer": "Application Programming Interface"
+    },
+    {
+        "question": "Which Nigerian tech company focuses on logistics",
+        "options": [
+            "Jumia",
+            "Kobo360",
+            "Gokada",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which Nigerian city experiences the most rainfall",
+        "options": [
+            "Lagos",
+            "Port Harcourt",
+            "Calabar",
+            "Ibadan \no"
+        ],
+        "answer": "Calabar"
+    },
+    {
+        "question": "What is the main cause of soil erosion in South-East Nigeria",
+        "options": [
+            "Deforestation",
+            "Heavy rainfall",
+            "Poor land management",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which dam in Nigeria is used for electricity generation",
+        "options": [
+            "Kainji Dam",
+            "Shiroro Dam",
+            "Jebba Dam",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What percentage of Nigeria is covered by forests",
+        "options": [
+            "5%",
+            "10%",
+            "15%",
+            "Less than 10% \no"
+        ],
+        "answer": "Less than 10% \no"
+    },
+    {
+        "question": "Which Nigerian state is most affected by desertification",
+        "options": [
+            "Lagos State",
+            "Sokoto State",
+            "Rivers State",
+            "Enugu State \no"
+        ],
+        "answer": "Sokoto State"
+    },
+    {
+        "question": "What is the Green Wall initiative",
+        "options": [
+            "Planting trees to stop desert expansion",
+            "Environmental project",
+            "Sahel region initiative",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which organization regulates environmental standards in Nigeria",
+        "options": [
+            "NESREA",
+            "Federal Ministry of Environment",
+            "NOSDRA",
+            "All are involved \n\no"
+        ],
+        "answer": "All are involved \n\no"
+    },
+    {
+        "question": "What is the major water source for Northern Nigeria",
+        "options": [
+            "River Niger",
+            "River Benue",
+            "Lake Chad",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which renewable energy source is most viable in Northern Nigeria",
+        "options": [
+            "Wind energy",
+            "Solar energy",
+            "Hydro energy",
+            "Geothermal \no"
+        ],
+        "answer": "Solar energy"
+    },
+    {
+        "question": "What does NOSDRA stand for",
+        "options": [
+            "National Oil Spill Detection and Response Agency",
+            "Nigerian Oil and Spill Department",
+            "National Oil Safety and Development Agency",
+            "Nigerian Oil Spill Defense Agency \no"
+        ],
+        "answer": "National Oil Spill Detection and Response Agency"
+    },
+    {
+        "question": "Who is the current Chief Justice of Nigeria",
+        "options": [
+            "Olukayode Ariwoola",
+            "Tanko Muhammad",
+            "Walter Onnoghen",
+            "Mahmud Mohammed \no"
+        ],
+        "answer": "Olukayode Ariwoola"
+    },
+    {
+        "question": "How many political parties are registered in Nigeria",
+        "options": [
+            "10",
+            "18",
+            "Over 18",
+            "50 \no"
+        ],
+        "answer": "Over 18"
+    },
+    {
+        "question": "What is the retirement age for Supreme Court Justices",
+        "options": [
+            "60 years",
+            "65 years",
+            "70 years",
+            "75 years \no"
+        ],
+        "answer": "70 years"
+    },
+    {
+        "question": "Which body conducts local government elections",
+        "options": [
+            "INEC",
+            "State Independent Electoral Commission (SIE",
+            "o C) Local Government Electoral Commission",
+            "Federal Electoral Body \no"
+        ],
+        "answer": "State Independent Electoral Commission (SIE"
+    },
+    {
+        "question": "What is the name of Nigeria's anti-graft agency besides EFCC",
+        "options": [
+            "ICPC",
+            "Code of Conduct Bureau",
+            "NFIU",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Who appoints the Chief Justice of Nigeria",
+        "options": [
+            "The President",
+            "National Judicial Council",
+            "Senate",
+            "President with Senate confirmation \no"
+        ],
+        "answer": "President with Senate confirmation \no"
+    },
+    {
+        "question": "What is the quorum for National Assembly sessions",
+        "options": [
+            "Half of members",
+            "One-third of members",
+            "Two-thirds of members",
+            "All members \no"
+        ],
+        "answer": "One-third of members"
+    },
+    {
+        "question": "Which ministry oversees petroleum resources",
+        "options": [
+            "Ministry of Petroleum",
+            "Ministry of Mines and Steel",
+            "President oversees it directly",
+            "NNPCL \no"
+        ],
+        "answer": "President oversees it directly"
+    },
+    {
+        "question": "What is the official gazette",
+        "options": [
+            "Government publication",
+            "Law documentation",
+            "Official record",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "How many Supreme Court Justices are in Nigeria",
+        "options": [
+            "7",
+            "9",
+            "21 (maximum)",
+            "15 \n\no"
+        ],
+        "answer": "21 (maximum)"
+    },
+    {
+        "question": "What is the official age for primary school admission",
+        "options": [
+            "4 years",
+            "5 years",
+            "6 years",
+            "7 years \no"
+        ],
+        "answer": "6 years"
+    },
+    {
+        "question": "Which Nigerian university is ranked highest internationally",
+        "options": [
+            "University of Ibadan",
+            "University of Lagos",
+            "Covenant University",
+            "Varies by ranking \no"
+        ],
+        "answer": "Varies by ranking \no"
+    },
+    {
+        "question": "What does TETFUND stand for",
+        "options": [
+            "Tertiary Education Trust Fund",
+            "Teachers Education Trust Fund",
+            "Technical Education Training Fund",
+            "Tertiary Education Training Foundation \no"
+        ],
+        "answer": "Tertiary Education Trust Fund"
+    },
+    {
+        "question": "What is the duration of NYSC service",
+        "options": [
+            "6 months",
+            "1 year",
+            "18 months",
+            "2 years \no"
+        ],
+        "answer": "1 year"
+    },
+    {
+        "question": "Which disease does Nigeria vaccinate children against at birth",
+        "options": [
+            "Polio",
+            "Tuberculosis (BCG)",
+            "Measles",
+            "Hepatitis B \no"
+        ],
+        "answer": "Tuberculosis (BCG)"
+    },
+    {
+        "question": "What is the literacy rate in Nigeria approximately",
+        "options": [
+            "50%",
+            "62%",
+            "75%",
+            "85% \no"
+        ],
+        "answer": "62%"
+    },
+    {
+        "question": "Which organization regulates universities in Nigeria",
+        "options": [
+            "Ministry of Education",
+            "NUC (National Universities Commission)",
+            "JAMB",
+            "TETFUND \no"
+        ],
+        "answer": "NUC (National Universities Commission)"
+    },
+    {
+        "question": "What is the pass mark for JAMB UTME",
+        "options": [
+            "120",
+            "180",
+            "Varies by institution",
+            "200 \no"
+        ],
+        "answer": "Varies by institution"
+    },
+    {
+        "question": "Which Nigerian state has the highest number of out-of-school children",
+        "options": [
+            "Lagos State",
+            "Kano State",
+            "Borno State",
+            "Northern states generally \no"
+        ],
+        "answer": "Northern states generally \no"
+    },
+    {
+        "question": "What is the Child Rights Act about",
+        "options": [
+            "Protection of children",
+            "Child education rights",
+            "Child welfare",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "What is the length of the Second Niger Bridge",
+        "options": [
+            "1.2 km",
+            "1.6 km",
+            "2.0 km",
+            "2.5 km \no"
+        ],
+        "answer": "1.6 km"
+    },
+    {
+        "question": "Which city has the first BRT system in Nigeria",
+        "options": [
+            "Abuja",
+            "Lagos",
+            "Kano",
+            "Port Harcourt \no"
+        ],
+        "answer": "Lagos"
+    },
+    {
+        "question": "What is the capacity of the Dangote Refinery",
+        "options": [
+            "100,000 barrels per day",
+            "350,000 barrels per day",
+            "650,000 barrels per day",
+            "1 million barrels per day \n\no"
+        ],
+        "answer": "650,000 barrels per day"
+    },
+    {
+        "question": "Which railway line connects Abuja to Kaduna",
+        "options": [
+            "Standard Gauge Railway",
+            "Narrow Gauge",
+            "Express Railway",
+            "Metro Railway \no"
+        ],
+        "answer": "Standard Gauge Railway"
+    },
+    {
+        "question": "What is the length of the Third Mainland Bridge",
+        "options": [
+            "5.5 km",
+            "8.5 km",
+            "11.8 km",
+            "15 km \no"
+        ],
+        "answer": "11.8 km"
+    },
+    {
+        "question": "Which port is the largest in West Africa",
+        "options": [
+            "Apapa Port",
+            "Tin Can Island",
+            "Lekki Deep Sea Port",
+            "Port Harcourt Port \no"
+        ],
+        "answer": "Lekki Deep Sea Port"
+    },
+    {
+        "question": "What is the installed electricity generation capacity in Nigeria",
+        "options": [
+            "5,000 MW",
+            "8,000 MW",
+            "12,000 MW",
+            "Over 13,000 MW \no"
+        ],
+        "answer": "Over 13,000 MW \no"
+    },
+    {
+        "question": "Which international airport serves the Federal Capital Territory",
+        "options": [
+            "Abuja Airport",
+            "Nnamdi Azikiwe International Airport",
+            "Kaduna International Airport",
+            "FCT Airport \no"
+        ],
+        "answer": "Nnamdi Azikiwe International Airport"
+    },
+    {
+        "question": "What is the name of the Lagos Blue Line rail project",
+        "options": [
+            "Lagos Metro",
+            "Lagos Rail Mass Transit (Blue Line)",
+            "Lagos Light Rail",
+            "Lagos Express Rail \no"
+        ],
+        "answer": "Lagos Rail Mass Transit (Blue Line)"
+    },
+    {
+        "question": "Which ministry oversees housing development",
+        "options": [
+            "Ministry of Works",
+            "Ministry of Housing",
+            "Ministry of Works and Housing",
+            "Urban Development Ministry \no"
+        ],
+        "answer": "Ministry of Works and Housing"
+    },
+    {
+        "question": "What is the name of Nigeria's sovereign wealth fund",
+        "options": [
+            "Nigeria Sovereign Investment Authority (NSIA)",
+            "Nigerian Investment Fund",
+            "Federal Investment Authority",
+            "National Wealth Fund \no"
+        ],
+        "answer": "Nigeria Sovereign Investment Authority (NSIA)"
+    },
+    {
+        "question": "Which Nigerian owns Globacom",
+        "options": [
+            "Aliko Dangote",
+            "Mike Adenuga",
+            "Tony Elumelu",
+            "Jim Ovia \no"
+        ],
+        "answer": "Mike Adenuga"
+    },
+    {
+        "question": "What does BOI stand for in Nigeria",
+        "options": [
+            "Bank of Industry",
+            "Bureau of Investment",
+            "Board of Industry",
+            "Business of Industry \no"
+        ],
+        "answer": "Bank of Industry"
+    },
+    {
+        "question": "Which sector contributes most to Nigeria's GDP besides oil",
+        "options": [
+            "Agriculture",
+            "Telecommunications",
+            "Services",
+            "Manufacturing \no"
+        ],
+        "answer": "Services"
+    },
+    {
+        "question": "What is the minimum share capital for commercial banks in Nigeria",
+        "options": [
+            "₦10 billion",
+            "₦25 billion",
+            "₦50 billion",
+            "₦100 billion \no"
+        ],
+        "answer": "₦25 billion"
+    },
+    {
+        "question": "Which country is the current chair of the African Union",
+        "options": [
+            "South Africa",
+            "Kenya",
+            "Changes annually",
+            "Nigeria \n\no"
+        ],
+        "answer": "Changes annually"
+    },
+    {
+        "question": "What is the G7",
+        "options": [
+            "Group of 7 industrialized nations",
+            "Economic forum",
+            "Political alliance",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which country left the European Union",
+        "options": [
+            "France",
+            "Germany",
+            "United Kingdom",
+            "Italy \no"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Which organization mediates international disputes",
+        "options": [
+            "United Nations",
+            "International Court of Justice",
+            "World Court",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Who founded Facebook (now Meta)",
+        "options": [
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Jeff Bezos",
+            "Elon Musk \no"
+        ],
+        "answer": "Mark Zuckerberg"
+    },
+    {
+        "question": "What is 5G",
+        "options": [
+            "Fifth generation mobile network",
+            "Faster internet technology",
+            "Advanced telecommunications",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which company produces the iPhone",
+        "options": [
+            "Samsung",
+            "Apple",
+            "Google",
+            "Microsoft \no"
+        ],
+        "answer": "Apple"
+    },
+    {
+        "question": "What is blockchain technology used for",
+        "options": [
+            "Cryptocurrency",
+            "Digital transactions",
+            "Secure record keeping",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which company owns Instagram and WhatsApp",
+        "options": [
+            "Google",
+            "Meta (Facebook)",
+            "Twitter",
+            "Microsoft \no"
+        ],
+        "answer": "Meta (Facebook)"
+    },
+    {
+        "question": "What is the Paris Agreement about",
+        "options": [
+            "Climate change action",
+            "Reducing global warming",
+            "Environmental protection",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which gas is most responsible for global warming",
+        "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon dioxide (CO2)",
+            "Hydrogen \no"
+        ],
+        "answer": "Carbon dioxide (CO2)"
+    },
+    {
+        "question": "What does COP stand for in climate conferences",
+        "options": [
+            "Conference of Parties",
+            "Climate Operating Protocol",
+            "Carbon Offset Program",
+            "Climate Organization Partnership \no"
+        ],
+        "answer": "Conference of Parties"
+    },
+    {
+        "question": "Which ocean is the largest",
+        "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Pacific Ocean",
+            "Arctic Ocean \n\no"
+        ],
+        "answer": "Pacific Ocean"
+    },
+    {
+        "question": "What is deforestation",
+        "options": [
+            "Planting trees",
+            "Cutting down forests",
+            "Forest management",
+            "Forest protection \no"
+        ],
+        "answer": "Cutting down forests"
+    },
+    {
+        "question": "Which country has the largest economy in the world",
+        "options": [
+            "China",
+            "Japan",
+            "United States",
+            "Germany \no"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "What is the World Trade Organization (WTO)",
+        "options": [
+            "International trade regulator",
+            "Trade dispute resolver",
+            "Global trade facilitator",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which currency is used in most of Europe",
+        "options": [
+            "Dollar",
+            "Pound",
+            "Euro",
+            "Franc \no"
+        ],
+        "answer": "Euro"
+    },
+    {
+        "question": "What is inflation",
+        "options": [
+            "Increase in prices",
+            "Decrease in purchasing power",
+            "Economic indicator",
+            "All of the above \no"
+        ],
+        "answer": "All of the above \no"
+    },
+    {
+        "question": "Which organization provides emergency loans to countries",
+        "options": [
+            "World Bank",
+            "International Monetary Fund (IMF)",
+            "United Nations",
+            "African Development Bank \no"
+        ],
+        "answer": "International Monetary Fund (IMF)"
+    }
+]

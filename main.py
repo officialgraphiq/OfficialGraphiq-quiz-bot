@@ -50,6 +50,8 @@ ANNOUNCE_CHAT_ID = os.getenv("ANNOUNCE_CHAT_ID")  # set to integer string, e.g. 
 CATEGORIES = {
     "General": "questions.json",
     "Math": "questions_math.json",
+    "Current Affairs": "questions_current_affairs.json",
+    "Entertainment": "questions_entertainment.json",
     "Geography": "questions_geography.json",
     "Science": "questions_science.json",
     "Sports": "questions_sports.json",

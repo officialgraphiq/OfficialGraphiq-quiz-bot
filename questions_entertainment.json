@@ -1,0 +1,1502 @@
+[
+  {
+    "question": "What is Nollywood?",
+    "options": ["Nigerian Hollywood", "Nigerian film industry", "A movie studio", "A TV channel"],
+    "answer": "Nigerian film industry"
+  },
+  {
+    "question": "Who is known as the \"Queen of Nollywood\"?",
+    "options": ["Genevieve Nnaji", "Funke Akindele", "Omotola Jalade-Ekeinde", "All have been called this"],
+    "answer": "All have been called this"
+  },
+  {
+    "question": "Which actress produced and starred in \"Lionheart\"?",
+    "options": ["Funke Akindele", "Genevieve Nnaji", "Rita Dominic", "Ini Edo"],
+    "answer": "Genevieve Nnaji"
+  },
+  {
+    "question": "What movie did Funke Akindele direct that became a box office hit?",
+    "options": ["A Tribe Called Judah", "Battle on Buka Street", "Omo Ghetto: The Saga", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who directed \"The Wedding Party\"?",
+    "options": ["Kunle Afolayan", "Kemi Adetiba", "Mo Abudu", "Tope Oshin"],
+    "answer": "Kemi Adetiba"
+  },
+  {
+    "question": "Which movie featured the character \"Saro\"?",
+    "options": ["King of Boys", "October 1", "Chief Daddy", "Half of a Yellow Sun"],
+    "answer": "October 1"
+  },
+  {
+    "question": "Who played the lead role in \"King of Boys\"?",
+    "options": ["Genevieve Nnaji", "Sola Sobowale", "Joke Silva", "Funke Akindele"],
+    "answer": "Sola Sobowale"
+  },
+  {
+    "question": "What is the highest-grossing Nollywood movie of all time?",
+    "options": ["A Tribe Called Judah", "Battle on Buka Street", "Everybody Loves Jenifa", "The Wedding Party"],
+    "answer": "Everybody Loves Jenifa"
+  },
+  {
+    "question": "Which actor is known as \"Aki\"?",
+    "options": ["Osita Iheme", "Chinedu Ikedieze", "John Okafor", "Sam Loco Efe"],
+    "answer": "Chinedu Ikedieze"
+  },
+  {
+    "question": "Who is known as \"Pawpaw\"?",
+    "options": ["Chinedu Ikedieze", "Osita Iheme", "John Okafor", "Charles Inojie"],
+    "answer": "Osita Iheme"
+  },
+  {
+    "question": "Which TV series features the Adebanjo family?",
+    "options": ["Papa Ajasco", "The Johnsons", "Jenifa's Diary", "Super Story"],
+    "answer": "The Johnsons"
+  },
+  {
+    "question": "Who plays Jenifa in \"Jenifa's Diary\"?",
+    "options": ["Mercy Johnson", "Funke Akindele", "Ini Edo", "Tonto Dikeh"],
+    "answer": "Funke Akindele"
+  },
+  {
+    "question": "Which director made \"October 1\"?",
+    "options": ["Kunle Afolayan", "Kemi Adetiba", "Tunde Kelani", "Biyi Bandele"],
+    "answer": "Kunle Afolayan"
+  },
+  {
+    "question": "What movie is about the Aba Women's Riot?",
+    "options": ["October 1", "Half of a Yellow Sun", "76", "Lionheart"],
+    "answer": "76"
+  },
+  {
+    "question": "Which streaming platform features many Nollywood movies?",
+    "options": ["Netflix", "Prime Video", "iROKOtv", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is known as \"Starboy\"?",
+    "options": ["Davido", "Wizkid", "Burna Boy", "Olamide"],
+    "answer": "Wizkid"
+  },
+  {
+    "question": "Which Nigerian artist is called \"OBO\"?",
+    "options": ["Wizkid", "Burna Boy", "Davido", "Tekno"],
+    "answer": "Davido"
+  },
+  {
+    "question": "What does OBO stand for?",
+    "options": ["One By One", "Omo Baba Olowo (Son of a wealthy man)", "Only Best Out", "Original Boss Only"],
+    "answer": "Omo Baba Olowo (Son of a wealthy man)"
+  },
+  {
+    "question": "Who won the Grammy for \"Best Global Music Album\" in 2021?",
+    "options": ["Wizkid", "Burna Boy", "Davido", "Tiwa Savage"],
+    "answer": "Burna Boy"
+  },
+  {
+    "question": "Which Nigerian artist collaborated with Beyoncé on \"Brown Skin Girl\"?",
+    "options": ["Tiwa Savage", "Wizkid", "Yemi Alade", "Both A and B"],
+    "answer": "Both A and B"
+  },
+  {
+    "question": "Who is known as the \"African Giant\"?",
+    "options": ["Wizkid", "Burna Boy", "Davido", "2Baba"],
+    "answer": "Burna Boy"
+  },
+  {
+    "question": "Which artist released \"Essence\" featuring Tems?",
+    "options": ["Davido", "Burna Boy", "Wizkid", "Rema"],
+    "answer": "Wizkid"
+  },
+  {
+    "question": "Who is the \"Queen of Afrobeats\"?",
+    "options": ["Tiwa Savage", "Yemi Alade", "Ayra Starr", "Tems"],
+    "answer": "Tiwa Savage"
+  },
+  {
+    "question": "Which artist released the hit song \"Calm Down\"?",
+    "options": ["Rema", "Asake", "Kizz Daniel", "Omah Lay"],
+    "answer": "Rema"
+  },
+  {
+    "question": "Who founded Mavin Records?",
+    "options": ["Olamide", "Don Jazzy", "D'banj", "2Baba"],
+    "answer": "Don Jazzy"
+  },
+  {
+    "question": "Which artist owns YBNL record label?",
+    "options": ["Phyno", "Olamide", "Wizkid", "Ice Prince"],
+    "answer": "Olamide"
+  },
+  {
+    "question": "Who is known as the \"Pioneer of Afrobeat\"?",
+    "options": ["King Sunny Ade", "Fela Kuti", "Ebenezer Obey", "Majek Fashek"],
+    "answer": "Fela Kuti"
+  },
+  {
+    "question": "Which female artist released \"Johnny\"?",
+    "options": ["Simi", "Tiwa Savage", "Yemi Alade", "Teni"],
+    "answer": "Yemi Alade"
+  },
+  {
+    "question": "Who sang \"Case\"?",
+    "options": ["Teni", "Simi", "Niniola", "Omawumi"],
+    "answer": "Teni"
+  },
+  {
+    "question": "Which artist is known for \"Ojuelegba\"?",
+    "options": ["Davido", "Wizkid", "Olamide", "Phyno"],
+    "answer": "Wizkid"
+  },
+  {
+    "question": "Who released \"Love Nwantiti\"?",
+    "options": ["Joeboy", "Fireboy DML", "CKay", "Omah Lay"],
+    "answer": "CKay"
+  },
+  {
+    "question": "Which artist sang \"Peru\"?",
+    "options": ["Wizkid", "Fireboy DML", "Rema", "Asake"],
+    "answer": "Fireboy DML"
+  },
+  {
+    "question": "Who is Tems?",
+    "options": ["A Nigerian singer", "A songwriter", "Grammy nominee", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which artist released \"Sungba\"?",
+    "options": ["Asake", "Zinolesky", "Young Jonn", "All collaborated"],
+    "answer": "Asake"
+  },
+  {
+    "question": "Who sang \"Buga\"?",
+    "options": ["Kizz Daniel", "Tekno", "Davido", "Mayorkun"],
+    "answer": "Kizz Daniel"
+  },
+  {
+    "question": "What is the main ingredient in Jollof rice?",
+    "options": ["Corn", "Rice", "Beans", "Yam"],
+    "answer": "Rice"
+  },
+  {
+    "question": "What is Fufu made from?",
+    "options": ["Cassava or yam", "Rice", "Corn", "Beans"],
+    "answer": "Cassava or yam"
+  },
+  {
+    "question": "What is Chin Chin?",
+    "options": ["A fried snack", "A sweet crunchy snack", "A popular Nigerian treat", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Puff Puff?",
+    "options": ["Deep-fried dough balls", "A sweet snack", "Similar to doughnuts", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Zobo?",
+    "options": ["A drink made from hibiscus", "A red drink", "A refreshing beverage", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Chapman?",
+    "options": ["A Nigerian cocktail", "A fruit punch", "A non-alcoholic drink", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Dodo?",
+    "options": ["Fried plantain", "A side dish", "A sweet snack", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What soup is made with okra?",
+    "options": ["Egusi soup", "Okro soup", "Efo riro", "Banga soup"],
+    "answer": "Okro soup"
+  },
+  {
+    "question": "What is Boli?",
+    "options": ["Roasted plantain", "Street food", "Often eaten with groundnut", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Kunun?",
+    "options": ["A grain-based drink", "A Northern Nigerian drink", "Made from millet or sorghum", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Efo Riro?",
+    "options": ["A Yoruba vegetable soup", "Made with spinach", "A popular Nigerian soup", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Amala?",
+    "options": ["Made from yam flour", "A brown swallow", "A Yoruba dish", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ofada rice?",
+    "options": ["Local Nigerian rice", "Unpolished rice", "Often eaten with stew", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Nkwobi?",
+    "options": ["Spiced cow foot", "An Igbo delicacy", "A popular dish", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Kuli Kuli?",
+    "options": ["Groundnut snack", "A crunchy snack", "Made from peanuts", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ankara?",
+    "options": ["African print fabric", "Colorful fabric", "Popular Nigerian fashion material", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Aso Ebi?",
+    "options": ["Uniform dress for events", "Family cloth", "Coordinated outfits for weddings", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Gele?",
+    "options": ["A head wrap", "Traditional headgear for women", "A Nigerian fashion accessory", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Adire?",
+    "options": ["Tie-dye fabric", "A Yoruba textile", "Traditional Nigerian fabric", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Buba?",
+    "options": ["A traditional blouse", "A Yoruba garment", "Women's top", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Nigerian designer is internationally recognized?",
+    "options": ["Deola Sagoe", "Lisa Folawiyo", "Mai Atafo", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What are George wrappers?",
+    "options": ["Expensive wrappers", "Traditional fabric", "Used for special occasions", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Iro and Buba?",
+    "options": ["Yoruba traditional attire", "Wrapper and blouse", "Women's outfit", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Okuku?",
+    "options": ["A traditional cap", "Yoruba hat", "Men's headgear", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Agbada?",
+    "options": ["Flowing robe for men", "Traditional Nigerian attire", "Worn on special occasions", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which beach is popular in Lagos?",
+    "options": ["Elegushi Beach", "Bar Beach", "Lekki Beach", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the Yankari Game Reserve?",
+    "options": ["Plateau State", "Bauchi State", "Borno State", "Kano State"],
+    "answer": "Bauchi State"
+  },
+  {
+    "question": "What can you see at Yankari?",
+    "options": ["Elephants", "Wildlife", "Warm springs", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which state is known for Obudu Cattle Ranch?",
+    "options": ["Plateau State", "Cross River State", "Taraba State", "Adamawa State"],
+    "answer": "Cross River State"
+  },
+  {
+    "question": "What is special about Ikogosi?",
+    "options": ["Warm and cold springs meet", "Natural wonder", "Tourist attraction in Ekiti", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the Lekki Conservation Centre?",
+    "options": ["Abuja", "Lagos", "Port Harcourt", "Ibadan"],
+    "answer": "Lagos"
+  },
+  {
+    "question": "What is the longest canopy walkway in Africa?",
+    "options": ["At Lekki Conservation Centre", "In Lagos", "A tourist attraction", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which museum is in Lagos?",
+    "options": ["National Museum", "Nike Art Gallery", "Freedom Park", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where can you find ancient rock formations in Abeokuta?",
+    "options": ["Zuma Rock", "Olumo Rock", "Aso Rock", "Idanre Hills"],
+    "answer": "Olumo Rock"
+  },
+  {
+    "question": "Which city is known for its annual carnival?",
+    "options": ["Lagos", "Abuja", "Calabar", "Port Harcourt"],
+    "answer": "Calabar"
+  },
+  {
+    "question": "What is Gelede?",
+    "options": ["A traditional masquerade", "Yoruba cultural performance", "An art form", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Uli body art?",
+    "options": ["Igbo traditional body painting", "Decorative art", "Cultural practice", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the Benin Bronze?",
+    "options": ["Ancient sculptures", "Artifacts from Benin Kingdom", "Historical art pieces", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is a talking drum?",
+    "options": ["Traditional drum", "Can mimic speech", "Used in ceremonies", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Highlife music?",
+    "options": ["A music genre", "Popular in West Africa", "Originated in Ghana and Nigeria", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Juju music?",
+    "options": ["Yoruba music style", "Traditional Nigerian music", "Uses talking drums", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is King Sunny Ade?",
+    "options": ["A Juju musician", "Nigerian music legend", "International performer", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Afrobeat?",
+    "options": ["Music genre by Fela Kuti", "Fusion of jazz and highlife", "Nigerian music style", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Owambe?",
+    "options": ["A party", "Nigerian celebration style", "Social gathering", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Spraying at parties?",
+    "options": ["Throwing money on dancers", "Nigerian party tradition", "Showing appreciation", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which movie won the Oscar for Best Picture in 2024?",
+    "options": ["Barbie", "Oppenheimer", "Everything Everywhere All at Once", "The Fabelmans"],
+    "answer": "Oppenheimer"
+  },
+  {
+    "question": "Who played Iron Man in Marvel movies?",
+    "options": ["Chris Evans", "Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo"],
+    "answer": "Robert Downey Jr."
+  },
+  {
+    "question": "What is the highest-grossing movie of all time?",
+    "options": ["Titanic", "Avatar", "Avengers: Endgame", "Avatar: The Way of Water"],
+    "answer": "Avatar"
+  },
+  {
+    "question": "Which streaming service produces \"Stranger Things\"?",
+    "options": ["HBO Max", "Netflix", "Disney+", "Prime Video"],
+    "answer": "Netflix"
+  },
+  {
+    "question": "Who is the creator of Harry Potter?",
+    "options": ["J.R.R. Tolkien", "J.K. Rowling", "Suzanne Collins", "George R.R. Martin"],
+    "answer": "J.K. Rowling"
+  },
+  {
+    "question": "Who is known as the \"King of Pop\"?",
+    "options": ["Elvis Presley", "Michael Jackson", "Prince", "Stevie Wonder"],
+    "answer": "Michael Jackson"
+  },
+  {
+    "question": "Which artist released \"Thriller\"?",
+    "options": ["Prince", "Michael Jackson", "Whitney Houston", "Marvin Gaye"],
+    "answer": "Michael Jackson"
+  },
+  {
+    "question": "Who is the most-streamed artist on Spotify (as of recent years)?",
+    "options": ["Drake", "Taylor Swift", "Ed Sheeran", "Bad Bunny"],
+    "answer": "Taylor Swift"
+  },
+  {
+    "question": "Which band sang \"Bohemian Rhapsody\"?",
+    "options": ["The Beatles", "Led Zeppelin", "Queen", "Pink Floyd"],
+    "answer": "Queen"
+  },
+  {
+    "question": "Who is known as \"Queen Bey\"?",
+    "options": ["Rihanna", "Beyoncé", "Adele", "Lady Gaga"],
+    "answer": "Beyoncé"
+  },
+  {
+    "question": "What is Sushi?",
+    "options": ["Japanese dish with rice and fish", "Chinese food", "Korean food", "Thai food"],
+    "answer": "Japanese dish with rice and fish"
+  },
+  {
+    "question": "What country is Pizza from?",
+    "options": ["France", "Spain", "Italy", "Greece"],
+    "answer": "Italy"
+  },
+  {
+    "question": "What is Paella?",
+    "options": ["Spanish rice dish", "Italian pasta", "French bread", "Greek salad"],
+    "answer": "Spanish rice dish"
+  },
+  {
+    "question": "What is Kimchi?",
+    "options": ["Korean fermented vegetables", "Japanese soup", "Chinese noodles", "Thai curry"],
+    "answer": "Korean fermented vegetables"
+  },
+  {
+    "question": "Which country is famous for Croissants?",
+    "options": ["Italy", "Spain", "France", "Belgium"],
+    "answer": "France"
+  },
+  {
+    "question": "Where is the Eiffel Tower?",
+    "options": ["London", "Paris", "Rome", "Berlin"],
+    "answer": "Paris"
+  },
+  {
+    "question": "Which country has the Taj Mahal?",
+    "options": ["Pakistan", "Bangladesh", "India", "Nepal"],
+    "answer": "India"
+  },
+  {
+    "question": "Where is the Statue of Liberty?",
+    "options": ["Washington D.C.", "Los Angeles", "New York", "Boston"],
+    "answer": "New York"
+  },
+  {
+    "question": "Which city is known as the \"Big Apple\"?",
+    "options": ["Los Angeles", "Chicago", "New York", "Miami"],
+    "answer": "New York"
+  },
+  {
+    "question": "Where are the Pyramids of Giza?",
+    "options": ["Sudan", "Morocco", "Egypt", "Tunisia"],
+    "answer": "Egypt"
+  },
+  {
+    "question": "Who is known as \"Mr. Ibu\" in Nollywood?",
+    "options": ["Charles Inojie", "John Okafor", "Nkem Owoh", "Sam Loco Efe"],
+    "answer": "John Okafor"
+  },
+  {
+    "question": "Which movie featured RMD (Richard Mofe-Damijo) as a governor?",
+    "options": ["30 Days in Atlanta", "The Figurine", "76", "Chief Daddy"],
+    "answer": "76"
+  },
+  {
+    "question": "Who directed \"King of Boys\"?",
+    "options": ["Kunle Afolayan", "Kemi Adetiba", "Genevieve Nnaji", "Mo Abudu"],
+    "answer": "Kemi Adetiba"
+  },
+  {
+    "question": "Which comedy series features \"Akpos\"?",
+    "options": ["Jenifa's Diary", "The Johnsons", "30 Days in Atlanta", "My Flatmates"],
+    "answer": "30 Days in Atlanta"
+  },
+  {
+    "question": "Who is \"Osuofia\"?",
+    "options": ["John Okafor", "Nkem Owoh", "Pete Edochie", "Kanayo O. Kanayo"],
+    "answer": "Nkem Owoh"
+  },
+  {
+    "question": "Which actress is married to footballer Jay Jay Okocha's brother?",
+    "options": ["Ini Edo", "Mercy Johnson", "Stephanie Okereke", "Uche Jombo"],
+    "answer": "Mercy Johnson"
+  },
+  {
+    "question": "What is \"Chief Daddy\" about?",
+    "options": ["A wealthy man's will", "Family drama", "Comedy about inheritance", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who produced \"The Wedding Party\"?",
+    "options": ["Mo Abudu", "Kemi Adetiba", "EbonyLife Films", "Both A and C"],
+    "answer": "Both A and C"
+  },
+  {
+    "question": "Which actor is known for playing \"evil\" roles?",
+    "options": ["Kanayo O. Kanayo", "Pete Edochie", "Bob Manuel", "All of the above"],
+    "answer": "Kanayo O. Kanayo"
+  },
+  {
+    "question": "What TV show features \"Tari\" and \"Shalewa\"?",
+    "options": ["Skinny Girl in Transit", "Jenifa's Diary", "The Johnsons", "Tinsel"],
+    "answer": "Skinny Girl in Transit"
+  },
+  {
+    "question": "Who starred in \"Half of a Yellow Sun\"?",
+    "options": ["Genevieve Nnaji", "Thandie Newton", "Chiwetel Ejiofor", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which movie tells the story of Nigerian independence?",
+    "options": ["October 1", "76", "Half of a Yellow Sun", "Dry"],
+    "answer": "October 1"
+  },
+  {
+    "question": "Who is the lead actress in \"Glamour Girls\"?",
+    "options": ["Liz Benson", "Eucharia Anunobi", "Jennifer Eliogu", "All were in it"],
+    "answer": "All were in it"
+  },
+  {
+    "question": "Which movie did Ramsey Nouah produce?",
+    "options": ["Living in Bondage: Breaking Free", "Merry Men", "76", "The Figurine"],
+    "answer": "Living in Bondage: Breaking Free"
+  },
+  {
+    "question": "What is \"Tinsel\"?",
+    "options": ["A daily TV series", "A soap opera", "Long-running show", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is \"Baddest Boy Ever Liveth\"?",
+    "options": ["Wizkid", "Olamide", "Davido", "Phyno"],
+    "answer": "Olamide"
+  },
+  {
+    "question": "Which artist sang \"Fall\"?",
+    "options": ["Wizkid", "Davido", "Tekno", "Mr Eazi"],
+    "answer": "Davido"
+  },
+  {
+    "question": "Who is known as \"Daddy Yo\"?",
+    "options": ["2Baba", "Wizkid", "D'banj", "P-Square"],
+    "answer": "Wizkid"
+  },
+  {
+    "question": "Which duo was known as P-Square?",
+    "options": ["Peter and Paul Okoye", "Twin brothers", "Singing and dancing duo", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who sang \"African Queen\"?",
+    "options": ["2Baba (2face)", "D'banj", "P-Square", "Olu Maintain"],
+    "answer": "2Baba (2face)"
+  },
+  {
+    "question": "Which artist is known for \"Shoki\" dance?",
+    "options": ["Olamide", "Lil Kesh", "Reekado Banks", "Adekunle Gold"],
+    "answer": "Lil Kesh"
+  },
+  {
+    "question": "Who sang \"Duduke\"?",
+    "options": ["Simi", "Niniola", "Yemi Alade", "Teni"],
+    "answer": "Simi"
+  },
+  {
+    "question": "Which artist released \"Shayo\"?",
+    "options": ["Wizkid", "Davido", "Adekunle Gold", "Kizz Daniel"],
+    "answer": "Adekunle Gold"
+  },
+  {
+    "question": "Who is \"Alhaji Tekno\"?",
+    "options": ["Tekno", "A music producer", "A Nigerian artist", "Both A and C"],
+    "answer": "Both A and C"
+  },
+  {
+    "question": "Which female artist sang \"Mama\"?",
+    "options": ["Tiwa Savage", "Yemi Alade", "Mayorkun", "Teni"],
+    "answer": "Mayorkun"
+  },
+  {
+    "question": "Who founded Chocolate City record label?",
+    "options": ["M.I Abaga", "Audu Maikori", "Ice Prince", "Jesse Jagz"],
+    "answer": "Audu Maikori"
+  },
+  {
+    "question": "Which artist sang \"Gasolina\"?",
+    "options": ["Olamide", "Phyno", "Reminisce", "Mr Real"],
+    "answer": "Olamide"
+  },
+  {
+    "question": "Who is known for \"Pana\"?",
+    "options": ["Davido", "Tekno", "Wizkid", "Mr Eazi"],
+    "answer": "Tekno"
+  },
+  {
+    "question": "Which artist released \"If\"?",
+    "options": ["Wizkid", "Davido", "Runtown", "Kizz Daniel"],
+    "answer": "Davido"
+  },
+  {
+    "question": "Who sang \"Science Student\"?",
+    "options": ["Wizkid", "Davido", "Olamide", "Naira Marley"],
+    "answer": "Olamide"
+  },
+  {
+    "question": "Which artist is known as \"001\"?",
+    "options": ["Wizkid", "Davido", "Burna Boy", "Zlatan"],
+    "answer": "Davido"
+  },
+  {
+    "question": "Who released \"Soco\"?",
+    "options": ["Wizkid ft. Terri, Spotless, Ceeza Milli", "Davido", "Burna Boy", "Tekno"],
+    "answer": "Wizkid ft. Terri, Spotless, Ceeza Milli"
+  },
+  {
+    "question": "Which artist sang \"Leg Over\"?",
+    "options": ["Wizkid", "Mr Eazi", "Davido", "Tekno"],
+    "answer": "Mr Eazi"
+  },
+  {
+    "question": "Who is the \"Zazoo Zeh\" crooner?",
+    "options": ["Olamide", "Portable", "Naira Marley", "Zlatan"],
+    "answer": "Portable"
+  },
+  {
+    "question": "Which artist released \"Ginger\" with Wizkid?",
+    "options": ["Tems", "Burna Boy", "Davido", "Justin Bieber"],
+    "answer": "Burna Boy"
+  },
+  {
+    "question": "What is Banga soup?",
+    "options": ["Palm nut soup", "Delta/Rivers specialty", "Ofe Akwu in Igbo", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ugba?",
+    "options": ["Oil bean seed", "Igbo delicacy", "Ukazi ingredient", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ogbono soup made from?",
+    "options": ["Wild mango seeds", "Bush mango", "Draw soup", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Afang soup?",
+    "options": ["Vegetable soup", "From Cross River/Akwa Ibom", "Made with waterleaf", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Edikang Ikong?",
+    "options": ["Vegetable soup", "Calabar specialty", "Made with ugu and waterleaf", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Abacha?",
+    "options": ["African salad", "Made from cassava", "Igbo dish", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is White soup (Ofe Nsala)?",
+    "options": ["Igbo soup", "No palm oil", "Made with yam/cocoyam", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Miyan Kuka?",
+    "options": ["Baobab leaf soup", "Northern Nigerian soup", "Hausa specialty", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Tuwo Shinkafa?",
+    "options": ["Rice swallow", "Northern Nigerian dish", "Similar to fufu", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Dan Wake?",
+    "options": ["Bean flour dumpling", "Northern Nigerian snack", "Street food", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Masa?",
+    "options": ["Rice cakes", "Northern Nigerian food", "Like pancakes", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Gurasa?",
+    "options": ["Northern bread", "Fried bread", "Street food", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Fura da Nono?",
+    "options": ["Millet balls and milk", "Northern Nigerian drink", "Nutritious beverage", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Agidi?",
+    "options": ["Corn pudding", "Eko or Ogi solidified", "Eaten with sauce", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Isi Ewu?",
+    "options": ["Goat head delicacy", "Igbo specialty", "Spicy dish", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Aso Oke?",
+    "options": ["Hand-woven cloth", "Yoruba traditional fabric", "Used for special occasions", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Kampala fabric?",
+    "options": ["African print", "Similar to Ankara", "Traditional fabric", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is a Fila?",
+    "options": ["Traditional cap", "Yoruba hat", "Men's headgear", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Sokoto?",
+    "options": ["Traditional trousers", "Loose-fitting pants", "Part of men's native wear", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is Lisa Folawiyo?",
+    "options": ["Nigerian designer", "Jewelry by Lisa founder", "International fashion designer", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Orange Culture?",
+    "options": ["Nigerian fashion brand", "Menswear brand", "Contemporary fashion", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is Mai Atafo?",
+    "options": ["Nigerian designer", "Menswear specialist", "Celebrity designer", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Cloth?",
+    "options": ["Lagos Fashion Week organizer", "Fashion platform", "Style House Files founder", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the Coral bead?",
+    "options": ["Traditional jewelry", "Benin cultural symbol", "Worn by royalty", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ichafun?",
+    "options": ["Beaded crown", "Yoruba royal headgear", "Traditional accessory", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is Idanre Hills?",
+    "options": ["Ondo State", "Ancient settlement", "Tourist attraction", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Erin-ijesha Waterfall?",
+    "options": ["Olumirin Waterfall", "In Osun State", "Seven-step waterfall", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is Oguta Lake?",
+    "options": ["Imo State", "Natural lake", "Tourist destination", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the Ikogosi Warm Spring?",
+    "options": ["Where hot and cold springs meet", "In Ekiti State", "Natural wonder", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the Nike Art Gallery?",
+    "options": ["Lagos", "Largest art gallery in West Africa", "Cultural center", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Terra Kulture?",
+    "options": ["Cultural center in Lagos", "Art gallery and restaurant", "Performance venue", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the Osun-Osogbo Sacred Grove?",
+    "options": ["Osun State", "UNESCO World Heritage Site", "Sacred forest", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is New Afrika Shrine?",
+    "options": ["Music venue", "Fela Kuti's legacy", "In Lagos", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the Millennium Park?",
+    "options": ["Abuja", "Largest park in Nigeria", "Recreation center", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Jabi Lake?",
+    "options": ["Artificial lake in Abuja", "Recreation spot", "Tourist attraction", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Nsibidi?",
+    "options": ["Ancient writing system", "Used by Ekpe society", "Symbol communication", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ibeji?",
+    "options": ["Yoruba twin figures", "Sacred sculptures", "Traditional art", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Uli art?",
+    "options": ["Igbo body and wall art", "Decorative patterns", "Traditional painting", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the Eyo Masquerade?",
+    "options": ["Lagos State symbol", "Adamu Orisha play", "Cultural festival", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Apala music?",
+    "options": ["Yoruba music genre", "Percussion-based music", "Traditional style", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Fuji music?",
+    "options": ["Yoruba music style", "Percussion and vocals", "Popular in South-West", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is Wasiu Ayinde Marshall?",
+    "options": ["K1 De Ultimate", "Fuji musician", "King of Fuji", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Sakara music?",
+    "options": ["Yoruba traditional music", "Uses traditional drums", "Folk music style", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the \"Shaku Shaku\" dance?",
+    "options": ["Popular Nigerian dance", "Street dance move", "2018 trend", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is \"Zanku\" dance?",
+    "options": ["Leg work dance", "By Zlatan", "Popular street dance", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which movie features Jack and Rose?",
+    "options": ["Romeo and Juliet", "Titanic", "The Notebook", "Pearl Harbor"],
+    "answer": "Titanic"
+  },
+  {
+    "question": "Who directed \"The Godfather\"?",
+    "options": ["Steven Spielberg", "Martin Scorsese", "Francis Ford Coppola", "Quentin Tarantino"],
+    "answer": "Francis Ford Coppola"
+  },
+  {
+    "question": "Which TV show features dragons?",
+    "options": ["Game of Thrones", "Vikings", "The Witcher", "Lord of the Rings"],
+    "answer": "Game of Thrones"
+  },
+  {
+    "question": "Who played Black Panther?",
+    "options": ["Idris Elba", "Chadwick Boseman", "Michael B. Jordan", "John Boyega"],
+    "answer": "Chadwick Boseman"
+  },
+  {
+    "question": "Which movie has the quote \"I'll be back\"?",
+    "options": ["Rocky", "Rambo", "The Terminator", "Die Hard"],
+    "answer": "The Terminator"
+  },
+  {
+    "question": "Who is the \"Queen of Pop\"?",
+    "options": ["Madonna", "Britney Spears", "Lady Gaga", "Beyoncé"],
+    "answer": "Madonna"
+  },
+  {
+    "question": "Which band sang \"Yesterday\"?",
+    "options": ["The Rolling Stones", "The Beatles", "The Beach Boys", "The Who"],
+    "answer": "The Beatles"
+  },
+  {
+    "question": "Who released \"Shape of You\"?",
+    "options": ["Justin Bieber", "Shawn Mendes", "Ed Sheeran", "Sam Smith"],
+    "answer": "Ed Sheeran"
+  },
+  {
+    "question": "Which artist is known for \"Rolling in the Deep\"?",
+    "options": ["Adele", "Amy Winehouse", "Florence Welch", "Jessie J"],
+    "answer": "Adele"
+  },
+  {
+    "question": "Who is \"The Boss\" in music?",
+    "options": ["Bob Dylan", "Bruce Springsteen", "Billy Joel", "Elton John"],
+    "answer": "Bruce Springsteen"
+  },
+  {
+    "question": "What is Tacos from?",
+    "options": ["Spain", "Mexico", "Brazil", "Argentina"],
+    "answer": "Mexico"
+  },
+  {
+    "question": "What is Pad Thai?",
+    "options": ["Chinese noodles", "Thai stir-fried noodles", "Vietnamese dish", "Japanese ramen"],
+    "answer": "Thai stir-fried noodles"
+  },
+  {
+    "question": "What country is Curry originally from?",
+    "options": ["Thailand", "China", "India", "Indonesia"],
+    "answer": "India"
+  },
+  {
+    "question": "What is Falafel?",
+    "options": ["Middle Eastern fried ball", "Greek food", "Turkish dish", "Egyptian food"],
+    "answer": "Middle Eastern fried ball"
+  },
+  {
+    "question": "What is Pho?",
+    "options": ["Chinese soup", "Vietnamese noodle soup", "Thai soup", "Korean soup"],
+    "answer": "Vietnamese noodle soup"
+  },
+  {
+    "question": "Where is the Colosseum?",
+    "options": ["Greece", "Rome, Italy", "Turkey", "Spain"],
+    "answer": "Rome, Italy"
+  },
+  {
+    "question": "Which country has Machu Picchu?",
+    "options": ["Mexico", "Chile", "Peru", "Bolivia"],
+    "answer": "Peru"
+  },
+  {
+    "question": "Where is the Great Barrier Reef?",
+    "options": ["New Zealand", "Australia", "Hawaii", "Philippines"],
+    "answer": "Australia"
+  },
+  {
+    "question": "Which city is known as the \"City of Love\"?",
+    "options": ["Venice", "Rome", "Paris", "Barcelona"],
+    "answer": "Paris"
+  },
+  {
+    "question": "Where is Christ the Redeemer statue?",
+    "options": ["Argentina", "Brazil (Rio de Janeiro)", "Chile", "Colombia"],
+    "answer": "Brazil (Rio de Janeiro)"
+  },
+  {
+    "question": "Which movie features Omotola Jalade as \"Anne\"?",
+    "options": ["Blood Sisters", "Alter Ego", "Games Women Play", "Ije"],
+    "answer": "Ije"
+  },
+  {
+    "question": "Who acted alongside Genevieve in \"Road to Yesterday\"?",
+    "options": ["Ramsey Nouah", "Majid Michel", "Oris Erhuero", "Jim Iyke"],
+    "answer": "Oris Erhuero"
+  },
+  {
+    "question": "TRUE or FALSE: Aki and Pawpaw are real-life brothers.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "FALSE"
+  },
+  {
+    "question": "Which movie did Kemi Adetiba direct before \"King of Boys\"?",
+    "options": ["The Wedding Party", "Chief Daddy", "Fifty", "October 1"],
+    "answer": "The Wedding Party"
+  },
+  {
+    "question": "Who is the producer of \"Blood Sisters\" on Netflix?",
+    "options": ["Mo Abudu", "Kemi Adetiba", "Funke Akindele", "Jade Osiberu"],
+    "answer": "Mo Abudu"
+  },
+  {
+    "question": "TRUE or FALSE: \"Jenifa's Diary\" started as a movie before becoming a TV series.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Which actor played \"Eddy\" in \"Living in Bondage\"?",
+    "options": ["Kenneth Okonkwo", "Ramsey Nouah", "Kanayo O. Kanayo", "Bob Manuel"],
+    "answer": "Kenneth Okonkwo"
+  },
+  {
+    "question": "What is Mercy Johnson's character name in \"The Maid\"?",
+    "options": ["Queen", "Ese", "Princess", "Beauty"],
+    "answer": "Ese"
+  },
+  {
+    "question": "Who directed \"The Figurine\"?",
+    "options": ["Kunle Afolayan", "Tunde Kelani", "Teco Benson", "Lancelot Imasuen"],
+    "answer": "Kunle Afolayan"
+  },
+  {
+    "question": "TRUE or FALSE: Rita Dominic has her own production company.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Which comedy show features \"Broda Shaggi\"?",
+    "options": ["Jenifa's Diary", "Officer Woos", "Inspector Perry", "Selense"],
+    "answer": "Officer Woos"
+  },
+  {
+    "question": "Who played \"Sade\" in \"The Wedding Party 2\"?",
+    "options": ["Adesua Etomi", "Banky W", "Sola Sobowale", "Alibaba"],
+    "answer": "Adesua Etomi"
+  },
+  {
+    "question": "What year was \"Living in Bondage\" released?",
+    "options": ["1990", "1992", "1995", "1998"],
+    "answer": "1992"
+  },
+  {
+    "question": "TRUE or FALSE: Nollywood is the second largest film industry in the world by volume.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Which actress starred in \"Dry\" about child marriage?",
+    "options": ["Genevieve Nnaji", "Stephanie Linus", "Rita Dominic", "Omotola Jalade"],
+    "answer": "Stephanie Linus"
+  },
+  {
+    "question": "TRUE or FALSE: Wizkid was once signed to Banky W's record label.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who featured on Drake's \"One Dance\"?",
+    "options": ["Burna Boy", "Wizkid", "Davido", "Mr Eazi"],
+    "answer": "Wizkid"
+  },
+  {
+    "question": "What is Burna Boy's real name?",
+    "options": ["Damini Ogulu", "Ayodeji Balogun", "David Adeleke", "Divine Ikubor"],
+    "answer": "Damini Ogulu"
+  },
+  {
+    "question": "TRUE or FALSE: Tiwa Savage was formerly signed to Mavin Records.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who sang \"Omo Ada\"?",
+    "options": ["Simi", "Brymo", "Adekunle Gold", "Johnny Drille"],
+    "answer": "Brymo"
+  },
+  {
+    "question": "Which artist released \"Wonma\" in 2023?",
+    "options": ["Rema", "Asake", "Seyi Vibez", "Omah Lay"],
+    "answer": "Asake"
+  },
+  {
+    "question": "TRUE or FALSE: Flavour N'abania is from the South-East.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who is Rema signed to?",
+    "options": ["YBNL", "Mavin Records", "DMW", "Starboy Entertainment"],
+    "answer": "Mavin Records"
+  },
+  {
+    "question": "What is Ayra Starr's breakthrough song?",
+    "options": ["Bloody Samaritan", "Away", "Rush", "Sability"],
+    "answer": "Away"
+  },
+  {
+    "question": "TRUE or FALSE: Fela Kuti's son, Femi Kuti, is also a musician.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who sang \"Ekwe\"?",
+    "options": ["Flavour", "Phyno", "Zoro", "Umu Obiligbo"],
+    "answer": "Flavour"
+  },
+  {
+    "question": "Which artist is known as \"Orezi\"?",
+    "options": ["Allen Esegine", "Nigerian artist", "Known for \"Rihanna\"", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Seun Kuti is Fela Kuti's youngest son.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who released \"Jerusalema\" remix with Burna Boy?",
+    "options": ["Wizkid", "Master KG", "DJ Maphorisa", "Black Coffee"],
+    "answer": "Master KG"
+  },
+  {
+    "question": "What is Davido's record label called?",
+    "options": ["HKN Music", "DMW (Davido Music Worldwide)", "OBO Records", "30BG"],
+    "answer": "DMW (Davido Music Worldwide)"
+  },
+  {
+    "question": "TRUE or FALSE: Tems won a Grammy in 2023.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who is \"Johnny Drille\"?",
+    "options": ["Alternative music artist", "Mavin Records signee", "Known for folk music", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which artist sang \"Nowo\"?",
+    "options": ["Teni", "DJ Spinall ft. Wizkid", "Pheelz ft. Davido", "Young Jonn"],
+    "answer": "DJ Spinall ft. Wizkid"
+  },
+  {
+    "question": "TRUE or FALSE: Kizz Daniel was formerly known as Kiss Daniel.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who released \"Electricity\" with Don Jazzy?",
+    "options": ["Tiwa Savage", "Pheelz", "D'banj", "Reekado Banks"],
+    "answer": "Pheelz"
+  },
+  {
+    "question": "TRUE or FALSE: Jollof rice originated in Nigeria.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "FALSE"
+  },
+  {
+    "question": "What is Ewedu soup?",
+    "options": ["Jute leaf soup", "Yoruba soup", "Slimy soup", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the main ingredient in Suya spice?",
+    "options": ["Pepper", "Groundnut (Peanut)", "Ginger", "Garlic"],
+    "answer": "Groundnut (Peanut)"
+  },
+  {
+    "question": "TRUE or FALSE: Garri can be eaten with cold water and sugar.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Bitterleaf soup?",
+    "options": ["Ofe Onugbu", "Made with bitter leaves", "Igbo soup", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ewa Agoyin?",
+    "options": ["Beans and pepper sauce", "Yoruba dish", "Street food", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Palm wine is alcoholic.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Gbegiri soup?",
+    "options": ["Bean soup", "Yoruba soup", "Eaten with amala", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is \"Sharwama\"?",
+    "options": ["Shawarma (adapted spelling)", "Popular street food", "Wrap with meat and vegetables", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Yam is a staple food in Nigeria.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Okpa?",
+    "options": ["Bambara nut pudding", "Enugu specialty", "Steamed snack", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Ogi/Pap made from?",
+    "options": ["Corn/Maize", "Millet", "Sorghum", "All can be used"],
+    "answer": "All can be used"
+  },
+  {
+    "question": "TRUE or FALSE: Catfish is commonly used in Nigerian pepper soup.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Nkwobi eaten with?",
+    "options": ["Palm wine", "Beer", "Soft drinks", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is the difference between Fufu and Eba?",
+    "options": ["Fufu is pounded, Eba is garri", "Different ingredients", "Different preparation methods", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Nigerian fashion week holds annually in Lagos.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Damask?",
+    "options": ["Expensive fabric", "Shiny material", "Used for special occasions", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is Deola Sagoe?",
+    "options": ["Nigerian fashion designer", "International designer", "Known for Aso Oke designs", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Ankara fabric originated from Nigeria.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "FALSE"
+  },
+  {
+    "question": "What is an Ipele?",
+    "options": ["Yoruba shoulder cloth", "Part of women's attire", "Decorative shawl", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is Yemi Osunkoya (Kosibah)?",
+    "options": ["Nigerian designer", "Celebrity designer", "Wedding dress specialist", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Gele tying is an art form in Nigeria.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Lace fabric used for?",
+    "options": ["Special occasions", "Weddings", "Parties", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is a Kaftan?",
+    "options": ["Flowing robe", "Unisex garment", "Comfortable attire", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Nigerian designers showcase at international fashion weeks.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Where is Gurara Falls located?",
+    "options": ["Niger State", "Kaduna State", "Both A and B (border)", "Plateau State"],
+    "answer": "Both A and B (border)"
+  },
+  {
+    "question": "TRUE or FALSE: Makoko is a floating community in Lagos.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is special about Badagry?",
+    "options": ["Historical slave trade route", "First storey building in Nigeria", "Tourist destination", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the Sukur Cultural Landscape?",
+    "options": ["Adamawa State", "UNESCO World Heritage Site", "Ancient settlement", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: The Kainji Dam produces electricity.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is the Abraka Turf?",
+    "options": ["Beach resort", "In Delta State", "Tourist destination", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the National Theatre located?",
+    "options": ["Lagos (Iganmu)", "Abuja", "Ibadan", "Port Harcourt"],
+    "answer": "Lagos (Iganmu)"
+  },
+  {
+    "question": "TRUE or FALSE: Nigeria has national parks with wildlife.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is the Wonderland Amusement Park?",
+    "options": ["Theme park in Abuja", "Recreation center", "Family destination", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Where is the ancient city of Suzame?",
+    "options": ["Sokoto State", "Historical site", "Walled city ruins", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: The Benin Bronzes are over 500 years old.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Masquerade (Mmanwu)?",
+    "options": ["Traditional cultural performance", "Ancestral representation", "Festival activity", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is Ben Enwonwu?",
+    "options": ["Nigerian artist", "Sculptor", "Painted \"Tutu\"", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Nollywood produces more movies annually than Hollywood.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "What is Ekpe masquerade?",
+    "options": ["Cross River/Calabar tradition", "Secret society", "Cultural practice", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Who is Nike Davies-Okundaye?",
+    "options": ["Artist", "Nike Art Gallery founder", "Cultural promoter", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: The \"shaku shaku\" dance was created by Olamide.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "FALSE"
+  },
+  {
+    "question": "What is the Argungu Fishing Festival?",
+    "options": ["Annual fishing competition", "In Kebbi State", "Cultural festival", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What is Owambe culture known for?",
+    "options": ["Lavish parties", "Aso Ebi", "Spraying money", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "TRUE or FALSE: Nigerian comedy has a unique style called \"stand-up.\"",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who is the leader of the Avengers?",
+    "options": ["Iron Man", "Captain America", "Thor", "Both A and B at different times"],
+    "answer": "Both A and B at different times"
+  },
+  {
+    "question": "TRUE or FALSE: Black Panther is set in the fictional country of Wakanda.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who plays Spider-Man in the MCU?",
+    "options": ["Andrew Garfield", "Tobey Maguire", "Tom Holland", "Miles Morales"],
+    "answer": "Tom Holland"
+  },
+  {
+    "question": "What is Thor's hammer called?",
+    "options": ["Stormbreaker", "Mjolnir", "Gungnir", "Hofund"],
+    "answer": "Mjolnir"
+  },
+  {
+    "question": "TRUE or FALSE: Thanos collected all six Infinity Stones.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who is Tony Stark's AI assistant?",
+    "options": ["Jarvis", "Friday", "Both at different times", "Ultron"],
+    "answer": "Both at different times"
+  },
+  {
+    "question": "What is Captain America's real name?",
+    "options": ["Steve Rogers", "Bucky Barnes", "Sam Wilson", "John Walker"],
+    "answer": "Steve Rogers"
+  },
+  {
+    "question": "TRUE or FALSE: Guardians of the Galaxy features a talking raccoon.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who is the God of Mischief?",
+    "options": ["Thor", "Odin", "Loki", "Hela"],
+    "answer": "Loki"
+  },
+  {
+    "question": "What does S.H.I.E.L.D. stand for?",
+    "options": ["Strategic Homeland Intervention, Enforcement and Logistics Division", "Super Hero Intelligence and Defense", "Strategic Hero Initiative and Defense", "Special Heroes Intelligence Division"],
+    "answer": "Strategic Homeland Intervention, Enforcement and Logistics Division"
+  },
+  {
+    "question": "TRUE or FALSE: \"Frozen\" features the song \"Let It Go.\"",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Who sang \"Despacito\"?",
+    "options": ["Shakira", "Luis Fonsi", "Ricky Martin", "Enrique Iglesias"],
+    "answer": "Luis Fonsi"
+  },
+  {
+    "question": "Which movie features \"Hakuna Matata\"?",
+    "options": ["Aladdin", "The Lion King", "Tarzan", "Moana"],
+    "answer": "The Lion King"
+  },
+  {
+    "question": "TRUE or FALSE: Sushi uses raw fish.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Where is the Leaning Tower of Pisa?",
+    "options": ["Spain", "Italy", "France", "Greece"],
+    "answer": "Italy"
+  },
+  {
+    "question": "What is Dim Sum?",
+    "options": ["Chinese small dishes", "Japanese food", "Korean cuisine", "Thai food"],
+    "answer": "Chinese small dishes"
+  },
+  {
+    "question": "TRUE or FALSE: The Amazon Rainforest is in Brazil.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "TRUE"
+  },
+  {
+    "question": "Which country is famous for Maple Syrup?",
+    "options": ["USA", "Canada", "Norway", "Switzerland"],
+    "answer": "Canada"
+  },
+  {
+    "question": "Where is Big Ben located?",
+    "options": ["Paris", "New York", "London", "Dublin"],
+    "answer": "London"
+  },
+  {
+    "question": "TRUE or FALSE: The Great Wall of China can be seen from space.",
+    "options": ["TRUE", "FALSE"],
+    "answer": "FALSE"
+  }
+]
