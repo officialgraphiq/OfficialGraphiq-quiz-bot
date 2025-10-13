@@ -1338,7 +1338,7 @@ def main():
 
     # CALLBACK QUERY HANDLERS: specific handlers first, then the generic answer handler
     app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
-    application.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
+    app.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
     app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
     app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
     app.add_handler(CallbackQueryHandler(handle_answer))
