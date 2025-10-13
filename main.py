@@ -4,6 +4,8 @@ import json
 import random
 import time
 import pytz
+import httpx
+from aiohttp import web
 from zoneinfo import ZoneInfo
 from typing import Final
 from datetime import datetime, timedelta, timezone
@@ -1004,26 +1006,75 @@ async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Fund & Balance
 # ---------------------------
 
+
+PAYSTACK_SECRET_KEY = os.environ.get("PAYSTACK_SECRET_KEY")  # set in Railway/Env
+PAYSTACK_INITIAL_BONUS = 1.0   # 100%
+PAYSTACK_REPEAT_BONUS = 0.1    # 10%
+
+
+
+
+# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     user = get_user(user_id)
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     try:
+#         amount = int(context.args[0])
+#         if amount <= 0:
+#             raise ValueError
+#     except (IndexError, ValueError):
+#         await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
+#         return
+
+#     # Determine bonus
+#     if user.get("total_deposits", 0) == 0:
+#         bonus_multiplier = PAYSTACK_INITIAL_BONUS
+#         bonus_text = "🎉 First-time deposit bonus 100% applied!"
+#     else:
+#         bonus_multiplier = PAYSTACK_REPEAT_BONUS
+#         bonus_text = "🔹 10% deposit bonus applied."
+
+#     amount_with_bonus = int(amount + (amount * bonus_multiplier))
+
+#     # Initialize Paystack payment
+#     headers = {"Authorization": f"Bearer {PAYSTACK_SECRET_KEY}"}
+#     payload = {
+#         "email": user.get("email", f"user{user_id}@example.com"),
+#         "amount": amount * 100,  # in kobo
+#         "currency": "NGN",
+#         "callback_url": "https://example.com",  # dummy, we won't rely on webhook
+#         "metadata": {"user_id": user_id, "amount_with_bonus": amount_with_bonus}
+#     }
+
+#     async with httpx.AsyncClient() as client:
+#         res = await client.post("https://api.paystack.co/transaction/initialize", json=payload, headers=headers)
+#         data = res.json()
+
+#     if data.get("status"):
+#         reference = data["data"]["reference"]
+#         payment_url = data["data"]["authorization_url"]
+
+#         # Save reference for manual verification
+#         users_col.update_one(
+#             {"telegram_id": user_id},
+#             {"$set": {"pending_deposit": amount_with_bonus, "deposit_amount": amount, "paystack_reference": reference}},
+#             upsert=True
+#         )
+
+#         await update.message.reply_text(
+#             f"💰 Fund request: ₦{amount:,}\n{bonus_text}\n"
+#             f"👉 Complete payment here: {payment_url}\n\n"
+#             f"After payment, verify with:\n/verify {reference}"
+#         )
+#     else:
+#         await update.message.reply_text(f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}")
+
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # ⏰ Global pre-check: only active between 8AM - 9PM
-    now = datetime.now(NIGERIA_TZ)
-
-    if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
-        await update.message.reply_text(
-            "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
-            "Please come back during active hours."
-        )
-        return
-
     user_id = update.message.from_user.id
-    if user_in_quiz(user_id):
-        await update.message.reply_text(
-            "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
-        )
-        return
-
-    tg_id = user_id
-    user = get_user(tg_id)
+    user = get_user(user_id)
     if not user:
         await update.message.reply_text("⚠️ You must register first using /register")
         return
@@ -1033,16 +1084,125 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if amount <= 0:
             raise ValueError
     except (IndexError, ValueError):
-        await update.message.reply_text(
-            "Usage: /fund <amount>\nExample: /fund 1000"
-        )
+        await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
         return
 
-    update_balance(tg_id, amount)
-    user = get_user(tg_id)
-    await update.message.reply_text(
-        f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}"
-    )
+    # Determine bonus
+    if user.get("total_deposits", 0) == 0:
+        bonus_multiplier = PAYSTACK_INITIAL_BONUS
+        bonus_text = "🎉 First-time deposit bonus 100% applied!"
+    else:
+        bonus_multiplier = PAYSTACK_REPEAT_BONUS
+        bonus_text = "🔹 10% deposit bonus applied."
+
+    amount_with_bonus = int(amount + (amount * bonus_multiplier))
+    expected_balance = user.get("balance", 0) + amount_with_bonus
+
+    # Initialize Paystack payment
+    headers = {"Authorization": f"Bearer {PAYSTACK_SECRET_KEY}"}
+    payload = {
+        "email": user.get("email", f"user{user_id}@example.com"),
+        "amount": amount * 100,
+        "currency": "NGN",
+        "callback_url": "https://example.com",  # dummy
+        "metadata": {"user_id": user_id, "amount_with_bonus": amount_with_bonus}
+    }
+
+    async with httpx.AsyncClient() as client:
+        res = await client.post("https://api.paystack.co/transaction/initialize", json=payload, headers=headers)
+        data = res.json()
+
+    if data.get("status"):
+        reference = data["data"]["reference"]
+        payment_url = data["data"]["authorization_url"]
+
+        # Store pending deposit for later verification
+        users_col.update_one(
+            {"telegram_id": user_id},
+            {"$set": {"pending_deposit": amount_with_bonus, "deposit_amount": amount, "paystack_reference": reference}},
+            upsert=True
+        )
+
+        await update.message.reply_text(
+            f"💰 Fund request: ₦{amount:,}\n{bonus_text}\n"
+            f"👉 Complete payment here: {payment_url}\n\n"
+            f"💡 Expected balance after payment: ₦{expected_balance:,}\n"
+            f"After payment, verify with:\n/verify {reference}"
+        )
+    else:
+        await update.message.reply_text(f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}")
+
+
+
+
+async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.message.from_user.id
+    try:
+        reference = context.args[0]
+    except IndexError:
+        await update.message.reply_text("Usage: /verify <reference>")
+        return
+
+    headers = {"Authorization": f"Bearer {PAYSTACK_SECRET_KEY}"}
+    async with httpx.AsyncClient() as client:
+        res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
+        data = res.json()
+
+    if data.get("status") and data["data"]["status"] == "success":
+        metadata = data["data"]["metadata"]
+        amount_with_bonus = metadata["amount_with_bonus"]
+
+        # Add to user balance
+        users_col.update_one(
+            {"telegram_id": user_id, "paystack_reference": reference},
+            {"$inc": {"balance": amount_with_bonus, "total_deposits": 1},
+             "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}}
+        )
+        await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
+    else:
+        await update.message.reply_text("❌ Payment not successful or still pending. Try again later.")
+
+
+
+# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # ⏰ Global pre-check: only active between 8AM - 9PM
+#     now = datetime.now(NIGERIA_TZ)
+
+#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+#         await update.message.reply_text(
+#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+#             "Please come back during active hours."
+#         )
+#         return
+
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text(
+#             "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+#         )
+#         return
+
+#     tg_id = user_id
+#     user = get_user(tg_id)
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     try:
+#         amount = int(context.args[0])
+#         if amount <= 0:
+#             raise ValueError
+#     except (IndexError, ValueError):
+#         await update.message.reply_text(
+#             "Usage: /fund <amount>\nExample: /fund 1000"
+#         )
+#         return
+
+#     update_balance(tg_id, amount)
+#     user = get_user(tg_id)
+#     await update.message.reply_text(
+#         f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}"
+#     )
 
 
 
@@ -1746,44 +1906,5 @@ if __name__ == "__main__":
 
 
 
-# okay, the next thing i would like us to do is to integrate paystack so when the /fund command is used, the user is given a link to make real money payment and the bot and database keep record of the users balance. I would also like to add a feature where the first time a user deposits into their balance, they get a 100% bonus and for every other time they deposit, they get a 10% bonus.
 
-# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     # ⏰ Global pre-check: only active between 8AM - 9PM
-#     now = datetime.now(NIGERIA_TZ)
-
-#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
-#         await update.message.reply_text(
-#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
-#             "Please come back during active hours."
-#         )
-#         return
-
-#     user_id = update.message.from_user.id
-#     if user_in_quiz(user_id):
-#         await update.message.reply_text(
-#             "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
-#         )
-#         return
-
-#     tg_id = user_id
-#     user = get_user(tg_id)
-#     if not user:
-#         await update.message.reply_text("⚠️ You must register first using /register")
-#         return
-
-#     try:
-#         amount = int(context.args[0])
-#         if amount <= 0:
-#             raise ValueError
-#     except (IndexError, ValueError):
-#         await update.message.reply_text(
-#             "Usage: /fund <amount>\nExample: /fund 1000"
-#         )
-#         return
-
-#     update_balance(tg_id, amount)
-#     user = get_user(tg_id)
-#     await update.message.reply_text(
-#         f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}"
     
