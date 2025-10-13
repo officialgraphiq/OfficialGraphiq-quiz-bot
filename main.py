@@ -73,25 +73,63 @@ for cat, file in CATEGORIES.items():
 
 
 
+# def get_random_question(user_id: int, category: str):
+#     """
+#     Returns a random unseen question for a user in a given category.
+#     Resets automatically when all questions have been seen.
+#     """
+#     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
+#         raise ValueError(f"No questions found for category: {category}")
+
+#     user = users_col.find_one({"user_id": user_id})
+#     seen_data = user.get("seen_questions", {}) if user else {}
+
+#     # Get seen list for this specific category
+#     seen = seen_data.get(category, [])
+
+#     total_questions = len(QUESTION_BANKS[category])
+#     unseen_indices = [i for i in range(total_questions) if i not in seen]
+
+#     if not unseen_indices:
+#         # Reset when all questions have been seen
+#         users_col.update_one(
+#             {"user_id": user_id},
+#             {"$set": {f"seen_questions.{category}": []}},
+#             upsert=True
+#         )
+#         unseen_indices = list(range(total_questions))
+
+#     random_index = random.choice(unseen_indices)
+#     question_data = QUESTION_BANKS[category][random_index]
+
+#     # Mark as seen
+#     users_col.update_one(
+#         {"user_id": user_id},
+#         {"$push": {f"seen_questions.{category}": random_index}},
+#         upsert=True
+#     )
+#     print(f"✅ Updating seen_questions for user {user_id}, category={category}, question_index={random_index}")
+
+
+#     return question_data
+
 def get_random_question(user_id: int, category: str):
-    """
-    Returns a random unseen question for a user in a given category.
-    Resets automatically when all questions have been seen.
-    """
     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
         raise ValueError(f"No questions found for category: {category}")
 
+    # Ensure user record exists
     user = users_col.find_one({"user_id": user_id})
-    seen_data = user.get("seen_questions", {}) if user else {}
+    if not user:
+        users_col.insert_one({"user_id": user_id, "seen_questions": {}})
+        user = users_col.find_one({"user_id": user_id})
 
-    # Get seen list for this specific category
+    seen_data = user.get("seen_questions", {})
     seen = seen_data.get(category, [])
 
     total_questions = len(QUESTION_BANKS[category])
     unseen_indices = [i for i in range(total_questions) if i not in seen]
 
     if not unseen_indices:
-        # Reset when all questions have been seen
         users_col.update_one(
             {"user_id": user_id},
             {"$set": {f"seen_questions.{category}": []}},
@@ -102,57 +140,18 @@ def get_random_question(user_id: int, category: str):
     random_index = random.choice(unseen_indices)
     question_data = QUESTION_BANKS[category][random_index]
 
-    # Mark as seen
+    # ✅ Force-create seen_questions.<category> if missing
     users_col.update_one(
         {"user_id": user_id},
         {"$push": {f"seen_questions.{category}": random_index}},
         upsert=True
     )
-    print(f"✅ Updating seen_questions for user {user_id}, category={category}, question_index={random_index}")
 
-
+    print(f"✅ Updated seen_questions for {user_id} → {category}:{random_index}")
     return question_data
 
 
-# async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     query = update.callback_query
-#     await query.answer()
 
-#     user_id = query.from_user.id
-#     category = query.data.replace("cat_", "")  # Extract category name
-#     context.user_data["category"] = category
-
-#     # Fetch random question (non-repeating per user per category)
-#     question_data = get_random_question(user_id, category)
-
-#     question = question_data["question"]
-#     options = question_data["options"]
-#     correct_answer = question_data["answer"]
-
-#     # Store for checking later
-#     context.user_data["current_question"] = question
-#     context.user_data["correct_answer"] = correct_answer
-#     context.user_data["options"] = options
-
-#     # Create inline buttons for options
-#     keyboard = [
-#         [InlineKeyboardButton(opt, callback_data=f"ans_{opt}")]
-#         for opt in options
-#     ]
-#     reply_markup = InlineKeyboardMarkup(keyboard)
-
-#     await query.message.reply_text(
-#         f"📚 Category: *{category}*\n\n❓ *{question}*",
-#         parse_mode="Markdown",
-#         reply_markup=reply_markup
-#     )
-
-#     # Mark the user as active in a quiz
-#     ACTIVE_QUIZZES[user_id] = {
-#         "category": category,
-#         "question": question,
-#         "correct_answer": correct_answer
-#     }
 
 
 async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
