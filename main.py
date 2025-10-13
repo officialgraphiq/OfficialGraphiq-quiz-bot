@@ -112,27 +112,62 @@ def get_random_question(user_id: int, category: str):
     return question_data
 
 
+# async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+
+#     user_id = query.from_user.id
+#     category = query.data.replace("cat_", "")  # Extract category name
+#     context.user_data["category"] = category
+
+#     # Fetch random question (non-repeating per user per category)
+#     question_data = get_random_question(user_id, category)
+
+#     question = question_data["question"]
+#     options = question_data["options"]
+#     correct_answer = question_data["answer"]
+
+#     # Store for checking later
+#     context.user_data["current_question"] = question
+#     context.user_data["correct_answer"] = correct_answer
+#     context.user_data["options"] = options
+
+#     # Create inline buttons for options
+#     keyboard = [
+#         [InlineKeyboardButton(opt, callback_data=f"ans_{opt}")]
+#         for opt in options
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await query.message.reply_text(
+#         f"📚 Category: *{category}*\n\n❓ *{question}*",
+#         parse_mode="Markdown",
+#         reply_markup=reply_markup
+#     )
+
+#     # Mark the user as active in a quiz
+#     ACTIVE_QUIZZES[user_id] = {
+#         "category": category,
+#         "question": question,
+#         "correct_answer": correct_answer
+#     }
+
+
 async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
 
     user_id = query.from_user.id
-    category = query.data.replace("cat_", "")  # Extract category name
+    category = query.data.replace("cat_", "")
     context.user_data["category"] = category
 
-    # Fetch random question (non-repeating per user per category)
+    # Fetch question (non-repeating)
     question_data = get_random_question(user_id, category)
-
     question = question_data["question"]
     options = question_data["options"]
     correct_answer = question_data["answer"]
 
-    # Store for checking later
-    context.user_data["current_question"] = question
-    context.user_data["correct_answer"] = correct_answer
-    context.user_data["options"] = options
-
-    # Create inline buttons for options
+    # Create inline keyboard
     keyboard = [
         [InlineKeyboardButton(opt, callback_data=f"ans_{opt}")]
         for opt in options
@@ -145,12 +180,14 @@ async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT
         reply_markup=reply_markup
     )
 
-    # Mark the user as active in a quiz
+    # ✅ Update user quiz status (overwrite previous "selecting_category")
     ACTIVE_QUIZZES[user_id] = {
         "category": category,
         "question": question,
-        "correct_answer": correct_answer
+        "correct_answer": correct_answer,
+        "status": "in_quiz"
     }
+
 
 
 
@@ -748,10 +785,59 @@ async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 
 
-async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # ⏰ Global pre-check: only active between 8AM - 9PM
-    now = datetime.now(NIGERIA_TZ)
+# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # ⏰ Global pre-check: only active between 8AM - 9PM
+#     now = datetime.now(NIGERIA_TZ)
 
+#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+#         await update.message.reply_text(
+#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+#             "Please come back during active hours."
+#         )
+#         return
+
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text(
+#             "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+#         )
+#         return
+
+#     tg_id = user_id
+#     user = get_user(tg_id)
+
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     if user.get("balance", 0) < 200:
+#         await update.message.reply_text(
+#             "⚠️ You need at least ₦200 to play. Use /fund to add funds."
+#         )
+#         return
+
+#     if tg_id in ACTIVE_QUIZZES:
+#         await update.message.reply_text(
+#             "⚠️ You are already in an active quiz session!\n"
+#             "👉 Use /end first if you want to quit and start again."
+#         )
+#         return
+
+#     keyboard = [
+#         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
+#         for cat in CATEGORIES.keys()
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await update.message.reply_text(
+#         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
+#         reply_markup=reply_markup
+#     )
+
+
+async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # ⏰ Time restriction check
+    now = datetime.now(NIGERIA_TZ)
     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
         await update.message.reply_text(
             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
@@ -760,9 +846,12 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     user_id = update.message.from_user.id
-    if user_in_quiz(user_id):
+
+    # 🚫 Block if already in quiz or category selection
+    if user_id in ACTIVE_QUIZZES:
         await update.message.reply_text(
-            "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+            "⚠️ You are already in a quiz session or selecting a category!\n"
+            "👉 Use /end first if you want to quit and start again."
         )
         return
 
@@ -779,12 +868,8 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
-    if tg_id in ACTIVE_QUIZZES:
-        await update.message.reply_text(
-            "⚠️ You are already in an active quiz session!\n"
-            "👉 Use /end first if you want to quit and start again."
-        )
-        return
+    # ✅ Mark user as "selecting category" temporarily
+    ACTIVE_QUIZZES[user_id] = {"status": "selecting_category"}
 
     keyboard = [
         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
@@ -796,6 +881,7 @@ async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
         reply_markup=reply_markup
     )
+
 
 
 
