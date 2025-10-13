@@ -74,24 +74,22 @@ for cat, file in CATEGORIES.items():
 
 
 # def get_random_question(user_id: int, category: str):
-#     """
-#     Returns a random unseen question for a user in a given category.
-#     Resets automatically when all questions have been seen.
-#     """
 #     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
 #         raise ValueError(f"No questions found for category: {category}")
 
+#     # Ensure user record exists
 #     user = users_col.find_one({"user_id": user_id})
-#     seen_data = user.get("seen_questions", {}) if user else {}
+#     if not user:
+#         users_col.insert_one({"user_id": user_id, "seen_questions": {}})
+#         user = users_col.find_one({"user_id": user_id})
 
-#     # Get seen list for this specific category
+#     seen_data = user.get("seen_questions", {})
 #     seen = seen_data.get(category, [])
 
 #     total_questions = len(QUESTION_BANKS[category])
 #     unseen_indices = [i for i in range(total_questions) if i not in seen]
 
 #     if not unseen_indices:
-#         # Reset when all questions have been seen
 #         users_col.update_one(
 #             {"user_id": user_id},
 #             {"$set": {f"seen_questions.{category}": []}},
@@ -102,53 +100,58 @@ for cat, file in CATEGORIES.items():
 #     random_index = random.choice(unseen_indices)
 #     question_data = QUESTION_BANKS[category][random_index]
 
-#     # Mark as seen
+#     # ✅ Force-create seen_questions.<category> if missing
 #     users_col.update_one(
 #         {"user_id": user_id},
 #         {"$push": {f"seen_questions.{category}": random_index}},
 #         upsert=True
 #     )
-#     print(f"✅ Updating seen_questions for user {user_id}, category={category}, question_index={random_index}")
 
-
+#     print(f"✅ Updated seen_questions for {user_id} → {category}:{random_index}")
 #     return question_data
+
+
 
 def get_random_question(user_id: int, category: str):
     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
         raise ValueError(f"No questions found for category: {category}")
 
-    # Ensure user record exists
-    user = users_col.find_one({"user_id": user_id})
+    # ✅ Ensure user record exists with the correct key (_id)
+    user = users_col.find_one({"_id": user_id})
     if not user:
-        users_col.insert_one({"user_id": user_id, "seen_questions": {}})
-        user = users_col.find_one({"user_id": user_id})
+        users_col.insert_one({"_id": user_id, "seen_questions": {}})
+        user = users_col.find_one({"_id": user_id})
 
+    # ✅ Retrieve seen question indices for this category
     seen_data = user.get("seen_questions", {})
     seen = seen_data.get(category, [])
 
     total_questions = len(QUESTION_BANKS[category])
     unseen_indices = [i for i in range(total_questions) if i not in seen]
 
+    # ✅ If user has seen all questions, reset the list for that category
     if not unseen_indices:
         users_col.update_one(
-            {"user_id": user_id},
+            {"_id": user_id},
             {"$set": {f"seen_questions.{category}": []}},
             upsert=True
         )
         unseen_indices = list(range(total_questions))
 
+    # ✅ Pick a random unseen question
     random_index = random.choice(unseen_indices)
     question_data = QUESTION_BANKS[category][random_index]
 
-    # ✅ Force-create seen_questions.<category> if missing
+    # ✅ Add the selected question to the seen list
     users_col.update_one(
-        {"user_id": user_id},
+        {"_id": user_id},
         {"$push": {f"seen_questions.{category}": random_index}},
         upsert=True
     )
 
-    print(f"✅ Updated seen_questions for {user_id} → {category}:{random_index}")
+    print(f"✅ Updated seen_questions for user {user_id} → {category}:{random_index}")
     return question_data
+
 
 
 
