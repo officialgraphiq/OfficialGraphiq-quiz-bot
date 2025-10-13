@@ -1153,23 +1153,32 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Authorization": f"Bearer {PAYSTACK_SECRET_KEY}",
         "Content-Type": "application/json"
     }
+
     async with httpx.AsyncClient() as client:
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
 
     if data.get("status") and data["data"]["status"] == "success":
-        metadata = data["data"]["metadata"]
-        amount_with_bonus = metadata["amount_with_bonus"]
+        metadata = data["data"].get("metadata", {})
+        amount_with_bonus = metadata.get("amount_with_bonus", 0)
+        if amount_with_bonus <= 0:
+            await update.message.reply_text("❌ Could not read deposit amount from metadata.")
+            return
 
-        # Add to user balance
-        users_col.update_one(
-            {"telegram_id": user_id, "paystack_reference": reference},
+        # Update user balance
+        result = users_col.update_one(
+            {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
             {"$inc": {"balance": amount_with_bonus, "total_deposits": 1},
              "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}}
         )
-        await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
+
+        if result.modified_count == 0:
+            await update.message.reply_text("❌ No pending deposit found to verify.")
+        else:
+            await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
     else:
         await update.message.reply_text("❌ Payment not successful or still pending. Try again later.")
+
 
 # -----------------------------
 # Test secret key
