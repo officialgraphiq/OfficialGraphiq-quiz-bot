@@ -1783,4 +1783,4 @@ if __name__ == "__main__":
 #     user = get_user(tg_id)
 #     await update.message.reply_text(
 #         f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}"
-    )
+    
