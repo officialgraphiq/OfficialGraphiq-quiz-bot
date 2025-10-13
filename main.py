@@ -49,19 +49,109 @@ ANNOUNCE_CHAT_ID = os.getenv("ANNOUNCE_CHAT_ID")  # set to integer string, e.g. 
 CATEGORIES = {
     "General": "questions.json",
     "Math": "questions_math.json",
-    # "Chemistry": "questions_chemistry.json",
-    # "Biology": "questions_biology.json",
     "Geography": "questions_geography.json",
     "Science": "questions_science.json",
     "Sports": "questions_sports.json",
 }
 
 # Optional: preload a file so missing files don't break startup
-try:
-    with open(CATEGORIES["General"], "r") as f:
-        _ = json.load(f)
-except Exception:
-    pass
+# try:
+#     with open(CATEGORIES["General"], "r") as f:
+#         _ = json.load(f)
+# except Exception:
+#     pass
+# ✅ Load all question banks at startup
+QUESTION_BANKS = {}
+for cat, file in CATEGORIES.items():
+    try:
+        with open(file, "r", encoding="utf-8") as f:
+            QUESTION_BANKS[cat] = json.load(f)
+    except Exception as e:
+        print(f"⚠️ Could not load {cat} ({file}): {e}")
+        QUESTION_BANKS[cat] = []
+
+
+
+
+def get_random_question(user_id: int, category: str):
+    """
+    Returns a random unseen question for a user in a given category.
+    Resets automatically when all questions have been seen.
+    """
+    if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
+        raise ValueError(f"No questions found for category: {category}")
+
+    user = users_col.find_one({"user_id": user_id})
+    seen_data = user.get("seen_questions", {}) if user else {}
+
+    # Get seen list for this specific category
+    seen = seen_data.get(category, [])
+
+    total_questions = len(QUESTION_BANKS[category])
+    unseen_indices = [i for i in range(total_questions) if i not in seen]
+
+    if not unseen_indices:
+        # Reset when all questions have been seen
+        users_col.update_one(
+            {"user_id": user_id},
+            {"$set": {f"seen_questions.{category}": []}},
+            upsert=True
+        )
+        unseen_indices = list(range(total_questions))
+
+    random_index = random.choice(unseen_indices)
+    question_data = QUESTION_BANKS[category][random_index]
+
+    # Mark as seen
+    users_col.update_one(
+        {"user_id": user_id},
+        {"$push": {f"seen_questions.{category}": random_index}},
+        upsert=True
+    )
+
+    return question_data
+
+
+async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+
+    user_id = query.from_user.id
+    category = query.data.replace("cat_", "")  # Extract category name
+    context.user_data["category"] = category
+
+    # Fetch random question (non-repeating per user per category)
+    question_data = get_random_question(user_id, category)
+
+    question = question_data["question"]
+    options = question_data["options"]
+    correct_answer = question_data["answer"]
+
+    # Store for checking later
+    context.user_data["current_question"] = question
+    context.user_data["correct_answer"] = correct_answer
+    context.user_data["options"] = options
+
+    # Create inline buttons for options
+    keyboard = [
+        [InlineKeyboardButton(opt, callback_data=f"ans_{opt}")]
+        for opt in options
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
+    await query.message.reply_text(
+        f"📚 Category: *{category}*\n\n❓ *{question}*",
+        parse_mode="Markdown",
+        reply_markup=reply_markup
+    )
+
+    # Mark the user as active in a quiz
+    ACTIVE_QUIZZES[user_id] = {
+        "category": category,
+        "question": question,
+        "correct_answer": correct_answer
+    }
+
 
 
 # ---------------------------
@@ -76,6 +166,11 @@ USERNAME, EMAIL, PHONE, BANK, ACCOUNT = range(5)
 # NOTE: this is a process-memory dict. It works for jobs & handlers.
 # If you need persistence across restarts, we can store this in MongoDB.
 ACTIVE_QUIZZES: dict[int, dict] = {}
+
+
+
+
+
 
 
 # ---------------------------
@@ -152,17 +247,6 @@ ALLOWED_START_HOUR = 8   # 8 AM
 ALLOWED_END_HOUR = 21    # 9 PM
 
 
-# async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     # now = datetime.now()
-#     now = datetime.now(NIGERIA_TZ)
-#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
-#         await update.message.reply_text(
-#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
-#             "Please come back during active hours."
-#         )
-#         return True  # Block further handlers
-#     return False
-
 async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
     # Reset only scores and sessions (leave balance untouched)
     users_col.update_many({}, {"$set": {"score": 0, "sessions": 0}})
@@ -188,31 +272,6 @@ async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return False
 
 
-
-
-# def schedule_daily_reset(job_queue: JobQueue):
-#     """
-#     Schedule the daily reset job for 6:00 AM instead of midnight.
-#     """
-#     # now = datetime.now()
-#     now = datetime.now(NIGERIA_TZ)
-
-#     # 6:00 AM of the next reset day
-#     next_reset_time = datetime.combine(now.date(), datetime.min.time()).replace(hour=6)
-
-#     # If it’s already past 6 AM today, schedule for tomorrow
-#     if now >= next_reset_time:
-#         next_reset_time = next_reset_time + timedelta(days=1)
-
-#     delay = (next_reset_time - now).total_seconds()
-
-#     job_queue.run_repeating(
-#         reset_daily,
-#         interval=86400,  # every 24 hours
-#         first=delay      # first run at 6 AM
-#     )
-
-#     print(f"🌅 Daily reset scheduled for {next_reset_time}")
 
 def schedule_daily_reset(job_queue: JobQueue):
     """
@@ -346,19 +405,6 @@ async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
 
 
 
-# def schedule_winner_announcement(job_queue: JobQueue):
-#     """
-#     Schedule the announce_winner job for 21:10 daily.
-#     """
-#     # now = datetime.now()
-#     now = datetime.now(NIGERIA_TZ)
-#     target_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
-#     if now >= target_time:
-#         # schedule for tomorrow
-#         target_time = target_time + timedelta(days=1)
-#     delay = (target_time - now).total_seconds()
-#     job_queue.run_repeating(announce_winner, interval=86400, first=delay)
-#     print(f"🕘 Winner announcement scheduled for {target_time}")
 def schedule_winner_announcement(job_queue: JobQueue):
     """
     Schedule the daily winner announcement for 9:10 PM Nigeria time.
@@ -1292,6 +1338,7 @@ def main():
 
     # CALLBACK QUERY HANDLERS: specific handlers first, then the generic answer handler
     app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
+    application.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
     app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
     app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
     app.add_handler(CallbackQueryHandler(handle_answer))
