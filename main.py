@@ -1206,7 +1206,7 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #         await finalize_quiz(context, user_id, quiz)
 
 
-async def send_question(context, user_id):
+async def send_question(update, context, user_id):
     quiz = ACTIVE_QUIZZES.get(user_id)
     if not quiz or not quiz.get("active", True):
         return
