@@ -1389,19 +1389,16 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 def main():
     print("🤖 Bot starting...")
     app = Application.builder().token(TOKEN).build()
+    TEST_ID = 8236934155  # Replace with your Telegram ID
 
+    result = users_col.update_one(
+        {"telegram_id": int(TEST_ID)},           # 👈 or str(TEST_ID) if stored as string
+        {"$set": {"seen_questions.debug": [1, 2, 3]}},
+        upsert=True
+    )
 
-TEST_ID = 8236934155  
-
-result = users_col.update_one(
-    {"telegram_id": int(TEST_ID)},           # 👈 or str(TEST_ID) if the field is stored as a string
-    {"$set": {"seen_questions.debug": [1, 2, 3]}},
-    upsert=True
-)
-
-print(f"[Atlas Test] Matched={result.matched_count} Modified={result.modified_count}")
-print("✅ Mongo connection test complete\n")
-
+    print(f"[Atlas Test] Matched={result.matched_count} Modified={result.modified_count}")
+    print("✅ Mongo connection test complete\n")
     schedule_daily_reset(app.job_queue)
     # Register flow
     reg_conv = ConversationHandler(
