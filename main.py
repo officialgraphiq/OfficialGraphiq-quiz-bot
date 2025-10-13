@@ -1061,7 +1061,7 @@ async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # ---------------------------
-Choose category -> deduct fee, increment sessions, start quiz
+# Choose category -> deduct fee, increment sessions, start quiz
 # ---------------------------
 async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
