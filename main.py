@@ -4,6 +4,7 @@ import json
 import random
 import time
 import pytz
+from zoneinfo import ZoneInfo
 from typing import Final
 from datetime import datetime, timedelta, timezone
 from telegram.ext import JobQueue
@@ -32,6 +33,7 @@ users_col = db["users"]
 winners_col = db["daily_winners"]   # NEW: store historical winners
 
 NIGERIA_TZ = pytz.timezone("Africa/Lagos")
+NIGERIA_TZ = ZoneInfo("Africa/Lagos")
 # ---------------------------
 # Environment
 # ---------------------------
@@ -150,52 +152,98 @@ ALLOWED_START_HOUR = 8   # 8 AM
 ALLOWED_END_HOUR = 21    # 9 PM
 
 
+# async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # now = datetime.now()
+#     now = datetime.now(NIGERIA_TZ)
+#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+#         await update.message.reply_text(
+#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+#             "Please come back during active hours."
+#         )
+#         return True  # Block further handlers
+#     return False
+
+# async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
+#     # Reset only scores and sessions (leave balance untouched)
+#     users_col.update_many({}, {"$set": {"score": 0, "sessions": 0}})
+    
+#     # Clear in-memory active quizzes
+#     ACTIVE_QUIZZES.clear()
+
+#     print("✅ Daily reset completed at", datetime.now(NIGERIA_TZ)
+# .strftime("%Y-%m-%d %H:%M:%S"))
 async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    # now = datetime.now()
+    """
+    Restrict bot usage to 8:00 AM - 9:00 PM (Africa/Lagos time).
+    """
     now = datetime.now(NIGERIA_TZ)
+    ALLOWED_START_HOUR = 8   # 8 AM
+    ALLOWED_END_HOUR = 21    # 9 PM
+
     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
         await update.message.reply_text(
-            "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
-            "Please come back during active hours."
+            "⛔ The bot is only active from 8:00 AM to 9:00 PM (Nigeria time).\nPlease come back during active hours."
         )
-        return True  # Block further handlers
+        return True  # indicates restricted
     return False
 
-async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
-    # Reset only scores and sessions (leave balance untouched)
-    users_col.update_many({}, {"$set": {"score": 0, "sessions": 0}})
-    
-    # Clear in-memory active quizzes
-    ACTIVE_QUIZZES.clear()
-
-    print("✅ Daily reset completed at", datetime.now(NIGERIA_TZ)
-.strftime("%Y-%m-%d %H:%M:%S"))
 
 
+
+# def schedule_daily_reset(job_queue: JobQueue):
+#     """
+#     Schedule the daily reset job for 6:00 AM instead of midnight.
+#     """
+#     # now = datetime.now()
+#     now = datetime.now(NIGERIA_TZ)
+
+#     # 6:00 AM of the next reset day
+#     next_reset_time = datetime.combine(now.date(), datetime.min.time()).replace(hour=6)
+
+#     # If it’s already past 6 AM today, schedule for tomorrow
+#     if now >= next_reset_time:
+#         next_reset_time = next_reset_time + timedelta(days=1)
+
+#     delay = (next_reset_time - now).total_seconds()
+
+#     job_queue.run_repeating(
+#         reset_daily,
+#         interval=86400,  # every 24 hours
+#         first=delay      # first run at 6 AM
+#     )
+
+#     print(f"🌅 Daily reset scheduled for {next_reset_time}")
 
 def schedule_daily_reset(job_queue: JobQueue):
     """
-    Schedule the daily reset job for 6:00 AM instead of midnight.
+    Schedule the daily leaderboard reset for 6:00 AM Nigeria time.
     """
-    # now = datetime.now()
     now = datetime.now(NIGERIA_TZ)
 
-    # 6:00 AM of the next reset day
-    next_reset_time = datetime.combine(now.date(), datetime.min.time()).replace(hour=6)
+    next_reset_time = datetime(
+        year=now.year,
+        month=now.month,
+        day=now.day,
+        hour=6,
+        minute=0,
+        second=0,
+        tzinfo=NIGERIA_TZ
+    )
 
-    # If it’s already past 6 AM today, schedule for tomorrow
+    # If 6 AM already passed today, move to tomorrow
     if now >= next_reset_time:
-        next_reset_time = next_reset_time + timedelta(days=1)
+        next_reset_time += timedelta(days=1)
 
     delay = (next_reset_time - now).total_seconds()
 
     job_queue.run_repeating(
         reset_daily,
         interval=86400,  # every 24 hours
-        first=delay      # first run at 6 AM
+        first=delay
     )
 
-    print(f"🌅 Daily reset scheduled for {next_reset_time}")
+    print(f"🌅 Daily reset scheduled for {next_reset_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+
 
 
 
@@ -298,19 +346,49 @@ async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
 
 
 
+# def schedule_winner_announcement(job_queue: JobQueue):
+#     """
+#     Schedule the announce_winner job for 21:10 daily.
+#     """
+#     # now = datetime.now()
+#     now = datetime.now(NIGERIA_TZ)
+#     target_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
+#     if now >= target_time:
+#         # schedule for tomorrow
+#         target_time = target_time + timedelta(days=1)
+#     delay = (target_time - now).total_seconds()
+#     job_queue.run_repeating(announce_winner, interval=86400, first=delay)
+#     print(f"🕘 Winner announcement scheduled for {target_time}")
 def schedule_winner_announcement(job_queue: JobQueue):
     """
-    Schedule the announce_winner job for 21:10 daily.
+    Schedule the daily winner announcement for 9:10 PM Nigeria time.
     """
-    # now = datetime.now()
     now = datetime.now(NIGERIA_TZ)
-    target_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
-    if now >= target_time:
-        # schedule for tomorrow
-        target_time = target_time + timedelta(days=1)
+
+    target_time = datetime(
+        year=now.year,
+        month=now.month,
+        day=now.day,
+        hour=21,
+        minute=10,
+        second=0,
+        tzinfo=NIGERIA_TZ
+    )
+
+    # If it's already past 9:10 PM today, schedule for tomorrow
+    if target_time <= now:
+        target_time += timedelta(days=1)
+
     delay = (target_time - now).total_seconds()
-    job_queue.run_repeating(announce_winner, interval=86400, first=delay)
-    print(f"🕘 Winner announcement scheduled for {target_time}")
+
+    job_queue.run_repeating(
+        announce_daily_winner,
+        interval=86400,  # every 24 hours
+        first=delay
+    )
+
+    print(f"🏆 Winner announcement scheduled for {target_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+
 
 
 
