@@ -1206,33 +1206,32 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #         await finalize_quiz(context, user_id, quiz)
 
 
-async def send_question(update, context, user_id):
+async def send_question(context, user_id):
     quiz = ACTIVE_QUIZZES.get(user_id)
     if not quiz or not quiz.get("active", True):
         return
 
-    category = quiz["category"]
+    current = quiz["current"]
+    questions = quiz["questions"]
 
-    # Select a question using smart random selector
-    try:
-        question_data = get_random_question(user_id, category)
-    except Exception as e:
-        await context.bot.send_message(chat_id=user_id, text=f"⚠️ Failed to load a question: {e}")
+    if current >= len(questions):
+        await finalize_quiz(context, user_id, quiz)
         return
 
-    quiz["questions"].append(question_data)
-    current = quiz["current"]
-
-    keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in question_data["options"]]
+    q = questions[current]
+    keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     msg = await context.bot.send_message(
         chat_id=user_id,
-        text=f"❓ Question {current+1}:\n{question_data['question']}\n\n⏳ You have 60 seconds!",
+        text=f"❓ Question {current+1}/{len(questions)}:\n{q['question']}\n\n⏳ You have 60 seconds!",
         reply_markup=reply_markup
     )
 
-    # Cancel old timeout job safely
+    # Store time sent
+    quiz["sent_at"] = time.time()
+
+    # Cancel old timeout job if any
     safe_remove_job(quiz.get("timeout_job"))
 
     # Schedule timeout
@@ -1242,7 +1241,6 @@ async def send_question(update, context, user_id):
         data={"user_id": user_id, "msg_id": msg.message_id},
     )
     quiz["timeout_job"] = job
-    quiz["sent_at"] = time.time()
 
 
 
@@ -1308,26 +1306,17 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
         await finalize_quiz(context, user_id, quiz)
         return
 
-    question_data = quiz["questions"][current]
-    correct = question_data["answer"]
+    correct = quiz["questions"][current]["answer"]
 
-    # Record timeout as 0 pts
+    # Record zero points for timeout
     quiz["answers"].append({
         "user_id": user_id,
-        "question_id": question_data["id"],
-        "base_score": 0,
-        "elapsed_time": 60,
-        "total_score": 0
+        "question_id": current,
+        "total_score": 0,
+        "elapsed_time": 60
     })
 
-    # Mark question as used in history
-    users_col.update_one(
-        {"telegram_id": user_id},
-        {"$addToSet": {f"history.{quiz['category']}": question_data["id"]}},
-        upsert=True
-    )
-
-    # Disable old buttons
+    # Disable buttons
     try:
         await context.bot.edit_message_reply_markup(chat_id=user_id, message_id=msg_id, reply_markup=None)
     except Exception:
@@ -1336,7 +1325,7 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=user_id, text=f"⌛ Time’s up! The correct answer was {correct}.")
 
     quiz["current"] += 1
-    await send_question(None, context, user_id)
+    await send_question(context, user_id)
 
 
 
@@ -1425,60 +1414,66 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
 async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-
-    if query.data in ("confirm_end", "cancel_end"):
-        return  # let specific handlers manage
-
     user_id = query.from_user.id
+    selected = query.data
+
+    # Ignore confirm/cancel/category callbacks
+    if selected in ("confirm_end", "cancel_end") or selected.startswith("cat_"):
+        return
+
     quiz = ACTIVE_QUIZZES.get(user_id)
     if not quiz or not quiz.get("active", True):
         try:
             await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
-        except Exception:
+        except:
             pass
         return
 
     current = quiz["current"]
-    question_data = quiz["questions"][current]
-    correct = question_data["answer"]
+    if current >= len(quiz["questions"]):
+        try:
+            await query.edit_message_text("✅ Quiz already finished.")
+        except:
+            pass
+        return
 
-    # Cancel timeout immediately
+    q = quiz["questions"][current]
+    correct = q["answer"]
+
+    # Cancel timeout
     safe_remove_job(quiz.get("timeout_job"))
     quiz["timeout_job"] = None
 
     elapsed = time.time() - quiz.get("sent_at", time.time())
     base_score = 0
     bonus = 0.0
-    total_score = 0.0
 
-    if query.data == correct:
-        base_score = 10 if elapsed <= 30 else 5
+    if selected == correct:
+        if elapsed <= 30:
+            base_score = 10
+        elif elapsed <= 60:
+            base_score = 5
+
         if elapsed <= 10:
             bonus = 0.3
         elif elapsed <= 20:
             bonus = 0.2
         elif elapsed <= 30:
             bonus = 0.1
-        total_score = base_score + bonus
+
+    total_score = base_score + bonus if selected == correct else 0
 
     # Record answer
     quiz["answers"].append({
         "user_id": user_id,
-        "question_id": question_data["id"],
-        "total_score": total_score if query.data == correct else 0,
+        "question_id": current,
+        "total_score": total_score,
         "elapsed_time": elapsed
     })
 
-    # Mark question as used in history
-    users_col.update_one(
-        {"telegram_id": user_id},
-        {"$addToSet": {f"history.{quiz['category']}": question_data["id"]}},
-        upsert=True
-    )
-
-    # Disable buttons & show result
+    # Show result and disable buttons
     try:
-        if query.data == correct:
+        if selected == correct:
             await query.edit_message_text(f"✅ Correct! You earned {base_score} pts + {bonus:.1f} bonus = {total_score:.1f} pts.")
         else:
             await query.edit_message_text(f"❌ Wrong! The correct answer was {correct}.")
@@ -1486,7 +1481,7 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
         pass
 
     quiz["current"] += 1
-    await send_question(update, context, user_id)
+    await send_question(context, user_id)
 
 
 
@@ -1674,3 +1669,118 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# okay, the next thing i would like us to do is to integrate paystack so when the /fund command is used, the user is given a link to make real money payment and the bot and database keep record of the users balance. I would also like to add a feature where the first time a user deposits into their balance, they get a 100% bonus and for every other time they deposit, they get a 10% bonus.
+
+# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # ⏰ Global pre-check: only active between 8AM - 9PM
+#     now = datetime.now(NIGERIA_TZ)
+
+#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+#         await update.message.reply_text(
+#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+#             "Please come back during active hours."
+#         )
+#         return
+
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text(
+#             "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+#         )
+#         return
+
+#     tg_id = user_id
+#     user = get_user(tg_id)
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     try:
+#         amount = int(context.args[0])
+#         if amount <= 0:
+#             raise ValueError
+#     except (IndexError, ValueError):
+#         await update.message.reply_text(
+#             "Usage: /fund <amount>\nExample: /fund 1000"
+#         )
+#         return
+
+#     update_balance(tg_id, amount)
+#     user = get_user(tg_id)
+#     await update.message.reply_text(
+#         f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}"
+    )
