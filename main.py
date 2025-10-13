@@ -54,13 +54,6 @@ CATEGORIES = {
     "Sports": "questions_sports.json",
 }
 
-# Optional: preload a file so missing files don't break startup
-# try:
-#     with open(CATEGORIES["General"], "r") as f:
-#         _ = json.load(f)
-# except Exception:
-#     pass
-# ✅ Load all question banks at startup
 QUESTION_BANKS = {}
 for cat, file in CATEGORIES.items():
     try:
@@ -69,47 +62,6 @@ for cat, file in CATEGORIES.items():
     except Exception as e:
         print(f"⚠️ Could not load {cat} ({file}): {e}")
         QUESTION_BANKS[cat] = []
-
-
-
-
-# def get_random_question(user_id: int, category: str):
-#     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
-#         raise ValueError(f"No questions found for category: {category}")
-
-#     # Ensure user record exists
-#     user = users_col.find_one({"user_id": user_id})
-#     if not user:
-#         users_col.insert_one({"user_id": user_id, "seen_questions": {}})
-#         user = users_col.find_one({"user_id": user_id})
-
-#     seen_data = user.get("seen_questions", {})
-#     seen = seen_data.get(category, [])
-
-#     total_questions = len(QUESTION_BANKS[category])
-#     unseen_indices = [i for i in range(total_questions) if i not in seen]
-
-#     if not unseen_indices:
-#         users_col.update_one(
-#             {"user_id": user_id},
-#             {"$set": {f"seen_questions.{category}": []}},
-#             upsert=True
-#         )
-#         unseen_indices = list(range(total_questions))
-
-#     random_index = random.choice(unseen_indices)
-#     question_data = QUESTION_BANKS[category][random_index]
-
-#     # ✅ Force-create seen_questions.<category> if missing
-#     users_col.update_one(
-#         {"user_id": user_id},
-#         {"$push": {f"seen_questions.{category}": random_index}},
-#         upsert=True
-#     )
-
-#     print(f"✅ Updated seen_questions for {user_id} → {category}:{random_index}")
-#     return question_data
-
 
 
 def get_random_question(user_id: int, category: str):
@@ -238,9 +190,32 @@ def create_or_update_user(tg_id, username=None, email=None):
     )
     return get_user(tg_id)
 
-def update_score(tg_id, points):
-    users_col.update_one({"telegram_id": tg_id}, {"$inc": {"score": points}}, upsert=True)
+# def update_score(tg_id, points):
+#     users_col.update_one({"telegram_id": tg_id}, {"$inc": {"score": points}}, upsert=True)
+#     return get_user(tg_id)
+def update_score(tg_id, points, category=None, answers=None):
+    """
+    Update user's total score and (optionally) log quiz progress by category.
+    """
+    update_data = {"$inc": {"score": points}}
+
+    # ✅ If category and answers are passed, log them under seen_questions.<category>
+    if category and answers:
+        formatted_answers = []
+        for ans in answers:
+            formatted_answers.append({
+                "question_index": ans.get("question_id"),
+                "earned_score": ans.get("total_score", 0),
+                "time_taken": round(ans.get("elapsed_time", 0), 2)
+            })
+
+        update_data["$push"] = {
+            f"seen_questions.{category}": {"$each": formatted_answers}
+        }
+
+    users_col.update_one({"telegram_id": tg_id}, update_data, upsert=True)
     return get_user(tg_id)
+
 
 def update_balance(tg_id, amount):
     users_col.update_one({"telegram_id": tg_id}, {"$inc": {"balance": amount}}, upsert=True)
@@ -790,58 +765,6 @@ async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Quiz: show categories (balance check)
 # ---------------------------
-
-
-# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     # ⏰ Global pre-check: only active between 8AM - 9PM
-#     now = datetime.now(NIGERIA_TZ)
-
-#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
-#         await update.message.reply_text(
-#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
-#             "Please come back during active hours."
-#         )
-#         return
-
-#     user_id = update.message.from_user.id
-#     if user_in_quiz(user_id):
-#         await update.message.reply_text(
-#             "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
-#         )
-#         return
-
-#     tg_id = user_id
-#     user = get_user(tg_id)
-
-#     if not user:
-#         await update.message.reply_text("⚠️ You must register first using /register")
-#         return
-
-#     if user.get("balance", 0) < 200:
-#         await update.message.reply_text(
-#             "⚠️ You need at least ₦200 to play. Use /fund to add funds."
-#         )
-#         return
-
-#     if tg_id in ACTIVE_QUIZZES:
-#         await update.message.reply_text(
-#             "⚠️ You are already in an active quiz session!\n"
-#             "👉 Use /end first if you want to quit and start again."
-#         )
-#         return
-
-#     keyboard = [
-#         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
-#         for cat in CATEGORIES.keys()
-#     ]
-#     reply_markup = InlineKeyboardMarkup(keyboard)
-
-#     await update.message.reply_text(
-#         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
-#         reply_markup=reply_markup
-#     )
-
-
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # ⏰ Time restriction check
     now = datetime.now(NIGERIA_TZ)
@@ -1304,29 +1227,62 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ---------------------------
 # Finalize Quiz
 # ---------------------------
+# async def finalize_quiz(context, user_id, quiz):
+#     if not quiz or not quiz.get("active", True):
+#         return
+#     quiz["active"] = False
+
+#     final_results = apply_speed_bonus(quiz.get("answers", []))
+
+#     # update DB for every participant found in final_results
+#     for uid, pts in final_results.items():
+#         update_score(uid, pts)
+
+#     user_final_score = final_results.get(user_id, 0)
+
+#     # Cancel any job
+#     safe_remove_job(quiz.get("timeout_job"))
+
+#     # clear stored quiz state
+#     ACTIVE_QUIZZES.pop(user_id, None)
+
+#     try:
+#         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {user_final_score:.1f}")
+#     except Exception:
+#         pass
+
+
 async def finalize_quiz(context, user_id, quiz):
     if not quiz or not quiz.get("active", True):
         return
+
     quiz["active"] = False
 
+    # ✅ Apply speed bonus and calculate total points
     final_results = apply_speed_bonus(quiz.get("answers", []))
+    category = quiz.get("category", "debug")  # fallback to debug if not defined
 
-    # update DB for every participant found in final_results
+    # ✅ Update DB for every participant
     for uid, pts in final_results.items():
-        update_score(uid, pts)
+        update_score(uid, pts, category=category, answers=quiz.get("answers", []))
 
     user_final_score = final_results.get(user_id, 0)
 
-    # Cancel any job
+    # ✅ Cancel any running timeout job
     safe_remove_job(quiz.get("timeout_job"))
 
-    # clear stored quiz state
+    # ✅ Clear stored quiz state
     ACTIVE_QUIZZES.pop(user_id, None)
 
+    # ✅ Notify user
     try:
-        await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {user_final_score:.1f}")
+        await context.bot.send_message(
+            chat_id=user_id,
+            text=f"✅ Quiz finished!\nCategory: {category}\nYour score: {user_final_score:.1f}"
+        )
     except Exception:
         pass
+
 
 
 # ---------------------------
@@ -1400,11 +1356,7 @@ def main():
             BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_bank)],
             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
         },
-        # fallbacks=[],
-    #     fallbacks=[CommandHandler("cancel", cancel_registration),
-    #     MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
-    # ],
-    # allow_reentry=True,
+        
         fallbacks=[CommandHandler("cancel", cancel_registration)],
     )
 
