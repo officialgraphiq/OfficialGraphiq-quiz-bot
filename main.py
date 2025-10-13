@@ -5,7 +5,6 @@ import random
 import time
 import pytz
 import httpx
-from aiohttp import web
 from zoneinfo import ZoneInfo
 from typing import Final
 from datetime import datetime, timedelta, timezone
