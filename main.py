@@ -110,73 +110,6 @@ def get_random_question(user_id: int, category: str):
     return question_data
 
 
-# def get_random_question(user_id: int, category: str):
-#     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
-#         raise ValueError(f"No questions found for category: {category}")
-
-#     user = users_col.find_one({"telegram_id": user_id})
-#     if not user:
-#         users_col.insert_one({"telegram_id": user_id, "seen_questions": {}})
-#         user = users_col.find_one({"telegram_id": user_id})
-
-#     seen_data = user.get("seen_questions", {})
-#     category_data = seen_data.get(category, [])
-
-#     now = datetime.utcnow()
-#     cooldown_hours = 24
-
-#     # Keep only recently seen questions (within cooldown)
-#     filtered_seen = []
-#     for entry in category_data:
-#         last_seen_time = datetime.utcfromtimestamp(entry.get("timestamp", 0))
-#         if (now - last_seen_time) < timedelta(hours=cooldown_hours):
-#             filtered_seen.append(entry)
-
-#     # Update filtered seen list in DB
-#     users_col.update_one(
-#         {"telegram_id": user_id},
-#         {"$set": {f"seen_questions.{category}": filtered_seen}},
-#         upsert=True
-#     )
-
-#     seen_indices = {item["index"] for item in filtered_seen}
-#     total_questions = len(QUESTION_BANKS[category])
-
-#     # If almost all questions are seen, trim history to last 20%
-#     reset_threshold = int(total_questions * 0.9)
-#     if len(seen_indices) >= reset_threshold:
-#         trimmed = list(filtered_seen)[-int(total_questions * 0.2):]
-#         users_col.update_one(
-#             {"telegram_id": user_id},
-#             {"$set": {f"seen_questions.{category}": trimmed}}
-#         )
-#         seen_indices = {item["index"] for item in trimmed}
-
-#     # Select from questions not recently seen
-#     candidates = [(i, q) for i, q in enumerate(QUESTION_BANKS[category]) if i not in seen_indices]
-
-#     # Fallback: if all questions are in cooldown, allow all
-#     if not candidates:
-#         candidates = list(enumerate(QUESTION_BANKS[category]))
-
-#     random_index, question_data = random.choice(candidates)
-
-#     # Mark question as seen
-#     users_col.update_one(
-#         {"telegram_id": user_id},
-#         {"$push": {
-#             f"seen_questions.{category}": {"index": random_index, "timestamp": int(time.time())}
-#         }},
-#         upsert=True
-#     )
-
-#     return question_data
-
-
-
-
-
-
 async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -1013,66 +946,6 @@ PAYSTACK_INITIAL_BONUS = 1.0   # 100%
 PAYSTACK_REPEAT_BONUS = 0.1    # 10%
 
 
-
-
-# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     user_id = update.message.from_user.id
-#     user = get_user(user_id)
-#     if not user:
-#         await update.message.reply_text("⚠️ You must register first using /register")
-#         return
-
-#     try:
-#         amount = int(context.args[0])
-#         if amount <= 0:
-#             raise ValueError
-#     except (IndexError, ValueError):
-#         await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
-#         return
-
-#     # Determine bonus
-#     if user.get("total_deposits", 0) == 0:
-#         bonus_multiplier = PAYSTACK_INITIAL_BONUS
-#         bonus_text = "🎉 First-time deposit bonus 100% applied!"
-#     else:
-#         bonus_multiplier = PAYSTACK_REPEAT_BONUS
-#         bonus_text = "🔹 10% deposit bonus applied."
-
-#     amount_with_bonus = int(amount + (amount * bonus_multiplier))
-
-#     # Initialize Paystack payment
-#     headers = {"Authorization": f"Bearer {PAYSTACK_SECRET_KEY}"}
-#     payload = {
-#         "email": user.get("email", f"user{user_id}@example.com"),
-#         "amount": amount * 100,  # in kobo
-#         "currency": "NGN",
-#         "callback_url": "https://example.com",  # dummy, we won't rely on webhook
-#         "metadata": {"user_id": user_id, "amount_with_bonus": amount_with_bonus}
-#     }
-
-#     async with httpx.AsyncClient() as client:
-#         res = await client.post("https://api.paystack.co/transaction/initialize", json=payload, headers=headers)
-#         data = res.json()
-
-#     if data.get("status"):
-#         reference = data["data"]["reference"]
-#         payment_url = data["data"]["authorization_url"]
-
-#         # Save reference for manual verification
-#         users_col.update_one(
-#             {"telegram_id": user_id},
-#             {"$set": {"pending_deposit": amount_with_bonus, "deposit_amount": amount, "paystack_reference": reference}},
-#             upsert=True
-#         )
-
-#         await update.message.reply_text(
-#             f"💰 Fund request: ₦{amount:,}\n{bonus_text}\n"
-#             f"👉 Complete payment here: {payment_url}\n\n"
-#             f"After payment, verify with:\n/verify {reference}"
-#         )
-#     else:
-#         await update.message.reply_text(f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}")
-
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
     user = get_user(user_id)
@@ -1202,6 +1075,13 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
 
+async with httpx.AsyncClient() as client:
+    res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
+    data = res.json()
+
+# 👇 Add this line:
+await update.message.reply_text(f"DEBUG METADATA:\n{json.dumps(data.get('data', {}).get('metadata', {}), indent=2)}")
+
 
 
 # -----------------------------
@@ -1214,48 +1094,6 @@ def test_paystack_key():
         print("❌ PAYSTACK_SECRET_KEY seems invalid (does not start with sk_)")
     else:
         print("✅ PAYSTACK_SECRET_KEY looks good!")
-
-
-
-# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     # ⏰ Global pre-check: only active between 8AM - 9PM
-#     now = datetime.now(NIGERIA_TZ)
-
-#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
-#         await update.message.reply_text(
-#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
-#             "Please come back during active hours."
-#         )
-#         return
-
-#     user_id = update.message.from_user.id
-#     if user_in_quiz(user_id):
-#         await update.message.reply_text(
-#             "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
-#         )
-#         return
-
-#     tg_id = user_id
-#     user = get_user(tg_id)
-#     if not user:
-#         await update.message.reply_text("⚠️ You must register first using /register")
-#         return
-
-#     try:
-#         amount = int(context.args[0])
-#         if amount <= 0:
-#             raise ValueError
-#     except (IndexError, ValueError):
-#         await update.message.reply_text(
-#             "Usage: /fund <amount>\nExample: /fund 1000"
-#         )
-#         return
-
-#     update_balance(tg_id, amount)
-#     user = get_user(tg_id)
-#     await update.message.reply_text(
-#         f"💰 {amount} added! Your new balance: ₦{user.get('balance',0):,}"
-#     )
 
 
 
@@ -1337,53 +1175,6 @@ async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await send_question(update, context, user_id)
 
 
-# async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     query = update.callback_query
-#     await query.answer()
-#     user_id = query.from_user.id
-
-#     user = get_user(user_id)
-#     if not user:
-#         await query.edit_message_text("❌ You must register first using /register.")
-#         return
-#     if user.get("balance", 0) < 200:
-#         await query.edit_message_text(f"💳 Your balance is ₦{user.get('balance',0):,}.\n❌ You need at least ₦200 to play. Please top up.")
-#         return
-
-#     cat = query.data.split("_", 1)[1]
-#     if cat not in CATEGORIES:
-#         await query.edit_message_text("⚠️ Unknown category selected.")
-#         return
-
-#     # Deduct fee & increment session
-#     updated_user = users_col.find_one_and_update(
-#         {"telegram_id": user_id},
-#         {"$inc": {"balance": -200, "sessions": 1}},
-#         return_document=ReturnDocument.AFTER,
-#         upsert=True
-#     )
-#     new_balance = updated_user.get("balance", 0)
-
-#     # Prepare quiz state
-#     quiz_state = {
-#         "score": 0,
-#         "current": 0,
-#         "questions": [],  # will be filled dynamically
-#         "active": True,
-#         "timeout_job": None,
-#         "answers": [],
-#         "category": cat,
-#         "sent_at": None
-#     }
-#     ACTIVE_QUIZZES[user_id] = quiz_state
-
-#     await query.edit_message_text(f"✅ ₦200 deducted. Remaining balance: ₦{new_balance:,}\n✅ You chose {cat}. Quiz starting…")
-
-#     # Send first question
-#     await send_question(update, context, user_id)
-
-
-
 # ---------------------------
 # Send Question
 # ---------------------------
@@ -1417,44 +1208,6 @@ async def send_question(update, context, user_id):
         quiz["sent_at"] = time.time()
     else:
         await finalize_quiz(context, user_id, quiz)
-
-
-# async def send_question(update, context, user_id):
-#     quiz = ACTIVE_QUIZZES.get(user_id)
-#     if not quiz or not quiz.get("active", True):
-#         return
-
-#     current = quiz["current"]
-#     questions = quiz["questions"]
-
-#     if current >= len(questions):
-#         await finalize_quiz(context, user_id, quiz)
-#         return
-
-#     q = questions[current]
-#     keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
-#     reply_markup = InlineKeyboardMarkup(keyboard)
-
-#     msg = await context.bot.send_message(
-#         chat_id=user_id,
-#         text=f"❓ Question {current+1}/{len(questions)}:\n{q['question']}\n\n⏳ You have 60 seconds!",
-#         reply_markup=reply_markup
-#     )
-
-#     # Store time sent
-#     quiz["sent_at"] = time.time()
-
-#     # Cancel old timeout job if any
-#     safe_remove_job(quiz.get("timeout_job"))
-
-#     # Schedule timeout
-#     job = context.job_queue.run_once(
-#         timeout_question,
-#         60,
-#         data={"user_id": user_id, "msg_id": msg.message_id},
-#     )
-#     quiz["timeout_job"] = job
-
 
 
 
@@ -1503,46 +1256,6 @@ async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
     quiz["current"] += 1
     # Immediately send next question
     await send_question(None, context, user_id)
-
-# async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
-#     job = context.job
-#     data = job.data
-#     user_id = data["user_id"]
-#     msg_id = data["msg_id"]
-
-#     quiz = ACTIVE_QUIZZES.get(user_id)
-#     if not quiz or not quiz.get("active", True):
-#         return
-
-#     current = quiz["current"]
-#     if current >= len(quiz["questions"]):
-#         await finalize_quiz(context, user_id, quiz)
-#         return
-
-#     correct = quiz["questions"][current]["answer"]
-
-#     # Record zero points for timeout
-#     quiz["answers"].append({
-#         "user_id": user_id,
-#         "question_id": current,
-#         "total_score": 0,
-#         "elapsed_time": 60
-#     })
-
-#     # Disable buttons
-#     try:
-#         await context.bot.edit_message_reply_markup(chat_id=user_id, message_id=msg_id, reply_markup=None)
-#     except Exception:
-#         pass
-
-#     await context.bot.send_message(chat_id=user_id, text=f"⌛ Time’s up! The correct answer was {correct}.")
-
-#     quiz["current"] += 1
-#     await send_question(context, user_id)
-
-
-
-
 
 
 # ---------------------------
@@ -1626,83 +1339,6 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 
-
-# async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
-#     query = update.callback_query
-#     await query.answer()
-#     user_id = query.from_user.id
-#     selected = query.data
-
-#     # Ignore confirm/cancel/category callbacks
-#     if selected in ("confirm_end", "cancel_end") or selected.startswith("cat_"):
-#         return
-
-#     quiz = ACTIVE_QUIZZES.get(user_id)
-#     if not quiz or not quiz.get("active", True):
-#         try:
-#             await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
-#         except:
-#             pass
-#         return
-
-#     current = quiz["current"]
-#     if current >= len(quiz["questions"]):
-#         try:
-#             await query.edit_message_text("✅ Quiz already finished.")
-#         except:
-#             pass
-#         return
-
-#     q = quiz["questions"][current]
-#     correct = q["answer"]
-
-#     # Cancel timeout
-#     safe_remove_job(quiz.get("timeout_job"))
-#     quiz["timeout_job"] = None
-
-#     elapsed = time.time() - quiz.get("sent_at", time.time())
-#     base_score = 0
-#     bonus = 0.0
-
-#     if selected == correct:
-#         if elapsed <= 30:
-#             base_score = 10
-#         elif elapsed <= 60:
-#             base_score = 5
-
-#         if elapsed <= 10:
-#             bonus = 0.3
-#         elif elapsed <= 20:
-#             bonus = 0.2
-#         elif elapsed <= 30:
-#             bonus = 0.1
-
-#     total_score = base_score + bonus if selected == correct else 0
-
-#     # Record answer
-#     quiz["answers"].append({
-#         "user_id": user_id,
-#         "question_id": current,
-#         "total_score": total_score,
-#         "elapsed_time": elapsed
-#     })
-
-#     # Show result and disable buttons
-#     try:
-#         if selected == correct:
-#             await query.edit_message_text(f"✅ Correct! You earned {base_score} pts + {bonus:.1f} bonus = {total_score:.1f} pts.")
-#         else:
-#             await query.edit_message_text(f"❌ Wrong! The correct answer was {correct}.")
-#     except Exception:
-#         pass
-
-#     quiz["current"] += 1
-#     await send_question(context, user_id)
-
-
-
-
-
 # ---------------------------
 # Finalize Quiz
 # ---------------------------
@@ -1729,39 +1365,6 @@ async def finalize_quiz(context, user_id, quiz):
         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {user_final_score:.1f}")
     except Exception:
         pass
-
-
-# async def finalize_quiz(context, user_id, quiz):
-#     if not quiz or not quiz.get("active", True):
-#         return
-
-#     quiz["active"] = False
-
-#     # ✅ Apply speed bonus and calculate total points
-#     final_results = apply_speed_bonus(quiz.get("answers", []))
-#     category = quiz.get("category", "debug")  # fallback to debug if not defined
-
-#     # ✅ Update DB for every participant
-#     for uid, pts in final_results.items():
-#         update_score(uid, pts, category=category, answers=quiz.get("answers", []))
-
-#     user_final_score = final_results.get(user_id, 0)
-
-#     # ✅ Cancel any running timeout job
-#     safe_remove_job(quiz.get("timeout_job"))
-
-#     # ✅ Clear stored quiz state
-#     ACTIVE_QUIZZES.pop(user_id, None)
-
-#     # ✅ Notify user
-#     try:
-#         await context.bot.send_message(
-#             chat_id=user_id,
-#             text=f"✅ Quiz finished!\nCategory: {category}\nYour score: {user_final_score:.1f}"
-#         )
-#     except Exception:
-#         pass
-
 
 
 # ---------------------------
