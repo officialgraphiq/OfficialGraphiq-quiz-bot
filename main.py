@@ -1035,11 +1035,6 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
 
-    # Optional debug (remove/comment out after testing)
-    await update.message.reply_text(f"DEBUG METADATA:\n{json.dumps(data.get('data', {}).get('metadata', {}), indent=2)}")
-    await update.message.reply_text(f"DEBUG RESPONSE:\n{json.dumps(data, indent=2)}")
-
-    # Check if Paystack responded successfully
     if not data.get("status"):
         await update.message.reply_text(f"❌ Verification failed: {data.get('message', 'Unknown error')}")
         return
