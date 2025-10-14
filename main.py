@@ -1,11 +1,14 @@
 import os
 import certifi
 import json
+from threading import Thread
 import random
 import time
 import pytz
 import httpx
 from zoneinfo import ZoneInfo
+from flask import Flask, request, jsonify
+from telegram import Bot
 from typing import Final
 from datetime import datetime, timedelta, timezone
 from telegram.ext import JobQueue
@@ -1419,6 +1422,63 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 
 
 
+flask_app = Flask(__name__)
+bot = Bot(token=TOKEN)  # allows us to send Telegram messages from webhook
+
+@flask_app.route("/paystack-webhook", methods=["POST"])
+def paystack_webhook():
+    try:
+        data = request.get_json()
+        print("📦 Incoming Paystack webhook:", json.dumps(data, indent=2))
+
+        if not data:
+            return jsonify({"status": False, "message": "No data received"}), 400
+
+        # Paystack sends many event types, we only care about successful charges
+        event = data.get("event")
+        if event != "charge.success":
+            return jsonify({"status": True, "message": "Event ignored"}), 200
+
+        pay_data = data.get("data", {})
+        metadata_raw = pay_data.get("metadata", {})
+
+        # Parse metadata safely
+        if isinstance(metadata_raw, str):
+            try:
+                metadata = json.loads(metadata_raw)
+            except json.JSONDecodeError:
+                metadata = {}
+        else:
+            metadata = metadata_raw
+
+        user_id = int(metadata.get("user_id", 0))
+        amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
+
+        if user_id and amount_with_bonus > 0:
+            # Update MongoDB
+            result = users_col.update_one(
+                {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
+                {
+                    "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
+                    "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}
+                }
+            )
+
+            if result.modified_count > 0:
+                msg = f"✅ Payment verified!\n₦{amount_with_bonus:,} has been added to your balance."
+                bot.send_message(chat_id=user_id, text=msg)
+                print(f"✅ Auto-verified: ₦{amount_with_bonus} added to user {user_id}")
+            else:
+                print(f"⚠️ Payment received but no pending deposit found for user {user_id}")
+
+        return jsonify({"status": True, "message": "Webhook processed"}), 200
+
+    except Exception as e:
+        print("❌ Webhook error:", e)
+        return jsonify({"status": False, "message": str(e)}), 500
+
+
+
     
 
 def main():
@@ -1483,82 +1543,15 @@ def main():
         app.run_polling()
 
 
+# if __name__ == "__main__":
+#     main()  
+
 if __name__ == "__main__":
+    # Run Flask webhook in background thread
+    def run_flask():
+        flask_app.run(host="0.0.0.0", port=8081)  # ⚠️ Use port 8081 to avoid clashing with Telegram webhook
+
+    Thread(target=run_flask).start()
+
+    # Run Telegram bot webhook (your existing setup)
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
