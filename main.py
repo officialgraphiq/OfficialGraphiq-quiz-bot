@@ -1456,6 +1456,7 @@ def main():
     app.add_handler(CommandHandler("play", play_command))
     app.add_handler(CommandHandler("end", end_command))
     app.add_handler(CommandHandler("fund", fund_command))
+    app.add_handler(CommandHandler("verify", verify_command))
     app.add_handler(CommandHandler("balance", balance_command))
     app.add_handler(CommandHandler("leaderboard", leaderboard_command))
     app.add_handler(CommandHandler("profile", profile_command))
