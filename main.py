@@ -1550,7 +1550,18 @@ def main():
         app.run_polling()
 
 
+# if __name__ == "__main__":
+#     main()  
+# --- Run Flask and Telegram together ---
 if __name__ == "__main__":
-    main()  
+    from threading import Thread
+
+    def run_flask():
+        print("🌍 Starting Flask webhook server for Paystack...")
+        flask_app.run(host="0.0.0.0", port=8081)  # ✅ different port from Telegram bot
+
+    # Run Flask in background, Telegram bot in main thread
+    Thread(target=run_flask, daemon=True).start()
+    main()
 
 
