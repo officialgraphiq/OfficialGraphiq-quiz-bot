@@ -1143,6 +1143,9 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Verify Command
 # -----------------------------
+import json
+import httpx
+
 async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
     try:
@@ -1160,26 +1163,45 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
 
-    if data.get("status") and data["data"]["status"] == "success":
-        metadata = data["data"].get("metadata", {})
-        amount_with_bonus = metadata.get("amount_with_bonus", 0)
-        if amount_with_bonus <= 0:
-            await update.message.reply_text("❌ Could not read deposit amount from metadata.")
-            return
+    # Debug info (comment out after testing)
+    await update.message.reply_text(f"DEBUG RESPONSE:\n{json.dumps(data, indent=2)}")
 
-        # Update user balance
-        result = users_col.update_one(
-            {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
-            {"$inc": {"balance": amount_with_bonus, "total_deposits": 1},
-             "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}}
-        )
+    if not data.get("status"):
+        await update.message.reply_text(f"❌ Verification failed: {data.get('message', 'Unknown error')}")
+        return
 
-        if result.modified_count == 0:
-            await update.message.reply_text("❌ No pending deposit found to verify.")
-        else:
-            await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
+    pay_data = data.get("data", {})
+    if pay_data.get("status") != "success":
+        await update.message.reply_text(f"❌ Payment not successful yet. Status: {pay_data.get('status')}")
+        return
+
+    metadata_raw = pay_data.get("metadata", {})
+    if isinstance(metadata_raw, str):
+        try:
+            metadata = json.loads(metadata_raw)
+        except json.JSONDecodeError:
+            metadata = {}
     else:
-        await update.message.reply_text("❌ Payment not successful or still pending. Try again later.")
+        metadata = metadata_raw
+
+    amount_with_bonus = metadata.get("amount_with_bonus", 0)
+
+    if amount_with_bonus <= 0:
+        await update.message.reply_text("❌ Could not read deposit amount from metadata.")
+        return
+
+    result = users_col.update_one(
+        {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
+        {"$inc": {"balance": amount_with_bonus, "total_deposits": 1},
+         "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}}
+    )
+
+    if result.modified_count == 0:
+        await update.message.reply_text("❌ No pending deposit found to verify.")
+        return
+
+    await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
+
 
 
 # -----------------------------
