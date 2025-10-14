@@ -1035,14 +1035,11 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
 
-    # 👇 Add this line inside the function, not outside
-    await update.message.reply_text(
-        f"DEBUG METADATA:\n{json.dumps(data.get('data', {}).get('metadata', {}), indent=2)}"
-    )
-
-    # Debug info (comment out after testing)
+    # Optional debug (remove/comment out after testing)
+    await update.message.reply_text(f"DEBUG METADATA:\n{json.dumps(data.get('data', {}).get('metadata', {}), indent=2)}")
     await update.message.reply_text(f"DEBUG RESPONSE:\n{json.dumps(data, indent=2)}")
 
+    # Check if Paystack responded successfully
     if not data.get("status"):
         await update.message.reply_text(f"❌ Verification failed: {data.get('message', 'Unknown error')}")
         return
@@ -1052,6 +1049,7 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"❌ Payment not successful yet. Status: {pay_data.get('status')}")
         return
 
+    # Parse metadata safely
     metadata_raw = pay_data.get("metadata", {})
     if isinstance(metadata_raw, str):
         try:
@@ -1061,16 +1059,24 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         metadata = metadata_raw
 
+    # Convert amount_with_bonus to int
     amount_with_bonus = metadata.get("amount_with_bonus", 0)
+    try:
+        amount_with_bonus = int(amount_with_bonus)
+    except (ValueError, TypeError):
+        amount_with_bonus = 0
 
     if amount_with_bonus <= 0:
         await update.message.reply_text("❌ Could not read deposit amount from metadata.")
         return
 
+    # Update user balance in MongoDB
     result = users_col.update_one(
         {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
-        {"$inc": {"balance": amount_with_bonus, "total_deposits": 1},
-         "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}}
+        {
+            "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
+            "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}
+        }
     )
 
     if result.modified_count == 0:
@@ -1078,7 +1084,6 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
-
 
 
 # -----------------------------
