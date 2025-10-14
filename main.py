@@ -1425,10 +1425,12 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 
 
 
-app = Flask(__name__)
-bot = Bot(token=TOKEN)  # allows us to send Telegram messages from webhook
+# --- Flask app for Paystack webhook ---
+flask_app = Flask(__name__)
+bot = Bot(token=TOKEN)  # enables Telegram messages from webhook
 
-@app.route("/paystack-webhook", methods=["POST"])
+
+@flask_app.route("/paystack-webhook", methods=["POST"])
 def paystack_webhook():
     try:
         data = request.get_json()
@@ -1437,15 +1439,14 @@ def paystack_webhook():
         if not data:
             return jsonify({"status": False, "message": "No data received"}), 400
 
-        # Paystack sends many event types, we only care about successful charges
-        event = data.get("event")
-        if event != "charge.success":
+        # Only handle successful charges
+        if data.get("event") != "charge.success":
             return jsonify({"status": True, "message": "Event ignored"}), 200
 
         pay_data = data.get("data", {})
         metadata_raw = pay_data.get("metadata", {})
 
-        # Parse metadata safely
+        # Handle metadata safely
         if isinstance(metadata_raw, str):
             try:
                 metadata = json.loads(metadata_raw)
@@ -1458,12 +1459,15 @@ def paystack_webhook():
         amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
 
         if user_id and amount_with_bonus > 0:
-            # Update MongoDB
             result = users_col.update_one(
                 {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
                 {
                     "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
-                    "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}
+                    "$unset": {
+                        "pending_deposit": "",
+                        "deposit_amount": "",
+                        "paystack_reference": ""
+                    }
                 }
             )
 
@@ -1549,12 +1553,4 @@ def main():
 if __name__ == "__main__":
     main()  
 
-# if __name__ == "__main__":
-#     # Run Flask webhook in background thread
-#     def run_flask():
-#         flask_app.run(host="0.0.0.0", port=8081)  # ⚠️ Use port 8081 to avoid clashing with Telegram webhook
 
-#     Thread(target=run_flask).start()
-
-#     # Run Telegram bot webhook (your existing setup)
-#     main()
