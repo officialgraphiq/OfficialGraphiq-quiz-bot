@@ -1491,6 +1491,7 @@ def paystack_webhook():
 def main():
     print("🤖 Bot starting...")
     app = Application.builder().token(TOKEN).build()
+    flask_app.telegram_app = app
     schedule_daily_reset(app.job_queue)
     # Register flow
     reg_conv = ConversationHandler(
@@ -1553,15 +1554,36 @@ def main():
 # if __name__ == "__main__":
 #     main()  
 # --- Run Flask and Telegram together ---
+@flask_app.route("/webhook", methods=["POST"])
+def telegram_webhook():
+    try:
+        data = request.get_json(force=True)
+        update = Update.de_json(data, bot)
+        flask_app.telegram_app.update_queue.put_nowait(update)
+        return "OK", 200
+    except Exception as e:
+        print("❌ Telegram webhook error:", e)
+        return "Error", 500
+
+
+# if __name__ == "__main__":
+#     from threading import Thread
+
+#     def run_flask():
+#         print("🌍 Starting Flask webhook server for Paystack...")
+#         flask_app.run(host="0.0.0.0", port=8081)  # ✅ different port from Telegram bot
+
+#     # Run Flask in background, Telegram bot in main thread
+#     Thread(target=run_flask, daemon=True).start()
+#     main()
+
 if __name__ == "__main__":
     from threading import Thread
 
     def run_flask():
-        print("🌍 Starting Flask webhook server for Paystack...")
-        flask_app.run(host="0.0.0.0", port=8081)  # ✅ different port from Telegram bot
+        print("🌍 Starting unified Flask server (Telegram + Paystack)...")
+        flask_app.run(host="0.0.0.0", port=8080)
 
-    # Run Flask in background, Telegram bot in main thread
-    Thread(target=run_flask, daemon=True).start()
-    main()
-
+    Thread(target=main, daemon=True).start()  # Telegram runs in background
+    run_flask()
 
