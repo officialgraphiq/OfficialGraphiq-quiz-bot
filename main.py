@@ -1036,13 +1036,13 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
 
-    # 👇 Add this line inside the function, not outside
+    # 👇 Print full Paystack response to Railway logs
+    print("PAYSTACK VERIFY RAW RESPONSE:", json.dumps(data, indent=2))
+
+    # 👇 Also send short debug info to Telegram
     await update.message.reply_text(
         f"DEBUG METADATA:\n{json.dumps(data.get('data', {}).get('metadata', {}), indent=2)}"
     )
-
-    # Debug info (comment out after testing)
-    await update.message.reply_text(f"DEBUG RESPONSE:\n{json.dumps(data, indent=2)}")
 
     if not data.get("status"):
         await update.message.reply_text(f"❌ Verification failed: {data.get('message', 'Unknown error')}")
@@ -1062,8 +1062,10 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         metadata = metadata_raw
 
-    amount_with_bonus = metadata.get("amount_with_bonus", 0)
+    # 👇 Print parsed metadata to Railway logs for confirmation
+    print("PARSED METADATA:", metadata)
 
+    amount_with_bonus = metadata.get("amount_with_bonus", 0)
     if amount_with_bonus <= 0:
         await update.message.reply_text("❌ Could not read deposit amount from metadata.")
         return
@@ -1074,11 +1076,15 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
          "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}}
     )
 
+    # 👇 Print update result to Railway logs
+    print("MONGODB UPDATE RESULT:", result.raw_result)
+
     if result.modified_count == 0:
         await update.message.reply_text("❌ No pending deposit found to verify.")
         return
 
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
+
 
 
 
