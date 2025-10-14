@@ -1573,7 +1573,7 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 
 #     Thread(target=main, daemon=True).start()  # Telegram runs in background
 #     run_flask()
-
+WEBHOOK_URL = "https://organization-quiz-bot-production.up.railway.app"
 
 
 
