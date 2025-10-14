@@ -26,6 +26,9 @@ from pymongo import MongoClient, ReturnDocument
 #mongodb+srv://tokumasamuel03_db_user:5QNgIFXxlLzyBGJv@graphiz-quizet.os3eb7u.mongodb.net/?retryWrites=true&w=majority&appName=graphiz-quizet
 
 
+app = Flask(__name__)
+
+
 
 # ---------------------------
 # MongoDB Setup
@@ -1422,10 +1425,10 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 
 
 
-flask_app = Flask(__name__)
+app = Flask(__name__)
 bot = Bot(token=TOKEN)  # allows us to send Telegram messages from webhook
 
-@flask_app.route("/paystack-webhook", methods=["POST"])
+@app.route("/paystack-webhook", methods=["POST"])
 def paystack_webhook():
     try:
         data = request.get_json()
@@ -1543,15 +1546,15 @@ def main():
         app.run_polling()
 
 
-# if __name__ == "__main__":
-#     main()  
-
 if __name__ == "__main__":
-    # Run Flask webhook in background thread
-    def run_flask():
-        flask_app.run(host="0.0.0.0", port=8081)  # ⚠️ Use port 8081 to avoid clashing with Telegram webhook
+    main()  
 
-    Thread(target=run_flask).start()
+# if __name__ == "__main__":
+#     # Run Flask webhook in background thread
+#     def run_flask():
+#         flask_app.run(host="0.0.0.0", port=8081)  # ⚠️ Use port 8081 to avoid clashing with Telegram webhook
 
-    # Run Telegram bot webhook (your existing setup)
-    main()
+#     Thread(target=run_flask).start()
+
+#     # Run Telegram bot webhook (your existing setup)
+#     main()
