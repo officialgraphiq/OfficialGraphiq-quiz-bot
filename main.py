@@ -1036,6 +1036,11 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
 
+    # 👇 Add this line inside the function, not outside
+    await update.message.reply_text(
+        f"DEBUG METADATA:\n{json.dumps(data.get('data', {}).get('metadata', {}), indent=2)}"
+    )
+
     # Debug info (comment out after testing)
     await update.message.reply_text(f"DEBUG RESPONSE:\n{json.dumps(data, indent=2)}")
 
@@ -1074,13 +1079,6 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
-
-async with httpx.AsyncClient() as client:
-    res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
-    data = res.json()
-
-# 👇 Add this line:
-await update.message.reply_text(f"DEBUG METADATA:\n{json.dumps(data.get('data', {}).get('metadata', {}), indent=2)}")
 
 
 
