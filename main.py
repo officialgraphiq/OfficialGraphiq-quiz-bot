@@ -1082,16 +1082,39 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} has been added to your balance.")
 
 
+# async def send_verify_instruction(update: Update, reference: str):
+#     verify_text = f"/verify {reference}"
+
+#     # Inline button that lets user copy easily without bot username
+#     keyboard = [
+#         [
+#             InlineKeyboardButton(
+#                 text="📋 Copy Verify Command",
+#                 switch_inline_query_current_chat=verify_text  # ✅ This opens text directly in input field
+#             )
+#         ]
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await update.message.reply_text(
+#         text=(
+#             "💳 After completing your payment, tap below to copy your verify command 👇\n\n"
+#             f"`{verify_text}`"
+#         ),
+#         reply_markup=reply_markup,
+#         parse_mode="Markdown"
+#     )
+
 async def send_verify_instruction(update: Update, reference: str):
     verify_text = f"/verify {reference}"
 
-    # Inline button that lets user copy easily without bot username
+    # Create a tiny web page link that auto-copies text (you can host it yourself)
+    encoded_text = urllib.parse.quote(verify_text)
+    copy_url = f"https://iconcopy.vercel.app/?text={encoded_text}"  # Example domain
+
     keyboard = [
         [
-            InlineKeyboardButton(
-                text="📋 Copy Verify Command",
-                switch_inline_query_current_chat=verify_text  # ✅ This opens text directly in input field
-            )
+            InlineKeyboardButton("📋 Copy Verify Command", url=copy_url)
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
