@@ -1089,16 +1089,20 @@ async def send_verify_instruction(update: Update, reference: str):
         [
             InlineKeyboardButton(
                 text="📋 Copy Verify Command",
-                switch_inline_query_current_chat=verify_text
+                switch_inline_query_current_chat=verify_text.replace("/", "\u200B/")  # zero-width space before /
             )
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        text=f"💳 Payment initialized!\n\nWhen payment is complete, tap below to verify it 👇",
-        reply_markup=reply_markup
-    )
+    text=(
+        f"💳 After completing your payment, tap below to copy your verify command 👇\n\n"
+        f"`/verify {reference}`"
+    ),
+    reply_markup=reply_markup,
+    parse_mode="Markdown"
+)
 
 
 
