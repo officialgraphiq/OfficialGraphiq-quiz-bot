@@ -1001,6 +1001,8 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"👉 Complete payment here: {payment_url}\n\n"
             f"After payment, verify with:\n/verify {reference}"
         )
+
+         await send_verify_instruction(update, reference)
     else:
         await update.message.reply_text(f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}")
 
