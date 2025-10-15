@@ -1096,7 +1096,7 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 import json
 import httpx
 
-# async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
 
     # --- Check reference ---
@@ -1192,9 +1192,7 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         data = res.json()
 
     if not data.get("status"):
-        await update.message.reply_text(
-            f"⚠️ Verification failed: {data.get('message', 'Unknown error')}"
-        )
+        await update.message.reply_text(f"⚠️ Verification failed: {data.get('message', 'Unknown error')}")
         return
 
     payment_data = data["data"]
@@ -1212,11 +1210,7 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             {"telegram_id": user_id},
             {
                 "$set": {"balance": new_balance},
-                "$unset": {
-                    "pending_deposit": "",
-                    "deposit_amount": "",
-                    "paystack_reference": ""
-                },
+                "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""},
                 "$inc": {"total_deposits": deposit_amount}
             },
             upsert=True
@@ -1232,6 +1226,8 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             f"⚠️ Payment not successful yet. Status: {status.capitalize()}"
         )
+
+
 
 
 
