@@ -1602,15 +1602,17 @@ def paystack_webhook():
 # -------------------------
 # TELEGRAM WEBHOOK
 # -------------------------
+# Telegram webhook route
 @flask_app.route("/webhook", methods=["POST"])
 def telegram_webhook():
     try:
-        update = Update.de_json(request.get_json(force=True), bot)
+        update = Update.de_json(request.get_json(force=True), application.bot)
         application.process_update(update)
         return "ok", 200
     except Exception as e:
         print("❌ Telegram webhook error:", e)
         return "error", 500
+
 
 # -------------------------
 # TELEGRAM BOT MAIN
