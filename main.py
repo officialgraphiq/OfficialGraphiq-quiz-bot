@@ -1083,26 +1083,26 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def send_verify_instruction(update: Update, reference: str):
-    verify_text = f"/verify {reference}"
+    fake_verify = f"verify {reference}"  # no slash here
 
     keyboard = [
         [
             InlineKeyboardButton(
                 text="📋 Copy Verify Command",
-                switch_inline_query_current_chat=verify_text.replace("/", "\u200B/")  # zero-width space before /
+                switch_inline_query_current_chat=f"/{fake_verify}"
             )
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-    text=(
-        f"💳 After completing your payment, tap below to copy your verify command 👇\n\n"
-        f"`/verify {reference}`"
-    ),
-    reply_markup=reply_markup,
-    parse_mode="Markdown"
-)
+        text=(
+            "💳 After completing your payment, tap below to copy your verify command 👇\n\n"
+            f"`/verify {reference}`"
+        ),
+        reply_markup=reply_markup,
+        parse_mode="Markdown"
+    )
 
 
 
