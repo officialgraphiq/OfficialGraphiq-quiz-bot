@@ -1083,13 +1083,14 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def send_verify_instruction(update: Update, reference: str):
-    verify_text = f"/verify {reference}"
+    # Use zero-width non-joiner to hide the command from Telegram's parser
+    safe_verify = f"/\u200Cverify {reference}"
 
     keyboard = [
         [
             InlineKeyboardButton(
                 text="📋 Copy Verify Command",
-                copy_text=verify_text  # ✅ Telegram-native copy button
+                switch_inline_query_current_chat=safe_verify
             )
         ]
     ]
@@ -1103,6 +1104,8 @@ async def send_verify_instruction(update: Update, reference: str):
         reply_markup=reply_markup,
         parse_mode="Markdown"
     )
+
+
 
 
 
