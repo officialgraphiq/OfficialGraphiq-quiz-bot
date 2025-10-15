@@ -1080,6 +1080,25 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} has been added to your balance.")
 
 
+async def send_verify_instruction(update: Update, reference: str):
+    verify_text = f"/verify {reference}"
+
+    keyboard = [
+        [
+            InlineKeyboardButton(
+                text="📋 Copy Verify Command",
+                switch_inline_query_current_chat=verify_text
+            )
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
+    await update.message.reply_text(
+        text=f"💳 Payment initialized!\n\nWhen payment is complete, tap below to verify it 👇",
+        reply_markup=reply_markup
+    )
+
+
 
 # -----------------------------
 # Test secret key
