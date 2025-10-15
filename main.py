@@ -1085,11 +1085,12 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def send_verify_instruction(update: Update, reference: str):
     verify_text = f"/verify {reference}"
 
+    # Inline button that lets user copy easily without bot username
     keyboard = [
         [
             InlineKeyboardButton(
                 text="📋 Copy Verify Command",
-                copy_text=verify_text  # ✅ Telegram-native copy button
+                switch_inline_query_current_chat=verify_text  # ✅ This opens text directly in input field
             )
         ]
     ]
@@ -1098,7 +1099,7 @@ async def send_verify_instruction(update: Update, reference: str):
     await update.message.reply_text(
         text=(
             "💳 After completing your payment, tap below to copy your verify command 👇\n\n"
-            f"`/verify {reference}`"
+            f"`{verify_text}`"
         ),
         reply_markup=reply_markup,
         parse_mode="Markdown"
