@@ -940,6 +940,76 @@ PAYSTACK_INITIAL_BONUS = 1.0   # 100%
 PAYSTACK_REPEAT_BONUS = 0.1    # 10%
 
 
+# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     user = get_user(user_id)
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     try:
+#         amount = int(context.args[0])
+#         if amount <= 0:
+#             raise ValueError
+#     except (IndexError, ValueError):
+#         await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
+#         return
+
+#     # Determine bonus
+#     if user.get("total_deposits", 0) == 0:
+#         bonus_multiplier = PAYSTACK_INITIAL_BONUS
+#         bonus_text = "🎉 First-time deposit bonus 100% applied!"
+#     else:
+#         bonus_multiplier = PAYSTACK_REPEAT_BONUS
+#         bonus_text = "🔹 10% deposit bonus applied."
+
+#     amount_with_bonus = int(amount + (amount * bonus_multiplier))
+
+#     # Initialize Paystack payment
+#     headers = {
+#         "Authorization": f"Bearer {PAYSTACK_SECRET_KEY}",
+#         "Content-Type": "application/json"
+#     }
+#     payload = {
+#         "email": user.get("email", f"user{user_id}@example.com"),
+#         "amount": amount * 100,  # in kobo
+#         "currency": "NGN",
+#         "callback_url": "https://example.com",  # dummy, webhook not used
+#         "metadata": {
+#             "user_id": user_id,
+#             "amount_with_bonus": amount_with_bonus
+#         }
+#     }
+
+#     async with httpx.AsyncClient() as client:
+#         res = await client.post("https://api.paystack.co/transaction/initialize", json=payload, headers=headers)
+#         data = res.json()
+
+#     if data.get("status"):
+#         reference = data["data"]["reference"]
+#         payment_url = data["data"]["authorization_url"]
+
+#         # Save reference for manual verification
+#         users_col.update_one(
+#             {"telegram_id": user_id},
+#             {"$set": {"pending_deposit": amount_with_bonus, "deposit_amount": amount, "paystack_reference": reference}},
+#             upsert=True
+#         )
+
+#         await update.message.reply_text(
+#             f"💰 Fund request: ₦{amount:,}\n{bonus_text}\n"
+#             f"👉 Complete payment here: {payment_url}\n\n"
+#             f"After payment, verify with:\n/verify {reference}"
+#         )
+
+#         await send_verify_instruction(update, reference)
+#     else:
+#         await update.message.reply_text(f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}")
+
+
+
+
+
 async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
     user = get_user(user_id)
@@ -989,22 +1059,33 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reference = data["data"]["reference"]
         payment_url = data["data"]["authorization_url"]
 
-        # Save reference for manual verification
+        # Save reference for automatic /verify lookup
         users_col.update_one(
             {"telegram_id": user_id},
-            {"$set": {"pending_deposit": amount_with_bonus, "deposit_amount": amount, "paystack_reference": reference}},
+            {
+                "$set": {
+                    "pending_deposit": amount_with_bonus,
+                    "deposit_amount": amount,
+                    "paystack_reference": reference
+                }
+            },
             upsert=True
         )
 
         await update.message.reply_text(
             f"💰 Fund request: ₦{amount:,}\n{bonus_text}\n"
             f"👉 Complete payment here: {payment_url}\n\n"
-            f"After payment, verify with:\n/verify {reference}"
+            f"After payment, simply type:\n/verify"
         )
 
-        await send_verify_instruction(update, reference)
+        # Optional: still send the verification instruction (no reference shown)
+        await send_verify_instruction(update, None)
+
     else:
-        await update.message.reply_text(f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}")
+        await update.message.reply_text(
+            f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}"
+        )
+
 
 
 
@@ -1015,7 +1096,7 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 import json
 import httpx
 
-async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+# async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
 
     # --- Check reference ---
@@ -1082,16 +1163,84 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} has been added to your balance.")
 
 
+async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_id = update.message.from_user.id
+    user = get_user(user_id)
+
+    # Ensure user is registered
+    if not user:
+        await update.message.reply_text("⚠️ You must register first using /register")
+        return
+
+    # Check if user has a pending reference
+    reference = user.get("paystack_reference")
+    if not reference:
+        await update.message.reply_text(
+            "⚠️ No recent payment found.\nPlease make a deposit first using /fund <amount>"
+        )
+        return
+
+    # Verify payment with Paystack
+    headers = {
+        "Authorization": f"Bearer {PAYSTACK_SECRET_KEY}"
+    }
+
+    verify_url = f"https://api.paystack.co/transaction/verify/{reference}"
+
+    async with httpx.AsyncClient() as client:
+        res = await client.get(verify_url, headers=headers)
+        data = res.json()
+
+    if not data.get("status"):
+        await update.message.reply_text(f"⚠️ Verification failed: {data.get('message', 'Unknown error')}")
+        return
+
+    payment_data = data["data"]
+    status = payment_data.get("status")
+    amount_paid = int(payment_data.get("amount", 0)) // 100  # convert from kobo
+
+    if status == "success":
+        # Get stored deposit info
+        pending_amount = user.get("pending_deposit", 0)
+        deposit_amount = user.get("deposit_amount", 0)
+
+        # Update user's balance and clear pending deposit
+        new_balance = user.get("balance", 0) + pending_amount
+        users_col.update_one(
+            {"telegram_id": user_id},
+            {
+                "$set": {"balance": new_balance},
+                "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""},
+                "$inc": {"total_deposits": deposit_amount}
+            },
+            upsert=True
+        )
+
+        await update.message.reply_text(
+            f"✅ Payment verified successfully!\n"
+            f"💵 Amount Paid: ₦{amount_paid:,}\n"
+            f"🎁 Bonus Added: ₦{pending_amount - deposit_amount:,}\n"
+            f"💰 New Balance: ₦{new_balance:,}\n"
+        )
+    else:
+        await update.message.reply_text(
+            f"⚠️ Payment not successful yet. Status: {status.capitalize()}"
+        )
+
+
+
+
+
 # async def send_verify_instruction(update: Update, reference: str):
 #     verify_text = f"/verify {reference}"
 
-#     # Inline button that lets user copy easily without bot username
+#     # Create a tiny web page link that auto-copies text (you can host it yourself)
+#     encoded_text = urllib.parse.quote(verify_text)
+#     copy_url = f"https://iconcopy.vercel.app/?text={encoded_text}"  # Example domain
+
 #     keyboard = [
 #         [
-#             InlineKeyboardButton(
-#                 text="📋 Copy Verify Command",
-#                 switch_inline_query_current_chat=verify_text  # ✅ This opens text directly in input field
-#             )
+#             InlineKeyboardButton("📋 Copy Verify Command", url=copy_url)
 #         ]
 #     ]
 #     reply_markup = InlineKeyboardMarkup(keyboard)
@@ -1104,29 +1253,6 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #         reply_markup=reply_markup,
 #         parse_mode="Markdown"
 #     )
-
-async def send_verify_instruction(update: Update, reference: str):
-    verify_text = f"/verify {reference}"
-
-    # Create a tiny web page link that auto-copies text (you can host it yourself)
-    encoded_text = urllib.parse.quote(verify_text)
-    copy_url = f"https://iconcopy.vercel.app/?text={encoded_text}"  # Example domain
-
-    keyboard = [
-        [
-            InlineKeyboardButton("📋 Copy Verify Command", url=copy_url)
-        ]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-
-    await update.message.reply_text(
-        text=(
-            "💳 After completing your payment, tap below to copy your verify command 👇\n\n"
-            f"`{verify_text}`"
-        ),
-        reply_markup=reply_markup,
-        parse_mode="Markdown"
-    )
 
 
 
