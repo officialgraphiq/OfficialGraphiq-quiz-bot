@@ -1,14 +1,1572 @@
+# import os
+# import certifi
+# import json
+# from threading import Thread
+# import random
+# import time
+# import pytz
+# import httpx
+# from zoneinfo import ZoneInfo
+# from flask import Flask, request, jsonify
+# from telegram import Bot
+# from typing import Final
+# from datetime import datetime, timedelta, timezone
+# from telegram.ext import JobQueue
+# from collections import defaultdict
+# from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+# from telegram.ext import (
+#     Application, CommandHandler, CallbackQueryHandler,
+#     MessageHandler, ConversationHandler, ContextTypes, filters
+# )
+# from pymongo import MongoClient, ReturnDocument
+
+# #officialgraphiq25(GITIHUB PASS, MONGODB)
+# #cluster pass (Wd4qWrB30QGprjMa)
+
+# #mongodb+srv://tokumasamuel03_db_user:5QNgIFXxlLzyBGJv@graphiz-quizet.os3eb7u.mongodb.net/?retryWrites=true&w=majority&appName=graphiz-quizet
+
+
+
+
+
+# # ---------------------------
+# # MongoDB Setup
+# # ---------------------------
+# MONGO_URI = os.getenv("MONGO_URI")
+# client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+# db = client["quiz_bot"]
+# users_col = db["users"]
+# winners_col = db["daily_winners"]   # NEW: store historical winners
+
+# NIGERIA_TZ = pytz.timezone("Africa/Lagos")
+# NIGERIA_TZ = ZoneInfo("Africa/Lagos")
+# # ---------------------------
+# # Environment
+# # ---------------------------
+# TOKEN: Final = os.getenv("BOT_TOKEN")
+# BOT_USERNAME: Final = "@Icon_Ayce_Org_Bot"
+# WEBHOOK_URL = os.getenv("WEBHOOK_URL", "")
+# ANNOUNCE_CHAT_ID = os.getenv("ANNOUNCE_CHAT_ID")  # set to integer string, e.g. -1001234567890
+
+
+# # ---------------------------
+# # Category files (place these JSON files next to this script)
+# # ---------------------------
+# CATEGORIES = {
+#     "General": "questions.json",
+#     "Math": "questions_math.json",
+#     "Current Affairs": "questions_current_affairs.json",
+#     "Entertainment": "questions_entertainment.json",
+#     "Geography": "questions_geography.json",
+#     "Science": "questions_science.json",
+#     "Sports": "questions_sports.json",
+# }
+
+# QUESTION_BANKS = {}
+# for cat, file in CATEGORIES.items():
+#     try:
+#         with open(file, "r", encoding="utf-8") as f:
+#             QUESTION_BANKS[cat] = json.load(f)
+#     except Exception as e:
+#         print(f"⚠️ Could not load {cat} ({file}): {e}")
+#         QUESTION_BANKS[cat] = []
+
+
+# def get_random_question(user_id: int, category: str):
+#     print(f"📊 [DEBUG] Fetching random question for telegram_id={user_id}, category={category}")
+
+#     if category not in QUESTION_BANKS or not QUESTION_BANKS[category]:
+#         raise ValueError(f"No questions found for category: {category}")
+
+#     # ✅ Use telegram_id as the lookup field
+#     user = users_col.find_one({"telegram_id": user_id})
+
+#     if not user:
+#         print(f"⚠️ [DEBUG] No user found, creating one for {user_id}")
+#         users_col.insert_one({"telegram_id": user_id, "seen_questions": {}})
+#         user = users_col.find_one({"telegram_id": user_id})
+
+#     seen_data = user.get("seen_questions", {})
+#     seen = seen_data.get(category, [])
+#     print(f"👁️ [DEBUG] Seen questions so far: {seen}")
+
+#     total_questions = len(QUESTION_BANKS[category])
+#     unseen_indices = [i for i in range(total_questions) if i not in seen]
+
+#     if not unseen_indices:
+#         print(f"🔁 [DEBUG] All questions seen, resetting list for {category}")
+#         users_col.update_one(
+#             {"telegram_id": user_id},
+#             {"$set": {f"seen_questions.{category}": []}},
+#             upsert=True
+#         )
+#         unseen_indices = list(range(total_questions))
+
+#     random_index = random.choice(unseen_indices)
+#     question_data = QUESTION_BANKS[category][random_index]
+
+#     result = users_col.update_one(
+#         {"telegram_id": user_id},
+#         {"$push": {f"seen_questions.{category}": random_index}},
+#         upsert=True
+#     )
+#     print(f"✅ [DEBUG] Mongo update result: {result.modified_count} (added {random_index})")
+
+#     return question_data
+
+
+# async def handle_category_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+
+#     user_id = query.from_user.id
+#     category = query.data.replace("cat_", "")
+#     context.user_data["category"] = category
+
+#     # Fetch question (non-repeating)
+#     question_data = get_random_question(user_id, category)
+#     question = question_data["question"]
+#     options = question_data["options"]
+#     correct_answer = question_data["answer"]
+
+#     # Create inline keyboard
+#     keyboard = [
+#         [InlineKeyboardButton(opt, callback_data=f"ans_{opt}")]
+#         for opt in options
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await query.message.reply_text(
+#         f"📚 Category: *{category}*\n\n❓ *{question}*",
+#         parse_mode="Markdown",
+#         reply_markup=reply_markup
+#     )
+
+#     # ✅ Update user quiz status (overwrite previous "selecting_category")
+#     ACTIVE_QUIZZES[user_id] = {
+#         "category": category,
+#         "question": question,
+#         "correct_answer": correct_answer,
+#         "status": "in_quiz"
+#     }
+
+
+
+
+# # ---------------------------
+# # Conversation states
+# # ---------------------------
+# # REGISTER_USERNAME, REGISTER_EMAIL, REGISTER_CONFIRM = range(3)
+# USERNAME, EMAIL, PHONE, BANK, ACCOUNT = range(5)
+
+# # ---------------------------
+# # In-memory active quizzes
+# # ---------------------------
+# # NOTE: this is a process-memory dict. It works for jobs & handlers.
+# # If you need persistence across restarts, we can store this in MongoDB.
+# ACTIVE_QUIZZES: dict[int, dict] = {}
+
+
+
+
+
+
+
+# # ---------------------------
+# # Helpers: DB Functions
+# # ---------------------------
+# def get_user(tg_id):
+#     user = users_col.find_one({"telegram_id": tg_id})
+#     if user and "balance" not in user:
+#         users_col.update_one({"telegram_id": tg_id}, {"$set": {"balance": 0}})
+#         user["balance"] = 0
+#     return user
+
+# def create_or_update_user(tg_id, username=None, email=None):
+#     update = {}
+#     if username: update["username"] = username
+#     if email: update["email"] = email
+#     users_col.update_one(
+#         {"telegram_id": tg_id},
+#         {"$setOnInsert": {"score": 0, "balance": 0, "sessions": 0}, "$set": update},
+#         upsert=True
+#     )
+#     return get_user(tg_id)
+
+# # def update_score(tg_id, points):
+# #     users_col.update_one({"telegram_id": tg_id}, {"$inc": {"score": points}}, upsert=True)
+# #     return get_user(tg_id)
+# def update_score(tg_id, points, category=None, answers=None):
+#     """
+#     Update user's total score and (optionally) log quiz progress by category.
+#     """
+#     update_data = {"$inc": {"score": points}}
+
+#     # ✅ If category and answers are passed, log them under seen_questions.<category>
+#     if category and answers:
+#         formatted_answers = []
+#         for ans in answers:
+#             formatted_answers.append({
+#                 "question_index": ans.get("question_id"),
+#                 "earned_score": ans.get("total_score", 0),
+#                 "time_taken": round(ans.get("elapsed_time", 0), 2)
+#             })
+
+#         update_data["$push"] = {
+#             f"seen_questions.{category}": {"$each": formatted_answers}
+#         }
+
+#     users_col.update_one({"telegram_id": tg_id}, update_data, upsert=True)
+#     return get_user(tg_id)
+
+
+# def update_balance(tg_id, amount):
+#     users_col.update_one({"telegram_id": tg_id}, {"$inc": {"balance": amount}}, upsert=True)
+#     return get_user(tg_id)
+
+# def increment_sessions(tg_id):
+#     users_col.update_one({"telegram_id": tg_id}, {"$inc": {"sessions": 1}}, upsert=True)
+#     return get_user(tg_id)
+
+
+# def safe_remove_job(job):
+#     if job:
+#         try:
+#             job.schedule_removal()
+#         except Exception:
+#             pass
+
+
+# # ---------------------------
+# # Utility: check if user is currently in quiz
+# # ---------------------------
+# def user_in_quiz(user_id: int) -> bool:
+#     return user_id in ACTIVE_QUIZZES and ACTIVE_QUIZZES[user_id].get("active", False)
+
+
+# # ---------------------------
+# # Speed Bonus Scoring
+# # ---------------------------
+# def apply_speed_bonus(all_answers):
+#     """
+#     Finalize scores by summing the stored total_score values.
+#     """
+#     final_scores = defaultdict(float)
+#     for ans in all_answers:
+#         final_scores[ans["user_id"]] += ans.get("total_score", 0)
+#     return dict(final_scores)
+
+
+
+
+
+
+
+
+# #RESTRICT BOT--------------
+
+# ALLOWED_START_HOUR = 8   # 8 AM
+# ALLOWED_END_HOUR = 21    # 9 PM
+
+
+# async def reset_daily(context: ContextTypes.DEFAULT_TYPE):
+#     # Reset only scores and sessions (leave balance untouched)
+#     users_col.update_many({}, {"$set": {"score": 0, "sessions": 0}})
+    
+#     # Clear in-memory active quizzes
+#     ACTIVE_QUIZZES.clear()
+
+#     print("✅ Daily reset completed at", datetime.now(NIGERIA_TZ)
+# .strftime("%Y-%m-%d %H:%M:%S"))
+# async def restrict_hours(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     """
+#     Restrict bot usage to 8:00 AM - 9:00 PM (Africa/Lagos time).
+#     """
+#     now = datetime.now(NIGERIA_TZ)
+#     ALLOWED_START_HOUR = 8   # 8 AM
+#     ALLOWED_END_HOUR = 21    # 9 PM
+
+#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+#         await update.message.reply_text(
+#             "⛔ The bot is only active from 8:00 AM to 9:00 PM (Nigeria time).\nPlease come back during active hours."
+#         )
+#         return True  # indicates restricted
+#     return False
+
+
+
+# def schedule_daily_reset(job_queue: JobQueue):
+#     """
+#     Schedule the daily leaderboard reset for 6:00 AM Nigeria time.
+#     """
+#     now = datetime.now(NIGERIA_TZ)
+
+#     next_reset_time = datetime(
+#         year=now.year,
+#         month=now.month,
+#         day=now.day,
+#         hour=6,
+#         minute=0,
+#         second=0,
+#         tzinfo=NIGERIA_TZ
+#     )
+
+#     # If 6 AM already passed today, move to tomorrow
+#     if now >= next_reset_time:
+#         next_reset_time += timedelta(days=1)
+
+#     delay = (next_reset_time - now).total_seconds()
+
+#     job_queue.run_repeating(
+#         reset_daily,
+#         interval=86400,  # every 24 hours
+#         first=delay
+#     )
+
+#     print(f"🌅 Daily reset scheduled for {next_reset_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+
+
+
+
+# # ---------------------------
+# # Winner announcement feature (NEW)
+
+
+# from datetime import datetime
+
+# async def winner_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     now = datetime.now(NIGERIA_TZ)
+
+#     announce_time = now.replace(hour=21, minute=10, second=0, microsecond=0)
+#     midnight = now.replace(hour=23, minute=59, second=59, microsecond=0)
+
+#     # Determine today's and current month's info
+#     today_str = now.strftime("%Y-%m-%d")
+#     month_collection_name = f"daily_winners_{now.strftime('%Y_%m')}"
+#     winners_col = db[month_collection_name]  # dynamically use the correct monthly collection
+
+#     # If before 9:10PM → too early
+#     if now < announce_time:
+#         await update.message.reply_text("🏆 Winner will be announced by 9:10 PM today. Stay tuned!")
+#         return
+
+#     # Between 9:10PM and 11:59PM → allow winner view or creation
+#     winner = winners_col.find_one({"date": today_str})
+
+#     # If no winner stored yet → find top scorer
+#     if not winner:
+#         top_user = users_col.find_one({}, sort=[("score", -1)])
+
+#         if not top_user or top_user.get("score", 0) <= 0:
+#             await update.message.reply_text("⚠️ No winner today (no players or no scores).")
+#             return
+
+#         announce_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
+#         winner_record = {
+#             "date": today_str,
+#             "username": top_user.get("username", "Anonymous"),
+#             "telegram_id": top_user.get("telegram_id"),
+#             "score": float(top_user.get("score", 0)),
+#             "announced_at": announce_time_str
+#         }
+
+#         # Save in monthly collection
+#         winners_col.insert_one(winner_record)
+#         winner = winner_record
+
+#         print(f"✅ Stored daily winner for {today_str} in {month_collection_name}: {winner_record['username']}")
+
+#     # Display winner
+#     msg = (
+#         f"🏆 *Winner for {today_str}* 🏆\n\n"
+#         f"🥇 Username: {winner['username']}\n"
+#         f"🔢 Score: {winner['score']:.1f}\n\n"
+#         f"Announced at: {winner['announced_at']}"
+#     )
+#     await update.message.reply_text(msg, parse_mode="Markdown")
+
+#     # Optional note if it's almost midnight
+#     if now > midnight:
+#         await update.message.reply_text("⚠️ A new leaderboard will start soon, so today’s winner data will reset.")
+
+# async def announce_winner(context: ContextTypes.DEFAULT_TYPE):
+#     """
+#     Automatically announce and store the daily winner at 9:10 PM.
+#     """
+#     now = datetime.now(NIGERIA_TZ)
+
+#     today_str = now.strftime("%Y-%m-%d")
+#     month_collection_name = f"daily_winners_{now.strftime('%Y_%m')}"
+#     winners_col = db[month_collection_name]
+
+#     # Check if a winner already exists for today
+#     existing_winner = winners_col.find_one({"date": today_str})
+#     if existing_winner:
+#         print(f"⚠️ Winner for {today_str} already stored: {existing_winner['username']}")
+#         return
+
+#     # Find the top user from users_col
+#     top_user = users_col.find_one({}, sort=[("score", -1)])
+
+#     if not top_user or top_user.get("score", 0) <= 0:
+#         print(f"⚠️ No valid winner for {today_str} (no players or scores).")
+#         return
+
+#     # Store winner
+#     announce_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
+#     winner_record = {
+#         "date": today_str,
+#         "username": top_user.get("username", "Anonymous"),
+#         "telegram_id": top_user.get("telegram_id"),
+#         "score": float(top_user.get("score", 0)),
+#         "announced_at": announce_time_str
+#     }
+
+#     winners_col.insert_one(winner_record)
+#     print(f"✅ Automatically stored winner for {today_str}: {winner_record['username']}")
+
+
+
+# def schedule_winner_announcement(job_queue: JobQueue):
+#     """
+#     Schedule the daily winner announcement for 9:10 PM Nigeria time.
+#     """
+#     now = datetime.now(NIGERIA_TZ)
+
+#     target_time = datetime(
+#         year=now.year,
+#         month=now.month,
+#         day=now.day,
+#         hour=21,
+#         minute=10,
+#         second=0,
+#         tzinfo=NIGERIA_TZ
+#     )
+
+#     # If it's already past 9:10 PM today, schedule for tomorrow
+#     if target_time <= now:
+#         target_time += timedelta(days=1)
+
+#     delay = (target_time - now).total_seconds()
+
+#     job_queue.run_repeating(
+#         announce_winner,
+#         interval=86400,  # every 24 hours
+#         first=delay
+#     )
+
+#     print(f"🏆 Winner announcement scheduled for {target_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+
+
+
+
+
+# # ---------------------------
+# # Commands
+# # ---------------------------
+
+# async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # ⏰ Global pre-check: allow only between 8AM - 9PM
+#     now = datetime.now(NIGERIA_TZ)
+
+#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+#         await update.message.reply_text(
+#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+#             "Please come back during active hours."
+#         )
+#         return
+
+#     user_id = update.effective_user.id
+#     # Block if in quiz (only /end allowed)
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text(
+#             "⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit."
+#         )
+#         return
+
+#     menu = (
+#         "👋 Welcome to ORG Quiz Bot!\n\n"
+#         "Here are the available commands:\n"
+#         "/play - Start the quiz (must be registered + have ≥ ₦200 balance)\n"
+#         "/register - Register yourself\n"
+#         "/leaderboard - Show leaderboard\n"
+#         "/winner - Show today's winner\n"
+#         "/fund - Add funds to your balance\n"
+#         "/update - Update your profile details\n"
+#         "/profile - View your profile\n"
+#         "/balance - Check your balance\n"
+#         "/end - End your current quiz\n"
+#     )
+#     await update.message.reply_text(menu)
+
+
+
+# async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.effective_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+#         return
+#     await start_command(update, context)
+
+
+# # ---------------------------
+# # Register
+# # ---------------------------
+# ACTIVE_REGISTRATIONS = set()
+# ACTIVE_UPDATES = set()
+
+# async def start_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.effective_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 Complete it or use /end before registering.")
+#         return ConversationHandler.END
+
+#     user = users_col.find_one({"telegram_id": user_id})
+
+#     if user:
+#         await update.message.reply_text("✅ You are already registered. Use /update to change your details.")
+#         return ConversationHandler.END
+
+#     await update.message.reply_text("📋 Welcome to registration!\nPlease enter a username:")
+#     return USERNAME
+
+
+
+# async def register_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     username = update.message.text.strip()
+
+#     # Check uniqueness
+#     if users_col.find_one({"username": username, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Username already taken, try another one.")
+#         return USERNAME
+
+#     context.user_data["username"] = username
+#     await update.message.reply_text("✅ Username saved.\nNow enter your email:")
+#     return EMAIL
+
+
+
+
+# async def register_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     email = update.message.text.strip()
+
+#     if users_col.find_one({"email": email, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Email already registered, try another one.")
+#         return EMAIL
+
+#     context.user_data["email"] = email
+#     await update.message.reply_text("✅ Email saved.\nNow enter your phone number:")
+#     return PHONE
+
+
+# async def register_phone(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     phone = update.message.text.strip()
+
+#     if users_col.find_one({"phone": phone, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Phone already used, enter a different number.")
+#         return PHONE
+
+#     context.user_data["phone"] = phone
+#     await update.message.reply_text("✅ Phone saved.\nEnter your bank name:")
+#     return BANK
+
+# async def register_bank(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     context.user_data["bank"] = update.message.text.strip()
+#     await update.message.reply_text("✅ Bank name saved.\nEnter your account number:")
+#     return ACCOUNT
+
+# async def register_account(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     account_number = update.message.text.strip()
+
+#     if users_col.find_one({"account_number": account_number, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Account number already registered, try again.")
+#         return ACCOUNT
+
+#     context.user_data["account_number"] = account_number
+
+#     # ✅ Save everything to MongoDB
+#     users_col.update_one(
+#         {"telegram_id": update.effective_user.id},
+#         {"$set": {
+#             "username": context.user_data["username"],
+#             "email": context.user_data["email"],
+#             "phone": context.user_data["phone"],
+#             "bank": context.user_data["bank"],
+#             "account_number": account_number,
+#             "telegram_id": update.effective_user.id
+#         }},
+#         upsert=True
+#     )
+
+#     await update.message.reply_text("🎉 Registration complete! You may now use the bot.")
+#     return ConversationHandler.END
+
+
+# # async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+# #     await update.message.reply_text("❌ Registration cancelled.")
+# #     return ConversationHandler.END
+# async def cancel_registration(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text("❌ Registration cancelled. You can start again anytime with /register.")
+#     return ConversationHandler.END
+
+
+# # Profile Update states (reuse same order)
+
+# UPD_USERNAME, UPD_EMAIL, UPD_PHONE, UPD_BANK, UPD_ACCOUNT = range(5, 10)
+
+# async def start_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.effective_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 Complete it or use /end before updating your profile.")
+#         return ConversationHandler.END
+
+#     user = users_col.find_one({"telegram_id": user_id})
+
+#     if not user:
+#         await update.message.reply_text("⚠️ You are not registered yet. Use /register first.")
+#         return ConversationHandler.END
+
+#     await update.message.reply_text(
+#         f"📝 Updating your profile.\n"
+#         f"📝 To cancel update, use /cancel.\n"
+#         f"Current details:\n"
+#         f"- Username: {user.get('username', 'Not set')}\n"
+#         f"- Email: {user.get('email', 'Not set')}\n"
+#         f"- Phone: {user.get('phone', 'Not set')}\n"
+#         f"- Bank: {user.get('bank', 'Not set')}\n"
+#         f"- Account: {user.get('account_number', 'Not set')}\n\n"
+#         f"Please enter a new username:"
+#     )
+#     return UPD_USERNAME
+
+
+# async def update_username(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     username = update.message.text.strip()
+
+#     if users_col.find_one({"username": username, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Username already taken, try another one.")
+#         return UPD_USERNAME
+
+#     context.user_data["username"] = username
+#     await update.message.reply_text("✅ Username saved.\nNow enter your new email:")
+#     return UPD_EMAIL
+
+
+# async def update_email(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     email = update.message.text.strip()
+
+#     if users_col.find_one({"email": email, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Email already registered, try another one.")
+#         return UPD_EMAIL
+
+#     context.user_data["email"] = email
+#     await update.message.reply_text("✅ Email saved.\nNow enter your new phone number:")
+#     return UPD_PHONE
+
+
+# async def update_phone(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     phone = update.message.text.strip()
+
+#     if users_col.find_one({"phone": phone, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Phone already used, enter a different one.")
+#         return UPD_PHONE
+
+#     context.user_data["phone"] = phone
+#     await update.message.reply_text("✅ Phone saved.\nEnter your new bank name:")
+#     return UPD_BANK
+
+
+# async def update_bank(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     context.user_data["bank"] = update.message.text.strip()
+#     await update.message.reply_text("✅ Bank name saved.\nEnter your new account number:")
+#     return UPD_ACCOUNT
+
+
+# async def update_account(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     account_number = update.message.text.strip()
+
+#     if users_col.find_one({"account_number": account_number, "telegram_id": {"$ne": update.effective_user.id}}):
+#         await update.message.reply_text("❌ Account number already registered, try again.")
+#         return UPD_ACCOUNT
+
+#     context.user_data["account_number"] = account_number
+
+#     # ✅ Update in DB
+#     users_col.update_one(
+#         {"telegram_id": update.effective_user.id},
+#         {"$set": {
+#             "username": context.user_data["username"],
+#             "email": context.user_data["email"],
+#             "phone": context.user_data["phone"],
+#             "bank": context.user_data["bank"],
+#             "account_number": account_number
+#         }},
+#     )
+
+#     await update.message.reply_text("🎉 Profile updated successfully!")
+#     return ConversationHandler.END
+
+
+# # async def cancel_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
+# #     await update.message.reply_text("❌ Update cancelled.")
+# #     return ConversationHandler.END
+# async def cancel_update(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text("❌ Update cancelled. You can start again anytime with /update.")
+#     return ConversationHandler.END
+
+
+# # Fallback for blocking other commands during registration/update
+# async def block_other_commands(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.effective_user.id
+
+#     # Allow /end if in quiz
+#     if user_id in ACTIVE_QUIZZES and update.message and update.message.text.strip().startswith("/end"):
+#         return  # don't block, let /end handler run
+
+#     # Otherwise block everything
+#     await update.message.reply_text(
+#         "⚠️ You cannot use other commands right now.\n"
+#         "👉 Finish your profile update first, or type /cancel to stop updating."
+#     )
+
+
+# # ---------------------------
+# # Profile Command
+# # ---------------------------
+# async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+#         return
+
+#     tg_id = update.message.from_user.id
+#     user = get_user(tg_id)
+
+#     if not user:
+#         await update.message.reply_text("⚠️ You are not registered yet. Use /register first.")
+#         return
+
+#     profile_text = (
+#         "👤 Your Profile:\n\n"
+#         f"Username: {user.get('username', '—')}\n"
+#         f"Email: {user.get('email', '—')}\n"
+#         f"Phone: {user.get('phone', '—')}\n"
+#         f"Bank: {user.get('bank', '—')}\n"
+#         f"Account No: {user.get('account_number', '—')}\n"
+#         f"Score: {user.get('score', 0):.1f}\n"
+#         f"Balance: ₦{user.get('balance', 0):,}\n"
+#         f"Sessions: {user.get('sessions', 0)}"
+#     )
+
+#     await update.message.reply_text(profile_text)
+
+
+
+
+
+
+# # ---------------------------
+# # Quiz: show categories (balance check)
+# # ---------------------------
+# async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # ⏰ Time restriction check
+#     now = datetime.now(NIGERIA_TZ)
+#     if not (ALLOWED_START_HOUR <= now.hour < ALLOWED_END_HOUR):
+#         await update.message.reply_text(
+#             "⛔ The bot is only active from 8:00 AM to 9:00 PM.\n"
+#             "Please come back during active hours."
+#         )
+#         return
+
+#     user_id = update.message.from_user.id
+
+#     # 🚫 Block if already in quiz or category selection
+#     if user_id in ACTIVE_QUIZZES:
+#         await update.message.reply_text(
+#             "⚠️ You are already in a quiz session or selecting a category!\n"
+#             "👉 Use /end first if you want to quit and start again."
+#         )
+#         return
+
+#     tg_id = user_id
+#     user = get_user(tg_id)
+
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     if user.get("balance", 0) < 200:
+#         await update.message.reply_text(
+#             "⚠️ You need at least ₦200 to play. Use /fund to add funds."
+#         )
+#         return
+
+#     # ✅ Mark user as "selecting category" temporarily
+#     ACTIVE_QUIZZES[user_id] = {"status": "selecting_category"}
+
+#     keyboard = [
+#         [InlineKeyboardButton(cat, callback_data=f"cat_{cat}")]
+#         for cat in CATEGORIES.keys()
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     await update.message.reply_text(
+#         f"💳 Balance: ₦{user.get('balance',0):,}\n\n🎮 Choose a category to start your quiz:",
+#         reply_markup=reply_markup
+#     )
+
+
+
+
+
+
+
+# async def end_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     # /end should always be allowed
+#     user_id = update.effective_user.id
+
+#     quiz = ACTIVE_QUIZZES.get(user_id)
+#     if not quiz or not quiz.get("active", False):
+#         await update.message.reply_text("⚠️ You are not currently in an active quiz session.")
+#         return
+
+#     keyboard = [
+#         [
+#             InlineKeyboardButton("✅ Yes, end now", callback_data="confirm_end"),
+#             InlineKeyboardButton("❌ No, continue", callback_data="cancel_end"),
+#         ]
+#     ]
+#     reply_markup = InlineKeyboardMarkup(keyboard)
+
+#     sent_msg = await update.message.reply_text(
+#         "⚠️ Are you sure you want to *end your quiz session*?\n\n"
+#         "👉 Ending early means you *forfeit the session* and *will not be refunded*.",
+#         reply_markup=reply_markup,
+#         parse_mode="Markdown"
+#     )
+
+#     # Schedule expiration after 30s
+#     context.job_queue.run_once(
+#         expire_end_confirmation,
+#         30,
+#         data={
+#             "chat_id": sent_msg.chat.id,
+#             "message_id": sent_msg.message_id,
+#             "user_id": user_id,
+#         },
+#     )
+
+
+
+
+# async def expire_end_confirmation(context: ContextTypes.DEFAULT_TYPE):
+#     data = context.job.data
+#     chat_id = data["chat_id"]
+#     message_id = data["message_id"]
+#     user_id = data["user_id"]
+
+#     # Only expire if quiz is still active
+#     if user_id in ACTIVE_QUIZZES:
+#         try:
+#             await context.bot.edit_message_text(
+#                 chat_id=chat_id,
+#                 message_id=message_id,
+#                 text="⌛ The end request *expired*. Your quiz continues! 🎉",
+#                 parse_mode="Markdown"
+#             )
+#         except:
+#             pass
+
+
+# async def block_during_quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     """
+#     This is a global handler that replies immediately when a command (except /end) is used
+#     while the user is in a quiz. It is registered early so users get an immediate block message.
+#     We still keep defensive checks at the top of each command handler to ensure commands
+#     do not perform their logic if user is in a quiz.
+#     """
+#     # defensively handle both message and callback (we expect commands here)
+#     if update.message is None:
+#         return
+
+#     user_id = update.effective_user.id
+
+#     # Allow /end
+#     if update.message.text and update.message.text.startswith("/end"):
+#         return  # let /end proceed
+
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text(
+#             "⛔ You are currently in a quiz session.\n"
+#             "👉 The only command available is /end to quit."
+#         )
+#         return
+
+
+
+# async def confirm_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+#     user_id = query.from_user.id
+
+#     quiz = ACTIVE_QUIZZES.pop(user_id, None)
+#     if quiz:
+#         # Cancel any timeout jobs
+#         safe_remove_job(quiz.get("timeout_job"))
+
+#         # ✅ Record the points earned so far
+#         final_results = apply_speed_bonus(quiz.get("answers", []))
+#         user_score_so_far = final_results.get(user_id, 0)
+
+#         # Update DB with current points
+#         update_score(user_id, user_score_so_far)
+
+#         await query.edit_message_text(
+#             f"❌ Your quiz session has been *ended*.\n\n"
+#             f"⚠️ You forfeited the remaining questions, but your current points ({user_score_so_far:.1f}) have been recorded.\n"
+#             "👉 You can start again anytime with /play.",
+#             parse_mode="Markdown"
+#         )
+#     else:
+#         await query.edit_message_text("⚠️ You have no active session.")
+
+
+
+# async def cancel_end(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+#     # Tell user we're continuing; do not let this callback be treated as an answer
+#     await query.edit_message_text("✅ You chose to continue your quiz. Good luck! 🎉")
+
+
+
+
+# # ---------------------------
+# # Fund & Balance
+# # ---------------------------
+
+
+# PAYSTACK_SECRET_KEY = os.environ.get("PAYSTACK_SECRET_KEY")  # set in Railway/Env
+# PAYSTACK_INITIAL_BONUS = 1.0   # 100%
+# PAYSTACK_REPEAT_BONUS = 0.1    # 10%
+
+
+# async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     user = get_user(user_id)
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+
+#     try:
+#         amount = int(context.args[0])
+#         if amount <= 0:
+#             raise ValueError
+#     except (IndexError, ValueError):
+#         await update.message.reply_text("Usage: /fund <amount>\nExample: /fund 1000")
+#         return
+
+#     # Determine bonus
+#     if user.get("total_deposits", 0) == 0:
+#         bonus_multiplier = PAYSTACK_INITIAL_BONUS
+#         bonus_text = "🎉 First-time deposit bonus 100% applied!"
+#     else:
+#         bonus_multiplier = PAYSTACK_REPEAT_BONUS
+#         bonus_text = "🔹 10% deposit bonus applied."
+
+#     amount_with_bonus = int(amount + (amount * bonus_multiplier))
+
+#     # Initialize Paystack payment
+#     headers = {
+#         "Authorization": f"Bearer {PAYSTACK_SECRET_KEY}",
+#         "Content-Type": "application/json"
+#     }
+#     payload = {
+#         "email": user.get("email", f"user{user_id}@example.com"),
+#         "amount": amount * 100,  # in kobo
+#         "currency": "NGN",
+#         "callback_url": "https://example.com",  # dummy, webhook not used
+#         "metadata": {
+#             "user_id": user_id,
+#             "amount_with_bonus": amount_with_bonus
+#         }
+#     }
+
+#     async with httpx.AsyncClient() as client:
+#         res = await client.post("https://api.paystack.co/transaction/initialize", json=payload, headers=headers)
+#         data = res.json()
+
+#     if data.get("status"):
+#         reference = data["data"]["reference"]
+#         payment_url = data["data"]["authorization_url"]
+
+#         # Save reference for manual verification
+#         users_col.update_one(
+#             {"telegram_id": user_id},
+#             {"$set": {"pending_deposit": amount_with_bonus, "deposit_amount": amount, "paystack_reference": reference}},
+#             upsert=True
+#         )
+
+#         await update.message.reply_text(
+#             f"💰 Fund request: ₦{amount:,}\n{bonus_text}\n"
+#             f"👉 Complete payment here: {payment_url}\n\n"
+#             f"After payment, verify with:\n/verify {reference}"
+#         )
+#     else:
+#         await update.message.reply_text(f"⚠️ Failed to initialize payment: {data.get('message', 'Unknown error')}")
+
+
+
+
+
+# # Verify Command
+# # -----------------------------
+
+
+# async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     try:
+#         reference = context.args[0]
+#     except IndexError:
+#         await update.message.reply_text("Usage: /verify <reference>")
+#         return
+
+#     headers = {
+#         "Authorization": f"Bearer {PAYSTACK_SECRET_KEY}",
+#         "Content-Type": "application/json"
+#     }
+
+#     async with httpx.AsyncClient() as client:
+#         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
+#         data = res.json()
+
+#     if not data.get("status"):
+#         await update.message.reply_text(f"❌ Verification failed: {data.get('message', 'Unknown error')}")
+#         return
+
+#     pay_data = data.get("data", {})
+#     if pay_data.get("status") != "success":
+#         await update.message.reply_text(f"❌ Payment not successful yet. Status: {pay_data.get('status')}")
+#         return
+
+#     # Parse metadata safely
+#     metadata_raw = pay_data.get("metadata", {})
+#     if isinstance(metadata_raw, str):
+#         try:
+#             metadata = json.loads(metadata_raw)
+#         except json.JSONDecodeError:
+#             metadata = {}
+#     else:
+#         metadata = metadata_raw
+
+#     # Convert amount_with_bonus to int
+#     amount_with_bonus = metadata.get("amount_with_bonus", 0)
+#     try:
+#         amount_with_bonus = int(amount_with_bonus)
+#     except (ValueError, TypeError):
+#         amount_with_bonus = 0
+
+#     if amount_with_bonus <= 0:
+#         await update.message.reply_text("❌ Could not read deposit amount from metadata.")
+#         return
+
+#     # Update user balance in MongoDB
+#     result = users_col.update_one(
+#         {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
+#         {
+#             "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
+#             "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}
+#         }
+#     )
+
+#     if result.modified_count == 0:
+#         await update.message.reply_text("❌ No pending deposit found to verify.")
+#         return
+
+#     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
+
+
+# # -----------------------------
+# # Test secret key
+# # -----------------------------
+# def test_paystack_key():
+#     if not PAYSTACK_SECRET_KEY:
+#         print("❌ PAYSTACK_SECRET_KEY not set!")
+#     elif not PAYSTACK_SECRET_KEY.startswith("sk_"):
+#         print("❌ PAYSTACK_SECRET_KEY seems invalid (does not start with sk_)")
+#     else:
+#         print("✅ PAYSTACK_SECRET_KEY looks good!")
+
+
+
+# async def balance_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+#         return
+
+#     tg_id = update.message.from_user.id
+#     user = get_user(tg_id)
+#     if not user:
+#         await update.message.reply_text("⚠️ You must register first using /register")
+#         return
+#     await update.message.reply_text(f"💳 Your balance: ₦{user.get('balance',0):,}")
+
+
+# # ---------------------------
+# # Choose category -> deduct fee, increment sessions, start quiz
+# # ---------------------------
+# async def choose_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+#     user_id = query.from_user.id
+
+#     # check user & balance again (safety)
+#     user = get_user(user_id)
+#     if not user:
+#         await query.edit_message_text("❌ You must register first using /register.")
+#         return
+#     if user.get("balance", 0) < 200:
+#         await query.edit_message_text(f"💳 Your balance is ₦{user.get('balance',0):,}.\n❌ You need at least ₦200 to play. Please top up.")
+#         return
+
+#     cat = query.data.split("_", 1)[1]
+#     filepath = CATEGORIES.get(cat)
+#     if not filepath:
+#         await query.edit_message_text("⚠️ Unknown category selected.")
+#         return
+
+#     try:
+#         with open(filepath, "r") as f:
+#             all_questions = json.load(f)
+#     except Exception as e:
+#         await query.edit_message_text(f"⚠️ Failed to load {cat} questions: {e}")
+#         return
+
+#     if len(all_questions) < 5:
+#         await query.edit_message_text(f"⚠️ Not enough questions in {cat}.")
+#         return
+
+#     # Deduct ₦200 and increment sessions atomically, return updated user
+#     updated_user = users_col.find_one_and_update(
+#         {"telegram_id": user_id},
+#         {"$inc": {"balance": -200, "sessions": 1}},
+#         return_document=ReturnDocument.AFTER,
+#         upsert=True
+#     )
+
+#     new_balance = updated_user.get("balance", 0)
+
+#     selected = random.sample(all_questions, 5)
+
+#     # store quiz state in module-level ACTIVE_QUIZZES for job access
+#     quiz_state = {
+#         "score": 0,
+#         "current": 0,
+#         "questions": selected,
+#         "active": True,
+#         "timeout_job": None,
+#         "answers": [],
+#         "category": cat,
+#         "sent_at": None
+#     }
+#     ACTIVE_QUIZZES[user_id] = quiz_state
+
+#     await query.edit_message_text(f"✅ ₦200 deducted. Remaining balance: ₦{new_balance:,}\n✅ You chose {cat}. Quiz starting…")
+#     # start the first question
+#     await send_question(update, context, user_id)
+
+
+# # ---------------------------
+# # Send Question
+# # ---------------------------
+# async def send_question(update, context, user_id):
+#     quiz = ACTIVE_QUIZZES.get(user_id)
+#     if not quiz or not quiz.get("active", True):
+#         return
+
+#     current = quiz["current"]
+#     if current < len(quiz["questions"]):
+#         q = quiz["questions"][current]
+#         keyboard = [[InlineKeyboardButton(opt, callback_data=opt)] for opt in q["options"]]
+#         reply_markup = InlineKeyboardMarkup(keyboard)
+
+#         msg = await context.bot.send_message(
+#             chat_id=user_id,
+#             text=f"❓ Question {current+1}/{len(quiz['questions'])}:\n{q['question']}\n\n⏳ You have 60 seconds!",
+#             reply_markup=reply_markup
+#         )
+
+#         # Cancel old timeout job safely
+#         safe_remove_job(quiz.get("timeout_job"))
+
+#         # Schedule new timeout job
+#         job = context.job_queue.run_once(
+#             timeout_question,
+#             60,
+#             data={"user_id": user_id, "msg_id": msg.message_id},
+#         )
+#         quiz["timeout_job"] = job
+#         quiz["sent_at"] = time.time()
+#     else:
+#         await finalize_quiz(context, user_id, quiz)
+
+
+
+# # ---------------------------
+# # Timeout Handler
+# # ---------------------------
+# async def timeout_question(context: ContextTypes.DEFAULT_TYPE):
+#     job = context.job
+#     data = job.data
+#     user_id = data["user_id"]
+#     msg_id = data["msg_id"]
+
+#     quiz = ACTIVE_QUIZZES.get(user_id)
+#     if not quiz or not quiz.get("active", True):
+#         return
+
+#     current = quiz["current"]
+#     # guard: if current index out of range, finalize
+#     if current >= len(quiz["questions"]):
+#         await finalize_quiz(context, user_id, quiz)
+#         return
+
+#     correct = quiz["questions"][current]["answer"]
+
+#     # Record timeout (no points)
+#     quiz["answers"].append({
+#         "user_id": user_id,
+#         "question_id": current,
+#         "base_score": 0,
+#         "elapsed_time": 60,
+#         "total_score": 0
+#     })
+
+#      # ❌ Disable old buttons
+#     try:
+#         await context.bot.edit_message_reply_markup(
+#             chat_id=user_id,
+#             message_id=msg_id,
+#             reply_markup=None
+#         )
+#     except Exception:
+#         pass  # Ignore if already answered/edited
+
+#     await context.bot.send_message(chat_id=user_id, text=f"⌛ Time’s up! The correct answer was {correct}.")
+
+#     quiz["current"] += 1
+#     # Immediately send next question
+#     await send_question(None, context, user_id)
+
+
+# # ---------------------------
+# # Handle Answer
+# # ---------------------------
+
+# async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+
+#     # Defensive: ignore confirm/cancel callbacks here
+#     if query.data in ("confirm_end", "cancel_end"):
+#         # Let the specific handlers (confirm_end/cancel_end) handle this callback.
+#         return
+
+#     user_id = query.from_user.id
+
+#     quiz = ACTIVE_QUIZZES.get(user_id)
+#     if not quiz or not quiz.get("active", True):
+#         try:
+#             await query.edit_message_text("❌ You are not in an active quiz. Type /play to begin.")
+#         except Exception:
+#             pass
+#         return
+
+#     current = quiz["current"]
+#     if current >= len(quiz["questions"]):
+#         try:
+#             await query.edit_message_text("✅ Quiz already finished.")
+#         except Exception:
+#             pass
+#         return
+
+#     correct = quiz["questions"][current]["answer"]
+
+#     # Cancel timeout immediately
+#     safe_remove_job(quiz.get("timeout_job"))
+#     quiz["timeout_job"] = None
+
+#     elapsed = time.time() - quiz.get("sent_at", time.time())
+#     base_score = 0
+#     bonus = 0.0
+#     total_score = 0.0
+
+#     if query.data == correct:
+#         if elapsed <= 30:
+#             base_score = 10
+#         elif elapsed <= 60:
+#             base_score = 5
+
+#         # bonus scoring
+#         if elapsed <= 10:
+#             bonus = 0.3
+#         elif elapsed <= 20:
+#             bonus = 0.2
+#         elif elapsed <= 30:
+#             bonus = 0.1
+
+#         total_score = base_score + bonus
+
+#     # Record answer
+#     quiz["answers"].append({
+#         "user_id": user_id,
+#         "question_id": current,
+#         "total_score": total_score if query.data == correct else 0,
+#         "elapsed_time": elapsed
+#     })
+
+#     # Disable buttons & show result
+#     try:
+#         if query.data == correct:
+#             await query.edit_message_text(f"✅ Correct! You earned {base_score} points + {bonus:.1f} bonus = {total_score:.1f} pts.")
+#         else:
+#             await query.edit_message_text(f"❌ Wrong! The correct answer was {correct}.")
+#     except Exception:
+#         pass
+
+#     quiz["current"] += 1
+#     # Immediately send next question
+#     await send_question(update, context, user_id)
+
+
+
+# # ---------------------------
+# # Finalize Quiz
+# # ---------------------------
+# async def finalize_quiz(context, user_id, quiz):
+#     if not quiz or not quiz.get("active", True):
+#         return
+#     quiz["active"] = False
+
+#     final_results = apply_speed_bonus(quiz.get("answers", []))
+
+#     # update DB for every participant found in final_results
+#     for uid, pts in final_results.items():
+#         update_score(uid, pts)
+
+#     user_final_score = final_results.get(user_id, 0)
+
+#     # Cancel any job
+#     safe_remove_job(quiz.get("timeout_job"))
+
+#     # clear stored quiz state
+#     ACTIVE_QUIZZES.pop(user_id, None)
+
+#     try:
+#         await context.bot.send_message(chat_id=user_id, text=f"✅ Quiz finished!\nYour score: {user_final_score:.1f}")
+#     except Exception:
+#         pass
+
+
+# # ---------------------------
+# # Leaderboard
+# # ---------------------------
+# async def leaderboard_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     user_id = update.message.from_user.id
+#     if user_in_quiz(user_id):
+#         await update.message.reply_text("⛔ You are currently in a quiz session.\n👉 The only command available is /end to quit.")
+#         return
+
+#     tg_id = update.message.from_user.id
+#     top_users = list(users_col.find().sort("score", -1).limit(10))
+#     requester = get_user(tg_id)
+#     if not top_users:
+#         await update.message.reply_text("⚠️ No players yet.")
+#         return
+
+#     msg_lines = ["🏆 Top 10 Leaderboard 🏆\n"]
+#     for i, user in enumerate(top_users, start=1):
+#         name = user.get("username", "Anonymous")
+#         score = user.get("score", 0)
+#         msg_lines.append(f"{i}. {name} — {score:.1f} pts")
+
+#     if requester:
+#         rank = users_col.count_documents({"score": {"$gt": requester.get("score", 0)}}) + 1
+#         if rank > 10:
+#             msg_lines.append(f"\n... {rank}. {requester.get('username','You')} — {requester.get('score',0):.1f} pts")
+
+#     await update.message.reply_text("\n".join(msg_lines))
+
+
+# # ---------------------------
+# # Main
+# # ---------------------------
+# update_conv_handler = ConversationHandler(
+#     entry_points=[CommandHandler("update", start_update)],
+#     states={
+#         UPD_USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_username)],
+#         UPD_EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_email)],
+#         UPD_PHONE: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_phone)],
+#         UPD_BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_bank)],
+#         UPD_ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, update_account)],
+#     },
+#     # fallbacks=[
+#     #     CommandHandler("cancel", cancel_update),
+#     #     MessageHandler(filters.COMMAND, block_other_commands),  # 👈 deny other commands
+#     # ],
+# fallbacks=[CommandHandler("cancel", cancel_update),
+#            MessageHandler(filters.COMMAND, block_other_commands),
+#            ],
+#            allow_reentry=True,   # so user can restart update after finishing/cancelling
+#     per_user=True,        # ensure blocking applies per user
+# )
+
+
+
+# # --- FLASK + TELEGRAM SETUP ---
+# flask_app = Flask(__name__)
+# bot = Bot(token=TOKEN)  # For sending messages from Flask
+
+# @flask_app.route("/paystack-webhook", methods=["POST"])
+# def paystack_webhook():
+#     try:
+#         data = request.get_json()
+#         print("📦 Incoming Paystack webhook:", json.dumps(data, indent=2))
+#         if not data:
+#             return jsonify({"status": False, "message": "No data received"}), 400
+
+#         if data.get("event") != "charge.success":
+#             return jsonify({"status": True, "message": "Event ignored"}), 200
+
+#         pay_data = data.get("data", {})
+#         metadata_raw = pay_data.get("metadata", {})
+
+#         metadata = json.loads(metadata_raw) if isinstance(metadata_raw, str) else metadata_raw
+
+#         user_id = int(metadata.get("user_id", 0))
+#         amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
+
+#         if user_id and amount_with_bonus > 0:
+#             result = users_col.update_one(
+#                 {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
+#                 {
+#                     "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
+#                     "$unset": {
+#                         "pending_deposit": "",
+#                         "deposit_amount": "",
+#                         "paystack_reference": ""
+#                     }
+#                 }
+#             )
+
+#             if result.modified_count > 0:
+#                 msg = f"✅ Payment verified!\n₦{amount_with_bonus:,} has been added to your balance."
+#                 bot.send_message(chat_id=user_id, text=msg)
+#                 print(f"✅ Auto-verified: ₦{amount_with_bonus} added to user {user_id}")
+#             else:
+#                 print(f"⚠️ Payment received but no pending deposit found for user {user_id}")
+
+#         return jsonify({"status": True, "message": "Webhook processed"}), 200
+
+#     except Exception as e:
+#         print("❌ Webhook error:", e)
+#         return jsonify({"status": False, "message": str(e)}), 500
+
+# def run_flask():
+#     print("🌍 Starting Flask Paystack server on port 8081...")
+#     flask_app.run(host="0.0.0.0", port=8081)
+
+
+
+# # ============================
+# # 🔹 TELEGRAM BOT MAIN
+# # ============================
+# def main():
+#     print("🤖 Bot starting...")
+#     app = Application.builder().token(TOKEN).build()
+#     # Scheduler
+#     schedule_daily_reset(app.job_queue)
+
+#     # --- Conversation handler ---
+#     reg_conv = ConversationHandler(
+#         entry_points=[CommandHandler("register", start_registration)],
+#         states={
+#             USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_username)],
+#             EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_email)],
+#             PHONE: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_phone)],
+#             BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_bank)],
+#             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
+#         },
+#         fallbacks=[CommandHandler("cancel", cancel_registration)],
+#     )
+
+#     app.add_handler(reg_conv)
+#     app.add_handler(update_conv_handler)
+
+#     # --- Blocker handler (keep original logic) ---
+#     app.add_handler(
+#         MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
+#         group=1,
+#     )
+
+#     # --- Core command handlers ---
+#     app.add_handler(CommandHandler("start", start_command))
+#     app.add_handler(CommandHandler("play", play_command))
+#     app.add_handler(CommandHandler("end", end_command))
+#     app.add_handler(CommandHandler("fund", fund_command))
+#     app.add_handler(CommandHandler("balance", balance_command))
+#     app.add_handler(CommandHandler("leaderboard", leaderboard_command))
+#     app.add_handler(CommandHandler("profile", profile_command))
+#     app.add_handler(CommandHandler("help", help_command))
+#     app.add_handler(CommandHandler("winner", winner_command))
+
+#     # --- Callback query handlers ---
+#     app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
+#     app.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
+#     app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
+#     app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
+#     app.add_handler(CallbackQueryHandler(handle_answer))
+
+#     # ✅ Instead of app.run_webhook() (which starts another web server),
+#     # we just set the webhook once and let Flask handle incoming updates
+# print(f"🚀 Telegram webhook listening on /webhook")
+#     app.run_webhook(
+#         listen="0.0.0.0",
+#         port=int(os.environ.get("PORT", 8080)),  # Telegram webhook port
+#         url_path="webhook",
+#         webhook_url=f"{WEBHOOK_URL}/webhook"
+
+
+
+# # ============================
+# # 🔹 STARTUP (Flask + Telegram)
+# # ============================
+# if __name__ == "__main__":
+
+#     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import os
 import certifi
 import json
-from threading import Thread
 import random
 import time
 import pytz
 import httpx
 from zoneinfo import ZoneInfo
-from flask import Flask, request, jsonify
-from telegram import Bot
 from typing import Final
 from datetime import datetime, timedelta, timezone
 from telegram.ext import JobQueue
@@ -24,8 +1582,6 @@ from pymongo import MongoClient, ReturnDocument
 #cluster pass (Wd4qWrB30QGprjMa)
 
 #mongodb+srv://tokumasamuel03_db_user:5QNgIFXxlLzyBGJv@graphiz-quizet.os3eb7u.mongodb.net/?retryWrites=true&w=majority&appName=graphiz-quizet
-
-
 
 
 
@@ -760,13 +2316,7 @@ async def profile_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(profile_text)
 
-
-
-
-
-
-# ---------------------------
-# Quiz: show categories (balance check)
+    # Quiz: show categories (balance check)
 # ---------------------------
 async def play_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # ⏰ Time restriction check
@@ -1021,7 +2571,8 @@ async def fund_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Verify Command
 # -----------------------------
-
+import json
+import httpx
 
 async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
@@ -1040,6 +2591,9 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         res = await client.get(f"https://api.paystack.co/transaction/verify/{reference}", headers=headers)
         data = res.json()
 
+    # Debug info (comment out after testing)
+    await update.message.reply_text(f"DEBUG RESPONSE:\n{json.dumps(data, indent=2)}")
+
     if not data.get("status"):
         await update.message.reply_text(f"❌ Verification failed: {data.get('message', 'Unknown error')}")
         return
@@ -1049,7 +2603,6 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"❌ Payment not successful yet. Status: {pay_data.get('status')}")
         return
 
-    # Parse metadata safely
     metadata_raw = pay_data.get("metadata", {})
     if isinstance(metadata_raw, str):
         try:
@@ -1059,24 +2612,16 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         metadata = metadata_raw
 
-    # Convert amount_with_bonus to int
     amount_with_bonus = metadata.get("amount_with_bonus", 0)
-    try:
-        amount_with_bonus = int(amount_with_bonus)
-    except (ValueError, TypeError):
-        amount_with_bonus = 0
 
     if amount_with_bonus <= 0:
         await update.message.reply_text("❌ Could not read deposit amount from metadata.")
         return
 
-    # Update user balance in MongoDB
     result = users_col.update_one(
         {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
-        {
-            "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
-            "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}
-        }
+        {"$inc": {"balance": amount_with_bonus, "total_deposits": 1},
+         "$unset": {"pending_deposit": "", "deposit_amount": "", "paystack_reference": ""}}
     )
 
     if result.modified_count == 0:
@@ -1084,6 +2629,7 @@ async def verify_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     await update.message.reply_text(f"✅ Payment verified! ₦{amount_with_bonus:,} added to your balance.")
+
 
 
 # -----------------------------
@@ -1424,207 +2970,13 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 
 
 
-# # --- FLASK + TELEGRAM SETUP ---
-# flask_app = Flask(__name__)
-# bot = Bot(token=TOKEN)  # For sending messages from Flask
+    
 
-# @flask_app.route("/paystack-webhook", methods=["POST"])
-# def paystack_webhook():
-#     try:
-#         data = request.get_json()
-#         print("📦 Incoming Paystack webhook:", json.dumps(data, indent=2))
-#         if not data:
-#             return jsonify({"status": False, "message": "No data received"}), 400
-
-#         if data.get("event") != "charge.success":
-#             return jsonify({"status": True, "message": "Event ignored"}), 200
-
-#         pay_data = data.get("data", {})
-#         metadata_raw = pay_data.get("metadata", {})
-
-#         metadata = json.loads(metadata_raw) if isinstance(metadata_raw, str) else metadata_raw
-
-#         user_id = int(metadata.get("user_id", 0))
-#         amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
-
-#         if user_id and amount_with_bonus > 0:
-#             result = users_col.update_one(
-#                 {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
-#                 {
-#                     "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
-#                     "$unset": {
-#                         "pending_deposit": "",
-#                         "deposit_amount": "",
-#                         "paystack_reference": ""
-#                     }
-#                 }
-#             )
-
-#             if result.modified_count > 0:
-#                 msg = f"✅ Payment verified!\n₦{amount_with_bonus:,} has been added to your balance."
-#                 bot.send_message(chat_id=user_id, text=msg)
-#                 print(f"✅ Auto-verified: ₦{amount_with_bonus} added to user {user_id}")
-#             else:
-#                 print(f"⚠️ Payment received but no pending deposit found for user {user_id}")
-
-#         return jsonify({"status": True, "message": "Webhook processed"}), 200
-
-#     except Exception as e:
-#         print("❌ Webhook error:", e)
-#         return jsonify({"status": False, "message": str(e)}), 500
-
-# def run_flask():
-#     print("🌍 Starting Flask Paystack server on port 8081...")
-#     flask_app.run(host="0.0.0.0", port=8081)
-
-
-
-# # ============================
-# # 🔹 TELEGRAM BOT MAIN
-# # ============================
-# def main():
-#     print("🤖 Bot starting...")
-#     app = Application.builder().token(TOKEN).build()
-#     # Scheduler
-#     schedule_daily_reset(app.job_queue)
-
-#     # --- Conversation handler ---
-#     reg_conv = ConversationHandler(
-#         entry_points=[CommandHandler("register", start_registration)],
-#         states={
-#             USERNAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_username)],
-#             EMAIL: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_email)],
-#             PHONE: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_phone)],
-#             BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_bank)],
-#             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
-#         },
-#         fallbacks=[CommandHandler("cancel", cancel_registration)],
-#     )
-
-#     app.add_handler(reg_conv)
-#     app.add_handler(update_conv_handler)
-
-#     # --- Blocker handler (keep original logic) ---
-#     app.add_handler(
-#         MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
-#         group=1,
-#     )
-
-#     # --- Core command handlers ---
-#     app.add_handler(CommandHandler("start", start_command))
-#     app.add_handler(CommandHandler("play", play_command))
-#     app.add_handler(CommandHandler("end", end_command))
-#     app.add_handler(CommandHandler("fund", fund_command))
-#     app.add_handler(CommandHandler("balance", balance_command))
-#     app.add_handler(CommandHandler("leaderboard", leaderboard_command))
-#     app.add_handler(CommandHandler("profile", profile_command))
-#     app.add_handler(CommandHandler("help", help_command))
-#     app.add_handler(CommandHandler("winner", winner_command))
-
-#     # --- Callback query handlers ---
-#     app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
-#     app.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
-#     app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
-#     app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
-#     app.add_handler(CallbackQueryHandler(handle_answer))
-
-#     # ✅ Instead of app.run_webhook() (which starts another web server),
-#     # we just set the webhook once and let Flask handle incoming updates
-# print(f"🚀 Telegram webhook listening on /webhook")
-#     app.run_webhook(
-#         listen="0.0.0.0",
-#         port=int(os.environ.get("PORT", 8080)),  # Telegram webhook port
-#         url_path="webhook",
-#         webhook_url=f"{WEBHOOK_URL}/webhook"
-
-
-
-# # ============================
-# # 🔹 STARTUP (Flask + Telegram)
-# # ============================
-# if __name__ == "__main__":
-#      # Flask in background thread
-#     Thread(target=run_flask, daemon=True).start()
-#     # Telegram bot in main thread
-#     main()
-
-
-
-flask_app = Flask(__name__)
-
-# -------------------------
-# PAYSTACK WEBHOOK
-# -------------------------
-@flask_app.route("/paystack-webhook", methods=["POST"])
-def paystack_webhook():
-    try:
-        data = request.get_json()
-        print("📦 Incoming Paystack webhook:", json.dumps(data, indent=2))
-
-        if not data:
-            return jsonify({"status": False, "message": "No data received"}), 400
-
-        if data.get("event") != "charge.success":
-            return jsonify({"status": True, "message": "Event ignored"}), 200
-
-        pay_data = data.get("data", {})
-        metadata_raw = pay_data.get("metadata", {})
-
-        metadata = json.loads(metadata_raw) if isinstance(metadata_raw, str) else metadata_raw
-        user_id = int(metadata.get("user_id", 0))
-        amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
-
-        if user_id and amount_with_bonus > 0:
-            result = users_col.update_one(
-                {"telegram_id": user_id, "pending_deposit": {"$exists": True}},
-                {
-                    "$inc": {"balance": amount_with_bonus, "total_deposits": 1},
-                    "$unset": {
-                        "pending_deposit": "",
-                        "deposit_amount": "",
-                        "paystack_reference": ""
-                    }
-                }
-            )
-            if result.modified_count > 0:
-                msg = f"✅ Payment verified!\n₦{amount_with_bonus:,} has been added to your balance."
-                bot.send_message(chat_id=user_id, text=msg)
-                print(f"✅ Auto-verified: ₦{amount_with_bonus} added to user {user_id}")
-            else:
-                print(f"⚠️ Payment received but no pending deposit found for user {user_id}")
-
-        return jsonify({"status": True, "message": "Webhook processed"}), 200
-
-    except Exception as e:
-        print("❌ Webhook error:", e)
-        return jsonify({"status": False, "message": str(e)}), 500
-
-# -------------------------
-# TELEGRAM WEBHOOK
-# -------------------------
-# Telegram webhook route
-@flask_app.route("/webhook", methods=["POST"])
-def telegram_webhook():
-    try:
-        update = Update.de_json(request.get_json(force=True), application.bot)
-        application.process_update(update)
-        return "ok", 200
-    except Exception as e:
-        print("❌ Telegram webhook error:", e)
-        return "error", 500
-
-
-# -------------------------
-# TELEGRAM BOT MAIN
-# -------------------------
 def main():
-    global application
-    application = Application.builder().token(TOKEN).build()
-
-    # --- Scheduler ---
-    schedule_daily_reset(application.job_queue)
-
-    # --- Registration conversation ---
+    print("🤖 Bot starting...")
+    app = Application.builder().token(TOKEN).build()
+    schedule_daily_reset(app.job_queue)
+    # Register flow
     reg_conv = ConversationHandler(
         entry_points=[CommandHandler("register", start_registration)],
         states={
@@ -1634,49 +2986,55 @@ def main():
             BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_bank)],
             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
         },
+        
         fallbacks=[CommandHandler("cancel", cancel_registration)],
     )
-    application.add_handler(reg_conv)
-    application.add_handler(update_conv_handler)
 
-    # --- Blocker for commands during quiz ---
-    application.add_handler(
-        MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
-        group=1,
-    )
+    app.add_handler(reg_conv)
+    app.add_handler(update_conv_handler)
 
-    # --- Core command handlers ---
-    for cmd, func in [
-        ("start", start_command),
-        ("play", play_command),
-        ("end", end_command),
-        ("fund", fund_command),
-        ("balance", balance_command),
-        ("leaderboard", leaderboard_command),
-        ("profile", profile_command),
-        ("help", help_command),
-        ("winner", winner_command)
-    ]:
-        application.add_handler(CommandHandler(cmd, func))
+    # Global blocker for commands during quiz (except /end)
+    # Register early so users get immediate block reply when they try commands mid-quiz.
+    # Blocker (placed AFTER command handlers, so they get first chance)
+    app.add_handler(
+    MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
+    group=1,
+)
 
-    # --- Callback handlers ---
-    application.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
-    application.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
-    application.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
-    application.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
-    application.add_handler(CallbackQueryHandler(handle_answer))
 
-    # ✅ Set webhook with Telegram
-    bot.set_webhook(f"{WEBHOOK_URL}/webhook")
-    print(f"🚀 Telegram webhook set to {WEBHOOK_URL}/webhook")
+    # Core command handlers
+    app.add_handler(CommandHandler("start", start_command))
+    app.add_handler(CommandHandler("play", play_command))
+    app.add_handler(CommandHandler("end", end_command))
+    app.add_handler(CommandHandler("fund", fund_command))
+    app.add_handler(CommandHandler("verify", verify_command))
+    app.add_handler(CommandHandler("balance", balance_command))
+    app.add_handler(CommandHandler("leaderboard", leaderboard_command))
+    app.add_handler(CommandHandler("profile", profile_command))
+    app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(CommandHandler("winner", winner_command))
 
-# -------------------------
-# STARTUP (Flask + Telegram)
-# -------------------------
+    # CALLBACK QUERY HANDLERS: specific handlers first, then the generic answer handler
+    app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
+    app.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
+    app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
+    app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
+    app.add_handler(CallbackQueryHandler(handle_answer))
+
+    print(f"🚀 Starting webhook at {WEBHOOK_URL}/webhook")
+    # Use webhook if WEBHOOK_URL is set, otherwise fallback to polling
+    if WEBHOOK_URL:
+        app.run_webhook(
+            listen="0.0.0.0",
+            port=int(os.environ.get("PORT", 8080)),
+            url_path="webhook",
+            webhook_url=f"{WEBHOOK_URL}/webhook"
+        )
+    else:
+        app.run_polling()
+
+
 if __name__ == "__main__":
-    from threading import Thread
-
-    # Flask runs in background thread
-    Thread(target=lambda: flask_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080))), daemon=True).start()
-    # Telegram bot setup in main thread
     main()
+
+
