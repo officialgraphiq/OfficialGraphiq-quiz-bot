@@ -26,7 +26,6 @@ from pymongo import MongoClient, ReturnDocument
 #mongodb+srv://tokumasamuel03_db_user:5QNgIFXxlLzyBGJv@graphiz-quizet.os3eb7u.mongodb.net/?retryWrites=true&w=majority&appName=graphiz-quizet
 
 
-app = Flask(__name__)
 
 
 
@@ -1573,42 +1572,29 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 
 #     Thread(target=main, daemon=True).start()  # Telegram runs in background
 #     run_flask()
-WEBHOOK_URL = "https://organization-quiz-bot-production.up.railway.app"
+# WEBHOOK_URL = "https://organization-quiz-bot-production.up.railway.app"
 
 
 
 # --- FLASK + TELEGRAM SETUP ---
 flask_app = Flask(__name__)
-bot = Bot(token=TOKEN)  # enables Telegram messages from webhook
+bot = Bot(token=TOKEN)  # For sending messages from Flask
 
-
-# ============================
-# 🔹 PAYSTACK WEBHOOK
-# ============================
 @flask_app.route("/paystack-webhook", methods=["POST"])
 def paystack_webhook():
     try:
         data = request.get_json()
         print("📦 Incoming Paystack webhook:", json.dumps(data, indent=2))
-
         if not data:
             return jsonify({"status": False, "message": "No data received"}), 400
 
-        # Only handle successful charges
         if data.get("event") != "charge.success":
             return jsonify({"status": True, "message": "Event ignored"}), 200
 
         pay_data = data.get("data", {})
         metadata_raw = pay_data.get("metadata", {})
 
-        # Handle metadata safely
-        if isinstance(metadata_raw, str):
-            try:
-                metadata = json.loads(metadata_raw)
-            except json.JSONDecodeError:
-                metadata = {}
-        else:
-            metadata = metadata_raw
+        metadata = json.loads(metadata_raw) if isinstance(metadata_raw, str) else metadata_raw
 
         user_id = int(metadata.get("user_id", 0))
         amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
@@ -1639,14 +1625,19 @@ def paystack_webhook():
         print("❌ Webhook error:", e)
         return jsonify({"status": False, "message": str(e)}), 500
 
+def run_flask():
+    print("🌍 Starting Flask Paystack server on port 8081...")
+    flask_app.run(host="0.0.0.0", port=8081)
+
+
 
 # ============================
 # 🔹 TELEGRAM BOT MAIN
 # ============================
-async def main():
+ def main():
     print("🤖 Bot starting...")
     app = Application.builder().token(TOKEN).build()
-    flask_app.telegram_app = app  # store inside Flask app
+   
 
     # Scheduler
     schedule_daily_reset(app.job_queue)
@@ -1693,40 +1684,20 @@ async def main():
 
     # ✅ Instead of app.run_webhook() (which starts another web server),
     # we just set the webhook once and let Flask handle incoming updates
-    webhook_url = f"{WEBHOOK_URL}/webhook"
-    await app.bot.set_webhook(url=webhook_url)
-    print(f"✅ Telegram webhook set to: {webhook_url}")
+ print(f"🚀 Telegram webhook listening on /webhook")
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=int(os.environ.get("PORT", 8080)),  # Telegram webhook port
+        url_path="webhook",
+        webhook_url=f"{WEBHOOK_URL}/webhook"
 
-    # keep the app reference
-    flask_app.telegram_app = app
-    print("🤖 Telegram bot initialized and ready!")
-
-
-# ============================
-# 🔹 TELEGRAM WEBHOOK ROUTE
-# ============================
-@flask_app.route("/webhook", methods=["POST"])
-def telegram_webhook():
-    try:
-        data = request.get_json(force=True)
-        update = Update.de_json(data, bot)
-        flask_app.telegram_app.update_queue.put_nowait(update)
-        return jsonify({"ok": True}), 200
-    except Exception as e:
-        print("❌ Telegram webhook error:", e)
-        return jsonify({"error": str(e)}), 500
 
 
 # ============================
 # 🔹 STARTUP (Flask + Telegram)
 # ============================
 if __name__ == "__main__":
-    def run_flask():
-        print("🌍 Starting unified Flask server (Telegram + Paystack)...")
-        flask_app.run(host="0.0.0.0", port=8080)
-
-    async def run_bot():
-        await main()
-
-    Thread(target=asyncio.run, args=(run_bot(),), daemon=True).start()
-    run_flask()
+     # Flask in background thread
+    Thread(target=run_flask, daemon=True).start()
+    # Telegram bot in main thread
+    main()
