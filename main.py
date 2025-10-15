@@ -1424,35 +1424,25 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 
 
 
-# --- Flask app for Paystack webhook ---
+# # --- FLASK + TELEGRAM SETUP ---
 # flask_app = Flask(__name__)
-# bot = Bot(token=TOKEN)  # enables Telegram messages from webhook
-
+# bot = Bot(token=TOKEN)  # For sending messages from Flask
 
 # @flask_app.route("/paystack-webhook", methods=["POST"])
 # def paystack_webhook():
 #     try:
 #         data = request.get_json()
 #         print("📦 Incoming Paystack webhook:", json.dumps(data, indent=2))
-
 #         if not data:
 #             return jsonify({"status": False, "message": "No data received"}), 400
 
-#         # Only handle successful charges
 #         if data.get("event") != "charge.success":
 #             return jsonify({"status": True, "message": "Event ignored"}), 200
 
 #         pay_data = data.get("data", {})
 #         metadata_raw = pay_data.get("metadata", {})
 
-#         # Handle metadata safely
-#         if isinstance(metadata_raw, str):
-#             try:
-#                 metadata = json.loads(metadata_raw)
-#             except json.JSONDecodeError:
-#                 metadata = {}
-#         else:
-#             metadata = metadata_raw
+#         metadata = json.loads(metadata_raw) if isinstance(metadata_raw, str) else metadata_raw
 
 #         user_id = int(metadata.get("user_id", 0))
 #         amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
@@ -1483,16 +1473,22 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 #         print("❌ Webhook error:", e)
 #         return jsonify({"status": False, "message": str(e)}), 500
 
+# def run_flask():
+#     print("🌍 Starting Flask Paystack server on port 8081...")
+#     flask_app.run(host="0.0.0.0", port=8081)
 
 
-    
 
+# # ============================
+# # 🔹 TELEGRAM BOT MAIN
+# # ============================
 # def main():
 #     print("🤖 Bot starting...")
 #     app = Application.builder().token(TOKEN).build()
-#     flask_app.telegram_app = app
+#     # Scheduler
 #     schedule_daily_reset(app.job_queue)
-#     # Register flow
+
+#     # --- Conversation handler ---
 #     reg_conv = ConversationHandler(
 #         entry_points=[CommandHandler("register", start_registration)],
 #         states={
@@ -1502,23 +1498,19 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 #             BANK: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_bank)],
 #             ACCOUNT: [MessageHandler(filters.TEXT & ~filters.COMMAND, register_account)],
 #         },
-        
 #         fallbacks=[CommandHandler("cancel", cancel_registration)],
 #     )
 
 #     app.add_handler(reg_conv)
 #     app.add_handler(update_conv_handler)
 
-#     # Global blocker for commands during quiz (except /end)
-#     # Register early so users get immediate block reply when they try commands mid-quiz.
-#     # Blocker (placed AFTER command handlers, so they get first chance)
+#     # --- Blocker handler (keep original logic) ---
 #     app.add_handler(
-#     MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
-#     group=1,
-# )
+#         MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
+#         group=1,
+#     )
 
-
-#     # Core command handlers
+#     # --- Core command handlers ---
 #     app.add_handler(CommandHandler("start", start_command))
 #     app.add_handler(CommandHandler("play", play_command))
 #     app.add_handler(CommandHandler("end", end_command))
@@ -1529,62 +1521,46 @@ fallbacks=[CommandHandler("cancel", cancel_update),
 #     app.add_handler(CommandHandler("help", help_command))
 #     app.add_handler(CommandHandler("winner", winner_command))
 
-#     # CALLBACK QUERY HANDLERS: specific handlers first, then the generic answer handler
+#     # --- Callback query handlers ---
 #     app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
 #     app.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
 #     app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
 #     app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
 #     app.add_handler(CallbackQueryHandler(handle_answer))
 
-#     print(f"🚀 Starting webhook at {WEBHOOK_URL}/webhook")
-#     # Use webhook if WEBHOOK_URL is set, otherwise fallback to polling
-#     if WEBHOOK_URL:
-#         app.run_webhook(
-#             listen="0.0.0.0",
-#             port=int(os.environ.get("PORT", 8080)),
-#             url_path="webhook",
-#             webhook_url=f"{WEBHOOK_URL}/webhook"
-#         )
-#     else:
-#         app.run_polling()
+#     # ✅ Instead of app.run_webhook() (which starts another web server),
+#     # we just set the webhook once and let Flask handle incoming updates
+# print(f"🚀 Telegram webhook listening on /webhook")
+#     app.run_webhook(
+#         listen="0.0.0.0",
+#         port=int(os.environ.get("PORT", 8080)),  # Telegram webhook port
+#         url_path="webhook",
+#         webhook_url=f"{WEBHOOK_URL}/webhook"
 
 
-# # if __name__ == "__main__":
-# #     main()  
-# # --- Run Flask and Telegram together ---
-# @flask_app.route("/webhook", methods=["POST"])
-# def telegram_webhook():
-#     try:
-#         data = request.get_json(force=True)
-#         update = Update.de_json(data, bot)
-#         flask_app.telegram_app.update_queue.put_nowait(update)
-#         return "OK", 200
-#     except Exception as e:
-#         print("❌ Telegram webhook error:", e)
-#         return "Error", 500
 
+# # ============================
+# # 🔹 STARTUP (Flask + Telegram)
+# # ============================
 # if __name__ == "__main__":
-#     from threading import Thread
-
-#     def run_flask():
-#         print("🌍 Starting unified Flask server (Telegram + Paystack)...")
-#         flask_app.run(host="0.0.0.0", port=8080)
-
-#     Thread(target=main, daemon=True).start()  # Telegram runs in background
-#     run_flask()
-# WEBHOOK_URL = "https://organization-quiz-bot-production.up.railway.app"
+#      # Flask in background thread
+#     Thread(target=run_flask, daemon=True).start()
+#     # Telegram bot in main thread
+#     main()
 
 
 
-# --- FLASK + TELEGRAM SETUP ---
 flask_app = Flask(__name__)
-bot = Bot(token=TOKEN)  # For sending messages from Flask
 
+# -------------------------
+# PAYSTACK WEBHOOK
+# -------------------------
 @flask_app.route("/paystack-webhook", methods=["POST"])
 def paystack_webhook():
     try:
         data = request.get_json()
         print("📦 Incoming Paystack webhook:", json.dumps(data, indent=2))
+
         if not data:
             return jsonify({"status": False, "message": "No data received"}), 400
 
@@ -1595,7 +1571,6 @@ def paystack_webhook():
         metadata_raw = pay_data.get("metadata", {})
 
         metadata = json.loads(metadata_raw) if isinstance(metadata_raw, str) else metadata_raw
-
         user_id = int(metadata.get("user_id", 0))
         amount_with_bonus = int(float(metadata.get("amount_with_bonus", 0)))
 
@@ -1611,7 +1586,6 @@ def paystack_webhook():
                     }
                 }
             )
-
             if result.modified_count > 0:
                 msg = f"✅ Payment verified!\n₦{amount_with_bonus:,} has been added to your balance."
                 bot.send_message(chat_id=user_id, text=msg)
@@ -1625,24 +1599,30 @@ def paystack_webhook():
         print("❌ Webhook error:", e)
         return jsonify({"status": False, "message": str(e)}), 500
 
-def run_flask():
-    print("🌍 Starting Flask Paystack server on port 8081...")
-    flask_app.run(host="0.0.0.0", port=8081)
+# -------------------------
+# TELEGRAM WEBHOOK
+# -------------------------
+@flask_app.route("/webhook", methods=["POST"])
+def telegram_webhook():
+    try:
+        update = Update.de_json(request.get_json(force=True), bot)
+        application.process_update(update)
+        return "ok", 200
+    except Exception as e:
+        print("❌ Telegram webhook error:", e)
+        return "error", 500
 
+# -------------------------
+# TELEGRAM BOT MAIN
+# -------------------------
+def main():
+    global application
+    application = Application.builder().token(TOKEN).build()
 
+    # --- Scheduler ---
+    schedule_daily_reset(application.job_queue)
 
-# ============================
-# 🔹 TELEGRAM BOT MAIN
-# ============================
- def main():
-    print("🤖 Bot starting...")
-    app = Application.builder().token(TOKEN).build()
-   
-
-    # Scheduler
-    schedule_daily_reset(app.job_queue)
-
-    # --- Conversation handler ---
+    # --- Registration conversation ---
     reg_conv = ConversationHandler(
         entry_points=[CommandHandler("register", start_registration)],
         states={
@@ -1654,50 +1634,47 @@ def run_flask():
         },
         fallbacks=[CommandHandler("cancel", cancel_registration)],
     )
+    application.add_handler(reg_conv)
+    application.add_handler(update_conv_handler)
 
-    app.add_handler(reg_conv)
-    app.add_handler(update_conv_handler)
-
-    # --- Blocker handler (keep original logic) ---
-    app.add_handler(
+    # --- Blocker for commands during quiz ---
+    application.add_handler(
         MessageHandler(filters.COMMAND & ~filters.Regex("^/end$"), block_during_quiz),
         group=1,
     )
 
     # --- Core command handlers ---
-    app.add_handler(CommandHandler("start", start_command))
-    app.add_handler(CommandHandler("play", play_command))
-    app.add_handler(CommandHandler("end", end_command))
-    app.add_handler(CommandHandler("fund", fund_command))
-    app.add_handler(CommandHandler("balance", balance_command))
-    app.add_handler(CommandHandler("leaderboard", leaderboard_command))
-    app.add_handler(CommandHandler("profile", profile_command))
-    app.add_handler(CommandHandler("help", help_command))
-    app.add_handler(CommandHandler("winner", winner_command))
+    for cmd, func in [
+        ("start", start_command),
+        ("play", play_command),
+        ("end", end_command),
+        ("fund", fund_command),
+        ("balance", balance_command),
+        ("leaderboard", leaderboard_command),
+        ("profile", profile_command),
+        ("help", help_command),
+        ("winner", winner_command)
+    ]:
+        application.add_handler(CommandHandler(cmd, func))
 
-    # --- Callback query handlers ---
-    app.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
-    app.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
-    app.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
-    app.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
-    app.add_handler(CallbackQueryHandler(handle_answer))
+    # --- Callback handlers ---
+    application.add_handler(CallbackQueryHandler(choose_category, pattern=r"^cat_"))
+    application.add_handler(CallbackQueryHandler(handle_category_callback, pattern="^cat_"))
+    application.add_handler(CallbackQueryHandler(confirm_end, pattern="^confirm_end$"))
+    application.add_handler(CallbackQueryHandler(cancel_end, pattern="^cancel_end$"))
+    application.add_handler(CallbackQueryHandler(handle_answer))
 
-    # ✅ Instead of app.run_webhook() (which starts another web server),
-    # we just set the webhook once and let Flask handle incoming updates
- print(f"🚀 Telegram webhook listening on /webhook")
-    app.run_webhook(
-        listen="0.0.0.0",
-        port=int(os.environ.get("PORT", 8080)),  # Telegram webhook port
-        url_path="webhook",
-        webhook_url=f"{WEBHOOK_URL}/webhook"
+    # ✅ Set webhook with Telegram
+    bot.set_webhook(f"{WEBHOOK_URL}/webhook")
+    print(f"🚀 Telegram webhook set to {WEBHOOK_URL}/webhook")
 
-
-
-# ============================
-# 🔹 STARTUP (Flask + Telegram)
-# ============================
+# -------------------------
+# STARTUP (Flask + Telegram)
+# -------------------------
 if __name__ == "__main__":
-     # Flask in background thread
-    Thread(target=run_flask, daemon=True).start()
-    # Telegram bot in main thread
+    from threading import Thread
+
+    # Flask runs in background thread
+    Thread(target=lambda: flask_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080))), daemon=True).start()
+    # Telegram bot setup in main thread
     main()
