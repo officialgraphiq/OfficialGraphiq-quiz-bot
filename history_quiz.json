@@ -1,0 +1,5002 @@
+[
+    {
+        "question": "Namdi Kanu is best known in the history of which country?",
+        "options": [
+            "Zambia",
+            "Egypt",
+            "Nigeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Mobutu Sese Seko is associated with the political history of which country?",
+        "options": [
+            "Cameroon",
+            "DR Congo",
+            "South Africa",
+            "Tanzania"
+        ],
+        "answer": "DR Congo"
+    },
+    {
+        "question": "In which country is Ibrahim Magu a notable historical figure?",
+        "options": [
+            "South Africa",
+            "Nigeria",
+            "Ghana",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Idi Amin?",
+        "options": [
+            "Algeria",
+            "Uganda",
+            "Cameroon",
+            "Côte d’Ivoire"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Jawaharlal Nehru is best known in the history of which country?",
+        "options": [
+            "Japan",
+            "Cuba",
+            "India",
+            "Belgium"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "Which nation’s history prominently features Indira Gandhi?",
+        "options": [
+            "United Kingdom",
+            "United States",
+            "India",
+            "Spain"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "In which country is Francisco Franco a notable historical figure?",
+        "options": [
+            "United States",
+            "Spain",
+            "France",
+            "Belgium"
+        ],
+        "answer": "Spain"
+    },
+    {
+        "question": "In what year did the French Revolution began occur?",
+        "options": [
+            "1776",
+            "1918",
+            "1914",
+            "1789"
+        ],
+        "answer": "1789"
+    },
+    {
+        "question": "Charles Soludo is best known in the history of which country?",
+        "options": [
+            "Tunisia",
+            "Zimbabwe",
+            "Morocco",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features F.W. de Klerk?",
+        "options": [
+            "South Africa",
+            "Ethiopia",
+            "France",
+            "UK"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Godwin Emefiele is best known in the history of which country?",
+        "options": [
+            "Morocco",
+            "Ethiopia",
+            "Nigeria",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In what year did the end of World War II occur?",
+        "options": [
+            "1945",
+            "1961",
+            "1776",
+            "1939"
+        ],
+        "answer": "1945"
+    },
+    {
+        "question": "In which country is Mobutu Sese Seko a notable historical figure?",
+        "options": [
+            "Tanzania",
+            "South Africa",
+            "Spain",
+            "DR Congo"
+        ],
+        "answer": "DR Congo"
+    },
+    {
+        "question": "Which nation’s history prominently features Abdulkadir Balarabe Musa?",
+        "options": [
+            "Algeria",
+            "Nigeria",
+            "Ghana",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Robert Mugabe was a prominent leader of which country?",
+        "options": [
+            "Egypt",
+            "Ghana",
+            "Kenya",
+            "Zimbabwe"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "In which country is Ibrahim Dasuki a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Kenya",
+            "Tunisia",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Franklin D. Roosevelt is best known in the history of which country?",
+        "options": [
+            "Portugal",
+            "Italy",
+            "China",
+            "United States"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "In which country is Iyiola Omisore a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Nigeria",
+            "Kenya",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Toyotomi Hideyoshi was a prominent leader of which country?",
+        "options": [
+            "United Kingdom",
+            "Germany",
+            "Japan",
+            "Mongolia"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "F.W. de Klerk was a prominent leader of which country?",
+        "options": [
+            "Kenya",
+            "South Africa",
+            "Namibia",
+            "Libya"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Who succeeded Murtala Mohammed as Head of State?",
+        "options": [
+            "Aguiyi-Ironsi",
+            "Yakubu Gowon",
+            "Ibrahim Babangida",
+            "Olusegun Obasanjo"
+        ],
+        "answer": "Olusegun Obasanjo"
+    },
+    {
+        "question": "Qin Shi Huang is best known in the history of which country?",
+        "options": [
+            "United Kingdom",
+            "India",
+            "Portugal",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "In which country is Milton Obote a notable historical figure?",
+        "options": [
+            "Namibia",
+            "Libya",
+            "Uganda",
+            "Mali"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Which river meets the Niger at Lokoja?",
+        "options": [
+            "Benue",
+            "Cross",
+            "Kaduna",
+            "Gongola"
+        ],
+        "answer": "Benue"
+    },
+    {
+        "question": "Modibo Keïta was a prominent leader of which country?",
+        "options": [
+            "USA",
+            "Ghana",
+            "South Africa",
+            "Mali"
+        ],
+        "answer": "Mali"
+    },
+    {
+        "question": "John Kufuor is best known in the history of which country?",
+        "options": [
+            "Ghana",
+            "Mozambique",
+            "Namibia",
+            "Ethiopia"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "Shaka was a famous leader of which kingdom?",
+        "options": [
+            "Songhai Empire",
+            "Zulu Kingdom",
+            "Benin Kingdom",
+            "Ashanti Empire"
+        ],
+        "answer": "Zulu Kingdom"
+    },
+    {
+        "question": "Which nation’s history prominently features Menelik II?",
+        "options": [
+            "DR Congo",
+            "Zimbabwe",
+            "Egypt",
+            "Ethiopia"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "Which country's modern history includes the leadership of Aguiyi-Ironsi?",
+        "options": [
+            "Morocco",
+            "Nigeria",
+            "Ethiopia",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Yemi Osinbajo?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Algeria",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Houari Boumédiène?",
+        "options": [
+            "Namibia",
+            "Egypt",
+            "Côte d’Ivoire",
+            "Algeria"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "In which country is Mohammed Dikko Yusufu a notable historical figure?",
+        "options": [
+            "South Africa",
+            "Morocco",
+            "Nigeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Otto von Bismarck a notable historical figure?",
+        "options": [
+            "United States",
+            "Germany",
+            "Italy",
+            "Portugal"
+        ],
+        "answer": "Germany"
+    },
+    {
+        "question": "Thabo Mbeki is associated with the political history of which country?",
+        "options": [
+            "Senegal",
+            "South Africa",
+            "Ethiopia",
+            "Botswana"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Which nation’s history prominently features Winston Churchill?",
+        "options": [
+            "Russia",
+            "Portugal",
+            "Japan",
+            "United Kingdom"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Which nation’s history prominently features Sam Nujoma?",
+        "options": [
+            "Spain",
+            "Mali",
+            "Cameroon",
+            "Namibia"
+        ],
+        "answer": "Namibia"
+    },
+    {
+        "question": "Which nation’s history prominently features Goodluck Ebele Jonathan?",
+        "options": [
+            "Egypt",
+            "Tunisia",
+            "Zambia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Menelik II was a prominent leader of which country?",
+        "options": [
+            "Ethiopia",
+            "Kenya",
+            "Côte d’Ivoire",
+            "Senegal"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "Charles de Gaulle is associated with the political history of which country?",
+        "options": [
+            "United States",
+            "Spain",
+            "Netherlands",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "Milton Obote is associated with the political history of which country?",
+        "options": [
+            "DR Congo",
+            "Guinea",
+            "Uganda",
+            "Libya"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Patience Jonathan is best known in the history of which country?",
+        "options": [
+            "Tunisia",
+            "Ethiopia",
+            "Ghana",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Who moved the 1953 motion for Nigeria's independence?",
+        "options": [
+            "Ahmadu Bello",
+            "Anthony Enahoro",
+            "Michael Okpara",
+            "Tafawa Balewa"
+        ],
+        "answer": "Anthony Enahoro"
+    },
+    {
+        "question": "Olu Falae is associated with the political history of which country?",
+        "options": [
+            "Egypt",
+            "Nigeria",
+            "Ethiopia",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Fidel Castro a notable historical figure?",
+        "options": [
+            "Russia",
+            "Cuba",
+            "Austria",
+            "Netherlands"
+        ],
+        "answer": "Cuba"
+    },
+    {
+        "question": "In which country is Ahmed Sékou Touré a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Ethiopia",
+            "Zambia",
+            "Guinea"
+        ],
+        "answer": "Guinea"
+    },
+    {
+        "question": "Abike Dabiri-Erewa is best known in the history of which country?",
+        "options": [
+            "Kenya",
+            "Zambia",
+            "South Africa",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Vladimir Lenin is best known in the history of which country?",
+        "options": [
+            "United States",
+            "Russia",
+            "Portugal",
+            "China"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Which nation’s history prominently features Iyorchia Ayu?",
+        "options": [
+            "Tanzania",
+            "Morocco",
+            "Nigeria",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Otto von Bismarck was a prominent leader of which country?",
+        "options": [
+            "China",
+            "Germany",
+            "Russia",
+            "Japan"
+        ],
+        "answer": "Germany"
+    },
+    {
+        "question": "Houari Boumédiène is best known in the history of which country?",
+        "options": [
+            "Burkina Faso",
+            "Ghana",
+            "Côte d’Ivoire",
+            "Algeria"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "Amina Mohammed is best known in the history of which country?",
+        "options": [
+            "Egypt",
+            "Nigeria",
+            "Algeria",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "T.Y. Danjuma is associated with the political history of which country?",
+        "options": [
+            "Algeria",
+            "Morocco",
+            "South Africa",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Genghis Khan is associated with the political history of which country?",
+        "options": [
+            "Spain",
+            "Belgium",
+            "Mongolia",
+            "Austria"
+        ],
+        "answer": "Mongolia"
+    },
+    {
+        "question": "Francisco Franco is best known in the history of which country?",
+        "options": [
+            "India",
+            "United States",
+            "France",
+            "Spain"
+        ],
+        "answer": "Spain"
+    },
+    {
+        "question": "Indira Gandhi was a prominent leader of which country?",
+        "options": [
+            "France",
+            "Cuba",
+            "India",
+            "Germany"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "In which country is Goodluck Ebele Jonathan a notable historical figure?",
+        "options": [
+            "Tunisia",
+            "Algeria",
+            "Nigeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Ahmed Sékou Touré?",
+        "options": [
+            "Senegal",
+            "Cameroon",
+            "Guinea",
+            "Zambia"
+        ],
+        "answer": "Guinea"
+    },
+    {
+        "question": "Franklin D. Roosevelt is associated with the political history of which country?",
+        "options": [
+            "United States",
+            "Russia",
+            "Cuba",
+            "Austria"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Which nation’s history prominently features Mansa Musa?",
+        "options": [
+            "Mali",
+            "Ghana",
+            "Algeria",
+            "Ethiopia"
+        ],
+        "answer": "Mali"
+    },
+    {
+        "question": "Which nation’s history prominently features Oliver Cromwell?",
+        "options": [
+            "Austria",
+            "United Kingdom",
+            "Portugal",
+            "Cuba"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Anwar Sadat was a prominent leader of which country?",
+        "options": [
+            "Botswana",
+            "Mozambique",
+            "Egypt",
+            "Uganda"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "In which country is Ibrahim Badamasi Babangida a notable historical figure?",
+        "options": [
+            "Ethiopia",
+            "Ghana",
+            "Kenya",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is John Kufuor a notable historical figure?",
+        "options": [
+            "Mali",
+            "Spain",
+            "Ghana",
+            "Egypt"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "Which nation’s history prominently features Gamal Abdel Nasser?",
+        "options": [
+            "Uganda",
+            "Spain",
+            "Mali",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Funmilayo Ransome-Kuti is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Kenya",
+            "Ethiopia",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Tunde Idiagbon a notable historical figure?",
+        "options": [
+            "Tunisia",
+            "Ethiopia",
+            "Nigeria",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Margaret Ekpo is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Tunisia",
+            "Ethiopia",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Emperor Meiji is best known in the history of which country?",
+        "options": [
+            "France",
+            "United Kingdom",
+            "Japan",
+            "Austria"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "In which country is Aisha Buhari a notable historical figure?",
+        "options": [
+            "Ethiopia",
+            "Algeria",
+            "Nigeria",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "When did Nigeria become a republic?",
+        "options": [
+            "1979",
+            "1963",
+            "1960",
+            "1966"
+        ],
+        "answer": "1963"
+    },
+    {
+        "question": "Nasir El-Rufai is best known in the history of which country?",
+        "options": [
+            "Tanzania",
+            "Uganda",
+            "Zimbabwe",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ahmadou Ahidjo is associated with the political history of which country?",
+        "options": [
+            "Cameroon",
+            "Ghana",
+            "Botswana",
+            "Tanzania"
+        ],
+        "answer": "Cameroon"
+    },
+    {
+        "question": "Balarabe Musa is associated with the political history of which country?",
+        "options": [
+            "South Africa",
+            "Tanzania",
+            "Nigeria",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Idi Amin was a prominent leader of which country?",
+        "options": [
+            "Uganda",
+            "Namibia",
+            "Ghana",
+            "Algeria"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Nelson Mandela is best known in the history of which country?",
+        "options": [
+            "France",
+            "USA",
+            "Tanzania",
+            "South Africa"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Shehu Shagari is best known in the history of which country?",
+        "options": [
+            "Egypt",
+            "South Africa",
+            "Algeria",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Samora Machel a notable historical figure?",
+        "options": [
+            "UK",
+            "Mozambique",
+            "France",
+            "Zambia"
+        ],
+        "answer": "Mozambique"
+    },
+    {
+        "question": "What office did Muhammadu Buhari hold in Nigeria?",
+        "options": [
+            "Prime Minister",
+            "Chief Justice",
+            "Senate President",
+            "Head of State/President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "In which country is Abdulsalami Abubakar a notable historical figure?",
+        "options": [
+            "Kenya",
+            "Nigeria",
+            "Algeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Femi Falana a notable historical figure?",
+        "options": [
+            "Morocco",
+            "Tanzania",
+            "Nigeria",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Julius Nyerere is best known in the history of which country?",
+        "options": [
+            "Tanzania",
+            "Namibia",
+            "South Africa",
+            "Côte d’Ivoire"
+        ],
+        "answer": "Tanzania"
+    },
+    {
+        "question": "Which nation’s history prominently features Michael Okpara?",
+        "options": [
+            "Egypt",
+            "South Africa",
+            "Algeria",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Thomas Sankara is associated with the political history of which country?",
+        "options": [
+            "Mali",
+            "Burkina Faso",
+            "Libya",
+            "Egypt"
+        ],
+        "answer": "Burkina Faso"
+    },
+    {
+        "question": "Anwar Sadat is associated with the political history of which country?",
+        "options": [
+            "Kenya",
+            "Angola",
+            "South Africa",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Bala Usman is associated with the political history of which country?",
+        "options": [
+            "Egypt",
+            "Kenya",
+            "Nigeria",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which country's modern history includes the leadership of Shehu Shagari?",
+        "options": [
+            "Tunisia",
+            "South Africa",
+            "Nigeria",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Franklin D. Roosevelt was a prominent leader of which country?",
+        "options": [
+            "France",
+            "Italy",
+            "United States",
+            "Japan"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Joseph Stalin was a prominent leader of which country?",
+        "options": [
+            "Italy",
+            "Russia",
+            "Cuba",
+            "France"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Joseph Tarka is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Ethiopia",
+            "Algeria",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Atiku Abubakar is best known in the history of which country?",
+        "options": [
+            "Algeria",
+            "Nigeria",
+            "Zimbabwe",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "When did the Nigerian Civil War end?",
+        "options": [
+            "1972",
+            "1975",
+            "1969",
+            "1970"
+        ],
+        "answer": "1970"
+    },
+    {
+        "question": "Alex Ekwueme is associated with the political history of which country?",
+        "options": [
+            "Zambia",
+            "Nigeria",
+            "Tunisia",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Abike Dabiri-Erewa a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Ghana",
+            "South Africa",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Akinwumi Adesina is best known in the history of which country?",
+        "options": [
+            "Ghana",
+            "Zambia",
+            "Nigeria",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Umaru Musa Yar'Adua is historically linked to which country?",
+        "options": [
+            "Nigeria",
+            "Ethiopia",
+            "Algeria",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Uche Chukwumerije is associated with the political history of which country?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Zimbabwe",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Sani Abacha?",
+        "options": [
+            "Ghana",
+            "Kenya",
+            "Nigeria",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In historical records, Olusegun Obasanjo is a figure from which country?",
+        "options": [
+            "Nigeria",
+            "Morocco",
+            "Tunisia",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Who was assassinated in 1976 while serving as Head of State?",
+        "options": [
+            "Yakubu Gowon",
+            "Aguiyi-Ironsi",
+            "Sani Abacha",
+            "Murtala Mohammed"
+        ],
+        "answer": "Murtala Mohammed"
+    },
+    {
+        "question": "What office did Yakubu Gowon hold in Nigeria?",
+        "options": [
+            "Senate President",
+            "Head of State/President",
+            "Chief Justice",
+            "Prime Minister"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "T.Y. Danjuma is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Tanzania",
+            "Uganda",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Muammar Gaddafi is best known in the history of which country?",
+        "options": [
+            "Mali",
+            "Kenya",
+            "Egypt",
+            "Libya"
+        ],
+        "answer": "Libya"
+    },
+    {
+        "question": "Dora Akunyili is best known in the history of which country?",
+        "options": [
+            "Zambia",
+            "Kenya",
+            "Nigeria",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Emperor Meiji a notable historical figure?",
+        "options": [
+            "India",
+            "China",
+            "Austria",
+            "Japan"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "In historical records, Murtala Mohammed is a figure from which country?",
+        "options": [
+            "Nigeria",
+            "South Africa",
+            "Tanzania",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Alex Ekwueme?",
+        "options": [
+            "Uganda",
+            "Kenya",
+            "Nigeria",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Anthony Onyearugbulem?",
+        "options": [
+            "Nigeria",
+            "Algeria",
+            "South Africa",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Vladimir Lenin a notable historical figure?",
+        "options": [
+            "Portugal",
+            "United States",
+            "Mongolia",
+            "Russia"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Kenneth Kaunda was a prominent leader of which country?",
+        "options": [
+            "Libya",
+            "Nigeria",
+            "Tanzania",
+            "Zambia"
+        ],
+        "answer": "Zambia"
+    },
+    {
+        "question": "Milton Obote is best known in the history of which country?",
+        "options": [
+            "Mozambique",
+            "Uganda",
+            "Libya",
+            "South Africa"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Napoleon Bonaparte was a prominent leader of which country?",
+        "options": [
+            "Russia",
+            "China",
+            "Mongolia",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "What office did Abdulsalami Abubakar hold in Nigeria?",
+        "options": [
+            "Prime Minister",
+            "Head of State/President",
+            "Chief Justice",
+            "Senate President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "In which country is H.O. Davies a notable historical figure?",
+        "options": [
+            "Egypt",
+            "Algeria",
+            "Nigeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Oliver Cromwell was a prominent leader of which country?",
+        "options": [
+            "Japan",
+            "United Kingdom",
+            "Cuba",
+            "India"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Which nation’s history prominently features Gani Fawehinmi?",
+        "options": [
+            "Egypt",
+            "Morocco",
+            "Tanzania",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Balarabe Musa is best known in the history of which country?",
+        "options": [
+            "Tanzania",
+            "Nigeria",
+            "Zimbabwe",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which ancient civilization built the pyramids of Giza?",
+        "options": [
+            "Ancient Egyptians",
+            "Romans",
+            "Greeks",
+            "Aztecs"
+        ],
+        "answer": "Ancient Egyptians"
+    },
+    {
+        "question": "Goodluck Jonathan is associated with the political history of which country?",
+        "options": [
+            "Tunisia",
+            "Zimbabwe",
+            "Nigeria",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "The Asante Empire was centered in which modern country?",
+        "options": [
+            "Côte d’Ivoire",
+            "Benin",
+            "Togo",
+            "Ghana"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "Jomo Kenyatta is associated with the political history of which country?",
+        "options": [
+            "DR Congo",
+            "Kenya",
+            "Uganda",
+            "Botswana"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "In which country is Nnamdi Kanu a notable historical figure?",
+        "options": [
+            "Kenya",
+            "Nigeria",
+            "Uganda",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Samora Machel is best known in the history of which country?",
+        "options": [
+            "Namibia",
+            "Libya",
+            "Mozambique",
+            "Burkina Faso"
+        ],
+        "answer": "Mozambique"
+    },
+    {
+        "question": "Muammar Gaddafi was a prominent leader of which country?",
+        "options": [
+            "Zambia",
+            "DR Congo",
+            "Libya",
+            "Tanzania"
+        ],
+        "answer": "Libya"
+    },
+    {
+        "question": "Julius Nyerere is associated with the political history of which country?",
+        "options": [
+            "Tanzania",
+            "Ghana",
+            "Botswana",
+            "France"
+        ],
+        "answer": "Tanzania"
+    },
+    {
+        "question": "Francisco Franco is associated with the political history of which country?",
+        "options": [
+            "Spain",
+            "France",
+            "United States",
+            "Cuba"
+        ],
+        "answer": "Spain"
+    },
+    {
+        "question": "Rochas Okorocha is associated with the political history of which country?",
+        "options": [
+            "Tunisia",
+            "Nigeria",
+            "Ethiopia",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "What was the policy of racial segregation in South Africa called?",
+        "options": [
+            "Ujamaa",
+            "Apartheid",
+            "Jim Crow",
+            "Négritude"
+        ],
+        "answer": "Apartheid"
+    },
+    {
+        "question": "In which country is Ahmadou Ahidjo a notable historical figure?",
+        "options": [
+            "Namibia",
+            "Kenya",
+            "France",
+            "Cameroon"
+        ],
+        "answer": "Cameroon"
+    },
+    {
+        "question": "Aminu Kano is associated with the political history of which country?",
+        "options": [
+            "Uganda",
+            "Nigeria",
+            "Tanzania",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which empire was ruled by Julius Caesar and Augustus?",
+        "options": [
+            "Mongol Empire",
+            "Ottoman Empire",
+            "Persian Empire",
+            "Roman Empire"
+        ],
+        "answer": "Roman Empire"
+    },
+    {
+        "question": "The Silk Road primarily connected China with which region?",
+        "options": [
+            "Mediterranean",
+            "Australia",
+            "Arctic",
+            "Sub-Saharan Africa"
+        ],
+        "answer": "Mediterranean"
+    },
+    {
+        "question": "Which nation’s history prominently features Nuhu Ribadu?",
+        "options": [
+            "Zambia",
+            "Morocco",
+            "Nigeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Mao Zedong a notable historical figure?",
+        "options": [
+            "United States",
+            "China",
+            "Spain",
+            "Portugal"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "In which country is Gani Fawehinmi a notable historical figure?",
+        "options": [
+            "Zambia",
+            "Tunisia",
+            "Algeria",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ahmed Ben Bella is best known in the history of which country?",
+        "options": [
+            "Angola",
+            "Algeria",
+            "DR Congo",
+            "UK"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Kenneth Kaunda?",
+        "options": [
+            "Libya",
+            "Zambia",
+            "Ghana",
+            "Namibia"
+        ],
+        "answer": "Zambia"
+    },
+    {
+        "question": "Anthony Enahoro is best known in the history of which country?",
+        "options": [
+            "Zimbabwe",
+            "Algeria",
+            "Zambia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Ayo Fayose a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Egypt",
+            "South Africa",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Sule Lamido is best known in the history of which country?",
+        "options": [
+            "Morocco",
+            "Nigeria",
+            "Egypt",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Mahatma Gandhi is associated with the political history of which country?",
+        "options": [
+            "China",
+            "Russia",
+            "India",
+            "Mongolia"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "Jaja Wachuku is best known in the history of which country?",
+        "options": [
+            "Morocco",
+            "Nigeria",
+            "Algeria",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Hamad Bello (Ahmadu Bello) is associated with the political history of which country?",
+        "options": [
+            "Tunisia",
+            "Egypt",
+            "Nigeria",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Ernest Shonekan?",
+        "options": [
+            "Egypt",
+            "Kenya",
+            "Nigeria",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Peter Obi a notable historical figure?",
+        "options": [
+            "Kenya",
+            "Algeria",
+            "Nigeria",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Kenneth Kaunda is associated with the political history of which country?",
+        "options": [
+            "Namibia",
+            "Zambia",
+            "Tanzania",
+            "UK"
+        ],
+        "answer": "Zambia"
+    },
+    {
+        "question": "Michael Okpara is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "Tunisia",
+            "Uganda",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which country's modern history includes the leadership of Tafawa Balewa?",
+        "options": [
+            "Kenya",
+            "Nigeria",
+            "Egypt",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In what year did the end of World War I occur?",
+        "options": [
+            "1914",
+            "1989",
+            "1945",
+            "1918"
+        ],
+        "answer": "1918"
+    },
+    {
+        "question": "Chinua Achebe is best known in the history of which country?",
+        "options": [
+            "Tunisia",
+            "Kenya",
+            "Nigeria",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Kwame Nkrumah?",
+        "options": [
+            "Namibia",
+            "Côte d’Ivoire",
+            "Algeria",
+            "Ghana"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "Mohammed Dikko Yusufu is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "South Africa",
+            "Egypt",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Aguiyi-Ironsi a notable historical figure?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Zambia",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Mobutu Sese Seko was a prominent leader of which country?",
+        "options": [
+            "DR Congo",
+            "USA",
+            "Namibia",
+            "Uganda"
+        ],
+        "answer": "DR Congo"
+    },
+    {
+        "question": "Mao Zedong is associated with the political history of which country?",
+        "options": [
+            "China",
+            "France",
+            "Austria",
+            "Germany"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "In which country is Hamad Bello (Ahmadu Bello) a notable historical figure?",
+        "options": [
+            "Uganda",
+            "Nigeria",
+            "Ghana",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Aisha Buhari?",
+        "options": [
+            "Morocco",
+            "Zimbabwe",
+            "Uganda",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "What office did Ernest Shonekan hold in Nigeria?",
+        "options": [
+            "Head of State/President",
+            "Prime Minister",
+            "Senate President",
+            "Chief Justice"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "Abraham Lincoln was a prominent leader of which country?",
+        "options": [
+            "Mongolia",
+            "Japan",
+            "United States",
+            "Russia"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Mahatma Gandhi is best known in the history of which country?",
+        "options": [
+            "Cuba",
+            "Portugal",
+            "India",
+            "Russia"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "In which country is Atiku Abubakar a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Tanzania",
+            "Tunisia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Kwame Nkrumah was a prominent leader of which country?",
+        "options": [
+            "Ghana",
+            "DR Congo",
+            "Kenya",
+            "Tanzania"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "What office did Ibrahim Babangida hold in Nigeria?",
+        "options": [
+            "Senate President",
+            "Chief Justice",
+            "Head of State/President",
+            "Prime Minister"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "Which nation’s history prominently features Joseph Tarka?",
+        "options": [
+            "Kenya",
+            "Uganda",
+            "Ethiopia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which political party was founded by Obafemi Awolowo?",
+        "options": [
+            "NPN",
+            "NPC",
+            "Action Group",
+            "NCNC"
+        ],
+        "answer": "Action Group"
+    },
+    {
+        "question": "The Battle of Adwa (1896) was a victory for which African state?",
+        "options": [
+            "Sudan",
+            "Ethiopia",
+            "Morocco",
+            "Egypt"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "In what year did the American Declaration of Independence occur?",
+        "options": [
+            "1815",
+            "1961",
+            "1776",
+            "1989"
+        ],
+        "answer": "1776"
+    },
+    {
+        "question": "Ibrahim Dasuki is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Morocco",
+            "Kenya",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Iyorchia Ayu is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Ethiopia",
+            "Kenya",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Robert Mugabe is associated with the political history of which country?",
+        "options": [
+            "Zimbabwe",
+            "Senegal",
+            "Tanzania",
+            "DR Congo"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Genghis Khan is best known in the history of which country?",
+        "options": [
+            "Russia",
+            "China",
+            "Netherlands",
+            "Mongolia"
+        ],
+        "answer": "Mongolia"
+    },
+    {
+        "question": "In which country is Joseph Stalin a notable historical figure?",
+        "options": [
+            "Germany",
+            "Russia",
+            "Italy",
+            "France"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Ahmadou Ahidjo is best known in the history of which country?",
+        "options": [
+            "Cameroon",
+            "Guinea",
+            "Botswana",
+            "Namibia"
+        ],
+        "answer": "Cameroon"
+    },
+    {
+        "question": "Mansa Musa is associated with the political history of which country?",
+        "options": [
+            "Kenya",
+            "Mali",
+            "Zimbabwe",
+            "Mozambique"
+        ],
+        "answer": "Mali"
+    },
+    {
+        "question": "Which nation’s history prominently features Abike Dabiri-Erewa?",
+        "options": [
+            "Nigeria",
+            "Tunisia",
+            "Kenya",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Nnamdi Azikiwe a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Morocco",
+            "Ghana",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Tunde Idiagbon is associated with the political history of which country?",
+        "options": [
+            "Ghana",
+            "South Africa",
+            "Nigeria",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Abdulkadir Balarabe Musa is associated with the political history of which country?",
+        "options": [
+            "Zambia",
+            "Nigeria",
+            "Algeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Anwar Sadat?",
+        "options": [
+            "Burkina Faso",
+            "Egypt",
+            "Uganda",
+            "UK"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "In historical records, Muhammadu Buhari is a figure from which country?",
+        "options": [
+            "Egypt",
+            "Tunisia",
+            "Nigeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which leader shared the 1993 Nobel Peace Prize with Nelson Mandela?",
+        "options": [
+            "Thabo Mbeki",
+            "Desmond Tutu",
+            "F.W. de Klerk",
+            "Cyril Ramaphosa"
+        ],
+        "answer": "F.W. de Klerk"
+    },
+    {
+        "question": "Idi Amin is associated with the political history of which country?",
+        "options": [
+            "Kenya",
+            "France",
+            "Ethiopia",
+            "Uganda"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Which nation’s history prominently features Goodluck Jonathan?",
+        "options": [
+            "Morocco",
+            "Tanzania",
+            "Nigeria",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Michael Okpara is associated with the political history of which country?",
+        "options": [
+            "South Africa",
+            "Egypt",
+            "Morocco",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Haile Selassie was a prominent leader of which country?",
+        "options": [
+            "Botswana",
+            "Ethiopia",
+            "DR Congo",
+            "Namibia"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "Tafawa Balewa is associated with the political history of which country?",
+        "options": [
+            "Zambia",
+            "Egypt",
+            "Algeria",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In historical records, Sani Abacha is a figure from which country?",
+        "options": [
+            "Zambia",
+            "South Africa",
+            "Nigeria",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In what year did the Russian Revolution occur?",
+        "options": [
+            "1968",
+            "1945",
+            "1989",
+            "1917"
+        ],
+        "answer": "1917"
+    },
+    {
+        "question": "Which nation’s history prominently features Qin Shi Huang?",
+        "options": [
+            "Italy",
+            "Russia",
+            "Austria",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Fidel Castro is associated with the political history of which country?",
+        "options": [
+            "United Kingdom",
+            "Italy",
+            "Austria",
+            "Cuba"
+        ],
+        "answer": "Cuba"
+    },
+    {
+        "question": "In which country is Chinua Achebe a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "South Africa",
+            "Uganda",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Houari Boumédiène was a prominent leader of which country?",
+        "options": [
+            "Cameroon",
+            "France",
+            "Algeria",
+            "Ethiopia"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "What office did Umaru Musa Yar'Adua hold in Nigeria?",
+        "options": [
+            "Chief Justice",
+            "Prime Minister",
+            "Senate President",
+            "Head of State/President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "Which nation’s history prominently features Shehu Shagari?",
+        "options": [
+            "Tunisia",
+            "Ethiopia",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "George Washington was a prominent leader of which country?",
+        "options": [
+            "France",
+            "United Kingdom",
+            "Spain",
+            "United States"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Which country's modern history includes the leadership of Herbert Macaulay?",
+        "options": [
+            "South Africa",
+            "Nigeria",
+            "Tunisia",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Idi Amin a notable historical figure?",
+        "options": [
+            "UK",
+            "Namibia",
+            "Uganda",
+            "Egypt"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Which nation’s history prominently features Nasir El-Rufai?",
+        "options": [
+            "Kenya",
+            "Algeria",
+            "Nigeria",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Mobutu Sese Seko?",
+        "options": [
+            "Mozambique",
+            "Botswana",
+            "Algeria",
+            "DR Congo"
+        ],
+        "answer": "DR Congo"
+    },
+    {
+        "question": "Which nation’s history prominently features Rabiu Kwankwaso?",
+        "options": [
+            "Nigeria",
+            "Egypt",
+            "Algeria",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Léopold Sédar Senghor is best known in the history of which country?",
+        "options": [
+            "Spain",
+            "Senegal",
+            "Ethiopia",
+            "DR Congo"
+        ],
+        "answer": "Senegal"
+    },
+    {
+        "question": "Which explorer completed the first circumnavigation of the Earth?",
+        "options": [
+            "Vasco da Gama",
+            "James Cook",
+            "Ferdinand Magellan",
+            "Christopher Columbus"
+        ],
+        "answer": "Ferdinand Magellan"
+    },
+    {
+        "question": "In what year did the start of World War II occur?",
+        "options": [
+            "1815",
+            "1961",
+            "1918",
+            "1939"
+        ],
+        "answer": "1939"
+    },
+    {
+        "question": "Umaru Musa Yar'Adua is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Tunisia",
+            "Ghana",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Kashim Shettima a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Algeria",
+            "Egypt",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Mao Zedong?",
+        "options": [
+            "Belgium",
+            "Cuba",
+            "Spain",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "In which country is Olusegun Obasanjo a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Uganda",
+            "Nigeria",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ibrahim Tahir is associated with the political history of which country?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "South Africa",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Félix Houphouët-Boigny was a prominent leader of which country?",
+        "options": [
+            "South Africa",
+            "Uganda",
+            "Côte d’Ivoire",
+            "Algeria"
+        ],
+        "answer": "Côte d’Ivoire"
+    },
+    {
+        "question": "Seretse Khama was a prominent leader of which country?",
+        "options": [
+            "Zimbabwe",
+            "Namibia",
+            "Guinea",
+            "Botswana"
+        ],
+        "answer": "Botswana"
+    },
+    {
+        "question": "Where was crude oil first discovered in commercial quantity in Nigeria?",
+        "options": [
+            "Warri",
+            "Oloibiri",
+            "Bonny",
+            "Port Harcourt"
+        ],
+        "answer": "Oloibiri"
+    },
+    {
+        "question": "Which nation’s history prominently features Adams Oshiomhole?",
+        "options": [
+            "Tunisia",
+            "Morocco",
+            "Kenya",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Gamal Abdel Nasser a notable historical figure?",
+        "options": [
+            "Angola",
+            "Spain",
+            "Egypt",
+            "Zimbabwe"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Which colonial administrator amalgamated Nigeria?",
+        "options": [
+            "Lord Clive",
+            "Lord Lugard",
+            "Lord Milner",
+            "Lord Curzon"
+        ],
+        "answer": "Lord Lugard"
+    },
+    {
+        "question": "In which country is George Washington a notable historical figure?",
+        "options": [
+            "Japan",
+            "Italy",
+            "United States",
+            "United Kingdom"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Which nation’s history prominently features Genghis Khan?",
+        "options": [
+            "Netherlands",
+            "Japan",
+            "India",
+            "Mongolia"
+        ],
+        "answer": "Mongolia"
+    },
+    {
+        "question": "Buba Marwa is associated with the political history of which country?",
+        "options": [
+            "Kenya",
+            "Uganda",
+            "Nigeria",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "What office did Goodluck Jonathan hold in Nigeria?",
+        "options": [
+            "Head of State/President",
+            "Prime Minister",
+            "Chief Justice",
+            "Senate President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "In what year did the start of World War I occur?",
+        "options": [
+            "1989",
+            "1848",
+            "1917",
+            "1914"
+        ],
+        "answer": "1914"
+    },
+    {
+        "question": "Goodluck Jonathan is best known in the history of which country?",
+        "options": [
+            "Tunisia",
+            "Morocco",
+            "Nigeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Sam Nujoma was a prominent leader of which country?",
+        "options": [
+            "Cameroon",
+            "Namibia",
+            "Angola",
+            "Tanzania"
+        ],
+        "answer": "Namibia"
+    },
+    {
+        "question": "Which nation’s history prominently features Pat Utomi?",
+        "options": [
+            "Algeria",
+            "South Africa",
+            "Nigeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Kudirat Abiola is associated with the political history of which country?",
+        "options": [
+            "Algeria",
+            "South Africa",
+            "Ethiopia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Who served as Nigeria's first President?",
+        "options": [
+            "Yakubu Gowon",
+            "Olusegun Obasanjo",
+            "Shehu Shagari",
+            "Nnamdi Azikiwe"
+        ],
+        "answer": "Nnamdi Azikiwe"
+    },
+    {
+        "question": "Abubakar Tafawa Balewa is best known in the history of which country?",
+        "options": [
+            "Tunisia",
+            "Nigeria",
+            "Kenya",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Nuhu Ribadu is associated with the political history of which country?",
+        "options": [
+            "Uganda",
+            "Nigeria",
+            "South Africa",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Theodore Roosevelt was a prominent leader of which country?",
+        "options": [
+            "Spain",
+            "France",
+            "United States",
+            "India"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Abdulsalami Abubakar is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "Morocco",
+            "Nigeria",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Jawaharlal Nehru was a prominent leader of which country?",
+        "options": [
+            "Cuba",
+            "Russia",
+            "United Kingdom",
+            "India"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "In which country is Kwame Nkrumah a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Guinea",
+            "Botswana",
+            "Ghana"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "Benito Mussolini was a prominent leader of which country?",
+        "options": [
+            "China",
+            "Italy",
+            "Cuba",
+            "Spain"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "Which nation’s history prominently features Zainab Ahmed?",
+        "options": [
+            "Nigeria",
+            "Tunisia",
+            "Ethiopia",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Julius Nyerere a notable historical figure?",
+        "options": [
+            "Angola",
+            "Zimbabwe",
+            "Tanzania",
+            "Kenya"
+        ],
+        "answer": "Tanzania"
+    },
+    {
+        "question": "Which nation’s history prominently features Bala Usman?",
+        "options": [
+            "Tunisia",
+            "Tanzania",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Mansa Musa ruled which empire?",
+        "options": [
+            "Kanem-Bornu",
+            "Mali Empire",
+            "Ghana Empire",
+            "Songhai Empire"
+        ],
+        "answer": "Mali Empire"
+    },
+    {
+        "question": "Which nation’s history prominently features Ibrahim Badamasi Babangida?",
+        "options": [
+            "Tanzania",
+            "Nigeria",
+            "Algeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Jomo Kenyatta a notable historical figure?",
+        "options": [
+            "Kenya",
+            "Namibia",
+            "Angola",
+            "South Africa"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Which nation’s history prominently features Ibrahim Shekarau?",
+        "options": [
+            "Uganda",
+            "Zimbabwe",
+            "Nigeria",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Patrice Lumumba is best known in the history of which country?",
+        "options": [
+            "Zimbabwe",
+            "USA",
+            "DR Congo",
+            "Tanzania"
+        ],
+        "answer": "DR Congo"
+    },
+    {
+        "question": "Rabiu Kwankwaso is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "Uganda",
+            "Nigeria",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Peter Obi is associated with the political history of which country?",
+        "options": [
+            "Ethiopia",
+            "Zambia",
+            "Ghana",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Benito Mussolini is associated with the political history of which country?",
+        "options": [
+            "Portugal",
+            "Japan",
+            "Cuba",
+            "Italy"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "In which country is Ike Nwachukwu a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Tanzania",
+            "Ghana",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Ibrahim Babangida?",
+        "options": [
+            "Tanzania",
+            "Nigeria",
+            "Ghana",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Jerry Rawlings was a prominent leader of which country?",
+        "options": [
+            "Ghana",
+            "USA",
+            "Botswana",
+            "Guinea"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "Nnamdi Kanu is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Algeria",
+            "Tanzania",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Chinua Achebe?",
+        "options": [
+            "Zambia",
+            "Tunisia",
+            "Nigeria",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Olusegun Obasanjo is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Morocco",
+            "Ghana",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Who was Head of State during most of the Civil War?",
+        "options": [
+            "Murtala Mohammed",
+            "Olusegun Obasanjo",
+            "Yakubu Gowon",
+            "Aguiyi-Ironsi"
+        ],
+        "answer": "Yakubu Gowon"
+    },
+    {
+        "question": "Francisco Franco was a prominent leader of which country?",
+        "options": [
+            "Germany",
+            "India",
+            "Spain",
+            "China"
+        ],
+        "answer": "Spain"
+    },
+    {
+        "question": "Winston Churchill is associated with the political history of which country?",
+        "options": [
+            "Austria",
+            "Spain",
+            "United Kingdom",
+            "Cuba"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "In which country is Umaru Musa Yar'Adua a notable historical figure?",
+        "options": [
+            "Algeria",
+            "Uganda",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Alvan Ikoku is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Ghana",
+            "South Africa",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Rauf Aregbesola is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Morocco",
+            "Tunisia",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Theodore Roosevelt?",
+        "options": [
+            "Japan",
+            "United States",
+            "France",
+            "India"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Houari Boumédiène is associated with the political history of which country?",
+        "options": [
+            "Senegal",
+            "Zambia",
+            "Algeria",
+            "UK"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "In which country is F.W. de Klerk a notable historical figure?",
+        "options": [
+            "USA",
+            "Burkina Faso",
+            "Zimbabwe",
+            "South Africa"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "What office did Olusegun Obasanjo hold in Nigeria?",
+        "options": [
+            "Head of State/President",
+            "Senate President",
+            "Prime Minister",
+            "Chief Justice"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "In which country is Haile Selassie a notable historical figure?",
+        "options": [
+            "Zambia",
+            "DR Congo",
+            "Algeria",
+            "Ethiopia"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "Ibrahim Dasuki is associated with the political history of which country?",
+        "options": [
+            "Ethiopia",
+            "South Africa",
+            "Nigeria",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which country's modern history includes the leadership of Anthony Enahoro?",
+        "options": [
+            "Zambia",
+            "Ghana",
+            "Nigeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Charles de Gaulle is best known in the history of which country?",
+        "options": [
+            "Russia",
+            "Italy",
+            "France",
+            "Spain"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country is Rauf Aregbesola a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Zambia",
+            "Tanzania",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Dedan Kimathi was a prominent leader of which country?",
+        "options": [
+            "Uganda",
+            "Kenya",
+            "Egypt",
+            "Namibia"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Which nation’s history prominently features Ibrahim Magu?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Egypt",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Robert Mugabe a notable historical figure?",
+        "options": [
+            "Guinea",
+            "France",
+            "Zimbabwe",
+            "DR Congo"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Which nation’s history prominently features Muammar Gaddafi?",
+        "options": [
+            "Libya",
+            "Uganda",
+            "Angola",
+            "Spain"
+        ],
+        "answer": "Libya"
+    },
+    {
+        "question": "Wole Soyinka is associated with the political history of which country?",
+        "options": [
+            "Morocco",
+            "South Africa",
+            "Nigeria",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "What office did Aguiyi-Ironsi hold in Nigeria?",
+        "options": [
+            "Chief Justice",
+            "Prime Minister",
+            "Senate President",
+            "Head of State/President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "Ken Saro-Wiwa is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Kenya",
+            "Algeria",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Agostinho Neto is associated with the political history of which country?",
+        "options": [
+            "Angola",
+            "Spain",
+            "Algeria",
+            "Botswana"
+        ],
+        "answer": "Angola"
+    },
+    {
+        "question": "Which nation’s history prominently features Thabo Mbeki?",
+        "options": [
+            "UK",
+            "Uganda",
+            "Côte d’Ivoire",
+            "South Africa"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Gamal Abdel Nasser is best known in the history of which country?",
+        "options": [
+            "France",
+            "UK",
+            "Egypt",
+            "USA"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Indira Gandhi is best known in the history of which country?",
+        "options": [
+            "China",
+            "Belgium",
+            "Germany",
+            "India"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "Herbert Macaulay is best known in the history of which country?",
+        "options": [
+            "Uganda",
+            "Nigeria",
+            "Morocco",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Dedan Kimathi is associated with the political history of which country?",
+        "options": [
+            "France",
+            "Kenya",
+            "Ghana",
+            "Algeria"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Which nation’s history prominently features Joshua Nkomo?",
+        "options": [
+            "Mali",
+            "Zimbabwe",
+            "Ethiopia",
+            "Cameroon"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Mikhail Gorbachev is associated with the political history of which country?",
+        "options": [
+            "Spain",
+            "United Kingdom",
+            "China",
+            "Russia"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Ibrahim Badamasi Babangida is associated with the political history of which country?",
+        "options": [
+            "Morocco",
+            "Nigeria",
+            "Egypt",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Bola Ige is associated with the political history of which country?",
+        "options": [
+            "Kenya",
+            "Uganda",
+            "Nigeria",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features T.Y. Danjuma?",
+        "options": [
+            "Nigeria",
+            "Zambia",
+            "Tunisia",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Ahmadu Bello?",
+        "options": [
+            "Nigeria",
+            "Zimbabwe",
+            "South Africa",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Joshua Nkomo was a prominent leader of which country?",
+        "options": [
+            "UK",
+            "Zimbabwe",
+            "DR Congo",
+            "Zambia"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Ahmed Ben Bella was a prominent leader of which country?",
+        "options": [
+            "Zimbabwe",
+            "Botswana",
+            "UK",
+            "Algeria"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Léopold Sédar Senghor?",
+        "options": [
+            "Botswana",
+            "Guinea",
+            "Senegal",
+            "UK"
+        ],
+        "answer": "Senegal"
+    },
+    {
+        "question": "Which nation’s history prominently features Wole Soyinka?",
+        "options": [
+            "Ghana",
+            "Morocco",
+            "Nigeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Goodluck Jonathan is historically linked to which country?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Zambia",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Ahmadou Ahidjo?",
+        "options": [
+            "Cameroon",
+            "Mali",
+            "DR Congo",
+            "France"
+        ],
+        "answer": "Cameroon"
+    },
+    {
+        "question": "Which nation’s history prominently features Seretse Khama?",
+        "options": [
+            "Uganda",
+            "Ghana",
+            "Angola",
+            "Botswana"
+        ],
+        "answer": "Botswana"
+    },
+    {
+        "question": "Which city was Nigeria's capital before Abuja?",
+        "options": [
+            "Enugu",
+            "Lagos",
+            "Ibadan",
+            "Kaduna"
+        ],
+        "answer": "Lagos"
+    },
+    {
+        "question": "Sani Abacha is associated with the political history of which country?",
+        "options": [
+            "Uganda",
+            "Morocco",
+            "Tanzania",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Benito Mussolini is best known in the history of which country?",
+        "options": [
+            "France",
+            "Austria",
+            "Russia",
+            "Italy"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "Which nation’s history prominently features Dora Akunyili?",
+        "options": [
+            "Nigeria",
+            "Uganda",
+            "Zambia",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Hajia Gambo Sawaba is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Morocco",
+            "Tunisia",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Samuel Akintola is associated with the political history of which country?",
+        "options": [
+            "Tunisia",
+            "Nigeria",
+            "Morocco",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Sun Yat-sen was a prominent leader of which country?",
+        "options": [
+            "China",
+            "Japan",
+            "Italy",
+            "Cuba"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Ibrahim Waziri is associated with the political history of which country?",
+        "options": [
+            "Uganda",
+            "Zimbabwe",
+            "Ethiopia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Abubakar Tafawa Balewa?",
+        "options": [
+            "Nigeria",
+            "Algeria",
+            "Uganda",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Louis XIV is best known in the history of which country?",
+        "options": [
+            "India",
+            "Russia",
+            "Japan",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country is Ahmed Ben Bella a notable historical figure?",
+        "options": [
+            "Ethiopia",
+            "Kenya",
+            "Zambia",
+            "Algeria"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "Kashim Shettima is associated with the political history of which country?",
+        "options": [
+            "Morocco",
+            "Nigeria",
+            "Zimbabwe",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Patrice Lumumba was a prominent leader of which country?",
+        "options": [
+            "Mozambique",
+            "Tanzania",
+            "Burkina Faso",
+            "DR Congo"
+        ],
+        "answer": "DR Congo"
+    },
+    {
+        "question": "Which nation’s history prominently features Julius Nyerere?",
+        "options": [
+            "Namibia",
+            "Spain",
+            "Tanzania",
+            "Burkina Faso"
+        ],
+        "answer": "Tanzania"
+    },
+    {
+        "question": "Robert Mugabe is best known in the history of which country?",
+        "options": [
+            "Cameroon",
+            "Zimbabwe",
+            "South Africa",
+            "DR Congo"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Which nation’s history prominently features Nelson Mandela?",
+        "options": [
+            "South Africa",
+            "Senegal",
+            "Algeria",
+            "DR Congo"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "In which country is Mikhail Gorbachev a notable historical figure?",
+        "options": [
+            "Austria",
+            "Russia",
+            "China",
+            "Cuba"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Konrad Adenauer is best known in the history of which country?",
+        "options": [
+            "Spain",
+            "Belgium",
+            "Germany",
+            "Portugal"
+        ],
+        "answer": "Germany"
+    },
+    {
+        "question": "Léopold Sédar Senghor is associated with the political history of which country?",
+        "options": [
+            "USA",
+            "Senegal",
+            "Angola",
+            "Burkina Faso"
+        ],
+        "answer": "Senegal"
+    },
+    {
+        "question": "Giuseppe Garibaldi was a prominent leader of which country?",
+        "options": [
+            "Russia",
+            "United States",
+            "Cuba",
+            "Italy"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "Which nation’s history prominently features Kudirat Abiola?",
+        "options": [
+            "Nigeria",
+            "Egypt",
+            "Ethiopia",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Murtala Mohammed?",
+        "options": [
+            "South Africa",
+            "Egypt",
+            "Kenya",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "John Kufuor is associated with the political history of which country?",
+        "options": [
+            "Côte d’Ivoire",
+            "Ghana",
+            "Tanzania",
+            "Zambia"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "In which country is Olu Falae a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Egypt",
+            "Morocco",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features M.K.O. Abiola?",
+        "options": [
+            "Kenya",
+            "Algeria",
+            "Nigeria",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Bisi Akande is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Tanzania",
+            "Zambia",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Genghis Khan was a prominent leader of which country?",
+        "options": [
+            "Mongolia",
+            "United States",
+            "Spain",
+            "Cuba"
+        ],
+        "answer": "Mongolia"
+    },
+    {
+        "question": "Seretse Khama is associated with the political history of which country?",
+        "options": [
+            "Botswana",
+            "UK",
+            "Uganda",
+            "Mali"
+        ],
+        "answer": "Botswana"
+    },
+    {
+        "question": "Which nation’s history prominently features Hamad Bello (Ahmadu Bello)?",
+        "options": [
+            "Tunisia",
+            "Uganda",
+            "Algeria",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ibrahim Babangida is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Ghana",
+            "Ethiopia",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Kashim Shettima?",
+        "options": [
+            "Kenya",
+            "Zambia",
+            "Nigeria",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Abubakar Rimi is associated with the political history of which country?",
+        "options": [
+            "Zambia",
+            "Kenya",
+            "Morocco",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Sani Abacha a notable historical figure?",
+        "options": [
+            "Kenya",
+            "Nigeria",
+            "Ethiopia",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Abubakar Rimi a notable historical figure?",
+        "options": [
+            "Algeria",
+            "Ethiopia",
+            "Nigeria",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Menelik II is best known in the history of which country?",
+        "options": [
+            "Ethiopia",
+            "Ghana",
+            "Tanzania",
+            "Kenya"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "In which country is Tokugawa Ieyasu a notable historical figure?",
+        "options": [
+            "Italy",
+            "Russia",
+            "Japan",
+            "United Kingdom"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "Fidel Castro was a prominent leader of which country?",
+        "options": [
+            "Germany",
+            "Cuba",
+            "Italy",
+            "United States"
+        ],
+        "answer": "Cuba"
+    },
+    {
+        "question": "In historical records, Yakubu Gowon is a figure from which country?",
+        "options": [
+            "Tanzania",
+            "Zambia",
+            "Nigeria",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Ike Nwachukwu?",
+        "options": [
+            "Ethiopia",
+            "Nigeria",
+            "Uganda",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Nelson Mandela was a prominent leader of which country?",
+        "options": [
+            "Algeria",
+            "Libya",
+            "South Africa",
+            "France"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Which nation’s history prominently features Atiku Abubakar?",
+        "options": [
+            "Ethiopia",
+            "Ghana",
+            "Tunisia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "What office did Murtala Mohammed hold in Nigeria?",
+        "options": [
+            "Prime Minister",
+            "Senate President",
+            "Chief Justice",
+            "Head of State/President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "In which country is Tom Mboya a notable historical figure?",
+        "options": [
+            "Kenya",
+            "France",
+            "Senegal",
+            "UK"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Which nation’s history prominently features Jomo Kenyatta?",
+        "options": [
+            "Angola",
+            "South Africa",
+            "Kenya",
+            "Guinea"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "In historical records, Ahmadu Bello is a figure from which country?",
+        "options": [
+            "Nigeria",
+            "Morocco",
+            "Ghana",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ayo Fayose is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Tunisia",
+            "Kenya",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Napoleon Bonaparte?",
+        "options": [
+            "Russia",
+            "Belgium",
+            "United Kingdom",
+            "France"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country is Muammar Gaddafi a notable historical figure?",
+        "options": [
+            "Uganda",
+            "Libya",
+            "Algeria",
+            "Kenya"
+        ],
+        "answer": "Libya"
+    },
+    {
+        "question": "In which country is Queen Victoria a notable historical figure?",
+        "options": [
+            "India",
+            "United Kingdom",
+            "Italy",
+            "Cuba"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Julius Nyerere was a prominent leader of which country?",
+        "options": [
+            "Burkina Faso",
+            "Botswana",
+            "Tanzania",
+            "Mozambique"
+        ],
+        "answer": "Tanzania"
+    },
+    {
+        "question": "What office did Sani Abacha hold in Nigeria?",
+        "options": [
+            "Prime Minister",
+            "Head of State/President",
+            "Senate President",
+            "Chief Justice"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "In which country is Ngozi Okonjo-Iweala a notable historical figure?",
+        "options": [
+            "Kenya",
+            "Tanzania",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Hajia Gambo Sawaba is associated with the political history of which country?",
+        "options": [
+            "Egypt",
+            "Nigeria",
+            "Zimbabwe",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Francisco Franco?",
+        "options": [
+            "Belgium",
+            "United Kingdom",
+            "Russia",
+            "Spain"
+        ],
+        "answer": "Spain"
+    },
+    {
+        "question": "Which nation’s history prominently features Fidel Castro?",
+        "options": [
+            "Russia",
+            "Cuba",
+            "China",
+            "Netherlands"
+        ],
+        "answer": "Cuba"
+    },
+    {
+        "question": "In historical records, Nnamdi Azikiwe is a figure from which country?",
+        "options": [
+            "Nigeria",
+            "Ghana",
+            "Zimbabwe",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In historical records, Ibrahim Babangida is a figure from which country?",
+        "options": [
+            "Nigeria",
+            "Ghana",
+            "Kenya",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Giuseppe Garibaldi is best known in the history of which country?",
+        "options": [
+            "Spain",
+            "Russia",
+            "Portugal",
+            "Italy"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "Rotimi Amaechi is best known in the history of which country?",
+        "options": [
+            "Zambia",
+            "South Africa",
+            "Uganda",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Peter Obi?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Ethiopia",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Who served as Nigeria's first Prime Minister?",
+        "options": [
+            "Nnamdi Azikiwe",
+            "Tafawa Balewa",
+            "Obafemi Awolowo",
+            "Ahmadu Bello"
+        ],
+        "answer": "Tafawa Balewa"
+    },
+    {
+        "question": "Which nation’s history prominently features Ahmed Ben Bella?",
+        "options": [
+            "Botswana",
+            "Algeria",
+            "Ethiopia",
+            "Côte d’Ivoire"
+        ],
+        "answer": "Algeria"
+    },
+    {
+        "question": "John Kufuor was a prominent leader of which country?",
+        "options": [
+            "Nigeria",
+            "Ghana",
+            "Cameroon",
+            "Uganda"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "In which country is Rabi'u Musa Kwankwaso a notable historical figure?",
+        "options": [
+            "Ethiopia",
+            "Nigeria",
+            "Ghana",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Louis XIV a notable historical figure?",
+        "options": [
+            "United States",
+            "France",
+            "Mongolia",
+            "Netherlands"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country is Amina Mohammed a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "South Africa",
+            "Nigeria",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ngozi Okonjo Iweala is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Zimbabwe",
+            "Egypt",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Samora Machel?",
+        "options": [
+            "Mozambique",
+            "Kenya",
+            "UK",
+            "South Africa"
+        ],
+        "answer": "Mozambique"
+    },
+    {
+        "question": "In which country is Kenneth Kaunda a notable historical figure?",
+        "options": [
+            "Tanzania",
+            "South Africa",
+            "Mozambique",
+            "Zambia"
+        ],
+        "answer": "Zambia"
+    },
+    {
+        "question": "Napoleon Bonaparte is associated with the political history of which country?",
+        "options": [
+            "India",
+            "Mongolia",
+            "France",
+            "Austria"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "Ahmed Sékou Touré was a prominent leader of which country?",
+        "options": [
+            "Guinea",
+            "Cameroon",
+            "Nigeria",
+            "Ghana"
+        ],
+        "answer": "Guinea"
+    },
+    {
+        "question": "In which country is Sam Nujoma a notable historical figure?",
+        "options": [
+            "Zimbabwe",
+            "Namibia",
+            "Algeria",
+            "Tanzania"
+        ],
+        "answer": "Namibia"
+    },
+    {
+        "question": "Ahmed Sékou Touré is best known in the history of which country?",
+        "options": [
+            "Guinea",
+            "Namibia",
+            "Kenya",
+            "Côte d’Ivoire"
+        ],
+        "answer": "Guinea"
+    },
+    {
+        "question": "When did the Nigerian Civil War begin?",
+        "options": [
+            "1965",
+            "1967",
+            "1970",
+            "1973"
+        ],
+        "answer": "1967"
+    },
+    {
+        "question": "Abdulsalami Abubakar is historically linked to which country?",
+        "options": [
+            "Morocco",
+            "Nigeria",
+            "Algeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Robert Mugabe?",
+        "options": [
+            "Spain",
+            "Egypt",
+            "Zimbabwe",
+            "Ghana"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Which nation’s history prominently features Adamu Adamu?",
+        "options": [
+            "Ethiopia",
+            "Tunisia",
+            "Zambia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Seretse Khama a notable historical figure?",
+        "options": [
+            "Botswana",
+            "Egypt",
+            "Cameroon",
+            "Libya"
+        ],
+        "answer": "Botswana"
+    },
+    {
+        "question": "The Great Zimbabwe ruins are in which country?",
+        "options": [
+            "Zambia",
+            "Mozambique",
+            "Botswana",
+            "Zimbabwe"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Which nation’s history prominently features Dedan Kimathi?",
+        "options": [
+            "Libya",
+            "Tanzania",
+            "USA",
+            "Kenya"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Winston Churchill was a prominent leader of which country?",
+        "options": [
+            "Cuba",
+            "United Kingdom",
+            "Russia",
+            "Japan"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Ngozi Okonjo-Iweala is best known in the history of which country?",
+        "options": [
+            "Ghana",
+            "Zambia",
+            "Nigeria",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Félix Houphouët-Boigny a notable historical figure?",
+        "options": [
+            "Spain",
+            "Mozambique",
+            "Côte d’Ivoire",
+            "Libya"
+        ],
+        "answer": "Côte d’Ivoire"
+    },
+    {
+        "question": "Adamu Ciroma is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "Egypt",
+            "Nigeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Thabo Mbeki was a prominent leader of which country?",
+        "options": [
+            "Ghana",
+            "Mali",
+            "South Africa",
+            "USA"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Haile Selassie is best known in the history of which country?",
+        "options": [
+            "Senegal",
+            "Angola",
+            "Zambia",
+            "Ethiopia"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "Which nation’s history prominently features Aminu Dantata?",
+        "options": [
+            "Algeria",
+            "Nigeria",
+            "Tunisia",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Joshua Nkomo is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "DR Congo",
+            "Zimbabwe",
+            "Spain"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "In which country is Murtala Mohammed a notable historical figure?",
+        "options": [
+            "Uganda",
+            "Algeria",
+            "Tunisia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Abba Kyari is best known in the history of which country?",
+        "options": [
+            "Morocco",
+            "Nigeria",
+            "Zimbabwe",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Mansa Musa was a prominent leader of which country?",
+        "options": [
+            "Tanzania",
+            "Angola",
+            "Mali",
+            "France"
+        ],
+        "answer": "Mali"
+    },
+    {
+        "question": "Ahmadou Ahidjo was a prominent leader of which country?",
+        "options": [
+            "Uganda",
+            "Cameroon",
+            "Zimbabwe",
+            "Mali"
+        ],
+        "answer": "Cameroon"
+    },
+    {
+        "question": "Qin Shi Huang was a prominent leader of which country?",
+        "options": [
+            "India",
+            "United States",
+            "China",
+            "Japan"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Which country's modern history includes the leadership of Obafemi Awolowo?",
+        "options": [
+            "Nigeria",
+            "Kenya",
+            "Ethiopia",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Yemi Osinbajo is best known in the history of which country?",
+        "options": [
+            "Tanzania",
+            "Nigeria",
+            "Egypt",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Gamal Abdel Nasser is associated with the political history of which country?",
+        "options": [
+            "Angola",
+            "DR Congo",
+            "Côte d’Ivoire",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "Which nation’s history prominently features Milton Obote?",
+        "options": [
+            "Uganda",
+            "Spain",
+            "DR Congo",
+            "Guinea"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Sam Nujoma is best known in the history of which country?",
+        "options": [
+            "Ethiopia",
+            "France",
+            "Zimbabwe",
+            "Namibia"
+        ],
+        "answer": "Namibia"
+    },
+    {
+        "question": "In which country is Bola Tinubu a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Algeria",
+            "Zimbabwe",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Muhammadu Buhari is associated with the political history of which country?",
+        "options": [
+            "Ethiopia",
+            "Zimbabwe",
+            "Tunisia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In historical records, Ernest Shonekan is a figure from which country?",
+        "options": [
+            "Tanzania",
+            "Nigeria",
+            "Egypt",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Vladimir Lenin?",
+        "options": [
+            "Belgium",
+            "Italy",
+            "Russia",
+            "Cuba"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Which nation’s history prominently features Balarabe Musa?",
+        "options": [
+            "Nigeria",
+            "Tunisia",
+            "Algeria",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In what year did the fall of the Berlin Wall occur?",
+        "options": [
+            "1776",
+            "1789",
+            "1939",
+            "1989"
+        ],
+        "answer": "1989"
+    },
+    {
+        "question": "Sam Nujoma is associated with the political history of which country?",
+        "options": [
+            "Angola",
+            "Namibia",
+            "South Africa",
+            "Côte d’Ivoire"
+        ],
+        "answer": "Namibia"
+    },
+    {
+        "question": "In which country is Iyorchia Ayu a notable historical figure?",
+        "options": [
+            "Uganda",
+            "Nigeria",
+            "Algeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Jaja Wachuku is associated with the political history of which country?",
+        "options": [
+            "Tanzania",
+            "Ghana",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Toyotomi Hideyoshi a notable historical figure?",
+        "options": [
+            "Russia",
+            "Portugal",
+            "Japan",
+            "Netherlands"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "Dennis Osadebay is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "Zambia",
+            "Ghana",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Queen Victoria was a prominent leader of which country?",
+        "options": [
+            "France",
+            "India",
+            "Italy",
+            "United Kingdom"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Nnamdi Azikiwe is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "Egypt",
+            "Tanzania",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ahmadu Bello is associated with the political history of which country?",
+        "options": [
+            "Tanzania",
+            "Nigeria",
+            "Egypt",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Chukwuemeka Odumegwu Ojukwu?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Egypt",
+            "Morocco"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Kenneth Kaunda is best known in the history of which country?",
+        "options": [
+            "Mozambique",
+            "Zimbabwe",
+            "Zambia",
+            "Namibia"
+        ],
+        "answer": "Zambia"
+    },
+    {
+        "question": "Which country led the Mau Mau uprising against colonial rule?",
+        "options": [
+            "Uganda",
+            "Kenya",
+            "Tanzania",
+            "Zambia"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Rauf Aregbesola is best known in the history of which country?",
+        "options": [
+            "Morocco",
+            "Zambia",
+            "Nigeria",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Charles de Gaulle was a prominent leader of which country?",
+        "options": [
+            "France",
+            "Spain",
+            "United States",
+            "China"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "Which nation’s history prominently features Thomas Sankara?",
+        "options": [
+            "Burkina Faso",
+            "Zambia",
+            "Mozambique",
+            "South Africa"
+        ],
+        "answer": "Burkina Faso"
+    },
+    {
+        "question": "Abdulsalami Abubakar is associated with the political history of which country?",
+        "options": [
+            "Zimbabwe",
+            "South Africa",
+            "Tunisia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Aminu Dantata a notable historical figure?",
+        "options": [
+            "South Africa",
+            "Nigeria",
+            "Tanzania",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "When did Abuja officially become Nigeria's capital?",
+        "options": [
+            "1989",
+            "1991",
+            "1999",
+            "1995"
+        ],
+        "answer": "1991"
+    },
+    {
+        "question": "F.W. de Klerk is best known in the history of which country?",
+        "options": [
+            "Uganda",
+            "South Africa",
+            "Guinea",
+            "DR Congo"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "Which nation’s history prominently features Tunde Idiagbon?",
+        "options": [
+            "Ghana",
+            "South Africa",
+            "Ethiopia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Emperor Meiji was a prominent leader of which country?",
+        "options": [
+            "United States",
+            "Russia",
+            "Germany",
+            "Japan"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "Which nation’s history prominently features Bola Ige?",
+        "options": [
+            "Zambia",
+            "Uganda",
+            "Nigeria",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Pat Utomi a notable historical figure?",
+        "options": [
+            "South Africa",
+            "Nigeria",
+            "Ethiopia",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Rauf Aregbesola?",
+        "options": [
+            "South Africa",
+            "Tunisia",
+            "Ghana",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Gamal Abdel Nasser was a prominent leader of which country?",
+        "options": [
+            "Ghana",
+            "UK",
+            "South Africa",
+            "Egypt"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "In which country is Michael Okpara a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Zambia",
+            "Ghana",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Haile Selassie is associated with the political history of which country?",
+        "options": [
+            "Côte d’Ivoire",
+            "Spain",
+            "Ethiopia",
+            "DR Congo"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "In which country is Adamu Adamu a notable historical figure?",
+        "options": [
+            "Algeria",
+            "South Africa",
+            "Nigeria",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Yemi Osinbajo a notable historical figure?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Uganda",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Tokugawa Ieyasu was a prominent leader of which country?",
+        "options": [
+            "United States",
+            "Japan",
+            "Italy",
+            "India"
+        ],
+        "answer": "Japan"
+    },
+    {
+        "question": "Félix Houphouët-Boigny is best known in the history of which country?",
+        "options": [
+            "Algeria",
+            "Burkina Faso",
+            "Botswana",
+            "Côte d’Ivoire"
+        ],
+        "answer": "Côte d’Ivoire"
+    },
+    {
+        "question": "Muammar Gaddafi is associated with the political history of which country?",
+        "options": [
+            "Côte d’Ivoire",
+            "Spain",
+            "Libya",
+            "Senegal"
+        ],
+        "answer": "Libya"
+    },
+    {
+        "question": "In which country is Herbert Macaulay a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Zambia",
+            "Zimbabwe",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ibrahim Tahir is best known in the history of which country?",
+        "options": [
+            "Zimbabwe",
+            "Egypt",
+            "Tunisia",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Isaac Boro a notable historical figure?",
+        "options": [
+            "Zambia",
+            "Ethiopia",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Louis XIV was a prominent leader of which country?",
+        "options": [
+            "United States",
+            "United Kingdom",
+            "France",
+            "China"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "Which nation’s history prominently features Ibrahim Tahir?",
+        "options": [
+            "Ethiopia",
+            "Tanzania",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Thomas Sankara was a prominent leader of which country?",
+        "options": [
+            "Ghana",
+            "Burkina Faso",
+            "Cameroon",
+            "Zimbabwe"
+        ],
+        "answer": "Burkina Faso"
+    },
+    {
+        "question": "In which country is Tafawa Balewa a notable historical figure?",
+        "options": [
+            "Ethiopia",
+            "Egypt",
+            "Nigeria",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Agostinho Neto was a prominent leader of which country?",
+        "options": [
+            "Ethiopia",
+            "Namibia",
+            "Angola",
+            "Tanzania"
+        ],
+        "answer": "Angola"
+    },
+    {
+        "question": "Mao Zedong was a prominent leader of which country?",
+        "options": [
+            "Japan",
+            "France",
+            "United Kingdom",
+            "China"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Which organization preceded the African Union?",
+        "options": [
+            "COMESA",
+            "ECOWAS",
+            "Organization of African Unity",
+            "SADC"
+        ],
+        "answer": "Organization of African Unity"
+    },
+    {
+        "question": "Vladimir Lenin was a prominent leader of which country?",
+        "options": [
+            "Cuba",
+            "France",
+            "Russia",
+            "Mongolia"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "What office did Shehu Shagari hold in Nigeria?",
+        "options": [
+            "Senate President",
+            "Prime Minister",
+            "Chief Justice",
+            "Head of State/President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "In which country is Nasir El-Rufai a notable historical figure?",
+        "options": [
+            "Egypt",
+            "Nigeria",
+            "Morocco",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Abdulkadir Balarabe Musa a notable historical figure?",
+        "options": [
+            "South Africa",
+            "Morocco",
+            "Algeria",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Seretse Khama is best known in the history of which country?",
+        "options": [
+            "Botswana",
+            "Uganda",
+            "Zimbabwe",
+            "South Africa"
+        ],
+        "answer": "Botswana"
+    },
+    {
+        "question": "Tom Mboya was a prominent leader of which country?",
+        "options": [
+            "France",
+            "Kenya",
+            "Burkina Faso",
+            "Egypt"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Which country's modern history includes the leadership of Aminu Kano?",
+        "options": [
+            "Egypt",
+            "South Africa",
+            "Nigeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Samuel Ogbemudia is best known in the history of which country?",
+        "options": [
+            "South Africa",
+            "Ethiopia",
+            "Nigeria",
+            "Egypt"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Aminu Tambuwal is associated with the political history of which country?",
+        "options": [
+            "Kenya",
+            "Zambia",
+            "Zimbabwe",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Konrad Adenauer?",
+        "options": [
+            "Spain",
+            "Germany",
+            "Russia",
+            "United Kingdom"
+        ],
+        "answer": "Germany"
+    },
+    {
+        "question": "Joshua Nkomo is associated with the political history of which country?",
+        "options": [
+            "Egypt",
+            "Kenya",
+            "Zimbabwe",
+            "Spain"
+        ],
+        "answer": "Zimbabwe"
+    },
+    {
+        "question": "Abubakar Tafawa Balewa is associated with the political history of which country?",
+        "options": [
+            "Tanzania",
+            "Ghana",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Sun Yat-sen is best known in the history of which country?",
+        "options": [
+            "China",
+            "Austria",
+            "Portugal",
+            "India"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "In which country is Winston Churchill a notable historical figure?",
+        "options": [
+            "Russia",
+            "United Kingdom",
+            "Austria",
+            "China"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Otto von Bismarck is best known in the history of which country?",
+        "options": [
+            "France",
+            "Spain",
+            "Germany",
+            "Austria"
+        ],
+        "answer": "Germany"
+    },
+    {
+        "question": "Idi Amin is best known in the history of which country?",
+        "options": [
+            "Côte d’Ivoire",
+            "USA",
+            "Senegal",
+            "Uganda"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "Milton Obote was a prominent leader of which country?",
+        "options": [
+            "Namibia",
+            "Tanzania",
+            "Uganda",
+            "Cameroon"
+        ],
+        "answer": "Uganda"
+    },
+    {
+        "question": "F.W. de Klerk is associated with the political history of which country?",
+        "options": [
+            "Egypt",
+            "Namibia",
+            "Cameroon",
+            "South Africa"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "In what year was the amalgamation of Northern and Southern Nigeria?",
+        "options": [
+            "1920",
+            "1945",
+            "1914",
+            "1900"
+        ],
+        "answer": "1914"
+    },
+    {
+        "question": "When did Nigeria gain independence from Britain?",
+        "options": [
+            "1963",
+            "1970",
+            "1960",
+            "1957"
+        ],
+        "answer": "1960"
+    },
+    {
+        "question": "Bukola Saraki is associated with the political history of which country?",
+        "options": [
+            "Nigeria",
+            "Kenya",
+            "Algeria",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Abubakar Rimi is best known in the history of which country?",
+        "options": [
+            "Uganda",
+            "South Africa",
+            "Tanzania",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Modibo Keïta?",
+        "options": [
+            "Mali",
+            "Uganda",
+            "France",
+            "Senegal"
+        ],
+        "answer": "Mali"
+    },
+    {
+        "question": "In which country is Menelik II a notable historical figure?",
+        "options": [
+            "Cameroon",
+            "Côte d’Ivoire",
+            "Ethiopia",
+            "USA"
+        ],
+        "answer": "Ethiopia"
+    },
+    {
+        "question": "In which country is Theodore Roosevelt a notable historical figure?",
+        "options": [
+            "United States",
+            "France",
+            "Cuba",
+            "Russia"
+        ],
+        "answer": "United States"
+    },
+    {
+        "question": "Yakubu Gowon is best known in the history of which country?",
+        "options": [
+            "Ethiopia",
+            "Uganda",
+            "Kenya",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Adams Oshiomhole is best known in the history of which country?",
+        "options": [
+            "Algeria",
+            "Ethiopia",
+            "Morocco",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "What office did Nnamdi Azikiwe hold in Nigeria?",
+        "options": [
+            "Chief Justice",
+            "Prime Minister",
+            "Senate President",
+            "Head of State/President"
+        ],
+        "answer": "Head of State/President"
+    },
+    {
+        "question": "Which nation’s history prominently features Obafemi Awolowo?",
+        "options": [
+            "South Africa",
+            "Ethiopia",
+            "Tanzania",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Mansa Musa is best known in the history of which country?",
+        "options": [
+            "Guinea",
+            "Mali",
+            "Ghana",
+            "France"
+        ],
+        "answer": "Mali"
+    },
+    {
+        "question": "Ike Nwachukwu is associated with the political history of which country?",
+        "options": [
+            "Algeria",
+            "Tunisia",
+            "Egypt",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Ernest Shonekan a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Morocco",
+            "Zambia",
+            "South Africa"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Jomo Kenyatta was a prominent leader of which country?",
+        "options": [
+            "Mozambique",
+            "Libya",
+            "Kenya",
+            "Guinea"
+        ],
+        "answer": "Kenya"
+    },
+    {
+        "question": "Aminu Dantata is best known in the history of which country?",
+        "options": [
+            "Nigeria",
+            "Tunisia",
+            "South Africa",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Giuseppe Garibaldi is associated with the political history of which country?",
+        "options": [
+            "Italy",
+            "France",
+            "Netherlands",
+            "Japan"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "Mobutu Sese Seko is best known in the history of which country?",
+        "options": [
+            "Algeria",
+            "Guinea",
+            "DR Congo",
+            "Ethiopia"
+        ],
+        "answer": "DR Congo"
+    },
+    {
+        "question": "In which country is Aisha Yesufu a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "South Africa",
+            "Morocco",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Carthage was located in which present-day country?",
+        "options": [
+            "Libya",
+            "Algeria",
+            "Tunisia",
+            "Morocco"
+        ],
+        "answer": "Tunisia"
+    },
+    {
+        "question": "Samora Machel was a prominent leader of which country?",
+        "options": [
+            "Mozambique",
+            "Ghana",
+            "Nigeria",
+            "Senegal"
+        ],
+        "answer": "Mozambique"
+    },
+    {
+        "question": "Mahatma Gandhi was a prominent leader of which country?",
+        "options": [
+            "Cuba",
+            "Spain",
+            "Russia",
+            "India"
+        ],
+        "answer": "India"
+    },
+    {
+        "question": "In which country is Napoleon Bonaparte a notable historical figure?",
+        "options": [
+            "France",
+            "Japan",
+            "Mongolia",
+            "Spain"
+        ],
+        "answer": "France"
+    },
+    {
+        "question": "In which country is Agostinho Neto a notable historical figure?",
+        "options": [
+            "Angola",
+            "Algeria",
+            "Ghana",
+            "Zambia"
+        ],
+        "answer": "Angola"
+    },
+    {
+        "question": "M.K.O. Abiola is best known in the history of which country?",
+        "options": [
+            "Tunisia",
+            "Ghana",
+            "Nigeria",
+            "Uganda"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Michael Okpara is historically linked to which country?",
+        "options": [
+            "Ethiopia",
+            "Nigeria",
+            "Algeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Ngozi Okonjo-Iweala?",
+        "options": [
+            "Ethiopia",
+            "Nigeria",
+            "Uganda",
+            "Algeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Rabi'u Musa Kwankwaso is associated with the political history of which country?",
+        "options": [
+            "Morocco",
+            "Zambia",
+            "Nigeria",
+            "Zimbabwe"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Léopold Sédar Senghor was a prominent leader of which country?",
+        "options": [
+            "Senegal",
+            "Libya",
+            "Cameroon",
+            "Mali"
+        ],
+        "answer": "Senegal"
+    },
+    {
+        "question": "Thabo Mbeki is best known in the history of which country?",
+        "options": [
+            "UK",
+            "Cameroon",
+            "Ethiopia",
+            "South Africa"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "In which country is Dennis Osadebay a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Egypt",
+            "Uganda",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Kashim Shettima is best known in the history of which country?",
+        "options": [
+            "Tunisia",
+            "Nigeria",
+            "Ghana",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Sun Yat-sen a notable historical figure?",
+        "options": [
+            "Japan",
+            "China",
+            "Netherlands",
+            "France"
+        ],
+        "answer": "China"
+    },
+    {
+        "question": "Oliver Cromwell is associated with the political history of which country?",
+        "options": [
+            "Spain",
+            "United Kingdom",
+            "Germany",
+            "France"
+        ],
+        "answer": "United Kingdom"
+    },
+    {
+        "question": "Which nation’s history prominently features Abba Kyari?",
+        "options": [
+            "Algeria",
+            "Nigeria",
+            "Morocco",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Mikhail Gorbachev was a prominent leader of which country?",
+        "options": [
+            "United Kingdom",
+            "France",
+            "Russia",
+            "Germany"
+        ],
+        "answer": "Russia"
+    },
+    {
+        "question": "Konrad Adenauer was a prominent leader of which country?",
+        "options": [
+            "Spain",
+            "Germany",
+            "India",
+            "Cuba"
+        ],
+        "answer": "Germany"
+    },
+    {
+        "question": "Which nation’s history prominently features Bola Tinubu?",
+        "options": [
+            "Morocco",
+            "Ghana",
+            "Nigeria",
+            "Ethiopia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Aguiyi-Ironsi?",
+        "options": [
+            "Egypt",
+            "Morocco",
+            "Algeria",
+            "Nigeria"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Nelson Mandela a notable historical figure?",
+        "options": [
+            "South Africa",
+            "Angola",
+            "Ethiopia",
+            "Burkina Faso"
+        ],
+        "answer": "South Africa"
+    },
+    {
+        "question": "In which country is Jerry Rawlings a notable historical figure?",
+        "options": [
+            "Senegal",
+            "DR Congo",
+            "Libya",
+            "Ghana"
+        ],
+        "answer": "Ghana"
+    },
+    {
+        "question": "Hamad Bello (Ahmadu Bello) is best known in the history of which country?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Kenya",
+            "Tanzania"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Ahmed Sékou Touré is associated with the political history of which country?",
+        "options": [
+            "Libya",
+            "Côte d’Ivoire",
+            "Guinea",
+            "Namibia"
+        ],
+        "answer": "Guinea"
+    },
+    {
+        "question": "Who was the first man to walk on the Moon?",
+        "options": [
+            "Buzz Aldrin",
+            "Yuri Gagarin",
+            "Michael Collins",
+            "Neil Armstrong"
+        ],
+        "answer": "Neil Armstrong"
+    },
+    {
+        "question": "Which nation’s history prominently features Amina Mohammed?",
+        "options": [
+            "Tanzania",
+            "South Africa",
+            "Nigeria",
+            "Ghana"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Which nation’s history prominently features Félix Houphouët-Boigny?",
+        "options": [
+            "Egypt",
+            "Algeria",
+            "Côte d’Ivoire",
+            "Uganda"
+        ],
+        "answer": "Côte d’Ivoire"
+    },
+    {
+        "question": "In which country is Balarabe Musa a notable historical figure?",
+        "options": [
+            "Nigeria",
+            "Uganda",
+            "South Africa",
+            "Zambia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "Yakubu Gowon is associated with the political history of which country?",
+        "options": [
+            "Algeria",
+            "Zimbabwe",
+            "Nigeria",
+            "Tunisia"
+        ],
+        "answer": "Nigeria"
+    },
+    {
+        "question": "In which country is Jaja Wachuku a notable historical figure?",
+        "options": [
+            "Ghana",
+            "Nigeria",
+            "Ethiopia",
+            "Kenya"
+        ],
+        "answer": "Nigeria"
+    }
+]

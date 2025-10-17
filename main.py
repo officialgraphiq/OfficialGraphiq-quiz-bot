@@ -53,9 +53,9 @@ CATEGORIES = {
     "Current Affairs": "questions_current_affairs.json",
     "Entertainment": "questions_entertainment.json",
     "Geography": "questions_geography.json",
-    "History": "questions_history.json",
+    "History": "history_quiz.json",
     "Science": "questions_science.json",
-    "Sports": "questions_sports.json",
+    "Sports": "questions_sportified.json",
 }
 
 QUESTION_BANKS = {}

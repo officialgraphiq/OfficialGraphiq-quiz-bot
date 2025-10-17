@@ -1,0 +1,4782 @@
+[
+    {
+    "question": "Which club plays their home games at Old Trafford?",
+    "options": [
+      "Manchester United",
+      "Liverpool",
+      "Arsenal",
+      "Chelsea"
+    ],
+    "answer": "Manchester United"
+  },
+  {
+    "question": "Which country does Lionel Messi play for internationally?",
+    "options": [
+      "Brazil",
+      "Argentina",
+      "Spain",
+      "Portugal"
+    ],
+    "answer": "Argentina"
+  },
+  {
+    "question": "Which German club is known as 'Die Roten'?",
+    "options": [
+      "Borussia Dortmund",
+      "Bayern Munich",
+      "Schalke 04",
+      "Bayer Leverkusen"
+    ],
+    "answer": "Bayern Munich"
+  },
+  {
+    "question": "Which Spanish club has the nickname 'Los Blancos'?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético Madrid",
+      "Sevilla"
+    ],
+    "answer": "Real Madrid"
+  },
+  {
+    "question": "How many points are awarded for a win in football?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "Which Italian club is known as 'The Old Lady'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Roma"
+    ],
+    "answer": "Juventus"
+  },
+  {
+    "question": "Which French club is based in Paris?",
+    "options": [
+      "Marseille",
+      "Lyon",
+      "Paris Saint-Germain",
+      "Monaco"
+    ],
+    "answer": "Paris Saint-Germain"
+  },
+  {
+    "question": "Which Portuguese club plays at the Estádio da Luz?",
+    "options": [
+      "Porto",
+      "Benfica",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Benfica"
+  },
+  {
+    "question": "What is the color of Barcelona's home kit?",
+    "options": [
+      "White",
+      "Blue and Red",
+      "Black and White",
+      "Yellow"
+    ],
+    "answer": "Blue and Red"
+  },
+  {
+    "question": "Which English club is known as 'The Gunners'?",
+    "options": [
+      "Manchester United",
+      "Arsenal",
+      "Chelsea",
+      "Tottenham"
+    ],
+    "answer": "Arsenal"
+  },
+  {
+    "question": "Which African country has won the most Africa Cup of Nations titles?",
+    "options": [
+      "Nigeria",
+      "Ghana",
+      "Egypt",
+      "Cameroon"
+    ],
+    "answer": "Egypt"
+  },
+  {
+    "question": "Which Greek club is based in Piraeus?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Olympiacos"
+  },
+  {
+    "question": "What is the maximum number of players allowed on the pitch per team?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "Which Dutch club is known for their youth academy 'De Toekomst'?",
+    "options": [
+      "PSV Eindhoven",
+      "Feyenoord",
+      "Ajax",
+      "AZ Alkmaar"
+    ],
+    "answer": "Ajax"
+  },
+  {
+    "question": "Which Brazilian club has won the most Copa Libertadores titles?",
+    "options": [
+      "Flamengo",
+      "Santos",
+      "São Paulo",
+      "Grêmio"
+    ],
+    "answer": "São Paulo"
+  },
+  {
+    "question": "Which Turkish club plays at the Şükrü Saracoğlu Stadium?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Fenerbahçe"
+  },
+  {
+    "question": "What is the name of the trophy awarded to the Premier League winners?",
+    "options": [
+      "Premier League Cup",
+      "Premier League Trophy",
+      "English Football Trophy",
+      "Barclays Trophy"
+    ],
+    "answer": "Premier League Trophy"
+  },
+  {
+    "question": "Which Russian club plays at the Luzhniki Stadium?",
+    "options": [
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Zenit St. Petersburg",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Spartak Moscow"
+  },
+  {
+    "question": "Which Scottish club has the nickname 'The Bhoys'?",
+    "options": [
+      "Rangers",
+      "Celtic",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Celtic"
+  },
+  {
+    "question": "What is the duration of a standard football match?",
+    "options": [
+      "80 minutes",
+      "90 minutes",
+      "100 minutes",
+      "120 minutes"
+    ],
+    "answer": "90 minutes"
+  },
+  {
+    "question": "Which Argentine club is known as 'Los Millonarios'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Racing Club"
+    ],
+    "answer": "River Plate"
+  },
+  {
+    "question": "Which Mexican club is known as 'Las Águilas'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "UNAM Pumas"
+    ],
+    "answer": "Club América"
+  },
+  {
+    "question": "What is the color of the card shown for a serious foul?",
+    "options": [
+      "Yellow",
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "answer": "Red"
+  },
+  {
+    "question": "Which Japanese club plays in the J1 League?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Kawasaki Frontale",
+      "Yokohama F. Marinos",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which American club plays in the MLS?",
+    "options": [
+      "LA Galaxy",
+      "New York Red Bulls",
+      "Seattle Sounders",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Nigerian club is based in Lagos?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Stationery Stores"
+    ],
+    "answer": "Stationery Stores"
+  },
+  {
+    "question": "What is the name of the African club competition?",
+    "options": [
+      "CAF Champions League",
+      "Africa Cup",
+      "African Super Cup",
+      "CAF League"
+    ],
+    "answer": "CAF Champions League"
+  },
+  {
+    "question": "Which South Korean club has won the most K League titles?",
+    "options": [
+      "Jeonbuk Hyundai Motors",
+      "Seoul FC",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "Jeonbuk Hyundai Motors"
+  },
+  {
+    "question": "Which Egyptian club is known as 'The Club of the Century'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Al Ahly"
+  },
+  {
+    "question": "What is the term for when a player scores three goals in one match?",
+    "options": [
+      "Double",
+      "Hat-trick",
+      "Triple",
+      "Brace"
+    ],
+    "answer": "Hat-trick"
+  },
+  {
+    "question": "Which Chinese club plays in the Chinese Super League?",
+    "options": [
+      "Guangzhou Evergrande",
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Australian club plays in the A-League?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Western Sydney Wanderers",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Saudi Arabian club is based in Riyadh?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Hilal"
+  },
+  {
+    "question": "What is the name of the South American club competition?",
+    "options": [
+      "Copa Sudamericana",
+      "Copa Libertadores",
+      "Copa América",
+      "Copa do Brasil"
+    ],
+    "answer": "Copa Libertadores"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Royals'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FAR Rabat",
+      "AS FAR"
+    ],
+    "answer": "FAR Rabat"
+  },
+  {
+    "question": "Which Ukrainian club plays at the Donbass Arena?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Shakhtar Donetsk"
+  },
+  {
+    "question": "What is the term for a pass that leads directly to a goal?",
+    "options": [
+      "Through ball",
+      "Assist",
+      "Key pass",
+      "Final pass"
+    ],
+    "answer": "Assist"
+  },
+  {
+    "question": "Which Belgian club has won the most First Division A titles?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Anderlecht"
+  },
+  {
+    "question": "Which Danish club plays at the Parken Stadium?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Copenhagen"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Blue Ones'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "Malmö FF"
+  },
+  {
+    "question": "What is the name of the Asian club competition?",
+    "options": [
+      "AFC Champions League",
+      "Asian Cup",
+      "AFC Cup",
+      "Asian Super Cup"
+    ],
+    "answer": "AFC Champions League"
+  },
+  {
+    "question": "Which Norwegian club plays at the Ullevaal Stadium?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Vålerenga"
+  },
+  {
+    "question": "Which Polish club is based in Warsaw?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Legia Warsaw"
+  },
+  {
+    "question": "What is the term for when the ball goes out over the sideline?",
+    "options": [
+      "Goal kick",
+      "Corner kick",
+      "Throw-in",
+      "Free kick"
+    ],
+    "answer": "Throw-in"
+  },
+  {
+    "question": "Which Romanian club has won the most Liga I titles?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Steaua Bucharest"
+  },
+  {
+    "question": "Which Czech club plays at the Eden Arena?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Slavia Prague"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Violet Ones'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Austria Vienna"
+  },
+  {
+    "question": "What is the term for a goal scored from a corner kick?",
+    "options": [
+      "Corner goal",
+      "Direct goal",
+      "Olympic goal",
+      "Set-piece goal"
+    ],
+    "answer": "Olympic goal"
+  },
+  {
+    "question": "Which Swiss club plays at the St. Jakob-Park?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Basel"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Pride of Rotterdam'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "Feyenoord"
+  },
+  {
+    "question": "Which Brazilian club is known as 'O Peixe'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Santos",
+      "Corinthians"
+    ],
+    "answer": "Santos"
+  },
+  {
+    "question": "Which Turkish club has the nickname 'The Black Eagles'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Beşiktaş"
+  },
+  {
+    "question": "What is the name of the UEFA Super Cup competition?",
+    "options": [
+      "European Super Cup",
+      "UEFA Super Cup",
+      "Champions Super Cup",
+      "Europe Super Cup"
+    ],
+    "answer": "UEFA Super Cup"
+  },
+  {
+    "question": "Which Russian club is known as 'The Red-Blues'?",
+    "options": [
+      "Zenit St. Petersburg",
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "CSKA Moscow"
+  },
+  {
+    "question": "Which Scottish club has the nickname 'The Dandy Dons'?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Dundee United"
+    ],
+    "answer": "Aberdeen"
+  },
+  {
+    "question": "What is the term for a player who defends against attackers?",
+    "options": [
+      "Striker",
+      "Midfielder",
+      "Defender",
+      "Goalkeeper"
+    ],
+    "answer": "Defender"
+  },
+  {
+    "question": "Which Argentine club is known as 'El Más Grande'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Independiente"
+    ],
+    "answer": "Boca Juniors"
+  },
+  {
+    "question": "Which Mexican club has the nickname 'Los Azulcremas'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "UNAM Pumas"
+    ],
+    "answer": "Club América"
+  },
+  {
+    "question": "What is the standard duration of extra time?",
+    "options": [
+      "15 minutes",
+      "30 minutes",
+      "45 minutes",
+      "60 minutes"
+    ],
+    "answer": "30 minutes"
+  },
+  {
+    "question": "Which Japanese club is known as 'The Antlers'?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Yokohama F. Marinos",
+      "Kashima Antlers",
+      "Nagoya Grampus"
+    ],
+    "answer": "Kashima Antlers"
+  },
+  {
+    "question": "Which American club plays at the BMO Stadium?",
+    "options": [
+      "LAFC",
+      "LA Galaxy",
+      "Seattle Sounders",
+      "Atlanta United"
+    ],
+    "answer": "LAFC"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Ocean Boys'?",
+    "options": [
+      "Ocean Boys FC",
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars"
+    ],
+    "answer": "Ocean Boys FC"
+  },
+  {
+    "question": "What is the name of the CAF Awards ceremony?",
+    "options": [
+      "CAF Awards",
+      "African Football Awards",
+      "CAF Gala",
+      "Africa Best Awards"
+    ],
+    "answer": "CAF Awards"
+  },
+  {
+    "question": "Which South Korean club is known as 'The Reds'?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "FC Seoul"
+  },
+  {
+    "question": "Which Egyptian club has the nickname 'The Yellows'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Ismaily"
+  },
+  {
+    "question": "What is the term for a shot that hits the post and goes in?",
+    "options": [
+      "Lucky goal",
+      "Post goal",
+      "Woodwork goal",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Chinese club is known as 'The Guoan'?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Beijing Guoan"
+  },
+  {
+    "question": "Which Australian club has the nickname 'The Wanderers'?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Western Sydney Wanderers",
+      "Adelaide United"
+    ],
+    "answer": "Western Sydney Wanderers"
+  },
+  {
+    "question": "Which Saudi Arabian club is known as 'The Alami'?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Ahli"
+  },
+  {
+    "question": "What is the name of the CONCACAF Gold Cup?",
+    "options": [
+      "North American Cup",
+      "CONCACAF Gold Cup",
+      "American Championship",
+      "CONCACAF Championship"
+    ],
+    "answer": "CONCACAF Gold Cup"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Greens'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FAR Rabat",
+      "Moghreb Tétouan"
+    ],
+    "answer": "Raja Casablanca"
+  },
+  {
+    "question": "Which Ukrainian club has the nickname 'The Dnipro'?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro-1",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Dnipro-1"
+  },
+  {
+    "question": "What is the term for the player who wears jersey number 10?",
+    "options": [
+      "Goalkeeper",
+      "Playmaker",
+      "Defender",
+      "Striker"
+    ],
+    "answer": "Playmaker"
+  },
+  {
+    "question": "Which Belgian club is known as 'The Mauves'?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Anderlecht"
+  },
+  {
+    "question": "Which Danish club has the nickname 'The Dreaming Boys'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Brøndby"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Gnaget'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "AIK"
+  },
+  {
+    "question": "What is the name of the FIFA Club World Cup?",
+    "options": [
+      "World Club Cup",
+      "FIFA Club World Cup",
+      "Club World Championship",
+      "Global Club Cup"
+    ],
+    "answer": "FIFA Club World Cup"
+  },
+  {
+    "question": "Which Norwegian club is known as 'The Canaries'?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Lillestrøm"
+  },
+  {
+    "question": "Which Polish club has the nickname 'The White Star'?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Wisła Kraków"
+  },
+  {
+    "question": "What is the term for a kick awarded after a foul?",
+    "options": [
+      "Penalty",
+      "Free kick",
+      "Corner kick",
+      "Goal kick"
+    ],
+    "answer": "Free kick"
+  },
+  {
+    "question": "Which Romanian club is known as 'The Military'?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Steaua Bucharest"
+  },
+  {
+    "question": "Which Czech club has the nickname 'The Iron Sparta'?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Sparta Prague"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Red Bulls'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Red Bull Salzburg"
+  },
+  {
+    "question": "What is the term for when a player is substituted?",
+    "options": [
+      "Replaced",
+      "Substituted",
+      "Changed",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Swiss club is known as 'The FCZ'?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Zurich"
+  },
+  {
+    "question": "Which English club plays at the Tottenham Hotspur Stadium?",
+    "options": [
+      "Chelsea",
+      "Arsenal",
+      "Tottenham",
+      "West Ham"
+    ],
+    "answer": "Tottenham"
+  },
+  {
+    "question": "Which Spanish club plays at the Mestalla?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético Madrid",
+      "Valencia"
+    ],
+    "answer": "Valencia"
+  },
+  {
+    "question": "Which German club is known as 'The Wolves'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "VfL Wolfsburg"
+    ],
+    "answer": "VfL Wolfsburg"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Lupi'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Roma"
+    ],
+    "answer": "Roma"
+  },
+  {
+    "question": "Which French club is known as 'Les Dogues'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon",
+      "Lille"
+    ],
+    "answer": "Lille"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Minhotos'?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Braga"
+  },
+  {
+    "question": "What is the color of Juventus's home kit?",
+    "options": [
+      "Black and White",
+      "Blue",
+      "Red",
+      "Yellow"
+    ],
+    "answer": "Black and White"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Promise Keepers'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Sunshine Stars"
+    ],
+    "answer": "Sunshine Stars"
+  },
+  {
+    "question": "Which Greek club has the nickname 'The Legend'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Olympiacos"
+  },
+  {
+    "question": "What is the term for the center of the field?",
+    "options": [
+      "Midfield",
+      "Center circle",
+      "Halfway line",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Cheese Farmers'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "AZ Alkmaar"
+  },
+  {
+    "question": "Which Brazilian club is known as 'O Galo'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Santos",
+      "Atlético Mineiro"
+    ],
+    "answer": "Atlético Mineiro"
+  },
+  {
+    "question": "Which English club plays at St. James' Park?",
+    "options": [
+      "Newcastle United",
+      "Sunderland",
+      "Leeds United",
+      "Aston Villa"
+    ],
+    "answer": "Newcastle United"
+  },
+  {
+    "question": "In basketball, how many points is a free throw worth?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "1"
+  },
+  {
+    "question": "Which Spanish club is known as 'Los Che'?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Valencia",
+      "Sevilla"
+    ],
+    "answer": "Valencia"
+  },
+  {
+    "question": "In tennis, what is the term for a score of 40-40?",
+    "options": [
+      "Advantage",
+      "Deuce",
+      "Game Point",
+      "Match Point"
+    ],
+    "answer": "Deuce"
+  },
+  {
+    "question": "Which German club has the nickname 'Die Werkself'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Bayer Leverkusen",
+      "Schalke 04"
+    ],
+    "answer": "Bayer Leverkusen"
+  },
+  {
+    "question": "In baseball, how many strikes make an out?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "Which Italian club plays at the Stadio Olimpico?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Roma",
+      "Lazio"
+    ],
+    "answer": "Both Roma and Lazio"
+  },
+  {
+    "question": "In cricket, how many balls are in an over?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "Which French club is known as 'Les Merlus'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon",
+      "Lorient"
+    ],
+    "answer": "Lorient"
+  },
+  {
+    "question": "In rugby, how many points is a try worth?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "10"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "Which Portuguese club has the nickname 'Os Azuis'?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Porto"
+  },
+  {
+    "question": "In golf, what is a score of one under par called?",
+    "options": [
+      "Eagle",
+      "Birdie",
+      "Bogey",
+      "Par"
+    ],
+    "answer": "Birdie"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Peoples Elephant'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Enyimba"
+  },
+  {
+    "question": "In American football, how many points is a touchdown worth?",
+    "options": [
+      "3",
+      "6",
+      "7",
+      "10"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "Which Greek club has the nickname 'The Double-headed Eagle'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "AEK Athens"
+  },
+  {
+    "question": "In hockey, how many players are on the ice per team?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "6"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Pride of Amsterdam'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "Ajax"
+  },
+  {
+    "question": "In volleyball, how many touches are allowed per side?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "Which Brazilian club is known as 'O Mengão'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Santos",
+      "Corinthians"
+    ],
+    "answer": "Flamengo"
+  },
+  {
+    "question": "In badminton, what is the object that players hit called?",
+    "options": [
+      "Ball",
+      "Birdie",
+      "Shuttlecock",
+      "Puck"
+    ],
+    "answer": "Shuttlecock"
+  },
+  {
+    "question": "Which Turkish club has the nickname 'The Black Eagles'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Beşiktaş"
+  },
+  {
+    "question": "In swimming, what is the term for a race with four different strokes?",
+    "options": [
+      "Medley",
+      "Freestyle",
+      "Butterfly",
+      "Backstroke"
+    ],
+    "answer": "Medley"
+  },
+  {
+    "question": "Which Russian club is known as 'The Red-Whites'?",
+    "options": [
+      "Zenit St. Petersburg",
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Spartak Moscow"
+  },
+  {
+    "question": "In athletics, what is the race with hurdles called?",
+    "options": [
+      "Steeplechase",
+      "Hurdles",
+      "Obstacle race",
+      "Jump race"
+    ],
+    "answer": "Hurdles"
+  },
+  {
+    "question": "Which Scottish club has the nickname 'The Jags'?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Partick Thistle",
+      "Hearts"
+    ],
+    "answer": "Partick Thistle"
+  },
+  {
+    "question": "In boxing, what does KO stand for?",
+    "options": [
+      "Knock Over",
+      "Kick Out",
+      "Knock Out",
+      "Keep Out"
+    ],
+    "answer": "Knock Out"
+  },
+  {
+    "question": "Which Argentine club is known as 'El Xeneize'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Racing Club"
+    ],
+    "answer": "Boca Juniors"
+  },
+  {
+    "question": "In table tennis, how many points to win a game?",
+    "options": [
+      "11",
+      "15",
+      "21",
+      "25"
+    ],
+    "answer": "11"
+  },
+  {
+    "question": "Which Mexican club has the nickname 'Los Esmeraldas'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "León"
+    ],
+    "answer": "León"
+  },
+  {
+    "question": "In skiing, what is the term for a race against the clock?",
+    "options": [
+      "Slalom",
+      "Downhill",
+      "Giant Slalom",
+      "Super-G"
+    ],
+    "answer": "Downhill"
+  },
+  {
+    "question": "Which Japanese club is known as 'The Marinos'?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Yokohama F. Marinos",
+      "Kashima Antlers",
+      "Kawasaki Frontale"
+    ],
+    "answer": "Yokohama F. Marinos"
+  },
+  {
+    "question": "In cycling, what is the most famous race?",
+    "options": [
+      "Giro d'Italia",
+      "Tour de France",
+      "Vuelta a España",
+      "Tour of California"
+    ],
+    "answer": "Tour de France"
+  },
+  {
+    "question": "Which American club plays at the Mercedes-Benz Stadium?",
+    "options": [
+      "Atlanta United",
+      "LA Galaxy",
+      "Seattle Sounders",
+      "New York City FC"
+    ],
+    "answer": "Atlanta United"
+  },
+  {
+    "question": "In gymnastics, what is the term for a perfect score?",
+    "options": [
+      "Perfect 10",
+      "Gold standard",
+      "Flawless",
+      "Ultimate score"
+    ],
+    "answer": "Perfect 10"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Pride of Lagos'?",
+    "options": [
+      "Stationery Stores",
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars"
+    ],
+    "answer": "Stationery Stores"
+  },
+  {
+    "question": "In weightlifting, what are the two main lifts?",
+    "options": [
+      "Snatch and Clean & Jerk",
+      "Bench and Squat",
+      "Deadlift and Press",
+      "Lift and Push"
+    ],
+    "answer": "Snatch and Clean & Jerk"
+  },
+  {
+    "question": "Which South Korean club is known as 'The Motors'?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "Jeonbuk Hyundai Motors"
+  },
+  {
+    "question": "In martial arts, what is the practice uniform called?",
+    "options": [
+      "Kimono",
+      "Gi",
+      "Robe",
+      "Uniform"
+    ],
+    "answer": "Gi"
+  },
+  {
+    "question": "Which Egyptian club has the nickname 'The Club of the Century'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Al Ahly"
+  },
+  {
+    "question": "In archery, what is the center of the target called?",
+    "options": [
+      "Mark",
+      "Center",
+      "Bullseye",
+      "Dot"
+    ],
+    "answer": "Bullseye"
+  },
+  {
+    "question": "Which Chinese club is known as 'The Guoan'?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Beijing Guoan"
+  },
+  {
+    "question": "In surfing, what is a large wave called?",
+    "options": [
+      "Tsunami",
+      "Big wave",
+      "Monster wave",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Australian club has the nickname 'The Glory'?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Perth Glory",
+      "Adelaide United"
+    ],
+    "answer": "Perth Glory"
+  },
+  {
+    "question": "In skating, what is the term for a jump with multiple rotations?",
+    "options": [
+      "Spin",
+      "Twirl",
+      "Axel",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Saudi Arabian club is known as 'The Leader'?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Nassr"
+  },
+  {
+    "question": "In rowing, what is a long narrow boat called?",
+    "options": [
+      "Canoe",
+      "Kayak",
+      "Shell",
+      "Dinghy"
+    ],
+    "answer": "Shell"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Green Eagles'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FAR Rabat",
+      "Moghreb Tétouan"
+    ],
+    "answer": "Raja Casablanca"
+  },
+  {
+    "question": "In wrestling, what is it called when you pin your opponent?",
+    "options": [
+      "Hold",
+      "Takedown",
+      "Fall",
+      "Submission"
+    ],
+    "answer": "Fall"
+  },
+  {
+    "question": "Which Ukrainian club has the nickname 'The Dynamo'?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Dynamo Kyiv"
+  },
+  {
+    "question": "In fencing, what are the three weapons?",
+    "options": [
+      "Foil, Épée, Sabre",
+      "Sword, Dagger, Rapier",
+      "Blade, Point, Edge",
+      "Cut, Thrust, Parry"
+    ],
+    "answer": "Foil, Épée, Sabre"
+  },
+  {
+    "question": "Which Belgian club is known as 'The Great Old'?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Club Brugge"
+  },
+  {
+    "question": "In handball, how many steps can a player take without dribbling?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "Which Danish club has the nickname 'The Lions'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Copenhagen"
+  },
+  {
+    "question": "In squash, how many walls does the court have?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Bajen'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "Hammarby"
+  },
+  {
+    "question": "In water polo, how many players per team in the pool?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "Which Norwegian club is known as 'The Canaries'?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Lillestrøm"
+  },
+  {
+    "question": "In judo, what is the term for a throwing technique?",
+    "options": [
+      "Hold",
+      "Throw",
+      "Nage-waza",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Polish club has the nickname 'The White Star'?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Wisła Kraków"
+  },
+  {
+    "question": "In curling, what is the stone called?",
+    "options": [
+      "Rock",
+      "Stone",
+      "Puck",
+      "Both rock and stone"
+    ],
+    "answer": "Both rock and stone"
+  },
+  {
+    "question": "Which Romanian club is known as 'The Red Devils'?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Dinamo Bucharest"
+  },
+  {
+    "question": "In taekwondo, what color belt is the highest?",
+    "options": [
+      "Red",
+      "Black",
+      "Brown",
+      "White"
+    ],
+    "answer": "Black"
+  },
+  {
+    "question": "Which Czech club has the nickname 'The Iron Sparta'?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Sparta Prague"
+  },
+  {
+    "question": "In sailing, what is the America's Cup?",
+    "options": [
+      "World championship",
+      "Oldest trophy",
+      "Both world championship and oldest trophy",
+      "National competition"
+    ],
+    "answer": "Both world championship and oldest trophy"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Rapid'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Rapid Vienna"
+  },
+  {
+    "question": "In shooting, what is the center of the target called?",
+    "options": [
+      "Bullseye",
+      "Center",
+      "Mark",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Swiss club is known as 'The Young Boys'?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Young Boys"
+  },
+  {
+    "question": "In equestrian, what is the jumping event called?",
+    "options": [
+      "Dressage",
+      "Show jumping",
+      "Eventing",
+      "Cross-country"
+    ],
+    "answer": "Show jumping"
+  },
+  {
+    "question": "Which English club plays at Villa Park?",
+    "options": [
+      "Aston Villa",
+      "Birmingham City",
+      "West Brom",
+      "Wolves"
+    ],
+    "answer": "Aston Villa"
+  },
+  {
+    "question": "In motorsport, what is Formula 1?",
+    "options": [
+      "Car racing",
+      "Motorcycle racing",
+      "Both car and motorcycle racing",
+      "Boat racing"
+    ],
+    "answer": "Car racing"
+  },
+  {
+    "question": "Which Spanish club plays at the RCDE Stadium?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Espanyol",
+      "Sevilla"
+    ],
+    "answer": "Espanyol"
+  },
+  {
+    "question": "In skateboarding, what is a half-pipe?",
+    "options": [
+      "Ramp",
+      "Pipe",
+      "Both ramp and pipe",
+      "Rail"
+    ],
+    "answer": "Both ramp and pipe"
+  },
+  {
+    "question": "Which German club is known as 'The Eagles'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Eintracht Frankfurt",
+      "Hertha Berlin"
+    ],
+    "answer": "Eintracht Frankfurt"
+  },
+  {
+    "question": "In snowboarding, what is the term for aerial tricks?",
+    "options": [
+      "Jumps",
+      "Aerials",
+      "Tricks",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Rossoblù'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Bologna"
+    ],
+    "answer": "Bologna"
+  },
+  {
+    "question": "In triathlon, what are the three sports?",
+    "options": [
+      "Swimming, Cycling, Running",
+      "Running, Jumping, Throwing",
+      "Swimming, Running, Jumping",
+      "Cycling, Running, Swimming"
+    ],
+    "answer": "Swimming, Cycling, Running"
+  },
+  {
+    "question": "Which French club is known as 'Les Verts'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Saint-Étienne",
+      "Lyon"
+    ],
+    "answer": "Saint-Étienne"
+  },
+  {
+    "question": "In bowling, what is a perfect game score?",
+    "options": [
+      "200",
+      "250",
+      "300",
+      "350"
+    ],
+    "answer": "300"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Leões'?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Sporting CP"
+  },
+  {
+    "question": "In darts, what is the center of the board called?",
+    "options": [
+      "Bullseye",
+      "Center",
+      "Middle",
+      "Target"
+    ],
+    "answer": "Bullseye"
+  },
+  {
+    "question": "What is the color of Ajax's home kit?",
+    "options": [
+      "Red and White",
+      "White and Red",
+      "Both red and white",
+      "Blue and White"
+    ],
+    "answer": "Both red and white"
+  },
+  {
+    "question": "In lacrosse, what is the netted stick called?",
+    "options": [
+      "Stick",
+      "Crosse",
+      "Net",
+      "Racquet"
+    ],
+    "answer": "Crosse"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Pillars'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Kano Pillars"
+  },
+  {
+    "question": "In rock climbing, what is the safety rope called?",
+    "options": [
+      "Rope",
+      "Harness",
+      "Belay",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Greek club has the nickname 'The Legend'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Olympiacos"
+  },
+  {
+    "question": "In ultimate frisbee, how is the disc advanced?",
+    "options": [
+      "Throwing",
+      "Running",
+      "Both throwing and running",
+      "Kicking"
+    ],
+    "answer": "Both throwing and running"
+  },
+  {
+    "question": "What is the term for a football match official?",
+    "options": [
+      "Referee",
+      "Umpire",
+      "Judge",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "In parkour, what is the main objective?",
+    "options": [
+      "Jumping",
+      "Running",
+      "Efficient movement",
+      "All of the above"
+    ],
+    "answer": "Efficient movement"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Pride of the South'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "PSV Eindhoven"
+  },
+  {
+    "question": "In kite surfing, what provides the power?",
+    "options": [
+      "Wind",
+      "Water",
+      "Both wind and water",
+      "Motor"
+    ],
+    "answer": "Wind"
+  },
+  {
+    "question": "Which Brazilian club is known as 'O Timão'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Corinthians",
+      "Santos"
+    ],
+    "answer": "Corinthians"
+  },
+  {
+    "question": "In bobsleigh, how many athletes typically in a team?",
+    "options": [
+      "2 or 4",
+      "3 or 5",
+      "4 or 6",
+      "5 or 7"
+    ],
+    "answer": "2 or 4"
+  },
+  {
+    "question": "Which Turkish club has the nickname 'The Cimbom'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Galatasaray"
+  },
+  {
+    "question": "In sepak takraw, what is the ball made of?",
+    "options": [
+      "Rattan",
+      "Plastic",
+      "Rubber",
+      "All of the above"
+    ],
+    "answer": "Rattan"
+  },
+  {
+    "question": "Which German club plays at the Signal Iduna Park?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Bayer Leverkusen"
+    ],
+    "answer": "Borussia Dortmund"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Rossoneri'?",
+    "options": [
+      "Inter Milan",
+      "AC Milan",
+      "Juventus",
+      "Roma"
+    ],
+    "answer": "AC Milan"
+  },
+  {
+    "question": "Which French club plays at the Stade Vélodrome?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon",
+      "Monaco"
+    ],
+    "answer": "Marseille"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Leões'?",
+    "options": [
+      "Porto",
+      "Benfica",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Sporting CP"
+  },
+  {
+    "question": "What is the color of Arsenal's home kit?",
+    "options": [
+      "Blue",
+      "Red",
+      "White",
+      "Yellow"
+    ],
+    "answer": "Red"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Pride of Rivers'?",
+    "options": [
+      "Sharks FC",
+      "Dolphins FC",
+      "Rivers United",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Greek club plays at the Olympic Stadium?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "AEK Athens"
+  },
+  {
+    "question": "What is the term for a player who scores many goals?",
+    "options": [
+      "Defender",
+      "Midfielder",
+      "Striker",
+      "Goalkeeper"
+    ],
+    "answer": "Striker"
+  },
+  {
+    "question": "Which Dutch club plays at the Philips Stadion?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "PSV Eindhoven"
+  },
+  {
+    "question": "Which Brazilian club is known as 'Tricolor'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Santos",
+      "Palmeiras"
+    ],
+    "answer": "São Paulo"
+  },
+  {
+    "question": "Which Turkish club plays at the Vodafone Park?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Beşiktaş"
+  },
+  {
+    "question": "What is the name of the second European club competition?",
+    "options": [
+      "Champions League",
+      "Europa League",
+      "Conference League",
+      "European Cup"
+    ],
+    "answer": "Europa League"
+  },
+  {
+    "question": "Which Russian club plays at the Gazprom Arena?",
+    "options": [
+      "Zenit St. Petersburg",
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Zenit St. Petersburg"
+  },
+  {
+    "question": "Which Scottish club has the nickname 'The Dons'?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Aberdeen"
+  },
+  {
+    "question": "What is the term for a shot that goes over the crossbar?",
+    "options": [
+      "Wide",
+      "Over",
+      "High",
+      "Miss"
+    ],
+    "answer": "Over"
+  },
+  {
+    "question": "Which Argentine club is known as 'El Ciclón'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Racing Club"
+    ],
+    "answer": "San Lorenzo"
+  },
+  {
+    "question": "Which Mexican club plays at the Estadio Azteca?",
+    "options": [
+      "Club América",
+      "Cruz Azul",
+      "UNAM Pumas",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What happens when a player receives two yellow cards?",
+    "options": [
+      "Warning",
+      "Red card",
+      "Suspension",
+      "Fine"
+    ],
+    "answer": "Red card"
+  },
+  {
+    "question": "Which Japanese club is known as 'The Marinos'?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Yokohama F. Marinos",
+      "Kawasaki Frontale",
+      "Nagoya Grampus"
+    ],
+    "answer": "Yokohama F. Marinos"
+  },
+  {
+    "question": "Which American club has won the most MLS Cups?",
+    "options": [
+      "LA Galaxy",
+      "D.C. United",
+      "Seattle Sounders",
+      "New York Red Bulls"
+    ],
+    "answer": "LA Galaxy"
+  },
+  {
+    "question": "Which Nigerian club is based in Kano?",
+    "options": [
+      "Kano Pillars",
+      "Enyimba",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Kano Pillars"
+  },
+  {
+    "question": "What is the name of the African second club competition?",
+    "options": [
+      "CAF Champions League",
+      "CAF Confederation Cup",
+      "CAF Super Cup",
+      "African Cup"
+    ],
+    "answer": "CAF Confederation Cup"
+  },
+  {
+    "question": "Which South Korean club is known as 'The Steelers'?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "Pohang Steelers"
+  },
+  {
+    "question": "Which Egyptian club has the nickname 'The White Knights'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Zamalek"
+  },
+  {
+    "question": "What is the term for a goal scored with the head?",
+    "options": [
+      "Header",
+      "Head goal",
+      "Aerial goal",
+      "Jump goal"
+    ],
+    "answer": "Header"
+  },
+  {
+    "question": "Which Chinese club is known as 'The Tigers'?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Shanghai SIPG"
+  },
+  {
+    "question": "Which Australian club plays at the Allianz Stadium?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Western Sydney Wanderers",
+      "Adelaide United"
+    ],
+    "answer": "Sydney FC"
+  },
+  {
+    "question": "Which Saudi Arabian club is known as 'The Global'?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Ittihad"
+  },
+  {
+    "question": "What is the name of the North American club competition?",
+    "options": [
+      "CONCACAF Champions League",
+      "CONCACAF Cup",
+      "CONCACAF League",
+      "North American Cup"
+    ],
+    "answer": "CONCACAF Champions League"
+  },
+  {
+    "question": "Which Moroccan club plays at the Stade Mohammed V?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "Both Raja and Wydad",
+      "FAR Rabat"
+    ],
+    "answer": "Both Raja and Wydad"
+  },
+  {
+    "question": "Which Ukrainian club plays at the Olimpiyskiy Stadium?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Dynamo Kyiv"
+  },
+  {
+    "question": "What is the term for the player who captains the team?",
+    "options": [
+      "Leader",
+      "Captain",
+      "Skipper",
+      "Both Captain and Skipper"
+    ],
+    "answer": "Both Captain and Skipper"
+  },
+  {
+    "question": "Which Belgian club is known as 'The Great Old'?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Club Brugge"
+  },
+  {
+    "question": "Which Danish club has the nickname 'The Zebras'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Brøndby"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Green and Blacks'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "Hammarby"
+  },
+  {
+    "question": "What is the name of the Oceania club competition?",
+    "options": [
+      "OFC Champions League",
+      "OFC Cup",
+      "OFC League",
+      "Oceania Cup"
+    ],
+    "answer": "OFC Champions League"
+  },
+  {
+    "question": "Which Norwegian club is known as 'The Canaries'?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Lillestrøm"
+  },
+  {
+    "question": "Which Polish club has the nickname 'The Army'?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Legia Warsaw"
+  },
+  {
+    "question": "What is the term for a kick from the penalty spot?",
+    "options": [
+      "Free kick",
+      "Penalty",
+      "Spot kick",
+      "Both Penalty and Spot kick"
+    ],
+    "answer": "Both Penalty and Spot kick"
+  },
+  {
+    "question": "Which Romanian club is known as 'The Red Dogs'?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Dinamo Bucharest"
+  },
+  {
+    "question": "Which Czech club has the nickname 'The Iron Ones'?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Baník Ostrava"
+  },
+  {
+    "question": "Which Austrian club plays at the Allianz Stadion?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Rapid Vienna"
+  },
+  {
+    "question": "What is the term for a match between two local rivals?",
+    "options": [
+      "Classic",
+      "Derby",
+      "Rivalry",
+      "Local match"
+    ],
+    "answer": "Derby"
+  },
+  {
+    "question": "Which Swiss club is known as 'The Grasshoppers'?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Grasshopper"
+  },
+  {
+    "question": "Which English club plays at Anfield?",
+    "options": [
+      "Manchester United",
+      "Liverpool",
+      "Everton",
+      "Manchester City"
+    ],
+    "answer": "Liverpool"
+  },
+  {
+    "question": "Which Spanish club plays at the Santiago Bernabéu?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético Madrid",
+      "Sevilla"
+    ],
+    "answer": "Real Madrid"
+  },
+  {
+    "question": "Which German club is known as 'Die Knappen'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Bayer Leverkusen"
+    ],
+    "answer": "Schalke 04"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Nerazzurri'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Napoli"
+    ],
+    "answer": "Inter Milan"
+  },
+  {
+    "question": "Which French club is based in Monaco?",
+    "options": [
+      "AS Monaco",
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon"
+    ],
+    "answer": "AS Monaco"
+  },
+  {
+    "question": "What is the name of the Ballon d'Or award?",
+    "options": [
+      "Golden Ball",
+      "Ballon d'Or",
+      "World Player of the Year",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Russian club is known as 'The Blue-White-Sky Blues'?",
+    "options": [
+      "Zenit St. Petersburg",
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Zenit St. Petersburg"
+  },
+  {
+    "question": "Which Scottish club has the nickname 'The Saints'?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "St. Johnstone",
+      "St. Mirren"
+    ],
+    "answer": "St. Johnstone"
+  },
+  {
+    "question": "What is the term for a player who can play multiple positions?",
+    "options": [
+      "Versatile player",
+      "Utility player",
+      "All-rounder",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Argentine club is known as 'El Granate'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Vélez Sarsfield"
+    ],
+    "answer": "Vélez Sarsfield"
+  },
+  {
+    "question": "Which Mexican club has the nickname 'Los Cementeros'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "UNAM Pumas"
+    ],
+    "answer": "Cruz Azul"
+  },
+  {
+    "question": "What is the term for the small circle in the center?",
+    "options": [
+      "Center circle",
+      "Kick-off circle",
+      "Center spot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Japanese club is known as 'The Grampus Eight'?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Yokohama F. Marinos",
+      "Kashima Antlers",
+      "Nagoya Grampus"
+    ],
+    "answer": "Nagoya Grampus"
+  },
+  {
+    "question": "Which American club plays at the Children's Mercy Park?",
+    "options": [
+      "Sporting Kansas City",
+      "LA Galaxy",
+      "Seattle Sounders",
+      "Atlanta United"
+    ],
+    "answer": "Sporting Kansas City"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Coal City Boys'?",
+    "options": [
+      "Enugu Rangers",
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars"
+    ],
+    "answer": "Enugu Rangers"
+  },
+  {
+    "question": "What is the name of the CAF Youth Championship?",
+    "options": [
+      "African Youth Championship",
+      "CAF U-20 Championship",
+      "Africa Youth Cup",
+      "CAF Youth Cup"
+    ],
+    "answer": "CAF U-20 Championship"
+  },
+  {
+    "question": "Which South Korean club is known as 'The Steelers'?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "Pohang Steelers"
+  },
+  {
+    "question": "Which Egyptian club has the nickname 'The Daraweesh'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Ismaily"
+  },
+  {
+    "question": "What is the term for a goal scored with a volley?",
+    "options": [
+      "Volley goal",
+      "First-time shot",
+      "Air shot",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Chinese club is known as 'The Evergrande Taobao'?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Guangzhou Evergrande"
+  },
+  {
+    "question": "Which Australian club has the nickname 'The Roar'?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Western Sydney Wanderers",
+      "Brisbane Roar"
+    ],
+    "answer": "Brisbane Roar"
+  },
+  {
+    "question": "Which Saudi Arabian club is known as 'The Global'?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Ittihad"
+  },
+  {
+    "question": "What is the name of the CONCACAF Nations League?",
+    "options": [
+      "North American Nations League",
+      "CONCACAF Nations League",
+      "American Nations Cup",
+      "CONCACAF Championship"
+    ],
+    "answer": "CONCACAF Nations League"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Army'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FAR Rabat",
+      "Moghreb Tétouan"
+    ],
+    "answer": "FAR Rabat"
+  },
+  {
+    "question": "Which Ukrainian club has the nickname 'The Miners'?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Shakhtar Donetsk"
+  },
+  {
+    "question": "What is the term for the player who wears jersey number 7?",
+    "options": [
+      "Winger",
+      "Striker",
+      "Midfielder",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Belgian club is known as 'The Rouches'?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Standard Liège"
+  },
+  {
+    "question": "Which Danish club has the nickname 'The Wolves'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Midtjylland"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Di Gule'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "IFK Göteborg"
+  },
+  {
+    "question": "What is the name of the UEFA European Championship?",
+    "options": [
+      "Euro Cup",
+      "UEFA Euro",
+      "European Championship",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Norwegian club is known as 'The Bohemians'?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Vålerenga"
+  },
+  {
+    "question": "Which Polish club has the nickname 'The Railwaymen'?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Lech Poznań"
+  },
+  {
+    "question": "What is the term for a goal scored from a free kick?",
+    "options": [
+      "Free kick goal",
+      "Set-piece goal",
+      "Direct free kick",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Romanian club is known as 'The Giuleșteni'?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Rapid Bucharest"
+  },
+  {
+    "question": "Which Czech club has the nickname 'The Viktorka'?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Viktoria Plzeň"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Violets'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Austria Vienna"
+  },
+  {
+    "question": "What is the term for when a match goes to extra time?",
+    "options": [
+      "Overtime",
+      "Extra time",
+      "Additional time",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Swiss club is known as 'The GC'?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Grasshopper"
+  },
+  {
+    "question": "Which English club plays at the Molineux Stadium?",
+    "options": [
+      "Wolverhampton Wanderers",
+      "Arsenal",
+      "Tottenham",
+      "West Ham"
+    ],
+    "answer": "Wolverhampton Wanderers"
+  },
+  {
+    "question": "Which Spanish club plays at the Anoeta Stadium?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético Madrid",
+      "Real Sociedad"
+    ],
+    "answer": "Real Sociedad"
+  },
+  {
+    "question": "Which German club is known as 'The Lilies'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Darmstadt 98"
+    ],
+    "answer": "Darmstadt 98"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Viola'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Fiorentina"
+    ],
+    "answer": "Fiorentina"
+  },
+  {
+    "question": "Which French club is known as 'Les Violets'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon",
+      "Toulouse"
+    ],
+    "answer": "Toulouse"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Azuis e Brancos'?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Benfica"
+  },
+  {
+    "question": "What is the color of Inter Milan's home kit?",
+    "options": [
+      "Black and Blue",
+      "Red and Black",
+      "White and Black",
+      "Blue and White"
+    ],
+    "answer": "Black and Blue"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The 3SC'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Shooting Stars"
+  },
+  {
+    "question": "Which Greek club has the nickname 'The Dikefalos'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "AEK Athens"
+  },
+  {
+    "question": "What is the term for the referee's assistant?",
+    "options": [
+      "Linesman",
+      "Assistant referee",
+      "Side judge",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Super Farmers'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "AZ Alkmaar"
+  },
+  {
+    "question": "Which Brazilian club is known as 'O Colorado'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Santos",
+      "Internacional"
+    ],
+    "answer": "Internacional"
+  },
+  {
+    "question": "Which Turkish club has the nickname 'The Yellow Canaries'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Fenerbahçe"
+  },
+  {
+    "question": "Which Portuguese club plays at the Estádio do Dragão?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Porto"
+  },
+  {
+    "question": "What is the color of Tottenham's home kit?",
+    "options": [
+      "Blue",
+      "Red",
+      "White",
+      "Purple"
+    ],
+    "answer": "White"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Aba Elephants'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Enyimba"
+  },
+  {
+    "question": "Which Greek club has the nickname 'The Trifylli'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Panathinaikos"
+  },
+  {
+    "question": "What is the term for the area where the goalkeeper can use hands?",
+    "options": [
+      "Center circle",
+      "Penalty area",
+      "Halfway line",
+      "Corner arc"
+    ],
+    "answer": "Penalty area"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Pride of the South'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "PSV Eindhoven"
+  },
+  {
+    "question": "Which Brazilian club plays at the Maracanã?",
+    "options": [
+      "Flamengo",
+      "Fluminense",
+      "Both Flamengo and Fluminense",
+      "Vasco da Gama"
+    ],
+    "answer": "Both Flamengo and Fluminense"
+  },
+  {
+    "question": "Which Turkish club is known as 'The Black Sea Storm'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Trabzonspor"
+  },
+  {
+    "question": "What is the name of the third European club competition?",
+    "options": [
+      "Champions League",
+      "Europa League",
+      "Conference League",
+      "UEFA Cup"
+    ],
+    "answer": "Conference League"
+  },
+  {
+    "question": "Which Russian club has the nickname 'The Horses'?",
+    "options": [
+      "Zenit St. Petersburg",
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Lokomotiv Moscow"
+  },
+  {
+    "question": "Which Scottish club plays at Celtic Park?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Celtic"
+  },
+  {
+    "question": "What is the term for a shot that goes wide of the goal?",
+    "options": [
+      "Over",
+      "Wide",
+      "Miss",
+      "Off target"
+    ],
+    "answer": "Wide"
+  },
+  {
+    "question": "Which Argentine club is known as 'La Academia'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Racing Club"
+    ],
+    "answer": "Racing Club"
+  },
+  {
+    "question": "Which Mexican club has the nickname 'Los Cementeros'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "UNAM Pumas"
+    ],
+    "answer": "Cruz Azul"
+  },
+  {
+    "question": "What is the maximum number of substitutions in most leagues?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "answer": "5"
+  },
+  {
+    "question": "Which Japanese club is known as 'The Red Diamonds'?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Yokohama F. Marinos",
+      "Kashima Antlers",
+      "Kawasaki Frontale"
+    ],
+    "answer": "Urawa Red Diamonds"
+  },
+  {
+    "question": "Which American club plays at the Red Bull Arena?",
+    "options": [
+      "New York Red Bulls",
+      "LA Galaxy",
+      "Seattle Sounders",
+      "Atlanta United"
+    ],
+    "answer": "New York Red Bulls"
+  },
+  {
+    "question": "Which Nigerian club is based in Ibadan?",
+    "options": [
+      "Shooting Stars",
+      "Enyimba",
+      "Kano Pillars",
+      "Dolphins"
+    ],
+    "answer": "Shooting Stars"
+  },
+  {
+    "question": "What is the name of the African Super Cup competition?",
+    "options": [
+      "CAF Super Cup",
+      "African Super Cup",
+      "CAF Champions Super Cup",
+      "Africa Super Cup"
+    ],
+    "answer": "CAF Super Cup"
+  },
+  {
+    "question": "Which South Korean club is known as 'The Bluewings'?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "Suwon Samsung Bluewings"
+  },
+  {
+    "question": "Which Egyptian club has the nickname 'The Daraweesh'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Ismaily"
+  },
+  {
+    "question": "What is the term for a goal scored from outside the penalty area?",
+    "options": [
+      "Long-range goal",
+      "Screamer",
+      "Wonder goal",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Chinese club is known as 'The Taishan Dui'?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Shandong Luneng"
+  },
+  {
+    "question": "Which Australian club has the nickname 'The Victory'?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Western Sydney Wanderers",
+      "Adelaide United"
+    ],
+    "answer": "Melbourne Victory"
+  },
+  {
+    "question": "Which Saudi Arabian club is based in Jeddah?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Ahli"
+  },
+  {
+    "question": "What is the name of the South American second club competition?",
+    "options": [
+      "Copa Libertadores",
+      "Copa Sudamericana",
+      "Copa América",
+      "Copa do Brasil"
+    ],
+    "answer": "Copa Sudamericana"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Wydad'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FAR Rabat",
+      "Moghreb Tétouan"
+    ],
+    "answer": "Wydad Casablanca"
+  },
+  {
+    "question": "Which Ukrainian club has the nickname 'The Miners'?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Shakhtar Donetsk"
+  },
+  {
+    "question": "What is the term for the player who organizes the defense?",
+    "options": [
+      "Sweeper",
+      "Libero",
+      "Center back",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Belgian club is known as 'The Rouches'?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Standard Liège"
+  },
+  {
+    "question": "Which Danish club has the nickname 'The Wolves'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Midtjylland"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Angels'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "IFK Göteborg"
+  },
+  {
+    "question": "What is the name of the Oceania international competition?",
+    "options": [
+      "OFC Nations Cup",
+      "OFC Champions League",
+      "OFC Cup",
+      "Oceania Cup"
+    ],
+    "answer": "OFC Nations Cup"
+  },
+  {
+    "question": "Which Norwegian club is known as 'The Bohemians'?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Vålerenga"
+  },
+  {
+    "question": "Which Polish club has the nickname 'The Railwaymen'?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Lech Poznań"
+  },
+  {
+    "question": "What is the term for a kick taken from the corner flag?",
+    "options": [
+      "Corner kick",
+      "Flag kick",
+      "Side kick",
+      "Wing kick"
+    ],
+    "answer": "Corner kick"
+  },
+  {
+    "question": "Which Romanian club is known as 'The Red and Blues'?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Rapid Bucharest"
+  },
+  {
+    "question": "Which Czech club has the nickname 'The Slávists'?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Slavia Prague"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Violets'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Austria Vienna"
+  },
+  {
+    "question": "What is the term for a match that ends 0-0?",
+    "options": [
+      "Draw",
+      "Goalless draw",
+      "Nil-nil",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Swiss club is known as 'The Young Boys'?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Young Boys"
+  },
+  {
+    "question": "Which English club plays at Stamford Bridge?",
+    "options": [
+      "Chelsea",
+      "Arsenal",
+      "Tottenham",
+      "West Ham"
+    ],
+    "answer": "Chelsea"
+  },
+  {
+    "question": "Which Spanish club plays at the Wanda Metropolitano?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético Madrid",
+      "Sevilla"
+    ],
+    "answer": "Atlético Madrid"
+  },
+  {
+    "question": "Which German club is known as 'The Werkself'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Bayer Leverkusen"
+    ],
+    "answer": "Bayer Leverkusen"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Giallorossi'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Roma"
+    ],
+    "answer": "Roma"
+  },
+  {
+    "question": "Which French club is known as 'Les Gones'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon",
+      "Monaco"
+    ],
+    "answer": "Lyon"
+  },
+  {
+    "question": "Which Portuguese club plays at the Estádio José Alvalade?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Sporting CP"
+  },
+  {
+    "question": "What is the color of Manchester United's home kit?",
+    "options": [
+      "Blue",
+      "Red",
+      "White",
+      "Black"
+    ],
+    "answer": "Red"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Flying Antelopes'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Rangers International"
+  },
+   {
+    "question": "Which Greek club has the nickname 'The Double-Headed Eagle'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "AEK Athens"
+  },
+  {
+    "question": "What is the term for the start of a football match?",
+    "options": [
+      "Kick-off",
+      "Start play",
+      "Begin match",
+      "First touch"
+    ],
+    "answer": "Kick-off"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Club of the People'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "Feyenoord"
+  },
+  {
+    "question": "Which Brazilian club is known as 'O Timão'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Santos",
+      "Corinthians"
+    ],
+    "answer": "Corinthians"
+  },
+  {
+    "question": "Which Turkish club has the nickname 'The Yellow Canaries'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Fenerbahçe"
+  },
+  {
+    "question": "What is the name of the European international competition?",
+    "options": [
+      "European Championship",
+      "Champions League",
+      "Europa League",
+      "Nations League"
+    ],
+    "answer": "European Championship"
+  },
+  {
+    "question": "Which Russian club is known as 'The People's Team'?",
+    "options": [
+      "Zenit St. Petersburg",
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Spartak Moscow"
+  },
+  {
+    "question": "Which Scottish club has the nickname 'The Jam Tarts'?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Hearts"
+  },
+  {
+    "question": "What is the term for a player who creates scoring chances?",
+    "options": [
+      "Striker",
+      "Playmaker",
+      "Defender",
+      "Goalkeeper"
+    ],
+    "answer": "Playmaker"
+  },
+  {
+    "question": "Which Argentine club is known as 'El Taladro'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Vélez Sarsfield"
+    ],
+    "answer": "Vélez Sarsfield"
+  },
+  {
+    "question": "Which Mexican club has the nickname 'Los Pumas'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "UNAM Pumas"
+    ],
+    "answer": "UNAM Pumas"
+  },
+  {
+    "question": "What is the minimum number of players needed to avoid forfeit?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": "7"
+  },
+  {
+    "question": "Which Japanese club is known as 'The Grampus'?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Yokohama F. Marinos",
+      "Kashima Antlers",
+      "Nagoya Grampus"
+    ],
+    "answer": "Nagoya Grampus"
+  },
+  {
+    "question": "Which American club plays at the CenturyLink Field?",
+    "options": [
+      "Seattle Sounders",
+      "LA Galaxy",
+      "New York Red Bulls",
+      "Atlanta United"
+    ],
+    "answer": "Seattle Sounders"
+  },
+  {
+    "question": "Which Nigerian club is based in Benin City?",
+    "options": [
+      "Bendel Insurance",
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars"
+    ],
+    "answer": "Bendel Insurance"
+  },
+  {
+    "question": "What is the name of the African Nations Championship?",
+    "options": [
+      "CHAN",
+      "AFCON",
+      "CAF Cup",
+      "African Championship"
+    ],
+    "answer": "CHAN"
+  },
+  {
+    "question": "Which South Korean club is known as 'The Motors'?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "Jeonbuk Hyundai Motors"
+  },
+  {
+    "question": "Which Egyptian club has the nickname 'The Mango'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Al Masry"
+  },
+  {
+    "question": "What is the term for a goal scored from a penalty?",
+    "options": [
+      "Penalty goal",
+      "Spot kick goal",
+      "Penalty kick goal",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Chinese club is known as 'The Evergrande'?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Guangzhou Evergrande"
+  },
+  {
+    "question": "Which Australian club has the nickname 'The Sky Blues'?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Western Sydney Wanderers",
+      "Adelaide United"
+    ],
+    "answer": "Sydney FC"
+  },
+  {
+    "question": "Which Saudi Arabian club is known as 'The Leader'?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Nassr"
+  },
+  {
+    "question": "What is the name of the CONMEBOL international competition?",
+    "options": [
+      "Copa América",
+      "Copa Libertadores",
+      "Copa Sudamericana",
+      "South American Cup"
+    ],
+    "answer": "Copa América"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Military'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FAR Rabat",
+      "Moghreb Tétouan"
+    ],
+    "answer": "FAR Rabat"
+  },
+  {
+    "question": "Which Ukrainian club has the nickname 'The Dynamo'?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Dynamo Kyiv"
+  },
+  {
+    "question": "What is the term for the player who wears jersey number 1?",
+    "options": [
+      "Captain",
+      "Striker",
+      "Goalkeeper",
+      "Defender"
+    ],
+    "answer": "Goalkeeper"
+  },
+  {
+    "question": "Which Belgian club is known as 'The Smurfs'?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Genk"
+  },
+  {
+    "question": "Which Danish club has the nickname 'The White Lions'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Aarhus"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Bajen'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "Hammarby"
+  },
+  {
+    "question": "What is the name of the OFC international competition?",
+    "options": [
+      "OFC Nations Cup",
+      "OFC Champions League",
+      "OFC Cup",
+      "Pacific Cup"
+    ],
+    "answer": "OFC Nations Cup"
+  },
+  {
+    "question": "Which Norwegian club is known as 'The Troll Children'?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Molde"
+  },
+  {
+    "question": "Which Polish club has the nickname 'The Miners'?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Górnik Zabrze"
+  },
+  {
+    "question": "What is the term for a free kick near the goal?",
+    "options": [
+      "Penalty",
+      "Direct free kick",
+      "Indirect free kick",
+      "Set piece"
+    ],
+    "answer": "Direct free kick"
+  },
+  {
+    "question": "Which Romanian club is known as 'The Feroviarii'?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "CFR Cluj"
+  },
+  {
+    "question": "Which Czech club has the nickname 'The Viktoria'?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Viktoria Plzeň"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Blackies'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Sturm Graz"
+  },
+  {
+    "question": "What is the term for when a player controls the ball in the air?",
+    "options": [
+      "Header",
+      "Volley",
+      "Chest control",
+      "Aerial control"
+    ],
+    "answer": "Chest control"
+  },
+  {
+    "question": "Which Swiss club is known as 'The FCB'?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Basel"
+  },
+  {
+    "question": "Which English club plays at the Emirates Stadium?",
+    "options": [
+      "Chelsea",
+      "Arsenal",
+      "Tottenham",
+      "West Ham"
+    ],
+    "answer": "Arsenal"
+  },
+  {
+    "question": "Which Spanish club plays at the Ramón Sánchez-Pizjuán?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético Madrid",
+      "Sevilla"
+    ],
+    "answer": "Sevilla"
+  },
+  {
+    "question": "Which German club is known as 'The Foals'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Borussia Mönchengladbach"
+    ],
+    "answer": "Borussia Mönchengladbach"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Vesuviani'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Napoli"
+    ],
+    "answer": "Napoli"
+  },
+  {
+    "question": "Which French club is known as 'Les Verts'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon",
+      "Saint-Étienne"
+    ],
+    "answer": "Saint-Étienne"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Arsenalistas'?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Braga"
+  },
+  {
+    "question": "What is the color of Bayern Munich's home kit?",
+    "options": [
+      "Blue",
+      "Red",
+      "White",
+      "Black"
+    ],
+    "answer": "Red"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Sai Masu Gida'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Kano Pillars"
+  },
+  {
+    "question": "Which Greek club has the nickname 'The Dikefalos Aetos'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "PAOK"
+  },
+  {
+    "question": "What is the term for the lines marking the field?",
+    "options": [
+      "Boundaries",
+      "Touchlines",
+      "Sidelines",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Turkish club has the nickname 'The Cimbom'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Galatasaray"
+  },
+  {
+    "question": "What is the name of the FIFA World Cup trophy?",
+    "options": [
+      "World Cup",
+      "FIFA Trophy",
+      "World Cup Trophy",
+      "Jules Rimet Trophy"
+    ],
+    "answer": "World Cup Trophy"
+  },
+  {
+    "question": "Which Russian club is known as 'The Railwaymen'?",
+    "options": [
+      "Zenit St. Petersburg",
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Lokomotiv Moscow"
+  },
+  {
+    "question": "Which Scottish club has the nickname 'The Terrors'?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Dundee United",
+      "St. Johnstone"
+    ],
+    "answer": "Dundee United"
+  },
+  {
+    "question": "What is the term for a player who scores an own goal?",
+    "options": [
+      "Own goal scorer",
+      "Accidental scorer",
+      "Wrong goal scorer",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Argentine club is known as 'El Rojo'?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Independiente"
+    ],
+    "answer": "Independiente"
+  },
+  {
+    "question": "Which Mexican club has the nickname 'Los Chivas'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "UNAM Pumas"
+    ],
+    "answer": "Chivas Guadalajara"
+  },
+  {
+    "question": "What is the term for the area in front of the goal?",
+    "options": [
+      "Penalty area",
+      "Goal area",
+      "Six-yard box",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Japanese club is known as 'The Frontale'?",
+    "options": [
+      "Urawa Red Diamonds",
+      "Yokohama F. Marinos",
+      "Kashima Antlers",
+      "Kawasaki Frontale"
+    ],
+    "answer": "Kawasaki Frontale"
+  },
+  {
+    "question": "Which American club plays at the Providence Park?",
+    "options": [
+      "Portland Timbers",
+      "LA Galaxy",
+      "Seattle Sounders",
+      "Atlanta United"
+    ],
+    "answer": "Portland Timbers"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Desert Warriors'?",
+    "options": [
+      "El-Kanemi Warriors",
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars"
+    ],
+    "answer": "El-Kanemi Warriors"
+  },
+  {
+    "question": "What is the name of the CAF Super Cup?",
+    "options": [
+      "African Super Cup",
+      "CAF Super Cup",
+      "Champions Super Cup",
+      "Africa Super Cup"
+    ],
+    "answer": "CAF Super Cup"
+  },
+  {
+    "question": "Which South Korean club is known as 'The Bluewings'?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "Suwon Samsung Bluewings"
+  },
+  {
+    "question": "Which Egyptian club has the nickname 'The Green'?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Ismaily",
+      "Al Masry"
+    ],
+    "answer": "Al Ahly"
+  },
+  {
+    "question": "What is the term for a goal scored with a bicycle kick?",
+    "options": [
+      "Overhead kick",
+      "Bicycle kick",
+      "Scissor kick",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Chinese club is known as 'The Luneng'?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Shandong Luneng"
+  },
+  {
+    "question": "Which Australian club has the nickname 'The Reds'?",
+    "options": [
+      "Sydney FC",
+      "Melbourne Victory",
+      "Western Sydney Wanderers",
+      "Adelaide United"
+    ],
+    "answer": "Adelaide United"
+  },
+  {
+    "question": "Which Saudi Arabian club is known as 'The Al Ittihad'?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Ittihad"
+  },
+  {
+    "question": "What is the name of the CONMEBOL Recopa?",
+    "options": [
+      "South American Super Cup",
+      "CONMEBOL Recopa",
+      "Libertadores Super Cup",
+      "Recopa Sudamericana"
+    ],
+    "answer": "CONMEBOL Recopa"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Wydad'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FAR Rabat",
+      "Moghreb Tétouan"
+    ],
+    "answer": "Wydad Casablanca"
+  },
+  {
+    "question": "Which Ukrainian club has the nickname 'The Metalist'?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Metalist Kharkiv"
+  },
+  {
+    "question": "What is the term for the player who wears jersey number 9?",
+    "options": [
+      "Goalkeeper",
+      "Striker",
+      "Defender",
+      "Midfielder"
+    ],
+    "answer": "Striker"
+  },
+  {
+    "question": "Which Belgian club is known as 'The Buffalos'?",
+    "options": [
+      "Anderlecht",
+      "Club Brugge",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Club Brugge"
+  },
+  {
+    "question": "Which Danish club has the nickname 'The Whites'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Copenhagen"
+  },
+  {
+    "question": "Which Swedish club is known as 'The Blåvitt'?",
+    "options": [
+      "Malmö FF",
+      "AIK",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "IFK Göteborg"
+  },
+  {
+    "question": "What is the name of the UEFA Nations League?",
+    "options": [
+      "European Nations League",
+      "UEFA Nations League",
+      "Nations Championship",
+      "Europe Nations Cup"
+    ],
+    "answer": "UEFA Nations League"
+  },
+  {
+    "question": "Which Norwegian club is known as 'The Boys'?",
+    "options": [
+      "Rosenborg",
+      "Vålerenga",
+      "Molde",
+      "Lillestrøm"
+    ],
+    "answer": "Vålerenga"
+  },
+  {
+    "question": "Which Polish club has the nickname 'The Soldiers'?",
+    "options": [
+      "Legia Warsaw",
+      "Lech Poznań",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Legia Warsaw"
+  },
+  {
+    "question": "What is the term for a goal scored directly from a corner?",
+    "options": [
+      "Corner goal",
+      "Olympic goal",
+      "Direct corner",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Romanian club is known as 'The Red Devils'?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Dinamo Bucharest"
+  },
+  {
+    "question": "Which Czech club has the nickname 'The Baník'?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Baník Ostrava"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Rapid'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Rapid Vienna"
+  },
+  {
+    "question": "What is the term for when a player is off the field?",
+    "options": [
+      "Substituted",
+      "Injured",
+      "Off the pitch",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Swiss club is known as 'The YB'?",
+    "options": [
+      "Basel",
+      "Young Boys",
+      "Grasshopper",
+      "Zurich"
+    ],
+    "answer": "Young Boys"
+  },
+  {
+    "question": "Which English club plays at the King Power Stadium?",
+    "options": [
+      "Leicester City",
+      "Arsenal",
+      "Tottenham",
+      "West Ham"
+    ],
+    "answer": "Leicester City"
+  },
+  {
+    "question": "Which Spanish club plays at the Benito Villamarín?",
+    "options": [
+      "Barcelona",
+      "Real Madrid",
+      "Atlético Madrid",
+      "Real Betis"
+    ],
+    "answer": "Real Betis"
+  },
+  {
+    "question": "Which German club is known as 'The Eagles'?",
+    "options": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Eintracht Frankfurt"
+    ],
+    "answer": "Eintracht Frankfurt"
+  },
+  {
+    "question": "Which Italian club has the nickname 'I Rosanero'?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "Palermo"
+    ],
+    "answer": "Palermo"
+  },
+  {
+    "question": "Which French club is known as 'Les Aiglons'?",
+    "options": [
+      "Paris Saint-Germain",
+      "Marseille",
+      "Lyon",
+      "Nice"
+    ],
+    "answer": "Nice"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Sportinguistas'?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Sporting CP"
+  },
+  {
+    "question": "What is the color of AC Milan's home kit?",
+    "options": [
+      "Black and Red",
+      "Blue",
+      "White",
+      "Yellow"
+    ],
+    "answer": "Black and Red"
+  },
+  {
+    "question": "Which Nigerian club is known as 'The Pillars'?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Kano Pillars"
+  },
+  {
+    "question": "Which Greek club has the nickname 'The Greens'?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Panathinaikos"
+  },
+  {
+    "question": "What is the term for the ball used in football?",
+    "options": [
+      "Football",
+      "Soccer ball",
+      "Match ball",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Dutch club is known as 'The Farmers'?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "AZ Alkmaar"
+  },
+  {
+    "question": "Which Brazilian club is known as 'O Furacão'?",
+    "options": [
+      "Flamengo",
+      "São Paulo",
+      "Santos",
+      "Athletico Paranaense"
+    ],
+    "answer": "Athletico Paranaense"
+  },
+  {
+    "question": "Which Turkish club has the nickname 'The Black Sea Storm'?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Trabzonspor"
+  },
+  {
+    "question": "Which English club is known as 'The Reds'?",
+    "options": [
+      "Manchester United",
+      "Liverpool",
+      "Arsenal",
+      "Chelsea"
+    ],
+    "answer": "Liverpool"
+  },
+  {
+    "question": "Which Spanish club plays at the Camp Nou?",
+    "options": [
+      "Real Madrid",
+      "Barcelona",
+      "Atlético Madrid",
+      "Valencia"
+    ],
+    "answer": "Barcelona"
+  },
+  {
+    "question": "Which German club has won the most Bundesliga titles?",
+    "options": [
+      "Borussia Dortmund",
+      "Bayern Munich",
+      "Hamburg SV",
+      "Borussia Mönchengladbach"
+    ],
+    "answer": "Bayern Munich"
+  },
+  {
+    "question": "Which Italian club plays at the San Siro?",
+    "options": [
+      "AC Milan",
+      "Inter Milan",
+      "Both AC Milan and Inter Milan",
+      "Juventus"
+    ],
+    "answer": "Both AC Milan and Inter Milan"
+  },
+  {
+    "question": "Which French club has the nickname 'Les Parisiens'?",
+    "options": [
+      "Marseille",
+      "Lyon",
+      "Paris Saint-Germain",
+      "Monaco"
+    ],
+    "answer": "Paris Saint-Germain"
+  },
+  {
+    "question": "Which Portuguese club is known as 'Os Dragões'?",
+    "options": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Braga"
+    ],
+    "answer": "Porto"
+  },
+  {
+    "question": "What is the color of Chelsea's home kit?",
+    "options": [
+      "Red",
+      "Blue",
+      "White",
+      "Yellow"
+    ],
+    "answer": "Blue"
+  },
+  {
+    "question": "Which Nigerian club has won the most NPFL titles?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Rangers International"
+    ],
+    "answer": "Enyimba"
+  },
+  {
+    "question": "Which Greek club plays at the Karaiskakis Stadium?",
+    "options": [
+      "Olympiacos",
+      "Panathinaikos",
+      "AEK Athens",
+      "PAOK"
+    ],
+    "answer": "Olympiacos"
+  },
+  {
+    "question": "What is the term for when a player is in an illegal position?",
+    "options": [
+      "Foul",
+      "Offside",
+      "Handball",
+      "Obstruction"
+    ],
+    "answer": "Offside"
+  },
+  {
+    "question": "Which Dutch club has won the most Eredivisie titles?",
+    "options": [
+      "Ajax",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "AZ Alkmaar"
+    ],
+    "answer": "Ajax"
+  },
+  {
+    "question": "Which Brazilian club is known as 'Fla'?",
+    "options": [
+      "Flamengo",
+      "Fluminense",
+      "Fortaleza",
+      "Figueirense"
+    ],
+    "answer": "Flamengo"
+  },
+  {
+    "question": "Which Turkish club plays at the Türk Telekom Stadium?",
+    "options": [
+      "Galatasaray",
+      "Fenerbahçe",
+      "Beşiktaş",
+      "Trabzonspor"
+    ],
+    "answer": "Galatasaray"
+  },
+  {
+    "question": "What is the name of the European club competition?",
+    "options": [
+      "Europa League",
+      "Champions League",
+      "Conference League",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Russian club has won the most Premier League titles?",
+    "options": [
+      "Spartak Moscow",
+      "CSKA Moscow",
+      "Zenit St. Petersburg",
+      "Lokomotiv Moscow"
+    ],
+    "answer": "Spartak Moscow"
+  },
+  {
+    "question": "Which Scottish club plays at Ibrox Stadium?",
+    "options": [
+      "Celtic",
+      "Rangers",
+      "Aberdeen",
+      "Hearts"
+    ],
+    "answer": "Rangers"
+  },
+  {
+    "question": "What is the term for a shot that hits the goalpost?",
+    "options": [
+      "Miss",
+      "Post",
+      "Woodwork",
+      "Frame"
+    ],
+    "answer": "Woodwork"
+  },
+  {
+    "question": "Which Argentine club plays at La Bombonera?",
+    "options": [
+      "Boca Juniors",
+      "River Plate",
+      "San Lorenzo",
+      "Racing Club"
+    ],
+    "answer": "Boca Juniors"
+  },
+  {
+    "question": "Which Mexican club is known as 'El Rebaño Sagrado'?",
+    "options": [
+      "Club América",
+      "Chivas Guadalajara",
+      "Cruz Azul",
+      "UNAM Pumas"
+    ],
+    "answer": "Chivas Guadalajara"
+  },
+  {
+    "question": "What is the color of the card shown for a caution?",
+    "options": [
+      "Yellow",
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "answer": "Yellow"
+  },
+  {
+    "question": "Which Japanese club has won the most J1 League titles?",
+    "options": [
+      "Kashima Antlers",
+      "Yokohama F. Marinos",
+      "Urawa Red Diamonds",
+      "Kawasaki Frontale"
+    ],
+    "answer": "Kashima Antlers"
+  },
+  {
+    "question": "Which American club plays at the Mercedes-Benz Stadium?",
+    "options": [
+      "Atlanta United",
+      "LA Galaxy",
+      "New York City FC",
+      "Seattle Sounders"
+    ],
+    "answer": "Atlanta United"
+  },
+  {
+    "question": "Which Nigerian club is based in Aba?",
+    "options": [
+      "Enyimba",
+      "Kano Pillars",
+      "Shooting Stars",
+      "Dolphins"
+    ],
+    "answer": "Enyimba"
+  },
+  {
+    "question": "What is the name of the African international competition?",
+    "options": [
+      "Africa Cup of Nations",
+      "African Nations Championship",
+      "CAF Confederation Cup",
+      "African Super Cup"
+    ],
+    "answer": "Africa Cup of Nations"
+  },
+  {
+    "question": "Which South Korean club plays at the Seoul World Cup Stadium?",
+    "options": [
+      "FC Seoul",
+      "Jeonbuk Hyundai Motors",
+      "Suwon Samsung Bluewings",
+      "Pohang Steelers"
+    ],
+    "answer": "FC Seoul"
+  },
+  {
+    "question": "Which Egyptian club is based in Cairo?",
+    "options": [
+      "Al Ahly",
+      "Zamalek",
+      "Both Al Ahly and Zamalek",
+      "Ismaily"
+    ],
+    "answer": "Both Al Ahly and Zamalek"
+  },
+  {
+    "question": "What is the term for when a player scores two goals in one match?",
+    "options": [
+      "Double",
+      "Brace",
+      "Pair",
+      "Duo"
+    ],
+    "answer": "Brace"
+  },
+  {
+    "question": "Which Chinese club plays at the Workers Stadium?",
+    "options": [
+      "Beijing Guoan",
+      "Shanghai SIPG",
+      "Guangzhou Evergrande",
+      "Shandong Luneng"
+    ],
+    "answer": "Beijing Guoan"
+  },
+  {
+    "question": "Which Australian club is based in Melbourne?",
+    "options": [
+      "Melbourne Victory",
+      "Melbourne City",
+      "Both Melbourne Victory and Melbourne City",
+      "Western United"
+    ],
+    "answer": "Both Melbourne Victory and Melbourne City"
+  },
+  {
+    "question": "Which Saudi Arabian club plays at the King Fahd Stadium?",
+    "options": [
+      "Al Hilal",
+      "Al Nassr",
+      "Al Ittihad",
+      "Al Ahli"
+    ],
+    "answer": "Al Hilal"
+  },
+  {
+    "question": "What is the name of the South American international competition?",
+    "options": [
+      "Copa América",
+      "Copa Libertadores",
+      "Copa Sudamericana",
+      "Copa do Brasil"
+    ],
+    "answer": "Copa América"
+  },
+  {
+    "question": "Which Moroccan club is known as 'The Green Eagles'?",
+    "options": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "FUS Rabat",
+      "Moghreb Tétouan"
+    ],
+    "answer": "Raja Casablanca"
+  },
+  {
+    "question": "Which Ukrainian club has won the most Premier League titles?",
+    "options": [
+      "Dynamo Kyiv",
+      "Shakhtar Donetsk",
+      "Dnipro",
+      "Metalist Kharkiv"
+    ],
+    "answer": "Dynamo Kyiv"
+  },
+  {
+    "question": "What is the term for a save made by the goalkeeper?",
+    "options": [
+      "Block",
+      "Save",
+      "Stop",
+      "Catch"
+    ],
+    "answer": "Save"
+  },
+  {
+    "question": "Which Belgian club plays at the Jan Breydel Stadium?",
+    "options": [
+      "Club Brugge",
+      "Anderlecht",
+      "Standard Liège",
+      "Genk"
+    ],
+    "answer": "Club Brugge"
+  },
+  {
+    "question": "Which Danish club is known as 'The Lions'?",
+    "options": [
+      "Copenhagen",
+      "Brøndby",
+      "Midtjylland",
+      "Aarhus"
+    ],
+    "answer": "Copenhagen"
+  },
+  {
+    "question": "Which Swedish club plays at the Friends Arena?",
+    "options": [
+      "AIK",
+      "Malmö FF",
+      "IFK Göteborg",
+      "Hammarby"
+    ],
+    "answer": "AIK"
+  },
+  {
+    "question": "What is the name of the Asian international competition?",
+    "options": [
+      "AFC Asian Cup",
+      "AFC Champions League",
+      "AFC Cup",
+      "Asian Games"
+    ],
+    "answer": "AFC Asian Cup"
+  },
+  {
+    "question": "Which Norwegian club has won the most Eliteserien titles?",
+    "options": [
+      "Rosenborg",
+      "Molde",
+      "Viking",
+      "Lillestrøm"
+    ],
+    "answer": "Rosenborg"
+  },
+  {
+    "question": "Which Polish club plays at the Stadion Miejski?",
+    "options": [
+      "Lech Poznań",
+      "Legia Warsaw",
+      "Wisła Kraków",
+      "Górnik Zabrze"
+    ],
+    "answer": "Lech Poznań"
+  },
+  {
+    "question": "What is the term for when the ball goes out over the goal line?",
+    "options": [
+      "Throw-in",
+      "Corner kick",
+      "Goal kick",
+      "Free kick"
+    ],
+    "answer": "Goal kick"
+  },
+  {
+    "question": "Which Romanian club plays at the Arena Națională?",
+    "options": [
+      "Steaua Bucharest",
+      "Dinamo Bucharest",
+      "Rapid Bucharest",
+      "CFR Cluj"
+    ],
+    "answer": "Steaua Bucharest"
+  },
+  {
+    "question": "Which Czech club has won the most First League titles?",
+    "options": [
+      "Sparta Prague",
+      "Slavia Prague",
+      "Baník Ostrava",
+      "Viktoria Plzeň"
+    ],
+    "answer": "Sparta Prague"
+  },
+  {
+    "question": "Which Austrian club is known as 'The Bulls'?",
+    "options": [
+      "Red Bull Salzburg",
+      "Rapid Vienna",
+      "Austria Vienna",
+      "Sturm Graz"
+    ],
+    "answer": "Red Bull Salzburg"
+  },
+  {
+    "question": "What is the term for a goal scored from a free kick?",
+    "options": [
+      "Direct free kick goal",
+      "Set-piece goal",
+      "Dead ball goal",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "Which Swiss club has won the most Super League titles?",
+    "options": [
+      "Grasshopper",
+      "Basel",
+      "Young Boys",
+      "Zurich"
+    ],
+    "answer": "Grasshopper"
+  },
+  {
+    "question": "Which English club plays at the Etihad Stadium?",
+    "options": [
+      "Manchester United",
+      "Manchester City",
+      "Liverpool",
+      "Arsenal"
+    ],
+    "answer": "Manchester City"
+  },
+  {
+    "question": "Which Spanish club is known as 'Los Colchoneros'?",
+    "options": [
+      "Real Madrid",
+      "Barcelona",
+      "Atlético Madrid",
+      "Sevilla"
+    ],
+    "answer": "Atlético Madrid"
+  }
+]
