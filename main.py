@@ -48,11 +48,12 @@ ANNOUNCE_CHAT_ID = os.getenv("ANNOUNCE_CHAT_ID")  # set to integer string, e.g. 
 # Category files (place these JSON files next to this script)
 # ---------------------------
 CATEGORIES = {
-    "General": "questions.json",
+    "General Knowledge": "questions_general_knowledge.json",
     "Math": "questions_math.json",
     "Current Affairs": "questions_current_affairs.json",
     "Entertainment": "questions_entertainment.json",
     "Geography": "questions_geography.json",
+    "History": "questions_history.json",
     "Science": "questions_science.json",
     "Sports": "questions_sports.json",
 }
@@ -480,7 +481,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     menu = (
-        "👋 Welcome to ORG Quiz Bot!\n\n"
+        "👋 Welcome to Graph IQ!\n\n"
         "Here are the available commands:\n"
         "/play - Start the quiz (must be registered + have ≥ ₦200 balance)\n"
         "/register - Register yourself\n"
